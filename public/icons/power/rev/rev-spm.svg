@@ -1,0 +1,225 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-40 -50 80 129.2" width="80mm" height="129.2mm" font-family="Helvetica, Arial, sans-serif">
+<title>REV Servo Power Module</title>
+<desc>Drawn by FRC Team 2102 Paradox. Public domain: CC0 1.0 (https://creativecommons.org/publicdomain/zero/1.0/). https://docs.team2102.org/icons/</desc>
+<path d="M -15.43 -45.72 L 15.43 -45.72 L 19.43 -41.72 L 19.43 41.72 L 15.43 45.72 L -15.43 45.72 L -19.43 41.72 L -19.43 -41.72 Z" fill="#e8ebee" stroke="#1f2328" stroke-width="0.4" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M -15.43 -43.32 L 15.43 -43.32 L 17.03 -41.72 L 17.03 41.72 L 15.43 43.32 L -15.43 43.32 L -17.03 41.72 L -17.03 -41.72 Z" fill="none" stroke="#aeb5bc" stroke-width="0.2" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M -2.65 13 L -6.7 5.1 L -6.7 -38 L 6.7 -38 L 6.7 5.1 L 2.65 13 Z" fill="#cfd4d9" stroke="#aeb5bc" stroke-width="0.2" stroke-linejoin="round" stroke-linecap="round"/>
+<rect x="-2.65" y="-38" width="5.3" height="51" rx="0" fill="#f3f5f7" stroke="#aeb5bc" stroke-width="0.2"/>
+<rect x="-0.1" y="13" width="0.2" height="32.72" rx="0" fill="#aeb5bc"/>
+<circle cx="0" cy="-42.7" r="2.9" fill="#d6dbe0" stroke="#aeb5bc" stroke-width="0.2"/>
+<circle cx="0" cy="-42.7" r="1.905" fill="#ffffff" stroke="#1f2328" stroke-width="0.3"/>
+<circle cx="0" cy="42.7" r="2.9" fill="#d6dbe0" stroke="#aeb5bc" stroke-width="0.2"/>
+<circle cx="0" cy="42.7" r="1.905" fill="#ffffff" stroke="#1f2328" stroke-width="0.3"/>
+<rect x="-16.8" y="-37.05" width="8.2" height="2.9" rx="0.3" fill="#16191d" stroke="#8c959f" stroke-width="0.15"/>
+<rect x="-15.615" y="-35.975" width="0.75" height="0.75" rx="0.2" fill="#d4a72c" stroke="#8c959f" stroke-width="0.15"/>
+<rect x="-13.075" y="-35.975" width="0.75" height="0.75" rx="0.2" fill="#d4a72c" stroke="#8c959f" stroke-width="0.15"/>
+<rect x="-10.535" y="-35.975" width="0.75" height="0.75" rx="0.2" fill="#d4a72c" stroke="#8c959f" stroke-width="0.15"/>
+<rect x="8.6" y="-37.05" width="8.2" height="2.9" rx="0.3" fill="#16191d" stroke="#8c959f" stroke-width="0.15"/>
+<rect x="9.785" y="-35.975" width="0.75" height="0.75" rx="0.2" fill="#d4a72c" stroke="#8c959f" stroke-width="0.15"/>
+<rect x="12.325" y="-35.975" width="0.75" height="0.75" rx="0.2" fill="#d4a72c" stroke="#8c959f" stroke-width="0.15"/>
+<rect x="14.865" y="-35.975" width="0.75" height="0.75" rx="0.2" fill="#d4a72c" stroke="#8c959f" stroke-width="0.15"/>
+<rect x="-8.6" y="-35.75" width="6.7" height="0.3" rx="0" fill="#aeb5bc"/>
+<rect x="1.9" y="-35.75" width="6.7" height="0.3" rx="0" fill="#aeb5bc"/>
+<circle cx="0" cy="-35.6" r="1.9" fill="#c7ccd1" stroke="#1f2328" stroke-width="0.25"/>
+<circle cx="0" cy="-35.6" r="1.2" fill="#e0a21a"/>
+<rect x="-16.8" y="-31.97" width="8.2" height="2.9" rx="0.3" fill="#16191d" stroke="#8c959f" stroke-width="0.15"/>
+<rect x="-15.615" y="-30.895" width="0.75" height="0.75" rx="0.2" fill="#d4a72c" stroke="#8c959f" stroke-width="0.15"/>
+<rect x="-13.075" y="-30.895" width="0.75" height="0.75" rx="0.2" fill="#d4a72c" stroke="#8c959f" stroke-width="0.15"/>
+<rect x="-10.535" y="-30.895" width="0.75" height="0.75" rx="0.2" fill="#d4a72c" stroke="#8c959f" stroke-width="0.15"/>
+<rect x="8.6" y="-31.97" width="8.2" height="2.9" rx="0.3" fill="#16191d" stroke="#8c959f" stroke-width="0.15"/>
+<rect x="9.785" y="-30.895" width="0.75" height="0.75" rx="0.2" fill="#d4a72c" stroke="#8c959f" stroke-width="0.15"/>
+<rect x="12.325" y="-30.895" width="0.75" height="0.75" rx="0.2" fill="#d4a72c" stroke="#8c959f" stroke-width="0.15"/>
+<rect x="14.865" y="-30.895" width="0.75" height="0.75" rx="0.2" fill="#d4a72c" stroke="#8c959f" stroke-width="0.15"/>
+<rect x="-8.6" y="-30.67" width="6.7" height="0.3" rx="0" fill="#aeb5bc"/>
+<rect x="1.9" y="-30.67" width="6.7" height="0.3" rx="0" fill="#aeb5bc"/>
+<circle cx="0" cy="-30.52" r="1.9" fill="#c7ccd1" stroke="#1f2328" stroke-width="0.25"/>
+<circle cx="0" cy="-30.52" r="1.2" fill="#e0a21a"/>
+<rect x="-16.8" y="-26.89" width="8.2" height="2.9" rx="0.3" fill="#16191d" stroke="#8c959f" stroke-width="0.15"/>
+<rect x="-15.615" y="-25.815" width="0.75" height="0.75" rx="0.2" fill="#d4a72c" stroke="#8c959f" stroke-width="0.15"/>
+<rect x="-13.075" y="-25.815" width="0.75" height="0.75" rx="0.2" fill="#d4a72c" stroke="#8c959f" stroke-width="0.15"/>
+<rect x="-10.535" y="-25.815" width="0.75" height="0.75" rx="0.2" fill="#d4a72c" stroke="#8c959f" stroke-width="0.15"/>
+<rect x="8.6" y="-26.89" width="8.2" height="2.9" rx="0.3" fill="#16191d" stroke="#8c959f" stroke-width="0.15"/>
+<rect x="9.785" y="-25.815" width="0.75" height="0.75" rx="0.2" fill="#d4a72c" stroke="#8c959f" stroke-width="0.15"/>
+<rect x="12.325" y="-25.815" width="0.75" height="0.75" rx="0.2" fill="#d4a72c" stroke="#8c959f" stroke-width="0.15"/>
+<rect x="14.865" y="-25.815" width="0.75" height="0.75" rx="0.2" fill="#d4a72c" stroke="#8c959f" stroke-width="0.15"/>
+<rect x="-8.6" y="-25.59" width="6.7" height="0.3" rx="0" fill="#aeb5bc"/>
+<rect x="1.9" y="-25.59" width="6.7" height="0.3" rx="0" fill="#aeb5bc"/>
+<circle cx="0" cy="-25.44" r="1.9" fill="#c7ccd1" stroke="#1f2328" stroke-width="0.25"/>
+<circle cx="0" cy="-25.44" r="1.2" fill="#e0a21a"/>
+<rect x="-16.8" y="-21.81" width="8.2" height="2.9" rx="0.3" fill="#16191d" stroke="#8c959f" stroke-width="0.15"/>
+<rect x="-15.615" y="-20.735" width="0.75" height="0.75" rx="0.2" fill="#d4a72c" stroke="#8c959f" stroke-width="0.15"/>
+<rect x="-13.075" y="-20.735" width="0.75" height="0.75" rx="0.2" fill="#d4a72c" stroke="#8c959f" stroke-width="0.15"/>
+<rect x="-10.535" y="-20.735" width="0.75" height="0.75" rx="0.2" fill="#d4a72c" stroke="#8c959f" stroke-width="0.15"/>
+<rect x="8.6" y="-21.81" width="8.2" height="2.9" rx="0.3" fill="#16191d" stroke="#8c959f" stroke-width="0.15"/>
+<rect x="9.785" y="-20.735" width="0.75" height="0.75" rx="0.2" fill="#d4a72c" stroke="#8c959f" stroke-width="0.15"/>
+<rect x="12.325" y="-20.735" width="0.75" height="0.75" rx="0.2" fill="#d4a72c" stroke="#8c959f" stroke-width="0.15"/>
+<rect x="14.865" y="-20.735" width="0.75" height="0.75" rx="0.2" fill="#d4a72c" stroke="#8c959f" stroke-width="0.15"/>
+<rect x="-8.6" y="-20.51" width="6.7" height="0.3" rx="0" fill="#aeb5bc"/>
+<rect x="1.9" y="-20.51" width="6.7" height="0.3" rx="0" fill="#aeb5bc"/>
+<circle cx="0" cy="-20.36" r="1.9" fill="#c7ccd1" stroke="#1f2328" stroke-width="0.25"/>
+<circle cx="0" cy="-20.36" r="1.2" fill="#e0a21a"/>
+<rect x="-16.8" y="-16.73" width="8.2" height="2.9" rx="0.3" fill="#16191d" stroke="#8c959f" stroke-width="0.15"/>
+<rect x="-15.615" y="-15.655" width="0.75" height="0.75" rx="0.2" fill="#d4a72c" stroke="#8c959f" stroke-width="0.15"/>
+<rect x="-13.075" y="-15.655" width="0.75" height="0.75" rx="0.2" fill="#d4a72c" stroke="#8c959f" stroke-width="0.15"/>
+<rect x="-10.535" y="-15.655" width="0.75" height="0.75" rx="0.2" fill="#d4a72c" stroke="#8c959f" stroke-width="0.15"/>
+<rect x="8.6" y="-16.73" width="8.2" height="2.9" rx="0.3" fill="#16191d" stroke="#8c959f" stroke-width="0.15"/>
+<rect x="9.785" y="-15.655" width="0.75" height="0.75" rx="0.2" fill="#d4a72c" stroke="#8c959f" stroke-width="0.15"/>
+<rect x="12.325" y="-15.655" width="0.75" height="0.75" rx="0.2" fill="#d4a72c" stroke="#8c959f" stroke-width="0.15"/>
+<rect x="14.865" y="-15.655" width="0.75" height="0.75" rx="0.2" fill="#d4a72c" stroke="#8c959f" stroke-width="0.15"/>
+<rect x="-8.6" y="-15.43" width="6.7" height="0.3" rx="0" fill="#aeb5bc"/>
+<rect x="1.9" y="-15.43" width="6.7" height="0.3" rx="0" fill="#aeb5bc"/>
+<circle cx="0" cy="-15.28" r="1.9" fill="#c7ccd1" stroke="#1f2328" stroke-width="0.25"/>
+<circle cx="0" cy="-15.28" r="1.2" fill="#e0a21a"/>
+<rect x="-16.8" y="-11.65" width="8.2" height="2.9" rx="0.3" fill="#16191d" stroke="#8c959f" stroke-width="0.15"/>
+<rect x="-15.615" y="-10.575" width="0.75" height="0.75" rx="0.2" fill="#d4a72c" stroke="#8c959f" stroke-width="0.15"/>
+<rect x="-13.075" y="-10.575" width="0.75" height="0.75" rx="0.2" fill="#d4a72c" stroke="#8c959f" stroke-width="0.15"/>
+<rect x="-10.535" y="-10.575" width="0.75" height="0.75" rx="0.2" fill="#d4a72c" stroke="#8c959f" stroke-width="0.15"/>
+<rect x="8.6" y="-11.65" width="8.2" height="2.9" rx="0.3" fill="#16191d" stroke="#8c959f" stroke-width="0.15"/>
+<rect x="9.785" y="-10.575" width="0.75" height="0.75" rx="0.2" fill="#d4a72c" stroke="#8c959f" stroke-width="0.15"/>
+<rect x="12.325" y="-10.575" width="0.75" height="0.75" rx="0.2" fill="#d4a72c" stroke="#8c959f" stroke-width="0.15"/>
+<rect x="14.865" y="-10.575" width="0.75" height="0.75" rx="0.2" fill="#d4a72c" stroke="#8c959f" stroke-width="0.15"/>
+<rect x="-8.6" y="-10.35" width="6.7" height="0.3" rx="0" fill="#aeb5bc"/>
+<rect x="1.9" y="-10.35" width="6.7" height="0.3" rx="0" fill="#aeb5bc"/>
+<circle cx="0" cy="-10.2" r="1.9" fill="#c7ccd1" stroke="#1f2328" stroke-width="0.25"/>
+<circle cx="0" cy="-10.2" r="1.2" fill="#e0a21a"/>
+<circle cx="0" cy="-5.3" r="1.9" fill="#c7ccd1" stroke="#1f2328" stroke-width="0.25"/>
+<circle cx="0" cy="-5.3" r="1.2" fill="#58a6ff"/>
+<text x="-15.24" y="-6.2" font-size="2.6" fill="#1f2328" text-anchor="middle" font-weight="bold">−</text>
+<text x="-12.7" y="-6.2" font-size="2.6" fill="#1f2328" text-anchor="middle" font-weight="bold">+</text>
+<text x="-10.16" y="-6.2" font-size="2.6" fill="#1f2328" text-anchor="middle" font-weight="bold">~</text>
+<text x="-12.7" y="-3.6" font-size="1.9" fill="#1f2328" text-anchor="middle" font-weight="bold">OUTPUT</text>
+<text x="10.16" y="-6.2" font-size="2.6" fill="#1f2328" text-anchor="middle" font-weight="bold">~</text>
+<text x="12.7" y="-6.2" font-size="2.6" fill="#1f2328" text-anchor="middle" font-weight="bold">+</text>
+<text x="15.24" y="-6.2" font-size="2.6" fill="#1f2328" text-anchor="middle" font-weight="bold">−</text>
+<text x="12.7" y="-3.6" font-size="1.9" fill="#1f2328" text-anchor="middle" font-weight="bold">INPUT</text>
+<text x="8.4" y="16.4" font-size="3.6" fill="#1f2328" text-anchor="middle" font-weight="bold">REV</text>
+<text x="8.4" y="18.9" font-size="1.3" fill="#57606a" text-anchor="middle">ROBOTICS</text>
+<text x="-8.3" y="24.8" font-size="3.6" fill="#1f2328" text-anchor="middle" font-weight="bold">+</text>
+<rect x="-12.45" y="27.45" width="8.3" height="8.3" rx="0.4" fill="#c3c9cf" stroke="#8c959f" stroke-width="0.25"/>
+<rect x="-10.6" y="28.6" width="4.6" height="8" rx="0.6" fill="#b9c0c7" stroke="#8c959f" stroke-width="0.2"/>
+<circle cx="-8.3" cy="31.6" r="2.6" fill="#d9dee3" stroke="#8c959f" stroke-width="0.3"/>
+<rect x="-10.3" y="31.4" width="4" height="0.4" rx="0" fill="#6e7781"/>
+<rect x="-8.5" y="29.6" width="0.4" height="4" rx="0" fill="#6e7781"/>
+<rect x="-11" y="36.4" width="5.4" height="8.4" rx="0.9" fill="#e9d44a" stroke="#a99a1c" stroke-width="0.25"/>
+<path d="M -8.3 44.6 L -8.3 58" fill="none" stroke="#8c959f" stroke-width="2.9" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M -8.3 44.6 L -8.3 58" fill="none" stroke="#cf222e" stroke-width="2.6" stroke-linejoin="round" stroke-linecap="round"/>
+<text x="8.3" y="24.8" font-size="3.6" fill="#1f2328" text-anchor="middle" font-weight="bold">−</text>
+<rect x="4.15" y="27.45" width="8.3" height="8.3" rx="0.4" fill="#c3c9cf" stroke="#8c959f" stroke-width="0.25"/>
+<rect x="6" y="28.6" width="4.6" height="8" rx="0.6" fill="#b9c0c7" stroke="#8c959f" stroke-width="0.2"/>
+<circle cx="8.3" cy="31.6" r="2.6" fill="#d9dee3" stroke="#8c959f" stroke-width="0.3"/>
+<rect x="6.3" y="31.4" width="4" height="0.4" rx="0" fill="#6e7781"/>
+<rect x="8.1" y="29.6" width="0.4" height="4" rx="0" fill="#6e7781"/>
+<rect x="5.6" y="36.4" width="5.4" height="8.4" rx="0.9" fill="#e9d44a" stroke="#a99a1c" stroke-width="0.25"/>
+<path d="M 8.3 44.6 L 8.3 58" fill="none" stroke="#8c959f" stroke-width="2.9" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 8.3 44.6 L 8.3 58" fill="none" stroke="#0d1117" stroke-width="2.6" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M -16.8 -37.05 L -29 -37.05" fill="none" stroke="#8c959f" stroke-width="1.05" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M -16.8 -37.05 L -29 -37.05" fill="none" stroke="#0d1117" stroke-width="0.75" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M -16.8 -35.6 L -29 -35.6" fill="none" stroke="#8c959f" stroke-width="1.05" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M -16.8 -35.6 L -29 -35.6" fill="none" stroke="#cf222e" stroke-width="0.75" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M -16.8 -34.15 L -29 -34.15" fill="none" stroke="#8c959f" stroke-width="1.05" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M -16.8 -34.15 L -29 -34.15" fill="none" stroke="#f0f3f6" stroke-width="0.75" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 16.8 -37.05 L 29 -37.05" fill="none" stroke="#8c959f" stroke-width="1.05" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 16.8 -37.05 L 29 -37.05" fill="none" stroke="#0d1117" stroke-width="0.75" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 16.8 -35.6 L 29 -35.6" fill="none" stroke="#8c959f" stroke-width="1.05" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 16.8 -35.6 L 29 -35.6" fill="none" stroke="#cf222e" stroke-width="0.75" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 16.8 -34.15 L 29 -34.15" fill="none" stroke="#8c959f" stroke-width="1.05" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 16.8 -34.15 L 29 -34.15" fill="none" stroke="#f0f3f6" stroke-width="0.75" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M -16.8 -31.97 L -29 -31.97" fill="none" stroke="#8c959f" stroke-width="1.05" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M -16.8 -31.97 L -29 -31.97" fill="none" stroke="#0d1117" stroke-width="0.75" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M -16.8 -30.52 L -29 -30.52" fill="none" stroke="#8c959f" stroke-width="1.05" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M -16.8 -30.52 L -29 -30.52" fill="none" stroke="#cf222e" stroke-width="0.75" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M -16.8 -29.07 L -29 -29.07" fill="none" stroke="#8c959f" stroke-width="1.05" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M -16.8 -29.07 L -29 -29.07" fill="none" stroke="#f0f3f6" stroke-width="0.75" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 16.8 -31.97 L 29 -31.97" fill="none" stroke="#8c959f" stroke-width="1.05" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 16.8 -31.97 L 29 -31.97" fill="none" stroke="#0d1117" stroke-width="0.75" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 16.8 -30.52 L 29 -30.52" fill="none" stroke="#8c959f" stroke-width="1.05" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 16.8 -30.52 L 29 -30.52" fill="none" stroke="#cf222e" stroke-width="0.75" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 16.8 -29.07 L 29 -29.07" fill="none" stroke="#8c959f" stroke-width="1.05" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 16.8 -29.07 L 29 -29.07" fill="none" stroke="#f0f3f6" stroke-width="0.75" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M -16.8 -26.89 L -29 -26.89" fill="none" stroke="#8c959f" stroke-width="1.05" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M -16.8 -26.89 L -29 -26.89" fill="none" stroke="#0d1117" stroke-width="0.75" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M -16.8 -25.44 L -29 -25.44" fill="none" stroke="#8c959f" stroke-width="1.05" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M -16.8 -25.44 L -29 -25.44" fill="none" stroke="#cf222e" stroke-width="0.75" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M -16.8 -23.99 L -29 -23.99" fill="none" stroke="#8c959f" stroke-width="1.05" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M -16.8 -23.99 L -29 -23.99" fill="none" stroke="#f0f3f6" stroke-width="0.75" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 16.8 -26.89 L 29 -26.89" fill="none" stroke="#8c959f" stroke-width="1.05" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 16.8 -26.89 L 29 -26.89" fill="none" stroke="#0d1117" stroke-width="0.75" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 16.8 -25.44 L 29 -25.44" fill="none" stroke="#8c959f" stroke-width="1.05" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 16.8 -25.44 L 29 -25.44" fill="none" stroke="#cf222e" stroke-width="0.75" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 16.8 -23.99 L 29 -23.99" fill="none" stroke="#8c959f" stroke-width="1.05" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 16.8 -23.99 L 29 -23.99" fill="none" stroke="#f0f3f6" stroke-width="0.75" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M -16.8 -21.81 L -29 -21.81" fill="none" stroke="#8c959f" stroke-width="1.05" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M -16.8 -21.81 L -29 -21.81" fill="none" stroke="#0d1117" stroke-width="0.75" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M -16.8 -20.36 L -29 -20.36" fill="none" stroke="#8c959f" stroke-width="1.05" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M -16.8 -20.36 L -29 -20.36" fill="none" stroke="#cf222e" stroke-width="0.75" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M -16.8 -18.91 L -29 -18.91" fill="none" stroke="#8c959f" stroke-width="1.05" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M -16.8 -18.91 L -29 -18.91" fill="none" stroke="#f0f3f6" stroke-width="0.75" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 16.8 -21.81 L 29 -21.81" fill="none" stroke="#8c959f" stroke-width="1.05" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 16.8 -21.81 L 29 -21.81" fill="none" stroke="#0d1117" stroke-width="0.75" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 16.8 -20.36 L 29 -20.36" fill="none" stroke="#8c959f" stroke-width="1.05" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 16.8 -20.36 L 29 -20.36" fill="none" stroke="#cf222e" stroke-width="0.75" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 16.8 -18.91 L 29 -18.91" fill="none" stroke="#8c959f" stroke-width="1.05" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 16.8 -18.91 L 29 -18.91" fill="none" stroke="#f0f3f6" stroke-width="0.75" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M -16.8 -16.73 L -29 -16.73" fill="none" stroke="#8c959f" stroke-width="1.05" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M -16.8 -16.73 L -29 -16.73" fill="none" stroke="#0d1117" stroke-width="0.75" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M -16.8 -15.28 L -29 -15.28" fill="none" stroke="#8c959f" stroke-width="1.05" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M -16.8 -15.28 L -29 -15.28" fill="none" stroke="#cf222e" stroke-width="0.75" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M -16.8 -13.83 L -29 -13.83" fill="none" stroke="#8c959f" stroke-width="1.05" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M -16.8 -13.83 L -29 -13.83" fill="none" stroke="#f0f3f6" stroke-width="0.75" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 16.8 -16.73 L 29 -16.73" fill="none" stroke="#8c959f" stroke-width="1.05" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 16.8 -16.73 L 29 -16.73" fill="none" stroke="#0d1117" stroke-width="0.75" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 16.8 -15.28 L 29 -15.28" fill="none" stroke="#8c959f" stroke-width="1.05" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 16.8 -15.28 L 29 -15.28" fill="none" stroke="#cf222e" stroke-width="0.75" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 16.8 -13.83 L 29 -13.83" fill="none" stroke="#8c959f" stroke-width="1.05" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 16.8 -13.83 L 29 -13.83" fill="none" stroke="#f0f3f6" stroke-width="0.75" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M -16.8 -11.65 L -29 -11.65" fill="none" stroke="#8c959f" stroke-width="1.05" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M -16.8 -11.65 L -29 -11.65" fill="none" stroke="#0d1117" stroke-width="0.75" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M -16.8 -10.2 L -29 -10.2" fill="none" stroke="#8c959f" stroke-width="1.05" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M -16.8 -10.2 L -29 -10.2" fill="none" stroke="#cf222e" stroke-width="0.75" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M -16.8 -8.75 L -29 -8.75" fill="none" stroke="#8c959f" stroke-width="1.05" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M -16.8 -8.75 L -29 -8.75" fill="none" stroke="#f0f3f6" stroke-width="0.75" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 16.8 -11.65 L 29 -11.65" fill="none" stroke="#8c959f" stroke-width="1.05" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 16.8 -11.65 L 29 -11.65" fill="none" stroke="#0d1117" stroke-width="0.75" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 16.8 -10.2 L 29 -10.2" fill="none" stroke="#8c959f" stroke-width="1.05" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 16.8 -10.2 L 29 -10.2" fill="none" stroke="#cf222e" stroke-width="0.75" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 16.8 -8.75 L 29 -8.75" fill="none" stroke="#8c959f" stroke-width="1.05" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 16.8 -8.75 L 29 -8.75" fill="none" stroke="#f0f3f6" stroke-width="0.75" stroke-linejoin="round" stroke-linecap="round"/>
+<g class="lead-labels">
+<text x="-31.6" y="-34.8" font-size="2.2" fill="#1f2328" text-anchor="middle" font-weight="bold">1</text>
+<text x="31.6" y="-34.8" font-size="2.2" fill="#1f2328" text-anchor="middle" font-weight="bold">1</text>
+<text x="-31.6" y="-29.72" font-size="2.2" fill="#1f2328" text-anchor="middle" font-weight="bold">2</text>
+<text x="31.6" y="-29.72" font-size="2.2" fill="#1f2328" text-anchor="middle" font-weight="bold">2</text>
+<text x="-31.6" y="-24.64" font-size="2.2" fill="#1f2328" text-anchor="middle" font-weight="bold">3</text>
+<text x="31.6" y="-24.64" font-size="2.2" fill="#1f2328" text-anchor="middle" font-weight="bold">3</text>
+<text x="-31.6" y="-19.56" font-size="2.2" fill="#1f2328" text-anchor="middle" font-weight="bold">4</text>
+<text x="31.6" y="-19.56" font-size="2.2" fill="#1f2328" text-anchor="middle" font-weight="bold">4</text>
+<text x="-31.6" y="-14.48" font-size="2.2" fill="#1f2328" text-anchor="middle" font-weight="bold">5</text>
+<text x="31.6" y="-14.48" font-size="2.2" fill="#1f2328" text-anchor="middle" font-weight="bold">5</text>
+<text x="-31.6" y="-9.4" font-size="2.2" fill="#1f2328" text-anchor="middle" font-weight="bold">6</text>
+<text x="31.6" y="-9.4" font-size="2.2" fill="#1f2328" text-anchor="middle" font-weight="bold">6</text>
+<text x="-24" y="-40.6" font-size="2.1" fill="#57606a" text-anchor="middle">6 V out</text>
+<text x="24" y="-40.6" font-size="2.1" fill="#57606a" text-anchor="middle">PWM in</text>
+<text x="-8.3" y="63.2" font-size="3" fill="#1f2328" text-anchor="middle" font-weight="bold">+</text>
+<text x="8.3" y="63.2" font-size="3" fill="#1f2328" text-anchor="middle" font-weight="bold">−</text>
+<text x="0" y="67.2" font-size="2.2" fill="#1f2328" text-anchor="middle" font-weight="bold">12 V in</text>
+</g>
+<g class="caption">
+<text x="0" y="73.5" font-size="4" fill="#1f2328" text-anchor="middle" font-weight="bold">REV Servo Power Module</text>
+<text x="0" y="77.7" font-size="2.3" fill="#57606a" text-anchor="middle">91.4 × 38.9 × 20.6 mm · top view · 12 V leads drawn short</text>
+</g>
+<g id="anchors">
+<circle class="anchor" id="anchor-servo_0" data-kind="signal" cx="-29" cy="-35.6" r="1" fill="none"><title>Servo output 1 (icon numbering): 3-pin 0.1 in header, - ground at the outer edge, + 6 V in the middle, ~ signal toward the LED column; carries 6 V</title></circle>
+<circle class="anchor" id="anchor-pwm_in_0" data-kind="signal" cx="29" cy="-35.6" r="1" fill="none"><title>PWM input 1 (icon numbering): 3-pin 0.1 in header, ~ signal toward the LED column, + in the middle, - ground at the outer edge; PWM from a controller, passed straight through to servo output 1</title></circle>
+<circle class="anchor" id="anchor-servo_1" data-kind="signal" cx="-29" cy="-30.52" r="1" fill="none"><title>Servo output 2 (icon numbering): 3-pin 0.1 in header, - ground at the outer edge, + 6 V in the middle, ~ signal toward the LED column; carries 6 V</title></circle>
+<circle class="anchor" id="anchor-pwm_in_1" data-kind="signal" cx="29" cy="-30.52" r="1" fill="none"><title>PWM input 2 (icon numbering): 3-pin 0.1 in header, ~ signal toward the LED column, + in the middle, - ground at the outer edge; PWM from a controller, passed straight through to servo output 2</title></circle>
+<circle class="anchor" id="anchor-servo_2" data-kind="signal" cx="-29" cy="-25.44" r="1" fill="none"><title>Servo output 3 (icon numbering): 3-pin 0.1 in header, - ground at the outer edge, + 6 V in the middle, ~ signal toward the LED column; carries 6 V</title></circle>
+<circle class="anchor" id="anchor-pwm_in_2" data-kind="signal" cx="29" cy="-25.44" r="1" fill="none"><title>PWM input 3 (icon numbering): 3-pin 0.1 in header, ~ signal toward the LED column, + in the middle, - ground at the outer edge; PWM from a controller, passed straight through to servo output 3</title></circle>
+<circle class="anchor" id="anchor-servo_3" data-kind="signal" cx="-29" cy="-20.36" r="1" fill="none"><title>Servo output 4 (icon numbering): 3-pin 0.1 in header, - ground at the outer edge, + 6 V in the middle, ~ signal toward the LED column; carries 6 V</title></circle>
+<circle class="anchor" id="anchor-pwm_in_3" data-kind="signal" cx="29" cy="-20.36" r="1" fill="none"><title>PWM input 4 (icon numbering): 3-pin 0.1 in header, ~ signal toward the LED column, + in the middle, - ground at the outer edge; PWM from a controller, passed straight through to servo output 4</title></circle>
+<circle class="anchor" id="anchor-servo_4" data-kind="signal" cx="-29" cy="-15.28" r="1" fill="none"><title>Servo output 5 (icon numbering): 3-pin 0.1 in header, - ground at the outer edge, + 6 V in the middle, ~ signal toward the LED column; carries 6 V</title></circle>
+<circle class="anchor" id="anchor-pwm_in_4" data-kind="signal" cx="29" cy="-15.28" r="1" fill="none"><title>PWM input 5 (icon numbering): 3-pin 0.1 in header, ~ signal toward the LED column, + in the middle, - ground at the outer edge; PWM from a controller, passed straight through to servo output 5</title></circle>
+<circle class="anchor" id="anchor-servo_5" data-kind="signal" cx="-29" cy="-10.2" r="1" fill="none"><title>Servo output 6 (icon numbering): 3-pin 0.1 in header, - ground at the outer edge, + 6 V in the middle, ~ signal toward the LED column; carries 6 V</title></circle>
+<circle class="anchor" id="anchor-pwm_in_5" data-kind="signal" cx="29" cy="-10.2" r="1" fill="none"><title>PWM input 6 (icon numbering): 3-pin 0.1 in header, ~ signal toward the LED column, + in the middle, - ground at the outer edge; PWM from a controller, passed straight through to servo output 6</title></circle>
+<circle class="anchor" id="anchor-power" data-kind="power" cx="0" cy="58" r="1" fill="none"><title>12 V input: two screw terminals for #6 or M3 ring or fork terminals on 18 AWG or larger wire, + on the left, - on the right as printed; 7-20 V, 12 V nominal</title></circle>
+</g>
+</svg>

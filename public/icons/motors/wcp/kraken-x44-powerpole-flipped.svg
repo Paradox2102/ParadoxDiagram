@@ -1,0 +1,99 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-40 -27 80 99.5" width="80mm" height="99.5mm" font-family="Helvetica, Arial, sans-serif">
+<title>Kraken X44 + Flipped PowerPole</title>
+<desc>Drawn by FRC Team 2102 Paradox. Public domain: CC0 1.0 (https://creativecommons.org/publicdomain/zero/1.0/). https://docs.team2102.org/icons/</desc>
+<path d="M -15.6 15.6 A 22 22 0 1 1 15.6 15.6 L 5.5 25.4 L -5.5 25.4 Z" fill="#3a3f47" stroke="#1f2328" stroke-width="0.5" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M -9.592 -18.04 L 9.592 -18.04" fill="none" stroke="#4a515b" stroke-width="0.9" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M -12.7111 -15.4 L 12.7111 -15.4" fill="none" stroke="#4a515b" stroke-width="0.9" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M -14.9216 -12.76 L 14.9216 -12.76" fill="none" stroke="#4a515b" stroke-width="0.9" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M -16.5342 -10.12 L 16.5342 -10.12" fill="none" stroke="#4a515b" stroke-width="0.9" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M -17.6894 -7.48 L 17.6894 -7.48" fill="none" stroke="#4a515b" stroke-width="0.9" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M -18.461 -4.84 L 18.461 -4.84" fill="none" stroke="#4a515b" stroke-width="0.9" stroke-linejoin="round" stroke-linecap="round"/>
+<text x="0" y="-1.5" font-size="2.5" fill="#f0f3f6" text-anchor="middle" font-weight="bold">TALON FX</text>
+<rect x="-19.5" y="-1.1" width="1.6" height="5.2" rx="0.4" fill="#f0883e"/>
+<rect x="17.9" y="-1.1" width="1.6" height="5.2" rx="0.4" fill="#f0883e"/>
+<rect x="-8.05" y="31.7" width="8.05" height="9.1" rx="0.8" fill="#24282d" stroke="#0d0f12" stroke-width="0.3"/>
+<rect x="-6.85" y="32.9" width="5.65" height="6.7" rx="0.5" fill="none" stroke="#0d0f12" stroke-width="0.2"/>
+<rect x="0" y="31.7" width="8.05" height="9.1" rx="0.8" fill="#b3201f" stroke="#0d0f12" stroke-width="0.3"/>
+<rect x="1.2" y="32.9" width="5.65" height="6.7" rx="0.5" fill="none" stroke="#0d0f12" stroke-width="0.2"/>
+<path d="M -4 40.3 L -4 50.8" fill="none" stroke="#8c959f" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M -4 40.3 L -4 50.8" fill="none" stroke="#0d1117" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 4 40.3 L 4 50.8" fill="none" stroke="#8c959f" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 4 40.3 L 4 50.8" fill="none" stroke="#cf222e" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round"/>
+<g class="lead-labels">
+<text x="-4" y="54.4" font-size="2.6" fill="#1f2328" text-anchor="middle" font-weight="bold">−</text>
+<text x="4" y="54.4" font-size="2.6" fill="#1f2328" text-anchor="middle" font-weight="bold">+</text>
+<text x="0" y="58" font-size="2.4" fill="#1f2328" text-anchor="middle" font-weight="bold">PP45</text>
+</g>
+<path d="M -19.4 1.7 L 19.4 1.7 Q 21.9 1.7 21.9 4.2 L 21.1 18.4 L 9.8 29.3 L 8.2 36.3 L -8.2 36.3 L -9.8 29.3 L -21.1 18.4 L -21.9 4.2 Q -21.9 1.7 -19.4 1.7 Z" fill="#2b2f35" stroke="#14171b" stroke-width="0.5" stroke-linejoin="round" stroke-linecap="round"/>
+<rect x="-12.9" y="8.9" width="25.8" height="8.4" rx="4.2" fill="none" stroke="#14171b" stroke-width="0.4"/>
+<text x="0" y="15.5" font-size="6.7" fill="#0b5a9e" text-anchor="middle" font-weight="bold" textLength="20.4" lengthAdjust="spacingAndGlyphs">WCP</text>
+<circle cx="-17.1" cy="5.3" r="3.3" fill="#1a1d21" stroke="#0d0f12" stroke-width="0.3"/>
+<circle cx="-17.1" cy="5.3" r="2.5" fill="#33383f"/>
+<circle cx="-17.1" cy="5.3" r="1" fill="#14171b"/>
+<circle cx="17.1" cy="5.3" r="3.3" fill="#1a1d21" stroke="#0d0f12" stroke-width="0.3"/>
+<circle cx="17.1" cy="5.3" r="2.5" fill="#33383f"/>
+<circle cx="17.1" cy="5.3" r="1" fill="#14171b"/>
+<rect x="-2.7" y="26.7" width="5.4" height="9.6" rx="0.3" fill="#23272c" stroke="#14171b" stroke-width="0.3"/>
+<rect x="-2.5" y="26.9" width="5" height="1.2" rx="0" fill="#ffffff"/>
+<rect x="-2.5" y="28.1" width="5" height="3.4" rx="0" fill="#4a4f56"/>
+<g transform="translate(-17.7 20) rotate(45)">
+<rect x="-3.8" y="-2.3" width="7.6" height="4.6" rx="1.6" fill="#23272c" stroke="#14171b" stroke-width="0.3"/>
+<rect x="-2.9" y="1.3" width="5.8" height="0.7" rx="0" fill="#d0d7de"/>
+<rect x="-4.1" y="1" width="1.1" height="1.6" rx="0.2" fill="#0d0f12"/>
+<rect x="3" y="1" width="1.1" height="1.6" rx="0.2" fill="#0d0f12"/>
+<text x="-1.8" y="0.68" font-size="3" fill="#2da44e" text-anchor="middle" font-weight="bold">L</text>
+<text x="1.8" y="0.68" font-size="3" fill="#e3b341" text-anchor="middle" font-weight="bold">H</text>
+</g>
+<g transform="translate(-12.3 25.7) rotate(45)">
+<rect x="-3.8" y="-2.3" width="7.6" height="4.6" rx="1.6" fill="#23272c" stroke="#14171b" stroke-width="0.3"/>
+<rect x="-2.9" y="1.3" width="5.8" height="0.7" rx="0" fill="#d0d7de"/>
+<rect x="-4.1" y="1" width="1.1" height="1.6" rx="0.2" fill="#0d0f12"/>
+<rect x="3" y="1" width="1.1" height="1.6" rx="0.2" fill="#0d0f12"/>
+<text x="-1.8" y="0.68" font-size="3" fill="#2da44e" text-anchor="middle" font-weight="bold">L</text>
+<text x="1.8" y="0.68" font-size="3" fill="#e3b341" text-anchor="middle" font-weight="bold">H</text>
+</g>
+<g transform="translate(14.4 22.5) rotate(-45)">
+<rect x="-8" y="-2.7" width="16" height="5.4" rx="1.6" fill="#23272c" stroke="#14171b" stroke-width="0.3"/>
+<rect x="-7.1" y="1.7" width="14.2" height="0.7" rx="0" fill="#d0d7de"/>
+<rect x="-8.3" y="1.4" width="1.1" height="1.6" rx="0.2" fill="#0d0f12"/>
+<rect x="7.2" y="1.4" width="1.1" height="1.6" rx="0.2" fill="#0d0f12"/>
+<circle cx="-4.8" cy="-0.4" r="1.3" fill="#c4c9cf" stroke="#7d848c" stroke-width="0.15"/>
+<rect x="-5.7" y="-0.65" width="1.8" height="0.5" rx="0" fill="#cf222e"/>
+<rect x="-5.05" y="-1.3" width="0.5" height="1.8" rx="0" fill="#cf222e"/>
+<text x="-1.6" y="0.68" font-size="3" fill="#2da44e" text-anchor="middle" font-weight="bold">L</text>
+<text x="1.6" y="0.68" font-size="3" fill="#e3b341" text-anchor="middle" font-weight="bold">H</text>
+<circle cx="4.8" cy="-0.4" r="1.3" fill="#c4c9cf" stroke="#7d848c" stroke-width="0.15"/>
+<rect x="4.1" y="-0.65" width="1.4" height="0.5" rx="0" fill="#3a3f47"/>
+</g>
+<g class="lead-labels">
+<path d="M -19.9415 20.4455 L -25.8812 26.3852" fill="none" stroke="#8c959f" stroke-width="1.2" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M -19.9415 20.4455 L -25.8812 26.3852" fill="none" stroke="#2da44e" stroke-width="0.9" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M -18.1455 22.2415 L -24.0852 28.1812" fill="none" stroke="#8c959f" stroke-width="1.2" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M -18.1455 22.2415 L -24.0852 28.1812" fill="none" stroke="#e3b341" stroke-width="0.9" stroke-linejoin="round" stroke-linecap="round"/>
+<text x="-27.1832" y="31.6832" font-size="2.4" fill="#1f2328" text-anchor="end" font-weight="bold">CAN A</text>
+<path d="M -14.5415 26.1455 L -20.4812 32.0852" fill="none" stroke="#8c959f" stroke-width="1.2" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M -14.5415 26.1455 L -20.4812 32.0852" fill="none" stroke="#2da44e" stroke-width="0.9" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M -12.7455 27.9415 L -18.6852 33.8812" fill="none" stroke="#8c959f" stroke-width="1.2" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M -12.7455 27.9415 L -18.6852 33.8812" fill="none" stroke="#e3b341" stroke-width="0.9" stroke-linejoin="round" stroke-linecap="round"/>
+<text x="-21.7832" y="37.3832" font-size="2.4" fill="#1f2328" text-anchor="end" font-weight="bold">CAN B</text>
+<path d="M 13.3323 26.8204 L 19.272 32.7601" fill="none" stroke="#8c959f" stroke-width="1.2" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 13.3323 26.8204 L 19.272 32.7601" fill="none" stroke="#cf222e" stroke-width="0.9" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 15.1283 25.0244 L 21.068 30.9641" fill="none" stroke="#8c959f" stroke-width="1.2" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 15.1283 25.0244 L 21.068 30.9641" fill="none" stroke="#2da44e" stroke-width="0.9" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 16.9244 23.2283 L 22.8641 29.168" fill="none" stroke="#8c959f" stroke-width="1.2" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 16.9244 23.2283 L 22.8641 29.168" fill="none" stroke="#e3b341" stroke-width="0.9" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 18.7204 21.4323 L 24.6601 27.372" fill="none" stroke="#8c959f" stroke-width="1.2" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 18.7204 21.4323 L 24.6601 27.372" fill="none" stroke="#0d1117" stroke-width="0.9" stroke-linejoin="round" stroke-linecap="round"/>
+<text x="24.366" y="34.466" font-size="2.4" fill="#1f2328" text-anchor="start" font-weight="bold">CAN + 12 V</text>
+</g>
+<g class="caption">
+<text x="0" y="65.8" font-size="4" fill="#1f2328" text-anchor="middle" font-weight="bold">Kraken X44 + Flipped PowerPole</text>
+<text x="0" y="70" font-size="2.3" fill="#57606a" text-anchor="middle">44 × 58 mm · back view · low-profile board fitted</text>
+</g>
+<g id="anchors">
+<circle class="anchor" id="anchor-power" data-kind="power" cx="0" cy="50.8" r="1" fill="none"><title>PP45 power in: red housing + (right), black housing − (left); mates Powerwerx 1327 red / 1327G6 black</title></circle>
+<circle class="anchor" id="anchor-can_a" data-kind="can" cx="-24.98" cy="27.28" r="1" fill="none"><title>2-pin male Molex SL: CAN H (yellow) / CAN L (green), one in or out of the daisy chain (mates Molex 50579402)</title></circle>
+<circle class="anchor" id="anchor-can_b" data-kind="can" cx="-19.58" cy="32.98" r="1" fill="none"><title>2-pin male Molex SL: CAN H (yellow) / CAN L (green), one in or out of the daisy chain (mates Molex 50579402)</title></circle>
+<circle class="anchor" id="anchor-can_power" data-kind="can" cx="21.97" cy="30.07" r="1" fill="none"><title>4-pin male Molex SL, pins: − (GND), CAN H, CAN L, + (12 V): CAN plus 12 V for a CANcoder (mates Molex 50579404)</title></circle>
+</g>
+</svg>

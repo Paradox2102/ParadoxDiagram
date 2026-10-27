@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-27 -18 54 52" width="54mm" height="52mm" font-family="Helvetica, Arial, sans-serif">
+<title>Thrifty Absolute Encoder</title>
+<desc>Drawn by FRC Team 2102 Paradox. Public domain: CC0 1.0 (https://creativecommons.org/publicdomain/zero/1.0/). https://docs.team2102.org/icons/</desc>
+<rect x="-6" y="-13.12" width="12" height="24.64" rx="1.6" fill="#1f2328" stroke="#0d1117" stroke-width="0.8"/>
+<circle cx="7.44" cy="0" r="3.3" fill="#1f2328" stroke="#0d1117" stroke-width="0.8"/>
+<rect x="4" y="-2.6" width="3.44" height="5.2" rx="0" fill="#1f2328" stroke="#0d1117" stroke-width="0.8"/>
+<circle cx="-7.44" cy="0" r="3.3" fill="#1f2328" stroke="#0d1117" stroke-width="0.8"/>
+<rect x="-7.44" y="-2.6" width="3.44" height="5.2" rx="0" fill="#1f2328" stroke="#0d1117" stroke-width="0.8"/>
+<rect x="-6" y="-13.12" width="12" height="24.64" rx="1.6" fill="#24282e"/>
+<circle cx="7.44" cy="0" r="3.3" fill="#24282e"/>
+<rect x="4" y="-2.6" width="3.44" height="5.2" rx="0" fill="#24282e"/>
+<circle cx="-7.44" cy="0" r="3.3" fill="#24282e"/>
+<rect x="-7.44" y="-2.6" width="3.44" height="5.2" rx="0" fill="#24282e"/>
+<circle cx="7.44" cy="0" r="1.45" fill="#ffffff" stroke="#0d1117" stroke-width="0.25"/>
+<circle cx="-7.44" cy="0" r="1.45" fill="#ffffff" stroke="#0d1117" stroke-width="0.25"/>
+<rect x="-4.2" y="-9.6" width="8.4" height="15.4" rx="0.6" fill="#30353c" stroke="#0d1117" stroke-width="0.3"/>
+<rect x="-4" y="-12.4" width="8" height="2.6" rx="0.3" fill="#16191d"/>
+<path d="M -2.54 -11.4 L -2.54 -0.6" fill="none" stroke="#d4a72c" stroke-width="0.64" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="-2.54" cy="-11.4" r="0.42" fill="#8c959f"/>
+<path d="M 0 -11.4 L 0 -0.6" fill="none" stroke="#d4a72c" stroke-width="0.64" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="0" cy="-11.4" r="0.42" fill="#8c959f"/>
+<path d="M 2.54 -11.4 L 2.54 -0.6" fill="none" stroke="#d4a72c" stroke-width="0.64" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="2.54" cy="-11.4" r="0.42" fill="#8c959f"/>
+<text x="-2.54" y="9.6" font-size="1.9" fill="#f0f3f6" text-anchor="middle">S</text>
+<text x="-0.2" y="9.6" font-size="1.7" fill="#f0f3f6" text-anchor="middle">5V</text>
+<path d="M 2.54 7.0 L 2.54 8.0 M 1.6400000000000001 8.0 L 3.44 8.0 M 1.94 8.6 L 3.14 8.6 M 2.24 9.2 L 2.84 9.2" fill="none" stroke="#f0f3f6" stroke-width="0.25" stroke-linejoin="round" stroke-linecap="round"/>
+<g class="lead-labels">
+<text x="0" y="15" font-size="1.9" fill="#1f2328" text-anchor="middle" font-weight="bold">3-pin 0.1 in: S · 5V · GND</text>
+</g>
+<g class="caption">
+<text x="0" y="24" font-size="4" fill="#1f2328" text-anchor="middle" font-weight="bold">Thrifty Absolute Encoder</text>
+<text x="0" y="28.2" font-size="2.3" fill="#57606a" text-anchor="middle">21.9 × 24.6 mm · top view · CTRE (SDS) case</text>
+</g>
+<g id="anchors">
+<circle class="anchor" id="anchor-signal" data-kind="signal" cx="0" cy="11.82" r="1" fill="none"><title>3-pin 0.1 in header S / 5V / GND; 36 in PWM-style cable (white / red / black) to roboRIO ANALOG IN</title></circle>
+</g>
+</svg>

@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-4 -5 98 51.2" width="98mm" height="51.2mm" font-family="Helvetica, Arial, sans-serif">
+<title>ADI ADIS16470 IMU board</title>
+<desc>Drawn by FRC Team 2102 Paradox. Public domain: CC0 1.0 (https://creativecommons.org/publicdomain/zero/1.0/). https://docs.team2102.org/icons/</desc>
+<path d="M 0.8 22.5 L 65.5 22.5 L 65.5 0.8 Q 65.5 0 66.3 0 L 89.2 0 Q 90 0 90 0.8 L 90 32.2 Q 90 33 89.2 33 L 0.8 33 Q 0 33 0 32.2 L 0 23.3 Q 0 22.5 0.8 22.5 Z" fill="#1f6f3f" stroke="#1f2328" stroke-width="0.4" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="8.5" cy="29.15" r="2.25" fill="#c9a227"/>
+<circle cx="8.5" cy="29.15" r="1.6" fill="#ffffff"/>
+<circle cx="58" cy="29.15" r="2.25" fill="#c9a227"/>
+<circle cx="58" cy="29.15" r="1.6" fill="#ffffff"/>
+<circle cx="68" cy="2.5" r="2.25" fill="#c9a227"/>
+<circle cx="68" cy="2.5" r="1.6" fill="#ffffff"/>
+<circle cx="87.5" cy="2.5" r="2.25" fill="#c9a227"/>
+<circle cx="87.5" cy="2.5" r="1.6" fill="#ffffff"/>
+<circle cx="77.75" cy="30.5" r="2.25" fill="#c9a227"/>
+<circle cx="77.75" cy="30.5" r="1.6" fill="#ffffff"/>
+<text x="33.25" y="29.9" font-size="2.6" fill="#d0d7de" text-anchor="middle" font-weight="bold">http://www.analog.com/first</text>
+<text x="77.75" y="3.4" font-size="2.5" fill="#f0f3f6" text-anchor="middle" font-weight="bold">ADIS16470</text>
+<rect x="70.5" y="5.5" width="15" height="11" rx="0.8" fill="#e6dfcc" stroke="#b8ad90" stroke-width="0.3"/>
+<rect x="72.2" y="7.4" width="11.6" height="6" rx="0.3" fill="#f6f8fa" stroke="#8c959f" stroke-width="0.15"/>
+<text x="78" y="9.6" font-size="1.3" fill="#1f2328" text-anchor="middle" font-weight="bold">ANALOG DEVICES</text>
+<text x="78" y="12" font-size="1.6" fill="#1f2328" text-anchor="middle">ADIS16470</text>
+<circle cx="71.6" cy="14.8" r="0.45" fill="#b08800"/>
+<rect x="69.9" y="8.45" width="12.7" height="5.08" rx="0.3" fill="none" stroke="#57606a" stroke-width="0.35" stroke-dasharray="1 0.6"/>
+<rect x="72.8" y="19.15" width="1.6" height="0.9" rx="0" fill="#3fb950" stroke="#8c959f" stroke-width="0.1"/>
+<text x="73.6" y="18.4" font-size="1.4" fill="#f0f3f6" text-anchor="middle">POWER</text>
+<rect x="83.1" y="19.15" width="1.6" height="0.9" rx="0" fill="#3fb950" stroke="#8c959f" stroke-width="0.1"/>
+<text x="83.9" y="18.4" font-size="1.4" fill="#f0f3f6" text-anchor="middle">READY?</text>
+<text x="79" y="24.6" font-size="2.6" fill="#d0d7de" text-anchor="middle" font-weight="bold">ANALOG</text>
+<text x="79" y="27.3" font-size="2.6" fill="#d0d7de" text-anchor="middle" font-weight="bold">DEVICES</text>
+<g class="caption">
+<text x="45" y="40.5" font-size="4" fill="#1f2328" text-anchor="middle" font-weight="bold">ADI ADIS16470 IMU board</text>
+<text x="45" y="44.7" font-size="2.3" fill="#57606a" text-anchor="middle">90 × 33 mm · top view · plugs onto the roboRIO SPI port</text>
+</g>
+<g id="anchors">
+<circle class="anchor" id="anchor-spi" data-kind="signal" cx="76.25" cy="11" r="1" fill="none"><title>SPI socket underneath, 2x5 0.1 in (Samtec SSM-105): CS0, SCLK, MOSI, MISO, 3.3 V, GND, CS1/DR, CS2/RST, CS3/SYNC</title></circle>
+</g>
+</svg>

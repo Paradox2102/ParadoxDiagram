@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-24 -9 92 63" width="92mm" height="63mm" font-family="Helvetica, Arial, sans-serif">
+<title>Luma PoE PowerTap</title>
+<desc>Drawn by FRC Team 2102 Paradox. Public domain: CC0 1.0 (https://creativecommons.org/publicdomain/zero/1.0/). https://docs.team2102.org/icons/</desc>
+<rect x="0" y="0" width="55.1" height="36.6" rx="3" fill="#2a2d32" stroke="#1f2328" stroke-width="0.5"/>
+<rect x="31" y="0" width="4.5" height="2.4" rx="0.3" fill="#16191d"/>
+<rect x="31" y="34.2" width="4.5" height="2.4" rx="0.3" fill="#16191d"/>
+<rect x="0" y="2.2" width="13.4" height="15.6" rx="0.5" fill="#16191d"/>
+<rect x="-0.6" y="2.8" width="12.6" height="14.4" rx="0.4" fill="#c9ccd1" stroke="#8c959f" stroke-width="0.2"/>
+<rect x="0.8" y="3.4" width="10.4" height="2.7" rx="0.81" fill="#f0883e" stroke="#bc4c00" stroke-width="0.15"/>
+<text x="14.4" y="5.55" font-size="2.2" fill="#f0f3f6" text-anchor="start" font-weight="bold">5V</text>
+<rect x="0.8" y="6.9" width="10.4" height="2.7" rx="0.81" fill="#f0883e" stroke="#bc4c00" stroke-width="0.15"/>
+<text x="14.4" y="9.05" font-size="2.2" fill="#f0f3f6" text-anchor="start" font-weight="bold">GND</text>
+<rect x="0.8" y="10.4" width="10.4" height="2.7" rx="0.81" fill="#f0883e" stroke="#bc4c00" stroke-width="0.15"/>
+<text x="14.4" y="12.55" font-size="2.2" fill="#f0f3f6" text-anchor="start" font-weight="bold">GND</text>
+<rect x="0.8" y="13.9" width="10.4" height="2.7" rx="0.81" fill="#f0883e" stroke="#bc4c00" stroke-width="0.15"/>
+<text x="14.4" y="16.05" font-size="2.2" fill="#f0f3f6" text-anchor="start" font-weight="bold">12V</text>
+<rect x="-1.8" y="19.3" width="3.4" height="13.4" rx="0.5" fill="#16191d" stroke="#8c959f" stroke-width="0.2"/>
+<rect x="-1.35" y="21.3" width="0.9" height="9.4" rx="0.2" fill="#59636e"/>
+<text x="3.6" y="26.8" font-size="2.2" fill="#f0f3f6" text-anchor="start" font-weight="bold">ETH OUT</text>
+<rect x="53.5" y="10.3" width="3.4" height="13.4" rx="0.5" fill="#16191d" stroke="#8c959f" stroke-width="0.2"/>
+<rect x="55.55" y="12.3" width="0.9" height="9.4" rx="0.2" fill="#59636e"/>
+<text x="51.5" y="17.8" font-size="2.2" fill="#f0f3f6" text-anchor="end" font-weight="bold">ETH IN</text>
+<path d="M -0.6 4.75 L -10 4.75" fill="none" stroke="#8c959f" stroke-width="1.4" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M -0.6 4.75 L -10 4.75" fill="none" stroke="#cf222e" stroke-width="1.1" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M -10 4.75 L -11.6 4.75" fill="none" stroke="#c9d1d9" stroke-width="0.8" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M -0.6 8.25 L -10 8.25" fill="none" stroke="#8c959f" stroke-width="1.4" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M -0.6 8.25 L -10 8.25" fill="none" stroke="#0d1117" stroke-width="1.1" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M -10 8.25 L -11.6 8.25" fill="none" stroke="#c9d1d9" stroke-width="0.8" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M -0.6 11.75 L -10 11.75" fill="none" stroke="#8c959f" stroke-width="1.4" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M -0.6 11.75 L -10 11.75" fill="none" stroke="#0d1117" stroke-width="1.1" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M -10 11.75 L -11.6 11.75" fill="none" stroke="#c9d1d9" stroke-width="0.8" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M -0.6 15.25 L -10 15.25" fill="none" stroke="#8c959f" stroke-width="1.4" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M -0.6 15.25 L -10 15.25" fill="none" stroke="#cf222e" stroke-width="1.1" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M -10 15.25 L -11.6 15.25" fill="none" stroke="#c9d1d9" stroke-width="0.8" stroke-linejoin="round" stroke-linecap="round"/>
+<g class="lead-labels">
+<text x="-14" y="5.55" font-size="2" fill="#1f2328" text-anchor="end" font-weight="bold">5V</text>
+<text x="-14" y="9.05" font-size="2" fill="#1f2328" text-anchor="end" font-weight="bold">GND</text>
+<text x="-14" y="12.55" font-size="2" fill="#1f2328" text-anchor="end" font-weight="bold">GND</text>
+<text x="-14" y="16.05" font-size="2" fill="#1f2328" text-anchor="end" font-weight="bold">12V</text>
+<text x="-3.6" y="25.8" font-size="1.9" fill="#1f2328" text-anchor="end" font-weight="bold">ETH OUT</text>
+<text x="-3.6" y="28.3" font-size="1.6" fill="#aab2bd" text-anchor="end">to device</text>
+<text x="58.5" y="16.8" font-size="1.9" fill="#1f2328" text-anchor="start" font-weight="bold">ETH IN</text>
+<text x="58.5" y="19.3" font-size="1.6" fill="#aab2bd" text-anchor="start">PoE in</text>
+</g>
+<g class="caption">
+<text x="23.55" y="46.1" font-size="4" fill="#1f2328" text-anchor="middle" font-weight="bold">Luma PoE PowerTap</text>
+<text x="23.55" y="50.3" font-size="2.3" fill="#57606a" text-anchor="middle">55.1 × 36.6 mm · top view · PoE in on the right, DC out on the left</text>
+</g>
+<g id="anchors">
+<circle class="anchor" id="anchor-eth_out" data-kind="ethernet" cx="-1.8" cy="26" r="1" fill="none"><title>ETH OUT: gigabit RJ45 pass-through, no PoE (to the device)</title></circle>
+<circle class="anchor" id="anchor-eth_in" data-kind="ethernet" cx="56.9" cy="17" r="1" fill="none"><title>ETH IN: gigabit RJ45, 802.3at PoE in from the PSE (30 W max)</title></circle>
+<circle class="anchor" id="anchor-out_5v" data-kind="power" cx="-11.6" cy="4.75" r="1" fill="none"><title>5V output, 4 A max: WAGO lever terminal</title></circle>
+<circle class="anchor" id="anchor-out_gnd_1" data-kind="power" cx="-11.6" cy="8.25" r="1" fill="none"><title>GND (return for 5V): WAGO lever terminal</title></circle>
+<circle class="anchor" id="anchor-out_gnd_2" data-kind="power" cx="-11.6" cy="11.75" r="1" fill="none"><title>GND (return for 12V): WAGO lever terminal</title></circle>
+<circle class="anchor" id="anchor-out_12v" data-kind="power" cx="-11.6" cy="15.25" r="1" fill="none"><title>12V output, 2 A max: WAGO lever terminal</title></circle>
+</g>
+</svg>

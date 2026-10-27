@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-8 -6 135.1 73.3" width="135.1mm" height="73.3mm" font-family="Helvetica, Arial, sans-serif">
+<title>Vivid Robot Radio V2</title>
+<desc>Drawn by FRC Team 2102 Paradox. Public domain: CC0 1.0 (https://creativecommons.org/publicdomain/zero/1.0/). https://docs.team2102.org/icons/</desc>
+<rect x="0" y="0" width="119.1" height="52.1" rx="3" fill="#3a3f47" stroke="#1f2328" stroke-width="0.5"/>
+<rect x="16.5" y="0" width="7" height="2.5" rx="0.4" fill="#1f2328"/>
+<rect x="16.5" y="49.6" width="7" height="2.5" rx="0.4" fill="#1f2328"/>
+<rect x="95.5" y="0" width="7" height="2.5" rx="0.4" fill="#1f2328"/>
+<rect x="95.5" y="49.6" width="7" height="2.5" rx="0.4" fill="#1f2328"/>
+<text x="59.55" y="22" font-size="7" fill="#f0f3f6" text-anchor="middle" font-weight="bold">RADIO V2</text>
+<text x="59.55" y="27.5" font-size="2.2" fill="#aab2bd" text-anchor="middle">VIVID-HOSTING · WCP-2212</text>
+<path d="M 31.8 52.1 L 31.8 48.9 L 33.6 46.9 L 35.4 46.9 L 33.6 48.9 L 33.6 52.1 Z" fill="#3fb950"/>
+<text x="33.6" y="45.1" font-size="1.6" fill="#aab2bd" text-anchor="middle">PWR</text>
+<path d="M 40.3 52.1 L 40.3 48.9 L 42.1 46.9 L 43.9 46.9 L 42.1 48.9 L 42.1 52.1 Z" fill="#3fb950"/>
+<text x="42.1" y="45.1" font-size="1.6" fill="#aab2bd" text-anchor="middle">SYS</text>
+<path d="M 48.8 52.1 L 48.8 48.9 L 50.6 46.9 L 52.4 46.9 L 50.6 48.9 L 50.6 52.1 Z" fill="#3fb950"/>
+<text x="50.6" y="45.1" font-size="1.6" fill="#aab2bd" text-anchor="middle">2.4G</text>
+<path d="M 57.3 52.1 L 57.3 48.9 L 59.1 46.9 L 60.9 46.9 L 59.1 48.9 L 59.1 52.1 Z" fill="#58a6ff"/>
+<text x="59.1" y="45.1" font-size="1.6" fill="#aab2bd" text-anchor="middle">5/6G</text>
+<path d="M 65.8 52.1 L 65.8 48.9 L 67.6 46.9 L 69.4 46.9 L 67.6 48.9 L 67.6 52.1 Z" fill="#3fb950"/>
+<text x="67.6" y="45.1" font-size="1.6" fill="#aab2bd" text-anchor="middle">ROBOT</text>
+<rect x="-2" y="12.5" width="9" height="15" rx="0.8" fill="#16191d"/>
+<rect x="-0.65" y="14.75" width="6.3" height="8.25" rx="0.3" fill="#59636e"/>
+<rect x="1.42" y="23" width="2.16" height="2.1" rx="0" fill="#59636e"/>
+<rect x="-2" y="28" width="9" height="15" rx="0.8" fill="#16191d"/>
+<rect x="-0.65" y="30.25" width="6.3" height="8.25" rx="0.3" fill="#59636e"/>
+<rect x="1.42" y="38.5" width="2.16" height="2.1" rx="0" fill="#59636e"/>
+<text x="9.5" y="20.2" font-size="2.6" fill="#f0f3f6" text-anchor="start" font-weight="bold">DS</text>
+<text x="9.5" y="23.4" font-size="1.7" fill="#aab2bd" text-anchor="start">1 Gb</text>
+<text x="9.5" y="35.2" font-size="2.6" fill="#f0f3f6" text-anchor="start" font-weight="bold">AUX1</text>
+<text x="9.5" y="38.4" font-size="1.7" fill="#aab2bd" text-anchor="start">1 Gb · 802.3at out</text>
+<rect x="112.1" y="3" width="9" height="8.8" rx="0.6" fill="#d0d7de"/>
+<rect x="116.4" y="4.1" width="2.4" height="2.4" rx="0.2" fill="#cf222e" stroke="#8c959f" stroke-width="0.15"/>
+<rect x="116.4" y="8.3" width="2.4" height="2.4" rx="0.2" fill="#0d1117" stroke="#8c959f" stroke-width="0.15"/>
+<text x="110.1" y="6.6" font-size="2.6" fill="#f0f3f6" text-anchor="end" font-weight="bold">12V</text>
+<text x="110.1" y="9.8" font-size="1.7" fill="#aab2bd" text-anchor="end">4.5–60 V</text>
+<rect x="112.1" y="16" width="9" height="13.5" rx="0.8" fill="#16191d"/>
+<rect x="113.45" y="18.025" width="6.3" height="7.425" rx="0.3" fill="#59636e"/>
+<rect x="115.52" y="25.45" width="2.16" height="1.89" rx="0" fill="#59636e"/>
+<rect x="112.1" y="31.5" width="9" height="13.5" rx="0.8" fill="#16191d"/>
+<rect x="113.45" y="33.525" width="6.3" height="7.425" rx="0.3" fill="#59636e"/>
+<rect x="115.52" y="40.95" width="2.16" height="1.89" rx="0" fill="#59636e"/>
+<text x="110.1" y="22.4" font-size="2.6" fill="#f0f3f6" text-anchor="end" font-weight="bold">ROBOT</text>
+<text x="110.1" y="25.6" font-size="1.7" fill="#aab2bd" text-anchor="end">1 Gb · PoE in</text>
+<text x="110.1" y="37.9" font-size="2.6" fill="#f0f3f6" text-anchor="end" font-weight="bold">AUX2</text>
+<text x="110.1" y="41.1" font-size="1.7" fill="#aab2bd" text-anchor="end">1 Gb · 802.3at out</text>
+<g class="caption">
+<text x="59.55" y="61.1" font-size="4" fill="#1f2328" text-anchor="middle" font-weight="bold">Vivid Robot Radio V2</text>
+<text x="59.55" y="65.3" font-size="2.3" fill="#57606a" text-anchor="middle">119.1 × 52.1 mm · top view · Ethernet on both ends · positions from photos</text>
+</g>
+<g id="anchors">
+<circle class="anchor" id="anchor-eth_ds" data-kind="ethernet" cx="-2" cy="20" r="1" fill="none"><title>DS (gigabit, tethered driver station)</title></circle>
+<circle class="anchor" id="anchor-eth_aux1" data-kind="ethernet" cx="-2" cy="35.5" r="1" fill="none"><title>AUX1 (gigabit, 802.3at PoE out when powered from 12V)</title></circle>
+<circle class="anchor" id="anchor-pwr_in" data-kind="power" cx="121.1" cy="7.4" r="1" fill="none"><title>12V terminal (+ / −, 4.5–60 V per vendor; 12 V for AUX PoE out)</title></circle>
+<circle class="anchor" id="anchor-eth_robot" data-kind="ethernet" cx="121.1" cy="22.75" r="1" fill="none"><title>ROBOT (gigabit, passive or 802.3at PoE in) to SystemCore / roboRIO</title></circle>
+<circle class="anchor" id="anchor-eth_aux2" data-kind="ethernet" cx="121.1" cy="38.25" r="1" fill="none"><title>AUX2 (gigabit, 802.3at PoE out when powered from 12V)</title></circle>
+</g>
+</svg>

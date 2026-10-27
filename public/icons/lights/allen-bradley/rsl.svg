@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-37 -6 74 120" width="74mm" height="120mm" font-family="Helvetica, Arial, sans-serif">
+<title>Robot Signal Light (RSL)</title>
+<desc>Drawn by FRC Team 2102 Paradox. Public domain: CC0 1.0 (https://creativecommons.org/publicdomain/zero/1.0/). https://docs.team2102.org/icons/</desc>
+<path d="M -22.5 24.6 L -22.5 13 C -22.5 4 -18 0 -12 0 L 12 0 C 18 0 22.5 4 22.5 13 L 22.5 24.6 Z" fill="#f0883e" stroke="#1f2328" stroke-width="0.5" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M -20 6 L 20 6" fill="none" stroke="#f6b37a" stroke-width="0.3" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M -20 11 L 20 11" fill="none" stroke="#f6b37a" stroke-width="0.3" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M -20 16 L 20 16" fill="none" stroke="#f6b37a" stroke-width="0.3" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M -20 21 L 20 21" fill="none" stroke="#f6b37a" stroke-width="0.3" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M -15 3 L -15 23.6" fill="none" stroke="#f6b37a" stroke-width="0.3" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M -9 3 L -9 23.6" fill="none" stroke="#f6b37a" stroke-width="0.3" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M -3 3 L -3 23.6" fill="none" stroke="#f6b37a" stroke-width="0.3" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 3 3 L 3 23.6" fill="none" stroke="#f6b37a" stroke-width="0.3" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 9 3 L 9 23.6" fill="none" stroke="#f6b37a" stroke-width="0.3" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 15 3 L 15 23.6" fill="none" stroke="#f6b37a" stroke-width="0.3" stroke-linejoin="round" stroke-linecap="round"/>
+<rect x="-22.5" y="24.6" width="45" height="23.4" rx="1.5" fill="#1f2328" stroke="#1f2328" stroke-width="0.5"/>
+<rect x="-11" y="48" width="22" height="14" rx="0" fill="#2b3036" stroke="#1f2328" stroke-width="0.3"/>
+<path d="M -11 55 L 11 55" fill="none" stroke="#4a515b" stroke-width="0.3" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M -11 56 L 11 56" fill="none" stroke="#4a515b" stroke-width="0.3" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M -11 57 L 11 57" fill="none" stroke="#4a515b" stroke-width="0.3" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M -11 58 L 11 58" fill="none" stroke="#4a515b" stroke-width="0.3" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M -11 59 L 11 59" fill="none" stroke="#4a515b" stroke-width="0.3" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M -11 60 L 11 60" fill="none" stroke="#4a515b" stroke-width="0.3" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M -11 61 L 11 61" fill="none" stroke="#4a515b" stroke-width="0.3" stroke-linejoin="round" stroke-linecap="round"/>
+<rect x="-14.5" y="49.2" width="29" height="4.6" rx="0.6" fill="#2b3036" stroke="#1f2328" stroke-width="0.3"/>
+<rect x="-8.5" y="62" width="17" height="12" rx="0.8" fill="#16191d" stroke="#8c959f" stroke-width="0.2"/>
+<circle cx="-5" cy="66.2" r="1.8" fill="#8c959f" stroke="#1f2328" stroke-width="0.2"/>
+<path d="M -6.1 66.2 L -3.9 66.2" fill="none" stroke="#1f2328" stroke-width="0.35" stroke-linejoin="round" stroke-linecap="round"/>
+<text x="-5" y="71.6" font-size="1.9" fill="#f0f3f6" text-anchor="middle" font-weight="bold">La</text>
+<circle cx="0" cy="66.2" r="1.8" fill="#8c959f" stroke="#1f2328" stroke-width="0.2"/>
+<path d="M -1.1 66.2 L 1.1 66.2" fill="none" stroke="#1f2328" stroke-width="0.35" stroke-linejoin="round" stroke-linecap="round"/>
+<text x="0" y="71.6" font-size="1.9" fill="#f0f3f6" text-anchor="middle" font-weight="bold">N</text>
+<circle cx="5" cy="66.2" r="1.8" fill="#8c959f" stroke="#1f2328" stroke-width="0.2"/>
+<path d="M 3.9 66.2 L 6.1 66.2" fill="none" stroke="#1f2328" stroke-width="0.35" stroke-linejoin="round" stroke-linecap="round"/>
+<text x="5" y="71.6" font-size="1.9" fill="#f0f3f6" text-anchor="middle" font-weight="bold">Lb</text>
+<path d="M -5 74 L -5 78.6 L 4.2 78.6 L 4.2 74" fill="none" stroke="#8c959f" stroke-width="1.1" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M -5 74 L -5 78.6 L 4.2 78.6 L 4.2 74" fill="none" stroke="#cf222e" stroke-width="0.8" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 5 74 L 5 81 L 3.77 84 L 3.77 89" fill="none" stroke="#8c959f" stroke-width="1.2" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 5 74 L 5 81 L 3.77 84 L 3.77 89" fill="none" stroke="#cf222e" stroke-width="0.9" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 0 74 L 0 81 L 1.23 84 L 1.23 89" fill="none" stroke="#8c959f" stroke-width="1.2" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 0 74 L 0 81 L 1.23 84 L 1.23 89" fill="none" stroke="#0d1117" stroke-width="0.9" stroke-linejoin="round" stroke-linecap="round"/>
+<rect x="-0.4" y="89" width="5.8" height="4.4" rx="0.4" fill="#16191d" stroke="#8c959f" stroke-width="0.2"/>
+<g class="lead-labels">
+<text x="-6.5" y="79.4" font-size="1.7" fill="#1f2328" text-anchor="end" font-weight="bold">JUMPER</text>
+<text x="2.5" y="97.6" font-size="2.2" fill="#1f2328" text-anchor="middle" font-weight="bold">to RIO RSL port</text>
+<text x="6.6" y="92.2" font-size="1.7" fill="#1f2328" text-anchor="start">red +  black −</text>
+</g>
+<g class="caption">
+<text x="0" y="106" font-size="4" fill="#1f2328" text-anchor="middle" font-weight="bold">Robot Signal Light (RSL)</text>
+<text x="0" y="110.2" font-size="2.3" fill="#57606a" text-anchor="middle">45 × 72 mm · side view · La–Lb jumper for steady light</text>
+</g>
+<g id="anchors">
+<circle class="anchor" id="anchor-rsl" data-kind="signal" cx="2.5" cy="93.4" r="1" fill="none"><title>2-pin cable to the roboRIO RSL port: red (S, +) to Lb, black (GND) to N</title></circle>
+<circle class="anchor" id="anchor-lb" data-kind="signal" cx="5" cy="74" r="1" fill="none"><title>Terminal Lb (+): RSL supply S, jumpered to La for steady light</title></circle>
+<circle class="anchor" id="anchor-n" data-kind="signal" cx="0" cy="74" r="1" fill="none"><title>Terminal N (−): RSL supply GND</title></circle>
+</g>
+</svg>

@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-22 -6 114 72" width="114mm" height="72mm" font-family="Helvetica, Arial, sans-serif">
+<title>CTRE Victor SPX</title>
+<desc>Drawn by FRC Team 2102 Paradox. Public domain: CC0 1.0 (https://creativecommons.org/publicdomain/zero/1.0/). https://docs.team2102.org/icons/</desc>
+<path d="M 0 7 L -14 7" fill="none" stroke="#8c959f" stroke-width="2.3" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 0 7 L -14 7" fill="none" stroke="#2da44e" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 0 22 L -14 22" fill="none" stroke="#8c959f" stroke-width="2.3" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 0 22 L -14 22" fill="none" stroke="#f6f8fa" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 63.5 7 L 79.5 7" fill="none" stroke="#8c959f" stroke-width="2.3" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 63.5 7 L 79.5 7" fill="none" stroke="#0d1117" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 63.5 22.5 L 79.5 22.5" fill="none" stroke="#8c959f" stroke-width="2.3" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 63.5 22.5 L 79.5 22.5" fill="none" stroke="#cf222e" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M -14 7 L -16.4 7" fill="none" stroke="#c9d1d9" stroke-width="1.4" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M -14 22 L -16.4 22" fill="none" stroke="#c9d1d9" stroke-width="1.4" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 79.5 7 L 81.9 7" fill="none" stroke="#c9d1d9" stroke-width="1.4" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 79.5 22.5 L 81.9 22.5" fill="none" stroke="#c9d1d9" stroke-width="1.4" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 63.5 17.45 L 68.79 17.45 L 76.05 27.83 L 76.05 38" fill="none" stroke="#8c959f" stroke-width="0.9" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 63.5 17.45 L 68.79 17.45 L 76.05 27.83 L 76.05 38" fill="none" stroke="#e3b341" stroke-width="0.6" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 63.5 18.55 L 68.21 18.55 L 74.95 28.17 L 74.95 38" fill="none" stroke="#8c959f" stroke-width="0.9" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 63.5 18.55 L 68.21 18.55 L 74.95 28.17 L 74.95 38" fill="none" stroke="#2da44e" stroke-width="0.6" stroke-linejoin="round" stroke-linecap="round"/>
+<rect x="71.7" y="38" width="7.6" height="4.4" rx="0.4" fill="#16191d" stroke="#8c959f" stroke-width="0.2"/>
+<path d="M 72.96 42.4 L 72.96 44.4" fill="none" stroke="#d4a72c" stroke-width="0.6" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 78.04 42.4 L 78.04 44.4" fill="none" stroke="#d4a72c" stroke-width="0.6" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 63.5 19.85 L 66.55 19.85 L 66.55 38" fill="none" stroke="#8c959f" stroke-width="0.9" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 63.5 19.85 L 66.55 19.85 L 66.55 38" fill="none" stroke="#e3b341" stroke-width="0.6" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 63.5 20.95 L 65.45 20.95 L 65.45 38" fill="none" stroke="#8c959f" stroke-width="0.9" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 63.5 20.95 L 65.45 20.95 L 65.45 38" fill="none" stroke="#2da44e" stroke-width="0.6" stroke-linejoin="round" stroke-linecap="round"/>
+<rect x="62.2" y="38" width="7.6" height="4.4" rx="0.4" fill="#16191d" stroke="#8c959f" stroke-width="0.2"/>
+<rect x="62.86" y="39.6" width="1.2" height="1.2" rx="0" fill="#59636e"/>
+<rect x="67.94" y="39.6" width="1.2" height="1.2" rx="0" fill="#59636e"/>
+<rect x="0" y="0" width="63.5" height="29.5" rx="1.2" fill="#2b2f35" stroke="#1f2328" stroke-width="0.5"/>
+<rect x="0" y="0" width="4.2" height="29.5" rx="1" fill="#22262b"/>
+<rect x="59.3" y="0" width="4.2" height="29.5" rx="1" fill="#22262b"/>
+<rect x="17" y="3.5" width="2.2" height="8" rx="0.2" fill="#16191d"/>
+<rect x="21" y="3.5" width="2.2" height="8" rx="0.2" fill="#16191d"/>
+<rect x="25" y="5.5" width="2.2" height="8" rx="0.2" fill="#16191d"/>
+<rect x="12" y="12.8" width="10" height="2.2" rx="0.2" fill="#16191d"/>
+<rect x="31" y="12.8" width="10" height="2.2" rx="0.2" fill="#16191d"/>
+<rect x="36" y="3.5" width="2.2" height="8" rx="0.2" fill="#16191d"/>
+<rect x="40" y="5.5" width="2.2" height="8" rx="0.2" fill="#16191d"/>
+<rect x="17" y="18" width="2.2" height="8" rx="0.2" fill="#16191d"/>
+<rect x="21" y="20" width="2.2" height="8" rx="0.2" fill="#16191d"/>
+<rect x="36" y="18" width="2.2" height="8" rx="0.2" fill="#16191d"/>
+<rect x="40" y="18" width="2.2" height="8" rx="0.2" fill="#16191d"/>
+<rect x="44" y="20" width="2.2" height="6" rx="0.2" fill="#16191d"/>
+<circle cx="7" cy="14.75" r="1.9" fill="#ffffff" stroke="#1f2328" stroke-width="0.2"/>
+<circle cx="56.5" cy="14.75" r="1.9" fill="#ffffff" stroke="#1f2328" stroke-width="0.2"/>
+<circle cx="47.5" cy="5.2" r="1.4" fill="#0d1117"/>
+<text x="47.5" y="9.4" font-size="1.7" fill="#f0f3f6" text-anchor="middle" font-weight="bold">B/C</text>
+<rect x="30.3" y="0" width="2" height="1.8" rx="0.3" fill="#3fb950"/>
+<rect x="30.3" y="27.7" width="2" height="1.8" rx="0.3" fill="#3fb950"/>
+<text x="2.1" y="4" font-size="1.5" fill="#f0f3f6" text-anchor="middle" font-weight="bold">M−</text>
+<text x="2.1" y="27" font-size="1.5" fill="#f0f3f6" text-anchor="middle" font-weight="bold">M+</text>
+<text x="61.4" y="4" font-size="1.5" fill="#f0f3f6" text-anchor="middle" font-weight="bold">GND</text>
+<text x="61.4" y="27" font-size="1.5" fill="#f0f3f6" text-anchor="middle" font-weight="bold">V+</text>
+<g class="lead-labels">
+<text x="-17.2" y="7.8" font-size="2.2" fill="#1f2328" text-anchor="end" font-weight="bold">M−</text>
+<text x="-17.2" y="22.8" font-size="2.2" fill="#1f2328" text-anchor="end" font-weight="bold">M+</text>
+<text x="82.7" y="7.8" font-size="2.2" fill="#1f2328" text-anchor="start" font-weight="bold">GND</text>
+<text x="82.7" y="23.3" font-size="2.2" fill="#1f2328" text-anchor="start" font-weight="bold">V+</text>
+<text x="66" y="47.6" font-size="2.2" fill="#1f2328" text-anchor="middle" font-weight="bold">CAN (female)</text>
+<text x="75.5" y="50.8" font-size="2.2" fill="#1f2328" text-anchor="middle" font-weight="bold">CAN (male)</text>
+</g>
+<g class="caption">
+<text x="31.75" y="60" font-size="4" fill="#1f2328" text-anchor="middle" font-weight="bold">CTRE Victor SPX</text>
+<text x="31.75" y="64.2" font-size="2.3" fill="#57606a" text-anchor="middle">63.5 × 29.5 mm · top view · leads drawn short</text>
+</g>
+<g id="anchors">
+<circle class="anchor" id="anchor-motor_neg" data-kind="power" cx="-14" cy="7" r="1" fill="none"><title>M− (green 12 AWG, 5.5 in, bare end) to motor −</title></circle>
+<circle class="anchor" id="anchor-motor_pos" data-kind="power" cx="-14" cy="22" r="1" fill="none"><title>M+ (white 12 AWG, 5.5 in, bare end) to motor +</title></circle>
+<circle class="anchor" id="anchor-vbat_neg" data-kind="power" cx="79.5" cy="7" r="1" fill="none"><title>GND (black 12 AWG, 5.5 in, bare end)</title></circle>
+<circle class="anchor" id="anchor-vbat_pos" data-kind="power" cx="79.5" cy="22.5" r="1" fill="none"><title>V+ (red 12 AWG, 5.5 in, bare end), 40 A breaker or smaller</title></circle>
+<circle class="anchor" id="anchor-can_a" data-kind="can" cx="75.5" cy="44.4" r="1" fill="none"><title>CAN/PWM pair: yellow H / green L, 12 in, male 0.1 in 3-pin</title></circle>
+<circle class="anchor" id="anchor-can_b" data-kind="can" cx="66" cy="42.4" r="1" fill="none"><title>CAN/PWM pair: yellow H / green L, 12 in, female 0.1 in 3-pin (roboRIO PWM)</title></circle>
+</g>
+</svg>

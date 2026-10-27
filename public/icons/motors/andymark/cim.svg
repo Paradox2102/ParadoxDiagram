@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-38 -38 76 120" width="76mm" height="120mm" font-family="Helvetica, Arial, sans-serif">
+<title>AndyMark CIM</title>
+<desc>Drawn by FRC Team 2102 Paradox. Public domain: CC0 1.0 (https://creativecommons.org/publicdomain/zero/1.0/). https://docs.team2102.org/icons/</desc>
+<circle cx="0" cy="0" r="32.2" fill="#b8bfc7" stroke="#1f2328" stroke-width="0.5"/>
+<circle cx="0" cy="0" r="31.3" fill="none" stroke="#8c959f" stroke-width="0.4"/>
+<circle cx="0" cy="0" r="15.3" fill="#a3abb4" stroke="#6e7781" stroke-width="0.5"/>
+<circle cx="0" cy="0" r="14.6" fill="none" stroke="#8c959f" stroke-width="0.3"/>
+<circle cx="0" cy="-24.9" r="4.5" fill="#9aa2ab" stroke="#6e7781" stroke-width="0.4"/>
+<circle cx="0" cy="-24.9" r="3.5" fill="#c9d1d9" stroke="#6e7781" stroke-width="0.3"/>
+<path d="M -1.9 -24.9 L 1.9 -24.9 M 0 -26.8 L 0 -23" fill="none" stroke="#1f2328" stroke-width="0.8" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="0" cy="24.9" r="4.5" fill="#9aa2ab" stroke="#6e7781" stroke-width="0.4"/>
+<circle cx="0" cy="24.9" r="3.5" fill="#c9d1d9" stroke="#6e7781" stroke-width="0.3"/>
+<path d="M -1.9 24.9 L 1.9 24.9 M 0 23 L 0 26.8" fill="none" stroke="#1f2328" stroke-width="0.8" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M -32.2 0 L -29.5 0" fill="none" stroke="#1f2328" stroke-width="0.6" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="13" cy="16.9" r="2.1" fill="#59636e" stroke="#1f2328" stroke-width="0.3"/>
+<path d="M 13 16.9 L 13 50" fill="none" stroke="#8c959f" stroke-width="2.1" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 13 16.9 L 13 50" fill="none" stroke="#cf222e" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 13 50 L 13 53" fill="none" stroke="#c9d1d9" stroke-width="1" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="18" cy="11.7" r="2.1" fill="#59636e" stroke="#1f2328" stroke-width="0.3"/>
+<path d="M 18 11.7 L 18 50" fill="none" stroke="#8c959f" stroke-width="2.1" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 18 11.7 L 18 50" fill="none" stroke="#0d1117" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 18 50 L 18 53" fill="none" stroke="#c9d1d9" stroke-width="1" stroke-linejoin="round" stroke-linecap="round"/>
+<g class="lead-labels">
+<text x="13" y="57.4" font-size="3" fill="#1f2328" text-anchor="middle" font-weight="bold">+</text>
+<text x="18" y="57.4" font-size="3" fill="#1f2328" text-anchor="middle" font-weight="bold">−</text>
+</g>
+<g class="caption">
+<text x="0" y="66" font-size="4" fill="#1f2328" text-anchor="middle" font-weight="bold">AndyMark CIM</text>
+<text x="0" y="70.2" font-size="2.3" fill="#57606a" text-anchor="middle">64.4 × 64.4 mm · back view · 14 AWG leads drawn short</text>
+</g>
+<g id="anchors">
+<circle class="anchor" id="anchor-motor_pos" data-kind="power" cx="13" cy="53" r="1" fill="none"><title>W1 red lead, 14 AWG, 18 in, + (stripped 0.5 in)</title></circle>
+<circle class="anchor" id="anchor-motor_neg" data-kind="power" cx="18" cy="53" r="1" fill="none"><title>W2 black lead, 14 AWG, 18 in, − (stripped 0.5 in)</title></circle>
+</g>
+</svg>

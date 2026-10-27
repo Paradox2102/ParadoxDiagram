@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-21 -3 66 50" width="66mm" height="50mm" font-family="Helvetica, Arial, sans-serif">
+<title>SWYFT CANnect Inject V2</title>
+<desc>Drawn by FRC Team 2102 Paradox. Public domain: CC0 1.0 (https://creativecommons.org/publicdomain/zero/1.0/). https://docs.team2102.org/icons/</desc>
+<rect x="0" y="0" width="36.576" height="32.512" rx="4.1" fill="#ece8dc" stroke="#1f2328" stroke-width="0.35"/>
+<rect x="1" y="1" width="34.576" height="30.512" rx="3.2" fill="#17407a" stroke="#0c2a52" stroke-width="0.2"/>
+<circle cx="18.29" cy="3.75" r="2.54" fill="#ffffff" stroke="#1f2328" stroke-width="0.3"/>
+<circle cx="18.29" cy="29.15" r="2.54" fill="#ffffff" stroke="#1f2328" stroke-width="0.3"/>
+<circle cx="4.64" cy="4.13" r="1.55" fill="#15181c" stroke="#6e7781" stroke-width="0.2"/>
+<path d="M 3.84 4.13 L 5.44 4.13 M 4.64 3.33 L 4.64 4.93" fill="none" stroke="#6e7781" stroke-width="0.25" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="32.07" cy="4.13" r="1.55" fill="#15181c" stroke="#6e7781" stroke-width="0.2"/>
+<path d="M 31.27 4.13 L 32.87 4.13 M 32.07 3.33 L 32.07 4.93" fill="none" stroke="#6e7781" stroke-width="0.25" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="4.64" cy="28.9" r="1.55" fill="#15181c" stroke="#6e7781" stroke-width="0.2"/>
+<path d="M 3.84 28.9 L 5.44 28.9 M 4.64 28.1 L 4.64 29.7" fill="none" stroke="#6e7781" stroke-width="0.25" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="32.07" cy="28.9" r="1.55" fill="#15181c" stroke="#6e7781" stroke-width="0.2"/>
+<path d="M 31.27 28.9 L 32.87 28.9 M 32.07 28.1 L 32.07 29.7" fill="none" stroke="#6e7781" stroke-width="0.25" stroke-linejoin="round" stroke-linecap="round"/>
+<rect x="2.86" y="7.94" width="12.7" height="16.7" rx="0.5" fill="#8e9298" stroke="#5f646b" stroke-width="0.25"/>
+<rect x="6.8" y="8.39" width="8.106" height="2.9" rx="0.6" fill="#f0883e" stroke="#bc4c00" stroke-width="0.15"/>
+<rect x="3.06" y="8.84" width="1.4" height="2" rx="0.3" fill="#16191d"/>
+<rect x="6.8" y="12.2" width="8.106" height="2.9" rx="0.6" fill="#f0883e" stroke="#bc4c00" stroke-width="0.15"/>
+<rect x="3.06" y="12.65" width="1.4" height="2" rx="0.3" fill="#16191d"/>
+<rect x="6.8" y="16.01" width="8.106" height="2.9" rx="0.6" fill="#f0883e" stroke="#bc4c00" stroke-width="0.15"/>
+<rect x="3.06" y="16.46" width="1.4" height="2" rx="0.3" fill="#16191d"/>
+<rect x="6.8" y="19.82" width="8.106" height="2.9" rx="0.6" fill="#f0883e" stroke="#bc4c00" stroke-width="0.15"/>
+<rect x="3.06" y="20.27" width="1.4" height="2" rx="0.3" fill="#16191d"/>
+<rect x="16.95" y="11.68" width="1.4" height="1.4" rx="0.2" fill="#58a6ff" stroke="#6e7781" stroke-width="0.12"/>
+<rect x="16.6" y="16.1" width="2.1" height="1.2" rx="0.2" fill="#cfd4d9" stroke="#6e7781" stroke-width="0.12"/>
+<rect x="20" y="8" width="15.2" height="16.3" rx="0.8" fill="#16191d" stroke="#8c959f" stroke-width="0.2"/>
+<rect x="30.2" y="10.2" width="5" height="11.9" rx="0.4" fill="#59636e"/>
+<path d="M 30.6 12.58 L 34.8 12.58" fill="none" stroke="#d4a72c" stroke-width="0.3" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 30.6 13.6 L 34.8 13.6" fill="none" stroke="#d4a72c" stroke-width="0.3" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 30.6 14.62 L 34.8 14.62" fill="none" stroke="#d4a72c" stroke-width="0.3" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 30.6 15.64 L 34.8 15.64" fill="none" stroke="#d4a72c" stroke-width="0.3" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 30.6 16.66 L 34.8 16.66" fill="none" stroke="#d4a72c" stroke-width="0.3" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 30.6 17.68 L 34.8 17.68" fill="none" stroke="#d4a72c" stroke-width="0.3" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 30.6 18.7 L 34.8 18.7" fill="none" stroke="#d4a72c" stroke-width="0.3" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 30.6 19.72 L 34.8 19.72" fill="none" stroke="#d4a72c" stroke-width="0.3" stroke-linejoin="round" stroke-linecap="round"/>
+<text x="9.4" y="26.5" font-size="1.4" fill="#f0f3f6" text-anchor="middle" font-weight="bold">CANNECT INJECT</text>
+<path d="M 2.86 9.84 L 0.86 9.84 L -2.14 11.17 L -6.14 11.17" fill="none" stroke="#8c959f" stroke-width="1.2" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 2.86 9.84 L 0.86 9.84 L -2.14 11.17 L -6.14 11.17" fill="none" stroke="#cf222e" stroke-width="0.9" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M -6.14 11.17 L -7.74 11.17" fill="none" stroke="#c9d1d9" stroke-width="0.7" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 2.86 13.65 L 0.86 13.65 L -2.14 12.32 L -6.14 12.32" fill="none" stroke="#8c959f" stroke-width="1.2" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 2.86 13.65 L 0.86 13.65 L -2.14 12.32 L -6.14 12.32" fill="none" stroke="#0d1117" stroke-width="0.9" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M -6.14 12.32 L -7.74 12.32" fill="none" stroke="#c9d1d9" stroke-width="0.7" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 2.86 17.46 L 0.86 17.46 L -2.14 18.79 L -6.14 18.79" fill="none" stroke="#8c959f" stroke-width="1.2" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 2.86 17.46 L 0.86 17.46 L -2.14 18.79 L -6.14 18.79" fill="none" stroke="#e3b341" stroke-width="0.9" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M -6.14 18.79 L -7.74 18.79" fill="none" stroke="#c9d1d9" stroke-width="0.7" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 2.86 21.27 L 0.86 21.27 L -2.14 19.94 L -6.14 19.94" fill="none" stroke="#8c959f" stroke-width="1.2" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 2.86 21.27 L 0.86 21.27 L -2.14 19.94 L -6.14 19.94" fill="none" stroke="#2da44e" stroke-width="0.9" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M -6.14 19.94 L -7.74 19.94" fill="none" stroke="#c9d1d9" stroke-width="0.7" stroke-linejoin="round" stroke-linecap="round"/>
+<g class="lead-labels">
+<text x="-10.14" y="12.345" font-size="1.9" fill="#1f2328" text-anchor="end" font-weight="bold">PWR | GND</text>
+<text x="-10.14" y="19.965" font-size="1.9" fill="#1f2328" text-anchor="end" font-weight="bold">YLW | GRN</text>
+</g>
+<g class="caption">
+<text x="12" y="40" font-size="4" fill="#1f2328" text-anchor="middle" font-weight="bold">SWYFT CANnect Inject V2</text>
+<text x="12" y="44.2" font-size="2.3" fill="#57606a" text-anchor="middle">36.6 × 32.5 mm · top view · 1.5 A max</text>
+</g>
+<g id="anchors">
+<circle class="anchor" id="anchor-power" data-kind="power" cx="-7.74" cy="11.75" r="1" fill="none"><title>Lever connector PWR | GND: 12 V in from a fused circuit (22-24 AWG; max 1.5 A per module)</title></circle>
+<circle class="anchor" id="anchor-can" data-kind="can" cx="-7.74" cy="19.37" r="1" fill="none"><title>Lever connector YLW | GRN: robot CAN bus, CAN H (yellow) and CAN L (green)</title></circle>
+<circle class="anchor" id="anchor-ethernet" data-kind="ethernet" cx="35.2" cy="16.15" r="1" fill="none"><title>RJ45: CAN + 12 V (CANnect, not Ethernet)</title></circle>
+</g>
+</svg>

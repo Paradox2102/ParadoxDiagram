@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-37 -18 74 50" width="74mm" height="50mm" font-family="Helvetica, Arial, sans-serif">
+<title>CTRE CANdi</title>
+<desc>Drawn by FRC Team 2102 Paradox. Public domain: CC0 1.0 (https://creativecommons.org/publicdomain/zero/1.0/). https://docs.team2102.org/icons/</desc>
+<rect x="-28.575" y="-13.21" width="57.15" height="26.42" rx="2.6" fill="#c9d1d9" stroke="#8c959f" stroke-width="0.5"/>
+<rect x="-26.975" y="-11.61" width="53.95" height="23.22" rx="1.4" fill="#16191d"/>
+<circle cx="-12.7" cy="0" r="2.54" fill="#c9d1d9" stroke="#8c959f" stroke-width="0.3"/>
+<circle cx="-12.7" cy="0" r="1.65" fill="#ffffff" stroke="#57606a" stroke-width="0.2"/>
+<circle cx="12.7" cy="0" r="2.54" fill="#c9d1d9" stroke="#8c959f" stroke-width="0.3"/>
+<circle cx="12.7" cy="0" r="1.65" fill="#ffffff" stroke="#57606a" stroke-width="0.2"/>
+<rect x="-0.9" y="-14.01" width="1.8" height="1.6" rx="0.4" fill="#3fb950"/>
+<rect x="-0.9" y="12.41" width="1.8" height="1.6" rx="0.4" fill="#3fb950"/>
+<text x="0" y="6" font-size="4.2" fill="#f0f3f6" text-anchor="middle" font-weight="bold">CANdi</text>
+<rect x="-30.865" y="-10.25" width="3.6" height="3" rx="0.3" fill="#efe3c8" stroke="#8c959f" stroke-width="0.15"/>
+<rect x="-30.515" y="-9.65" width="1.2" height="1.8" rx="0.2" fill="#0d1117"/>
+<rect x="-28.865" y="-9.85" width="0.8" height="2.2" rx="0.2" fill="#cf222e"/>
+<text x="-26.375" y="-8.1" font-size="1.75" fill="#f0f3f6" text-anchor="start">V+(R)</text>
+<rect x="-30.865" y="-6.75" width="3.6" height="3" rx="0.3" fill="#efe3c8" stroke="#8c959f" stroke-width="0.15"/>
+<rect x="-30.515" y="-6.15" width="1.2" height="1.8" rx="0.2" fill="#0d1117"/>
+<rect x="-28.865" y="-6.35" width="0.8" height="2.2" rx="0.2" fill="#2da44e"/>
+<text x="-26.375" y="-4.6" font-size="1.75" fill="#f0f3f6" text-anchor="start">CANL(G)</text>
+<rect x="-30.865" y="-3.25" width="3.6" height="3" rx="0.3" fill="#efe3c8" stroke="#8c959f" stroke-width="0.15"/>
+<rect x="-30.515" y="-2.65" width="1.2" height="1.8" rx="0.2" fill="#0d1117"/>
+<rect x="-28.865" y="-2.85" width="0.8" height="2.2" rx="0.2" fill="#e3b341"/>
+<text x="-26.375" y="-1.1" font-size="1.75" fill="#f0f3f6" text-anchor="start">CANH(Y)</text>
+<rect x="-30.865" y="0.25" width="3.6" height="3" rx="0.3" fill="#efe3c8" stroke="#8c959f" stroke-width="0.15"/>
+<rect x="-30.515" y="0.85" width="1.2" height="1.8" rx="0.2" fill="#0d1117"/>
+<rect x="-28.865" y="0.65" width="0.8" height="2.2" rx="0.2" fill="#2da44e"/>
+<text x="-26.375" y="2.4" font-size="1.75" fill="#f0f3f6" text-anchor="start">CANL(G)</text>
+<rect x="-30.865" y="3.75" width="3.6" height="3" rx="0.3" fill="#efe3c8" stroke="#8c959f" stroke-width="0.15"/>
+<rect x="-30.515" y="4.35" width="1.2" height="1.8" rx="0.2" fill="#0d1117"/>
+<rect x="-28.865" y="4.15" width="0.8" height="2.2" rx="0.2" fill="#e3b341"/>
+<text x="-26.375" y="5.9" font-size="1.75" fill="#f0f3f6" text-anchor="start">CANH(Y)</text>
+<rect x="-30.865" y="7.25" width="3.6" height="3" rx="0.3" fill="#efe3c8" stroke="#8c959f" stroke-width="0.15"/>
+<rect x="-30.515" y="7.85" width="1.2" height="1.8" rx="0.2" fill="#0d1117"/>
+<rect x="-28.865" y="7.65" width="0.8" height="2.2" rx="0.2" fill="#0d1117"/>
+<text x="-26.375" y="9.4" font-size="1.75" fill="#f0f3f6" text-anchor="start">V-(B)</text>
+<rect x="27.265" y="-10.25" width="3.6" height="3" rx="0.3" fill="#efe3c8" stroke="#8c959f" stroke-width="0.15"/>
+<rect x="29.315" y="-9.65" width="1.2" height="1.8" rx="0.2" fill="#0d1117"/>
+<rect x="28.065" y="-9.85" width="0.8" height="2.2" rx="0.2" fill="#cf222e"/>
+<text x="26.375" y="-8.1" font-size="1.75" fill="#f0f3f6" text-anchor="end">V+OUT</text>
+<rect x="27.265" y="-6.75" width="3.6" height="3" rx="0.3" fill="#efe3c8" stroke="#8c959f" stroke-width="0.15"/>
+<rect x="29.315" y="-6.15" width="1.2" height="1.8" rx="0.2" fill="#0d1117"/>
+<rect x="28.065" y="-6.35" width="0.8" height="2.2" rx="0.2" fill="#f0883e"/>
+<text x="26.375" y="-4.6" font-size="1.75" fill="#f0f3f6" text-anchor="end">5VOUT</text>
+<rect x="27.265" y="-3.25" width="3.6" height="3" rx="0.3" fill="#efe3c8" stroke="#8c959f" stroke-width="0.15"/>
+<rect x="29.315" y="-2.65" width="1.2" height="1.8" rx="0.2" fill="#0d1117"/>
+<rect x="28.065" y="-2.85" width="0.8" height="2.2" rx="0.2" fill="#8c959f"/>
+<text x="26.375" y="-1.1" font-size="1.75" fill="#f0f3f6" text-anchor="end">S1IN</text>
+<rect x="27.265" y="0.25" width="3.6" height="3" rx="0.3" fill="#efe3c8" stroke="#8c959f" stroke-width="0.15"/>
+<rect x="29.315" y="0.85" width="1.2" height="1.8" rx="0.2" fill="#0d1117"/>
+<rect x="28.065" y="0.65" width="0.8" height="2.2" rx="0.2" fill="#8c959f"/>
+<text x="26.375" y="2.4" font-size="1.75" fill="#f0f3f6" text-anchor="end">S2IN</text>
+<rect x="27.265" y="3.75" width="3.6" height="3" rx="0.3" fill="#efe3c8" stroke="#8c959f" stroke-width="0.15"/>
+<rect x="29.315" y="4.35" width="1.2" height="1.8" rx="0.2" fill="#0d1117"/>
+<rect x="28.065" y="4.15" width="0.8" height="2.2" rx="0.2" fill="#0d1117"/>
+<text x="26.375" y="5.9" font-size="1.75" fill="#f0f3f6" text-anchor="end">V-OUT</text>
+<rect x="27.265" y="7.25" width="3.6" height="3" rx="0.3" fill="#efe3c8" stroke="#8c959f" stroke-width="0.15"/>
+<rect x="29.315" y="7.85" width="1.2" height="1.8" rx="0.2" fill="#0d1117"/>
+<rect x="28.065" y="7.65" width="0.8" height="2.2" rx="0.2" fill="#0d1117"/>
+<text x="26.375" y="9.4" font-size="1.75" fill="#f0f3f6" text-anchor="end">V-OUT</text>
+<g class="caption">
+<text x="0" y="21" font-size="4" fill="#1f2328" text-anchor="middle" font-weight="bold">CTRE CANdi</text>
+<text x="0" y="25.2" font-size="2.3" fill="#57606a" text-anchor="middle">57.2 × 26.4 mm · top view · 61.7 mm over the terminals</text>
+</g>
+<g id="anchors">
+<circle class="anchor" id="anchor-vbat_pos" data-kind="power" cx="-30.86" cy="-8.75" r="1" fill="none"><title>V+ (red) power in, 6-28 V, 14-24 AWG push-in</title></circle>
+<circle class="anchor" id="anchor-can_a" data-kind="can" cx="-30.86" cy="-3.5" r="1" fill="none"><title>CAN pair A: CANL (green) / CANH (yellow) push-in terminals</title></circle>
+<circle class="anchor" id="anchor-can_b" data-kind="can" cx="-30.86" cy="3.5" r="1" fill="none"><title>CAN pair B: CANL (green) / CANH (yellow) push-in terminals</title></circle>
+<circle class="anchor" id="anchor-vbat_neg" data-kind="power" cx="-30.86" cy="8.75" r="1" fill="none"><title>V- (black) power in</title></circle>
+<circle class="anchor" id="anchor-vbat_out" data-kind="power" cx="30.86" cy="-8.75" r="1" fill="none"><title>V+OUT: unregulated VBat for a sensor (0.3 A shared with 5VOUT)</title></circle>
+<circle class="anchor" id="anchor-five_v_out" data-kind="power" cx="30.86" cy="-5.25" r="1" fill="none"><title>5VOUT: regulated 5 V for a sensor (0.3 A shared with V+OUT)</title></circle>
+<circle class="anchor" id="anchor-s1_in" data-kind="signal" cx="30.86" cy="-1.75" r="1" fill="none"><title>S1IN: digital, PWM or quadrature A input (3.3-24 V logic)</title></circle>
+<circle class="anchor" id="anchor-s2_in" data-kind="signal" cx="30.86" cy="1.75" r="1" fill="none"><title>S2IN: digital, PWM or quadrature B input (3.3-24 V logic)</title></circle>
+<circle class="anchor" id="anchor-gnd_out_1" data-kind="power" cx="30.86" cy="5.25" r="1" fill="none"><title>V-OUT: sensor ground</title></circle>
+<circle class="anchor" id="anchor-gnd_out_2" data-kind="power" cx="30.86" cy="8.75" r="1" fill="none"><title>V-OUT: sensor ground</title></circle>
+</g>
+</svg>

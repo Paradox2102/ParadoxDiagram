@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-6 -7 110 72" width="110mm" height="72mm" font-family="Helvetica, Arial, sans-serif">
+<title>Limelight 3G</title>
+<desc>Drawn by FRC Team 2102 Paradox. Public domain: CC0 1.0 (https://creativecommons.org/publicdomain/zero/1.0/). https://docs.team2102.org/icons/</desc>
+<rect x="0" y="0" width="80.11" height="48.11" rx="3.5" fill="#2d3137" stroke="#1f2328" stroke-width="0.5"/>
+<circle cx="4.06" cy="4.06" r="2.555" fill="#ffffff" stroke="#1f2328" stroke-width="0.2"/>
+<circle cx="76.06" cy="4.06" r="2.555" fill="#ffffff" stroke="#1f2328" stroke-width="0.2"/>
+<circle cx="4.06" cy="44.06" r="2.555" fill="#ffffff" stroke="#1f2328" stroke-width="0.2"/>
+<circle cx="76.06" cy="44.06" r="2.555" fill="#ffffff" stroke="#1f2328" stroke-width="0.2"/>
+<rect x="12.8" y="-0.9" width="3" height="1.4" rx="0.4" fill="#d0d7de" stroke="#8c959f" stroke-width="0.15"/>
+<text x="14.3" y="-2.8" font-size="1.6" fill="#aab2bd" text-anchor="middle">CONFIG</text>
+<circle cx="40" cy="14.8" r="7.1" fill="#16191d" stroke="#8c959f" stroke-width="0.3"/>
+<circle cx="40" cy="14.8" r="5.3" fill="#0d1117" stroke="#59636e" stroke-width="0.3"/>
+<circle cx="38.4" cy="13.2" r="1.1" fill="#3b4048"/>
+<circle cx="57.1" cy="9.7" r="4.3" fill="#24282d" stroke="#59636e" stroke-width="0.4"/>
+<circle cx="57.1" cy="9.7" r="1.1" fill="#3fb950"/>
+<circle cx="57.1" cy="20.7" r="4.3" fill="#24282d" stroke="#59636e" stroke-width="0.4"/>
+<circle cx="57.1" cy="20.7" r="1.1" fill="#e3b341"/>
+<text x="76.6" y="12" font-size="2.6" fill="#f0f3f6" text-anchor="middle" font-weight="bold">+</text>
+<text x="76.6" y="15.8" font-size="2.6" fill="#f0f3f6" text-anchor="middle" font-weight="bold">−</text>
+<text x="42.1" y="40.1" font-size="6.6" fill="#d0d7de" text-anchor="middle" letter-spacing="3">LIMELIGHT</text>
+<rect x="49.35" y="-1.6" width="8.9" height="3.2" rx="1.4" fill="#16191d" stroke="#8c959f" stroke-width="0.2"/>
+<rect x="50.8" y="-0.5" width="6" height="1" rx="0.5" fill="#59636e"/>
+<text x="53.8" y="-2.8" font-size="1.9" fill="#1f2328" text-anchor="middle" font-weight="bold">USB-C</text>
+<rect x="53.8" y="46.51" width="16.2" height="3.4" rx="0.5" fill="#16191d" stroke="#8c959f" stroke-width="0.2"/>
+<rect x="56" y="48.31" width="11.8" height="1" rx="0.2" fill="#59636e"/>
+<text x="61.9" y="52.51" font-size="1.9" fill="#1f2328" text-anchor="middle" font-weight="bold">ETHERNET</text>
+<rect x="79.31" y="8.8" width="2.2" height="8.2" rx="0.4" fill="#d0d7de" stroke="#8c959f" stroke-width="0.2"/>
+<rect x="81.51" y="10.3" width="2.4" height="1.7" rx="0.3" fill="#f0883e"/>
+<path d="M 83.91 11.15 L 91.11 11.15" fill="none" stroke="#8c959f" stroke-width="1.4" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 83.91 11.15 L 91.11 11.15" fill="none" stroke="#cf222e" stroke-width="1.1" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 91.11 11.15 L 92.71 11.15" fill="none" stroke="#c9d1d9" stroke-width="0.8" stroke-linejoin="round" stroke-linecap="round"/>
+<rect x="81.51" y="13.8" width="2.4" height="1.7" rx="0.3" fill="#f0883e"/>
+<path d="M 83.91 14.65 L 91.11 14.65" fill="none" stroke="#8c959f" stroke-width="1.4" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 83.91 14.65 L 91.11 14.65" fill="none" stroke="#0d1117" stroke-width="1.1" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 91.11 14.65 L 92.71 14.65" fill="none" stroke="#c9d1d9" stroke-width="0.8" stroke-linejoin="round" stroke-linecap="round"/>
+<g class="lead-labels">
+<text x="94.31" y="11.95" font-size="2.4" fill="#1f2328" text-anchor="start" font-weight="bold">+</text>
+<text x="94.31" y="15.45" font-size="2.4" fill="#1f2328" text-anchor="start" font-weight="bold">−</text>
+<text x="87.61" y="8.7" font-size="2" fill="#1f2328" text-anchor="middle" font-weight="bold">PWR</text>
+</g>
+<g class="caption">
+<text x="40.055" y="59.11" font-size="4" fill="#1f2328" text-anchor="middle" font-weight="bold">Limelight 3G</text>
+<text x="40.055" y="63.31" font-size="2.3" fill="#57606a" text-anchor="middle">80.1 × 48.1 mm · front view (lens side) · ports on the edges</text>
+</g>
+<g id="anchors">
+<circle class="anchor" id="anchor-usb_c" data-kind="usb" cx="53.8" cy="-1.6" r="1" fill="none"><title>USB-C (flashing and USB-Ethernet config; not the robot link)</title></circle>
+<circle class="anchor" id="anchor-ethernet" data-kind="ethernet" cx="61.9" cy="49.91" r="1" fill="none"><title>Gigabit Ethernet RJ45 (to the robot radio)</title></circle>
+<circle class="anchor" id="anchor-pwr_pos" data-kind="power" cx="92.71" cy="11.15" r="1" fill="none"><title>+ (red): 2-pin Weidmuller push-in terminal, 18-20 AWG with ferrule, 5 A breaker on the PDH</title></circle>
+<circle class="anchor" id="anchor-pwr_neg" data-kind="power" cx="92.71" cy="14.65" r="1" fill="none"><title>− (black): 2-pin Weidmuller push-in terminal, 18-20 AWG</title></circle>
+</g>
+</svg>

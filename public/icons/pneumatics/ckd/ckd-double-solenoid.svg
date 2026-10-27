@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-18 -6 130.5 68" width="130.5mm" height="68mm" font-family="Helvetica, Arial, sans-serif">
+<title>CKD 4GA120 Double Solenoid</title>
+<desc>Drawn by FRC Team 2102 Paradox. Public domain: CC0 1.0 (https://creativecommons.org/publicdomain/zero/1.0/). https://docs.team2102.org/icons/</desc>
+<rect x="19.1" y="3.5" width="56.288" height="26.2" rx="0" fill="#cdd2d7" stroke="#1f2328" stroke-width="0.35"/>
+<rect x="32" y="5.3" width="30.488" height="24.4" rx="0" fill="#cdd2d7" stroke="#1f2328" stroke-width="0.35"/>
+<rect x="1.3" y="0.5" width="17.8" height="29.2" rx="1.2" fill="#a9b3bb" stroke="#1f2328" stroke-width="0.35"/>
+<rect x="6" y="4" width="10" height="22" rx="0.6" fill="#dfe3e7" stroke="#8c959f" stroke-width="0.25"/>
+<rect x="2.4" y="7" width="1.2" height="16" rx="0.2" fill="#2da44e" stroke="#1f2328" stroke-width="0.15"/>
+<circle cx="3" cy="9" r="0.55" fill="#3fb950" stroke="#1f2328" stroke-width="0.1"/>
+<path d="M 1.3 4.8 L -12.7 4.8" fill="none" stroke="#8c959f" stroke-width="1" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 1.3 4.8 L -12.7 4.8" fill="none" stroke="#cf222e" stroke-width="0.7" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 1.3 6.6 L -12.7 6.6" fill="none" stroke="#8c959f" stroke-width="1" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 1.3 6.6 L -12.7 6.6" fill="none" stroke="#0d1117" stroke-width="0.7" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M -12.7 4.8 L -14.7 4.8" fill="none" stroke="#c9d1d9" stroke-width="0.6" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M -12.7 6.6 L -14.7 6.6" fill="none" stroke="#c9d1d9" stroke-width="0.6" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 20.8 5.3 L 21.1 1.2 Q 21.4 0.3 23.3 0.3 L 31.3 0.3 L 31.3 5.3 Z" fill="#b4bcc3" stroke="#1f2328" stroke-width="0.3" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="23.2" cy="2.9" r="0.7" fill="#59636e" stroke="#1f2328" stroke-width="0.15"/>
+<rect x="75.388" y="0.5" width="17.8" height="29.2" rx="1.2" fill="#a9b3bb" stroke="#1f2328" stroke-width="0.35"/>
+<rect x="78.488" y="4" width="10" height="22" rx="0.6" fill="#dfe3e7" stroke="#8c959f" stroke-width="0.25"/>
+<rect x="90.888" y="7" width="1.2" height="16" rx="0.2" fill="#2da44e" stroke="#1f2328" stroke-width="0.15"/>
+<circle cx="91.488" cy="9" r="0.55" fill="#3fb950" stroke="#1f2328" stroke-width="0.1"/>
+<path d="M 93.188 4.8 L 107.188 4.8" fill="none" stroke="#8c959f" stroke-width="1" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 93.188 4.8 L 107.188 4.8" fill="none" stroke="#cf222e" stroke-width="0.7" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 93.188 6.6 L 107.188 6.6" fill="none" stroke="#8c959f" stroke-width="1" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 93.188 6.6 L 107.188 6.6" fill="none" stroke="#0d1117" stroke-width="0.7" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 107.188 4.8 L 109.188 4.8" fill="none" stroke="#c9d1d9" stroke-width="0.6" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 107.188 6.6 L 109.188 6.6" fill="none" stroke="#c9d1d9" stroke-width="0.6" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 63.188 5.3 L 63.488 1.2 Q 63.788 0.3 65.688 0.3 L 73.688 0.3 L 73.688 5.3 Z" fill="#b4bcc3" stroke="#1f2328" stroke-width="0.3" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="65.588" cy="2.9" r="0.7" fill="#59636e" stroke="#1f2328" stroke-width="0.15"/>
+<rect x="21.3" y="30.5" width="52.1" height="9.9" rx="0.8" fill="#b4bcc3" stroke="#1f2328" stroke-width="0.35"/>
+<rect x="22.5" y="31.7" width="49.7" height="7.5" rx="0.5" fill="none" stroke="#59636e" stroke-width="0.2"/>
+<circle cx="52.324" cy="34.3" r="1.6" fill="#f6f8fa" stroke="#1f2328" stroke-width="0.25"/>
+<circle cx="42.418" cy="34.3" r="1.6" fill="#f6f8fa" stroke="#1f2328" stroke-width="0.25"/>
+<rect x="36" y="12" width="22.5" height="15" rx="0.5" fill="#a8b8b5" stroke="#8c959f" stroke-width="0.2"/>
+<text x="47.25" y="18" font-size="3" fill="#1f2328" text-anchor="middle" font-weight="bold">4GA120</text>
+<text x="47.25" y="22" font-size="1.9" fill="#1f2328" text-anchor="middle">VALVE</text>
+<text x="47.25" y="25.2" font-size="1.6" fill="#1f2328" text-anchor="middle">0.2-0.7 MPa</text>
+<rect x="38.14" y="5.3" width="5" height="1.9" rx="0.3" fill="#16191d" stroke="#8c959f" stroke-width="0.2"/>
+<text x="40.64" y="3.1" font-size="2.6" fill="#1f2328" text-anchor="middle" font-weight="bold">A</text>
+<rect x="51.602" y="5.3" width="5" height="1.9" rx="0.3" fill="#16191d" stroke="#8c959f" stroke-width="0.2"/>
+<text x="54.102" y="3.1" font-size="2.6" fill="#1f2328" text-anchor="middle" font-weight="bold">B</text>
+<rect x="31.282" y="38.5" width="5" height="1.9" rx="0.3" fill="#16191d" stroke="#8c959f" stroke-width="0.2"/>
+<text x="33.782" y="44" font-size="2.6" fill="#1f2328" text-anchor="middle" font-weight="bold">R1</text>
+<rect x="44.744" y="38.5" width="5" height="1.9" rx="0.3" fill="#16191d" stroke="#8c959f" stroke-width="0.2"/>
+<text x="47.244" y="44" font-size="2.6" fill="#1f2328" text-anchor="middle" font-weight="bold">P</text>
+<rect x="58.206" y="38.5" width="5" height="1.9" rx="0.3" fill="#16191d" stroke="#8c959f" stroke-width="0.2"/>
+<text x="60.706" y="44" font-size="2.6" fill="#1f2328" text-anchor="middle" font-weight="bold">R2</text>
+<g class="lead-labels">
+<text x="-14.7" y="10.9" font-size="2.2" fill="#1f2328" text-anchor="start" font-weight="bold">SOL a</text>
+</g>
+<g class="lead-labels">
+<text x="109.188" y="10.9" font-size="2.2" fill="#1f2328" text-anchor="end" font-weight="bold">SOL b</text>
+</g>
+<g class="caption">
+<text x="47.25" y="55" font-size="4" fill="#1f2328" text-anchor="middle" font-weight="bold">CKD 4GA120 Double Solenoid</text>
+<text x="47.25" y="59.2" font-size="2.3" fill="#57606a" text-anchor="middle">94.5 × 40.4 mm · side view · two 12 in leads drawn short</text>
+</g>
+<g id="anchors">
+<circle class="anchor" id="anchor-coil_a" data-kind="signal" cx="-14.7" cy="5.7" r="1" fill="none"><title>Solenoid a lead: red + / black −, 12 in (12 VDC coil, about 0.35 W)</title></circle>
+<circle class="anchor" id="anchor-coil_b" data-kind="signal" cx="109.19" cy="5.7" r="1" fill="none"><title>Solenoid b lead: red + / black −, 12 in (12 VDC coil, about 0.35 W)</title></circle>
+<circle class="anchor" id="anchor-port_a" data-kind="air" cx="40.64" cy="5.3" r="1" fill="none"><title>A (4): M5 x 0.8 / 10-32 thread, top face (needs an M5 push-in fitting)</title></circle>
+<circle class="anchor" id="anchor-port_b" data-kind="air" cx="54.1" cy="5.3" r="1" fill="none"><title>B (2): M5 x 0.8 / 10-32 thread, top face (needs an M5 push-in fitting)</title></circle>
+<circle class="anchor" id="anchor-port_p" data-kind="air" cx="47.24" cy="40.4" r="1" fill="none"><title>P (1): M5 x 0.8 / 10-32 thread, sub-base underside, supply from the regulator</title></circle>
+<circle class="anchor" id="anchor-port_r1" data-kind="air" cx="33.78" cy="40.4" r="1" fill="none"><title>R1 (5): M5 x 0.8 / 10-32 thread, sub-base underside, exhaust</title></circle>
+<circle class="anchor" id="anchor-port_r2" data-kind="air" cx="60.71" cy="40.4" r="1" fill="none"><title>R2 (3): M5 x 0.8 / 10-32 thread, sub-base underside, exhaust</title></circle>
+</g>
+</svg>

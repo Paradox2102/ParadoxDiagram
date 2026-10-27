@@ -1,0 +1,223 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-8 -8 136.6 222" width="136.6mm" height="222mm" font-family="Helvetica, Arial, sans-serif">
+<title>CTRE Power Distribution Panel</title>
+<desc>Drawn by FRC Team 2102 Paradox. Public domain: CC0 1.0 (https://creativecommons.org/publicdomain/zero/1.0/). https://docs.team2102.org/icons/</desc>
+<rect x="0" y="0" width="120.6" height="192.7" rx="4" fill="#3a3f47" stroke="#1f2328" stroke-width="0.5"/>
+<circle cx="4.6" cy="5" r="2.4" fill="#ffffff" stroke="#1f2328" stroke-width="0.3"/>
+<circle cx="116" cy="5" r="2.4" fill="#ffffff" stroke="#1f2328" stroke-width="0.3"/>
+<circle cx="4.6" cy="187.7" r="2.4" fill="#ffffff" stroke="#1f2328" stroke-width="0.3"/>
+<circle cx="116" cy="187.7" r="2.4" fill="#ffffff" stroke="#1f2328" stroke-width="0.3"/>
+<rect x="32" y="11.5" width="56.5" height="148.2" rx="1.5" fill="#23272d"/>
+<rect x="37" y="18.5" width="8.5" height="1.6" rx="0.5" fill="#0d1117"/>
+<rect x="75" y="18.5" width="8.5" height="1.6" rx="0.5" fill="#0d1117"/>
+<rect x="50.5" y="15.9" width="8" height="6.8" rx="0.8" fill="#8fd18a"/>
+<text x="54.5" y="20.6" font-size="3.4" fill="#1f2328" text-anchor="middle" font-weight="bold">8</text>
+<rect x="62" y="15.9" width="8" height="6.8" rx="0.8" fill="#8fd18a"/>
+<text x="66" y="20.6" font-size="3.4" fill="#1f2328" text-anchor="middle" font-weight="bold">7</text>
+<rect x="0" y="11.5" width="30" height="7.8" rx="0.5" fill="#0d1117" stroke="#8c959f" stroke-width="0.2"/>
+<text x="3" y="16.48" font-size="3" fill="#f0f3f6" text-anchor="middle" font-weight="bold">−</text>
+<rect x="0" y="19.3" width="30" height="7.8" rx="0.5" fill="#cf222e" stroke="#8c959f" stroke-width="0.2"/>
+<text x="3" y="24.28" font-size="3" fill="#f0f3f6" text-anchor="middle" font-weight="bold">+</text>
+<rect x="90.6" y="11.5" width="30" height="7.8" rx="0.5" fill="#cf222e" stroke="#8c959f" stroke-width="0.2"/>
+<text x="117.6" y="16.48" font-size="3" fill="#f0f3f6" text-anchor="middle" font-weight="bold">+</text>
+<rect x="90.6" y="19.3" width="30" height="7.8" rx="0.5" fill="#0d1117" stroke="#8c959f" stroke-width="0.2"/>
+<text x="117.6" y="24.28" font-size="3" fill="#f0f3f6" text-anchor="middle" font-weight="bold">−</text>
+<rect x="37" y="34.1" width="8.5" height="1.6" rx="0.5" fill="#0d1117"/>
+<rect x="75" y="34.1" width="8.5" height="1.6" rx="0.5" fill="#0d1117"/>
+<rect x="50.5" y="31.5" width="8" height="6.8" rx="0.8" fill="#8fd18a"/>
+<text x="54.5" y="36.2" font-size="3.4" fill="#1f2328" text-anchor="middle" font-weight="bold">9</text>
+<rect x="62" y="31.5" width="8" height="6.8" rx="0.8" fill="#8fd18a"/>
+<text x="66" y="36.2" font-size="3.4" fill="#1f2328" text-anchor="middle" font-weight="bold">6</text>
+<rect x="0" y="27.1" width="30" height="7.8" rx="0.5" fill="#0d1117" stroke="#8c959f" stroke-width="0.2"/>
+<text x="3" y="32.08" font-size="3" fill="#f0f3f6" text-anchor="middle" font-weight="bold">−</text>
+<rect x="0" y="34.9" width="30" height="7.8" rx="0.5" fill="#cf222e" stroke="#8c959f" stroke-width="0.2"/>
+<text x="3" y="39.88" font-size="3" fill="#f0f3f6" text-anchor="middle" font-weight="bold">+</text>
+<rect x="90.6" y="27.1" width="30" height="7.8" rx="0.5" fill="#cf222e" stroke="#8c959f" stroke-width="0.2"/>
+<text x="117.6" y="32.08" font-size="3" fill="#f0f3f6" text-anchor="middle" font-weight="bold">+</text>
+<rect x="90.6" y="34.9" width="30" height="7.8" rx="0.5" fill="#0d1117" stroke="#8c959f" stroke-width="0.2"/>
+<text x="117.6" y="39.88" font-size="3" fill="#f0f3f6" text-anchor="middle" font-weight="bold">−</text>
+<rect x="37" y="49.7" width="8.5" height="1.6" rx="0.5" fill="#0d1117"/>
+<rect x="75" y="49.7" width="8.5" height="1.6" rx="0.5" fill="#0d1117"/>
+<rect x="50.5" y="47.1" width="8" height="6.8" rx="0.8" fill="#8fd18a"/>
+<text x="54.5" y="51.8" font-size="3.4" fill="#1f2328" text-anchor="middle" font-weight="bold">10</text>
+<rect x="62" y="47.1" width="8" height="6.8" rx="0.8" fill="#8fd18a"/>
+<text x="66" y="51.8" font-size="3.4" fill="#1f2328" text-anchor="middle" font-weight="bold">5</text>
+<rect x="0" y="42.7" width="30" height="7.8" rx="0.5" fill="#0d1117" stroke="#8c959f" stroke-width="0.2"/>
+<text x="3" y="47.68" font-size="3" fill="#f0f3f6" text-anchor="middle" font-weight="bold">−</text>
+<rect x="0" y="50.5" width="30" height="7.8" rx="0.5" fill="#cf222e" stroke="#8c959f" stroke-width="0.2"/>
+<text x="3" y="55.48" font-size="3" fill="#f0f3f6" text-anchor="middle" font-weight="bold">+</text>
+<rect x="90.6" y="42.7" width="30" height="7.8" rx="0.5" fill="#cf222e" stroke="#8c959f" stroke-width="0.2"/>
+<text x="117.6" y="47.68" font-size="3" fill="#f0f3f6" text-anchor="middle" font-weight="bold">+</text>
+<rect x="90.6" y="50.5" width="30" height="7.8" rx="0.5" fill="#0d1117" stroke="#8c959f" stroke-width="0.2"/>
+<text x="117.6" y="55.48" font-size="3" fill="#f0f3f6" text-anchor="middle" font-weight="bold">−</text>
+<rect x="37" y="65.3" width="8.5" height="1.6" rx="0.5" fill="#0d1117"/>
+<rect x="75" y="65.3" width="8.5" height="1.6" rx="0.5" fill="#0d1117"/>
+<rect x="50.5" y="62.7" width="8" height="6.8" rx="0.8" fill="#8fd18a"/>
+<text x="54.5" y="67.4" font-size="3.4" fill="#1f2328" text-anchor="middle" font-weight="bold">11</text>
+<rect x="62" y="62.7" width="8" height="6.8" rx="0.8" fill="#8fd18a"/>
+<text x="66" y="67.4" font-size="3.4" fill="#1f2328" text-anchor="middle" font-weight="bold">4</text>
+<rect x="0" y="58.3" width="30" height="7.8" rx="0.5" fill="#0d1117" stroke="#8c959f" stroke-width="0.2"/>
+<text x="3" y="63.28" font-size="3" fill="#f0f3f6" text-anchor="middle" font-weight="bold">−</text>
+<rect x="0" y="66.1" width="30" height="7.8" rx="0.5" fill="#cf222e" stroke="#8c959f" stroke-width="0.2"/>
+<text x="3" y="71.08" font-size="3" fill="#f0f3f6" text-anchor="middle" font-weight="bold">+</text>
+<rect x="90.6" y="58.3" width="30" height="7.8" rx="0.5" fill="#cf222e" stroke="#8c959f" stroke-width="0.2"/>
+<text x="117.6" y="63.28" font-size="3" fill="#f0f3f6" text-anchor="middle" font-weight="bold">+</text>
+<rect x="90.6" y="66.1" width="30" height="7.8" rx="0.5" fill="#0d1117" stroke="#8c959f" stroke-width="0.2"/>
+<text x="117.6" y="71.08" font-size="3" fill="#f0f3f6" text-anchor="middle" font-weight="bold">−</text>
+<rect x="47" y="86.625" width="8.5" height="1.6" rx="0.5" fill="#0d1117"/>
+<rect x="61" y="86.625" width="8.5" height="1.6" rx="0.5" fill="#0d1117"/>
+<rect x="35" y="84.025" width="8" height="6.8" rx="0.8" fill="#8fd18a"/>
+<text x="39" y="88.725" font-size="3.4" fill="#1f2328" text-anchor="middle" font-weight="bold">12</text>
+<rect x="77.5" y="84.025" width="8" height="6.8" rx="0.8" fill="#8fd18a"/>
+<text x="81.5" y="88.725" font-size="3.4" fill="#1f2328" text-anchor="middle" font-weight="bold">3</text>
+<rect x="0" y="77.1" width="30" height="10.325" rx="0.5" fill="#0d1117" stroke="#8c959f" stroke-width="0.2"/>
+<text x="3" y="83.3425" font-size="3" fill="#f0f3f6" text-anchor="middle" font-weight="bold">−</text>
+<rect x="0" y="87.425" width="30" height="10.325" rx="0.5" fill="#cf222e" stroke="#8c959f" stroke-width="0.2"/>
+<text x="3" y="93.6675" font-size="3" fill="#f0f3f6" text-anchor="middle" font-weight="bold">+</text>
+<rect x="90.6" y="77.1" width="30" height="10.325" rx="0.5" fill="#cf222e" stroke="#8c959f" stroke-width="0.2"/>
+<text x="117.6" y="83.3425" font-size="3" fill="#f0f3f6" text-anchor="middle" font-weight="bold">+</text>
+<rect x="90.6" y="87.425" width="30" height="10.325" rx="0.5" fill="#0d1117" stroke="#8c959f" stroke-width="0.2"/>
+<text x="117.6" y="93.6675" font-size="3" fill="#f0f3f6" text-anchor="middle" font-weight="bold">−</text>
+<rect x="47" y="107.275" width="8.5" height="1.6" rx="0.5" fill="#0d1117"/>
+<rect x="61" y="107.275" width="8.5" height="1.6" rx="0.5" fill="#0d1117"/>
+<rect x="35" y="104.675" width="8" height="6.8" rx="0.8" fill="#8fd18a"/>
+<text x="39" y="109.375" font-size="3.4" fill="#1f2328" text-anchor="middle" font-weight="bold">13</text>
+<rect x="77.5" y="104.675" width="8" height="6.8" rx="0.8" fill="#8fd18a"/>
+<text x="81.5" y="109.375" font-size="3.4" fill="#1f2328" text-anchor="middle" font-weight="bold">2</text>
+<rect x="0" y="97.75" width="30" height="10.325" rx="0.5" fill="#0d1117" stroke="#8c959f" stroke-width="0.2"/>
+<text x="3" y="103.992" font-size="3" fill="#f0f3f6" text-anchor="middle" font-weight="bold">−</text>
+<rect x="0" y="108.075" width="30" height="10.325" rx="0.5" fill="#cf222e" stroke="#8c959f" stroke-width="0.2"/>
+<text x="3" y="114.317" font-size="3" fill="#f0f3f6" text-anchor="middle" font-weight="bold">+</text>
+<rect x="90.6" y="97.75" width="30" height="10.325" rx="0.5" fill="#cf222e" stroke="#8c959f" stroke-width="0.2"/>
+<text x="117.6" y="103.992" font-size="3" fill="#f0f3f6" text-anchor="middle" font-weight="bold">+</text>
+<rect x="90.6" y="108.075" width="30" height="10.325" rx="0.5" fill="#0d1117" stroke="#8c959f" stroke-width="0.2"/>
+<text x="117.6" y="114.317" font-size="3" fill="#f0f3f6" text-anchor="middle" font-weight="bold">−</text>
+<rect x="47" y="127.925" width="8.5" height="1.6" rx="0.5" fill="#0d1117"/>
+<rect x="61" y="127.925" width="8.5" height="1.6" rx="0.5" fill="#0d1117"/>
+<rect x="35" y="125.325" width="8" height="6.8" rx="0.8" fill="#8fd18a"/>
+<text x="39" y="130.025" font-size="3.4" fill="#1f2328" text-anchor="middle" font-weight="bold">14</text>
+<rect x="77.5" y="125.325" width="8" height="6.8" rx="0.8" fill="#8fd18a"/>
+<text x="81.5" y="130.025" font-size="3.4" fill="#1f2328" text-anchor="middle" font-weight="bold">1</text>
+<rect x="0" y="118.4" width="30" height="10.325" rx="0.5" fill="#0d1117" stroke="#8c959f" stroke-width="0.2"/>
+<text x="3" y="124.642" font-size="3" fill="#f0f3f6" text-anchor="middle" font-weight="bold">−</text>
+<rect x="0" y="128.725" width="30" height="10.325" rx="0.5" fill="#cf222e" stroke="#8c959f" stroke-width="0.2"/>
+<text x="3" y="134.968" font-size="3" fill="#f0f3f6" text-anchor="middle" font-weight="bold">+</text>
+<rect x="90.6" y="118.4" width="30" height="10.325" rx="0.5" fill="#cf222e" stroke="#8c959f" stroke-width="0.2"/>
+<text x="117.6" y="124.642" font-size="3" fill="#f0f3f6" text-anchor="middle" font-weight="bold">+</text>
+<rect x="90.6" y="128.725" width="30" height="10.325" rx="0.5" fill="#0d1117" stroke="#8c959f" stroke-width="0.2"/>
+<text x="117.6" y="134.968" font-size="3" fill="#f0f3f6" text-anchor="middle" font-weight="bold">−</text>
+<rect x="47" y="148.575" width="8.5" height="1.6" rx="0.5" fill="#0d1117"/>
+<rect x="61" y="148.575" width="8.5" height="1.6" rx="0.5" fill="#0d1117"/>
+<rect x="35" y="145.975" width="8" height="6.8" rx="0.8" fill="#8fd18a"/>
+<text x="39" y="150.675" font-size="3.4" fill="#1f2328" text-anchor="middle" font-weight="bold">15</text>
+<rect x="77.5" y="145.975" width="8" height="6.8" rx="0.8" fill="#8fd18a"/>
+<text x="81.5" y="150.675" font-size="3.4" fill="#1f2328" text-anchor="middle" font-weight="bold">0</text>
+<rect x="0" y="139.05" width="30" height="10.325" rx="0.5" fill="#0d1117" stroke="#8c959f" stroke-width="0.2"/>
+<text x="3" y="145.292" font-size="3" fill="#f0f3f6" text-anchor="middle" font-weight="bold">−</text>
+<rect x="0" y="149.375" width="30" height="10.325" rx="0.5" fill="#cf222e" stroke="#8c959f" stroke-width="0.2"/>
+<text x="3" y="155.617" font-size="3" fill="#f0f3f6" text-anchor="middle" font-weight="bold">+</text>
+<rect x="90.6" y="139.05" width="30" height="10.325" rx="0.5" fill="#cf222e" stroke="#8c959f" stroke-width="0.2"/>
+<text x="117.6" y="145.292" font-size="3" fill="#f0f3f6" text-anchor="middle" font-weight="bold">+</text>
+<rect x="90.6" y="149.375" width="30" height="10.325" rx="0.5" fill="#0d1117" stroke="#8c959f" stroke-width="0.2"/>
+<text x="117.6" y="155.617" font-size="3" fill="#f0f3f6" text-anchor="middle" font-weight="bold">−</text>
+<rect x="25.5" y="2.6" width="12.6" height="5.6" rx="0.6" fill="#f85149" stroke="#8c959f" stroke-width="0.15"/>
+<text x="31.8" y="6.4" font-size="2.8" fill="#f0f3f6" text-anchor="middle" font-weight="bold">10</text>
+<rect x="81.8" y="2.6" width="12.6" height="5.6" rx="0.6" fill="#e3b341" stroke="#8c959f" stroke-width="0.15"/>
+<text x="88.1" y="6.4" font-size="2.8" fill="#1f2328" text-anchor="middle" font-weight="bold">20</text>
+<rect x="45.2" y="3.1" width="4.2" height="4.2" rx="0.2" fill="#16191d"/>
+<rect x="46.418" y="5.242" width="1.764" height="1.764" rx="0.15" fill="#d0d7de"/>
+<circle cx="47.3" cy="4.276" r="0.714" fill="#0d1117"/>
+<rect x="45.2" y="7.7" width="4.2" height="1.4" rx="0.2" fill="#0d1117"/>
+<rect x="50.2" y="3.1" width="4.2" height="4.2" rx="0.2" fill="#16191d"/>
+<rect x="51.418" y="5.242" width="1.764" height="1.764" rx="0.15" fill="#d0d7de"/>
+<circle cx="52.3" cy="4.276" r="0.714" fill="#0d1117"/>
+<rect x="50.2" y="7.7" width="4.2" height="1.4" rx="0.2" fill="#cf222e"/>
+<rect x="55.2" y="3.1" width="4.2" height="4.2" rx="0.2" fill="#16191d"/>
+<rect x="56.418" y="5.242" width="1.764" height="1.764" rx="0.15" fill="#d0d7de"/>
+<circle cx="57.3" cy="4.276" r="0.714" fill="#0d1117"/>
+<rect x="55.2" y="7.7" width="4.2" height="1.4" rx="0.2" fill="#0d1117"/>
+<rect x="60.2" y="3.1" width="4.2" height="4.2" rx="0.2" fill="#16191d"/>
+<rect x="61.418" y="5.242" width="1.764" height="1.764" rx="0.15" fill="#d0d7de"/>
+<circle cx="62.3" cy="4.276" r="0.714" fill="#0d1117"/>
+<rect x="60.2" y="7.7" width="4.2" height="1.4" rx="0.2" fill="#cf222e"/>
+<rect x="65.2" y="3.1" width="4.2" height="4.2" rx="0.2" fill="#16191d"/>
+<rect x="66.418" y="5.242" width="1.764" height="1.764" rx="0.15" fill="#d0d7de"/>
+<circle cx="67.3" cy="4.276" r="0.714" fill="#0d1117"/>
+<rect x="65.2" y="7.7" width="4.2" height="1.4" rx="0.2" fill="#0d1117"/>
+<rect x="70.2" y="3.1" width="4.2" height="4.2" rx="0.2" fill="#16191d"/>
+<rect x="71.418" y="5.242" width="1.764" height="1.764" rx="0.15" fill="#d0d7de"/>
+<circle cx="72.3" cy="4.276" r="0.714" fill="#0d1117"/>
+<rect x="70.2" y="7.7" width="4.2" height="1.4" rx="0.2" fill="#cf222e"/>
+<rect x="45" y="9.4" width="10" height="1.9" rx="0.4" fill="#1f6feb"/>
+<rect x="55.1" y="9.4" width="19.6" height="1.9" rx="0.4" fill="#4c8f3c"/>
+<text x="31.8" y="10.6" font-size="1.5" fill="#aab2bd" text-anchor="middle">CONTROLLER</text>
+<text x="88" y="10.6" font-size="1.5" fill="#aab2bd" text-anchor="middle">VRM / PCM</text>
+<rect x="15.5" y="161.5" width="36.5" height="31.2" rx="1.5" fill="#16191d" stroke="#aab2bd" stroke-width="0.3"/>
+<rect x="19" y="183.7" width="12" height="9" rx="1" fill="#0d1117"/>
+<circle cx="25" cy="168" r="2.2" fill="#3a3f47" stroke="#aab2bd" stroke-width="0.3"/>
+<rect x="37" y="183.7" width="12" height="9" rx="1" fill="#0d1117"/>
+<circle cx="43" cy="168" r="2.2" fill="#3a3f47" stroke="#aab2bd" stroke-width="0.3"/>
+<text x="10" y="176" font-size="5" fill="#f0f3f6" text-anchor="middle" font-weight="bold">−</text>
+<text x="57" y="177" font-size="5" fill="#cf222e" text-anchor="middle" font-weight="bold">+</text>
+<text x="25" y="186.4" font-size="3.6" fill="#f0f3f6" text-anchor="middle" font-weight="bold">−</text>
+<text x="43" y="186.4" font-size="3.6" fill="#f0f3f6" text-anchor="middle" font-weight="bold">+</text>
+<rect x="66" y="165.7" width="17.5" height="5.2" rx="2.6" fill="#8fd18a"/>
+<text x="72.5" y="169.1" font-size="2" fill="#1f2328" text-anchor="middle" font-weight="bold">STAT</text>
+<circle cx="80.1" cy="168.3" r="2" fill="#3fb950" stroke="#1f2328" stroke-width="0.3"/>
+<rect x="66" y="177.8" width="17.5" height="5.2" rx="2.6" fill="#8fd18a"/>
+<text x="72.5" y="181.2" font-size="2" fill="#1f2328" text-anchor="middle" font-weight="bold">COMM</text>
+<circle cx="80.1" cy="180.4" r="2" fill="#3fb950" stroke="#1f2328" stroke-width="0.3"/>
+<text x="95.2" y="177" font-size="2" fill="#aab2bd" text-anchor="middle" font-weight="bold">CAN</text>
+<rect x="97.6" y="170.9" width="1.4" height="3.2" rx="0" fill="#e3b341"/>
+<rect x="99.6" y="170.7" width="3.6" height="3.6" rx="0.2" fill="#16191d"/>
+<rect x="99.852" y="171.744" width="1.512" height="1.512" rx="0.15" fill="#d0d7de"/>
+<circle cx="102.192" cy="172.5" r="0.612" fill="#0d1117"/>
+<rect x="97.6" y="174.71" width="1.4" height="3.2" rx="0" fill="#2da44e"/>
+<rect x="99.6" y="174.51" width="3.6" height="3.6" rx="0.2" fill="#16191d"/>
+<rect x="99.852" y="175.554" width="1.512" height="1.512" rx="0.15" fill="#d0d7de"/>
+<circle cx="102.192" cy="176.31" r="0.612" fill="#0d1117"/>
+<rect x="97.6" y="178.52" width="1.4" height="3.2" rx="0" fill="#e3b341"/>
+<rect x="99.6" y="178.32" width="3.6" height="3.6" rx="0.2" fill="#16191d"/>
+<rect x="99.852" y="179.364" width="1.512" height="1.512" rx="0.15" fill="#d0d7de"/>
+<circle cx="102.192" cy="180.12" r="0.612" fill="#0d1117"/>
+<rect x="97.6" y="182.33" width="1.4" height="3.2" rx="0" fill="#2da44e"/>
+<rect x="99.6" y="182.13" width="3.6" height="3.6" rx="0.2" fill="#16191d"/>
+<rect x="99.852" y="183.174" width="1.512" height="1.512" rx="0.15" fill="#d0d7de"/>
+<circle cx="102.192" cy="183.93" r="0.612" fill="#0d1117"/>
+<text x="101" y="162.8" font-size="1.4" fill="#aab2bd" text-anchor="middle">TERM ON OFF</text>
+<rect x="99" y="164.3" width="6" height="2.4" rx="0.4" fill="#16191d"/>
+<rect x="99.4" y="164.7" width="2.6" height="1.6" rx="0.3" fill="#d0d7de"/>
+<rect x="103.2" y="165.1" width="1.2" height="0.8" rx="0" fill="#59636e"/>
+<text x="105.4" y="173.3" font-size="2" fill="#e3b341" text-anchor="start" font-weight="bold">H</text>
+<text x="105.4" y="177.11" font-size="2" fill="#2da44e" text-anchor="start" font-weight="bold">L</text>
+<text x="105.4" y="180.92" font-size="2" fill="#e3b341" text-anchor="start" font-weight="bold">H</text>
+<text x="105.4" y="184.73" font-size="2" fill="#2da44e" text-anchor="start" font-weight="bold">L</text>
+<g class="caption">
+<text x="60.3" y="203" font-size="4" fill="#1f2328" text-anchor="middle" font-weight="bold">CTRE Power Distribution Panel</text>
+<text x="60.3" y="207.2" font-size="2.3" fill="#57606a" text-anchor="middle">120.6 × 192.7 mm · top view · battery end at the bottom</text>
+</g>
+<g id="anchors">
+<circle class="anchor" id="anchor-ch8" data-kind="power" cx="0" cy="19.3" r="1" fill="none"><title>Channel 8 (20/30 A breaker), WAGO black - over red +</title></circle>
+<circle class="anchor" id="anchor-ch7" data-kind="power" cx="120.6" cy="19.3" r="1" fill="none"><title>Channel 7 (20/30 A breaker), WAGO red + over black -</title></circle>
+<circle class="anchor" id="anchor-ch9" data-kind="power" cx="0" cy="34.9" r="1" fill="none"><title>Channel 9 (20/30 A breaker), WAGO black - over red +</title></circle>
+<circle class="anchor" id="anchor-ch6" data-kind="power" cx="120.6" cy="34.9" r="1" fill="none"><title>Channel 6 (20/30 A breaker), WAGO red + over black -</title></circle>
+<circle class="anchor" id="anchor-ch10" data-kind="power" cx="0" cy="50.5" r="1" fill="none"><title>Channel 10 (20/30 A breaker), WAGO black - over red +</title></circle>
+<circle class="anchor" id="anchor-ch5" data-kind="power" cx="120.6" cy="50.5" r="1" fill="none"><title>Channel 5 (20/30 A breaker), WAGO red + over black -</title></circle>
+<circle class="anchor" id="anchor-ch11" data-kind="power" cx="0" cy="66.1" r="1" fill="none"><title>Channel 11 (20/30 A breaker), WAGO black - over red +</title></circle>
+<circle class="anchor" id="anchor-ch4" data-kind="power" cx="120.6" cy="66.1" r="1" fill="none"><title>Channel 4 (20/30 A breaker), WAGO red + over black -</title></circle>
+<circle class="anchor" id="anchor-ch12" data-kind="power" cx="0" cy="87.42" r="1" fill="none"><title>Channel 12 (40 A breaker), WAGO black - over red +</title></circle>
+<circle class="anchor" id="anchor-ch3" data-kind="power" cx="120.6" cy="87.42" r="1" fill="none"><title>Channel 3 (40 A breaker), WAGO red + over black -</title></circle>
+<circle class="anchor" id="anchor-ch13" data-kind="power" cx="0" cy="108.08" r="1" fill="none"><title>Channel 13 (40 A breaker), WAGO black - over red +</title></circle>
+<circle class="anchor" id="anchor-ch2" data-kind="power" cx="120.6" cy="108.08" r="1" fill="none"><title>Channel 2 (40 A breaker), WAGO red + over black -</title></circle>
+<circle class="anchor" id="anchor-ch14" data-kind="power" cx="0" cy="128.72" r="1" fill="none"><title>Channel 14 (40 A breaker), WAGO black - over red +</title></circle>
+<circle class="anchor" id="anchor-ch1" data-kind="power" cx="120.6" cy="128.72" r="1" fill="none"><title>Channel 1 (40 A breaker), WAGO red + over black -</title></circle>
+<circle class="anchor" id="anchor-ch15" data-kind="power" cx="0" cy="149.37" r="1" fill="none"><title>Channel 15 (40 A breaker), WAGO black - over red +</title></circle>
+<circle class="anchor" id="anchor-ch0" data-kind="power" cx="120.6" cy="149.37" r="1" fill="none"><title>Channel 0 (40 A breaker), WAGO red + over black -</title></circle>
+<circle class="anchor" id="anchor-ctrl_pwr" data-kind="power" cx="49.8" cy="0" r="1" fill="none"><title>Controller power (roboRIO), Weidmuller - / +, 10 A ATM fuse</title></circle>
+<circle class="anchor" id="anchor-vrm_pcm_1" data-kind="power" cx="59.8" cy="0" r="1" fill="none"><title>VRM/PCM power pair 1, Weidmuller - / +, shared 20 A ATM fuse</title></circle>
+<circle class="anchor" id="anchor-vrm_pcm_2" data-kind="power" cx="69.8" cy="0" r="1" fill="none"><title>VRM/PCM power pair 2, Weidmuller - / +, shared 20 A ATM fuse</title></circle>
+<circle class="anchor" id="anchor-batt_neg" data-kind="power" cx="25" cy="192.7" r="1" fill="none"><title>Battery - (M6 bolt and lug, 6 AWG, to the battery -)</title></circle>
+<circle class="anchor" id="anchor-batt_pos" data-kind="power" cx="43" cy="192.7" r="1" fill="none"><title>Battery + (M6 bolt and lug, 6 AWG, from the 120 A breaker AUX)</title></circle>
+<circle class="anchor" id="anchor-can_a" data-kind="can" cx="103.2" cy="174.41" r="1" fill="none"><title>CAN H/L pair A (Weidmuller, yellow H / green L)</title></circle>
+<circle class="anchor" id="anchor-can_b" data-kind="can" cx="103.2" cy="182.03" r="1" fill="none"><title>CAN H/L pair B (Weidmuller, yellow H / green L)</title></circle>
+</g>
+</svg>

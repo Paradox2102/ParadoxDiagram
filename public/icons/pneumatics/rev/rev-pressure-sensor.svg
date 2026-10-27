@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-29.4 -36 58.8 103" width="58.8mm" height="103mm" font-family="Helvetica, Arial, sans-serif">
+<title>REV Analog Pressure Sensor</title>
+<desc>Drawn by FRC Team 2102 Paradox. Public domain: CC0 1.0 (https://creativecommons.org/publicdomain/zero/1.0/). https://docs.team2102.org/icons/</desc>
+<rect x="-8" y="0" width="16" height="10" rx="0.8" fill="#16191d" stroke="#1f2328" stroke-width="0.4"/>
+<rect x="-6.55" y="10" width="13.1" height="11" rx="0" fill="#d8dee4" stroke="#1f2328" stroke-width="0.3"/>
+<path d="M -11.5 26.5 L -11.5 22.5 Q -11.5 21 -10 21 L 10 21 Q 11.6 21 11.6 22.5 L 11.6 26.5 Z" fill="#d8dee4" stroke="#1f2328" stroke-width="0.3" stroke-linejoin="round" stroke-linecap="round"/>
+<rect x="-13.55" y="26.5" width="27.1" height="9.2" rx="0" fill="#aeb6bf" stroke="#1f2328" stroke-width="0.4"/>
+<path d="M -6.8 26.5 L -6.8 35.7" fill="none" stroke="#1f2328" stroke-width="0.3" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 6.8 26.5 L 6.8 35.7" fill="none" stroke="#1f2328" stroke-width="0.3" stroke-linejoin="round" stroke-linecap="round"/>
+<text x="0" y="32.2" font-size="2.4" fill="#1f2328" text-anchor="middle" font-weight="bold">200 PSI</text>
+<path d="M -12 35.7 L 12 35.7 L 9.95 37.6 L -9.95 37.6 Z" fill="#d8dee4" stroke="#1f2328" stroke-width="0.3" stroke-linejoin="round" stroke-linecap="round"/>
+<rect x="-9.95" y="37.6" width="19.9" height="1.5" rx="0" fill="#d8dee4" stroke="#1f2328" stroke-width="0.3"/>
+<path d="M -5.0 39.1 L 5.0 39.1 L 4.7 48.4 Q 4.6 49 4 49 L -4 49 Q -4.6 49 -4.7 48.4 Z" fill="#aeb6bf" stroke="#1f2328" stroke-width="0.3" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M -4.9 40.2 L 4.9 40.7" fill="none" stroke="#8c959f" stroke-width="0.25" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M -4.9 41.2 L 4.9 41.7" fill="none" stroke="#8c959f" stroke-width="0.25" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M -4.9 42.2 L 4.9 42.7" fill="none" stroke="#8c959f" stroke-width="0.25" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M -4.9 43.2 L 4.9 43.7" fill="none" stroke="#8c959f" stroke-width="0.25" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M -4.9 44.2 L 4.9 44.7" fill="none" stroke="#8c959f" stroke-width="0.25" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M -4.9 45.2 L 4.9 45.7" fill="none" stroke="#8c959f" stroke-width="0.25" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M -4.9 46.2 L 4.9 46.7" fill="none" stroke="#8c959f" stroke-width="0.25" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M -4.9 47.2 L 4.9 47.7" fill="none" stroke="#8c959f" stroke-width="0.25" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M -4.9 48.2 L 4.9 48.7" fill="none" stroke="#8c959f" stroke-width="0.25" stroke-linejoin="round" stroke-linecap="round"/>
+<text x="7.4" y="45.2" font-size="2" fill="#1f2328" text-anchor="start" font-weight="bold">1/8 NPT</text>
+<path d="M 0 0 L 0 -6 L -6 -14 L -6 -24" fill="none" stroke="#8c959f" stroke-width="2.3" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 0 0 L 0 -6 L -6 -14 L -6 -24" fill="none" stroke="#0d1117" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+<rect x="-9.8" y="-30.6" width="7.6" height="6.6" rx="0.5" fill="#16191d" stroke="#8c959f" stroke-width="0.25"/>
+<rect x="-9.24" y="-29.6" width="1.4" height="1.4" rx="0" fill="#e3b341" stroke="#8c959f" stroke-width="0.12"/>
+<rect x="-6.7" y="-29.6" width="1.4" height="1.4" rx="0" fill="#cf222e" stroke="#8c959f" stroke-width="0.12"/>
+<rect x="-4.16" y="-29.6" width="1.4" height="1.4" rx="0" fill="#0d1117" stroke="#8c959f" stroke-width="0.12"/>
+<g class="lead-labels">
+<text x="-6" y="-32" font-size="2" fill="#1f2328" text-anchor="middle" font-weight="bold">S  +  −</text>
+<text x="-1.2" y="-26.4" font-size="2" fill="#1f2328" text-anchor="start" font-weight="bold">to PH ANALOG</text>
+<text x="-1.2" y="-23.6" font-size="2" fill="#1f2328" text-anchor="start" font-weight="bold">or roboRIO AI</text>
+</g>
+<g class="caption">
+<text x="0" y="58.5" font-size="4" fill="#1f2328" text-anchor="middle" font-weight="bold">REV Analog Pressure Sensor</text>
+<text x="0" y="62.7" font-size="2.3" fill="#57606a" text-anchor="middle">27.1 × 49 mm · side view · sensor cable drawn short</text>
+</g>
+<g id="anchors">
+<circle class="anchor" id="anchor-air" data-kind="air" cx="0" cy="49" r="1" fill="none"><title>Pressure port: 1/8 NPT male (0-200 psi, 348 psi max)</title></circle>
+<circle class="anchor" id="anchor-signal" data-kind="signal" cx="-6" cy="-30.6" r="1" fill="none"><title>Sensor cable: 3-pin 0.1 in housing, S (analog out 0.5-4.5 V) / +5 V / GND</title></circle>
+</g>
+</svg>

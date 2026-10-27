@@ -1,0 +1,96 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-10 -8 106 82" width="106mm" height="82mm" font-family="Helvetica, Arial, sans-serif">
+<title>Orange Pi 5 Pro</title>
+<desc>Drawn by FRC Team 2102 Paradox. Public domain: CC0 1.0 (https://creativecommons.org/publicdomain/zero/1.0/). https://docs.team2102.org/icons/</desc>
+<rect x="0" y="0" width="89" height="56" rx="3" fill="#3a3f47" stroke="#1f2328" stroke-width="0.5"/>
+<circle cx="23.3" cy="3" r="1.4" fill="#ffffff" stroke="#1f2328" stroke-width="0.2"/>
+<circle cx="81.9" cy="3" r="1.4" fill="#ffffff" stroke="#1f2328" stroke-width="0.2"/>
+<circle cx="23.3" cy="52.6" r="1.4" fill="#ffffff" stroke="#1f2328" stroke-width="0.2"/>
+<circle cx="81.9" cy="52.6" r="1.4" fill="#ffffff" stroke="#1f2328" stroke-width="0.2"/>
+<rect x="39" y="19" width="16" height="16" rx="1" fill="#2b3036" stroke="#59636e" stroke-width="0.3"/>
+<text x="47" y="27.8" font-size="2.2" fill="#aab2bd" text-anchor="middle">RK3588S</text>
+<text x="74" y="25" font-size="2.8" fill="#f0f3f6" text-anchor="middle" font-weight="bold">ORANGE PI</text>
+<text x="74" y="28.8" font-size="2.8" fill="#f0f3f6" text-anchor="middle" font-weight="bold">5 PRO</text>
+<rect x="26.3" y="-3" width="4.4" height="7" rx="1.5" fill="#16191d" stroke="#8c959f" stroke-width="0.2"/>
+<rect x="27.9" y="-2" width="1.2" height="5" rx="0.5" fill="#59636e"/>
+<text x="31.4" y="7" font-size="1.8" fill="#f0f3f6" text-anchor="start">PWR IN</text>
+<text x="31.4" y="9.2" font-size="1.5" fill="#aab2bd" text-anchor="start">5V USB-C</text>
+<rect x="34" y="-1.5" width="16" height="6.5" rx="0.8" fill="#8c959f"/>
+<text x="42" y="10.6" font-size="1.6" fill="#aab2bd" text-anchor="middle">HDMI 2.1</text>
+<rect x="63" y="-1.5" width="16" height="6.5" rx="0.8" fill="#8c959f"/>
+<text x="71" y="10.6" font-size="1.6" fill="#aab2bd" text-anchor="middle">HDMI 2.0</text>
+<circle cx="56.75" cy="2" r="2.6" fill="#16191d" stroke="#8c959f" stroke-width="0.2"/>
+<rect x="21" y="7" width="5" height="5" rx="0.3" fill="#16191d"/>
+<text x="23.5" y="14.2" font-size="1.5" fill="#aab2bd" text-anchor="middle">POE</text>
+<rect x="-5" y="1.5" width="21" height="16.5" rx="0.8" fill="#16191d"/>
+<rect x="-1.85" y="3.975" width="14.7" height="9.075" rx="0.3" fill="#59636e"/>
+<rect x="2.98" y="13.05" width="5.04" height="2.31" rx="0" fill="#59636e"/>
+<text x="17.4" y="17.6" font-size="1.9" fill="#f0f3f6" text-anchor="start">LAN 1G</text>
+<rect x="-5" y="22" width="17" height="15" rx="0.8" fill="#1f6feb" stroke="#8c959f" stroke-width="0.3"/>
+<rect x="-3.5" y="24.2" width="13" height="4" rx="0.4" fill="#0d1117"/>
+<rect x="-3.5" y="30.8" width="13" height="4" rx="0.4" fill="#0d1117"/>
+<text x="13.4" y="27.4" font-size="1.8" fill="#f0f3f6" text-anchor="start">USB 3.1</text>
+<text x="13.4" y="33.6" font-size="1.8" fill="#f0f3f6" text-anchor="start">USB 2.0</text>
+<rect x="-5" y="40" width="17" height="15.5" rx="0.8" fill="#8c959f" stroke="#1f2328" stroke-width="0.3"/>
+<rect x="-3.5" y="42.2" width="13" height="4" rx="0.4" fill="#0d1117"/>
+<rect x="-3.5" y="48.8" width="13" height="4" rx="0.4" fill="#0d1117"/>
+<text x="13.4" y="47.2" font-size="1.8" fill="#f0f3f6" text-anchor="start">USB 2.0 ×2</text>
+<text x="13.4" y="49.6" font-size="1.5" fill="#aab2bd" text-anchor="start">(hub)</text>
+<rect x="28" y="50.5" width="50" height="5.5" rx="0.3" fill="#16191d"/>
+<rect x="76.55" y="51.45" width="0.9" height="0.9" rx="0" fill="#d4a72c"/>
+<rect x="76.55" y="54.05" width="0.9" height="0.9" rx="0" fill="#d4a72c"/>
+<rect x="74.01" y="51.45" width="0.9" height="0.9" rx="0" fill="#d4a72c"/>
+<rect x="74.01" y="54.05" width="0.9" height="0.9" rx="0" fill="#d4a72c"/>
+<rect x="71.47" y="51.45" width="0.9" height="0.9" rx="0" fill="#d4a72c"/>
+<rect x="71.47" y="54.05" width="0.9" height="0.9" rx="0" fill="#d4a72c"/>
+<rect x="68.93" y="51.45" width="0.9" height="0.9" rx="0" fill="#d4a72c"/>
+<rect x="68.93" y="54.05" width="0.9" height="0.9" rx="0" fill="#d4a72c"/>
+<rect x="66.39" y="51.45" width="0.9" height="0.9" rx="0" fill="#d4a72c"/>
+<rect x="66.39" y="54.05" width="0.9" height="0.9" rx="0" fill="#d4a72c"/>
+<rect x="63.85" y="51.45" width="0.9" height="0.9" rx="0" fill="#d4a72c"/>
+<rect x="63.85" y="54.05" width="0.9" height="0.9" rx="0" fill="#d4a72c"/>
+<rect x="61.31" y="51.45" width="0.9" height="0.9" rx="0" fill="#d4a72c"/>
+<rect x="61.31" y="54.05" width="0.9" height="0.9" rx="0" fill="#d4a72c"/>
+<rect x="58.77" y="51.45" width="0.9" height="0.9" rx="0" fill="#d4a72c"/>
+<rect x="58.77" y="54.05" width="0.9" height="0.9" rx="0" fill="#d4a72c"/>
+<rect x="56.23" y="51.45" width="0.9" height="0.9" rx="0" fill="#d4a72c"/>
+<rect x="56.23" y="54.05" width="0.9" height="0.9" rx="0" fill="#d4a72c"/>
+<rect x="53.69" y="51.45" width="0.9" height="0.9" rx="0" fill="#d4a72c"/>
+<rect x="53.69" y="54.05" width="0.9" height="0.9" rx="0" fill="#d4a72c"/>
+<rect x="51.15" y="51.45" width="0.9" height="0.9" rx="0" fill="#d4a72c"/>
+<rect x="51.15" y="54.05" width="0.9" height="0.9" rx="0" fill="#d4a72c"/>
+<rect x="48.61" y="51.45" width="0.9" height="0.9" rx="0" fill="#d4a72c"/>
+<rect x="48.61" y="54.05" width="0.9" height="0.9" rx="0" fill="#d4a72c"/>
+<rect x="46.07" y="51.45" width="0.9" height="0.9" rx="0" fill="#d4a72c"/>
+<rect x="46.07" y="54.05" width="0.9" height="0.9" rx="0" fill="#d4a72c"/>
+<rect x="43.53" y="51.45" width="0.9" height="0.9" rx="0" fill="#d4a72c"/>
+<rect x="43.53" y="54.05" width="0.9" height="0.9" rx="0" fill="#d4a72c"/>
+<rect x="40.99" y="51.45" width="0.9" height="0.9" rx="0" fill="#d4a72c"/>
+<rect x="40.99" y="54.05" width="0.9" height="0.9" rx="0" fill="#d4a72c"/>
+<rect x="38.45" y="51.45" width="0.9" height="0.9" rx="0" fill="#d4a72c"/>
+<rect x="38.45" y="54.05" width="0.9" height="0.9" rx="0" fill="#d4a72c"/>
+<rect x="35.91" y="51.45" width="0.9" height="0.9" rx="0" fill="#d4a72c"/>
+<rect x="35.91" y="54.05" width="0.9" height="0.9" rx="0" fill="#d4a72c"/>
+<rect x="33.37" y="51.45" width="0.9" height="0.9" rx="0" fill="#d4a72c"/>
+<rect x="33.37" y="54.05" width="0.9" height="0.9" rx="0" fill="#d4a72c"/>
+<rect x="30.83" y="51.45" width="0.9" height="0.9" rx="0" fill="#d4a72c"/>
+<rect x="30.83" y="54.05" width="0.9" height="0.9" rx="0" fill="#d4a72c"/>
+<rect x="28.29" y="51.45" width="0.9" height="0.9" rx="0" fill="#d4a72c"/>
+<rect x="28.29" y="54.05" width="0.9" height="0.9" rx="0" fill="#d4a72c"/>
+<text x="53" y="48.6" font-size="1.8" fill="#aab2bd" text-anchor="middle">40-PIN GPIO</text>
+<text x="77.6" y="59.6" font-size="1.6" fill="#1f2328" text-anchor="middle">5V</text>
+<rect x="84" y="17.5" width="5" height="20.5" rx="0.3" fill="#59636e"/>
+<text x="82.6" y="28" font-size="1.5" fill="#aab2bd" text-anchor="end">DSI</text>
+<g class="caption">
+<text x="44.5" y="67" font-size="4" fill="#1f2328" text-anchor="middle" font-weight="bold">Orange Pi 5 Pro</text>
+<text x="44.5" y="71.2" font-size="2.3" fill="#57606a" text-anchor="middle">89 × 56 mm · top view · ports ±2 mm (from the official photo)</text>
+</g>
+<g id="anchors">
+<circle class="anchor" id="anchor-pwr_in_usbc" data-kind="power" cx="28.5" cy="-3" r="1" fill="none"><title>PWR IN USB-C, 5 V (5 A official spec)</title></circle>
+<circle class="anchor" id="anchor-ethernet" data-kind="ethernet" cx="-5" cy="9.75" r="1" fill="none"><title>Gigabit Ethernet RJ45</title></circle>
+<circle class="anchor" id="anchor-usb3_a" data-kind="usb" cx="-5" cy="26.2" r="1" fill="none"><title>USB 3.1 Type-A (upper port of the stack)</title></circle>
+<circle class="anchor" id="anchor-usb2_a_direct" data-kind="usb" cx="-5" cy="32.8" r="1" fill="none"><title>USB 2.0 Type-A (lower port of the stack)</title></circle>
+<circle class="anchor" id="anchor-usb2_hub_a" data-kind="usb" cx="-5" cy="44.2" r="1" fill="none"><title>USB 2.0 Type-A (hub, upper)</title></circle>
+<circle class="anchor" id="anchor-usb2_hub_b" data-kind="usb" cx="-5" cy="50.8" r="1" fill="none"><title>USB 2.0 Type-A (hub, lower)</title></circle>
+<circle class="anchor" id="anchor-gpio_5v_in" data-kind="power" cx="76" cy="56" r="1" fill="none"><title>40-pin header pins 2/4 = 5 V (alternate power input)</title></circle>
+</g>
+</svg>

@@ -1,0 +1,228 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-5 -6 88 81" width="88mm" height="81mm" font-family="Helvetica, Arial, sans-serif">
+<title>Studica navX2-MXP</title>
+<desc>Drawn by FRC Team 2102 Paradox. Public domain: CC0 1.0 (https://creativecommons.org/publicdomain/zero/1.0/). https://docs.team2102.org/icons/</desc>
+<rect x="0" y="0" width="77.47" height="56.64" rx="1.2" fill="#7a2f86" stroke="#1f2328" stroke-width="0.4"/>
+<circle cx="3.43" cy="53.13" r="2.2" fill="#c9a227"/>
+<circle cx="3.43" cy="53.13" r="1.6" fill="#ffffff"/>
+<circle cx="3.43" cy="3.5" r="2.2" fill="#c9a227"/>
+<circle cx="3.43" cy="3.5" r="1.6" fill="#ffffff"/>
+<circle cx="74.04" cy="0" r="1.6" fill="#ffffff" stroke="#1f2328" stroke-width="0.2"/>
+<circle cx="74.04" cy="56.64" r="1.6" fill="#ffffff" stroke="#1f2328" stroke-width="0.2"/>
+<rect x="70.1" y="6.74" width="5.2" height="43.2" rx="0.4" fill="none" stroke="#d0d7de" stroke-width="0.3" stroke-dasharray="1 0.6"/>
+<circle cx="71.42" cy="8" r="0.75" fill="#c9d1d9" stroke="#8c959f" stroke-width="0.15"/>
+<circle cx="73.96" cy="8" r="0.75" fill="#c9d1d9" stroke="#8c959f" stroke-width="0.15"/>
+<circle cx="71.42" cy="10.54" r="0.75" fill="#c9d1d9" stroke="#8c959f" stroke-width="0.15"/>
+<circle cx="73.96" cy="10.54" r="0.75" fill="#c9d1d9" stroke="#8c959f" stroke-width="0.15"/>
+<circle cx="71.42" cy="13.08" r="0.75" fill="#c9d1d9" stroke="#8c959f" stroke-width="0.15"/>
+<circle cx="73.96" cy="13.08" r="0.75" fill="#c9d1d9" stroke="#8c959f" stroke-width="0.15"/>
+<circle cx="71.42" cy="15.62" r="0.75" fill="#c9d1d9" stroke="#8c959f" stroke-width="0.15"/>
+<circle cx="73.96" cy="15.62" r="0.75" fill="#c9d1d9" stroke="#8c959f" stroke-width="0.15"/>
+<circle cx="71.42" cy="18.16" r="0.75" fill="#c9d1d9" stroke="#8c959f" stroke-width="0.15"/>
+<circle cx="73.96" cy="18.16" r="0.75" fill="#c9d1d9" stroke="#8c959f" stroke-width="0.15"/>
+<circle cx="71.42" cy="20.7" r="0.75" fill="#c9d1d9" stroke="#8c959f" stroke-width="0.15"/>
+<circle cx="73.96" cy="20.7" r="0.75" fill="#c9d1d9" stroke="#8c959f" stroke-width="0.15"/>
+<circle cx="71.42" cy="23.24" r="0.75" fill="#c9d1d9" stroke="#8c959f" stroke-width="0.15"/>
+<circle cx="73.96" cy="23.24" r="0.75" fill="#c9d1d9" stroke="#8c959f" stroke-width="0.15"/>
+<circle cx="71.42" cy="25.78" r="0.75" fill="#c9d1d9" stroke="#8c959f" stroke-width="0.15"/>
+<circle cx="73.96" cy="25.78" r="0.75" fill="#c9d1d9" stroke="#8c959f" stroke-width="0.15"/>
+<circle cx="71.42" cy="28.32" r="0.75" fill="#c9d1d9" stroke="#8c959f" stroke-width="0.15"/>
+<circle cx="73.96" cy="28.32" r="0.75" fill="#c9d1d9" stroke="#8c959f" stroke-width="0.15"/>
+<circle cx="71.42" cy="30.86" r="0.75" fill="#c9d1d9" stroke="#8c959f" stroke-width="0.15"/>
+<circle cx="73.96" cy="30.86" r="0.75" fill="#c9d1d9" stroke="#8c959f" stroke-width="0.15"/>
+<circle cx="71.42" cy="33.4" r="0.75" fill="#c9d1d9" stroke="#8c959f" stroke-width="0.15"/>
+<circle cx="73.96" cy="33.4" r="0.75" fill="#c9d1d9" stroke="#8c959f" stroke-width="0.15"/>
+<circle cx="71.42" cy="35.94" r="0.75" fill="#c9d1d9" stroke="#8c959f" stroke-width="0.15"/>
+<circle cx="73.96" cy="35.94" r="0.75" fill="#c9d1d9" stroke="#8c959f" stroke-width="0.15"/>
+<circle cx="71.42" cy="38.48" r="0.75" fill="#c9d1d9" stroke="#8c959f" stroke-width="0.15"/>
+<circle cx="73.96" cy="38.48" r="0.75" fill="#c9d1d9" stroke="#8c959f" stroke-width="0.15"/>
+<circle cx="71.42" cy="41.02" r="0.75" fill="#c9d1d9" stroke="#8c959f" stroke-width="0.15"/>
+<circle cx="73.96" cy="41.02" r="0.75" fill="#c9d1d9" stroke="#8c959f" stroke-width="0.15"/>
+<circle cx="71.42" cy="43.56" r="0.75" fill="#c9d1d9" stroke="#8c959f" stroke-width="0.15"/>
+<circle cx="73.96" cy="43.56" r="0.75" fill="#c9d1d9" stroke="#8c959f" stroke-width="0.15"/>
+<circle cx="71.42" cy="46.1" r="0.75" fill="#c9d1d9" stroke="#8c959f" stroke-width="0.15"/>
+<circle cx="73.96" cy="46.1" r="0.75" fill="#c9d1d9" stroke="#8c959f" stroke-width="0.15"/>
+<circle cx="71.42" cy="48.64" r="0.75" fill="#c9d1d9" stroke="#8c959f" stroke-width="0.15"/>
+<circle cx="73.96" cy="48.64" r="0.75" fill="#c9d1d9" stroke="#8c959f" stroke-width="0.15"/>
+<text x="68.9" y="52.2" font-size="1.7" fill="#f0f3f6" text-anchor="end" font-weight="bold">MXP</text>
+<rect x="11.99" y="-0.4" width="7.6" height="9.2" rx="0.6" fill="#8c959f" stroke="#1f2328" stroke-width="0.2"/>
+<rect x="13.2" y="-0.4" width="5.2" height="2" rx="0.3" fill="#16191d"/>
+<text x="15.79" y="11.2" font-size="1.6" fill="#f0f3f6" text-anchor="middle">USB</text>
+<rect x="22.613" y="1.27" width="2.54" height="7.62" rx="0.3" fill="#16191d"/>
+<rect x="23.433" y="2.09" width="0.9" height="0.9" rx="0.2" fill="#8c959f" stroke="#8c959f" stroke-width="0.15"/>
+<rect x="23.433" y="4.63" width="0.9" height="0.9" rx="0.2" fill="#8c959f" stroke="#8c959f" stroke-width="0.15"/>
+<rect x="23.433" y="7.17" width="0.9" height="0.9" rx="0.2" fill="#8c959f" stroke="#8c959f" stroke-width="0.15"/>
+<text x="23.883" y="11" font-size="1.5" fill="#f0f3f6" text-anchor="middle">9</text>
+<rect x="25.127" y="1.27" width="2.54" height="7.62" rx="0.3" fill="#16191d"/>
+<rect x="25.947" y="2.09" width="0.9" height="0.9" rx="0.2" fill="#8c959f" stroke="#8c959f" stroke-width="0.15"/>
+<rect x="25.947" y="4.63" width="0.9" height="0.9" rx="0.2" fill="#8c959f" stroke="#8c959f" stroke-width="0.15"/>
+<rect x="25.947" y="7.17" width="0.9" height="0.9" rx="0.2" fill="#8c959f" stroke="#8c959f" stroke-width="0.15"/>
+<text x="26.397" y="11" font-size="1.5" fill="#f0f3f6" text-anchor="middle">8</text>
+<rect x="27.641" y="1.27" width="2.54" height="7.62" rx="0.3" fill="#16191d"/>
+<rect x="28.461" y="2.09" width="0.9" height="0.9" rx="0.2" fill="#8c959f" stroke="#8c959f" stroke-width="0.15"/>
+<rect x="28.461" y="4.63" width="0.9" height="0.9" rx="0.2" fill="#8c959f" stroke="#8c959f" stroke-width="0.15"/>
+<rect x="28.461" y="7.17" width="0.9" height="0.9" rx="0.2" fill="#8c959f" stroke="#8c959f" stroke-width="0.15"/>
+<text x="28.911" y="11" font-size="1.5" fill="#f0f3f6" text-anchor="middle">7</text>
+<rect x="30.155" y="1.27" width="2.54" height="7.62" rx="0.3" fill="#16191d"/>
+<rect x="30.975" y="2.09" width="0.9" height="0.9" rx="0.2" fill="#8c959f" stroke="#8c959f" stroke-width="0.15"/>
+<rect x="30.975" y="4.63" width="0.9" height="0.9" rx="0.2" fill="#8c959f" stroke="#8c959f" stroke-width="0.15"/>
+<rect x="30.975" y="7.17" width="0.9" height="0.9" rx="0.2" fill="#8c959f" stroke="#8c959f" stroke-width="0.15"/>
+<text x="31.425" y="11" font-size="1.5" fill="#f0f3f6" text-anchor="middle">6</text>
+<rect x="32.669" y="1.27" width="2.54" height="7.62" rx="0.3" fill="#16191d"/>
+<rect x="33.489" y="2.09" width="0.9" height="0.9" rx="0.2" fill="#8c959f" stroke="#8c959f" stroke-width="0.15"/>
+<rect x="33.489" y="4.63" width="0.9" height="0.9" rx="0.2" fill="#8c959f" stroke="#8c959f" stroke-width="0.15"/>
+<rect x="33.489" y="7.17" width="0.9" height="0.9" rx="0.2" fill="#8c959f" stroke="#8c959f" stroke-width="0.15"/>
+<text x="33.939" y="11" font-size="1.5" fill="#f0f3f6" text-anchor="middle">5</text>
+<rect x="35.183" y="1.27" width="2.54" height="7.62" rx="0.3" fill="#16191d"/>
+<rect x="36.003" y="2.09" width="0.9" height="0.9" rx="0.2" fill="#8c959f" stroke="#8c959f" stroke-width="0.15"/>
+<rect x="36.003" y="4.63" width="0.9" height="0.9" rx="0.2" fill="#8c959f" stroke="#8c959f" stroke-width="0.15"/>
+<rect x="36.003" y="7.17" width="0.9" height="0.9" rx="0.2" fill="#8c959f" stroke="#8c959f" stroke-width="0.15"/>
+<text x="36.453" y="11" font-size="1.5" fill="#f0f3f6" text-anchor="middle">4</text>
+<rect x="37.697" y="1.27" width="2.54" height="7.62" rx="0.3" fill="#16191d"/>
+<rect x="38.517" y="2.09" width="0.9" height="0.9" rx="0.2" fill="#8c959f" stroke="#8c959f" stroke-width="0.15"/>
+<rect x="38.517" y="4.63" width="0.9" height="0.9" rx="0.2" fill="#8c959f" stroke="#8c959f" stroke-width="0.15"/>
+<rect x="38.517" y="7.17" width="0.9" height="0.9" rx="0.2" fill="#8c959f" stroke="#8c959f" stroke-width="0.15"/>
+<text x="38.967" y="11" font-size="1.5" fill="#f0f3f6" text-anchor="middle">3</text>
+<rect x="40.211" y="1.27" width="2.54" height="7.62" rx="0.3" fill="#16191d"/>
+<rect x="41.031" y="2.09" width="0.9" height="0.9" rx="0.2" fill="#8c959f" stroke="#8c959f" stroke-width="0.15"/>
+<rect x="41.031" y="4.63" width="0.9" height="0.9" rx="0.2" fill="#8c959f" stroke="#8c959f" stroke-width="0.15"/>
+<rect x="41.031" y="7.17" width="0.9" height="0.9" rx="0.2" fill="#8c959f" stroke="#8c959f" stroke-width="0.15"/>
+<text x="41.481" y="11" font-size="1.5" fill="#f0f3f6" text-anchor="middle">2</text>
+<rect x="42.725" y="1.27" width="2.54" height="7.62" rx="0.3" fill="#16191d"/>
+<rect x="43.545" y="2.09" width="0.9" height="0.9" rx="0.2" fill="#8c959f" stroke="#8c959f" stroke-width="0.15"/>
+<rect x="43.545" y="4.63" width="0.9" height="0.9" rx="0.2" fill="#8c959f" stroke="#8c959f" stroke-width="0.15"/>
+<rect x="43.545" y="7.17" width="0.9" height="0.9" rx="0.2" fill="#8c959f" stroke="#8c959f" stroke-width="0.15"/>
+<text x="43.995" y="11" font-size="1.5" fill="#f0f3f6" text-anchor="middle">1</text>
+<rect x="45.239" y="1.27" width="2.54" height="7.62" rx="0.3" fill="#16191d"/>
+<rect x="46.059" y="2.09" width="0.9" height="0.9" rx="0.2" fill="#8c959f" stroke="#8c959f" stroke-width="0.15"/>
+<rect x="46.059" y="4.63" width="0.9" height="0.9" rx="0.2" fill="#8c959f" stroke="#8c959f" stroke-width="0.15"/>
+<rect x="46.059" y="7.17" width="0.9" height="0.9" rx="0.2" fill="#8c959f" stroke="#8c959f" stroke-width="0.15"/>
+<text x="46.509" y="11" font-size="1.5" fill="#f0f3f6" text-anchor="middle">0</text>
+<rect x="49.01" y="1.27" width="2.54" height="7.62" rx="0.3" fill="#16191d"/>
+<rect x="49.83" y="2.09" width="0.9" height="0.9" rx="0.2" fill="#8c959f" stroke="#8c959f" stroke-width="0.15"/>
+<rect x="49.83" y="4.63" width="0.9" height="0.9" rx="0.2" fill="#8c959f" stroke="#8c959f" stroke-width="0.15"/>
+<rect x="49.83" y="7.17" width="0.9" height="0.9" rx="0.2" fill="#8c959f" stroke="#8c959f" stroke-width="0.15"/>
+<text x="50.28" y="11" font-size="1.5" fill="#f0f3f6" text-anchor="middle">3</text>
+<rect x="51.524" y="1.27" width="2.54" height="7.62" rx="0.3" fill="#16191d"/>
+<rect x="52.344" y="2.09" width="0.9" height="0.9" rx="0.2" fill="#8c959f" stroke="#8c959f" stroke-width="0.15"/>
+<rect x="52.344" y="4.63" width="0.9" height="0.9" rx="0.2" fill="#8c959f" stroke="#8c959f" stroke-width="0.15"/>
+<rect x="52.344" y="7.17" width="0.9" height="0.9" rx="0.2" fill="#8c959f" stroke="#8c959f" stroke-width="0.15"/>
+<text x="52.794" y="11" font-size="1.5" fill="#f0f3f6" text-anchor="middle">2</text>
+<rect x="54.038" y="1.27" width="2.54" height="7.62" rx="0.3" fill="#16191d"/>
+<rect x="54.858" y="2.09" width="0.9" height="0.9" rx="0.2" fill="#8c959f" stroke="#8c959f" stroke-width="0.15"/>
+<rect x="54.858" y="4.63" width="0.9" height="0.9" rx="0.2" fill="#8c959f" stroke="#8c959f" stroke-width="0.15"/>
+<rect x="54.858" y="7.17" width="0.9" height="0.9" rx="0.2" fill="#8c959f" stroke="#8c959f" stroke-width="0.15"/>
+<text x="55.308" y="11" font-size="1.5" fill="#f0f3f6" text-anchor="middle">1</text>
+<rect x="56.552" y="1.27" width="2.54" height="7.62" rx="0.3" fill="#16191d"/>
+<rect x="57.372" y="2.09" width="0.9" height="0.9" rx="0.2" fill="#8c959f" stroke="#8c959f" stroke-width="0.15"/>
+<rect x="57.372" y="4.63" width="0.9" height="0.9" rx="0.2" fill="#8c959f" stroke="#8c959f" stroke-width="0.15"/>
+<rect x="57.372" y="7.17" width="0.9" height="0.9" rx="0.2" fill="#8c959f" stroke="#8c959f" stroke-width="0.15"/>
+<text x="57.822" y="11" font-size="1.5" fill="#f0f3f6" text-anchor="middle">0</text>
+<rect x="60.323" y="1.27" width="2.54" height="7.62" rx="0.3" fill="#16191d"/>
+<rect x="61.143" y="2.09" width="0.9" height="0.9" rx="0.2" fill="#8c959f" stroke="#8c959f" stroke-width="0.15"/>
+<rect x="61.143" y="4.63" width="0.9" height="0.9" rx="0.2" fill="#8c959f" stroke="#8c959f" stroke-width="0.15"/>
+<rect x="61.143" y="7.17" width="0.9" height="0.9" rx="0.2" fill="#8c959f" stroke="#8c959f" stroke-width="0.15"/>
+<text x="61.593" y="11" font-size="1.5" fill="#f0f3f6" text-anchor="middle">1</text>
+<rect x="62.837" y="1.27" width="2.54" height="7.62" rx="0.3" fill="#16191d"/>
+<rect x="63.657" y="2.09" width="0.9" height="0.9" rx="0.2" fill="#8c959f" stroke="#8c959f" stroke-width="0.15"/>
+<rect x="63.657" y="4.63" width="0.9" height="0.9" rx="0.2" fill="#8c959f" stroke="#8c959f" stroke-width="0.15"/>
+<rect x="63.657" y="7.17" width="0.9" height="0.9" rx="0.2" fill="#8c959f" stroke="#8c959f" stroke-width="0.15"/>
+<text x="64.107" y="11" font-size="1.5" fill="#f0f3f6" text-anchor="middle">0</text>
+<rect x="66.608" y="1.27" width="2.54" height="7.62" rx="0.3" fill="#16191d"/>
+<rect x="67.428" y="2.09" width="0.9" height="0.9" rx="0.2" fill="#8c959f" stroke="#8c959f" stroke-width="0.15"/>
+<rect x="67.428" y="4.63" width="0.9" height="0.9" rx="0.2" fill="#8c959f" stroke="#8c959f" stroke-width="0.15"/>
+<rect x="67.428" y="7.17" width="0.9" height="0.9" rx="0.2" fill="#8c959f" stroke="#8c959f" stroke-width="0.15"/>
+<text x="67.878" y="11" font-size="1.5" fill="#f0f3f6" text-anchor="middle">V</text>
+<rect x="66.6" y="1.1" width="2.56" height="4.8" rx="0.4" fill="#16191d"/>
+<text x="35.2" y="13.5" font-size="1.5" fill="#f0f3f6" text-anchor="middle">DIGITAL I/O · PWM</text>
+<text x="54" y="13.5" font-size="1.5" fill="#f0f3f6" text-anchor="middle">ANALOG IN</text>
+<text x="62.85" y="13.5" font-size="1.5" fill="#f0f3f6" text-anchor="middle">OUT</text>
+<text x="21.6" y="2.9" font-size="1.6" fill="#f0f3f6" text-anchor="end">−</text>
+<text x="21.6" y="5.6" font-size="1.6" fill="#f0f3f6" text-anchor="end">+</text>
+<text x="21.6" y="8.2" font-size="1.6" fill="#f0f3f6" text-anchor="end">S</text>
+<rect x="6.19" y="40.78" width="2.2" height="2.2" rx="0.2" fill="#16191d"/>
+<rect x="6.84" y="41.43" width="0.9" height="0.9" rx="0.2" fill="#8c959f" stroke="#8c959f" stroke-width="0.15"/>
+<rect x="8.73" y="40.78" width="2.2" height="2.2" rx="0.2" fill="#16191d"/>
+<rect x="9.38" y="41.43" width="0.9" height="0.9" rx="0.2" fill="#8c959f" stroke="#8c959f" stroke-width="0.15"/>
+<rect x="11.27" y="40.78" width="2.2" height="2.2" rx="0.2" fill="#16191d"/>
+<rect x="11.92" y="41.43" width="0.9" height="0.9" rx="0.2" fill="#8c959f" stroke="#8c959f" stroke-width="0.15"/>
+<rect x="13.81" y="40.78" width="2.2" height="2.2" rx="0.2" fill="#16191d"/>
+<rect x="14.46" y="41.43" width="0.9" height="0.9" rx="0.2" fill="#8c959f" stroke="#8c959f" stroke-width="0.15"/>
+<text x="11.1" y="44.64" font-size="1.3" fill="#f0f3f6" text-anchor="middle">VCC GND DAT CLK</text>
+<rect x="6.23" y="21.54" width="3.5" height="6" rx="0.4" fill="#d0d7de" stroke="#8c959f" stroke-width="0.2"/>
+<circle cx="7.98" cy="24.54" r="1" fill="#16191d"/>
+<text x="10.8" y="25.14" font-size="1.5" fill="#f0f3f6" text-anchor="start">RESET</text>
+<rect x="6.23" y="30.74" width="3.5" height="6" rx="0.4" fill="#d0d7de" stroke="#8c959f" stroke-width="0.2"/>
+<circle cx="7.98" cy="33.74" r="1" fill="#16191d"/>
+<text x="10.8" y="34.34" font-size="1.5" fill="#f0f3f6" text-anchor="start">CAL</text>
+<circle cx="12.49" cy="36.56" r="0.55" fill="#f0883e"/>
+<text x="13.5" y="37.16" font-size="1.2" fill="#f0f3f6" text-anchor="start">CAL</text>
+<rect x="22.68" y="21.14" width="10" height="10" rx="0.3" fill="#16191d"/>
+<circle cx="47.61" cy="18.87" r="0.55" fill="#f85149"/>
+<text x="47.61" y="17.67" font-size="1.3" fill="#f0f3f6" text-anchor="middle">3.3V</text>
+<circle cx="51.73" cy="39.09" r="0.55" fill="#d0d7de"/>
+<text x="50.6" y="39.59" font-size="1.3" fill="#f0f3f6" text-anchor="end">S1</text>
+<circle cx="51.73" cy="42.86" r="0.55" fill="#d0d7de"/>
+<text x="50.6" y="43.36" font-size="1.3" fill="#f0f3f6" text-anchor="end">S2</text>
+<rect x="48.9" y="29.31" width="6.35" height="6.45" rx="0.4" fill="#d4a72c"/>
+<rect x="50.05" y="30.51" width="1.5" height="2.2" rx="0" fill="#d0d7de"/>
+<rect x="52.55" y="30.51" width="1.5" height="2.2" rx="0" fill="#d0d7de"/>
+<text x="52.07" y="37.51" font-size="1.3" fill="#f0f3f6" text-anchor="middle">UART SPI</text>
+<text x="2.3" y="12.9" font-size="1.8" fill="#f0f3f6" text-anchor="start">Kauai</text>
+<text x="2.3" y="14.9" font-size="1.8" fill="#f0f3f6" text-anchor="start">Labs</text>
+<text x="20.5" y="54" font-size="6" fill="#f0f3f6" text-anchor="start">navX2</text>
+<text x="38.4" y="49.6" font-size="2.4" fill="#f0f3f6" text-anchor="start">mxp</text>
+<rect x="52.703" y="45.314" width="10.16" height="2.54" rx="0.3" fill="#16191d"/>
+<rect x="53.523" y="46.134" width="0.9" height="0.9" rx="0.2" fill="#8c959f" stroke="#8c959f" stroke-width="0.15"/>
+<rect x="56.063" y="46.134" width="0.9" height="0.9" rx="0.2" fill="#8c959f" stroke="#8c959f" stroke-width="0.15"/>
+<rect x="58.603" y="46.134" width="0.9" height="0.9" rx="0.2" fill="#8c959f" stroke="#8c959f" stroke-width="0.15"/>
+<rect x="61.143" y="46.134" width="0.9" height="0.9" rx="0.2" fill="#8c959f" stroke="#8c959f" stroke-width="0.15"/>
+<text x="50.973" y="47.184" font-size="1.5" fill="#f0f3f6" text-anchor="end" font-weight="bold">UART</text>
+<rect x="47.623" y="49.085" width="15.24" height="2.54" rx="0.3" fill="#16191d"/>
+<rect x="48.443" y="49.905" width="0.9" height="0.9" rx="0.2" fill="#8c959f" stroke="#8c959f" stroke-width="0.15"/>
+<rect x="50.983" y="49.905" width="0.9" height="0.9" rx="0.2" fill="#8c959f" stroke="#8c959f" stroke-width="0.15"/>
+<rect x="53.523" y="49.905" width="0.9" height="0.9" rx="0.2" fill="#8c959f" stroke="#8c959f" stroke-width="0.15"/>
+<rect x="56.063" y="49.905" width="0.9" height="0.9" rx="0.2" fill="#8c959f" stroke="#8c959f" stroke-width="0.15"/>
+<rect x="58.603" y="49.905" width="0.9" height="0.9" rx="0.2" fill="#8c959f" stroke="#8c959f" stroke-width="0.15"/>
+<rect x="61.143" y="49.905" width="0.9" height="0.9" rx="0.2" fill="#8c959f" stroke="#8c959f" stroke-width="0.15"/>
+<text x="45.893" y="50.955" font-size="1.5" fill="#f0f3f6" text-anchor="end" font-weight="bold">SPI</text>
+<rect x="52.703" y="52.856" width="10.16" height="2.54" rx="0.3" fill="#16191d"/>
+<rect x="53.523" y="53.676" width="0.9" height="0.9" rx="0.2" fill="#8c959f" stroke="#8c959f" stroke-width="0.15"/>
+<rect x="56.063" y="53.676" width="0.9" height="0.9" rx="0.2" fill="#8c959f" stroke="#8c959f" stroke-width="0.15"/>
+<rect x="58.603" y="53.676" width="0.9" height="0.9" rx="0.2" fill="#8c959f" stroke="#8c959f" stroke-width="0.15"/>
+<rect x="61.143" y="53.676" width="0.9" height="0.9" rx="0.2" fill="#8c959f" stroke="#8c959f" stroke-width="0.15"/>
+<text x="50.973" y="54.726" font-size="1.5" fill="#f0f3f6" text-anchor="end" font-weight="bold">I2C</text>
+<path d="M 61.593 55.426 L 61.593 58.84" fill="none" stroke="#d4a72c" stroke-width="0.6" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 59.053 55.426 L 59.053 58.84" fill="none" stroke="#d4a72c" stroke-width="0.6" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 56.513 55.426 L 56.513 58.84" fill="none" stroke="#d4a72c" stroke-width="0.6" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 53.973 55.426 L 53.973 58.84" fill="none" stroke="#d4a72c" stroke-width="0.6" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 51.433 55.426 L 51.433 58.84" fill="none" stroke="#d4a72c" stroke-width="0.6" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 48.893 55.426 L 48.893 58.84" fill="none" stroke="#d4a72c" stroke-width="0.6" stroke-linejoin="round" stroke-linecap="round"/>
+<g class="caption">
+<text x="38.735" y="66.14" font-size="4" fill="#1f2328" text-anchor="middle" font-weight="bold">Studica navX2-MXP</text>
+<text x="38.735" y="70.34" font-size="2.3" fill="#57606a" text-anchor="middle">77.5 × 56.6 mm · top view · plugs onto the roboRIO MXP port</text>
+</g>
+<g id="anchors">
+<circle class="anchor" id="anchor-mxp" data-kind="signal" cx="77.47" cy="28.32" r="1" fill="none"><title>MXP 34-pin (2x17, 0.1 in) socket underneath; plugs onto the roboRIO MXP; 5 V power, SPI/I2C/UART, I/O</title></circle>
+<circle class="anchor" id="anchor-usb" data-kind="usb" cx="15.79" cy="-0.4" r="1" fill="none"><title>USB Mini-B (power, data, firmware; 5 V)</title></circle>
+<circle class="anchor" id="anchor-dio9" data-kind="signal" cx="23.88" cy="0" r="1" fill="none"><title>DIO 9 (3-pin: GND edge, V, signal) = roboRIO DIO 23 / PWM 19</title></circle>
+<circle class="anchor" id="anchor-dio8" data-kind="signal" cx="26.4" cy="0" r="1" fill="none"><title>DIO 8 (3-pin: GND edge, V, signal) = roboRIO DIO 22 / PWM 18</title></circle>
+<circle class="anchor" id="anchor-dio7" data-kind="signal" cx="28.91" cy="0" r="1" fill="none"><title>DIO 7 (3-pin: GND edge, V, signal) = roboRIO DIO 21 / PWM 17</title></circle>
+<circle class="anchor" id="anchor-dio6" data-kind="signal" cx="31.43" cy="0" r="1" fill="none"><title>DIO 6 (3-pin: GND edge, V, signal) = roboRIO DIO 20 / PWM 16</title></circle>
+<circle class="anchor" id="anchor-dio5" data-kind="signal" cx="33.94" cy="0" r="1" fill="none"><title>DIO 5 (3-pin: GND edge, V, signal) = roboRIO DIO 19 / PWM 15</title></circle>
+<circle class="anchor" id="anchor-dio4" data-kind="signal" cx="36.45" cy="0" r="1" fill="none"><title>DIO 4 (3-pin: GND edge, V, signal) = roboRIO DIO 18 / PWM 14</title></circle>
+<circle class="anchor" id="anchor-dio3" data-kind="signal" cx="38.97" cy="0" r="1" fill="none"><title>DIO 3 (3-pin: GND edge, V, signal) = roboRIO DIO 13 / PWM 13</title></circle>
+<circle class="anchor" id="anchor-dio2" data-kind="signal" cx="41.48" cy="0" r="1" fill="none"><title>DIO 2 (3-pin: GND edge, V, signal) = roboRIO DIO 12 / PWM 12</title></circle>
+<circle class="anchor" id="anchor-dio1" data-kind="signal" cx="43.99" cy="0" r="1" fill="none"><title>DIO 1 (3-pin: GND edge, V, signal) = roboRIO DIO 11 / PWM 11</title></circle>
+<circle class="anchor" id="anchor-dio0" data-kind="signal" cx="46.51" cy="0" r="1" fill="none"><title>DIO 0 (3-pin: GND edge, V, signal) = roboRIO DIO 10 / PWM 10</title></circle>
+<circle class="anchor" id="anchor-ai3" data-kind="signal" cx="50.28" cy="0" r="1" fill="none"><title>Analog in 3 (roboRIO AI 7)</title></circle>
+<circle class="anchor" id="anchor-ai2" data-kind="signal" cx="52.79" cy="0" r="1" fill="none"><title>Analog in 2 (roboRIO AI 6)</title></circle>
+<circle class="anchor" id="anchor-ai1" data-kind="signal" cx="55.31" cy="0" r="1" fill="none"><title>Analog in 1 (roboRIO AI 5)</title></circle>
+<circle class="anchor" id="anchor-ai0" data-kind="signal" cx="57.82" cy="0" r="1" fill="none"><title>Analog in 0 (roboRIO AI 4)</title></circle>
+<circle class="anchor" id="anchor-ao1" data-kind="signal" cx="61.59" cy="0" r="1" fill="none"><title>Analog out 1 (roboRIO AO 1)</title></circle>
+<circle class="anchor" id="anchor-ao0" data-kind="signal" cx="64.11" cy="0" r="1" fill="none"><title>Analog out 0 (roboRIO AO 0)</title></circle>
+<circle class="anchor" id="anchor-i2c_ext" data-kind="signal" cx="6.2" cy="41.88" r="1" fill="none"><title>External I2C header VCC/GND/DAT/CLK (0.1 in), for FTC hubs</title></circle>
+<circle class="anchor" id="anchor-uart" data-kind="signal" cx="52.7" cy="46.58" r="1" fill="none"><title>MXP UART breakout (0.1 in right-angle header): TX, RX, +, GND</title></circle>
+<circle class="anchor" id="anchor-spi" data-kind="signal" cx="47.62" cy="50.35" r="1" fill="none"><title>MXP SPI breakout (0.1 in right-angle header): CS, MISO, MOSI, SCK, +, GND</title></circle>
+<circle class="anchor" id="anchor-i2c" data-kind="signal" cx="52.7" cy="54.13" r="1" fill="none"><title>MXP I2C breakout (0.1 in right-angle header): SDA, SCL, +, GND</title></circle>
+</g>
+</svg>

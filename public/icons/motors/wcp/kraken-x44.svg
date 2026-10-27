@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-33.81 -28 67.62 89.4" width="67.62mm" height="89.4mm" font-family="Helvetica, Arial, sans-serif">
+<title>Kraken X44</title>
+<desc>Drawn by FRC Team 2102 Paradox. Public domain: CC0 1.0 (https://creativecommons.org/publicdomain/zero/1.0/). https://docs.team2102.org/icons/</desc>
+<path d="M -15.6 15.6 A 22 22 0 1 1 15.6 15.6 L 5.5 25.4 L -5.5 25.4 Z" fill="#3a3f47" stroke="#1f2328" stroke-width="0.5" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M -9.592 -18.04 L 9.592 -18.04" fill="none" stroke="#4a515b" stroke-width="0.9" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M -12.7111 -15.4 L 12.7111 -15.4" fill="none" stroke="#4a515b" stroke-width="0.9" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M -14.9216 -12.76 L 14.9216 -12.76" fill="none" stroke="#4a515b" stroke-width="0.9" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M -16.5342 -10.12 L 16.5342 -10.12" fill="none" stroke="#4a515b" stroke-width="0.9" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M -17.6894 -7.48 L 17.6894 -7.48" fill="none" stroke="#4a515b" stroke-width="0.9" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M -18.461 -4.84 L 18.461 -4.84" fill="none" stroke="#4a515b" stroke-width="0.9" stroke-linejoin="round" stroke-linecap="round"/>
+<text x="0" y="-1.5" font-size="2.5" fill="#f0f3f6" text-anchor="middle" font-weight="bold">TALON FX</text>
+<rect x="-19.5" y="-1.1" width="1.6" height="5.2" rx="0.4" fill="#f0883e"/>
+<rect x="17.9" y="-1.1" width="1.6" height="5.2" rx="0.4" fill="#f0883e"/>
+<path d="M -11.8 10.1 L -11.8 37.4" fill="none" stroke="#8c959f" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M -11.8 10.1 L -11.8 37.4" fill="none" stroke="#0d1117" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 11.9 10.1 L 11.9 37.4" fill="none" stroke="#8c959f" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 11.9 10.1 L 11.9 37.4" fill="none" stroke="#cf222e" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M -6.3 16.2 L -6.3 37.4" fill="none" stroke="#8c959f" stroke-width="1.2" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M -6.3 16.2 L -6.3 37.4" fill="none" stroke="#e3b341" stroke-width="0.9" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 6.4 16.2 L 6.4 37.4" fill="none" stroke="#8c959f" stroke-width="1.2" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 6.4 16.2 L 6.4 37.4" fill="none" stroke="#2da44e" stroke-width="0.9" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="-11.8" cy="10.1" r="3.4" fill="#0d1117" stroke="#8c959f" stroke-width="0.3"/>
+<text x="-11.8" y="11.2" font-size="3" fill="#f0f3f6" text-anchor="middle" font-weight="bold">−</text>
+<circle cx="11.9" cy="10.1" r="3.4" fill="#cf222e" stroke="#8c959f" stroke-width="0.3"/>
+<text x="11.9" y="11.2" font-size="3" fill="#f0f3f6" text-anchor="middle" font-weight="bold">+</text>
+<circle cx="-6.3" cy="16.2" r="2.6" fill="#e3b341" stroke="#8c959f" stroke-width="0.3"/>
+<text x="-6.3" y="17.3" font-size="2.6" fill="#1f2328" text-anchor="middle" font-weight="bold">H</text>
+<circle cx="6.4" cy="16.2" r="2.6" fill="#2da44e" stroke="#8c959f" stroke-width="0.3"/>
+<text x="6.4" y="17.3" font-size="2.6" fill="#f0f3f6" text-anchor="middle" font-weight="bold">L</text>
+<g class="lead-labels">
+<text x="-11.8" y="41" font-size="2.6" fill="#1f2328" text-anchor="middle" font-weight="bold">−</text>
+<text x="11.9" y="41" font-size="2.6" fill="#1f2328" text-anchor="middle" font-weight="bold">+</text>
+<text x="-6.3" y="41" font-size="2.6" fill="#1f2328" text-anchor="middle" font-weight="bold">H</text>
+<text x="6.4" y="41" font-size="2.6" fill="#1f2328" text-anchor="middle" font-weight="bold">L</text>
+</g>
+<g class="caption">
+<text x="0" y="48.4" font-size="4" fill="#1f2328" text-anchor="middle" font-weight="bold">Kraken X44</text>
+<text x="0" y="52.6" font-size="2.3" fill="#57606a" text-anchor="middle">44.0 × 47.4 mm · back view (Talon FX face) · leads drawn short</text>
+</g>
+<g id="anchors">
+<circle class="anchor" id="anchor-vbat_neg" data-kind="power" cx="-11.8" cy="37.4" r="1" fill="none"><title>V− (black, 10 AWG lead, #6 ring)</title></circle>
+<circle class="anchor" id="anchor-vbat_pos" data-kind="power" cx="11.9" cy="37.4" r="1" fill="none"><title>V+ (red, 10 AWG lead, #6 ring), 40 A PDH channel</title></circle>
+<circle class="anchor" id="anchor-can_h" data-kind="can" cx="-6.3" cy="37.4" r="1" fill="none"><title>CAN H (yellow, #4 ring)</title></circle>
+<circle class="anchor" id="anchor-can_l" data-kind="can" cx="6.4" cy="37.4" r="1" fill="none"><title>CAN L (green, #4 ring)</title></circle>
+<circle class="anchor" id="anchor-can" data-kind="can" cx="0" cy="37.4" r="1" fill="none"><title>CAN pair in/out (H/L terminals take two rings each)</title></circle>
+</g>
+</svg>

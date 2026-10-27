@@ -1,0 +1,191 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-46 -39 92 96" width="92mm" height="96mm" font-family="Helvetica, Arial, sans-serif">
+<title>Lumyn ConnectorX</title>
+<desc>Drawn by FRC Team 2102 Paradox. Public domain: CC0 1.0 (https://creativecommons.org/publicdomain/zero/1.0/). https://docs.team2102.org/icons/</desc>
+<rect x="-41.5" y="-24" width="83" height="48" rx="4" fill="#15181c" stroke="#1f2328" stroke-width="0.5"/>
+<circle cx="-37.5" cy="-20" r="4" fill="#b8bec6"/>
+<circle cx="-37.5" cy="-20" r="1.6" fill="#ffffff" stroke="#1f2328" stroke-width="0.2"/>
+<circle cx="-37.5" cy="20" r="4" fill="#b8bec6"/>
+<circle cx="-37.5" cy="20" r="1.6" fill="#ffffff" stroke="#1f2328" stroke-width="0.2"/>
+<circle cx="37.5" cy="-20" r="4" fill="#b8bec6"/>
+<circle cx="37.5" cy="-20" r="1.6" fill="#ffffff" stroke="#1f2328" stroke-width="0.2"/>
+<circle cx="37.5" cy="20" r="4" fill="#b8bec6"/>
+<circle cx="37.5" cy="20" r="1.6" fill="#ffffff" stroke="#1f2328" stroke-width="0.2"/>
+<rect x="-40.4" y="-4.4" width="4" height="4.2" rx="0.3" fill="#b8bec6"/>
+<rect x="-40.4" y="4.6" width="4" height="4.2" rx="0.3" fill="#b8bec6"/>
+<text x="-38.4" y="-5.2" font-size="1.1" fill="#f0f3f6" text-anchor="middle">GND</text>
+<text x="-38.4" y="10.4" font-size="1.1" fill="#f0f3f6" text-anchor="middle">+5V OUT</text>
+<rect x="-2.55" y="-2.15" width="7" height="7" rx="0.3" fill="#23272d" stroke="#3a3f47" stroke-width="0.2"/>
+<text x="0.95" y="1.75" font-size="1" fill="#aab2bd" text-anchor="middle">RP2</text>
+<rect x="-16.8" y="4.1" width="7.8" height="5.3" rx="0.3" fill="#23272d" stroke="#3a3f47" stroke-width="0.2"/>
+<rect x="17.8" y="7.05" width="6.5" height="7" rx="0.3" fill="#23272d" stroke="#3a3f47" stroke-width="0.2"/>
+<rect x="33.08" y="-11.77" width="4.3" height="4.3" rx="0.3" fill="#23272d" stroke="#3a3f47" stroke-width="0.2"/>
+<text x="35.23" y="-9.22" font-size="1" fill="#aab2bd" text-anchor="middle">2R2</text>
+<rect x="26.31" y="-10.75" width="3" height="3" rx="0.3" fill="#23272d" stroke="#3a3f47" stroke-width="0.2"/>
+<rect x="17.1" y="-0.53" width="4.7" height="2.5" rx="0.3" fill="#23272d" stroke="#3a3f47" stroke-width="0.2"/>
+<rect x="17.1" y="-4.5" width="4.7" height="2.5" rx="0.3" fill="#23272d" stroke="#3a3f47" stroke-width="0.2"/>
+<rect x="19.3" y="-9.3" width="3.2" height="2.5" rx="0.3" fill="#23272d" stroke="#3a3f47" stroke-width="0.2"/>
+<rect x="9.5" y="4.7" width="3.2" height="2.5" rx="0.3" fill="#c9b48a"/>
+<rect x="-5.52" y="-11.1" width="3.2" height="2.8" rx="0.4" fill="#f0f3f6"/>
+<rect x="12.82" y="-22.2" width="1.6" height="1" rx="0.15" fill="#c9b48a"/>
+<rect x="2.43" y="17.2" width="1.6" height="1" rx="0.15" fill="#c9b48a"/>
+<rect x="27.41" y="8.82" width="1.6" height="1" rx="0.15" fill="#c9b48a"/>
+<rect x="12.3" y="-9.38" width="1.6" height="1" rx="0.15" fill="#c9b48a"/>
+<rect x="-0.57" y="-23.27" width="11.94" height="11.5" rx="0.4" fill="#8c959f" stroke="#1f2328" stroke-width="0.25"/>
+<rect x="0.8" y="-21.92" width="9.2" height="4.9" rx="0" fill="#9aa3ad"/>
+<rect x="1.55" y="-14.32" width="0.6" height="1.9" rx="0" fill="#d4a72c"/>
+<rect x="2.65" y="-14.32" width="0.6" height="1.9" rx="0" fill="#d4a72c"/>
+<rect x="3.75" y="-14.32" width="0.6" height="1.9" rx="0" fill="#d4a72c"/>
+<rect x="4.85" y="-14.32" width="0.6" height="1.9" rx="0" fill="#d4a72c"/>
+<rect x="5.95" y="-14.32" width="0.6" height="1.9" rx="0" fill="#d4a72c"/>
+<rect x="7.05" y="-14.32" width="0.6" height="1.9" rx="0" fill="#d4a72c"/>
+<rect x="8.15" y="-14.32" width="0.6" height="1.9" rx="0" fill="#d4a72c"/>
+<rect x="9.25" y="-14.32" width="0.6" height="1.9" rx="0" fill="#d4a72c"/>
+<text x="5.4" y="-16.62" font-size="1.2" fill="#1f2328" text-anchor="middle">microSD</text>
+<rect x="33.1" y="-4.17" width="7.8" height="8.94" rx="1.2" fill="#8c959f" stroke="#1f2328" stroke-width="0.25"/>
+<rect x="36.3" y="-3.1" width="4.5" height="6.8" rx="1" fill="#16191d"/>
+<rect x="36.9" y="-0.2" width="3.9" height="1" rx="0" fill="#59636e"/>
+<text x="31.9" y="0.8" font-size="1.3" fill="#f0f3f6" text-anchor="end" transform="rotate(0 31.9 0.8)">USB-C</text>
+<rect x="32.4" y="7.85" width="8" height="1.6" rx="0" fill="#8c959f"/>
+<rect x="33.4" y="6.9" width="6" height="3.5" rx="0.3" fill="#2b2f35" stroke="#1f2328" stroke-width="0.2"/>
+<rect x="35" y="7.85" width="2.8" height="1.6" rx="0" fill="#23272d"/>
+<text x="31.6" y="9.1" font-size="1.2" fill="#f0f3f6" text-anchor="end">RST</text>
+<rect x="32.4" y="13.1" width="8" height="1.6" rx="0" fill="#8c959f"/>
+<rect x="33.4" y="12.15" width="6" height="3.5" rx="0.3" fill="#2b2f35" stroke="#1f2328" stroke-width="0.2"/>
+<rect x="35" y="13.1" width="2.8" height="1.6" rx="0" fill="#23272d"/>
+<text x="31.6" y="14.35" font-size="1.2" fill="#f0f3f6" text-anchor="end">BOOTSEL</text>
+<rect x="17.97" y="-23.18" width="11.36" height="8.2" rx="0.5" fill="#1f6fd0" stroke="#1f2328" stroke-width="0.3"/>
+<rect x="23.35" y="-22.88" width="0.6" height="7.6" rx="0" fill="#1650a0"/>
+<rect x="19.41" y="-23.18" width="3.4" height="1.3" rx="0" fill="#16191d"/>
+<circle cx="21.11" cy="-17.98" r="2" fill="#cfd6dd" stroke="#1f2328" stroke-width="0.2"/>
+<path d="M 19.81 -17.98 L 22.41 -17.98" fill="none" stroke="#1f2328" stroke-width="0.35" stroke-linejoin="round" stroke-linecap="round"/>
+<rect x="24.49" y="-23.18" width="3.4" height="1.3" rx="0" fill="#16191d"/>
+<circle cx="26.19" cy="-17.98" r="2" fill="#cfd6dd" stroke="#1f2328" stroke-width="0.2"/>
+<path d="M 24.89 -17.98 L 27.49 -17.98" fill="none" stroke="#1f2328" stroke-width="0.35" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 21.11 -23.18 L 21.11 -34.5" fill="none" stroke="#8c959f" stroke-width="1.2" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 21.11 -23.18 L 21.11 -34.5" fill="none" stroke="#cf222e" stroke-width="0.9" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 26.19 -23.18 L 26.19 -34.5" fill="none" stroke="#8c959f" stroke-width="1.2" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 26.19 -23.18 L 26.19 -34.5" fill="none" stroke="#0d1117" stroke-width="0.9" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 21.11 -34.5 L 21.11 -36.5" fill="none" stroke="#c9d1d9" stroke-width="0.7" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 26.19 -34.5 L 26.19 -36.5" fill="none" stroke="#c9d1d9" stroke-width="0.7" stroke-linejoin="round" stroke-linecap="round"/>
+<text x="17.51" y="-18.48" font-size="1.3" fill="#f0f3f6" text-anchor="middle" transform="rotate(-90 17.51 -18.48)">+12V IN</text>
+<text x="29.79" y="-18.48" font-size="1.3" fill="#f0f3f6" text-anchor="middle" transform="rotate(90 29.79 -18.48)">GND</text>
+<rect x="-10.95" y="20.58" width="12" height="9.4" rx="0.6" fill="#eef1f4" stroke="#8c959f" stroke-width="0.25"/>
+<rect x="-8.95" y="21.78" width="8" height="7" rx="0.4" fill="#dfe4ea"/>
+<circle cx="-8.91" cy="16.38" r="0.85" fill="#8c959f" stroke="#1f2328" stroke-width="0.15"/>
+<path d="M -8.91 16.38 L -8.91 20.58" fill="none" stroke="#8c959f" stroke-width="0.7" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="-4.95" cy="16.38" r="0.85" fill="#8c959f" stroke="#1f2328" stroke-width="0.15"/>
+<path d="M -4.95 16.38 L -4.95 20.58" fill="none" stroke="#8c959f" stroke-width="0.7" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="-0.99" cy="16.38" r="0.85" fill="#8c959f" stroke="#1f2328" stroke-width="0.15"/>
+<path d="M -0.99 16.38 L -0.99 20.58" fill="none" stroke="#8c959f" stroke-width="0.7" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M -8.91 29.98 L -8.91 38.98" fill="none" stroke="#8c959f" stroke-width="1.2" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M -8.91 29.98 L -8.91 38.98" fill="none" stroke="#f0f3f6" stroke-width="0.9" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M -4.95 29.98 L -4.95 38.98" fill="none" stroke="#8c959f" stroke-width="1.2" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M -4.95 29.98 L -4.95 38.98" fill="none" stroke="#2da44e" stroke-width="0.9" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M -0.99 29.98 L -0.99 38.98" fill="none" stroke="#8c959f" stroke-width="1.2" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M -0.99 29.98 L -0.99 38.98" fill="none" stroke="#cf222e" stroke-width="0.9" stroke-linejoin="round" stroke-linecap="round"/>
+<g class="lead-labels">
+<text x="-4.95" y="43.38" font-size="1.9" fill="#1f2328" text-anchor="middle" font-weight="bold">CHAN 1</text>
+</g>
+<text x="-8.91" y="13.48" font-size="1.1" fill="#f0f3f6" text-anchor="middle">GND</text>
+<text x="-4.95" y="13.48" font-size="1.1" fill="#f0f3f6" text-anchor="middle">DATA</text>
+<text x="-0.99" y="13.48" font-size="1.1" fill="#f0f3f6" text-anchor="middle">5V</text>
+<text x="-4.95" y="11" font-size="1.3" fill="#f0f3f6" text-anchor="middle">CHAN 1</text>
+<rect x="-31.83" y="19.65" width="10.16" height="2.54" rx="0.2" fill="#16191d" stroke="#1f2328" stroke-width="0.15"/>
+<rect x="-30.96" y="20.52" width="0.8" height="0.8" rx="0" fill="#d4a72c"/>
+<rect x="-28.42" y="20.52" width="0.8" height="0.8" rx="0" fill="#d4a72c"/>
+<rect x="-25.88" y="20.52" width="0.8" height="0.8" rx="0" fill="#d4a72c"/>
+<rect x="-23.34" y="20.52" width="0.8" height="0.8" rx="0" fill="#d4a72c"/>
+<text x="-30.56" y="18.9" font-size="1" fill="#f0f3f6" text-anchor="middle">GND</text>
+<text x="-28.02" y="18.9" font-size="1" fill="#f0f3f6" text-anchor="middle">RX</text>
+<text x="-25.48" y="18.9" font-size="1" fill="#f0f3f6" text-anchor="middle">TX</text>
+<text x="-22.94" y="18.9" font-size="1" fill="#f0f3f6" text-anchor="middle">3.3V</text>
+<text x="-26.75" y="17.6" font-size="1.2" fill="#f0f3f6" text-anchor="middle" font-weight="bold">UART</text>
+<rect x="10.03" y="20.05" width="15.24" height="2.54" rx="0.2" fill="#16191d" stroke="#1f2328" stroke-width="0.15"/>
+<rect x="10.9" y="20.92" width="0.8" height="0.8" rx="0" fill="#d4a72c"/>
+<rect x="13.44" y="20.92" width="0.8" height="0.8" rx="0" fill="#d4a72c"/>
+<rect x="15.98" y="20.92" width="0.8" height="0.8" rx="0" fill="#d4a72c"/>
+<rect x="18.52" y="20.92" width="0.8" height="0.8" rx="0" fill="#d4a72c"/>
+<rect x="21.06" y="20.92" width="0.8" height="0.8" rx="0" fill="#d4a72c"/>
+<rect x="23.6" y="20.92" width="0.8" height="0.8" rx="0" fill="#d4a72c"/>
+<text x="11.3" y="19.2" font-size="1" fill="#f0f3f6" text-anchor="middle">3.3V</text>
+<text x="13.84" y="19.2" font-size="1" fill="#f0f3f6" text-anchor="middle">COPI</text>
+<text x="16.38" y="19.2" font-size="1" fill="#f0f3f6" text-anchor="middle">CIPO</text>
+<text x="18.92" y="19.2" font-size="1" fill="#f0f3f6" text-anchor="middle">SCK</text>
+<text x="21.46" y="19.2" font-size="1" fill="#f0f3f6" text-anchor="middle">CS0</text>
+<text x="24" y="19.2" font-size="1" fill="#f0f3f6" text-anchor="middle">GND</text>
+<text x="27.4" y="21.8" font-size="1.2" fill="#f0f3f6" text-anchor="middle" font-weight="bold">SPI</text>
+<rect x="-23.76" y="-16.7" width="10.16" height="2.54" rx="0.2" fill="#16191d" stroke="#1f2328" stroke-width="0.15"/>
+<rect x="-22.89" y="-15.83" width="0.8" height="0.8" rx="0" fill="#d4a72c"/>
+<rect x="-20.35" y="-15.83" width="0.8" height="0.8" rx="0" fill="#d4a72c"/>
+<rect x="-17.81" y="-15.83" width="0.8" height="0.8" rx="0" fill="#d4a72c"/>
+<rect x="-15.27" y="-15.83" width="0.8" height="0.8" rx="0" fill="#d4a72c"/>
+<text x="-22.49" y="-12.9" font-size="1" fill="#f0f3f6" text-anchor="middle">GND</text>
+<text x="-19.95" y="-12.9" font-size="1" fill="#f0f3f6" text-anchor="middle">3.3V</text>
+<text x="-17.41" y="-12.9" font-size="1" fill="#f0f3f6" text-anchor="middle">SDA</text>
+<text x="-14.87" y="-12.9" font-size="1" fill="#f0f3f6" text-anchor="middle">SCL</text>
+<text x="-18.68" y="-11.5" font-size="1.2" fill="#f0f3f6" text-anchor="middle" font-weight="bold">I2C</text>
+<rect x="-25.98" y="-7.4" width="10.16" height="2.54" rx="0.2" fill="#16191d" stroke="#1f2328" stroke-width="0.15"/>
+<rect x="-25.41" y="-6.83" width="1.4" height="1.4" rx="0" fill="#000000"/>
+<rect x="-22.87" y="-6.83" width="1.4" height="1.4" rx="0" fill="#000000"/>
+<rect x="-20.33" y="-6.83" width="1.4" height="1.4" rx="0" fill="#000000"/>
+<rect x="-17.79" y="-6.83" width="1.4" height="1.4" rx="0" fill="#000000"/>
+<text x="-24.71" y="-3.9" font-size="1" fill="#f0f3f6" text-anchor="middle">GND</text>
+<text x="-22.17" y="-3.9" font-size="1" fill="#f0f3f6" text-anchor="middle">3.3V</text>
+<text x="-19.63" y="-3.9" font-size="1" fill="#f0f3f6" text-anchor="middle">SCL</text>
+<text x="-17.09" y="-3.9" font-size="1" fill="#f0f3f6" text-anchor="middle">SDA</text>
+<text x="-20.9" y="-8.7" font-size="1.2" fill="#f0f3f6" text-anchor="middle" font-weight="bold">SCREEN</text>
+<rect x="-32.07" y="-21.76" width="2.54" height="7.62" rx="0.2" fill="#16191d" stroke="#1f2328" stroke-width="0.15"/>
+<rect x="-31.2" y="-20.89" width="0.8" height="0.8" rx="0" fill="#d4a72c"/>
+<rect x="-31.2" y="-18.35" width="0.8" height="0.8" rx="0" fill="#d4a72c"/>
+<rect x="-31.2" y="-15.81" width="0.8" height="0.8" rx="0" fill="#d4a72c"/>
+<text x="-30.8" y="-23" font-size="1.1" fill="#f0f3f6" text-anchor="middle" font-weight="bold">DIO0</text>
+<rect x="-27.82" y="-21.76" width="2.54" height="7.62" rx="0.2" fill="#16191d" stroke="#1f2328" stroke-width="0.15"/>
+<rect x="-26.95" y="-20.89" width="0.8" height="0.8" rx="0" fill="#d4a72c"/>
+<rect x="-26.95" y="-18.35" width="0.8" height="0.8" rx="0" fill="#d4a72c"/>
+<rect x="-26.95" y="-15.81" width="0.8" height="0.8" rx="0" fill="#d4a72c"/>
+<text x="-26.55" y="-23" font-size="1.1" fill="#f0f3f6" text-anchor="middle" font-weight="bold">DIO1</text>
+<rect x="-11.97" y="-21.76" width="2.54" height="7.62" rx="0.2" fill="#16191d" stroke="#1f2328" stroke-width="0.15"/>
+<rect x="-11.1" y="-20.89" width="0.8" height="0.8" rx="0" fill="#d4a72c"/>
+<rect x="-11.1" y="-18.35" width="0.8" height="0.8" rx="0" fill="#d4a72c"/>
+<rect x="-11.1" y="-15.81" width="0.8" height="0.8" rx="0" fill="#d4a72c"/>
+<text x="-10.7" y="-23" font-size="1.1" fill="#f0f3f6" text-anchor="middle" font-weight="bold">AIO0</text>
+<rect x="-7.9" y="-21.76" width="2.54" height="7.62" rx="0.2" fill="#16191d" stroke="#1f2328" stroke-width="0.15"/>
+<rect x="-7.03" y="-20.89" width="0.8" height="0.8" rx="0" fill="#d4a72c"/>
+<rect x="-7.03" y="-18.35" width="0.8" height="0.8" rx="0" fill="#d4a72c"/>
+<rect x="-7.03" y="-15.81" width="0.8" height="0.8" rx="0" fill="#d4a72c"/>
+<text x="-6.63" y="-23" font-size="1.1" fill="#f0f3f6" text-anchor="middle" font-weight="bold">AIO1</text>
+<rect x="-21.93" y="-23.5" width="6.5" height="3.8" rx="0.3" fill="#e6c9a8" stroke="#8c959f" stroke-width="0.2"/>
+<rect x="-21.18" y="-23.1" width="5" height="2" rx="0" fill="#cfae88"/>
+<rect x="-20.38" y="-19.7" width="0.4" height="0.8" rx="0" fill="#d4a72c"/>
+<rect x="-19.38" y="-19.7" width="0.4" height="0.8" rx="0" fill="#d4a72c"/>
+<rect x="-18.38" y="-19.7" width="0.4" height="0.8" rx="0" fill="#d4a72c"/>
+<rect x="-17.38" y="-19.7" width="0.4" height="0.8" rx="0" fill="#d4a72c"/>
+<rect x="-19.54" y="19.7" width="6.5" height="3.8" rx="0.3" fill="#e6c9a8" stroke="#8c959f" stroke-width="0.2"/>
+<rect x="-18.79" y="21.1" width="5" height="2" rx="0" fill="#cfae88"/>
+<rect x="-17.99" y="18.9" width="0.4" height="0.8" rx="0" fill="#d4a72c"/>
+<rect x="-16.99" y="18.9" width="0.4" height="0.8" rx="0" fill="#d4a72c"/>
+<rect x="-15.99" y="18.9" width="0.4" height="0.8" rx="0" fill="#d4a72c"/>
+<rect x="-14.99" y="18.9" width="0.4" height="0.8" rx="0" fill="#d4a72c"/>
+<text x="-23.6" y="-21.3" font-size="1" fill="#f0f3f6" text-anchor="middle">I2C</text>
+<text x="-21.6" y="22" font-size="1" fill="#f0f3f6" text-anchor="middle">I2C</text>
+<text x="-32.7" y="2.6" font-size="3.2" fill="#f0f3f6" text-anchor="middle" transform="rotate(90 -32.7 2.6)">ConnectorX</text>
+<g class="caption">
+<text x="0" y="51" font-size="4" fill="#1f2328" text-anchor="middle" font-weight="bold">Lumyn ConnectorX</text>
+<text x="0" y="55.2" font-size="2.3" fill="#57606a" text-anchor="middle">83 × 48 mm · top view · with headers · leads drawn short</text>
+</g>
+<g id="anchors">
+<circle class="anchor" id="anchor-usb" data-kind="usb" cx="41.5" cy="0.3" r="1" fill="none"><title>USB-C: Lumyn Studio, firmware and host link (data cable; logic power only)</title></circle>
+<circle class="anchor" id="anchor-pwr_in" data-kind="power" cx="23.65" cy="-36.5" r="1" fill="none"><title>+12V IN screw terminal: robot 12 V (red +, black GND) from a fused PDH or PDP channel; no fuse or reverse-polarity protection on the board</title></circle>
+<circle class="anchor" id="anchor-led_chan1" data-kind="signal" cx="-4.95" cy="38.98" r="1" fill="none"><title>CHAN 1: 3-pin JST VH 3.96 mm, GND / DATA / 5V, WS2812B strip (5 V, 320 LEDs max)</title></circle>
+<circle class="anchor" id="anchor-uart" data-kind="signal" cx="-26.75" cy="22.4" r="1" fill="none"><title>UART header: 3.3V, TX, RX, GND from pin 1 (3.3 V logic, UART module or host link)</title></circle>
+<circle class="anchor" id="anchor-spi" data-kind="signal" cx="17.65" cy="22.8" r="1" fill="none"><title>SPI header: GND, CS0, SCK, CIPO, COPI, 3.3V from pin 1 (3.3 V logic, SPI modules)</title></circle>
+<circle class="anchor" id="anchor-i2c_header" data-kind="signal" cx="-18.68" cy="-16.9" r="1" fill="none"><title>I2C header: SCL, SDA, 3.3V, GND from pin 1 (shares one I2C bus with the Qwiic ports and SCREEN)</title></circle>
+<circle class="anchor" id="anchor-screen" data-kind="signal" cx="-20.9" cy="-7.5" r="1" fill="none"><title>SCREEN socket: GND, 3.3V, SCL, SDA from pin 1 (I2C display)</title></circle>
+<circle class="anchor" id="anchor-dio0" data-kind="signal" cx="-30.8" cy="-21.9" r="1" fill="none"><title>DIO0 header: 3.3V, PIN, GND from pin 1 (digital input module)</title></circle>
+<circle class="anchor" id="anchor-dio1" data-kind="signal" cx="-26.55" cy="-21.9" r="1" fill="none"><title>DIO1 header: 3.3V, PIN, GND from pin 1 (digital input module)</title></circle>
+<circle class="anchor" id="anchor-aio0" data-kind="signal" cx="-10.7" cy="-21.9" r="1" fill="none"><title>AIO0 header: 3.3V, PIN, GND from pin 1 (analog input module)</title></circle>
+<circle class="anchor" id="anchor-aio1" data-kind="signal" cx="-6.63" cy="-21.9" r="1" fill="none"><title>AIO1 header: 3.3V, PIN, GND from pin 1 (analog input module)</title></circle>
+<circle class="anchor" id="anchor-qwiic_a" data-kind="signal" cx="-18.68" cy="-23.6" r="1" fill="none"><title>Qwiic port A: JST SH 4-pin, GND, 3.3V, SDA, SCL from pin 1 (I2C module)</title></circle>
+<circle class="anchor" id="anchor-qwiic_b" data-kind="signal" cx="-16.29" cy="23.6" r="1" fill="none"><title>Qwiic port B: JST SH 4-pin, GND, 3.3V, SDA, SCL from pin 1 (I2C module)</title></circle>
+</g>
+</svg>

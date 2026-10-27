@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-31 -36 62 134.46" width="62mm" height="134.46mm" font-family="Helvetica, Arial, sans-serif">
+<title>Thrifty Through Bore Encoder</title>
+<desc>Drawn by FRC Team 2102 Paradox. Public domain: CC0 1.0 (https://creativecommons.org/publicdomain/zero/1.0/). https://docs.team2102.org/icons/</desc>
+<path d="M -12.70 -29.30 Q -12.70 -31.50 -10.50 -31.50 L 10.50 -31.50 Q 12.70 -31.50 12.70 -29.30 L 12.70 -8.20 Q 12.70 -6.00 13.32 -3.89 L 13.35 -3.81 Q 13.97 -1.70 13.97 0.50 L 13.97 22.70 Q 13.97 24.90 13.34 26.65 L 13.34 26.65 Q 12.70 28.40 12.70 30.60 L 12.70 42.56 Q 12.70 44.76 10.50 44.76 L -10.50 44.76 Q -12.70 44.76 -12.70 42.56 L -12.70 30.60 Q -12.70 28.40 -13.34 26.65 L -13.34 26.65 Q -13.97 24.90 -13.97 22.70 L -13.97 0.50 Q -13.97 -1.70 -13.35 -3.81 L -13.32 -3.89 Q -12.70 -6.00 -12.70 -8.20 Z" fill="#24282e" stroke="#1f2328" stroke-width="0.6" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M -12.70 -29.30 Q -12.70 -31.50 -10.50 -31.50 L 10.50 -31.50 Q 12.70 -31.50 12.70 -29.30 L 12.70 -8.20 Q 12.70 -6.00 13.32 -3.89 L 13.35 -3.81 Q 13.97 -1.70 13.97 0.50 L 13.97 22.70 Q 13.97 24.90 13.34 26.65 L 13.34 26.65 Q 12.70 28.40 12.70 30.60 L 12.70 42.56 Q 12.70 44.76 10.50 44.76 L -10.50 44.76 Q -12.70 44.76 -12.70 42.56 L -12.70 30.60 Q -12.70 28.40 -13.34 26.65 L -13.34 26.65 Q -13.97 24.90 -13.97 22.70 L -13.97 0.50 Q -13.97 -1.70 -13.35 -3.81 L -13.32 -3.89 Q -12.70 -6.00 -12.70 -8.20 Z" fill="none" stroke="#3a3f47" stroke-width="0.25" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 5.56 -25.40 L 2.78 -20.58 L -2.78 -20.58 L -5.56 -25.40 L -2.78 -30.22 L 2.78 -30.22 Z" fill="#101214" stroke="#59636e" stroke-width="0.3" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="0" cy="-25.4" r="2.55" fill="#ffffff" stroke="#59636e" stroke-width="0.3"/>
+<circle cx="0" cy="-17.46" r="2.55" fill="#ffffff" stroke="#59636e" stroke-width="0.3"/>
+<circle cx="0" cy="0" r="11.5" fill="#8c959f" stroke="#1f2328" stroke-width="0.4"/>
+<circle cx="0" cy="0" r="10.1" fill="#16191d" stroke="#59636e" stroke-width="0.3"/>
+<path d="M 6.35 3.66 L 0.00 7.33 L -6.35 3.66 L -6.35 -3.67 L -0.00 -7.33 L 6.35 -3.67 Z" fill="#ffffff" stroke="#59636e" stroke-width="0.3" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 6.35 3.66 L 0.00 7.33 L -6.35 3.66 L -6.35 -3.67 L -0.00 -7.33 L 6.35 -3.67 Z" fill="#2b3036" stroke="none" stroke-width="0" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="10.9" cy="-5.9" r="0.8" fill="#101214"/>
+<circle cx="11.2" cy="-2.3" r="0.8" fill="#101214"/>
+<circle cx="9.8" cy="-11.5" r="1.9" fill="#101214" stroke="#59636e" stroke-width="0.25"/>
+<circle cx="9.8" cy="-11.5" r="1.1" fill="#8c959f" stroke="#1f2328" stroke-width="0.2"/>
+<path d="M 9.2 -11.5 L 10.4 -11.5 M 9.8 -12.1 L 9.8 -10.9" fill="none" stroke="#1f2328" stroke-width="0.25" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="-9.8" cy="-11.5" r="1.9" fill="#101214" stroke="#59636e" stroke-width="0.25"/>
+<circle cx="-9.8" cy="-11.5" r="1.1" fill="#8c959f" stroke="#1f2328" stroke-width="0.2"/>
+<path d="M -10.4 -11.5 L -9.2 -11.5 M -9.8 -12.1 L -9.8 -10.9" fill="none" stroke="#1f2328" stroke-width="0.25" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="9.8" cy="41.7" r="1.9" fill="#101214" stroke="#59636e" stroke-width="0.25"/>
+<circle cx="9.8" cy="41.7" r="1.1" fill="#8c959f" stroke="#1f2328" stroke-width="0.2"/>
+<path d="M 9.2 41.7 L 10.4 41.7 M 9.8 41.1 L 9.8 42.3" fill="none" stroke="#1f2328" stroke-width="0.25" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="-9.8" cy="41.7" r="1.9" fill="#101214" stroke="#59636e" stroke-width="0.25"/>
+<circle cx="-9.8" cy="41.7" r="1.1" fill="#8c959f" stroke="#1f2328" stroke-width="0.2"/>
+<path d="M -10.4 41.7 L -9.2 41.7 M -9.8 41.1 L -9.8 42.3" fill="none" stroke="#1f2328" stroke-width="0.25" stroke-linejoin="round" stroke-linecap="round"/>
+<rect x="-7.1" y="29.1" width="14.2" height="15.66" rx="0.6" fill="#101214"/>
+<rect x="-6.4" y="33" width="12.8" height="11.76" rx="0.4" fill="#1c2025" stroke="#59636e" stroke-width="0.25"/>
+<path d="M 3.81 36 L 3.81 44.36" fill="none" stroke="#d4a72c" stroke-width="0.7" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 1.27 36 L 1.27 44.36" fill="none" stroke="#d4a72c" stroke-width="0.7" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M -1.27 36 L -1.27 44.36" fill="none" stroke="#d4a72c" stroke-width="0.7" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M -3.81 36 L -3.81 44.36" fill="none" stroke="#d4a72c" stroke-width="0.7" stroke-linejoin="round" stroke-linecap="round"/>
+<text transform="translate(3.81 26.6) rotate(90)" font-size="1.7" fill="#f85149" text-anchor="end" dominant-baseline="central" font-weight="bold">V+</text>
+<text transform="translate(1.27 26.6) rotate(90)" font-size="1.7" fill="#f6f8fa" text-anchor="end" dominant-baseline="central" font-weight="bold">GND</text>
+<text transform="translate(-1.27 26.6) rotate(90)" font-size="1.7" fill="#f2cc3c" text-anchor="end" dominant-baseline="central" font-weight="bold">CANH</text>
+<text transform="translate(-3.81 26.6) rotate(90)" font-size="1.7" fill="#3fb950" text-anchor="end" dominant-baseline="central" font-weight="bold">CANL</text>
+<path d="M 3.81 44.76 L 3.81 50.76 L 19.9 58.76 L 19.9 68.76" fill="none" stroke="#8c959f" stroke-width="1.2" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 3.81 44.76 L 3.81 50.76 L 19.9 58.76 L 19.9 68.76" fill="none" stroke="#cf222e" stroke-width="0.9" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 1.27 44.76 L 1.27 50.76 L 18.1 58.76 L 18.1 68.76" fill="none" stroke="#8c959f" stroke-width="1.2" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 1.27 44.76 L 1.27 50.76 L 18.1 58.76 L 18.1 68.76" fill="none" stroke="#0d1117" stroke-width="0.9" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M -1.27 44.76 L -1.27 48.76" fill="none" stroke="#8c959f" stroke-width="1.2" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M -1.27 44.76 L -1.27 48.76" fill="none" stroke="#e3b341" stroke-width="0.9" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M -3.81 44.76 L -3.81 48.76" fill="none" stroke="#8c959f" stroke-width="1.2" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M -3.81 44.76 L -3.81 48.76" fill="none" stroke="#2da44e" stroke-width="0.9" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M -3.3 51.26 L -3.3 53.76 L -18.1 62.76 L -18.1 68.76" fill="none" stroke="#8c959f" stroke-width="1.2" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M -3.3 51.26 L -3.3 53.76 L -18.1 62.76 L -18.1 68.76" fill="none" stroke="#e3b341" stroke-width="0.9" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M -4.9 51.26 L -4.9 53.76 L -19.9 62.76 L -19.9 68.76" fill="none" stroke="#8c959f" stroke-width="1.2" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M -4.9 51.26 L -4.9 53.76 L -19.9 62.76 L -19.9 68.76" fill="none" stroke="#2da44e" stroke-width="0.9" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M -0.2 51.26 L -0.2 53.76 L -6.1 62.76 L -6.1 68.76" fill="none" stroke="#8c959f" stroke-width="1.2" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M -0.2 51.26 L -0.2 53.76 L -6.1 62.76 L -6.1 68.76" fill="none" stroke="#e3b341" stroke-width="0.9" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M -1.8 51.26 L -1.8 53.76 L -7.9 62.76 L -7.9 68.76" fill="none" stroke="#8c959f" stroke-width="1.2" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M -1.8 51.26 L -1.8 53.76 L -7.9 62.76 L -7.9 68.76" fill="none" stroke="#2da44e" stroke-width="0.9" stroke-linejoin="round" stroke-linecap="round"/>
+<rect x="-6.3" y="47.76" width="6.6" height="4.5" rx="0.8" fill="#2b2f35" stroke="#8c959f" stroke-width="0.2"/>
+<rect x="15.56" y="68.76" width="6.88" height="5" rx="0.4" fill="#16191d" stroke="#8c959f" stroke-width="0.2"/>
+<rect x="17.13" y="71.36" width="1.2" height="1.4" rx="0" fill="#59636e"/>
+<rect x="19.67" y="71.36" width="1.2" height="1.4" rx="0" fill="#59636e"/>
+<rect x="-22.44" y="68.76" width="6.88" height="5" rx="0.4" fill="#16191d" stroke="#8c959f" stroke-width="0.2"/>
+<rect x="-20.87" y="71.36" width="1.2" height="1.4" rx="0" fill="#59636e"/>
+<rect x="-18.33" y="71.36" width="1.2" height="1.4" rx="0" fill="#59636e"/>
+<rect x="-10.44" y="68.76" width="6.88" height="5" rx="0.4" fill="#16191d" stroke="#8c959f" stroke-width="0.2"/>
+<rect x="-8.87" y="71.36" width="1.2" height="1.4" rx="0" fill="#59636e"/>
+<rect x="-6.33" y="71.36" width="1.2" height="1.4" rx="0" fill="#59636e"/>
+<g class="lead-labels">
+<text x="19" y="78.16" font-size="2.2" fill="#1f2328" text-anchor="middle" font-weight="bold">PWR</text>
+<text x="-19" y="78.16" font-size="2.2" fill="#1f2328" text-anchor="middle" font-weight="bold">CAN A</text>
+<text x="-7" y="78.16" font-size="2.2" fill="#1f2328" text-anchor="middle" font-weight="bold">CAN B</text>
+<text x="0" y="82.96" font-size="2" fill="#1f2328" text-anchor="middle">Molex SL</text>
+</g>
+<g class="caption">
+<text x="0" y="92.76" font-size="4" fill="#1f2328" text-anchor="middle" font-weight="bold">Thrifty Through Bore Encoder</text>
+<text x="0" y="96.96" font-size="2.3" fill="#57606a" text-anchor="middle">76.2 × 27.9 mm · top view · harness drawn short</text>
+</g>
+<g id="anchors">
+<circle class="anchor" id="anchor-pwr" data-kind="power" cx="19" cy="73.76" r="1" fill="none"><title>Molex SL: red V+ / black GND (5-32 V; 12 V nominal), harness end</title></circle>
+<circle class="anchor" id="anchor-can_a" data-kind="can" cx="-19" cy="73.76" r="1" fill="none"><title>Molex SL CAN connector A: yellow H / green L, harness end (CAN 1 Mbps or CAN FD)</title></circle>
+<circle class="anchor" id="anchor-can_b" data-kind="can" cx="-7" cy="73.76" r="1" fill="none"><title>Molex SL CAN connector B: yellow H / green L, harness end (CAN 1 Mbps or CAN FD)</title></circle>
+</g>
+</svg>

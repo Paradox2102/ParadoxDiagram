@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-8 -7 82 45" width="82mm" height="45mm" font-family="Helvetica, Arial, sans-serif">
+<title>Redux Zinc-V+</title>
+<desc>Drawn by FRC Team 2102 Paradox. Public domain: CC0 1.0 (https://creativecommons.org/publicdomain/zero/1.0/). https://docs.team2102.org/icons/</desc>
+<rect x="0" y="0" width="65.5" height="22.6" rx="1.5" fill="#3a3f47" stroke="#1f2328" stroke-width="0.5"/>
+<circle cx="18.8" cy="11.3" r="2.55" fill="#ffffff" stroke="#1f2328" stroke-width="0.3"/>
+<circle cx="44.2" cy="11.3" r="2.55" fill="#ffffff" stroke="#1f2328" stroke-width="0.3"/>
+<text x="31.5" y="12.2" font-size="3.4" fill="#f0f3f6" text-anchor="middle" font-weight="bold">ZINC-V+</text>
+<text x="31.5" y="15.8" font-size="1.8" fill="#aab2bd" text-anchor="middle">5.2 V · 4 A</text>
+<rect x="-1.8" y="4.5" width="6.8" height="13.6" rx="0.6" fill="#d0d7de"/>
+<rect x="-0.1" y="4.9" width="2.6" height="2.6" rx="0.2" fill="#cf222e" stroke="#8c959f" stroke-width="0.15"/>
+<rect x="-0.1" y="8.3" width="2.6" height="2.6" rx="0.2" fill="#cf222e" stroke="#8c959f" stroke-width="0.15"/>
+<rect x="-0.1" y="11.7" width="2.6" height="2.6" rx="0.2" fill="#0d1117" stroke="#8c959f" stroke-width="0.15"/>
+<rect x="-0.1" y="15.1" width="2.6" height="2.6" rx="0.2" fill="#0d1117" stroke="#8c959f" stroke-width="0.15"/>
+<text x="6.2" y="8.6" font-size="1.7" fill="#f0f3f6" text-anchor="start">VIN</text>
+<text x="6.2" y="15.4" font-size="1.7" fill="#f0f3f6" text-anchor="start">GND</text>
+<text x="1.6" y="-1.8" font-size="1.9" fill="#1f2328" text-anchor="start">INPUT 5.3–16 V</text>
+<rect x="61.8" y="6.8" width="4.4" height="9" rx="1.6" fill="#16191d"/>
+<rect x="63.4" y="8.4" width="1.2" height="5.8" rx="0.6" fill="#59636e"/>
+<text x="64" y="-1.8" font-size="1.9" fill="#1f2328" text-anchor="end">OUTPUT USB-C</text>
+<g class="caption">
+<text x="32.75" y="31.1" font-size="4" fill="#1f2328" text-anchor="middle" font-weight="bold">Redux Zinc-V+</text>
+<text x="32.75" y="35.3" font-size="2.3" fill="#57606a" text-anchor="middle">65.5 × 22.6 mm · top view</text>
+</g>
+<g id="anchors">
+<circle class="anchor" id="anchor-vin_1" data-kind="power" cx="-1.8" cy="6.2" r="1" fill="none"><title>VIN input (16–24 AWG, from the PDH)</title></circle>
+<circle class="anchor" id="anchor-vin_2" data-kind="power" cx="-1.8" cy="9.6" r="1" fill="none"><title>VIN (daisy-chain out, 10 A max)</title></circle>
+<circle class="anchor" id="anchor-gnd_1" data-kind="power" cx="-1.8" cy="13" r="1" fill="none"><title>GND input</title></circle>
+<circle class="anchor" id="anchor-gnd_2" data-kind="power" cx="-1.8" cy="16.4" r="1" fill="none"><title>GND (daisy-chain out)</title></circle>
+<circle class="anchor" id="anchor-usb_c_out" data-kind="power" cx="66.2" cy="11.3" r="1" fill="none"><title>USB-C output 5.2 V, 4 A (to Orange Pi PWR IN)</title></circle>
+</g>
+</svg>

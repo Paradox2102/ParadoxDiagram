@@ -1,0 +1,107 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-8 -6 66 113" width="66mm" height="113mm" font-family="Helvetica, Arial, sans-serif">
+<title>REV Mini Power Module</title>
+<desc>Drawn by FRC Team 2102 Paradox. Public domain: CC0 1.0 (https://creativecommons.org/publicdomain/zero/1.0/). https://docs.team2102.org/icons/</desc>
+<rect x="0" y="1.8" width="47.6" height="84.3" rx="4" fill="#3a3f47" stroke="#1f2328" stroke-width="0.5"/>
+<rect x="9.5" y="0" width="27.9" height="12" rx="2" fill="#2b3036" stroke="#1f2328" stroke-width="0.3"/>
+<text x="23.45" y="8.4" font-size="2.1" fill="#f0f3f6" text-anchor="middle" font-weight="bold">MINI POWER MODULE</text>
+<circle cx="4.75" cy="5.4" r="2.5" fill="#ffffff" stroke="#1f2328" stroke-width="0.3"/>
+<circle cx="42.85" cy="5.4" r="2.5" fill="#ffffff" stroke="#1f2328" stroke-width="0.3"/>
+<circle cx="4.75" cy="81.6" r="2.5" fill="#ffffff" stroke="#1f2328" stroke-width="0.3"/>
+<circle cx="42.85" cy="81.6" r="2.5" fill="#ffffff" stroke="#1f2328" stroke-width="0.3"/>
+<rect x="8" y="50.87" width="14" height="5" rx="0.4" fill="#16191d" stroke="#8c959f" stroke-width="0.15"/>
+<rect x="11.08" y="52.47" width="2.24" height="1.8" rx="0.2" fill="#59636e"/>
+<rect x="16.68" y="52.47" width="2.24" height="1.8" rx="0.2" fill="#59636e"/>
+<rect x="21.6" y="51.37" width="10.8" height="4" rx="0.6" fill="#d0d7de"/>
+<text x="29" y="54.27" font-size="2.6" fill="#1f2328" text-anchor="middle" font-weight="bold">0</text>
+<circle cx="30.9" cy="53.37" r="0.9" fill="#57606a"/>
+<rect x="33.4" y="49.6" width="15.5" height="3.77" rx="0.5" fill="#cf222e" stroke="#8c959f" stroke-width="0.2"/>
+<rect x="38.2" y="50.2786" width="10.7" height="2.4128" rx="0.754" fill="#f0883e"/>
+<text x="35" y="52.349" font-size="2.4" fill="#f0f3f6" text-anchor="middle" font-weight="bold">+</text>
+<rect x="33.4" y="53.37" width="15.5" height="3.77" rx="0.5" fill="#0d1117" stroke="#8c959f" stroke-width="0.2"/>
+<rect x="38.2" y="54.0486" width="10.7" height="2.4128" rx="0.754" fill="#f0883e"/>
+<text x="35" y="56.119" font-size="2.4" fill="#f0f3f6" text-anchor="middle" font-weight="bold">−</text>
+<rect x="13" y="43.33" width="14" height="5" rx="0.4" fill="#16191d" stroke="#8c959f" stroke-width="0.15"/>
+<rect x="16.08" y="44.93" width="2.24" height="1.8" rx="0.2" fill="#59636e"/>
+<rect x="21.68" y="44.93" width="2.24" height="1.8" rx="0.2" fill="#59636e"/>
+<rect x="27.4" y="43.83" width="5" height="4" rx="0.6" fill="#d0d7de"/>
+<text x="29" y="46.73" font-size="2.6" fill="#1f2328" text-anchor="middle" font-weight="bold">1</text>
+<circle cx="30.9" cy="45.83" r="0.9" fill="#57606a"/>
+<rect x="33.4" y="42.06" width="15.5" height="3.77" rx="0.5" fill="#cf222e" stroke="#8c959f" stroke-width="0.2"/>
+<rect x="38.2" y="42.7386" width="10.7" height="2.4128" rx="0.754" fill="#f0883e"/>
+<text x="35" y="44.809" font-size="2.4" fill="#f0f3f6" text-anchor="middle" font-weight="bold">+</text>
+<rect x="33.4" y="45.83" width="15.5" height="3.77" rx="0.5" fill="#0d1117" stroke="#8c959f" stroke-width="0.2"/>
+<rect x="38.2" y="46.5086" width="10.7" height="2.4128" rx="0.754" fill="#f0883e"/>
+<text x="35" y="48.579" font-size="2.4" fill="#f0f3f6" text-anchor="middle" font-weight="bold">−</text>
+<rect x="8" y="35.79" width="14" height="5" rx="0.4" fill="#16191d" stroke="#8c959f" stroke-width="0.15"/>
+<rect x="11.08" y="37.39" width="2.24" height="1.8" rx="0.2" fill="#59636e"/>
+<rect x="16.68" y="37.39" width="2.24" height="1.8" rx="0.2" fill="#59636e"/>
+<rect x="21.6" y="36.29" width="10.8" height="4" rx="0.6" fill="#d0d7de"/>
+<text x="29" y="39.19" font-size="2.6" fill="#1f2328" text-anchor="middle" font-weight="bold">2</text>
+<circle cx="30.9" cy="38.29" r="0.9" fill="#57606a"/>
+<rect x="33.4" y="34.52" width="15.5" height="3.77" rx="0.5" fill="#cf222e" stroke="#8c959f" stroke-width="0.2"/>
+<rect x="38.2" y="35.1986" width="10.7" height="2.4128" rx="0.754" fill="#f0883e"/>
+<text x="35" y="37.269" font-size="2.4" fill="#f0f3f6" text-anchor="middle" font-weight="bold">+</text>
+<rect x="33.4" y="38.29" width="15.5" height="3.77" rx="0.5" fill="#0d1117" stroke="#8c959f" stroke-width="0.2"/>
+<rect x="38.2" y="38.9686" width="10.7" height="2.4128" rx="0.754" fill="#f0883e"/>
+<text x="35" y="41.039" font-size="2.4" fill="#f0f3f6" text-anchor="middle" font-weight="bold">−</text>
+<rect x="13" y="28.25" width="14" height="5" rx="0.4" fill="#16191d" stroke="#8c959f" stroke-width="0.15"/>
+<rect x="16.08" y="29.85" width="2.24" height="1.8" rx="0.2" fill="#59636e"/>
+<rect x="21.68" y="29.85" width="2.24" height="1.8" rx="0.2" fill="#59636e"/>
+<rect x="27.4" y="28.75" width="5" height="4" rx="0.6" fill="#d0d7de"/>
+<text x="29" y="31.65" font-size="2.6" fill="#1f2328" text-anchor="middle" font-weight="bold">3</text>
+<circle cx="30.9" cy="30.75" r="0.9" fill="#57606a"/>
+<rect x="33.4" y="26.98" width="15.5" height="3.77" rx="0.5" fill="#cf222e" stroke="#8c959f" stroke-width="0.2"/>
+<rect x="38.2" y="27.6586" width="10.7" height="2.4128" rx="0.754" fill="#f0883e"/>
+<text x="35" y="29.729" font-size="2.4" fill="#f0f3f6" text-anchor="middle" font-weight="bold">+</text>
+<rect x="33.4" y="30.75" width="15.5" height="3.77" rx="0.5" fill="#0d1117" stroke="#8c959f" stroke-width="0.2"/>
+<rect x="38.2" y="31.4286" width="10.7" height="2.4128" rx="0.754" fill="#f0883e"/>
+<text x="35" y="33.499" font-size="2.4" fill="#f0f3f6" text-anchor="middle" font-weight="bold">−</text>
+<rect x="8" y="20.71" width="14" height="5" rx="0.4" fill="#16191d" stroke="#8c959f" stroke-width="0.15"/>
+<rect x="11.08" y="22.31" width="2.24" height="1.8" rx="0.2" fill="#59636e"/>
+<rect x="16.68" y="22.31" width="2.24" height="1.8" rx="0.2" fill="#59636e"/>
+<rect x="21.6" y="21.21" width="10.8" height="4" rx="0.6" fill="#d0d7de"/>
+<text x="29" y="24.11" font-size="2.6" fill="#1f2328" text-anchor="middle" font-weight="bold">4</text>
+<circle cx="30.9" cy="23.21" r="0.9" fill="#57606a"/>
+<rect x="33.4" y="19.44" width="15.5" height="3.77" rx="0.5" fill="#cf222e" stroke="#8c959f" stroke-width="0.2"/>
+<rect x="38.2" y="20.1186" width="10.7" height="2.4128" rx="0.754" fill="#f0883e"/>
+<text x="35" y="22.189" font-size="2.4" fill="#f0f3f6" text-anchor="middle" font-weight="bold">+</text>
+<rect x="33.4" y="23.21" width="15.5" height="3.77" rx="0.5" fill="#0d1117" stroke="#8c959f" stroke-width="0.2"/>
+<rect x="38.2" y="23.8886" width="10.7" height="2.4128" rx="0.754" fill="#f0883e"/>
+<text x="35" y="25.959" font-size="2.4" fill="#f0f3f6" text-anchor="middle" font-weight="bold">−</text>
+<rect x="13" y="13.17" width="14" height="5" rx="0.4" fill="#16191d" stroke="#8c959f" stroke-width="0.15"/>
+<rect x="16.08" y="14.77" width="2.24" height="1.8" rx="0.2" fill="#59636e"/>
+<rect x="21.68" y="14.77" width="2.24" height="1.8" rx="0.2" fill="#59636e"/>
+<rect x="27.4" y="13.67" width="5" height="4" rx="0.6" fill="#d0d7de"/>
+<text x="29" y="16.57" font-size="2.6" fill="#1f2328" text-anchor="middle" font-weight="bold">5</text>
+<circle cx="30.9" cy="15.67" r="0.9" fill="#57606a"/>
+<rect x="33.4" y="11.9" width="15.5" height="3.77" rx="0.5" fill="#cf222e" stroke="#8c959f" stroke-width="0.2"/>
+<rect x="38.2" y="12.5786" width="10.7" height="2.4128" rx="0.754" fill="#f0883e"/>
+<text x="35" y="14.649" font-size="2.4" fill="#f0f3f6" text-anchor="middle" font-weight="bold">+</text>
+<rect x="33.4" y="15.67" width="15.5" height="3.77" rx="0.5" fill="#0d1117" stroke="#8c959f" stroke-width="0.2"/>
+<rect x="38.2" y="16.3486" width="10.7" height="2.4128" rx="0.754" fill="#f0883e"/>
+<text x="35" y="18.419" font-size="2.4" fill="#f0f3f6" text-anchor="middle" font-weight="bold">−</text>
+<text x="15.9" y="62.2" font-size="3" fill="#f0f3f6" text-anchor="middle" font-weight="bold">+</text>
+<text x="23.45" y="62" font-size="2" fill="#f0f3f6" text-anchor="middle" font-weight="bold">INPUT</text>
+<circle cx="28.4" cy="61.2" r="0.8" fill="#3fb950"/>
+<text x="31.4" y="62.2" font-size="3" fill="#f0f3f6" text-anchor="middle" font-weight="bold">−</text>
+<rect x="14.6" y="64" width="9.4" height="22.6" rx="0.8" fill="#cf222e" stroke="#1f2328" stroke-width="0.3"/>
+<rect x="15.8" y="70" width="7" height="18" rx="1.5" fill="#f0883e"/>
+<circle cx="19.3" cy="84.6" r="0.7" fill="#1f2328"/>
+<rect x="24" y="64" width="9.4" height="22.6" rx="0.8" fill="#0d1117" stroke="#1f2328" stroke-width="0.3"/>
+<rect x="25.2" y="70" width="7" height="18" rx="1.5" fill="#f0883e"/>
+<circle cx="28.7" cy="84.6" r="0.7" fill="#1f2328"/>
+<g class="caption">
+<text x="23.8" y="97" font-size="4" fill="#1f2328" text-anchor="middle" font-weight="bold">REV Mini Power Module</text>
+<text x="23.8" y="101.2" font-size="2.3" fill="#57606a" text-anchor="middle">47.6 × 86.1 mm · top view · input at the bottom</text>
+</g>
+<g id="anchors">
+<circle class="anchor" id="anchor-ch0" data-kind="power" cx="48.9" cy="53.37" r="1" fill="none"><title>Output channel 0: + / - WAGO 2601, ATM fuse 15 A max</title></circle>
+<circle class="anchor" id="anchor-ch1" data-kind="power" cx="48.9" cy="45.83" r="1" fill="none"><title>Output channel 1: + / - WAGO 2601, ATM fuse 15 A max</title></circle>
+<circle class="anchor" id="anchor-ch2" data-kind="power" cx="48.9" cy="38.29" r="1" fill="none"><title>Output channel 2: + / - WAGO 2601, ATM fuse 15 A max</title></circle>
+<circle class="anchor" id="anchor-ch3" data-kind="power" cx="48.9" cy="30.75" r="1" fill="none"><title>Output channel 3: + / - WAGO 2601, ATM fuse 15 A max</title></circle>
+<circle class="anchor" id="anchor-ch4" data-kind="power" cx="48.9" cy="23.21" r="1" fill="none"><title>Output channel 4: + / - WAGO 2601, ATM fuse 15 A max</title></circle>
+<circle class="anchor" id="anchor-ch5" data-kind="power" cx="48.9" cy="15.67" r="1" fill="none"><title>Output channel 5: + / - WAGO 2601, ATM fuse 15 A max</title></circle>
+<circle class="anchor" id="anchor-in_pos" data-kind="power" cx="19.3" cy="88" r="1" fill="none"><title>Input + (WAGO lever terminal, 24-8 AWG) from a PDH high-current channel</title></circle>
+<circle class="anchor" id="anchor-in_neg" data-kind="power" cx="28.7" cy="88" r="1" fill="none"><title>Input - (WAGO lever terminal, 24-8 AWG)</title></circle>
+</g>
+</svg>

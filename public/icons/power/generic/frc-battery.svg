@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-8 -8 197 177.7" width="197mm" height="177.7mm" font-family="Helvetica, Arial, sans-serif">
+<title>FRC Robot Battery (12 V SLA)</title>
+<desc>Drawn by FRC Team 2102 Paradox. Public domain: CC0 1.0 (https://creativecommons.org/publicdomain/zero/1.0/). https://docs.team2102.org/icons/</desc>
+<rect x="0" y="0" width="181" height="76" rx="3" fill="#3a3f47" stroke="#1f2328" stroke-width="0.5"/>
+<rect x="4.3" y="9.3" width="173.2" height="35.6" rx="1.5" fill="none" stroke="#aab2bd" stroke-width="0.4"/>
+<text x="90.5" y="30" font-size="6" fill="#f0f3f6" text-anchor="middle" font-weight="bold">12V  18Ah</text>
+<text x="90.5" y="37" font-size="2.6" fill="#aab2bd" text-anchor="middle">SEALED LEAD ACID</text>
+<rect x="1.4" y="50.6" width="41.8" height="24.2" rx="1.2" fill="#1f2328"/>
+<rect x="2.9" y="52" width="10" height="3" rx="0.5" fill="#0d1117"/>
+<circle cx="32.8" cy="62.7" r="3" fill="none" stroke="#f0f3f6" stroke-width="0.4"/>
+<text x="32.8" y="64.1" font-size="4" fill="#f0f3f6" text-anchor="middle" font-weight="bold">−</text>
+<rect x="13" y="57" width="9" height="12" rx="1.5" fill="#16191d" stroke="#8c959f" stroke-width="0.3"/>
+<rect x="16.5" y="57.5" width="2" height="11" rx="0.3" fill="#8c959f"/>
+<rect x="137.8" y="50.6" width="41.8" height="24.2" rx="1.2" fill="#1f2328"/>
+<rect x="139.3" y="52" width="10" height="3" rx="0.5" fill="#cf222e"/>
+<circle cx="145.4" cy="62.7" r="3" fill="none" stroke="#f0f3f6" stroke-width="0.4"/>
+<text x="145.4" y="64.1" font-size="4" fill="#f0f3f6" text-anchor="middle" font-weight="bold">+</text>
+<rect x="159" y="57" width="9" height="12" rx="1.5" fill="#16191d" stroke="#8c959f" stroke-width="0.3"/>
+<rect x="162.5" y="57.5" width="2" height="11" rx="0.3" fill="#8c959f"/>
+<path d="M 17.5 69 L 17.5 86 L 81 86 L 81 101" fill="none" stroke="#8c959f" stroke-width="5.3" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 17.5 69 L 17.5 86 L 81 86 L 81 101" fill="none" stroke="#0d1117" stroke-width="5" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 163.5 69 L 163.5 86 L 100 86 L 100 101" fill="none" stroke="#8c959f" stroke-width="5.3" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 163.5 69 L 163.5 86 L 100 86 L 100 101" fill="none" stroke="#cf222e" stroke-width="5" stroke-linejoin="round" stroke-linecap="round"/>
+<rect x="72.25" y="99" width="36.5" height="48" rx="2" fill="#c9252c" stroke="#7d1418" stroke-width="0.4"/>
+<rect x="76.7" y="119" width="1.6" height="22" rx="0.6" fill="#a51d24"/>
+<rect x="83.7" y="119" width="1.6" height="22" rx="0.6" fill="#a51d24"/>
+<rect x="95.7" y="119" width="1.6" height="22" rx="0.6" fill="#a51d24"/>
+<rect x="102.7" y="119" width="1.6" height="22" rx="0.6" fill="#a51d24"/>
+<rect x="83.5" y="105" width="14" height="9" rx="1" fill="#a51d24"/>
+<text x="90.5" y="111.1" font-size="3.2" fill="#f0f3f6" text-anchor="middle" font-weight="bold">SB50</text>
+<rect x="72.25" y="144.5" width="36.5" height="2.5" rx="0.6" fill="#7d1418"/>
+<text x="74.5" y="142.5" font-size="3.4" fill="#f0f3f6" text-anchor="middle" font-weight="bold">−</text>
+<text x="106.5" y="142.5" font-size="3.4" fill="#f0f3f6" text-anchor="middle" font-weight="bold">+</text>
+<g class="lead-labels">
+<text x="90.5" y="153" font-size="2.6" fill="#1f2328" text-anchor="middle" font-weight="bold">SB50 (to the robot SB50)</text>
+</g>
+<g class="caption">
+<text x="90.5" y="164" font-size="4" fill="#1f2328" text-anchor="middle" font-weight="bold">FRC Robot Battery (12 V SLA)</text>
+<text x="90.5" y="168.2" font-size="2.3" fill="#57606a" text-anchor="middle">181 × 76 mm · top view · 6 AWG leads to a red SB50, drawn short</text>
+</g>
+<g id="anchors">
+<circle class="anchor" id="anchor-sb50_neg" data-kind="power" cx="81" cy="147" r="1" fill="none"><title>SB50 − (black 6 AWG lead from the battery −)</title></circle>
+<circle class="anchor" id="anchor-sb50_pos" data-kind="power" cx="100" cy="147" r="1" fill="none"><title>SB50 + (red 6 AWG lead from the battery +)</title></circle>
+</g>
+</svg>

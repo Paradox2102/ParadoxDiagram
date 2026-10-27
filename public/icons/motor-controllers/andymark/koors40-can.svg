@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-26 -6 124 53.7" width="124mm" height="53.7mm" font-family="Helvetica, Arial, sans-serif">
+<title>AndyMark Koors40 (CAN)</title>
+<desc>Drawn by FRC Team 2102 Paradox. Public domain: CC0 1.0 (https://creativecommons.org/publicdomain/zero/1.0/). https://docs.team2102.org/icons/</desc>
+<rect x="57" y="16.8" width="11" height="5.4" rx="2.7" fill="#24272c" stroke="#1f2328" stroke-width="0.4"/>
+<circle cx="65.2" cy="19.5" r="1.4" fill="#ffffff" stroke="#1f2328" stroke-width="0.2"/>
+<path d="M 0 19.5 L -14 19.5" fill="none" stroke="#8c959f" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 0 19.5 L -14 19.5" fill="none" stroke="#2da44e" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 0 25.5 L -14 25.5" fill="none" stroke="#8c959f" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 0 25.5 L -14 25.5" fill="none" stroke="#f6f8fa" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 60 6.5 L 74 6.5" fill="none" stroke="#8c959f" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 60 6.5 L 74 6.5" fill="none" stroke="#0d1117" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 60 24.5 L 74 24.5" fill="none" stroke="#8c959f" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 60 24.5 L 74 24.5" fill="none" stroke="#cf222e" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 60 13.95 L 74 13.95" fill="none" stroke="#8c959f" stroke-width="1" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 60 13.95 L 74 13.95" fill="none" stroke="#e3b341" stroke-width="0.7" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 60 15.05 L 74 15.05" fill="none" stroke="#8c959f" stroke-width="1" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 60 15.05 L 74 15.05" fill="none" stroke="#2da44e" stroke-width="0.7" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M -14 19.5 L -16.4 19.5" fill="none" stroke="#c9d1d9" stroke-width="1.54" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M -14 25.5 L -16.4 25.5" fill="none" stroke="#c9d1d9" stroke-width="1.54" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 74 6.5 L 76.4 6.5" fill="none" stroke="#c9d1d9" stroke-width="1.54" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 74 24.5 L 76.4 24.5" fill="none" stroke="#c9d1d9" stroke-width="1.54" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 74 13.95 L 76.4 13.95" fill="none" stroke="#c9d1d9" stroke-width="0.49" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 74 15.05 L 76.4 15.05" fill="none" stroke="#c9d1d9" stroke-width="0.49" stroke-linejoin="round" stroke-linecap="round"/>
+<rect x="0" y="0" width="60" height="30" rx="1.4" fill="#24272c" stroke="#1f2328" stroke-width="0.5"/>
+<circle cx="6.5" cy="24.4" r="1.1" fill="#3fb950"/>
+<circle cx="14.8" cy="24.6" r="1.5" fill="#0d1117" stroke="#c9d1d9" stroke-width="0.25"/>
+<text x="5" y="29" font-size="1.7" fill="#c9d1d9" text-anchor="start">BRAKE/COAST</text>
+<circle cx="18.4" cy="14.7" r="1" fill="#0d1117"/>
+<circle cx="18" cy="6.7" r="1" fill="#0d1117"/>
+<text x="40" y="17.3" font-size="6.4" fill="#f0f3f6" text-anchor="middle" font-weight="bold">KOORS40</text>
+<text x="2" y="21.4" font-size="1.8" fill="#c9d1d9" text-anchor="start" font-weight="bold">M−</text>
+<text x="2" y="27.4" font-size="1.8" fill="#c9d1d9" text-anchor="start" font-weight="bold">M+</text>
+<text x="58" y="5.2" font-size="1.8" fill="#c9d1d9" text-anchor="end" font-weight="bold">V−</text>
+<text x="58" y="28.6" font-size="1.8" fill="#c9d1d9" text-anchor="end" font-weight="bold">V+</text>
+<g class="lead-labels">
+<text x="-17.2" y="20.3" font-size="2.2" fill="#1f2328" text-anchor="end" font-weight="bold">M−</text>
+<text x="-17.2" y="26.3" font-size="2.2" fill="#1f2328" text-anchor="end" font-weight="bold">M+</text>
+<text x="77.2" y="7.3" font-size="2.2" fill="#1f2328" text-anchor="start" font-weight="bold">V−</text>
+<text x="77.2" y="15.3" font-size="2.2" fill="#1f2328" text-anchor="start" font-weight="bold">CAN/PWM</text>
+<text x="77.2" y="25.3" font-size="2.2" fill="#1f2328" text-anchor="start" font-weight="bold">V+</text>
+</g>
+<g class="caption">
+<text x="34" y="42" font-size="4" fill="#1f2328" text-anchor="middle" font-weight="bold">AndyMark Koors40 (CAN)</text>
+<text x="34" y="46.2" font-size="2.3" fill="#57606a" text-anchor="middle">≈60 × 30 mm (est.) · top view · leads drawn short (bare ends)</text>
+</g>
+<g id="anchors">
+<circle class="anchor" id="anchor-motor_neg" data-kind="power" cx="-14" cy="19.5" r="1" fill="none"><title>M− (green, bare end) to motor −</title></circle>
+<circle class="anchor" id="anchor-motor_pos" data-kind="power" cx="-14" cy="25.5" r="1" fill="none"><title>M+ (white, bare end) to motor +</title></circle>
+<circle class="anchor" id="anchor-vbat_neg" data-kind="power" cx="74" cy="6.5" r="1" fill="none"><title>V− (black, bare end) to battery negative</title></circle>
+<circle class="anchor" id="anchor-vbat_pos" data-kind="power" cx="74" cy="24.5" r="1" fill="none"><title>V+ (red, bare end) to battery positive, 40 A breaker or smaller</title></circle>
+<circle class="anchor" id="anchor-can_a" data-kind="can" cx="74" cy="14.5" r="1" fill="none"><title>CAN pair: yellow H / green L, twisted. For PWM use: yellow = signal, green = ground</title></circle>
+</g>
+</svg>

@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-35.22 -23 70.43 88" width="70.43mm" height="88mm" font-family="Helvetica, Arial, sans-serif">
+<title>CTRE Minion</title>
+<desc>Drawn by FRC Team 2102 Paradox. Public domain: CC0 1.0 (https://creativecommons.org/publicdomain/zero/1.0/). https://docs.team2102.org/icons/</desc>
+<rect x="-7.7" y="15" width="15.4" height="6.5" rx="1.2" fill="#16191d" stroke="#1f2328" stroke-width="0.3"/>
+<circle cx="0" cy="0" r="19" fill="#3a3f47" stroke="#1f2328" stroke-width="0.5"/>
+<circle cx="0" cy="0" r="17.6" fill="none" stroke="#59636e" stroke-width="0.5"/>
+<text x="0" y="1.6" font-size="5.2" fill="#8fe33a" text-anchor="middle" font-weight="bold">MINION</text>
+<text x="0" y="6.4" font-size="3" fill="#8fe33a" text-anchor="middle" font-weight="bold">CTR</text>
+<path d="M -5.4 21.5 L -5.4 24 L -15 27 L -15 33" fill="none" stroke="#8c959f" stroke-width="2.6" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M -5.4 21.5 L -5.4 24 L -15 27 L -15 33" fill="none" stroke="#cf222e" stroke-width="2.3" stroke-linejoin="round" stroke-linecap="round"/>
+<rect x="-15.9" y="33" width="1.8" height="2.2" rx="0.3" fill="#c9d1d9"/>
+<circle cx="-15" cy="36.9" r="1.7" fill="none" stroke="#c9d1d9" stroke-width="0.9"/>
+<path d="M -1.8 21.5 L -1.8 24 L -6 27 L -6 33" fill="none" stroke="#8c959f" stroke-width="2.6" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M -1.8 21.5 L -1.8 24 L -6 27 L -6 33" fill="none" stroke="#0d1117" stroke-width="2.3" stroke-linejoin="round" stroke-linecap="round"/>
+<rect x="-6.9" y="33" width="1.8" height="2.2" rx="0.3" fill="#c9d1d9"/>
+<circle cx="-6" cy="36.9" r="1.7" fill="none" stroke="#c9d1d9" stroke-width="0.9"/>
+<path d="M 1.8 21.5 L 1.8 24 L 3 27 L 3 33" fill="none" stroke="#8c959f" stroke-width="2.6" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 1.8 21.5 L 1.8 24 L 3 27 L 3 33" fill="none" stroke="#f6f8fa" stroke-width="2.3" stroke-linejoin="round" stroke-linecap="round"/>
+<rect x="2.1" y="33" width="1.8" height="2.2" rx="0.3" fill="#c9d1d9"/>
+<circle cx="3" cy="36.9" r="1.7" fill="none" stroke="#c9d1d9" stroke-width="0.9"/>
+<path d="M 5.4 21.5 L 5.4 24 L 16 27 L 16 33" fill="none" stroke="#8c959f" stroke-width="2.7" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 5.4 21.5 L 5.4 24 L 16 27 L 16 33" fill="none" stroke="#30363d" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 5.4 21.5 L 5.4 24 L 16 27 L 16 33" fill="none" stroke="#6e7681" stroke-width="0.35" stroke-dasharray="0.5 0.7"/>
+<rect x="9.05" y="33" width="13.9" height="4.6" rx="0.4" fill="#e9e4d4" stroke="#8c959f" stroke-width="0.2"/>
+<rect x="10.5" y="34.6" width="1" height="1.4" rx="0" fill="#59636e"/>
+<rect x="12.5" y="34.6" width="1" height="1.4" rx="0" fill="#59636e"/>
+<rect x="14.5" y="34.6" width="1" height="1.4" rx="0" fill="#59636e"/>
+<rect x="16.5" y="34.6" width="1" height="1.4" rx="0" fill="#59636e"/>
+<rect x="18.5" y="34.6" width="1" height="1.4" rx="0" fill="#59636e"/>
+<rect x="20.5" y="34.6" width="1" height="1.4" rx="0" fill="#59636e"/>
+<g class="lead-labels">
+<text x="-15" y="45" font-size="2.2" fill="#1f2328" text-anchor="middle" font-weight="bold">A</text>
+<text x="-6" y="45" font-size="2.2" fill="#1f2328" text-anchor="middle" font-weight="bold">B</text>
+<text x="3" y="45" font-size="2.2" fill="#1f2328" text-anchor="middle" font-weight="bold">C</text>
+<text x="16" y="45" font-size="2.2" fill="#1f2328" text-anchor="middle" font-weight="bold">SENSOR</text>
+</g>
+<g class="caption">
+<text x="0" y="53" font-size="4" fill="#1f2328" text-anchor="middle" font-weight="bold">CTRE Minion</text>
+<text x="0" y="57.2" font-size="2.3" fill="#57606a" text-anchor="middle">38 × 41 mm · back view · leads drawn short, lead exit turned down</text>
+</g>
+<g id="anchors">
+<circle class="anchor" id="anchor-phase_a" data-kind="power" cx="-15" cy="39.05" r="1" fill="none"><title>Phase A: red 10 AWG, 18 in, ring terminal (Talon FXS terminal A)</title></circle>
+<circle class="anchor" id="anchor-phase_b" data-kind="power" cx="-6" cy="39.05" r="1" fill="none"><title>Phase B: black 10 AWG, 18 in, ring terminal (Talon FXS terminal B)</title></circle>
+<circle class="anchor" id="anchor-phase_c" data-kind="power" cx="3" cy="39.05" r="1" fill="none"><title>Phase C: white 10 AWG, 18 in, ring terminal (Talon FXS terminal C)</title></circle>
+<circle class="anchor" id="anchor-sensor" data-kind="signal" cx="16" cy="37.6" r="1" fill="none"><title>Sensor cable: 18 in sheathed 22 AWG, 6-pin JST (hall + temperature) to Talon FXS JST port</title></circle>
+</g>
+</svg>

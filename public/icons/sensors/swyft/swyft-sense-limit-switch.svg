@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-14 -5 76 70" width="76mm" height="70mm" font-family="Helvetica, Arial, sans-serif">
+<title>SWYFT Sense Magnetic Limit Switch</title>
+<desc>Drawn by FRC Team 2102 Paradox. Public domain: CC0 1.0 (https://creativecommons.org/publicdomain/zero/1.0/). https://docs.team2102.org/icons/</desc>
+<rect x="0" y="0" width="12" height="31" rx="0.8" fill="#e9ecef" stroke="#6e7781" stroke-width="0.4"/>
+<circle cx="6" cy="3.5" r="1.6" fill="#ffffff" stroke="#6e7781" stroke-width="0.3"/>
+<circle cx="6" cy="27.5" r="1.6" fill="#ffffff" stroke="#6e7781" stroke-width="0.3"/>
+<rect x="3.9" y="9.4" width="5" height="12.1" rx="1" fill="#c9ced4" stroke="#6e7781" stroke-width="0.25"/>
+<rect x="4.4" y="10.5" width="4.4" height="10" rx="0.3" fill="#efe9dc" stroke="#1f2328" stroke-width="0.2"/>
+<rect x="6.5" y="12" width="1" height="1" rx="0.2" fill="#0d1117" stroke="#8c959f" stroke-width="0.15"/>
+<rect x="6.5" y="14" width="1" height="1" rx="0.2" fill="#cf222e" stroke="#8c959f" stroke-width="0.15"/>
+<rect x="6.5" y="16" width="1" height="1" rx="0.2" fill="#f6f8fa" stroke="#8c959f" stroke-width="0.15"/>
+<rect x="6.5" y="18" width="1" height="1" rx="0.2" fill="#aab2bd" stroke="#8c959f" stroke-width="0.15"/>
+<g class="lead-labels">
+<path d="M 7 12.5 L 10 12.5 L 15 8 L 30 8" fill="none" stroke="#8c959f" stroke-width="1.2" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 7 12.5 L 10 12.5 L 15 8 L 30 8" fill="none" stroke="#0d1117" stroke-width="0.9" stroke-linejoin="round" stroke-linecap="round"/>
+<text x="32" y="8.8" font-size="2.4" fill="#1f2328" text-anchor="start" font-weight="bold">GND</text>
+<path d="M 7 14.5 L 10 14.5 L 15 15.5 L 30 15.5" fill="none" stroke="#8c959f" stroke-width="1.2" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 7 14.5 L 10 14.5 L 15 15.5 L 30 15.5" fill="none" stroke="#cf222e" stroke-width="0.9" stroke-linejoin="round" stroke-linecap="round"/>
+<text x="32" y="16.3" font-size="2.4" fill="#1f2328" text-anchor="start" font-weight="bold">VCC</text>
+<path d="M 7 16.5 L 10 16.5 L 15 23 L 30 23" fill="none" stroke="#8c959f" stroke-width="1.2" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 7 16.5 L 10 16.5 L 15 23 L 30 23" fill="none" stroke="#f6f8fa" stroke-width="0.9" stroke-linejoin="round" stroke-linecap="round"/>
+<text x="32" y="23.8" font-size="2.4" fill="#1f2328" text-anchor="start" font-weight="bold">Digital</text>
+<text x="24" y="40.5" font-size="2" fill="#1f2328" text-anchor="middle" font-weight="bold">JST PH 4-pin: GND, VCC (3.3-5 V), Digital</text>
+<text x="24" y="43.2" font-size="1.9" fill="#57606a" text-anchor="middle">4th pin not documented</text>
+</g>
+<g class="caption">
+<text x="24" y="56" font-size="4" fill="#1f2328" text-anchor="middle" font-weight="bold">SWYFT Sense Magnetic Limit Switch</text>
+<text x="24" y="60.2" font-size="2.3" fill="#57606a" text-anchor="middle">12 × 31 mm · connector face · JST PH 4-pin, leads drawn short</text>
+</g>
+<g id="anchors">
+<circle class="anchor" id="anchor-gnd" data-kind="signal" cx="30" cy="8" r="1" fill="none"><title>JST PH 4-pin: GND</title></circle>
+<circle class="anchor" id="anchor-vcc" data-kind="power" cx="30" cy="15.5" r="1" fill="none"><title>JST PH 4-pin: VCC (3.3-5 V)</title></circle>
+<circle class="anchor" id="anchor-digital" data-kind="signal" cx="30" cy="23" r="1" fill="none"><title>JST PH 4-pin: Digital output, active low (LED on near a magnet)</title></circle>
+</g>
+</svg>

@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-29.72 -21 59.44 60" width="59.44mm" height="60mm" font-family="Helvetica, Arial, sans-serif">
+<title>CTRE CANrange</title>
+<desc>Drawn by FRC Team 2102 Paradox. Public domain: CC0 1.0 (https://creativecommons.org/publicdomain/zero/1.0/). https://docs.team2102.org/icons/</desc>
+<rect x="-17.27" y="-17.27" width="34.54" height="34.54" rx="2.6" fill="#c9d1d9" stroke="#8c959f" stroke-width="0.5"/>
+<rect x="-15.67" y="-15.67" width="31.34" height="31.34" rx="1.4" fill="#16191d"/>
+<circle cx="-12.7" cy="0" r="2.54" fill="#c9d1d9" stroke="#8c959f" stroke-width="0.3"/>
+<circle cx="-12.7" cy="0" r="1.65" fill="#ffffff" stroke="#57606a" stroke-width="0.2"/>
+<circle cx="12.7" cy="0" r="2.54" fill="#c9d1d9" stroke="#8c959f" stroke-width="0.3"/>
+<circle cx="12.7" cy="0" r="1.65" fill="#ffffff" stroke="#57606a" stroke-width="0.2"/>
+<rect x="-5.2" y="-17.47" width="1.6" height="2.2" rx="0.4" fill="#3fb950"/>
+<text x="-4.4" y="-11.6" font-size="1.9" fill="#f0f3f6" text-anchor="middle">A</text>
+<rect x="3.6" y="-17.47" width="1.6" height="2.2" rx="0.4" fill="#3fb950"/>
+<text x="4.4" y="-11.6" font-size="1.9" fill="#f0f3f6" text-anchor="middle">B</text>
+<text x="0" y="6.2" font-size="4" fill="#f0f3f6" text-anchor="middle" font-weight="bold">CANrange</text>
+<rect x="-6.75" y="15.96" width="3" height="3.6" rx="0.3" fill="#efe3c8" stroke="#8c959f" stroke-width="0.15"/>
+<rect x="-6.15" y="18.01" width="1.8" height="1.2" rx="0.2" fill="#0d1117"/>
+<rect x="-6.35" y="16.76" width="2.2" height="0.8" rx="0.2" fill="#2da44e"/>
+<text x="-5.25" y="13.4" font-size="1.45" fill="#f0f3f6" text-anchor="middle" font-weight="bold">L(G)</text>
+<rect x="-3.25" y="15.96" width="3" height="3.6" rx="0.3" fill="#efe3c8" stroke="#8c959f" stroke-width="0.15"/>
+<rect x="-2.65" y="18.01" width="1.8" height="1.2" rx="0.2" fill="#0d1117"/>
+<rect x="-2.85" y="16.76" width="2.2" height="0.8" rx="0.2" fill="#e3b341"/>
+<text x="-1.75" y="13.4" font-size="1.45" fill="#f0f3f6" text-anchor="middle" font-weight="bold">H(Y)</text>
+<rect x="0.25" y="15.96" width="3" height="3.6" rx="0.3" fill="#efe3c8" stroke="#8c959f" stroke-width="0.15"/>
+<rect x="0.85" y="18.01" width="1.8" height="1.2" rx="0.2" fill="#0d1117"/>
+<rect x="0.65" y="16.76" width="2.2" height="0.8" rx="0.2" fill="#cf222e"/>
+<text x="1.75" y="13.4" font-size="1.45" fill="#f0f3f6" text-anchor="middle" font-weight="bold">+V</text>
+<rect x="3.75" y="15.96" width="3" height="3.6" rx="0.3" fill="#efe3c8" stroke="#8c959f" stroke-width="0.15"/>
+<rect x="4.35" y="18.01" width="1.8" height="1.2" rx="0.2" fill="#0d1117"/>
+<rect x="4.15" y="16.76" width="2.2" height="0.8" rx="0.2" fill="#0d1117"/>
+<text x="5.25" y="13.4" font-size="1.45" fill="#f0f3f6" text-anchor="middle" font-weight="bold">GND</text>
+<g class="caption">
+<text x="0" y="28" font-size="4" fill="#1f2328" text-anchor="middle" font-weight="bold">CTRE CANrange</text>
+<text x="0" y="32.2" font-size="2.3" fill="#57606a" text-anchor="middle">34.5 × 34.5 mm · back (label) view · 4 push-in terminals</text>
+</g>
+<g id="anchors">
+<circle class="anchor" id="anchor-can" data-kind="can" cx="-3.5" cy="19.56" r="1" fill="none"><title>CAN L (green) / CAN H (yellow) push-in terminals; splice in/out wires (no terminator)</title></circle>
+<circle class="anchor" id="anchor-vbat_pos" data-kind="power" cx="1.75" cy="19.56" r="1" fill="none"><title>+V push-in (red), 6-16 V, 14-24 AWG</title></circle>
+<circle class="anchor" id="anchor-vbat_neg" data-kind="power" cx="5.25" cy="19.56" r="1" fill="none"><title>GND push-in (black)</title></circle>
+</g>
+</svg>

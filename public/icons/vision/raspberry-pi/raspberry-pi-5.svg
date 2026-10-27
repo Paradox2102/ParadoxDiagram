@@ -1,0 +1,122 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-7 -7 102 82" width="102mm" height="82mm" font-family="Helvetica, Arial, sans-serif">
+<title>Raspberry Pi 5</title>
+<desc>Drawn by FRC Team 2102 Paradox. Public domain: CC0 1.0 (https://creativecommons.org/publicdomain/zero/1.0/). https://docs.team2102.org/icons/</desc>
+<rect x="0" y="0" width="85" height="56" rx="3" fill="#23854e" stroke="#1f2328" stroke-width="0.5"/>
+<circle cx="3.5" cy="3.5" r="2.6" fill="#d4b84a"/>
+<circle cx="3.5" cy="3.5" r="1.35" fill="#ffffff" stroke="#1f2328" stroke-width="0.2"/>
+<circle cx="61.5" cy="3.5" r="2.6" fill="#d4b84a"/>
+<circle cx="61.5" cy="3.5" r="1.35" fill="#ffffff" stroke="#1f2328" stroke-width="0.2"/>
+<circle cx="3.5" cy="52.5" r="2.6" fill="#d4b84a"/>
+<circle cx="3.5" cy="52.5" r="1.35" fill="#ffffff" stroke="#1f2328" stroke-width="0.2"/>
+<circle cx="61.5" cy="52.5" r="2.6" fill="#d4b84a"/>
+<circle cx="61.5" cy="52.5" r="1.35" fill="#ffffff" stroke="#1f2328" stroke-width="0.2"/>
+<circle cx="61.6" cy="9.5" r="1.5" fill="#ffffff" stroke="#1f2328" stroke-width="0.2"/>
+<rect x="25.9" y="11.9" width="14.6" height="10.1" rx="0.6" fill="#14171b"/>
+<rect x="24.7" y="24.6" width="16.9" height="17.1" rx="1" fill="#c9cdd1" stroke="#8c959f" stroke-width="0.3"/>
+<text x="33.15" y="34" font-size="2.2" fill="#1f2328" text-anchor="middle">BCM2712</text>
+<rect x="52.4" y="15" width="12.2" height="12" rx="0.6" fill="#14171b"/>
+<text x="58.5" y="21.8" font-size="2" fill="#aab2bd" text-anchor="middle">RP1</text>
+<text x="7" y="13" font-size="2.4" fill="#f0f3f6" text-anchor="start" font-weight="bold">Raspberry Pi 5</text>
+<rect x="7.1" y="1.1" width="50.8" height="4.8" rx="0.3" fill="#16191d"/>
+<rect x="7.92" y="1.78" width="0.9" height="0.9" rx="0" fill="#d4a72c"/>
+<rect x="7.92" y="4.32" width="0.9" height="0.9" rx="0" fill="#d4a72c"/>
+<rect x="10.46" y="1.78" width="0.9" height="0.9" rx="0" fill="#d4a72c"/>
+<rect x="10.46" y="4.32" width="0.9" height="0.9" rx="0" fill="#d4a72c"/>
+<rect x="13" y="1.78" width="0.9" height="0.9" rx="0" fill="#d4a72c"/>
+<rect x="13" y="4.32" width="0.9" height="0.9" rx="0" fill="#d4a72c"/>
+<rect x="15.54" y="1.78" width="0.9" height="0.9" rx="0" fill="#d4a72c"/>
+<rect x="15.54" y="4.32" width="0.9" height="0.9" rx="0" fill="#d4a72c"/>
+<rect x="18.08" y="1.78" width="0.9" height="0.9" rx="0" fill="#d4a72c"/>
+<rect x="18.08" y="4.32" width="0.9" height="0.9" rx="0" fill="#d4a72c"/>
+<rect x="20.62" y="1.78" width="0.9" height="0.9" rx="0" fill="#d4a72c"/>
+<rect x="20.62" y="4.32" width="0.9" height="0.9" rx="0" fill="#d4a72c"/>
+<rect x="23.16" y="1.78" width="0.9" height="0.9" rx="0" fill="#d4a72c"/>
+<rect x="23.16" y="4.32" width="0.9" height="0.9" rx="0" fill="#d4a72c"/>
+<rect x="25.7" y="1.78" width="0.9" height="0.9" rx="0" fill="#d4a72c"/>
+<rect x="25.7" y="4.32" width="0.9" height="0.9" rx="0" fill="#d4a72c"/>
+<rect x="28.24" y="1.78" width="0.9" height="0.9" rx="0" fill="#d4a72c"/>
+<rect x="28.24" y="4.32" width="0.9" height="0.9" rx="0" fill="#d4a72c"/>
+<rect x="30.78" y="1.78" width="0.9" height="0.9" rx="0" fill="#d4a72c"/>
+<rect x="30.78" y="4.32" width="0.9" height="0.9" rx="0" fill="#d4a72c"/>
+<rect x="33.32" y="1.78" width="0.9" height="0.9" rx="0" fill="#d4a72c"/>
+<rect x="33.32" y="4.32" width="0.9" height="0.9" rx="0" fill="#d4a72c"/>
+<rect x="35.86" y="1.78" width="0.9" height="0.9" rx="0" fill="#d4a72c"/>
+<rect x="35.86" y="4.32" width="0.9" height="0.9" rx="0" fill="#d4a72c"/>
+<rect x="38.4" y="1.78" width="0.9" height="0.9" rx="0" fill="#d4a72c"/>
+<rect x="38.4" y="4.32" width="0.9" height="0.9" rx="0" fill="#d4a72c"/>
+<rect x="40.94" y="1.78" width="0.9" height="0.9" rx="0" fill="#d4a72c"/>
+<rect x="40.94" y="4.32" width="0.9" height="0.9" rx="0" fill="#d4a72c"/>
+<rect x="43.48" y="1.78" width="0.9" height="0.9" rx="0" fill="#d4a72c"/>
+<rect x="43.48" y="4.32" width="0.9" height="0.9" rx="0" fill="#d4a72c"/>
+<rect x="46.02" y="1.78" width="0.9" height="0.9" rx="0" fill="#d4a72c"/>
+<rect x="46.02" y="4.32" width="0.9" height="0.9" rx="0" fill="#d4a72c"/>
+<rect x="48.56" y="1.78" width="0.9" height="0.9" rx="0" fill="#d4a72c"/>
+<rect x="48.56" y="4.32" width="0.9" height="0.9" rx="0" fill="#d4a72c"/>
+<rect x="51.1" y="1.78" width="0.9" height="0.9" rx="0" fill="#d4a72c"/>
+<rect x="51.1" y="4.32" width="0.9" height="0.9" rx="0" fill="#d4a72c"/>
+<rect x="53.64" y="1.78" width="0.9" height="0.9" rx="0" fill="#d4a72c"/>
+<rect x="53.64" y="4.32" width="0.9" height="0.9" rx="0" fill="#d4a72c"/>
+<rect x="56.18" y="1.78" width="0.9" height="0.9" rx="0" fill="#d4a72c"/>
+<rect x="56.18" y="4.32" width="0.9" height="0.9" rx="0" fill="#d4a72c"/>
+<text x="32.5" y="8.6" font-size="1.8" fill="#f0f3f6" text-anchor="middle">40-PIN GPIO</text>
+<text x="9.64" y="-1.2" font-size="1.7" fill="#1f2328" text-anchor="middle" font-weight="bold">5V</text>
+<rect x="65.4" y="1" width="2.8" height="6" rx="0.3" fill="#eef0f2"/>
+<text x="66.8" y="9.2" font-size="1.4" fill="#f0f3f6" text-anchor="middle">FAN</text>
+<rect x="1.2" y="20.8" width="3.2" height="10.7" rx="0.3" fill="#b08a5a"/>
+<text x="5.4" y="26.8" font-size="1.5" fill="#f0f3f6" text-anchor="start">PCIe</text>
+<rect x="-1.8" y="36.4" width="4.6" height="3" rx="0.4" fill="#16191d"/>
+<text x="3.6" y="38.6" font-size="1.4" fill="#f0f3f6" text-anchor="start">PSW</text>
+<circle cx="0.9" cy="42" r="0.7" fill="#3fb950"/>
+<circle cx="0.9" cy="43.6" r="0.7" fill="#f85149"/>
+<text x="2.3" y="43.4" font-size="1.2" fill="#aab2bd" text-anchor="start">STAT/PWR</text>
+<rect x="6.8" y="50" width="8.8" height="7.4" rx="1.5" fill="#8c959f" stroke="#1f2328" stroke-width="0.2"/>
+<rect x="8.2" y="53.6" width="6" height="1.2" rx="0.5" fill="#0d1117"/>
+<text x="11.2" y="47.2" font-size="1.6" fill="#f0f3f6" text-anchor="middle">USB-C PWR</text>
+<text x="11.2" y="49.2" font-size="1.4" fill="#aab2bd" text-anchor="middle">5V 5A</text>
+<rect x="17" y="49.8" width="4" height="3" rx="0.3" fill="#eef0f2"/>
+<text x="19" y="48.6" font-size="1.3" fill="#f0f3f6" text-anchor="middle">BAT</text>
+<rect x="22.7" y="50.4" width="6.4" height="7" rx="0.6" fill="#8c959f" stroke="#1f2328" stroke-width="0.2"/>
+<rect x="23.9" y="54.2" width="4" height="1.6" rx="0.3" fill="#0d1117"/>
+<text x="25.9" y="48.8" font-size="1.4" fill="#f0f3f6" text-anchor="middle">HDMI0</text>
+<rect x="35.9" y="50.4" width="6.7" height="7" rx="0.6" fill="#8c959f" stroke="#1f2328" stroke-width="0.2"/>
+<rect x="37.1" y="54.2" width="4.3" height="1.6" rx="0.3" fill="#0d1117"/>
+<text x="39.25" y="48.8" font-size="1.4" fill="#f0f3f6" text-anchor="middle">HDMI1</text>
+<rect x="29.6" y="50.5" width="5.4" height="3.3" rx="0.3" fill="#eef0f2"/>
+<text x="32.3" y="49.4" font-size="1.2" fill="#f0f3f6" text-anchor="middle">UART</text>
+<rect x="47.3" y="39.9" width="3" height="15.3" rx="0.3" fill="#b08a5a"/>
+<rect x="53.5" y="39.9" width="3" height="15.3" rx="0.3" fill="#b08a5a"/>
+<text x="51.9" y="36.4" font-size="1.3" fill="#f0f3f6" text-anchor="middle">CAM/DISP</text>
+<text x="48.8" y="38.6" font-size="1.4" fill="#f0f3f6" text-anchor="middle">1</text>
+<text x="55" y="38.6" font-size="1.4" fill="#f0f3f6" text-anchor="middle">0</text>
+<rect x="59.1" y="44.1" width="5" height="4.7" rx="0.3" fill="#16191d"/>
+<rect x="59.95" y="44.9" width="0.8" height="0.8" rx="0" fill="#d4a72c"/>
+<rect x="59.95" y="47.2" width="0.8" height="0.8" rx="0" fill="#d4a72c"/>
+<rect x="62.45" y="44.9" width="0.8" height="0.8" rx="0" fill="#d4a72c"/>
+<rect x="62.45" y="47.2" width="0.8" height="0.8" rx="0" fill="#d4a72c"/>
+<text x="61.6" y="42.8" font-size="1.4" fill="#f0f3f6" text-anchor="middle">PoE</text>
+<rect x="70.7" y="1.8" width="17.3" height="14.4" rx="0.8" fill="#8c959f" stroke="#8c959f" stroke-width="0.3"/>
+<rect x="73.2" y="3.8" width="14" height="4" rx="0.4" fill="#0d1117"/>
+<rect x="73.2" y="10.2" width="14" height="4" rx="0.4" fill="#0d1117"/>
+<text x="80.2" y="9.7" font-size="1.7" fill="#1f2328" text-anchor="middle" font-weight="bold">USB 2.0</text>
+<rect x="70.7" y="19.8" width="17.3" height="14.4" rx="0.8" fill="#1f6feb" stroke="#8c959f" stroke-width="0.3"/>
+<rect x="73.2" y="21.8" width="14" height="4" rx="0.4" fill="#0d1117"/>
+<rect x="73.2" y="28.2" width="14" height="4" rx="0.4" fill="#0d1117"/>
+<text x="80.2" y="27.7" font-size="1.7" fill="#f0f3f6" text-anchor="middle" font-weight="bold">USB 3.0</text>
+<rect x="66.8" y="37.7" width="21.2" height="16.3" rx="0.8" fill="#16191d"/>
+<rect x="69.98" y="40.145" width="14.84" height="8.965" rx="0.3" fill="#59636e"/>
+<rect x="74.856" y="49.11" width="5.088" height="2.282" rx="0" fill="#59636e"/>
+<text x="65.6" y="36.6" font-size="1.5" fill="#f0f3f6" text-anchor="end">ETHERNET</text>
+<g class="caption">
+<text x="42.5" y="68" font-size="4" fill="#1f2328" text-anchor="middle" font-weight="bold">Raspberry Pi 5</text>
+<text x="42.5" y="72.2" font-size="2.3" fill="#57606a" text-anchor="middle">85 × 56 mm · top view · ports from the official mechanical drawing</text>
+</g>
+<g id="anchors">
+<circle class="anchor" id="anchor-gpio_5v_in" data-kind="power" cx="9.64" cy="1.1" r="1" fill="none"><title>40-pin header pins 2/4 = 5 V, GND pin 6 (alternate power input)</title></circle>
+<circle class="anchor" id="anchor-pwr_in_usbc" data-kind="power" cx="11.2" cy="57.4" r="1" fill="none"><title>USB-C power input, 5 V / 5 A with USB PD (27 W PSU recommended)</title></circle>
+<circle class="anchor" id="anchor-usb2_upper" data-kind="usb" cx="88" cy="5.8" r="1" fill="none"><title>USB 2.0 Type-A (upper port of the stack)</title></circle>
+<circle class="anchor" id="anchor-usb2_lower" data-kind="usb" cx="88" cy="12.2" r="1" fill="none"><title>USB 2.0 Type-A (lower port of the stack)</title></circle>
+<circle class="anchor" id="anchor-usb3_upper" data-kind="usb" cx="88" cy="23.8" r="1" fill="none"><title>USB 3.0 Type-A (upper port of the stack)</title></circle>
+<circle class="anchor" id="anchor-usb3_lower" data-kind="usb" cx="88" cy="30.2" r="1" fill="none"><title>USB 3.0 Type-A (lower port of the stack)</title></circle>
+<circle class="anchor" id="anchor-ethernet" data-kind="ethernet" cx="88" cy="45.8" r="1" fill="none"><title>Gigabit Ethernet RJ45 (PoE+ with a PoE+ HAT)</title></circle>
+</g>
+</svg>

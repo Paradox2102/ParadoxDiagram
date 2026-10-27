@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-14 -8 112 68.4" width="112mm" height="68.4mm" font-family="Helvetica, Arial, sans-serif">
+<title>Luma P2</title>
+<desc>Drawn by FRC Team 2102 Paradox. Public domain: CC0 1.0 (https://creativecommons.org/publicdomain/zero/1.0/). https://docs.team2102.org/icons/</desc>
+<rect x="0" y="0" width="72.2" height="44.2" rx="3" fill="#26292e" stroke="#1f2328" stroke-width="0.5"/>
+<circle cx="4.1" cy="4.1" r="2.5" fill="#ffffff" stroke="#1f2328" stroke-width="0.2"/>
+<circle cx="68.1" cy="4.1" r="2.5" fill="#ffffff" stroke="#1f2328" stroke-width="0.2"/>
+<circle cx="4.1" cy="40.1" r="2.5" fill="#ffffff" stroke="#1f2328" stroke-width="0.2"/>
+<circle cx="68.1" cy="40.1" r="2.5" fill="#ffffff" stroke="#1f2328" stroke-width="0.2"/>
+<circle cx="36.1" cy="18.1" r="7.2" fill="#16191d" stroke="#8c959f" stroke-width="0.3"/>
+<circle cx="36.1" cy="18.1" r="5.6" fill="#0d1117" stroke="#59636e" stroke-width="0.3"/>
+<circle cx="36.1" cy="18.1" r="3.4" fill="#2a1f3d" stroke="#59636e" stroke-width="0.2"/>
+<circle cx="34.9" cy="16.9" r="0.9" fill="#4b4f58"/>
+<text x="36.65" y="37.3" font-size="5.2" fill="#d0d7de" text-anchor="middle" letter-spacing="1.1" font-weight="bold">LUMA P2</text>
+<rect x="16" y="39.1" width="40.2" height="2" rx="1" fill="#f6f8fa" stroke="#59636e" stroke-width="0.2"/>
+<text x="69.4" y="29.8" font-size="2.6" fill="#f0f3f6" text-anchor="middle" font-weight="bold">+</text>
+<text x="69.4" y="33.3" font-size="2.6" fill="#f0f3f6" text-anchor="middle" font-weight="bold">−</text>
+<rect x="70.6" y="8.5" width="3.4" height="16" rx="0.5" fill="#16191d" stroke="#8c959f" stroke-width="0.2"/>
+<rect x="72.65" y="10.5" width="0.9" height="12" rx="0.2" fill="#59636e"/>
+<rect x="71.4" y="26.85" width="2.4" height="7.4" rx="0.4" fill="#f6f8fa" stroke="#8c959f" stroke-width="0.2"/>
+<path d="M 73.8 28.8 L 83.2 28.8" fill="none" stroke="#8c959f" stroke-width="1.4" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 73.8 28.8 L 83.2 28.8" fill="none" stroke="#cf222e" stroke-width="1.1" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 83.2 28.8 L 84.8 28.8" fill="none" stroke="#c9d1d9" stroke-width="0.8" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 73.8 32.3 L 83.2 32.3" fill="none" stroke="#8c959f" stroke-width="1.4" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 73.8 32.3 L 83.2 32.3" fill="none" stroke="#0d1117" stroke-width="1.1" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 83.2 32.3 L 84.8 32.3" fill="none" stroke="#c9d1d9" stroke-width="0.8" stroke-linejoin="round" stroke-linecap="round"/>
+<rect x="47.55" y="-1.6" width="8.9" height="3.2" rx="1.4" fill="#16191d" stroke="#8c959f" stroke-width="0.2"/>
+<rect x="49" y="-0.5" width="6" height="1" rx="0.5" fill="#59636e"/>
+<rect x="-2" y="10" width="3.4" height="13.1" rx="0.4" fill="#1f6feb" stroke="#8c959f" stroke-width="0.2"/>
+<rect x="-1.4" y="11.6" width="1" height="9.9" rx="0.2" fill="#0d1117"/>
+<g class="lead-labels">
+<text x="52" y="-2.8" font-size="1.9" fill="#1f2328" text-anchor="middle" font-weight="bold">USB-C</text>
+<text x="-4.4" y="16.35" font-size="1.9" fill="#1f2328" text-anchor="end" font-weight="bold">USB 3</text>
+<text x="-4.4" y="18.85" font-size="1.6" fill="#aab2bd" text-anchor="end">Type-A</text>
+<text x="76.6" y="16.1" font-size="1.9" fill="#1f2328" text-anchor="start" font-weight="bold">ETHERNET</text>
+<text x="76.6" y="18.6" font-size="1.6" fill="#1f2328" text-anchor="start">802.3at PoE in (option)</text>
+<text x="86.2" y="29.6" font-size="2.4" fill="#1f2328" text-anchor="start" font-weight="bold">+</text>
+<text x="86.2" y="33.1" font-size="2.4" fill="#1f2328" text-anchor="start" font-weight="bold">−</text>
+<text x="79.2" y="36.5" font-size="1.9" fill="#1f2328" text-anchor="middle" font-weight="bold">PWR</text>
+</g>
+<g class="caption">
+<text x="36.1" y="54.7" font-size="4" fill="#1f2328" text-anchor="middle" font-weight="bold">Luma P2</text>
+<text x="36.1" y="58.9" font-size="2.3" fill="#57606a" text-anchor="middle">72.2 × 44.2 mm · front view (lens side) · connectors on the right end</text>
+</g>
+<g id="anchors">
+<circle class="anchor" id="anchor-ethernet" data-kind="ethernet" cx="74" cy="16.5" r="1" fill="none"><title>Gigabit Ethernet RJ45 (802.3at PoE in (option)) to the radio or a switch</title></circle>
+<circle class="anchor" id="anchor-pwr_pos" data-kind="power" cx="84.8" cy="28.8" r="1" fill="none"><title>+ : 2-pin Weidmuller push-in terminal, 3.3-22.5 V (5 A or 10 A fuse on the PDH)</title></circle>
+<circle class="anchor" id="anchor-pwr_neg" data-kind="power" cx="84.8" cy="32.3" r="1" fill="none"><title>− : 2-pin Weidmuller push-in terminal</title></circle>
+<circle class="anchor" id="anchor-usb_c" data-kind="usb" cx="52" cy="-1.6" r="1" fill="none"><title>USB-C (flashing with rpiboot; not the robot link)</title></circle>
+<circle class="anchor" id="anchor-usb3_a" data-kind="usb" cx="-2" cy="16.55" r="1" fill="none"><title>USB 3 Type-A (extra USB cameras or devices)</title></circle>
+</g>
+</svg>

@@ -1,0 +1,149 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-46 -35 79.51 81.2" width="79.51mm" height="81.2mm" font-family="Helvetica, Arial, sans-serif">
+<title>goBILDA 6V Servo Power Injector</title>
+<desc>Drawn by FRC Team 2102 Paradox. Public domain: CC0 1.0 (https://creativecommons.org/publicdomain/zero/1.0/). https://docs.team2102.org/icons/</desc>
+<path d="M -17.4 -20 L 17.4 -20 L 20 -17.4 L 20 17.4 L 17.4 20 L -17.4 20 L -20 17.4 L -20 -17.4 Z" fill="#2b3036" stroke="#1f2328" stroke-width="0.4" stroke-linejoin="round" stroke-linecap="round"/>
+<rect x="-14" y="-21.3" width="28" height="42.6" rx="3" fill="#3a3f47" stroke="#1f2328" stroke-width="0.4"/>
+<circle cx="-16" cy="-16" r="2" fill="#ffffff" stroke="#1f2328" stroke-width="0.3"/>
+<circle cx="16" cy="-16" r="2" fill="#ffffff" stroke="#1f2328" stroke-width="0.3"/>
+<circle cx="-16" cy="16" r="2" fill="#ffffff" stroke="#1f2328" stroke-width="0.3"/>
+<circle cx="16" cy="16" r="2" fill="#ffffff" stroke="#1f2328" stroke-width="0.3"/>
+<rect x="-19.7" y="-11.4" width="39.4" height="22.4" rx="3.2" fill="#22262b" stroke="#1f2328" stroke-width="0.3"/>
+<rect x="-7.9" y="-20.4" width="15.8" height="8.6" rx="0.5" fill="#0d0f12" stroke="#8c959f" stroke-width="0.15"/>
+<rect x="-6.8" y="-18.8" width="0.9" height="0.9" rx="0.2" fill="#d4a72c" stroke="#8c959f" stroke-width="0.15"/>
+<rect x="-6.8" y="-16.26" width="0.9" height="0.9" rx="0.2" fill="#d4a72c" stroke="#8c959f" stroke-width="0.15"/>
+<rect x="-6.8" y="-13.72" width="0.9" height="0.9" rx="0.2" fill="#d4a72c" stroke="#8c959f" stroke-width="0.15"/>
+<rect x="-4.26" y="-18.8" width="0.9" height="0.9" rx="0.2" fill="#d4a72c" stroke="#8c959f" stroke-width="0.15"/>
+<rect x="-4.26" y="-16.26" width="0.9" height="0.9" rx="0.2" fill="#d4a72c" stroke="#8c959f" stroke-width="0.15"/>
+<rect x="-4.26" y="-13.72" width="0.9" height="0.9" rx="0.2" fill="#d4a72c" stroke="#8c959f" stroke-width="0.15"/>
+<rect x="-1.72" y="-18.8" width="0.9" height="0.9" rx="0.2" fill="#d4a72c" stroke="#8c959f" stroke-width="0.15"/>
+<rect x="-1.72" y="-16.26" width="0.9" height="0.9" rx="0.2" fill="#d4a72c" stroke="#8c959f" stroke-width="0.15"/>
+<rect x="-1.72" y="-13.72" width="0.9" height="0.9" rx="0.2" fill="#d4a72c" stroke="#8c959f" stroke-width="0.15"/>
+<rect x="0.82" y="-18.8" width="0.9" height="0.9" rx="0.2" fill="#d4a72c" stroke="#8c959f" stroke-width="0.15"/>
+<rect x="0.82" y="-16.26" width="0.9" height="0.9" rx="0.2" fill="#d4a72c" stroke="#8c959f" stroke-width="0.15"/>
+<rect x="0.82" y="-13.72" width="0.9" height="0.9" rx="0.2" fill="#d4a72c" stroke="#8c959f" stroke-width="0.15"/>
+<rect x="3.36" y="-18.8" width="0.9" height="0.9" rx="0.2" fill="#d4a72c" stroke="#8c959f" stroke-width="0.15"/>
+<rect x="3.36" y="-16.26" width="0.9" height="0.9" rx="0.2" fill="#d4a72c" stroke="#8c959f" stroke-width="0.15"/>
+<rect x="3.36" y="-13.72" width="0.9" height="0.9" rx="0.2" fill="#d4a72c" stroke="#8c959f" stroke-width="0.15"/>
+<rect x="5.9" y="-18.8" width="0.9" height="0.9" rx="0.2" fill="#d4a72c" stroke="#8c959f" stroke-width="0.15"/>
+<rect x="5.9" y="-16.26" width="0.9" height="0.9" rx="0.2" fill="#d4a72c" stroke="#8c959f" stroke-width="0.15"/>
+<rect x="5.9" y="-13.72" width="0.9" height="0.9" rx="0.2" fill="#d4a72c" stroke="#8c959f" stroke-width="0.15"/>
+<rect x="-7.9" y="12" width="15.8" height="9" rx="0.5" fill="#0d0f12" stroke="#8c959f" stroke-width="0.15"/>
+<rect x="-6.8" y="12.82" width="0.9" height="0.9" rx="0.2" fill="#d4a72c" stroke="#8c959f" stroke-width="0.15"/>
+<rect x="-6.8" y="17.9" width="0.9" height="0.9" rx="0.2" fill="#d4a72c" stroke="#8c959f" stroke-width="0.15"/>
+<rect x="-4.26" y="12.82" width="0.9" height="0.9" rx="0.2" fill="#d4a72c" stroke="#8c959f" stroke-width="0.15"/>
+<rect x="-4.26" y="17.9" width="0.9" height="0.9" rx="0.2" fill="#d4a72c" stroke="#8c959f" stroke-width="0.15"/>
+<rect x="-1.72" y="12.82" width="0.9" height="0.9" rx="0.2" fill="#d4a72c" stroke="#8c959f" stroke-width="0.15"/>
+<rect x="-1.72" y="17.9" width="0.9" height="0.9" rx="0.2" fill="#d4a72c" stroke="#8c959f" stroke-width="0.15"/>
+<rect x="0.82" y="12.82" width="0.9" height="0.9" rx="0.2" fill="#d4a72c" stroke="#8c959f" stroke-width="0.15"/>
+<rect x="0.82" y="17.9" width="0.9" height="0.9" rx="0.2" fill="#d4a72c" stroke="#8c959f" stroke-width="0.15"/>
+<rect x="3.36" y="12.82" width="0.9" height="0.9" rx="0.2" fill="#d4a72c" stroke="#8c959f" stroke-width="0.15"/>
+<rect x="3.36" y="17.9" width="0.9" height="0.9" rx="0.2" fill="#d4a72c" stroke="#8c959f" stroke-width="0.15"/>
+<rect x="5.9" y="12.82" width="0.9" height="0.9" rx="0.2" fill="#d4a72c" stroke="#8c959f" stroke-width="0.15"/>
+<rect x="5.9" y="17.9" width="0.9" height="0.9" rx="0.2" fill="#d4a72c" stroke="#8c959f" stroke-width="0.15"/>
+<rect x="-18.6" y="-10.6" width="4.2" height="21.2" rx="0.9" fill="#f2c500"/>
+<text x="-16.5" y="-7" font-size="3" fill="#1f2328" text-anchor="middle" font-weight="bold">+</text>
+<text x="-16.5" y="9" font-size="3" fill="#1f2328" text-anchor="middle" font-weight="bold">−</text>
+<text transform="translate(-16.5 1) rotate(90)" font-size="2.2" fill="#1f2328" text-anchor="middle" font-weight="bold">8-15V</text>
+<rect x="-7.8" y="-10.4" width="15.6" height="4" rx="0.6" fill="#f2c500"/>
+<text x="-6.35" y="-7.5" font-size="2.5" fill="#1f2328" text-anchor="middle" font-weight="bold">1</text>
+<text x="-3.81" y="-7.5" font-size="2.5" fill="#1f2328" text-anchor="middle" font-weight="bold">2</text>
+<text x="-1.27" y="-7.5" font-size="2.5" fill="#1f2328" text-anchor="middle" font-weight="bold">3</text>
+<text x="1.27" y="-7.5" font-size="2.5" fill="#1f2328" text-anchor="middle" font-weight="bold">4</text>
+<text x="3.81" y="-7.5" font-size="2.5" fill="#1f2328" text-anchor="middle" font-weight="bold">5</text>
+<text x="6.35" y="-7.5" font-size="2.5" fill="#1f2328" text-anchor="middle" font-weight="bold">6</text>
+<rect x="-7.8" y="6.5" width="15.6" height="4" rx="0.6" fill="#f2c500"/>
+<text x="-6.35" y="9.6" font-size="2.5" fill="#1f2328" text-anchor="middle" font-weight="bold">1</text>
+<text x="-3.81" y="9.6" font-size="2.5" fill="#1f2328" text-anchor="middle" font-weight="bold">2</text>
+<text x="-1.27" y="9.6" font-size="2.5" fill="#1f2328" text-anchor="middle" font-weight="bold">3</text>
+<text x="1.27" y="9.6" font-size="2.5" fill="#1f2328" text-anchor="middle" font-weight="bold">4</text>
+<text x="3.81" y="9.6" font-size="2.5" fill="#1f2328" text-anchor="middle" font-weight="bold">5</text>
+<text x="6.35" y="9.6" font-size="2.5" fill="#1f2328" text-anchor="middle" font-weight="bold">6</text>
+<text x="0" y="-4.7" font-size="1.7" fill="#f0f3f6" text-anchor="middle" font-weight="bold">SERVO OUTPUT</text>
+<text x="0" y="5.8" font-size="1.7" fill="#f0f3f6" text-anchor="middle" font-weight="bold">SIGNAL INPUT</text>
+<text x="0" y="-0.9" font-size="3.4" fill="#f2c500" text-anchor="middle" font-weight="bold">goBILDA</text>
+<rect x="-8" y="0.9" width="16" height="2.6" rx="0.3" fill="#f2c500"/>
+<text x="0" y="2.9" font-size="1.9" fill="#1f2328" text-anchor="middle" font-weight="bold">6V INJECTOR</text>
+<text transform="translate(10.6 -8.5) rotate(90)" font-size="2" fill="#f0f3f6" text-anchor="middle">−</text>
+<text transform="translate(10.6 -6.4) rotate(90)" font-size="2" fill="#f0f3f6" text-anchor="middle">+</text>
+<text transform="translate(10.6 -4.5) rotate(90)" font-size="2" fill="#f0f3f6" text-anchor="middle">S</text>
+<text transform="translate(10.6 6.8) rotate(90)" font-size="2" fill="#f0f3f6" text-anchor="middle">S</text>
+<text transform="translate(10.6 8.5) rotate(90)" font-size="2" fill="#f0f3f6" text-anchor="middle">−</text>
+<circle cx="14.9" cy="-5.6" r="0.7" fill="#58a6ff"/>
+<text transform="translate(14.9 -0.4) rotate(90)" font-size="1.8" fill="#f0f3f6" text-anchor="middle">STATUS</text>
+<rect x="-31" y="-5" width="10.8" height="10" rx="1.2" fill="#d9a021" stroke="#1f2328" stroke-width="0.3"/>
+<rect x="-29.6" y="-3.8" width="1.6" height="2.6" rx="0.3" fill="#7a5a10"/>
+<rect x="-29.6" y="1.2" width="1.6" height="2.6" rx="0.3" fill="#7a5a10"/>
+<text x="-24.5" y="0.9" font-size="2.2" fill="#1f2328" text-anchor="middle" font-weight="bold">XT30</text>
+<path d="M -31 -2.5 L -38 -2.5" fill="none" stroke="#8c959f" stroke-width="2.1" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M -31 -2.5 L -38 -2.5" fill="none" stroke="#cf222e" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M -31 2.5 L -38 2.5" fill="none" stroke="#8c959f" stroke-width="2.1" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M -31 2.5 L -38 2.5" fill="none" stroke="#0d1117" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round"/>
+<rect x="-7.43" y="-29.5" width="0.72" height="8.2" rx="0" fill="#0d1117" stroke="#8c959f" stroke-width="0.12"/>
+<rect x="-6.71" y="-29.5" width="0.72" height="8.2" rx="0" fill="#cf222e" stroke="#8c959f" stroke-width="0.12"/>
+<rect x="-5.99" y="-29.5" width="0.72" height="8.2" rx="0" fill="#f0f3f6" stroke="#8c959f" stroke-width="0.12"/>
+<rect x="-7.07" y="21.3" width="0.72" height="8.2" rx="0" fill="#0d1117" stroke="#8c959f" stroke-width="0.12"/>
+<rect x="-6.35" y="21.3" width="0.72" height="8.2" rx="0" fill="#f2c500" stroke="#8c959f" stroke-width="0.12"/>
+<rect x="-4.89" y="-29.5" width="0.72" height="8.2" rx="0" fill="#0d1117" stroke="#8c959f" stroke-width="0.12"/>
+<rect x="-4.17" y="-29.5" width="0.72" height="8.2" rx="0" fill="#cf222e" stroke="#8c959f" stroke-width="0.12"/>
+<rect x="-3.45" y="-29.5" width="0.72" height="8.2" rx="0" fill="#f0f3f6" stroke="#8c959f" stroke-width="0.12"/>
+<rect x="-4.53" y="21.3" width="0.72" height="8.2" rx="0" fill="#0d1117" stroke="#8c959f" stroke-width="0.12"/>
+<rect x="-3.81" y="21.3" width="0.72" height="8.2" rx="0" fill="#f2c500" stroke="#8c959f" stroke-width="0.12"/>
+<rect x="-2.35" y="-29.5" width="0.72" height="8.2" rx="0" fill="#0d1117" stroke="#8c959f" stroke-width="0.12"/>
+<rect x="-1.63" y="-29.5" width="0.72" height="8.2" rx="0" fill="#cf222e" stroke="#8c959f" stroke-width="0.12"/>
+<rect x="-0.91" y="-29.5" width="0.72" height="8.2" rx="0" fill="#f0f3f6" stroke="#8c959f" stroke-width="0.12"/>
+<rect x="-1.99" y="21.3" width="0.72" height="8.2" rx="0" fill="#0d1117" stroke="#8c959f" stroke-width="0.12"/>
+<rect x="-1.27" y="21.3" width="0.72" height="8.2" rx="0" fill="#f2c500" stroke="#8c959f" stroke-width="0.12"/>
+<rect x="0.19" y="-29.5" width="0.72" height="8.2" rx="0" fill="#0d1117" stroke="#8c959f" stroke-width="0.12"/>
+<rect x="0.91" y="-29.5" width="0.72" height="8.2" rx="0" fill="#cf222e" stroke="#8c959f" stroke-width="0.12"/>
+<rect x="1.63" y="-29.5" width="0.72" height="8.2" rx="0" fill="#f0f3f6" stroke="#8c959f" stroke-width="0.12"/>
+<rect x="0.55" y="21.3" width="0.72" height="8.2" rx="0" fill="#0d1117" stroke="#8c959f" stroke-width="0.12"/>
+<rect x="1.27" y="21.3" width="0.72" height="8.2" rx="0" fill="#f2c500" stroke="#8c959f" stroke-width="0.12"/>
+<rect x="2.73" y="-29.5" width="0.72" height="8.2" rx="0" fill="#0d1117" stroke="#8c959f" stroke-width="0.12"/>
+<rect x="3.45" y="-29.5" width="0.72" height="8.2" rx="0" fill="#cf222e" stroke="#8c959f" stroke-width="0.12"/>
+<rect x="4.17" y="-29.5" width="0.72" height="8.2" rx="0" fill="#f0f3f6" stroke="#8c959f" stroke-width="0.12"/>
+<rect x="3.09" y="21.3" width="0.72" height="8.2" rx="0" fill="#0d1117" stroke="#8c959f" stroke-width="0.12"/>
+<rect x="3.81" y="21.3" width="0.72" height="8.2" rx="0" fill="#f2c500" stroke="#8c959f" stroke-width="0.12"/>
+<rect x="5.27" y="-29.5" width="0.72" height="8.2" rx="0" fill="#0d1117" stroke="#8c959f" stroke-width="0.12"/>
+<rect x="5.99" y="-29.5" width="0.72" height="8.2" rx="0" fill="#cf222e" stroke="#8c959f" stroke-width="0.12"/>
+<rect x="6.71" y="-29.5" width="0.72" height="8.2" rx="0" fill="#f0f3f6" stroke="#8c959f" stroke-width="0.12"/>
+<rect x="5.63" y="21.3" width="0.72" height="8.2" rx="0" fill="#0d1117" stroke="#8c959f" stroke-width="0.12"/>
+<rect x="6.35" y="21.3" width="0.72" height="8.2" rx="0" fill="#f2c500" stroke="#8c959f" stroke-width="0.12"/>
+<g class="lead-labels">
+<text x="-41.2" y="-1.5" font-size="3" fill="#1f2328" text-anchor="middle" font-weight="bold">+</text>
+<text x="-41.2" y="4.3" font-size="3" fill="#1f2328" text-anchor="middle" font-weight="bold">−</text>
+<text x="-34.5" y="8.6" font-size="2" fill="#57606a" text-anchor="middle">12 V in</text>
+<text x="-6.35" y="-30.9" font-size="2.1" fill="#1f2328" text-anchor="middle" font-weight="bold">1</text>
+<text x="-6.35" y="32.9" font-size="2.1" fill="#1f2328" text-anchor="middle" font-weight="bold">1</text>
+<text x="-3.81" y="-30.9" font-size="2.1" fill="#1f2328" text-anchor="middle" font-weight="bold">2</text>
+<text x="-3.81" y="32.9" font-size="2.1" fill="#1f2328" text-anchor="middle" font-weight="bold">2</text>
+<text x="-1.27" y="-30.9" font-size="2.1" fill="#1f2328" text-anchor="middle" font-weight="bold">3</text>
+<text x="-1.27" y="32.9" font-size="2.1" fill="#1f2328" text-anchor="middle" font-weight="bold">3</text>
+<text x="1.27" y="-30.9" font-size="2.1" fill="#1f2328" text-anchor="middle" font-weight="bold">4</text>
+<text x="1.27" y="32.9" font-size="2.1" fill="#1f2328" text-anchor="middle" font-weight="bold">4</text>
+<text x="3.81" y="-30.9" font-size="2.1" fill="#1f2328" text-anchor="middle" font-weight="bold">5</text>
+<text x="3.81" y="32.9" font-size="2.1" fill="#1f2328" text-anchor="middle" font-weight="bold">5</text>
+<text x="6.35" y="-30.9" font-size="2.1" fill="#1f2328" text-anchor="middle" font-weight="bold">6</text>
+<text x="6.35" y="32.9" font-size="2.1" fill="#1f2328" text-anchor="middle" font-weight="bold">6</text>
+<text x="-12.5" y="-30.9" font-size="2" fill="#57606a" text-anchor="end">6 V out</text>
+<text x="-12.5" y="32.9" font-size="2" fill="#57606a" text-anchor="end">PWM in</text>
+</g>
+<g class="caption">
+<text x="0" y="40.5" font-size="4" fill="#1f2328" text-anchor="middle" font-weight="bold">goBILDA 6V Servo Power Injector</text>
+<text x="0" y="44.7" font-size="2.3" fill="#57606a" text-anchor="middle">40 × 42.5 mm · top view · 32 mm hole pattern, 6 channels</text>
+</g>
+<g id="anchors">
+<circle class="anchor" id="anchor-servo_0" data-kind="signal" cx="-6.35" cy="-29.5" r="1" fill="none"><title>Servo output 1 (printed 1): 3-pin 0.1 in header, rows - + S from the outer edge, pins face up; carries 6 V</title></circle>
+<circle class="anchor" id="anchor-pwm_in_0" data-kind="signal" cx="-6.35" cy="29.5" r="1" fill="none"><title>Signal input 1 (printed 1): 2-pin header, S and - only (no + pin), pins face up; PWM from a controller or servo hub, passed straight through to output 1</title></circle>
+<circle class="anchor" id="anchor-servo_1" data-kind="signal" cx="-3.81" cy="-29.5" r="1" fill="none"><title>Servo output 2 (printed 2): 3-pin 0.1 in header, rows - + S from the outer edge, pins face up; carries 6 V</title></circle>
+<circle class="anchor" id="anchor-pwm_in_1" data-kind="signal" cx="-3.81" cy="29.5" r="1" fill="none"><title>Signal input 2 (printed 2): 2-pin header, S and - only (no + pin), pins face up; PWM from a controller or servo hub, passed straight through to output 2</title></circle>
+<circle class="anchor" id="anchor-servo_2" data-kind="signal" cx="-1.27" cy="-29.5" r="1" fill="none"><title>Servo output 3 (printed 3): 3-pin 0.1 in header, rows - + S from the outer edge, pins face up; carries 6 V</title></circle>
+<circle class="anchor" id="anchor-pwm_in_2" data-kind="signal" cx="-1.27" cy="29.5" r="1" fill="none"><title>Signal input 3 (printed 3): 2-pin header, S and - only (no + pin), pins face up; PWM from a controller or servo hub, passed straight through to output 3</title></circle>
+<circle class="anchor" id="anchor-servo_3" data-kind="signal" cx="1.27" cy="-29.5" r="1" fill="none"><title>Servo output 4 (printed 4): 3-pin 0.1 in header, rows - + S from the outer edge, pins face up; carries 6 V</title></circle>
+<circle class="anchor" id="anchor-pwm_in_3" data-kind="signal" cx="1.27" cy="29.5" r="1" fill="none"><title>Signal input 4 (printed 4): 2-pin header, S and - only (no + pin), pins face up; PWM from a controller or servo hub, passed straight through to output 4</title></circle>
+<circle class="anchor" id="anchor-servo_4" data-kind="signal" cx="3.81" cy="-29.5" r="1" fill="none"><title>Servo output 5 (printed 5): 3-pin 0.1 in header, rows - + S from the outer edge, pins face up; carries 6 V</title></circle>
+<circle class="anchor" id="anchor-pwm_in_4" data-kind="signal" cx="3.81" cy="29.5" r="1" fill="none"><title>Signal input 5 (printed 5): 2-pin header, S and - only (no + pin), pins face up; PWM from a controller or servo hub, passed straight through to output 5</title></circle>
+<circle class="anchor" id="anchor-servo_5" data-kind="signal" cx="6.35" cy="-29.5" r="1" fill="none"><title>Servo output 6 (printed 6): 3-pin 0.1 in header, rows - + S from the outer edge, pins face up; carries 6 V</title></circle>
+<circle class="anchor" id="anchor-pwm_in_5" data-kind="signal" cx="6.35" cy="29.5" r="1" fill="none"><title>Signal input 6 (printed 6): 2-pin header, S and - only (no + pin), pins face up; PWM from a controller or servo hub, passed straight through to output 6</title></circle>
+<circle class="anchor" id="anchor-power" data-kind="power" cx="-38" cy="0" r="1" fill="none"><title>XT30 power input (mating XT30 plug, + on the side of the output header): 8-15 V, about 12 V nominal</title></circle>
+</g>
+</svg>

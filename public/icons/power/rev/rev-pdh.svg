@@ -1,0 +1,221 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-10 -6 131 248" width="131mm" height="248mm" font-family="Helvetica, Arial, sans-serif">
+<title>REV Power Distribution Hub</title>
+<desc>Drawn by FRC Team 2102 Paradox. Public domain: CC0 1.0 (https://creativecommons.org/publicdomain/zero/1.0/). https://docs.team2102.org/icons/</desc>
+<rect x="0" y="0" width="111.1" height="225.4" rx="5" fill="#3a3f47" stroke="#1f2328" stroke-width="0.5"/>
+<circle cx="4.8" cy="4.8" r="2.5" fill="#ffffff" stroke="#1f2328" stroke-width="0.3"/>
+<circle cx="106.4" cy="4.8" r="2.5" fill="#ffffff" stroke="#1f2328" stroke-width="0.3"/>
+<circle cx="4.8" cy="220.7" r="2.5" fill="#ffffff" stroke="#1f2328" stroke-width="0.3"/>
+<circle cx="106.4" cy="220.7" r="2.5" fill="#ffffff" stroke="#1f2328" stroke-width="0.3"/>
+<text x="55.55" y="6.8" font-size="3" fill="#f0f3f6" text-anchor="middle" font-weight="bold">REV POWER DISTRIBUTION HUB</text>
+<rect x="87" y="11.9" width="26" height="7" rx="0.6" fill="#cf222e" stroke="#8c959f" stroke-width="0.2"/>
+<text x="110.5" y="16.5" font-size="3" fill="#f0f3f6" text-anchor="middle" font-weight="bold">+</text>
+<rect x="87" y="19.7" width="26" height="7" rx="0.6" fill="#0d1117" stroke="#8c959f" stroke-width="0.2"/>
+<text x="110.5" y="24.3" font-size="3" fill="#f0f3f6" text-anchor="middle" font-weight="bold">−</text>
+<rect x="-4" y="11.9" width="25" height="7" rx="0.6" fill="#0d1117" stroke="#8c959f" stroke-width="0.2"/>
+<text x="-1.5" y="16.5" font-size="3" fill="#f0f3f6" text-anchor="middle" font-weight="bold">−</text>
+<rect x="-4" y="19.7" width="25" height="7" rx="0.6" fill="#cf222e" stroke="#8c959f" stroke-width="0.2"/>
+<text x="-1.5" y="24.3" font-size="3" fill="#f0f3f6" text-anchor="middle" font-weight="bold">+</text>
+<rect x="58.3" y="14.8" width="26.8" height="9" rx="1" fill="#d0d7de"/>
+<text x="71.7" y="21.1" font-size="5" fill="#1f2328" text-anchor="middle" font-weight="bold">9</text>
+<rect x="22.5" y="14.8" width="26.8" height="9" rx="1" fill="#d0d7de"/>
+<text x="35.9" y="21.1" font-size="5" fill="#1f2328" text-anchor="middle" font-weight="bold">10</text>
+<rect x="87" y="27.8" width="26" height="7" rx="0.6" fill="#cf222e" stroke="#8c959f" stroke-width="0.2"/>
+<text x="110.5" y="32.4" font-size="3" fill="#f0f3f6" text-anchor="middle" font-weight="bold">+</text>
+<rect x="87" y="35.6" width="26" height="7" rx="0.6" fill="#0d1117" stroke="#8c959f" stroke-width="0.2"/>
+<text x="110.5" y="40.2" font-size="3" fill="#f0f3f6" text-anchor="middle" font-weight="bold">−</text>
+<rect x="-4" y="27.8" width="25" height="7" rx="0.6" fill="#0d1117" stroke="#8c959f" stroke-width="0.2"/>
+<text x="-1.5" y="32.4" font-size="3" fill="#f0f3f6" text-anchor="middle" font-weight="bold">−</text>
+<rect x="-4" y="35.6" width="25" height="7" rx="0.6" fill="#cf222e" stroke="#8c959f" stroke-width="0.2"/>
+<text x="-1.5" y="40.2" font-size="3" fill="#f0f3f6" text-anchor="middle" font-weight="bold">+</text>
+<rect x="58.3" y="30.7" width="26.8" height="9" rx="1" fill="#d0d7de"/>
+<text x="71.7" y="37" font-size="5" fill="#1f2328" text-anchor="middle" font-weight="bold">8</text>
+<rect x="22.5" y="30.7" width="26.8" height="9" rx="1" fill="#d0d7de"/>
+<text x="35.9" y="37" font-size="5" fill="#1f2328" text-anchor="middle" font-weight="bold">11</text>
+<rect x="87" y="43.2" width="26" height="7" rx="0.6" fill="#cf222e" stroke="#8c959f" stroke-width="0.2"/>
+<text x="110.5" y="47.8" font-size="3" fill="#f0f3f6" text-anchor="middle" font-weight="bold">+</text>
+<rect x="87" y="51" width="26" height="7" rx="0.6" fill="#0d1117" stroke="#8c959f" stroke-width="0.2"/>
+<text x="110.5" y="55.6" font-size="3" fill="#f0f3f6" text-anchor="middle" font-weight="bold">−</text>
+<rect x="-4" y="43.2" width="25" height="7" rx="0.6" fill="#0d1117" stroke="#8c959f" stroke-width="0.2"/>
+<text x="-1.5" y="47.8" font-size="3" fill="#f0f3f6" text-anchor="middle" font-weight="bold">−</text>
+<rect x="-4" y="51" width="25" height="7" rx="0.6" fill="#cf222e" stroke="#8c959f" stroke-width="0.2"/>
+<text x="-1.5" y="55.6" font-size="3" fill="#f0f3f6" text-anchor="middle" font-weight="bold">+</text>
+<rect x="58.3" y="46.1" width="26.8" height="9" rx="1" fill="#d0d7de"/>
+<text x="71.7" y="52.4" font-size="5" fill="#1f2328" text-anchor="middle" font-weight="bold">7</text>
+<rect x="22.5" y="46.1" width="26.8" height="9" rx="1" fill="#d0d7de"/>
+<text x="35.9" y="52.4" font-size="5" fill="#1f2328" text-anchor="middle" font-weight="bold">12</text>
+<rect x="87" y="58.7" width="26" height="7" rx="0.6" fill="#cf222e" stroke="#8c959f" stroke-width="0.2"/>
+<text x="110.5" y="63.3" font-size="3" fill="#f0f3f6" text-anchor="middle" font-weight="bold">+</text>
+<rect x="87" y="66.5" width="26" height="7" rx="0.6" fill="#0d1117" stroke="#8c959f" stroke-width="0.2"/>
+<text x="110.5" y="71.1" font-size="3" fill="#f0f3f6" text-anchor="middle" font-weight="bold">−</text>
+<rect x="-4" y="58.7" width="25" height="7" rx="0.6" fill="#0d1117" stroke="#8c959f" stroke-width="0.2"/>
+<text x="-1.5" y="63.3" font-size="3" fill="#f0f3f6" text-anchor="middle" font-weight="bold">−</text>
+<rect x="-4" y="66.5" width="25" height="7" rx="0.6" fill="#cf222e" stroke="#8c959f" stroke-width="0.2"/>
+<text x="-1.5" y="71.1" font-size="3" fill="#f0f3f6" text-anchor="middle" font-weight="bold">+</text>
+<rect x="58.3" y="61.6" width="26.8" height="9" rx="1" fill="#d0d7de"/>
+<text x="71.7" y="67.9" font-size="5" fill="#1f2328" text-anchor="middle" font-weight="bold">6</text>
+<rect x="22.5" y="61.6" width="26.8" height="9" rx="1" fill="#d0d7de"/>
+<text x="35.9" y="67.9" font-size="5" fill="#1f2328" text-anchor="middle" font-weight="bold">13</text>
+<rect x="87" y="74.7" width="26" height="7" rx="0.6" fill="#cf222e" stroke="#8c959f" stroke-width="0.2"/>
+<text x="110.5" y="79.3" font-size="3" fill="#f0f3f6" text-anchor="middle" font-weight="bold">+</text>
+<rect x="87" y="82.5" width="26" height="7" rx="0.6" fill="#0d1117" stroke="#8c959f" stroke-width="0.2"/>
+<text x="110.5" y="87.1" font-size="3" fill="#f0f3f6" text-anchor="middle" font-weight="bold">−</text>
+<rect x="-4" y="74.7" width="25" height="7" rx="0.6" fill="#0d1117" stroke="#8c959f" stroke-width="0.2"/>
+<text x="-1.5" y="79.3" font-size="3" fill="#f0f3f6" text-anchor="middle" font-weight="bold">−</text>
+<rect x="-4" y="82.5" width="25" height="7" rx="0.6" fill="#cf222e" stroke="#8c959f" stroke-width="0.2"/>
+<text x="-1.5" y="87.1" font-size="3" fill="#f0f3f6" text-anchor="middle" font-weight="bold">+</text>
+<rect x="58.3" y="77.6" width="26.8" height="9" rx="1" fill="#d0d7de"/>
+<text x="71.7" y="83.9" font-size="5" fill="#1f2328" text-anchor="middle" font-weight="bold">5</text>
+<rect x="22.5" y="77.6" width="26.8" height="9" rx="1" fill="#d0d7de"/>
+<text x="35.9" y="83.9" font-size="5" fill="#1f2328" text-anchor="middle" font-weight="bold">14</text>
+<rect x="87" y="92.7" width="26" height="7" rx="0.6" fill="#cf222e" stroke="#8c959f" stroke-width="0.2"/>
+<text x="110.5" y="97.3" font-size="3" fill="#f0f3f6" text-anchor="middle" font-weight="bold">+</text>
+<rect x="87" y="100.5" width="26" height="7" rx="0.6" fill="#0d1117" stroke="#8c959f" stroke-width="0.2"/>
+<text x="110.5" y="105.1" font-size="3" fill="#f0f3f6" text-anchor="middle" font-weight="bold">−</text>
+<rect x="-4" y="92.7" width="25" height="7" rx="0.6" fill="#0d1117" stroke="#8c959f" stroke-width="0.2"/>
+<text x="-1.5" y="97.3" font-size="3" fill="#f0f3f6" text-anchor="middle" font-weight="bold">−</text>
+<rect x="-4" y="100.5" width="25" height="7" rx="0.6" fill="#cf222e" stroke="#8c959f" stroke-width="0.2"/>
+<text x="-1.5" y="105.1" font-size="3" fill="#f0f3f6" text-anchor="middle" font-weight="bold">+</text>
+<rect x="58.3" y="95.6" width="26.8" height="9" rx="1" fill="#d0d7de"/>
+<text x="71.7" y="101.9" font-size="5" fill="#1f2328" text-anchor="middle" font-weight="bold">4</text>
+<rect x="22.5" y="95.6" width="26.8" height="9" rx="1" fill="#d0d7de"/>
+<text x="35.9" y="101.9" font-size="5" fill="#1f2328" text-anchor="middle" font-weight="bold">15</text>
+<rect x="87" y="108.5" width="26" height="7" rx="0.6" fill="#cf222e" stroke="#8c959f" stroke-width="0.2"/>
+<text x="110.5" y="113.1" font-size="3" fill="#f0f3f6" text-anchor="middle" font-weight="bold">+</text>
+<rect x="87" y="116.3" width="26" height="7" rx="0.6" fill="#0d1117" stroke="#8c959f" stroke-width="0.2"/>
+<text x="110.5" y="120.9" font-size="3" fill="#f0f3f6" text-anchor="middle" font-weight="bold">−</text>
+<rect x="-4" y="108.5" width="25" height="7" rx="0.6" fill="#0d1117" stroke="#8c959f" stroke-width="0.2"/>
+<text x="-1.5" y="113.1" font-size="3" fill="#f0f3f6" text-anchor="middle" font-weight="bold">−</text>
+<rect x="-4" y="116.3" width="25" height="7" rx="0.6" fill="#cf222e" stroke="#8c959f" stroke-width="0.2"/>
+<text x="-1.5" y="120.9" font-size="3" fill="#f0f3f6" text-anchor="middle" font-weight="bold">+</text>
+<rect x="58.3" y="111.4" width="26.8" height="9" rx="1" fill="#d0d7de"/>
+<text x="71.7" y="117.7" font-size="5" fill="#1f2328" text-anchor="middle" font-weight="bold">3</text>
+<rect x="22.5" y="111.4" width="26.8" height="9" rx="1" fill="#d0d7de"/>
+<text x="35.9" y="117.7" font-size="5" fill="#1f2328" text-anchor="middle" font-weight="bold">16</text>
+<rect x="87" y="123.8" width="26" height="7" rx="0.6" fill="#cf222e" stroke="#8c959f" stroke-width="0.2"/>
+<text x="110.5" y="128.4" font-size="3" fill="#f0f3f6" text-anchor="middle" font-weight="bold">+</text>
+<rect x="87" y="131.6" width="26" height="7" rx="0.6" fill="#0d1117" stroke="#8c959f" stroke-width="0.2"/>
+<text x="110.5" y="136.2" font-size="3" fill="#f0f3f6" text-anchor="middle" font-weight="bold">−</text>
+<rect x="-4" y="123.8" width="25" height="7" rx="0.6" fill="#0d1117" stroke="#8c959f" stroke-width="0.2"/>
+<text x="-1.5" y="128.4" font-size="3" fill="#f0f3f6" text-anchor="middle" font-weight="bold">−</text>
+<rect x="-4" y="131.6" width="25" height="7" rx="0.6" fill="#cf222e" stroke="#8c959f" stroke-width="0.2"/>
+<text x="-1.5" y="136.2" font-size="3" fill="#f0f3f6" text-anchor="middle" font-weight="bold">+</text>
+<rect x="58.3" y="126.7" width="26.8" height="9" rx="1" fill="#d0d7de"/>
+<text x="71.7" y="133" font-size="5" fill="#1f2328" text-anchor="middle" font-weight="bold">2</text>
+<rect x="22.5" y="126.7" width="26.8" height="9" rx="1" fill="#d0d7de"/>
+<text x="35.9" y="133" font-size="5" fill="#1f2328" text-anchor="middle" font-weight="bold">17</text>
+<rect x="87" y="139.1" width="26" height="7" rx="0.6" fill="#cf222e" stroke="#8c959f" stroke-width="0.2"/>
+<text x="110.5" y="143.7" font-size="3" fill="#f0f3f6" text-anchor="middle" font-weight="bold">+</text>
+<rect x="87" y="146.9" width="26" height="7" rx="0.6" fill="#0d1117" stroke="#8c959f" stroke-width="0.2"/>
+<text x="110.5" y="151.5" font-size="3" fill="#f0f3f6" text-anchor="middle" font-weight="bold">−</text>
+<rect x="-4" y="139.1" width="25" height="7" rx="0.6" fill="#0d1117" stroke="#8c959f" stroke-width="0.2"/>
+<text x="-1.5" y="143.7" font-size="3" fill="#f0f3f6" text-anchor="middle" font-weight="bold">−</text>
+<rect x="-4" y="146.9" width="25" height="7" rx="0.6" fill="#cf222e" stroke="#8c959f" stroke-width="0.2"/>
+<text x="-1.5" y="151.5" font-size="3" fill="#f0f3f6" text-anchor="middle" font-weight="bold">+</text>
+<rect x="58.3" y="142" width="26.8" height="9" rx="1" fill="#d0d7de"/>
+<text x="71.7" y="148.3" font-size="5" fill="#1f2328" text-anchor="middle" font-weight="bold">1</text>
+<rect x="22.5" y="142" width="26.8" height="9" rx="1" fill="#d0d7de"/>
+<text x="35.9" y="148.3" font-size="5" fill="#1f2328" text-anchor="middle" font-weight="bold">18</text>
+<rect x="87" y="154.5" width="26" height="7" rx="0.6" fill="#cf222e" stroke="#8c959f" stroke-width="0.2"/>
+<text x="110.5" y="159.1" font-size="3" fill="#f0f3f6" text-anchor="middle" font-weight="bold">+</text>
+<rect x="87" y="162.3" width="26" height="7" rx="0.6" fill="#0d1117" stroke="#8c959f" stroke-width="0.2"/>
+<text x="110.5" y="166.9" font-size="3" fill="#f0f3f6" text-anchor="middle" font-weight="bold">−</text>
+<rect x="-4" y="154.5" width="25" height="7" rx="0.6" fill="#0d1117" stroke="#8c959f" stroke-width="0.2"/>
+<text x="-1.5" y="159.1" font-size="3" fill="#f0f3f6" text-anchor="middle" font-weight="bold">−</text>
+<rect x="-4" y="162.3" width="25" height="7" rx="0.6" fill="#cf222e" stroke="#8c959f" stroke-width="0.2"/>
+<text x="-1.5" y="166.9" font-size="3" fill="#f0f3f6" text-anchor="middle" font-weight="bold">+</text>
+<rect x="58.3" y="157.4" width="26.8" height="9" rx="1" fill="#d0d7de"/>
+<text x="71.7" y="163.7" font-size="5" fill="#1f2328" text-anchor="middle" font-weight="bold">0</text>
+<rect x="22.5" y="157.4" width="26.8" height="9" rx="1" fill="#d0d7de"/>
+<text x="35.9" y="163.7" font-size="5" fill="#1f2328" text-anchor="middle" font-weight="bold">19</text>
+<rect x="-4" y="172" width="16.5" height="3.2" rx="0.4" fill="#0d1117" stroke="#8c959f" stroke-width="0.2"/>
+<rect x="-4" y="175.6" width="16.5" height="3.2" rx="0.4" fill="#cf222e" stroke="#8c959f" stroke-width="0.2"/>
+<text x="-1.6" y="174.4" font-size="2.2" fill="#f0f3f6" text-anchor="middle" font-weight="bold">−</text>
+<text x="-1.6" y="178" font-size="2.2" fill="#f0f3f6" text-anchor="middle" font-weight="bold">+</text>
+<rect x="23.5" y="172.8" width="13.9" height="5.2" rx="0.6" fill="#d0d7de"/>
+<text x="30.45" y="176.6" font-size="3.4" fill="#1f2328" text-anchor="middle" font-weight="bold">20</text>
+<rect x="-4" y="179.2" width="16.5" height="3.2" rx="0.4" fill="#0d1117" stroke="#8c959f" stroke-width="0.2"/>
+<rect x="-4" y="182.8" width="16.5" height="3.2" rx="0.4" fill="#cf222e" stroke="#8c959f" stroke-width="0.2"/>
+<text x="-1.6" y="181.6" font-size="2.2" fill="#f0f3f6" text-anchor="middle" font-weight="bold">−</text>
+<text x="-1.6" y="185.2" font-size="2.2" fill="#f0f3f6" text-anchor="middle" font-weight="bold">+</text>
+<rect x="23.5" y="180" width="13.9" height="5.2" rx="0.6" fill="#d0d7de"/>
+<text x="30.45" y="183.8" font-size="3.4" fill="#1f2328" text-anchor="middle" font-weight="bold">21</text>
+<rect x="-4" y="186.4" width="16.5" height="3.2" rx="0.4" fill="#0d1117" stroke="#8c959f" stroke-width="0.2"/>
+<rect x="-4" y="190" width="16.5" height="3.2" rx="0.4" fill="#cf222e" stroke="#8c959f" stroke-width="0.2"/>
+<text x="-1.6" y="188.8" font-size="2.2" fill="#f0f3f6" text-anchor="middle" font-weight="bold">−</text>
+<text x="-1.6" y="192.4" font-size="2.2" fill="#f0f3f6" text-anchor="middle" font-weight="bold">+</text>
+<rect x="23.5" y="187.2" width="13.9" height="5.2" rx="0.6" fill="#d0d7de"/>
+<text x="30.45" y="191" font-size="3.4" fill="#1f2328" text-anchor="middle" font-weight="bold">22</text>
+<rect x="-4" y="193.6" width="16.5" height="3.2" rx="0.4" fill="#0d1117" stroke="#8c959f" stroke-width="0.2"/>
+<rect x="-4" y="197.2" width="16.5" height="3.2" rx="0.4" fill="#cf222e" stroke="#8c959f" stroke-width="0.2"/>
+<text x="-1.6" y="196" font-size="2.2" fill="#f0f3f6" text-anchor="middle" font-weight="bold">−</text>
+<text x="-1.6" y="199.6" font-size="2.2" fill="#f0f3f6" text-anchor="middle" font-weight="bold">+</text>
+<rect x="23.5" y="194.4" width="13.9" height="5.2" rx="0.6" fill="#f0883e"/>
+<text x="30.45" y="198.2" font-size="3.4" fill="#1f2328" text-anchor="middle" font-weight="bold">23</text>
+<text x="38.6" y="197.8" font-size="1.6" fill="#f0883e" text-anchor="start">SWITCHABLE</text>
+<rect x="45" y="180" width="28" height="15" rx="1" fill="#0d1117"/>
+<text x="59" y="191.2" font-size="8" fill="#f85149" text-anchor="middle" font-family="Menlo, Consolas, monospace">12.6</text>
+<text x="59" y="198.6" font-size="1.7" fill="#aab2bd" text-anchor="middle">BATTERY VOLTAGE</text>
+<text x="81.5" y="198.6" font-size="1.7" fill="#aab2bd" text-anchor="middle">+  BATTERY INPUT  −</text>
+<rect x="67.5" y="202" width="13" height="25" rx="1.2" fill="#cf222e" stroke="#8c959f" stroke-width="0.3"/>
+<rect x="82.5" y="202" width="13" height="25" rx="1.2" fill="#0d1117" stroke="#8c959f" stroke-width="0.3"/>
+<text x="74" y="216" font-size="7" fill="#f0f3f6" text-anchor="middle" font-weight="bold">+</text>
+<text x="89" y="216" font-size="7" fill="#f0f3f6" text-anchor="middle" font-weight="bold">−</text>
+<rect x="11" y="214.3" width="9" height="3.4" rx="1.7" fill="#16191d"/>
+<rect x="12.6" y="215.4" width="5.8" height="1.2" rx="0.6" fill="#59636e"/>
+<text x="15.5" y="221.4" font-size="1.8" fill="#aab2bd" text-anchor="middle">USB-C</text>
+<text x="30.6" y="205.4" font-size="2" fill="#f0f3f6" text-anchor="middle" font-weight="bold">CAN</text>
+<rect x="23.7" y="210" width="3" height="10" rx="0.4" fill="#e3b341" stroke="#8c959f" stroke-width="0.2"/>
+<text x="25.2" y="208.6" font-size="1.8" fill="#f0f3f6" text-anchor="middle">H</text>
+<rect x="27.7" y="210" width="3" height="10" rx="0.4" fill="#2da44e" stroke="#8c959f" stroke-width="0.2"/>
+<text x="29.2" y="208.6" font-size="1.8" fill="#f0f3f6" text-anchor="middle">L</text>
+<rect x="31" y="210" width="3" height="10" rx="0.4" fill="#e3b341" stroke="#8c959f" stroke-width="0.2"/>
+<text x="32.5" y="208.6" font-size="1.8" fill="#f0f3f6" text-anchor="middle">H</text>
+<rect x="34.6" y="210" width="3" height="10" rx="0.4" fill="#2da44e" stroke="#8c959f" stroke-width="0.2"/>
+<text x="36.1" y="208.6" font-size="1.8" fill="#f0f3f6" text-anchor="middle">L</text>
+<rect x="41" y="209" width="5" height="15" rx="0.6" fill="#16191d"/>
+<rect x="42" y="210.5" width="3" height="5" rx="0.4" fill="#d0d7de"/>
+<text x="43.5" y="207.4" font-size="1.6" fill="#aab2bd" text-anchor="middle">TERM</text>
+<text x="47" y="212.6" font-size="1.4" fill="#aab2bd" text-anchor="start">ON</text>
+<circle cx="58" cy="205.5" r="1" fill="#58a6ff"/>
+<text x="55.8" y="206.1" font-size="1.5" fill="#aab2bd" text-anchor="end">STATUS</text>
+<circle cx="58" cy="209.6" r="1.1" fill="#16191d" stroke="#aab2bd" stroke-width="0.2"/>
+<text x="55.8" y="210.2" font-size="1.5" fill="#aab2bd" text-anchor="end">MODE</text>
+<rect x="50" y="213" width="4.2" height="8" rx="0.4" fill="#d0d7de"/>
+<rect x="54.8" y="213" width="4.2" height="8" rx="0.4" fill="#d0d7de"/>
+<text x="54.5" y="223.6" font-size="1.5" fill="#aab2bd" text-anchor="middle">RS485</text>
+<g class="caption">
+<text x="55.55" y="234" font-size="4" fill="#1f2328" text-anchor="middle" font-weight="bold">REV Power Distribution Hub</text>
+<text x="55.55" y="238.2" font-size="2.3" fill="#57606a" text-anchor="middle">111.1 × 225.4 mm · top view · battery end at the bottom</text>
+</g>
+<g id="anchors">
+<circle class="anchor" id="anchor-ch9" data-kind="power" cx="113" cy="19.3" r="1" fill="none"><title>High-current channel 9 (40 A max, ATO breaker)</title></circle>
+<circle class="anchor" id="anchor-ch10" data-kind="power" cx="-4" cy="19.3" r="1" fill="none"><title>High-current channel 10 (40 A max, ATO breaker)</title></circle>
+<circle class="anchor" id="anchor-ch8" data-kind="power" cx="113" cy="35.2" r="1" fill="none"><title>High-current channel 8 (40 A max, ATO breaker)</title></circle>
+<circle class="anchor" id="anchor-ch11" data-kind="power" cx="-4" cy="35.2" r="1" fill="none"><title>High-current channel 11 (40 A max, ATO breaker)</title></circle>
+<circle class="anchor" id="anchor-ch7" data-kind="power" cx="113" cy="50.6" r="1" fill="none"><title>High-current channel 7 (40 A max, ATO breaker)</title></circle>
+<circle class="anchor" id="anchor-ch12" data-kind="power" cx="-4" cy="50.6" r="1" fill="none"><title>High-current channel 12 (40 A max, ATO breaker)</title></circle>
+<circle class="anchor" id="anchor-ch6" data-kind="power" cx="113" cy="66.1" r="1" fill="none"><title>High-current channel 6 (40 A max, ATO breaker)</title></circle>
+<circle class="anchor" id="anchor-ch13" data-kind="power" cx="-4" cy="66.1" r="1" fill="none"><title>High-current channel 13 (40 A max, ATO breaker)</title></circle>
+<circle class="anchor" id="anchor-ch5" data-kind="power" cx="113" cy="82.1" r="1" fill="none"><title>High-current channel 5 (40 A max, ATO breaker)</title></circle>
+<circle class="anchor" id="anchor-ch14" data-kind="power" cx="-4" cy="82.1" r="1" fill="none"><title>High-current channel 14 (40 A max, ATO breaker)</title></circle>
+<circle class="anchor" id="anchor-ch4" data-kind="power" cx="113" cy="100.1" r="1" fill="none"><title>High-current channel 4 (40 A max, ATO breaker)</title></circle>
+<circle class="anchor" id="anchor-ch15" data-kind="power" cx="-4" cy="100.1" r="1" fill="none"><title>High-current channel 15 (40 A max, ATO breaker)</title></circle>
+<circle class="anchor" id="anchor-ch3" data-kind="power" cx="113" cy="115.9" r="1" fill="none"><title>High-current channel 3 (40 A max, ATO breaker)</title></circle>
+<circle class="anchor" id="anchor-ch16" data-kind="power" cx="-4" cy="115.9" r="1" fill="none"><title>High-current channel 16 (40 A max, ATO breaker)</title></circle>
+<circle class="anchor" id="anchor-ch2" data-kind="power" cx="113" cy="131.2" r="1" fill="none"><title>High-current channel 2 (40 A max, ATO breaker)</title></circle>
+<circle class="anchor" id="anchor-ch17" data-kind="power" cx="-4" cy="131.2" r="1" fill="none"><title>High-current channel 17 (40 A max, ATO breaker)</title></circle>
+<circle class="anchor" id="anchor-ch1" data-kind="power" cx="113" cy="146.5" r="1" fill="none"><title>High-current channel 1 (40 A max, ATO breaker)</title></circle>
+<circle class="anchor" id="anchor-ch18" data-kind="power" cx="-4" cy="146.5" r="1" fill="none"><title>High-current channel 18 (40 A max, ATO breaker)</title></circle>
+<circle class="anchor" id="anchor-ch0" data-kind="power" cx="113" cy="161.9" r="1" fill="none"><title>High-current channel 0 (40 A max, ATO breaker)</title></circle>
+<circle class="anchor" id="anchor-ch19" data-kind="power" cx="-4" cy="161.9" r="1" fill="none"><title>High-current channel 19 (40 A max, ATO breaker)</title></circle>
+<circle class="anchor" id="anchor-ch20" data-kind="power" cx="-4" cy="175.4" r="1" fill="none"><title>Low-current channel 20 (15 A, ATM fuse)</title></circle>
+<circle class="anchor" id="anchor-ch21" data-kind="power" cx="-4" cy="182.6" r="1" fill="none"><title>Low-current channel 21 (15 A, ATM fuse)</title></circle>
+<circle class="anchor" id="anchor-ch22" data-kind="power" cx="-4" cy="189.8" r="1" fill="none"><title>Low-current channel 22 (15 A, ATM fuse)</title></circle>
+<circle class="anchor" id="anchor-ch23" data-kind="power" cx="-4" cy="197" r="1" fill="none"><title>Switchable channel 23 (15 A, ATM fuse, CAN-controlled)</title></circle>
+<circle class="anchor" id="anchor-batt_pos" data-kind="power" cx="74" cy="227" r="1" fill="none"><title>BATTERY INPUT + (from the 120 A main breaker, 6 AWG)</title></circle>
+<circle class="anchor" id="anchor-batt_neg" data-kind="power" cx="89" cy="227" r="1" fill="none"><title>BATTERY INPUT − (to the battery, 6 AWG)</title></circle>
+<circle class="anchor" id="anchor-usb" data-kind="usb" cx="15.5" cy="225.4" r="1" fill="none"><title>USB-C (configuration, USB-to-CAN)</title></circle>
+<circle class="anchor" id="anchor-can_a" data-kind="can" cx="27.2" cy="225.4" r="1" fill="none"><title>CAN H/L pair A</title></circle>
+<circle class="anchor" id="anchor-can_b" data-kind="can" cx="34.3" cy="225.4" r="1" fill="none"><title>CAN H/L pair B</title></circle>
+</g>
+</svg>

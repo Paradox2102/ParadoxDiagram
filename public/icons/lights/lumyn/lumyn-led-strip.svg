@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -9 160 44" width="160mm" height="44mm" font-family="Helvetica, Arial, sans-serif">
+<title>Lumyn LED Strip</title>
+<desc>Drawn by FRC Team 2102 Paradox. Public domain: CC0 1.0 (https://creativecommons.org/publicdomain/zero/1.0/). https://docs.team2102.org/icons/</desc>
+<rect x="66" y="0" width="83.3333" height="10" rx="0.3" fill="#1b1f24" stroke="#1f2328" stroke-width="0.4"/>
+<rect x="66" y="1.7" width="2.4" height="1.6" rx="0.4" fill="#b5651d"/>
+<rect x="66" y="4.2" width="2.4" height="1.6" rx="0.4" fill="#b5651d"/>
+<rect x="66" y="6.7" width="2.4" height="1.6" rx="0.4" fill="#b5651d"/>
+<rect x="71.8333" y="2.5" width="5" height="5" rx="0.4" fill="#efe6cc" stroke="#8c959f" stroke-width="0.2"/>
+<circle cx="74.3333" cy="5" r="1.5" fill="#d9c98a"/>
+<rect x="71.8333" y="2.5" width="0.9" height="0.9" rx="0" fill="#8c7a3e"/>
+<path d="M 79.3333 3.6 L 79.3333 6.4 L 80.9333 5 Z" fill="#f0f3f6"/>
+<rect x="81.4667" y="1.7" width="2.4" height="1.6" rx="0.4" fill="#b5651d"/>
+<rect x="81.4667" y="4.2" width="2.4" height="1.6" rx="0.4" fill="#b5651d"/>
+<rect x="81.4667" y="6.7" width="2.4" height="1.6" rx="0.4" fill="#b5651d"/>
+<rect x="88.5" y="2.5" width="5" height="5" rx="0.4" fill="#efe6cc" stroke="#8c959f" stroke-width="0.2"/>
+<circle cx="91" cy="5" r="1.5" fill="#d9c98a"/>
+<rect x="88.5" y="2.5" width="0.9" height="0.9" rx="0" fill="#8c7a3e"/>
+<path d="M 96 3.6 L 96 6.4 L 97.6 5 Z" fill="#f0f3f6"/>
+<rect x="98.1333" y="1.7" width="2.4" height="1.6" rx="0.4" fill="#b5651d"/>
+<rect x="98.1333" y="4.2" width="2.4" height="1.6" rx="0.4" fill="#b5651d"/>
+<rect x="98.1333" y="6.7" width="2.4" height="1.6" rx="0.4" fill="#b5651d"/>
+<rect x="105.167" y="2.5" width="5" height="5" rx="0.4" fill="#efe6cc" stroke="#8c959f" stroke-width="0.2"/>
+<circle cx="107.667" cy="5" r="1.5" fill="#d9c98a"/>
+<rect x="105.167" y="2.5" width="0.9" height="0.9" rx="0" fill="#8c7a3e"/>
+<path d="M 112.667 3.6 L 112.667 6.4 L 114.267 5 Z" fill="#f0f3f6"/>
+<rect x="114.8" y="1.7" width="2.4" height="1.6" rx="0.4" fill="#b5651d"/>
+<rect x="114.8" y="4.2" width="2.4" height="1.6" rx="0.4" fill="#b5651d"/>
+<rect x="114.8" y="6.7" width="2.4" height="1.6" rx="0.4" fill="#b5651d"/>
+<rect x="121.833" y="2.5" width="5" height="5" rx="0.4" fill="#efe6cc" stroke="#8c959f" stroke-width="0.2"/>
+<circle cx="124.333" cy="5" r="1.5" fill="#d9c98a"/>
+<rect x="121.833" y="2.5" width="0.9" height="0.9" rx="0" fill="#8c7a3e"/>
+<path d="M 129.333 3.6 L 129.333 6.4 L 130.933 5 Z" fill="#f0f3f6"/>
+<rect x="131.467" y="1.7" width="2.4" height="1.6" rx="0.4" fill="#b5651d"/>
+<rect x="131.467" y="4.2" width="2.4" height="1.6" rx="0.4" fill="#b5651d"/>
+<rect x="131.467" y="6.7" width="2.4" height="1.6" rx="0.4" fill="#b5651d"/>
+<rect x="138.5" y="2.5" width="5" height="5" rx="0.4" fill="#efe6cc" stroke="#8c959f" stroke-width="0.2"/>
+<circle cx="141" cy="5" r="1.5" fill="#d9c98a"/>
+<rect x="138.5" y="2.5" width="0.9" height="0.9" rx="0" fill="#8c7a3e"/>
+<path d="M 146 3.6 L 146 6.4 L 147.6 5 Z" fill="#f0f3f6"/>
+<rect x="146.933" y="1.7" width="2.4" height="1.6" rx="0.4" fill="#b5651d"/>
+<rect x="146.933" y="4.2" width="2.4" height="1.6" rx="0.4" fill="#b5651d"/>
+<rect x="146.933" y="6.7" width="2.4" height="1.6" rx="0.4" fill="#b5651d"/>
+<text x="69" y="2.95" font-size="1.3" fill="#aab2bd" text-anchor="start">+5V</text>
+<text x="69" y="5.45" font-size="1.3" fill="#aab2bd" text-anchor="start">Din</text>
+<text x="69" y="7.95" font-size="1.3" fill="#aab2bd" text-anchor="start">GND</text>
+<path d="M 150.933 -2.5 L 150.933 12.5" stroke="#57606a" stroke-width="0.4" stroke-dasharray="1.2 1.2" fill="none"/>
+<text x="150.933" y="-4.2" font-size="2" fill="#57606a" text-anchor="middle">cut line</text>
+<rect x="20" y="-0.1" width="8" height="10.2" rx="0.8" fill="#16191d" stroke="#8c959f" stroke-width="0.25"/>
+<rect x="21.2" y="1.2" width="5.6" height="7.6" rx="0.4" fill="#0d1014"/>
+<path d="M 28 2.5 L 67.2 2.5" fill="none" stroke="#8c959f" stroke-width="1.2" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 28 2.5 L 67.2 2.5" fill="none" stroke="#cf222e" stroke-width="0.9" stroke-linejoin="round" stroke-linecap="round"/>
+<rect x="18.4" y="1.95" width="1.8" height="1.1" rx="0.2" fill="#d4a72c"/>
+<path d="M 28 5 L 67.2 5" fill="none" stroke="#8c959f" stroke-width="1.2" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 28 5 L 67.2 5" fill="none" stroke="#2f9e6f" stroke-width="0.9" stroke-linejoin="round" stroke-linecap="round"/>
+<rect x="18.4" y="4.45" width="1.8" height="1.1" rx="0.2" fill="#d4a72c"/>
+<path d="M 28 7.5 L 67.2 7.5" fill="none" stroke="#8c959f" stroke-width="1.2" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 28 7.5 L 67.2 7.5" fill="none" stroke="#f0f3f6" stroke-width="0.9" stroke-linejoin="round" stroke-linecap="round"/>
+<rect x="18.4" y="6.95" width="1.8" height="1.1" rx="0.2" fill="#d4a72c"/>
+<rect x="21.2" y="-0.1" width="3" height="1.1" rx="0.3" fill="#59636e"/>
+<g class="lead-labels">
+<text x="16.8" y="3.15" font-size="1.9" fill="#1f2328" text-anchor="end" font-weight="bold">+5V (red)</text>
+<text x="16.8" y="5.65" font-size="1.9" fill="#1f2328" text-anchor="end" font-weight="bold">DATA (green)</text>
+<text x="16.8" y="8.15" font-size="1.9" fill="#1f2328" text-anchor="end" font-weight="bold">GND (white)</text>
+<text x="24" y="-4.2" font-size="2.2" fill="#1f2328" text-anchor="middle" font-weight="bold">JST-SM male, 3-pin</text>
+<text x="107.667" y="15.2" font-size="2.2" fill="#57606a" text-anchor="middle">cut section, 5 LEDs shown</text>
+</g>
+<g class="caption">
+<text x="78" y="27.5" font-size="4" fill="#1f2328" text-anchor="middle" font-weight="bold">Lumyn LED Strip</text>
+<text x="78" y="31.7" font-size="2.3" fill="#57606a" text-anchor="middle">83 × 10 mm section · top view (LED face) · 60 LEDs/m shown; also 30 and 144 LEDs/m, 1, 3 and 5 m</text>
+</g>
+<g id="anchors">
+<circle class="anchor" id="anchor-v5" data-kind="power" cx="18.4" cy="2.5" r="1" fill="none"><title>+5 V (red wire): 5 V from the ConnectorX regulator, shared by every LED on the channel</title></circle>
+<circle class="anchor" id="anchor-data" data-kind="signal" cx="18.4" cy="5" r="1" fill="none"><title>DATA (green wire): WS2812B data in, 3.3 V logic from the ConnectorX channel</title></circle>
+<circle class="anchor" id="anchor-gnd" data-kind="power" cx="18.4" cy="7.5" r="1" fill="none"><title>GND (white wire): ground return to the ConnectorX</title></circle>
+</g>
+</svg>

@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-38 -34 76 118" width="76mm" height="118mm" font-family="Helvetica, Arial, sans-serif">
+<title>REV NEO 2.0</title>
+<desc>Drawn by FRC Team 2102 Paradox. Public domain: CC0 1.0 (https://creativecommons.org/publicdomain/zero/1.0/). https://docs.team2102.org/icons/</desc>
+<rect x="0.2" y="22" width="18.4" height="12" rx="1.6" fill="#16191d" stroke="#4a515b" stroke-width="0.35"/>
+<path d="M 25.4 -15.96 A 30 30 0 0 0 -25.4 -15.96 L -25.4 15.96 A 30 30 0 0 0 25.4 15.96 Z" fill="#262b32" stroke="#1f2328" stroke-width="0.5" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="0" cy="25.4" r="2" fill="#ffffff" stroke="#4a515b" stroke-width="0.3"/>
+<circle cx="17.9605" cy="17.9605" r="2" fill="#ffffff" stroke="#4a515b" stroke-width="0.3"/>
+<circle cx="17.9605" cy="-17.9605" r="2" fill="#ffffff" stroke="#4a515b" stroke-width="0.3"/>
+<circle cx="3.1106e-15" cy="-25.4" r="2" fill="#ffffff" stroke="#4a515b" stroke-width="0.3"/>
+<circle cx="-17.9605" cy="-17.9605" r="2" fill="#ffffff" stroke="#4a515b" stroke-width="0.3"/>
+<circle cx="-17.9605" cy="17.9605" r="2" fill="#ffffff" stroke="#4a515b" stroke-width="0.3"/>
+<g transform="translate(-8.8 19.5) rotate(117)">
+<rect x="0" y="-3.6" width="14" height="7.2" rx="0.8" fill="#ffffff" stroke="#4a515b" stroke-width="0.3"/>
+</g>
+<g transform="translate(-8.8 19.5) rotate(117)">
+<rect x="3" y="-2.4" width="9.5" height="4.8" rx="0.5" fill="#e9e4d4" stroke="#8c959f" stroke-width="0.2"/>
+<rect x="9.3" y="-1.2" width="2.4" height="2.4" rx="0.3" fill="#cfc9b6"/>
+</g>
+<path d="M -16.48 29.62 L -19.20 34.96 L -26.40 44.17 L -28.00 52.98 L -28.00 58.00" fill="none" stroke="#8c959f" stroke-width="1.15" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M -15.68 30.02 L -18.40 35.37 L -25.04 44.49 L -26.00 52.98 L -26.00 58.00" fill="none" stroke="#8c959f" stroke-width="1.15" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M -14.88 30.43 L -17.60 35.78 L -23.68 44.82 L -24.00 52.98 L -24.00 58.00" fill="none" stroke="#8c959f" stroke-width="1.15" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M -14.07 30.84 L -16.80 36.19 L -22.32 45.15 L -22.00 52.98 L -22.00 58.00" fill="none" stroke="#8c959f" stroke-width="1.15" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M -13.27 31.25 L -16.00 36.60 L -20.96 45.47 L -20.00 52.98 L -20.00 58.00" fill="none" stroke="#8c959f" stroke-width="1.15" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M -12.47 31.66 L -15.19 37.01 L -19.60 45.80 L -18.00 52.98 L -18.00 58.00" fill="none" stroke="#8c959f" stroke-width="1.15" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M -16.48 29.62 L -19.20 34.96 L -26.40 44.17 L -28.00 52.98 L -28.00 58.00" fill="none" stroke="#16191d" stroke-width="0.8" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M -15.68 30.02 L -18.40 35.37 L -25.04 44.49 L -26.00 52.98 L -26.00 58.00" fill="none" stroke="#1f4fd8" stroke-width="0.8" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M -14.88 30.43 L -17.60 35.78 L -23.68 44.82 L -24.00 52.98 L -24.00 58.00" fill="none" stroke="#f2c200" stroke-width="0.8" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M -14.07 30.84 L -16.80 36.19 L -22.32 45.15 L -22.00 52.98 L -22.00 58.00" fill="none" stroke="#1a8a5a" stroke-width="0.8" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M -13.27 31.25 L -16.00 36.60 L -20.96 45.47 L -20.00 52.98 L -20.00 58.00" fill="none" stroke="#f6f8fa" stroke-width="0.8" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M -12.47 31.66 L -15.19 37.01 L -19.60 45.80 L -18.00 52.98 L -18.00 58.00" fill="none" stroke="#cf222e" stroke-width="0.8" stroke-linejoin="round" stroke-linecap="round"/>
+<rect x="-29.95" y="58" width="13.9" height="4.6" rx="0.4" fill="#e9e4d4" stroke="#8c959f" stroke-width="0.2"/>
+<rect x="-28.5" y="59.6" width="1" height="1.4" rx="0" fill="#59636e"/>
+<rect x="-26.5" y="59.6" width="1" height="1.4" rx="0" fill="#59636e"/>
+<rect x="-24.5" y="59.6" width="1" height="1.4" rx="0" fill="#59636e"/>
+<rect x="-22.5" y="59.6" width="1" height="1.4" rx="0" fill="#59636e"/>
+<rect x="-20.5" y="59.6" width="1" height="1.4" rx="0" fill="#59636e"/>
+<rect x="-18.5" y="59.6" width="1" height="1.4" rx="0" fill="#59636e"/>
+<circle cx="0" cy="0" r="24.65" fill="#3a3f47" stroke="#1f2328" stroke-width="0.5"/>
+<circle cx="0" cy="0" r="20.3" fill="none" stroke="#4a515b" stroke-width="0.4"/>
+<circle cx="0" cy="0" r="8" fill="none" stroke="#454c55" stroke-width="0.25" stroke-dasharray="1 1.2"/>
+<path d="M 4.4 33 L 4.4 35.5 L 4.9 41 L 4.9 58" fill="none" stroke="#8c959f" stroke-width="2.3" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 4.4 33 L 4.4 35.5 L 4.9 41 L 4.9 58" fill="none" stroke="#f6f8fa" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 4.9 58 L 4.9 60.2" fill="none" stroke="#c9d1d9" stroke-width="1.4" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 9 33 L 9 35.5 L 9 41 L 9 58" fill="none" stroke="#8c959f" stroke-width="2.3" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 9 33 L 9 35.5 L 9 41 L 9 58" fill="none" stroke="#cf222e" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 9 58 L 9 60.2" fill="none" stroke="#c9d1d9" stroke-width="1.4" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 13.6 33 L 13.6 35.5 L 13.1 41 L 13.1 58" fill="none" stroke="#8c959f" stroke-width="2.3" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 13.6 33 L 13.6 35.5 L 13.1 41 L 13.1 58" fill="none" stroke="#0d1117" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 13.1 58 L 13.1 60.2" fill="none" stroke="#c9d1d9" stroke-width="1.4" stroke-linejoin="round" stroke-linecap="round"/>
+<g class="lead-labels">
+<text x="4.9" y="67" font-size="2.2" fill="#1f2328" text-anchor="middle" font-weight="bold">C</text>
+<text x="9" y="67" font-size="2.2" fill="#1f2328" text-anchor="middle" font-weight="bold">A</text>
+<text x="13.1" y="67" font-size="2.2" fill="#1f2328" text-anchor="middle" font-weight="bold">B</text>
+</g>
+<g class="lead-labels">
+<text x="-23" y="67" font-size="2.2" fill="#1f2328" text-anchor="middle" font-weight="bold">ENCODER</text>
+</g>
+<g class="caption">
+<text x="0" y="75" font-size="4" fill="#1f2328" text-anchor="middle" font-weight="bold">REV NEO 2.0</text>
+<text x="0" y="79.2" font-size="2.3" fill="#57606a" text-anchor="middle">60 × 50.8 mm · back view · leads and cable short, exits turned down</text>
+</g>
+<g id="anchors">
+<circle class="anchor" id="anchor-phase_c" data-kind="power" cx="4.9" cy="60.2" r="1" fill="none"><title>Phase C: white 12 AWG, 150 mm (to SPARK MAX C)</title></circle>
+<circle class="anchor" id="anchor-phase_a" data-kind="power" cx="9" cy="60.2" r="1" fill="none"><title>Phase A: red 12 AWG, 150 mm (to SPARK MAX A)</title></circle>
+<circle class="anchor" id="anchor-phase_b" data-kind="power" cx="13.1" cy="60.2" r="1" fill="none"><title>Phase B: black 12 AWG, 150 mm (to SPARK MAX B)</title></circle>
+<circle class="anchor" id="anchor-encoder" data-kind="signal" cx="-23" cy="62.6" r="1" fill="none"><title>Sensor cable REV-11-1287: 2x3 PHSD plug at the motor, 6-pin JST PH at the controller (SPARK ENCODER port)</title></circle>
+</g>
+</svg>

@@ -1,0 +1,183 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-46 -46 92 103" width="92mm" height="103mm" font-family="Helvetica, Arial, sans-serif">
+<title>Lumyn ConnectorX Animate</title>
+<desc>Drawn by FRC Team 2102 Paradox. Public domain: CC0 1.0 (https://creativecommons.org/publicdomain/zero/1.0/). https://docs.team2102.org/icons/</desc>
+<rect x="-41.5" y="-24" width="83" height="48" rx="4" fill="#1d4ea8" stroke="#1f2328" stroke-width="0.5"/>
+<circle cx="-37.5" cy="-20" r="4" fill="#b8bec6"/>
+<circle cx="-37.5" cy="-20" r="1.6" fill="#ffffff" stroke="#1f2328" stroke-width="0.2"/>
+<circle cx="-37.5" cy="20" r="4" fill="#b8bec6"/>
+<circle cx="-37.5" cy="20" r="1.6" fill="#ffffff" stroke="#1f2328" stroke-width="0.2"/>
+<circle cx="37.5" cy="-20" r="4" fill="#b8bec6"/>
+<circle cx="37.5" cy="-20" r="1.6" fill="#ffffff" stroke="#1f2328" stroke-width="0.2"/>
+<circle cx="37.5" cy="20" r="4" fill="#b8bec6"/>
+<circle cx="37.5" cy="20" r="1.6" fill="#ffffff" stroke="#1f2328" stroke-width="0.2"/>
+<rect x="-40.4" y="-9" width="4" height="4.2" rx="0.3" fill="#b8bec6"/>
+<rect x="-40.4" y="4.8" width="4" height="4.2" rx="0.3" fill="#b8bec6"/>
+<text x="-38.4" y="-10" font-size="1.1" fill="#f0f3f6" text-anchor="middle">GND</text>
+<text x="-38.4" y="10.9" font-size="1.1" fill="#f0f3f6" text-anchor="middle">+5V OUT</text>
+<rect x="-5.45" y="-0.97" width="7" height="7" rx="0.3" fill="#1c2430" stroke="#0f1620" stroke-width="0.2"/>
+<text x="-1.95" y="2.93" font-size="1" fill="#aab2bd" text-anchor="middle">RP2</text>
+<rect x="-0.83" y="-12.25" width="5.3" height="7.8" rx="0.3" fill="#1c2430" stroke="#0f1620" stroke-width="0.2"/>
+<rect x="16.76" y="13.8" width="7" height="6.5" rx="0.3" fill="#1c2430" stroke="#0f1620" stroke-width="0.2"/>
+<rect x="25.65" y="-15.25" width="6.5" height="6.5" rx="0.3" fill="#1c2430" stroke="#0f1620" stroke-width="0.2"/>
+<text x="28.9" y="-11.6" font-size="1" fill="#aab2bd" text-anchor="middle">4R7</text>
+<rect x="18.6" y="-13.43" width="3.5" height="3.5" rx="0.3" fill="#1c2430" stroke="#0f1620" stroke-width="0.2"/>
+<rect x="16.46" y="2.41" width="4.7" height="2.5" rx="0.3" fill="#1c2430" stroke="#0f1620" stroke-width="0.2"/>
+<rect x="16.46" y="-1.68" width="4.7" height="2.5" rx="0.3" fill="#1c2430" stroke="#0f1620" stroke-width="0.2"/>
+<rect x="-14.73" y="-0.74" width="3.2" height="2.5" rx="0.3" fill="#c9b48a"/>
+<rect x="7.15" y="-4.06" width="3.2" height="2.8" rx="0.4" fill="#f0f3f6"/>
+<rect x="-19.25" y="-17.01" width="1.6" height="1" rx="0.15" fill="#e0c88a"/>
+<rect x="12.96" y="15" width="1.6" height="1" rx="0.15" fill="#e0c88a"/>
+<rect x="-3.07" y="-17.13" width="1.6" height="1" rx="0.15" fill="#e0c88a"/>
+<rect x="-4.67" y="17.51" width="1.6" height="1" rx="0.15" fill="#e0c88a"/>
+<rect x="-19.63" y="17.33" width="1.6" height="1" rx="0.15" fill="#e0c88a"/>
+<rect x="26.93" y="17.54" width="1.6" height="1" rx="0.15" fill="#e0c88a"/>
+<rect x="10.14" y="8.19" width="1.6" height="1" rx="0.15" fill="#e0c88a"/>
+<rect x="-0.47" y="11.5" width="11.94" height="11.5" rx="0.4" fill="#8c959f" stroke="#1f2328" stroke-width="0.25"/>
+<rect x="0.9" y="16.75" width="9.2" height="4.9" rx="0" fill="#9aa3ad"/>
+<rect x="1.65" y="11.95" width="0.6" height="1.9" rx="0" fill="#d4a72c"/>
+<rect x="2.75" y="11.95" width="0.6" height="1.9" rx="0" fill="#d4a72c"/>
+<rect x="3.85" y="11.95" width="0.6" height="1.9" rx="0" fill="#d4a72c"/>
+<rect x="4.95" y="11.95" width="0.6" height="1.9" rx="0" fill="#d4a72c"/>
+<rect x="6.05" y="11.95" width="0.6" height="1.9" rx="0" fill="#d4a72c"/>
+<rect x="7.15" y="11.95" width="0.6" height="1.9" rx="0" fill="#d4a72c"/>
+<rect x="8.25" y="11.95" width="0.6" height="1.9" rx="0" fill="#d4a72c"/>
+<rect x="9.35" y="11.95" width="0.6" height="1.9" rx="0" fill="#d4a72c"/>
+<text x="5.5" y="21.45" font-size="1.2" fill="#1f2328" text-anchor="middle">microSD</text>
+<rect x="33.1" y="-4.87" width="7.8" height="8.94" rx="1.2" fill="#8c959f" stroke="#1f2328" stroke-width="0.25"/>
+<rect x="36.3" y="-3.8" width="4.5" height="6.8" rx="1" fill="#16191d"/>
+<rect x="36.9" y="-0.9" width="3.9" height="1" rx="0" fill="#59636e"/>
+<text x="31.9" y="0.1" font-size="1.3" fill="#f0f3f6" text-anchor="end" transform="rotate(0 31.9 0.1)">USB-C</text>
+<rect x="32.3" y="7.4" width="8" height="1.6" rx="0" fill="#8c959f"/>
+<rect x="33.3" y="6.45" width="6" height="3.5" rx="0.3" fill="#2b2f35" stroke="#1f2328" stroke-width="0.2"/>
+<rect x="34.9" y="7.4" width="2.8" height="1.6" rx="0" fill="#23272d"/>
+<text x="31.5" y="8.65" font-size="1.2" fill="#f0f3f6" text-anchor="end">RST</text>
+<rect x="32.3" y="12.8" width="8" height="1.6" rx="0" fill="#8c959f"/>
+<rect x="33.3" y="11.85" width="6" height="3.5" rx="0.3" fill="#2b2f35" stroke="#1f2328" stroke-width="0.2"/>
+<rect x="34.9" y="12.8" width="2.8" height="1.6" rx="0" fill="#23272d"/>
+<text x="31.5" y="14.05" font-size="1.2" fill="#f0f3f6" text-anchor="end">BOOTSEL</text>
+<rect x="6.62" y="-23.1" width="11.36" height="8.2" rx="0.5" fill="#1f6fd0" stroke="#1f2328" stroke-width="0.3"/>
+<rect x="12" y="-22.8" width="0.6" height="7.6" rx="0" fill="#1650a0"/>
+<rect x="8.06" y="-23.1" width="3.4" height="1.3" rx="0" fill="#16191d"/>
+<circle cx="9.76" cy="-17.9" r="2" fill="#cfd6dd" stroke="#1f2328" stroke-width="0.2"/>
+<path d="M 8.46 -17.9 L 11.06 -17.9" fill="none" stroke="#1f2328" stroke-width="0.35" stroke-linejoin="round" stroke-linecap="round"/>
+<rect x="13.14" y="-23.1" width="3.4" height="1.3" rx="0" fill="#16191d"/>
+<circle cx="14.84" cy="-17.9" r="2" fill="#cfd6dd" stroke="#1f2328" stroke-width="0.2"/>
+<path d="M 13.54 -17.9 L 16.14 -17.9" fill="none" stroke="#1f2328" stroke-width="0.35" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 9.76 -23.1 L 9.76 -34.5" fill="none" stroke="#8c959f" stroke-width="1.2" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 9.76 -23.1 L 9.76 -34.5" fill="none" stroke="#cf222e" stroke-width="0.9" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 14.84 -23.1 L 14.84 -34.5" fill="none" stroke="#8c959f" stroke-width="1.2" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 14.84 -23.1 L 14.84 -34.5" fill="none" stroke="#0d1117" stroke-width="0.9" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 9.76 -34.5 L 9.76 -36.5" fill="none" stroke="#c9d1d9" stroke-width="0.7" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 14.84 -34.5 L 14.84 -36.5" fill="none" stroke="#c9d1d9" stroke-width="0.7" stroke-linejoin="round" stroke-linecap="round"/>
+<text x="6.16" y="-18.4" font-size="1.3" fill="#f0f3f6" text-anchor="middle" transform="rotate(-90 6.16 -18.4)">+12V IN</text>
+<text x="18.44" y="-18.4" font-size="1.3" fill="#f0f3f6" text-anchor="middle" transform="rotate(90 18.44 -18.4)">GND</text>
+<rect x="-32.58" y="20.46" width="12" height="9.4" rx="0.6" fill="#eef1f4" stroke="#8c959f" stroke-width="0.25"/>
+<rect x="-30.58" y="21.66" width="8" height="7" rx="0.4" fill="#dfe4ea"/>
+<circle cx="-30.54" cy="16.26" r="0.85" fill="#8c959f" stroke="#1f2328" stroke-width="0.15"/>
+<path d="M -30.54 16.26 L -30.54 20.46" fill="none" stroke="#8c959f" stroke-width="0.7" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="-26.58" cy="16.26" r="0.85" fill="#8c959f" stroke="#1f2328" stroke-width="0.15"/>
+<path d="M -26.58 16.26 L -26.58 20.46" fill="none" stroke="#8c959f" stroke-width="0.7" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="-22.62" cy="16.26" r="0.85" fill="#8c959f" stroke="#1f2328" stroke-width="0.15"/>
+<path d="M -22.62 16.26 L -22.62 20.46" fill="none" stroke="#8c959f" stroke-width="0.7" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M -30.54 29.86 L -30.54 38.86" fill="none" stroke="#8c959f" stroke-width="1.2" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M -30.54 29.86 L -30.54 38.86" fill="none" stroke="#f0f3f6" stroke-width="0.9" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M -26.58 29.86 L -26.58 38.86" fill="none" stroke="#8c959f" stroke-width="1.2" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M -26.58 29.86 L -26.58 38.86" fill="none" stroke="#2da44e" stroke-width="0.9" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M -22.62 29.86 L -22.62 38.86" fill="none" stroke="#8c959f" stroke-width="1.2" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M -22.62 29.86 L -22.62 38.86" fill="none" stroke="#cf222e" stroke-width="0.9" stroke-linejoin="round" stroke-linecap="round"/>
+<g class="lead-labels">
+<text x="-26.58" y="43.26" font-size="1.9" fill="#1f2328" text-anchor="middle" font-weight="bold">CHAN 2</text>
+</g>
+<text x="-30.54" y="13.36" font-size="1.1" fill="#f0f3f6" text-anchor="middle">GND</text>
+<text x="-26.58" y="13.36" font-size="1.1" fill="#f0f3f6" text-anchor="middle">DATA</text>
+<text x="-22.62" y="13.36" font-size="1.1" fill="#f0f3f6" text-anchor="middle">5V</text>
+<text x="-26.58" y="10.86" font-size="1.6" fill="#f0f3f6" text-anchor="middle" font-weight="bold">2</text>
+<rect x="-17.16" y="20.52" width="12" height="9.4" rx="0.6" fill="#eef1f4" stroke="#8c959f" stroke-width="0.25"/>
+<rect x="-15.16" y="21.72" width="8" height="7" rx="0.4" fill="#dfe4ea"/>
+<circle cx="-15.12" cy="16.32" r="0.85" fill="#8c959f" stroke="#1f2328" stroke-width="0.15"/>
+<path d="M -15.12 16.32 L -15.12 20.52" fill="none" stroke="#8c959f" stroke-width="0.7" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="-11.16" cy="16.32" r="0.85" fill="#8c959f" stroke="#1f2328" stroke-width="0.15"/>
+<path d="M -11.16 16.32 L -11.16 20.52" fill="none" stroke="#8c959f" stroke-width="0.7" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="-7.2" cy="16.32" r="0.85" fill="#8c959f" stroke="#1f2328" stroke-width="0.15"/>
+<path d="M -7.2 16.32 L -7.2 20.52" fill="none" stroke="#8c959f" stroke-width="0.7" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M -15.12 29.92 L -15.12 38.92" fill="none" stroke="#8c959f" stroke-width="1.2" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M -15.12 29.92 L -15.12 38.92" fill="none" stroke="#f0f3f6" stroke-width="0.9" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M -11.16 29.92 L -11.16 38.92" fill="none" stroke="#8c959f" stroke-width="1.2" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M -11.16 29.92 L -11.16 38.92" fill="none" stroke="#2da44e" stroke-width="0.9" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M -7.2 29.92 L -7.2 38.92" fill="none" stroke="#8c959f" stroke-width="1.2" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M -7.2 29.92 L -7.2 38.92" fill="none" stroke="#cf222e" stroke-width="0.9" stroke-linejoin="round" stroke-linecap="round"/>
+<g class="lead-labels">
+<text x="-11.16" y="43.32" font-size="1.9" fill="#1f2328" text-anchor="middle" font-weight="bold">CHAN 1</text>
+</g>
+<text x="-15.12" y="13.42" font-size="1.1" fill="#f0f3f6" text-anchor="middle">GND</text>
+<text x="-11.16" y="13.42" font-size="1.1" fill="#f0f3f6" text-anchor="middle">DATA</text>
+<text x="-7.2" y="13.42" font-size="1.1" fill="#f0f3f6" text-anchor="middle">5V</text>
+<text x="-11.16" y="10.92" font-size="1.6" fill="#f0f3f6" text-anchor="middle" font-weight="bold">1</text>
+<rect x="-32.35" y="-30.06" width="12" height="9.4" rx="0.6" fill="#eef1f4" stroke="#8c959f" stroke-width="0.25"/>
+<rect x="-30.35" y="-28.86" width="8" height="7" rx="0.4" fill="#dfe4ea"/>
+<circle cx="-22.39" cy="-16.46" r="0.85" fill="#8c959f" stroke="#1f2328" stroke-width="0.15"/>
+<path d="M -22.39 -16.46 L -22.39 -20.66" fill="none" stroke="#8c959f" stroke-width="0.7" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="-26.35" cy="-16.46" r="0.85" fill="#8c959f" stroke="#1f2328" stroke-width="0.15"/>
+<path d="M -26.35 -16.46 L -26.35 -20.66" fill="none" stroke="#8c959f" stroke-width="0.7" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="-30.31" cy="-16.46" r="0.85" fill="#8c959f" stroke="#1f2328" stroke-width="0.15"/>
+<path d="M -30.31 -16.46 L -30.31 -20.66" fill="none" stroke="#8c959f" stroke-width="0.7" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M -22.39 -30.06 L -22.39 -39.06" fill="none" stroke="#8c959f" stroke-width="1.2" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M -22.39 -30.06 L -22.39 -39.06" fill="none" stroke="#f0f3f6" stroke-width="0.9" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M -26.35 -30.06 L -26.35 -39.06" fill="none" stroke="#8c959f" stroke-width="1.2" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M -26.35 -30.06 L -26.35 -39.06" fill="none" stroke="#2da44e" stroke-width="0.9" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M -30.31 -30.06 L -30.31 -39.06" fill="none" stroke="#8c959f" stroke-width="1.2" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M -30.31 -30.06 L -30.31 -39.06" fill="none" stroke="#cf222e" stroke-width="0.9" stroke-linejoin="round" stroke-linecap="round"/>
+<g class="lead-labels">
+<text x="-26.35" y="-42.06" font-size="1.9" fill="#1f2328" text-anchor="middle" font-weight="bold">CHAN 3</text>
+</g>
+<text x="-22.39" y="-13.16" font-size="1.1" fill="#f0f3f6" text-anchor="middle">GND</text>
+<text x="-26.35" y="-13.16" font-size="1.1" fill="#f0f3f6" text-anchor="middle">DATA</text>
+<text x="-30.31" y="-13.16" font-size="1.1" fill="#f0f3f6" text-anchor="middle">5V</text>
+<text x="-26.35" y="-10.56" font-size="1.6" fill="#f0f3f6" text-anchor="middle" font-weight="bold">3</text>
+<rect x="-16.3" y="-29.96" width="12" height="9.4" rx="0.6" fill="#eef1f4" stroke="#8c959f" stroke-width="0.25"/>
+<rect x="-14.3" y="-28.76" width="8" height="7" rx="0.4" fill="#dfe4ea"/>
+<circle cx="-6.34" cy="-16.36" r="0.85" fill="#8c959f" stroke="#1f2328" stroke-width="0.15"/>
+<path d="M -6.34 -16.36 L -6.34 -20.56" fill="none" stroke="#8c959f" stroke-width="0.7" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="-10.3" cy="-16.36" r="0.85" fill="#8c959f" stroke="#1f2328" stroke-width="0.15"/>
+<path d="M -10.3 -16.36 L -10.3 -20.56" fill="none" stroke="#8c959f" stroke-width="0.7" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="-14.26" cy="-16.36" r="0.85" fill="#8c959f" stroke="#1f2328" stroke-width="0.15"/>
+<path d="M -14.26 -16.36 L -14.26 -20.56" fill="none" stroke="#8c959f" stroke-width="0.7" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M -6.34 -29.96 L -6.34 -38.96" fill="none" stroke="#8c959f" stroke-width="1.2" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M -6.34 -29.96 L -6.34 -38.96" fill="none" stroke="#f0f3f6" stroke-width="0.9" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M -10.3 -29.96 L -10.3 -38.96" fill="none" stroke="#8c959f" stroke-width="1.2" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M -10.3 -29.96 L -10.3 -38.96" fill="none" stroke="#2da44e" stroke-width="0.9" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M -14.26 -29.96 L -14.26 -38.96" fill="none" stroke="#8c959f" stroke-width="1.2" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M -14.26 -29.96 L -14.26 -38.96" fill="none" stroke="#cf222e" stroke-width="0.9" stroke-linejoin="round" stroke-linecap="round"/>
+<g class="lead-labels">
+<text x="-10.3" y="-41.96" font-size="1.9" fill="#1f2328" text-anchor="middle" font-weight="bold">CHAN 4</text>
+</g>
+<text x="-6.34" y="-13.06" font-size="1.1" fill="#f0f3f6" text-anchor="middle">GND</text>
+<text x="-10.3" y="-13.06" font-size="1.1" fill="#f0f3f6" text-anchor="middle">DATA</text>
+<text x="-14.26" y="-13.06" font-size="1.1" fill="#f0f3f6" text-anchor="middle">5V</text>
+<text x="-10.3" y="-10.46" font-size="1.6" fill="#f0f3f6" text-anchor="middle" font-weight="bold">4</text>
+<rect x="-28.73" y="-7.26" width="10.16" height="2.54" rx="0.2" fill="#16191d" stroke="#1f2328" stroke-width="0.15"/>
+<rect x="-28.16" y="-6.69" width="1.4" height="1.4" rx="0" fill="#000000"/>
+<rect x="-25.62" y="-6.69" width="1.4" height="1.4" rx="0" fill="#000000"/>
+<rect x="-23.08" y="-6.69" width="1.4" height="1.4" rx="0" fill="#000000"/>
+<rect x="-20.54" y="-6.69" width="1.4" height="1.4" rx="0" fill="#000000"/>
+<text x="-27.46" y="-3.8" font-size="1" fill="#f0f3f6" text-anchor="middle">GND</text>
+<text x="-24.92" y="-3.8" font-size="1" fill="#f0f3f6" text-anchor="middle">3.3V</text>
+<text x="-22.38" y="-3.8" font-size="1" fill="#f0f3f6" text-anchor="middle">SCL</text>
+<text x="-19.84" y="-3.8" font-size="1" fill="#f0f3f6" text-anchor="middle">SDA</text>
+<text x="-23.65" y="-8.5" font-size="1.2" fill="#f0f3f6" text-anchor="middle" font-weight="bold">SCREEN</text>
+<text x="-26.3" y="5" font-size="3.4" fill="#f0f3f6" text-anchor="middle">ConnectorX</text>
+<text x="-27" y="8.3" font-size="2.6" fill="#f0f3f6" text-anchor="middle">Animate</text>
+<g class="caption">
+<text x="0" y="51" font-size="4" fill="#1f2328" text-anchor="middle" font-weight="bold">Lumyn ConnectorX Animate</text>
+<text x="0" y="55.2" font-size="2.3" fill="#57606a" text-anchor="middle">83 × 48 mm · top view · 4 LED channels · leads drawn short</text>
+</g>
+<g id="anchors">
+<circle class="anchor" id="anchor-usb" data-kind="usb" cx="41.5" cy="-0.4" r="1" fill="none"><title>USB-C: Lumyn Studio, firmware and host link (data cable; logic power only)</title></circle>
+<circle class="anchor" id="anchor-pwr_in" data-kind="power" cx="12.3" cy="-36.5" r="1" fill="none"><title>+12V IN screw terminal: robot 12 V (red +, black GND) from a fused PDH or PDP channel; no fuse or reverse-polarity protection on the board</title></circle>
+<circle class="anchor" id="anchor-led_chan2" data-kind="signal" cx="-26.58" cy="38.86" r="1" fill="none"><title>CHAN 2: 3-pin JST VH 3.96 mm, GND / DATA / 5V, WS2812B strip (5 V, 320 LEDs max)</title></circle>
+<circle class="anchor" id="anchor-led_chan1" data-kind="signal" cx="-11.16" cy="38.92" r="1" fill="none"><title>CHAN 1: 3-pin JST VH 3.96 mm, GND / DATA / 5V, WS2812B strip (5 V, 320 LEDs max)</title></circle>
+<circle class="anchor" id="anchor-led_chan3" data-kind="signal" cx="-26.35" cy="-39.06" r="1" fill="none"><title>CHAN 3: 3-pin JST VH 3.96 mm, GND / DATA / 5V, WS2812B strip (5 V, 320 LEDs max)</title></circle>
+<circle class="anchor" id="anchor-led_chan4" data-kind="signal" cx="-10.3" cy="-38.96" r="1" fill="none"><title>CHAN 4: 3-pin JST VH 3.96 mm, GND / DATA / 5V, WS2812B strip (5 V, 320 LEDs max)</title></circle>
+<circle class="anchor" id="anchor-screen" data-kind="signal" cx="-23.65" cy="-7.3" r="1" fill="none"><title>SCREEN socket: GND, 3.3V, SCL, SDA from pin 1 (I2C modules, up to two)</title></circle>
+</g>
+</svg>

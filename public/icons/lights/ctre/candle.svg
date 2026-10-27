@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-14 -6 98 86" width="98mm" height="86mm" font-family="Helvetica, Arial, sans-serif">
+<title>CTRE CANdle</title>
+<desc>Drawn by FRC Team 2102 Paradox. Public domain: CC0 1.0 (https://creativecommons.org/publicdomain/zero/1.0/). https://docs.team2102.org/icons/</desc>
+<path d="M 2 0 L 66.58 0 Q 68.58 0 68.58 2 L 68.58 10.16 L 66.04 10.16 A 2.54 2.54 0 0 0 66.04 15.24 L 68.58 15.24 L 68.58 23.4 Q 68.58 25.4 66.58 25.4 L 2 25.4 Q 0 25.4 0 23.4 L 0 15.24 L 2.54 15.24 A 2.54 2.54 0 0 0 2.54 10.16 L 0 10.16 L 0 2 Q 0 0 2 0 Z" fill="#22272e" stroke="#1f2328" stroke-width="0.5" stroke-linejoin="round" stroke-linecap="round"/>
+<rect x="7.11" y="0.3" width="54.36" height="24.8" rx="2.2" fill="#c9d1d9" stroke="#1f2328" stroke-width="0.3"/>
+<rect x="11.31" y="3.4" width="45.96" height="18.6" rx="1" fill="#dfe4e9" stroke="#aab2bd" stroke-width="0.2"/>
+<path d="M 7.11 0.3 L 11.31 3.4 M 7.11 25.1 L 11.31 22" fill="none" stroke="#aab2bd" stroke-width="0.2" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 61.47 0.3 L 57.27 3.4 M 61.47 25.1 L 57.27 22" fill="none" stroke="#aab2bd" stroke-width="0.2" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="23.04" cy="9.5" r="2" fill="#f6f8fa" stroke="#8c959f" stroke-width="0.25"/>
+<circle cx="23.04" cy="9.5" r="0.35" fill="#aab2bd"/>
+<circle cx="23.04" cy="15.9" r="2" fill="#f6f8fa" stroke="#8c959f" stroke-width="0.25"/>
+<circle cx="23.04" cy="15.9" r="0.35" fill="#aab2bd"/>
+<circle cx="30.54" cy="9.5" r="2" fill="#f6f8fa" stroke="#8c959f" stroke-width="0.25"/>
+<circle cx="30.54" cy="9.5" r="0.35" fill="#aab2bd"/>
+<circle cx="30.54" cy="15.9" r="2" fill="#f6f8fa" stroke="#8c959f" stroke-width="0.25"/>
+<circle cx="30.54" cy="15.9" r="0.35" fill="#aab2bd"/>
+<circle cx="38.04" cy="9.5" r="2" fill="#f6f8fa" stroke="#8c959f" stroke-width="0.25"/>
+<circle cx="38.04" cy="9.5" r="0.35" fill="#aab2bd"/>
+<circle cx="38.04" cy="15.9" r="2" fill="#f6f8fa" stroke="#8c959f" stroke-width="0.25"/>
+<circle cx="38.04" cy="15.9" r="0.35" fill="#aab2bd"/>
+<circle cx="45.54" cy="9.5" r="2" fill="#f6f8fa" stroke="#8c959f" stroke-width="0.25"/>
+<circle cx="45.54" cy="9.5" r="0.35" fill="#aab2bd"/>
+<circle cx="45.54" cy="15.9" r="2" fill="#f6f8fa" stroke="#8c959f" stroke-width="0.25"/>
+<circle cx="45.54" cy="15.9" r="0.35" fill="#aab2bd"/>
+<path d="M 52 25.4 L 52 31.4 L 47.1 39.4 L 47.1 49.4" fill="none" stroke="#8c959f" stroke-width="1.2" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 52 25.4 L 52 31.4 L 47.1 39.4 L 47.1 49.4" fill="none" stroke="#cf222e" stroke-width="0.9" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 53.8 25.4 L 53.8 31.4 L 48.9 39.4 L 48.9 49.4" fill="none" stroke="#8c959f" stroke-width="1.2" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 53.8 25.4 L 53.8 31.4 L 48.9 39.4 L 48.9 49.4" fill="none" stroke="#0d1117" stroke-width="0.9" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 56.6 25.4 L 56.6 31.4 L 60.1 39.4 L 60.1 49.4" fill="none" stroke="#8c959f" stroke-width="1.2" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 56.6 25.4 L 56.6 31.4 L 60.1 39.4 L 60.1 49.4" fill="none" stroke="#e3b341" stroke-width="0.9" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 58.4 25.4 L 58.4 31.4 L 61.9 39.4 L 61.9 49.4" fill="none" stroke="#8c959f" stroke-width="1.2" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 58.4 25.4 L 58.4 31.4 L 61.9 39.4 L 61.9 49.4" fill="none" stroke="#2da44e" stroke-width="0.9" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 61.2 25.4 L 61.2 31.4 L 74.1 39.4 L 74.1 49.4" fill="none" stroke="#8c959f" stroke-width="1.2" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 61.2 25.4 L 61.2 31.4 L 74.1 39.4 L 74.1 49.4" fill="none" stroke="#e3b341" stroke-width="0.9" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 63 25.4 L 63 31.4 L 75.9 39.4 L 75.9 49.4" fill="none" stroke="#8c959f" stroke-width="1.2" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 63 25.4 L 63 31.4 L 75.9 39.4 L 75.9 49.4" fill="none" stroke="#2da44e" stroke-width="0.9" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 47.1 49.4 L 47.1 51.4" fill="none" stroke="#c9d1d9" stroke-width="0.7" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 48.9 49.4 L 48.9 51.4" fill="none" stroke="#c9d1d9" stroke-width="0.7" stroke-linejoin="round" stroke-linecap="round"/>
+<rect x="57.2" y="49.4" width="7.6" height="4.4" rx="0.4" fill="#16191d" stroke="#8c959f" stroke-width="0.2"/>
+<path d="M 58.46 53.8 L 58.46 55.8" fill="none" stroke="#d4a72c" stroke-width="0.6" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 63.54 53.8 L 63.54 55.8" fill="none" stroke="#d4a72c" stroke-width="0.6" stroke-linejoin="round" stroke-linecap="round"/>
+<rect x="71.2" y="49.4" width="7.6" height="4.4" rx="0.4" fill="#16191d" stroke="#8c959f" stroke-width="0.2"/>
+<rect x="71.86" y="51" width="1.2" height="1.2" rx="0" fill="#59636e"/>
+<rect x="76.94" y="51" width="1.2" height="1.2" rx="0" fill="#59636e"/>
+<g class="lead-labels">
+<text x="48" y="55.9" font-size="2.2" fill="#1f2328" text-anchor="middle" font-weight="bold">PWR</text>
+<text x="61" y="58.8" font-size="2.2" fill="#1f2328" text-anchor="middle" font-weight="bold">CAN (male)</text>
+<text x="75" y="58.8" font-size="2.2" fill="#1f2328" text-anchor="middle" font-weight="bold">CAN (female)</text>
+</g>
+<path d="M 5.2 25.4 L 5.2 31.4 L -8 39.4 L -8 49.4" fill="none" stroke="#8c959f" stroke-width="1.2" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 5.2 25.4 L 5.2 31.4 L -8 39.4 L -8 49.4" fill="none" stroke="#1f6feb" stroke-width="0.9" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M -8 49.4 L -8 51.4" fill="none" stroke="#c9d1d9" stroke-width="0.7" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 7.1 25.4 L 7.1 31.4 L -1 39.4 L -1 49.4" fill="none" stroke="#8c959f" stroke-width="1.2" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 7.1 25.4 L 7.1 31.4 L -1 39.4 L -1 49.4" fill="none" stroke="#f0883e" stroke-width="0.9" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M -1 49.4 L -1 51.4" fill="none" stroke="#c9d1d9" stroke-width="0.7" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 9 25.4 L 9 31.4 L 6 39.4 L 6 49.4" fill="none" stroke="#8c959f" stroke-width="1.2" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 9 25.4 L 9 31.4 L 6 39.4 L 6 49.4" fill="none" stroke="#f0f3f6" stroke-width="0.9" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 6 49.4 L 6 51.4" fill="none" stroke="#c9d1d9" stroke-width="0.7" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 10.9 25.4 L 10.9 31.4 L 13 39.4 L 13 49.4" fill="none" stroke="#8c959f" stroke-width="1.2" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 10.9 25.4 L 10.9 31.4 L 13 39.4 L 13 49.4" fill="none" stroke="#8c959f" stroke-width="0.9" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 13 49.4 L 13 51.4" fill="none" stroke="#c9d1d9" stroke-width="0.7" stroke-linejoin="round" stroke-linecap="round"/>
+<g class="lead-labels">
+<text x="-8" y="55" font-size="1.9" fill="#1f2328" text-anchor="middle" font-weight="bold">5Vout</text>
+<text x="-1" y="55" font-size="1.9" fill="#1f2328" text-anchor="middle" font-weight="bold">V+out</text>
+<text x="6" y="55" font-size="1.9" fill="#1f2328" text-anchor="middle" font-weight="bold">Dout</text>
+<text x="13" y="55" font-size="1.9" fill="#1f2328" text-anchor="middle" font-weight="bold">-Vout</text>
+<text x="2.5" y="58.6" font-size="1.9" fill="#1f2328" text-anchor="middle">OUTPUTS (to LED strip)</text>
+</g>
+<g class="caption">
+<text x="36.29" y="70.4" font-size="4" fill="#1f2328" text-anchor="middle" font-weight="bold">CTRE CANdle</text>
+<text x="36.29" y="74.6" font-size="2.3" fill="#57606a" text-anchor="middle">68.6 × 25.4 mm · top view (LED face) · leads exit the back</text>
+</g>
+<g id="anchors">
+<circle class="anchor" id="anchor-pwr" data-kind="power" cx="48" cy="51.4" r="1" fill="none"><title>+Vin (red) / -Vin (black), 18 AWG, 6–28 V</title></circle>
+<circle class="anchor" id="anchor-can_a" data-kind="can" cx="61" cy="55.8" r="1" fill="none"><title>CAN pair A: yellow H / green L, 22 AWG, male 0.1 in housing</title></circle>
+<circle class="anchor" id="anchor-can_b" data-kind="can" cx="75" cy="53.8" r="1" fill="none"><title>CAN pair B: yellow H / green L, 22 AWG, female 0.1 in housing</title></circle>
+<circle class="anchor" id="anchor-vout_5v" data-kind="power" cx="-8" cy="51.4" r="1" fill="none"><title>5Vout (blue, 18 AWG): regulated 5 V for 5 V addressable LEDs, 6 A max shared</title></circle>
+<circle class="anchor" id="anchor-vout_pos" data-kind="power" cx="-1" cy="51.4" r="1" fill="none"><title>V+out (orange, 18 AWG): switched V+ for 12 V LED strips</title></circle>
+<circle class="anchor" id="anchor-dout" data-kind="signal" cx="6" cy="51.4" r="1" fill="none"><title>Dout (white, 18 AWG): WS2812B data to the LED strip</title></circle>
+<circle class="anchor" id="anchor-vout_neg" data-kind="power" cx="13" cy="51.4" r="1" fill="none"><title>-Vout (gray, 18 AWG): ground return for all outputs</title></circle>
+</g>
+</svg>
