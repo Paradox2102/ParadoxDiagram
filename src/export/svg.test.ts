@@ -4,6 +4,9 @@ import { exportSvg, renderWirePaths, stripAnchors } from './svg';
 import { apply } from '../model/actions';
 import { emptyDoc, type Doc } from '../model/types';
 import { catalog } from '../test/fixtures';
+import { keepOutBox, wirePoints } from '../geometry/scene';
+
+const wirePointsOf = (d: Doc) => wirePoints(d, catalog, d.wires[0])!;
 
 const iconFile = (p: string) => readFileSync(join(import.meta.dirname, '../../public/icons', p), 'utf8');
 const realIcons = async (p: string) => iconFile(p);
@@ -51,4 +54,20 @@ test('an icon that fails to load exports as a gray box with the device name', as
   const svg = await exportSvg(doc(), catalog, 'all', async () => null);
   expect(svg).toContain('fill="#eaeef2"');
   expect(svg).toContain('>Shooter<');
+});
+
+test('a wire with no bends routes around the devices it joins', () => {
+  // PDH at the left, motor below and to the right: the motor leads point down, the PDH port right
+  let d = apply(emptyDoc(), { type: 'addDevice', slug: 'rev-pdh', name: 'PDH', x: 0, y: 0 });
+  d = apply(d, { type: 'addDevice', slug: 'kraken-x60', name: 'M', x: 200, y: 150 });
+  d = apply(d, { type: 'addWire', layer: 'power', from: { device: 'd2', port: 'vbat_pos' }, to: { device: 'd1', port: 'ch4' } });
+  const pts = wirePointsOf(d);
+  const motor = keepOutBox(catalog, d.devices[1]);
+  expect(pts[1].x).toBe(pts[0].x);
+  expect(pts[1].y).toBeGreaterThan(pts[0].y); // leaves downward, on the side of the leads
+  for (let i = 1; i < pts.length - 1; i++) {
+    const a = pts[i], b = pts[i + 1];
+    const x0 = Math.min(a.x, b.x), x1 = Math.max(a.x, b.x), y0 = Math.min(a.y, b.y), y1 = Math.max(a.y, b.y);
+    expect(x0 < motor.x + motor.w && x1 > motor.x && y0 < motor.y + motor.h && y1 > motor.y).toBe(false);
+  }
 });

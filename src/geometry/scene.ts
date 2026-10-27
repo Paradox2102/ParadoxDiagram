@@ -1,6 +1,7 @@
 // Shared drawing facts for the canvas and the exports: wire points, colors, device boxes, tags.
 import { findAnchor, type AnchorKind, type Catalog, type Icon } from '../catalog/catalog';
 import type { Device, Doc, Point, PortRef, Wire } from '../model/types';
+import { autoRoute, type Box } from './autoroute';
 import { offsetPolyline } from './offset';
 import { routeWire } from './route';
 import { deviceBounds, portWorld, type Dir } from './transform';
@@ -24,6 +25,9 @@ export const KIND_COLOR: Record<AnchorKind, string> = {
 };
 
 export const PAIR_OFFSET_MM = 0.7;
+export const TAG_NAME_DY = 5;
+export const TAG_FACTS_DY = 9.5;
+export const TAG_H = 12;
 export const OFF_LAYER_OPACITY = 0.15;
 export const MISSING_W = 40;
 export const MISSING_H = 30;
@@ -45,12 +49,44 @@ export function portPoint(doc: Doc, catalog: Catalog | null, ref: PortRef): { p:
   return { ...portWorld(dev, icon, a), kind: a.kind };
 }
 
-/** The wire's route, or null when an end cannot be placed (unknown icon). */
+/** A device and its tag: the space a wire with no bends routes around. */
+export function keepOutBox(catalog: Catalog | null, d: Device): Box {
+  const b = boundsOf(catalog, d);
+  return { x: b.x, y: b.y, w: b.w, h: b.h + TAG_H };
+}
+
+// Documents never change in place, so routes are cached per document object.
+const routeCache = new WeakMap<Doc, { catalog: Catalog | null; boxes: Map<string, Box>; routes: Map<string, Point[] | null> }>();
+
+function cacheFor(doc: Doc, catalog: Catalog | null) {
+  let c = routeCache.get(doc);
+  if (!c || c.catalog !== catalog) {
+    c = { catalog, boxes: new Map(doc.devices.map((d) => [d.id, keepOutBox(catalog, d)])), routes: new Map() };
+    routeCache.set(doc, c);
+  }
+  return c;
+}
+
+/**
+ * The wire's route, or null when an end cannot be placed (unknown icon). A wire with no bends
+ * goes around every device; a wire with bends follows them.
+ */
 export function wirePoints(doc: Doc, catalog: Catalog | null, w: Wire): Point[] | null {
+  const c = cacheFor(doc, catalog);
+  if (c.routes.has(w.id)) return c.routes.get(w.id)!;
   const a = portPoint(doc, catalog, w.from);
   const b = portPoint(doc, catalog, w.to);
-  if (!a || !b) return null;
-  return routeWire(a.p, a.dir, b.p, b.dir, w.bends);
+  let pts: Point[] | null = null;
+  if (a && b) {
+    if (!w.bends.length) {
+      const boxA = c.boxes.get(w.from.device) ?? null;
+      const boxB = c.boxes.get(w.to.device) ?? null;
+      pts = autoRoute(a.p, a.dir, b.p, b.dir, [...c.boxes.values()], boxA, boxB);
+    }
+    pts ??= routeWire(a.p, a.dir, b.p, b.dir, w.bends);
+  }
+  c.routes.set(w.id, pts);
+  return pts;
 }
 
 export interface WirePath {
@@ -78,7 +114,3 @@ export function renderWirePaths(doc: Doc, catalog: Catalog | null, w: Wire): Wir
   const kind = portPoint(doc, catalog, w.from)?.kind ?? 'ethernet';
   return [{ d: pathD(pts), stroke: KIND_COLOR[kind], width: 1 }];
 }
-
-export const TAG_NAME_DY = 5;
-export const TAG_FACTS_DY = 9.5;
-export const TAG_H = 12;

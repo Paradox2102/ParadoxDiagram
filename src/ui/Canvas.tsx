@@ -208,7 +208,7 @@ export function Canvas({ doc, catalog, layer, selection, setSelection, hist, api
       return;
     }
     if (e.button !== 0) return;
-    const el = (e.target as Element).closest('[data-port],[data-bend],[data-seg],[data-wire],[data-device]') as
+    const el = (e.target as Element).closest('[data-rotate],[data-port],[data-bend],[data-seg],[data-wire],[data-device]') as
       | (SVGElement & { dataset: DOMStringMap })
       | null;
     const ds = el?.dataset ?? {};
@@ -219,6 +219,10 @@ export function Canvas({ doc, catalog, layer, selection, setSelection, hist, api
     const double = key && lastDown.current.key === key && now - lastDown.current.t < 350;
     lastDown.current = { key, t: double ? 0 : now };
 
+    if (ds.rotate) {
+      hist.change({ type: 'rotateDevices', ids: [ds.rotate] });
+      return;
+    }
     if (ds.port) {
       const [device, port] = ds.port.split('|');
       const from = ports.find((p) => p.ref.device === device && p.ref.port === port);
@@ -387,6 +391,9 @@ export function Canvas({ doc, catalog, layer, selection, setSelection, hist, api
   const shownPorts = wiring
     ? ports.filter((p) => p.layer === wiring.from.layer && !samePort(p.ref, wiring.from.ref))
     : ports.filter((p) => (p.ref.device === hover || selected.has(p.ref.device)) && visibleLayer(p.layer));
+  const selDevice = selection.length === 1 && mode.kind === 'none' ? doc.devices.find((d) => d.id === selection[0]) : undefined;
+  const rotateAt = selDevice ? boundsOf(catalog, selDevice) : null;
+  const handleR = 10 / view.s; // 10 px on screen at any zoom
   const selWire = selection.length === 1 ? doc.wires.find((w) => w.id === selection[0]) : undefined;
   const selWirePts = selWire && visibleLayer(selWire.layer) ? wirePoints(doc, catalog, selWire) : null;
   const vb = `${view.x} ${view.y} ${size.w / view.s} ${size.h / view.s}`;
@@ -447,6 +454,17 @@ export function Canvas({ doc, catalog, layer, selection, setSelection, hist, api
           );
         })}
 
+        {selDevice && rotateAt && (
+          <g
+            data-rotate={selDevice.id} style={{ cursor: 'pointer' }}
+            transform={`translate(${rotateAt.x + rotateAt.w + 2 + handleR} ${rotateAt.y - 2 - handleR}) scale(${handleR / 10})`}
+          >
+            <title>Rotate 90° (R)</title>
+            <circle r={10} fill="#ffffff" stroke="#0969da" strokeWidth={1.5} />
+            <path d="M -4.5 -3 A 5.5 5.5 0 1 1 -5 2.5" fill="none" stroke="#0969da" strokeWidth={1.8} strokeLinecap="round" />
+            <path d="M -7.5 -5.5 L -4.5 -3 L -1.5 -6" fill="none" stroke="#0969da" strokeWidth={1.8} strokeLinecap="round" strokeLinejoin="round" />
+          </g>
+        )}
         {wiring && (
           <line
             x1={wiring.from.p.x} y1={wiring.from.p.y} x2={(wiring.target?.p ?? wiring.cur).x} y2={(wiring.target?.p ?? wiring.cur).y}
