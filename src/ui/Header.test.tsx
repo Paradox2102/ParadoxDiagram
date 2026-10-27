@@ -37,3 +37,21 @@ test('export offers SVG, PNG 2x, PNG 4x and JSON', async () => {
   await userEvent.click(screen.getByRole('menuitem', { name: 'PNG 4x' }));
   expect(onExport).toHaveBeenCalledWith('png4');
 });
+
+test('the title commits once, on blur', async () => {
+  const onTitle = vi.fn();
+  render(<Header {...props({ onTitle })} />);
+  const box = screen.getByLabelText('Diagram title');
+  await userEvent.clear(box);
+  await userEvent.type(box, 'Swerve');
+  expect(onTitle).not.toHaveBeenCalled();
+  await userEvent.tab();
+  expect(onTitle).toHaveBeenCalledTimes(1);
+  expect(onTitle).toHaveBeenCalledWith('Swerve');
+});
+
+test('About shows the icon license', async () => {
+  render(<Header {...props()} />);
+  await userEvent.click(screen.getByRole('button', { name: 'About' }));
+  expect(screen.getByRole('dialog')).toHaveTextContent('CC0 1.0');
+});

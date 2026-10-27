@@ -1,9 +1,9 @@
 // Shared drawing facts for the canvas and the exports: wire points, colors, device boxes, tags.
 import { findAnchor, type AnchorKind, type Catalog, type Icon } from '../catalog/catalog';
 import type { Device, Doc, Point, PortRef, Wire } from '../model/types';
-import { autoRoute, type Box } from './autoroute';
+import { autoRoute, exitPoint, type Box } from './autoroute';
 import { offsetPolyline } from './offset';
-import { routeWire } from './route';
+import { routeWire, stub } from './route';
 import { deviceBounds, portWorld, type Dir } from './transform';
 
 export const COLORS = {
@@ -78,15 +78,24 @@ export function wirePoints(doc: Doc, catalog: Catalog | null, w: Wire): Point[] 
   const b = portPoint(doc, catalog, w.to);
   let pts: Point[] | null = null;
   if (a && b) {
-    if (!w.bends.length) {
-      const boxA = c.boxes.get(w.from.device) ?? null;
-      const boxB = c.boxes.get(w.to.device) ?? null;
-      pts = autoRoute(a.p, a.dir, b.p, b.dir, [...c.boxes.values()], boxA, boxB);
-    }
-    pts ??= routeWire(a.p, a.dir, b.p, b.dir, w.bends);
+    const boxA = c.boxes.get(w.from.device) ?? null;
+    const boxB = c.boxes.get(w.to.device) ?? null;
+    if (!w.bends.length) pts = autoRoute(a.p, a.dir, b.p, b.dir, [...c.boxes.values()], boxA, boxB);
+    pts ??= routeWire(a.p, a.dir, b.p, b.dir, w.bends, exitPoint(a.p, a.dir, boxA), exitPoint(b.p, b.dir, boxB));
   }
   c.routes.set(w.id, pts);
   return pts;
+}
+
+/** Where each end's run out of its port stops, plus the plain 6 mm stubs: never saved as bends. */
+export function wireEnds(doc: Doc, catalog: Catalog | null, w: Wire): Point[] {
+  const c = cacheFor(doc, catalog);
+  const out: Point[] = [];
+  for (const ref of [w.from, w.to]) {
+    const p = portPoint(doc, catalog, ref);
+    if (p) out.push(exitPoint(p.p, p.dir, c.boxes.get(ref.device) ?? null), stub(p.p, p.dir));
+  }
+  return out;
 }
 
 export interface WirePath {

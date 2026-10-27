@@ -36,3 +36,22 @@ test('change commits and redo comes back after undo', () => {
   act(() => result.current.redo());
   expect(result.current.doc.title).toBe('A');
 });
+
+test('begin right after change returns the changed document', () => {
+  const { result } = renderHook(() => useDocHistory(emptyDoc()));
+  let base = emptyDoc();
+  act(() => {
+    result.current.change({ type: 'setTitle', title: 'Typed' });
+    base = result.current.begin();
+  });
+  expect(base.title).toBe('Typed');
+});
+
+test('a lazy first document is built once, not on every render', () => {
+  const init = vi.fn(emptyDoc);
+  const { result, rerender } = renderHook(() => useDocHistory(init));
+  rerender();
+  act(() => result.current.change({ type: 'setTitle', title: 'x' }));
+  rerender();
+  expect(init).toHaveBeenCalledTimes(1);
+});

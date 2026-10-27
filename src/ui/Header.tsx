@@ -37,6 +37,13 @@ export interface HeaderProps {
 
 export function Header(p: HeaderProps) {
   const [menu, setMenu] = useState(false);
+  const [title, setTitle] = useState(p.title);
+  const [about, setAbout] = useState(false);
+  // a new or opened document brings its own title
+  useEffect(() => setTitle(p.title), [p.title]);
+  const commitTitle = () => {
+    if (title !== p.title) p.onTitle(title);
+  };
   const fileRef = useRef<HTMLInputElement>(null);
   const menuRef = useRef<HTMLDivElement>(null);
 
@@ -56,8 +63,12 @@ export function Header(p: HeaderProps) {
         <span className="brand-name">Paradox Diagram</span>
       </div>
       <input
-        className="title" aria-label="Diagram title" value={p.title}
-        onChange={(e) => p.onTitle(e.target.value)}
+        className="title" aria-label="Diagram title" value={title}
+        onChange={(e) => setTitle(e.target.value)} onBlur={commitTitle}
+        onKeyDown={(e) => {
+          if (e.key === 'Enter') e.currentTarget.blur();
+          if (e.key === 'Escape') setTitle(p.title);
+        }}
       />
       <nav className="layers" aria-label="Layer">
         {LAYER_VIEWS.map((v) => (
@@ -88,6 +99,7 @@ export function Header(p: HeaderProps) {
             e.target.value = '';
           }}
         />
+        <button type="button" onClick={() => setAbout(true)}>About</button>
         <div className="menu" ref={menuRef}>
           <button type="button" className="primary" aria-haspopup="menu" aria-expanded={menu} onClick={() => setMenu(!menu)}>
             Export
@@ -109,6 +121,22 @@ export function Header(p: HeaderProps) {
           )}
         </div>
       </div>
+      {about && (
+        <div className="about-backdrop" onPointerDown={() => setAbout(false)}>
+          <div role="dialog" aria-modal="true" aria-label="About Paradox Diagram" className="about-box" onPointerDown={(e) => e.stopPropagation()}>
+            <h2>
+              <Logo size={22} /> Paradox Diagram
+            </h2>
+            <p>Lay out an FRC robot wiring diagram: power, CAN, network and air, with the real ports of each device.</p>
+            <p>
+              Device icons: the FRC device icon collection by FRC Team 2102 Paradox, released under CC0 1.0 (public domain).
+              No credit is needed; please do not present the icons as your own.
+            </p>
+            <p>Your diagram is kept in this browser only. Export JSON to keep a copy.</p>
+            <button type="button" onClick={() => setAbout(false)} autoFocus>Close</button>
+          </div>
+        </div>
+      )}
     </header>
   );
 }

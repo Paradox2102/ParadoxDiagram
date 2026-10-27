@@ -3,8 +3,8 @@
 import { useCallback, useEffect, useImperativeHandle, useMemo, useRef, useState, type RefObject } from 'react';
 import { iconFrame, iconLayers, layerOfKind, type AnchorKind, type Catalog, type Layer } from '../catalog/catalog';
 import { contentBox } from '../export/svg';
-import { dragSegment } from '../geometry/route';
-import { boundsOf, iconOf, KIND_COLOR, renderWirePaths, wirePoints } from '../geometry/scene';
+import { dragSegment, withoutEnds } from '../geometry/route';
+import { boundsOf, iconOf, KIND_COLOR, renderWirePaths, wireEnds, wirePoints } from '../geometry/scene';
 import { portWorld } from '../geometry/transform';
 import { apply } from '../model/actions';
 import { nextId } from '../model/ids';
@@ -52,7 +52,7 @@ type Mode =
   | { kind: 'move'; base: Doc; ids: string[]; start: Point; moved: boolean; clickId: string; shift: boolean }
   | { kind: 'box'; start: Point; cur: Point; shift: boolean }
   | { kind: 'wire'; from: Port; cur: Point; target: Port | null }
-  | { kind: 'segment'; base: Doc; wireId: string; index: number; path: Point[]; start: Point; magnets: Point[] }
+  | { kind: 'segment'; base: Doc; wireId: string; index: number; path: Point[]; ends: Point[]; start: Point; magnets: Point[] }
   | { kind: 'bend'; base: Doc; wireId: string; index: number; orig: Point; start: Point; magnets: Point[] };
 
 const BASE_PX_PER_MM = 3;
@@ -200,6 +200,8 @@ export function Canvas({ doc, catalog, layer, selection, setSelection, hist, api
   };
 
   const onPointerDown = (e: React.PointerEvent<SVGSVGElement>) => {
+    // Finish an edit in the side panel first, so it lands before this gesture starts.
+    (document.activeElement as HTMLElement | null)?.blur?.();
     const svg = svgRef.current!;
     svg.setPointerCapture(e.pointerId);
     const w = toWorld(e.clientX, e.clientY);
@@ -251,10 +253,12 @@ export function Canvas({ doc, catalog, layer, selection, setSelection, hist, api
         const at = a.y === b.y ? { x: Math.round(w.x), y: a.y } : { x: a.x, y: Math.round(w.y) };
         const corners = path.slice(1, -1);
         corners.splice(index, 0, at);
-        hist.change({ type: 'setBends', id: wireId, bends: corners });
+        hist.change({ type: 'setBends', id: wireId, bends: withoutEnds(corners, wireEnds(doc, catalog, wire)) });
         return;
       }
-      setMode({ kind: 'segment', base: hist.begin(), wireId, index, path, start: w, magnets: wireMagnets(wireId) });
+      setMode({
+        kind: 'segment', base: hist.begin(), wireId, index, path, ends: wireEnds(doc, catalog, wire), start: w, magnets: wireMagnets(wireId),
+      });
       return;
     }
     if (ds.wire) {
@@ -317,7 +321,7 @@ export function Canvas({ doc, catalog, layer, selection, setSelection, hist, api
         const axis = horizontal ? 'y' : 'x';
         const c0 = a[axis];
         const c1 = magnet(c0 + (w[axis] - m.start[axis]), axis, m.magnets);
-        const bends = dragSegment(m.path, m.index, c1 - c0);
+        const bends = dragSegment(m.path, m.index, c1 - c0, m.ends);
         hist.preview(apply(m.base, { type: 'setBends', id: m.wireId, bends }));
         return;
       }

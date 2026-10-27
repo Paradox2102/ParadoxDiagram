@@ -51,3 +51,13 @@ test('Delete removes the whole selection', async () => {
   await userEvent.click(screen.getByRole('button', { name: 'Delete' }));
   expect(dispatch).toHaveBeenCalledWith({ type: 'delete', ids: ['d1', 'd2'] });
 });
+
+test('a name typed and not yet blurred is kept when the selection changes', async () => {
+  const dispatch = vi.fn();
+  const d = doc();
+  const { rerender } = render(<Inspector doc={d} catalog={catalog} selection={['d2']} dispatch={dispatch} />);
+  await userEvent.type(screen.getByLabelText('Name'), 'Front Left');
+  rerender(<Inspector doc={d} catalog={catalog} selection={[]} dispatch={dispatch} />);
+  expect(dispatch).toHaveBeenCalledWith({ type: 'updateDevice', id: 'd2', patch: { name: 'Front Left' } });
+  expect(dispatch).toHaveBeenCalledTimes(1);
+});

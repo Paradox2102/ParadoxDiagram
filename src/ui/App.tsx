@@ -27,7 +27,7 @@ export function App() {
   const [catalog, setCatalog] = useState<Catalog | null>(null);
   const [catalogError, setCatalogError] = useState<string | null>(null);
   const [layer, setLayer] = useLayerHash();
-  const hist = useDocHistory(initialDoc());
+  const hist = useDocHistory(initialDoc);
   const { doc } = hist;
   const [selection, setSelection] = useState<string[]>([]);
   const [saved, setSaved] = useState(storage !== null);
@@ -108,7 +108,7 @@ export function App() {
   return (
     <div className="app">
       <Header
-        title={doc.title} onTitle={(t) => hist.preview({ ...doc, title: t })} layer={layer} onLayer={setLayer}
+        title={doc.title} onTitle={(title) => hist.change({ type: 'setTitle', title })} layer={layer} onLayer={setLayer}
         canUndo={hist.canUndo} canRedo={hist.canRedo} onUndo={hist.undo} onRedo={hist.redo}
         onNew={onNew} onOpen={onOpen} onExport={onExport} saved={saved}
       />

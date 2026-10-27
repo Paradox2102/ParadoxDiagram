@@ -136,3 +136,13 @@ h2 { font-family: var(--font-display); }
   .inspector { display: none; }
   .title { display: none; }
 }
+
+/* About */
+.about-backdrop { position: fixed; inset: 0; z-index: 20; background: rgb(20 33 61 / 0.35); display: grid; place-items: center; }
+.about-box {
+  width: min(440px, calc(100vw - 32px)); background: var(--surface); color: var(--ink); border-radius: 10px;
+  padding: 18px 20px; box-shadow: 0 12px 40px rgb(20 33 61 / 0.3);
+}
+.about-box h2 { display: flex; align-items: center; gap: 8px; margin: 0 0 8px; font-size: 22px; }
+.about-box p { margin: 0 0 10px; color: var(--muted); }
+.about-box button { border: 1px solid var(--line); background: var(--bg); border-radius: var(--radius); padding: 5px 14px; cursor: pointer; }

@@ -1,5 +1,5 @@
 // The right panel: properties of the selected device or wire.
-import { useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import type { Catalog } from '../catalog/catalog';
 import type { Action } from '../model/actions';
 import { deviceTag } from '../model/tags';
@@ -14,7 +14,10 @@ interface Props {
 
 const LAYER_NAME = { power: 'Power', can: 'CAN', network: 'Network', air: 'Air' } as const;
 
-/** A text field that commits on blur or Enter, so one edit is one undo step. */
+/**
+ * A text field that commits on blur or Enter, so one edit is one undo step. Text not yet
+ * committed is saved when the field goes away (a click on the canvas changes the selection).
+ */
 function Field(props: {
   label: string;
   value: string;
@@ -24,9 +27,22 @@ function Field(props: {
   onCommit: (v: string) => void;
 }) {
   const [text, setText] = useState(props.value);
+  const latest = useRef({ text, saved: props.value, onCommit: props.onCommit });
+  latest.current.text = text;
+  latest.current.onCommit = props.onCommit;
   const commit = () => {
-    if (text !== props.value) props.onCommit(text);
+    if (text !== latest.current.saved) {
+      latest.current.saved = text;
+      props.onCommit(text);
+    }
   };
+  useEffect(
+    () => () => {
+      const l = latest.current;
+      if (l.text !== l.saved) l.onCommit(l.text);
+    },
+    [],
+  );
   const common = {
     value: text,
     placeholder: props.placeholder,
@@ -43,7 +59,7 @@ function Field(props: {
           {...common} inputMode={props.inputMode}
           onKeyDown={(e) => {
             if (e.key === 'Enter') commit();
-            if (e.key === 'Escape') setText(props.value);
+            if (e.key === 'Escape') setText(latest.current.saved);
           }}
         />
       )}

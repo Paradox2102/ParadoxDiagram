@@ -18,8 +18,9 @@ export interface DocHistory {
   redo: () => void;
 }
 
-export function useDocHistory(initial: Doc): DocHistory {
-  const [h, setH] = useState<History>(() => initHistory(initial));
+/** `initial` can be a function, so the first document is built once (it reads browser storage). */
+export function useDocHistory(initial: Doc | (() => Doc)): DocHistory {
+  const [h, setH] = useState<History>(() => initHistory(typeof initial === 'function' ? initial() : initial));
   const ref = useRef(h);
   ref.current = h;
 

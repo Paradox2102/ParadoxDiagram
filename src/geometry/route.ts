@@ -13,7 +13,7 @@ export function stub(p: Point, dir: Dir): Point {
 
 const same = (a: Point, b: Point) => Math.abs(a.x - b.x) < 1e-6 && Math.abs(a.y - b.y) < 1e-6;
 
-/** Drop zero-length segments and middle points of straight runs. */
+/** Drop zero-length segments and middle points of straight runs (a run that turns back is kept). */
 export function simplify(path: Point[]): Point[] {
   const out: Point[] = [];
   for (const p of path) {
@@ -22,16 +22,18 @@ export function simplify(path: Point[]): Point[] {
     while (out.length >= 3) {
       const [a, b, c] = out.slice(-3);
       const straight = (a.x === b.x && b.x === c.x) || (a.y === b.y && b.y === c.y);
-      if (!straight) break;
+      const sameWay = (b.x - a.x) * (c.x - b.x) + (b.y - a.y) * (c.y - b.y) > 0;
+      if (!straight || !sameWay) break;
       out.splice(out.length - 2, 1);
     }
   }
   return out;
 }
 
-export function routeWire(start: Point, sDir: Dir, end: Point, eDir: Dir, bends: Point[]): Point[] {
-  const s1 = stub(start, sDir);
-  const e1 = stub(end, eDir);
+/** `s1` and `e1` are where each end's straight run out of its port stops (default: the 6 mm stub). */
+export function routeWire(
+  start: Point, sDir: Dir, end: Point, eDir: Dir, bends: Point[], s1 = stub(start, sDir), e1 = stub(end, eDir),
+): Point[] {
   const pts: Point[] = [start, s1];
   if (!bends.length) {
     if (horizontal(sDir) && horizontal(eDir)) {
@@ -67,13 +69,20 @@ export function routeWire(start: Point, sDir: Dir, end: Point, eDir: Dir, bends:
   return simplify(out);
 }
 
-/** Move segment `index` (path[index] to path[index + 1]) along its normal; the corners become bends. */
-export function dragSegment(path: Point[], index: number, delta: number): Point[] {
+/**
+ * Move segment `index` (path[index] to path[index + 1]) along its normal; the corners become bends,
+ * except the end points of the runs out of the ports (`ends`), which follow their device.
+ */
+export function dragSegment(path: Point[], index: number, delta: number, ends: Point[] = []): Point[] {
   const a = path[index];
   const b = path[index + 1];
   const isH = a.y === b.y;
   const moved = path.map((p, i) =>
     i === index || i === index + 1 ? (isH ? { x: p.x, y: p.y + delta } : { x: p.x + delta, y: p.y }) : p,
   );
-  return moved.slice(1, -1);
+  return withoutEnds(moved.slice(1, -1), ends);
+}
+
+export function withoutEnds(corners: Point[], ends: Point[]): Point[] {
+  return corners.filter((c) => !ends.some((e) => same(c, e)));
 }
