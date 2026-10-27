@@ -24,7 +24,13 @@ export interface Icon {
   path: string;
   size_mm: [number, number];
   view_box: [number, number, number, number];
+  /** The drawing without its caption: the frame the diagram places, rotates and draws. */
+  body_view?: [number, number, number, number];
   anchors: Anchor[];
+}
+
+export function iconFrame(icon: Icon): [number, number, number, number] {
+  return icon.body_view ?? icon.view_box;
 }
 
 export interface IconType {

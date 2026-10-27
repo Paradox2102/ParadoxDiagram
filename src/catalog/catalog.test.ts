@@ -38,3 +38,8 @@ test('legacy icons stay hidden until asked for', () => {
 test('rejects an index with no icons list', () => {
   expect(() => parseCatalog({})).toThrow('icons/index.json: no icons list');
 });
+
+test('every icon has a body view, the frame without the caption', () => {
+  expect(catalog.icons.every((i) => i.body_view?.length === 4)).toBe(true);
+  expect(catalog.bySlug.get('rev-pdh')!.body_view).toEqual([-10, -6, 131, 235.5]);
+});

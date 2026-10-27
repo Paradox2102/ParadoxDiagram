@@ -65,7 +65,7 @@
    "path": "controllers/limelight/systemcore.svg",
    "size_mm": [
     147.5,
-    83.0
+    83
    ],
    "view_box": [
     -6,
@@ -146,7 +146,7 @@
     },
     {
      "port": "smart_io_1",
-     "x": 27.0,
+     "x": 27,
      "y": 71.5,
      "kind": "signal",
      "label": "SMART I/O 1"
@@ -174,7 +174,7 @@
     },
     {
      "port": "smart_io_5",
-     "x": 56.0,
+     "x": 56,
      "y": 71.5,
      "kind": "signal",
      "label": "SMART I/O 5"
@@ -195,7 +195,7 @@
     },
     {
      "port": "usb2",
-     "x": 99.0,
+     "x": 99,
      "y": 71.5,
      "kind": "usb",
      "label": "USB 2 (USB 3.0 Type-A)"
@@ -221,6 +221,12 @@
      "kind": "signal",
      "label": "I2C 1"
     }
+   ],
+   "body_view": [
+    -6,
+    -6,
+    147.5,
+    83
    ]
   },
   {
@@ -504,7 +510,7 @@
     },
     {
      "port": "relay_3",
-     "x": 68.0,
+     "x": 68,
      "y": 143.18,
      "kind": "signal",
      "label": "Relay 3 (FWD / REV / GND, 5 V outputs)"
@@ -516,6 +522,12 @@
      "kind": "signal",
      "label": "Analog in 3 (S / 5V / GND, 0-5 V)"
     }
+   ],
+   "body_view": [
+    -7,
+    -6,
+    160.15,
+    153.68
    ]
   },
   {
@@ -699,6 +711,12 @@
      "kind": "can",
      "label": "CAN H/L pair B (Weidmuller, yellow H / green L)"
     }
+   ],
+   "body_view": [
+    -8,
+    -8,
+    136.6,
+    206.5
    ]
   },
   {
@@ -791,6 +809,12 @@
      "kind": "power",
      "label": "5 V / 500mA output pair 2: Weidmuller + over - (500 mA)"
     }
+   ],
+   "body_view": [
+    -8,
+    -7,
+    72.4,
+    63.5
    ]
   },
   {
@@ -804,7 +828,7 @@
    "path": "power/eaton/main-breaker-120a.svg",
    "size_mm": [
     64.3,
-    85.0
+    85
    ],
    "view_box": [
     -15.62,
@@ -823,10 +847,16 @@
     {
      "port": "aux",
      "x": 10.8,
-     "y": 65.0,
+     "y": 65,
      "kind": "power",
      "label": "AUX stud (1/4-28): red 6 AWG to the power distribution + input"
     }
+   ],
+   "body_view": [
+    -8,
+    -6,
+    64.3,
+    85
    ]
   },
   {
@@ -840,7 +870,7 @@
    "path": "power/gobilda/gobilda-servo-power-injector.svg",
    "size_mm": [
     70,
-    71.0
+    71
    ],
    "view_box": [
     -46,
@@ -940,6 +970,12 @@
      "kind": "power",
      "label": "XT30 power input (mating XT30 plug, + on the side of the output header): 8-15 V, about 12 V nominal"
     }
+   ],
+   "body_view": [
+    -46,
+    -35,
+    70,
+    71
    ]
   },
   {
@@ -965,14 +1001,14 @@
     {
      "port": "eth_out",
      "x": -1.8,
-     "y": 26.0,
+     "y": 26,
      "kind": "ethernet",
      "label": "ETH OUT: gigabit RJ45 pass-through, no PoE (to the device)"
     },
     {
      "port": "eth_in",
      "x": 56.9,
-     "y": 17.0,
+     "y": 17,
      "kind": "ethernet",
      "label": "ETH IN: gigabit RJ45, 802.3at PoE in from the PSE (30 W max)"
     },
@@ -1004,6 +1040,12 @@
      "kind": "power",
      "label": "12V output, 2 A max: WAGO lever terminal"
     }
+   ],
+   "body_view": [
+    -24,
+    -9,
+    92,
+    50.6
    ]
   },
   {
@@ -1054,6 +1096,12 @@
      "kind": "power",
      "label": "Input + (red lead), 12/24 V nominal, 10-30 V"
     }
+   ],
+   "body_view": [
+    -8,
+    -7,
+    82,
+    98.5
    ]
   },
   {
@@ -1093,7 +1141,7 @@
     {
      "port": "gnd_1",
      "x": -1.8,
-     "y": 13.0,
+     "y": 13,
      "kind": "power",
      "label": "GND input"
     },
@@ -1111,6 +1159,12 @@
      "kind": "power",
      "label": "USB-C output 5.2 V, 4 A (to Orange Pi PWR IN)"
     }
+   ],
+   "body_view": [
+    -8,
+    -7,
+    82,
+    33.6
    ]
   },
   {
@@ -1189,6 +1243,12 @@
      "kind": "power",
      "label": "Input - (WAGO lever terminal, 24-8 AWG)"
     }
+   ],
+   "body_view": [
+    -8,
+    -6,
+    66,
+    98.5
    ]
   },
   {
@@ -1375,7 +1435,7 @@
     {
      "port": "ch23",
      "x": -4,
-     "y": 197.0,
+     "y": 197,
      "kind": "power",
      "label": "Switchable channel 23 (15 A, ATM fuse, CAN-controlled)"
     },
@@ -1414,6 +1474,12 @@
      "kind": "can",
      "label": "CAN H/L pair B"
     }
+   ],
+   "body_view": [
+    -10,
+    -6,
+    131,
+    235.5
    ]
   },
   {
@@ -1427,7 +1493,7 @@
    "path": "power/rev/rev-spm.svg",
    "size_mm": [
     80,
-    119.0
+    119
    ],
    "view_box": [
     -40,
@@ -1438,84 +1504,84 @@
    "anchors": [
     {
      "port": "servo_0",
-     "x": -29.0,
+     "x": -29,
      "y": -35.6,
      "kind": "signal",
      "label": "Servo output 1 (icon numbering): 3-pin 0.1 in header, - ground at the outer edge, + 6 V in the middle, ~ signal toward the LED column; carries 6 V"
     },
     {
      "port": "pwm_in_0",
-     "x": 29.0,
+     "x": 29,
      "y": -35.6,
      "kind": "signal",
      "label": "PWM input 1 (icon numbering): 3-pin 0.1 in header, ~ signal toward the LED column, + in the middle, - ground at the outer edge; PWM from a controller, passed straight through to servo output 1"
     },
     {
      "port": "servo_1",
-     "x": -29.0,
+     "x": -29,
      "y": -30.52,
      "kind": "signal",
      "label": "Servo output 2 (icon numbering): 3-pin 0.1 in header, - ground at the outer edge, + 6 V in the middle, ~ signal toward the LED column; carries 6 V"
     },
     {
      "port": "pwm_in_1",
-     "x": 29.0,
+     "x": 29,
      "y": -30.52,
      "kind": "signal",
      "label": "PWM input 2 (icon numbering): 3-pin 0.1 in header, ~ signal toward the LED column, + in the middle, - ground at the outer edge; PWM from a controller, passed straight through to servo output 2"
     },
     {
      "port": "servo_2",
-     "x": -29.0,
+     "x": -29,
      "y": -25.44,
      "kind": "signal",
      "label": "Servo output 3 (icon numbering): 3-pin 0.1 in header, - ground at the outer edge, + 6 V in the middle, ~ signal toward the LED column; carries 6 V"
     },
     {
      "port": "pwm_in_2",
-     "x": 29.0,
+     "x": 29,
      "y": -25.44,
      "kind": "signal",
      "label": "PWM input 3 (icon numbering): 3-pin 0.1 in header, ~ signal toward the LED column, + in the middle, - ground at the outer edge; PWM from a controller, passed straight through to servo output 3"
     },
     {
      "port": "servo_3",
-     "x": -29.0,
+     "x": -29,
      "y": -20.36,
      "kind": "signal",
      "label": "Servo output 4 (icon numbering): 3-pin 0.1 in header, - ground at the outer edge, + 6 V in the middle, ~ signal toward the LED column; carries 6 V"
     },
     {
      "port": "pwm_in_3",
-     "x": 29.0,
+     "x": 29,
      "y": -20.36,
      "kind": "signal",
      "label": "PWM input 4 (icon numbering): 3-pin 0.1 in header, ~ signal toward the LED column, + in the middle, - ground at the outer edge; PWM from a controller, passed straight through to servo output 4"
     },
     {
      "port": "servo_4",
-     "x": -29.0,
+     "x": -29,
      "y": -15.28,
      "kind": "signal",
      "label": "Servo output 5 (icon numbering): 3-pin 0.1 in header, - ground at the outer edge, + 6 V in the middle, ~ signal toward the LED column; carries 6 V"
     },
     {
      "port": "pwm_in_4",
-     "x": 29.0,
+     "x": 29,
      "y": -15.28,
      "kind": "signal",
      "label": "PWM input 5 (icon numbering): 3-pin 0.1 in header, ~ signal toward the LED column, + in the middle, - ground at the outer edge; PWM from a controller, passed straight through to servo output 5"
     },
     {
      "port": "servo_5",
-     "x": -29.0,
+     "x": -29,
      "y": -10.2,
      "kind": "signal",
      "label": "Servo output 6 (icon numbering): 3-pin 0.1 in header, - ground at the outer edge, + 6 V in the middle, ~ signal toward the LED column; carries 6 V"
     },
     {
      "port": "pwm_in_5",
-     "x": 29.0,
+     "x": 29,
      "y": -10.2,
      "kind": "signal",
      "label": "PWM input 6 (icon numbering): 3-pin 0.1 in header, ~ signal toward the LED column, + in the middle, - ground at the outer edge; PWM from a controller, passed straight through to servo output 6"
@@ -1523,10 +1589,16 @@
     {
      "port": "power",
      "x": 0,
-     "y": 58.0,
+     "y": 58,
      "kind": "power",
      "label": "12 V input: two screw terminals for #6 or M3 ring or fork terminals on 18 AWG or larger wire, + on the left, - on the right as printed; 7-20 V, 12 V nominal"
     }
+   ],
+   "body_view": [
+    -40,
+    -50,
+    80,
+    119
    ]
   },
   {
@@ -1563,6 +1635,12 @@
      "kind": "power",
      "label": "SB120 + (red 6 AWG lead from the battery +)"
     }
+   ],
+   "body_view": [
+    -8,
+    -8,
+    197,
+    183.5
    ]
   },
   {
@@ -1587,18 +1665,24 @@
    "anchors": [
     {
      "port": "sb50_neg",
-     "x": 81.0,
+     "x": 81,
      "y": 147,
      "kind": "power",
      "label": "SB50 − (black 6 AWG lead from the battery −)"
     },
     {
      "port": "sb50_pos",
-     "x": 100.0,
+     "x": 100,
      "y": 147,
      "kind": "power",
      "label": "SB50 + (red 6 AWG lead from the battery +)"
     }
+   ],
+   "body_view": [
+    -8,
+    -8,
+    197,
+    167.5
    ]
   },
   {
@@ -1612,7 +1696,7 @@
    "path": "power/studica/studica-servo-power-block.svg",
    "size_mm": [
     82,
-    70.0
+    70
    ],
    "view_box": [
     -6,
@@ -1735,11 +1819,17 @@
     },
     {
      "port": "power",
-     "x": 35.0,
+     "x": 35,
      "y": 55.1,
      "kind": "power",
      "label": "12VDC IN: 2-pin JST VH style header (3.96 mm pitch), - left, + right as printed; 12 V nominal"
     }
+   ],
+   "body_view": [
+    -6,
+    -5,
+    82,
+    70
    ]
   },
   {
@@ -1965,6 +2055,12 @@
      "kind": "can",
      "label": "CAN H/L pair B"
     }
+   ],
+   "body_view": [
+    -17,
+    -14,
+    266.1,
+    148.6
    ]
   },
   {
@@ -2003,25 +2099,31 @@
     },
     {
      "port": "vbat_neg",
-     "x": 74.0,
+     "x": 74,
      "y": 6.5,
      "kind": "power",
      "label": "V− (black, bare end) to battery negative"
     },
     {
      "port": "vbat_pos",
-     "x": 74.0,
+     "x": 74,
      "y": 24.5,
      "kind": "power",
      "label": "V+ (red, bare end) to battery positive, 40 A breaker or smaller"
     },
     {
      "port": "can_a",
-     "x": 74.0,
+     "x": 74,
      "y": 14.5,
      "kind": "can",
      "label": "CAN pair: yellow H / green L, twisted. For PWM use: yellow = signal, green = ground"
     }
+   ],
+   "body_view": [
+    -26,
+    -6,
+    124,
+    43.5
    ]
   },
   {
@@ -2060,25 +2162,31 @@
     },
     {
      "port": "vbat_neg",
-     "x": 74.0,
+     "x": 74,
      "y": 6.5,
      "kind": "power",
      "label": "V− (black, bare end) to battery negative"
     },
     {
      "port": "vbat_pos",
-     "x": 74.0,
+     "x": 74,
      "y": 24.5,
      "kind": "power",
      "label": "V+ (red, bare end) to battery positive, 40 A breaker or smaller"
     },
     {
      "port": "pwm",
-     "x": 74.0,
+     "x": 74,
      "y": 14.5,
      "kind": "signal",
      "label": "PWM pair: white and black, twisted (signal and ground not published), servo pulse 1000-2000 µs from a roboRIO PWM port"
     }
+   ],
+   "body_view": [
+    -26,
+    -6,
+    124,
+    43.5
    ]
   },
   {
@@ -2104,56 +2212,56 @@
     {
      "port": "vbat_neg",
      "x": 7.99,
-     "y": 92.0,
+     "y": 92,
      "kind": "power",
      "label": "V− (black 10 AWG, 18 in, #6 ring at the Talon)"
     },
     {
      "port": "vbat_pos",
      "x": 28.31,
-     "y": 92.0,
+     "y": 92,
      "kind": "power",
      "label": "V+ (red 10 AWG, 18 in, #6 ring), 40 A PDH channel"
     },
     {
      "port": "can_h",
      "x": 15.35,
-     "y": 92.0,
+     "y": 92,
      "kind": "can",
      "label": "CAN H (yellow 22 AWG, #4 ring); PWM signal in PWM mode"
     },
     {
      "port": "can_l",
      "x": 20.95,
-     "y": 92.0,
+     "y": 92,
      "kind": "can",
      "label": "CAN L (green 22 AWG, #4 ring); PWM ground in PWM mode"
     },
     {
      "port": "can",
      "x": 18.15,
-     "y": 92.0,
+     "y": 92,
      "kind": "can",
      "label": "CAN pair in/out (H/L terminals take two rings each)"
     },
     {
      "port": "stator_a",
      "x": 7.99,
-     "y": 35.0,
+     "y": 35,
      "kind": "power",
      "label": "Stator A: #6-32 ring terminal (NEO / Minion red)"
     },
     {
      "port": "stator_b",
      "x": 18.15,
-     "y": 35.0,
+     "y": 35,
      "kind": "power",
      "label": "Stator B: #6-32 ring terminal (NEO / Minion black)"
     },
     {
      "port": "stator_c",
      "x": 28.31,
-     "y": 35.0,
+     "y": 35,
      "kind": "power",
      "label": "Stator C: #6-32 ring terminal (NEO / Minion white)"
     },
@@ -2167,10 +2275,16 @@
     {
      "port": "data_port",
      "x": 18.15,
-     "y": 7.0,
+     "y": 7,
      "kind": "signal",
      "label": "10-pin Gadgeteer data port (under the cover)"
     }
+   ],
+   "body_view": [
+    -14,
+    -8,
+    64.3,
+    112.5
    ]
   },
   {
@@ -2216,21 +2330,21 @@
     },
     {
      "port": "vbat_neg",
-     "x": 86.0,
+     "x": 86,
      "y": 5.3,
      "kind": "power",
      "label": "GND (black 12 AWG, 5.5 in, bare end)"
     },
     {
      "port": "vbat_pos",
-     "x": 86.0,
+     "x": 86,
      "y": 24.7,
      "kind": "power",
      "label": "V+ (red 12 AWG, 5.5 in, bare end), 40 A breaker or smaller"
     },
     {
      "port": "can_b",
-     "x": 86.0,
+     "x": 86,
      "y": 14.5,
      "kind": "can",
      "label": "CAN pair: yellow H / green L, 22 AWG, 11 in, bare ends"
@@ -2242,6 +2356,12 @@
      "kind": "signal",
      "label": "Data port: 10-pin 0.05 in (encoder, limit switches, analog)"
     }
+   ],
+   "body_view": [
+    -24,
+    -6,
+    119.5,
+    43.6
    ]
   },
   {
@@ -2267,21 +2387,21 @@
     {
      "port": "motor_neg",
      "x": -14,
-     "y": 7.0,
+     "y": 7,
      "kind": "power",
      "label": "M− (green 12 AWG, 5.5 in, bare end) to motor −"
     },
     {
      "port": "motor_pos",
      "x": -14,
-     "y": 22.0,
+     "y": 22,
      "kind": "power",
      "label": "M+ (white 12 AWG, 5.5 in, bare end) to motor +"
     },
     {
      "port": "vbat_neg",
      "x": 79.5,
-     "y": 7.0,
+     "y": 7,
      "kind": "power",
      "label": "GND (black 12 AWG, 5.5 in, bare end)"
     },
@@ -2301,11 +2421,17 @@
     },
     {
      "port": "can_b",
-     "x": 66.0,
+     "x": 66,
      "y": 42.4,
      "kind": "can",
      "label": "CAN/PWM pair: yellow H / green L, 12 in, female 0.1 in 3-pin (roboRIO PWM)"
     }
+   ],
+   "body_view": [
+    -22,
+    -6,
+    114,
+    61.5
    ]
   },
   {
@@ -2359,14 +2485,14 @@
     {
      "port": "servo_2",
      "x": 0,
-     "y": 46.0,
+     "y": 46,
      "kind": "signal",
      "label": "Servo channel 2: 3-pin 0.1 in header (− + S), ground pin outermost"
     },
     {
      "port": "servo_3",
      "x": 47.6,
-     "y": 46.0,
+     "y": 46,
      "kind": "signal",
      "label": "Servo channel 3: 3-pin 0.1 in header (S + −), ground pin outermost"
     },
@@ -2400,7 +2526,7 @@
     },
     {
      "port": "usb",
-     "x": 4.0,
+     "x": 4,
      "y": 63.5,
      "kind": "usb",
      "label": "USB-C (REV Hardware Client)"
@@ -2419,6 +2545,12 @@
      "kind": "signal",
      "label": "RS485 port (pass-through)"
     }
+   ],
+   "body_view": [
+    -8,
+    -6,
+    63.6,
+    117.2
    ]
   },
   {
@@ -2443,28 +2575,28 @@
    "anchors": [
     {
      "port": "vbat_neg",
-     "x": 6.0,
+     "x": 6,
      "y": 46.5,
      "kind": "power",
      "label": "Power − (black 12 AWG, 450 mm, bare end)"
     },
     {
      "port": "vbat_pos",
-     "x": 45.0,
+     "x": 45,
      "y": 46.5,
      "kind": "power",
      "label": "Power + (red 12 AWG, 450 mm, bare end), 40 A PDH channel"
     },
     {
      "port": "can_a",
-     "x": 17.0,
+     "x": 17,
      "y": 50.4,
      "kind": "can",
      "label": "CAN/PWM: yellow H / green L 26 AWG, pinned 0.1 in 1x3 connector"
     },
     {
      "port": "can_b",
-     "x": 33.0,
+     "x": 33,
      "y": 48.4,
      "kind": "can",
      "label": "CAN/PWM: yellow H / green L 26 AWG, socketed 0.1 in 1x3 connector"
@@ -2511,6 +2643,12 @@
      "kind": "signal",
      "label": "Encoder port: 6-pin JST PH (NEO / NEO 550 hall sensor, or brushed ABI quadrature)"
     }
+   ],
+   "body_view": [
+    -8,
+    -16,
+    100,
+    72.5
    ]
   },
   {
@@ -2549,7 +2687,7 @@
     },
     {
      "port": "motor_a",
-     "x": 3.0,
+     "x": 3,
      "y": -22.5,
      "kind": "power",
      "label": "Motor A (red 12 AWG) to NEO red or brushed M+"
@@ -2585,7 +2723,7 @@
     {
      "port": "can_pwm",
      "x": 23.05,
-     "y": 67.0,
+     "y": 67,
      "kind": "can",
      "label": "CAN/PWM port: JST-PH 4-pin (H L H L, or PWM signal/ground)"
     },
@@ -2596,6 +2734,12 @@
      "kind": "signal",
      "label": "ENCODER port: JST-PH 6-pin (NEO / NEO 550 hall sensor cable, brushed quadrature encoder)"
     }
+   ],
+   "body_view": [
+    -14,
+    -30,
+    66,
+    143.5
    ]
   },
   {
@@ -2695,6 +2839,12 @@
      "kind": "signal",
      "label": "Data port: 10-pin 1.27 mm (limit switches, alt encoder, analog)"
     }
+   ],
+   "body_view": [
+    -30,
+    -6,
+    128,
+    64.5
    ]
   },
   {
@@ -2754,7 +2904,7 @@
     },
     {
      "port": "motor_b",
-     "x": 1.0,
+     "x": 1,
      "y": 38,
      "kind": "power",
      "label": "Phase B (black 12 AWG) to NEO black"
@@ -2787,6 +2937,12 @@
      "kind": "signal",
      "label": "I/O data port: 10-pin 2x5 (encoders, limit switches)"
     }
+   ],
+   "body_view": [
+    -36,
+    -50,
+    72,
+    98.5
    ]
   },
   {
@@ -2811,25 +2967,31 @@
    "anchors": [
     {
      "port": "feedback",
-     "x": 210.0,
+     "x": 210,
      "y": -19.81,
      "kind": "signal",
      "label": "Plug pins 1 and 2: potentiometer reference - (orange) and wiper (purple). Read the wiper on an analog input; reference + is pin 5 (feedback_ref)"
     },
     {
      "port": "feedback_ref",
-     "x": 210.0,
+     "x": 210,
      "y": -10.92,
      "kind": "signal",
      "label": "Plug pin 5: potentiometer reference + (yellow), to the analog input's supply (it is below the motor pair)"
     },
     {
      "port": "power",
-     "x": 210.0,
+     "x": 210,
      "y": -14.73,
      "kind": "power",
      "label": "Plug pins 3 and 4: motor leads, red V+ and black V- (reverse polarity to reverse). A motor controller drives them"
     }
+   ],
+   "body_view": [
+    -12,
+    -30,
+    254,
+    49.5
    ]
   },
   {
@@ -2854,18 +3016,24 @@
    "anchors": [
     {
      "port": "motor_pos",
-     "x": 13.0,
+     "x": 13,
      "y": 53,
      "kind": "power",
      "label": "W1 red lead, 14 AWG, 18 in, + (stripped 0.5 in)"
     },
     {
      "port": "motor_neg",
-     "x": 18.0,
+     "x": 18,
      "y": 53,
      "kind": "power",
      "label": "W2 black lead, 14 AWG, 18 in, − (stripped 0.5 in)"
     }
+   ],
+   "body_view": [
+    -38,
+    -38,
+    76,
+    99.5
    ]
   },
   {
@@ -2897,14 +3065,14 @@
     },
     {
      "port": "can_a",
-     "x": -20.0,
+     "x": -20,
      "y": 53.4,
      "kind": "can",
      "label": "CAN/PWM pair A: yellow H / green L, male 0.1 in 3-pin"
     },
     {
      "port": "can_b",
-     "x": -2.0,
+     "x": -2,
      "y": 51.4,
      "kind": "can",
      "label": "CAN/PWM pair B: yellow H / green L, female 0.1 in 3-pin"
@@ -2916,6 +3084,12 @@
      "kind": "signal",
      "label": "Limit switch port: 4-pin JST PH (1 fwd, 2 GND, 3 GND, 4 rev)"
     }
+   ],
+   "body_view": [
+    -56,
+    -35,
+    98,
+    94.5
    ]
   },
   {
@@ -2966,6 +3140,12 @@
      "kind": "signal",
      "label": "Sensor cable: 18 in sheathed 22 AWG, 6-pin JST (hall + temperature) to Talon FXS JST port"
     }
+   ],
+   "body_view": [
+    -30,
+    -23,
+    60,
+    71.5
    ]
   },
   {
@@ -2997,7 +3177,7 @@
     },
     {
      "port": "phase_a",
-     "x": 9.0,
+     "x": 9,
      "y": 60.2,
      "kind": "power",
      "label": "Phase A: red 12 AWG, 150 mm (to SPARK MAX A)"
@@ -3016,6 +3196,12 @@
      "kind": "signal",
      "label": "Sensor cable REV-11-1287: 2x3 PHSD plug at the motor, 6-pin JST PH at the controller (SPARK ENCODER port)"
     }
+   ],
+   "body_view": [
+    -38,
+    -34,
+    76,
+    104.5
    ]
   },
   {
@@ -3066,6 +3252,12 @@
      "kind": "power",
      "label": "Phase C: white 16 AWG, 150 mm (to SPARK MAX C)"
     }
+   ],
+   "body_view": [
+    -27,
+    -21,
+    54,
+    66.5
    ]
   },
   {
@@ -3116,6 +3308,12 @@
      "kind": "power",
      "label": "Phase C: white 12 AWG, 150 mm (to SPARK MAX C)"
     }
+   ],
+   "body_view": [
+    -38,
+    -36,
+    76,
+    98.5
    ]
   },
   {
@@ -3140,28 +3338,28 @@
    "anchors": [
     {
      "port": "vbat_neg",
-     "x": 6.0,
+     "x": 6,
      "y": 46.5,
      "kind": "power",
      "label": "Power − (black 12 AWG, 450 mm, bare end)"
     },
     {
      "port": "vbat_pos",
-     "x": 45.0,
+     "x": 45,
      "y": 46.5,
      "kind": "power",
      "label": "Power + (red 12 AWG, 450 mm, bare end), 40 A PDH channel"
     },
     {
      "port": "can_a",
-     "x": 17.0,
+     "x": 17,
      "y": 50.4,
      "kind": "can",
      "label": "CAN/PWM: yellow H / green L 26 AWG, pinned 0.1 in 1x3 connector"
     },
     {
      "port": "can_b",
-     "x": 33.0,
+     "x": 33,
      "y": 48.4,
      "kind": "can",
      "label": "CAN/PWM: yellow H / green L 26 AWG, socketed 0.1 in 1x3 connector"
@@ -3180,6 +3378,12 @@
      "kind": "signal",
      "label": "Data port: 2x5 0.05 in locking (Samtec ISDF-05-D-M mate)"
     }
+   ],
+   "body_view": [
+    -8,
+    -56,
+    67,
+    112.5
    ]
   },
   {
@@ -3193,7 +3397,7 @@
    "path": "motors/rev/smart-robot-servo.svg",
    "size_mm": [
     70,
-    106.0
+    106
    ],
    "view_box": [
     -35,
@@ -3204,11 +3408,17 @@
    "anchors": [
     {
      "port": "servo_lead",
-     "x": 10.0,
+     "x": 10,
      "y": -47.5,
      "kind": "signal",
      "label": "Servo lead: 3-wire 0.1 in female housing, GND / V+ / SIG, 4.8-7.4 V, 500-2500 us pulse, 300 mm"
     }
+   ],
+   "body_view": [
+    -35,
+    -64,
+    70,
+    106
    ]
   },
   {
@@ -3259,6 +3469,12 @@
      "kind": "can",
      "label": "4-pin male Molex SL, pins: − (GND), CAN H, CAN L, + (12 V): CAN plus 12 V for a CANcoder (mates Molex 50579404)"
     }
+   ],
+   "body_view": [
+    -40,
+    -27,
+    80,
+    88.3
    ]
   },
   {
@@ -3271,12 +3487,12 @@
    "status": "current",
    "path": "motors/wcp/kraken-x44.svg",
    "size_mm": [
-    60.0,
+    60,
     71.9
    ],
    "view_box": [
     -33.81,
-    -28.0,
+    -28,
     67.62,
     89.4
    ],
@@ -3316,6 +3532,12 @@
      "kind": "can",
      "label": "CAN pair in/out (H/L terminals take two rings each)"
     }
+   ],
+   "body_view": [
+    -30,
+    -28,
+    60,
+    71.9
    ]
   },
   {
@@ -3369,17 +3591,23 @@
     {
      "port": "can_c",
      "x": -3.48,
-     "y": 27.0,
+     "y": 27,
      "kind": "can",
      "label": "Weidmuller poles 1-2: L (green) then H (yellow), CAN pair wired straight to the Talon FX CAN screws"
     },
     {
      "port": "can_d",
      "x": 3.48,
-     "y": 27.0,
+     "y": 27,
      "kind": "can",
      "label": "Weidmuller poles 3-4: L (green) then H (yellow), CAN pair wired straight to the Talon FX CAN screws"
     }
+   ],
+   "body_view": [
+    -40,
+    -34,
+    80,
+    102.8
    ]
   },
   {
@@ -3437,6 +3665,12 @@
      "kind": "can",
      "label": "CAN pair in/out (H/L terminals take two rings each)"
     }
+   ],
+   "body_view": [
+    -38.05,
+    -36.05,
+    76.1,
+    87.95
    ]
   },
   {
@@ -3461,18 +3695,24 @@
    "anchors": [
     {
      "port": "signal",
-     "x": 210.0,
+     "x": 210,
      "y": -18.54,
      "kind": "signal",
      "label": "Servo plug pin 1: PWM signal, white, 5 V pulse 1.0 ms retract to 2.0 ms extend (RC servo)"
     },
     {
      "port": "power",
-     "x": 210.0,
+     "x": 210,
      "y": -14.73,
      "kind": "power",
      "label": "Servo plug pins 2 and 3: V+ red and GND black, 6 V DC (same 3-pin plug as the signal)"
     }
+   ],
+   "body_view": [
+    -12,
+    -30,
+    246,
+    49.5
    ]
   },
   {
@@ -3516,6 +3756,12 @@
      "kind": "power",
      "label": "Optional V+ (red) / V− (black), 5.2–28 V; USB power alone also works"
     }
+   ],
+   "body_view": [
+    -11,
+    -6,
+    61,
+    87.5
    ]
   },
   {
@@ -3594,6 +3840,12 @@
      "kind": "power",
      "label": "+: WAGO 2601 lever terminal, 3.3-22.5 V (26-16 AWG)"
     }
+   ],
+   "body_view": [
+    -8,
+    -22,
+    100,
+    114.83
    ]
   },
   {
@@ -3623,6 +3875,12 @@
      "kind": "can",
      "label": "Molex SL 2-circuit: CAN H and CAN L (mating housing 50579402, 22-24 AWG terminals)"
     }
+   ],
+   "body_view": [
+    -32,
+    -12,
+    64,
+    51.5
    ]
   },
   {
@@ -3652,6 +3910,12 @@
      "kind": "can",
      "label": "Wago lever terminal: CAN H and CAN L wire entries (26-16 AWG, strip 0.33 in)"
     }
+   ],
+   "body_view": [
+    -32,
+    -12,
+    64,
+    43.5
    ]
   },
   {
@@ -3698,28 +3962,28 @@
     {
      "port": "can_c",
      "x": 22.51,
-     "y": 40.0,
+     "y": 40,
      "kind": "can",
      "label": "Lever connector YLW GRN (bottom edge, left block, left pair): CAN pair, CAN H yellow and CAN L green, stub 12 in or less"
     },
     {
      "port": "can_d",
      "x": 30.16,
-     "y": 40.0,
+     "y": 40,
      "kind": "can",
      "label": "Lever connector YLW GRN (bottom edge, left block, right pair): CAN pair, CAN H yellow and CAN L green, stub 12 in or less"
     },
     {
      "port": "can_e",
      "x": 39.53,
-     "y": 40.0,
+     "y": 40,
      "kind": "can",
      "label": "Lever connector YLW GRN (bottom edge, right block, left pair): CAN pair, CAN H yellow and CAN L green, stub 12 in or less"
     },
     {
      "port": "can_f",
      "x": 47.17,
-     "y": 40.0,
+     "y": 40,
      "kind": "can",
      "label": "Lever connector YLW GRN (bottom edge, right block, right pair): CAN pair, CAN H yellow and CAN L green, stub 12 in or less"
     },
@@ -3737,6 +4001,12 @@
      "kind": "ethernet",
      "label": "RJ45 CANNECT OUT: CAN + 12 V (CANnect, not Ethernet)"
     }
+   ],
+   "body_view": [
+    -4,
+    -12,
+    79,
+    58.5
    ]
   },
   {
@@ -3780,6 +4050,12 @@
      "kind": "ethernet",
      "label": "RJ45: CAN + 12 V (CANnect, not Ethernet)"
     }
+   ],
+   "body_view": [
+    -21,
+    -3,
+    66,
+    38.5
    ]
   },
   {
@@ -3837,6 +4113,12 @@
      "kind": "ethernet",
      "label": "AUX2 (gigabit, 802.3at PoE out when powered from 12V)"
     }
+   ],
+   "body_view": [
+    -8,
+    -6,
+    135.1,
+    62.6
    ]
   },
   {
@@ -3894,6 +4176,12 @@
      "kind": "ethernet",
      "label": "AUX2 (10/100, PoE out off by default)"
     }
+   ],
+   "body_view": [
+    -8,
+    -6,
+    131,
+    64.5
    ]
   },
   {
@@ -3937,6 +4225,12 @@
      "kind": "signal",
      "label": "Terminal N (−): RSL supply GND"
     }
+   ],
+   "body_view": [
+    -37,
+    -6,
+    74,
+    107.5
    ]
   },
   {
@@ -4008,6 +4302,12 @@
      "kind": "power",
      "label": "-Vout (gray, 18 AWG): ground return for all outputs"
     }
+   ],
+   "body_view": [
+    -14,
+    -6,
+    98,
+    71.9
    ]
   },
   {
@@ -4121,6 +4421,12 @@
      "kind": "signal",
      "label": "Qwiic port B: JST SH 4-pin, GND, 3.3V, SDA, SCL from pin 1 (I2C module)"
     }
+   ],
+   "body_view": [
+    -46,
+    -39,
+    92,
+    85.5
    ]
   },
   {
@@ -4192,6 +4498,12 @@
      "kind": "signal",
      "label": "SCREEN socket: GND, 3.3V, SCL, SDA from pin 1 (I2C modules, up to two)"
     }
+   ],
+   "body_view": [
+    -46,
+    -46,
+    92,
+    92.5
    ]
   },
   {
@@ -4216,7 +4528,7 @@
    "anchors": [
     {
      "port": "in_v5",
-     "x": 14.0,
+     "x": 14,
      "y": -31.8,
      "kind": "power",
      "label": "Input lead, +5 V (red wire)"
@@ -4230,32 +4542,38 @@
     },
     {
      "port": "in_gnd",
-     "x": 19.0,
+     "x": 19,
      "y": -31.8,
      "kind": "power",
      "label": "Input lead, GND (white wire)"
     },
     {
      "port": "out_v5",
-     "x": 219.0,
-     "y": -30.0,
+     "x": 219,
+     "y": -30,
      "kind": "power",
      "label": "Output lead, +5 V (red wire)"
     },
     {
      "port": "out_data",
      "x": 221.5,
-     "y": -30.0,
+     "y": -30,
      "kind": "signal",
      "label": "Output lead, DATA (green wire)"
     },
     {
      "port": "out_gnd",
-     "x": 224.0,
-     "y": -30.0,
+     "x": 224,
+     "y": -30,
      "kind": "power",
      "label": "Output lead, GND (white wire)"
     }
+   ],
+   "body_view": [
+    -4,
+    -50,
+    264,
+    127.5
    ]
   },
   {
@@ -4269,7 +4587,7 @@
    "path": "lights/lumyn/lumyn-led-strip.svg",
    "size_mm": [
     160,
-    32.0
+    32
    ],
    "view_box": [
     0,
@@ -4288,7 +4606,7 @@
     {
      "port": "data",
      "x": 18.4,
-     "y": 5.0,
+     "y": 5,
      "kind": "signal",
      "label": "DATA (green wire): WS2812B data in, 3.3 V logic from the ConnectorX channel"
     },
@@ -4299,6 +4617,12 @@
      "kind": "power",
      "label": "GND (white wire): ground return to the ConnectorX"
     }
+   ],
+   "body_view": [
+    0,
+    -9,
+    160,
+    32
    ]
   },
   {
@@ -4330,7 +4654,7 @@
     },
     {
      "port": "pwm",
-     "x": -1.0,
+     "x": -1,
      "y": 21.9,
      "kind": "signal",
      "label": "PWM input, 3-pin 0.1 in (~ signal / + / −), servo pulse 1000–2000 µs from a roboRIO PWM port"
@@ -4342,6 +4666,12 @@
      "kind": "signal",
      "label": "LED strip output, 7-pin JST PH (12 V RGB 12 A max, 5 V addressable 5 A max) via the LED cable adapter"
     }
+   ],
+   "body_view": [
+    -9,
+    -6,
+    81,
+    41.4
    ]
   },
   {
@@ -4355,7 +4685,7 @@
    "path": "sensors/analog-devices/adis16470.svg",
    "size_mm": [
     98,
-    41.0
+    41
    ],
    "view_box": [
     -4,
@@ -4367,10 +4697,16 @@
     {
      "port": "spi",
      "x": 76.25,
-     "y": 11.0,
+     "y": 11,
      "kind": "signal",
      "label": "SPI socket underneath, 2x5 0.1 in (Samtec SSM-105): CS0, SCLK, MOSI, MISO, 3.3 V, GND, CS1/DR, CS2/RST, CS3/SYNC"
     }
+   ],
+   "body_view": [
+    -4,
+    -5,
+    98,
+    41
    ]
   },
   {
@@ -4414,6 +4750,12 @@
      "kind": "can",
      "label": "CAN pair B: yellow H / green L, female 0.1 in housing"
     }
+   ],
+   "body_view": [
+    -28,
+    -14,
+    56,
+    72.5
    ]
   },
   {
@@ -4506,6 +4848,12 @@
      "kind": "power",
      "label": "V-OUT: sensor ground"
     }
+   ],
+   "body_view": [
+    -37,
+    -18,
+    74,
+    34.5
    ]
   },
   {
@@ -4549,6 +4897,12 @@
      "kind": "power",
      "label": "GND push-in (black)"
     }
+   ],
+   "body_view": [
+    -29,
+    -21,
+    58,
+    44.5
    ]
   },
   {
@@ -4592,6 +4946,12 @@
      "kind": "can",
      "label": "CAN pair B: yellow H / green L, female 0.1 in housing"
     }
+   ],
+   "body_view": [
+    -32,
+    -28,
+    64,
+    91.5
    ]
   },
   {
@@ -4617,7 +4977,7 @@
     {
      "port": "vin",
      "x": 51.6,
-     "y": 12.0,
+     "y": 12,
      "kind": "power",
      "label": "VIN terminal (red wire, 4.3–16 V, about 40 mA)"
     },
@@ -4638,7 +4998,7 @@
     {
      "port": "can_l",
      "x": 51.6,
-     "y": 26.0,
+     "y": 26,
      "kind": "can",
      "label": "CANL terminal (green wire)"
     },
@@ -4649,6 +5009,12 @@
      "kind": "usb",
      "label": "USB-C (configuration with Alchemist, firmware, can power the gyro)"
     }
+   ],
+   "body_view": [
+    -5,
+    -5,
+    66,
+    44.5
    ]
   },
   {
@@ -4692,6 +5058,12 @@
      "kind": "signal",
      "label": "10-pin 1.27 mm IDC cable: 14-bit PWM to a SPARK MAX data port (default) or Talon SRX"
     }
+   ],
+   "body_view": [
+    -26,
+    -14,
+    52,
+    61.5
    ]
   },
   {
@@ -4705,7 +5077,7 @@
    "path": "sensors/redux/canandcolor.svg",
    "size_mm": [
     74,
-    46.0
+    46
    ],
    "view_box": [
     -5,
@@ -4763,6 +5135,12 @@
      "kind": "usb",
      "label": "USB-C (configuration and firmware with Alchemist)"
     }
+   ],
+   "body_view": [
+    -5,
+    -4,
+    74,
+    46
    ]
   },
   {
@@ -4776,7 +5154,7 @@
    "path": "sensors/rev/distance-sensor-2m.svg",
    "size_mm": [
     72,
-    27.0
+    27
    ],
    "view_box": [
     -5,
@@ -4792,6 +5170,12 @@
      "kind": "signal",
      "label": "JST PH 4-pin: GND (black), V+ (red), SDA (white), SCL (blue); I2C 0x52, 3.3-5 V"
     }
+   ],
+   "body_view": [
+    -5,
+    -7,
+    72,
+    27
    ]
   },
   {
@@ -4805,7 +5189,7 @@
    "path": "sensors/rev/color-sensor-v3.svg",
    "size_mm": [
     73.5,
-    27.0
+    27
    ],
    "view_box": [
     -4,
@@ -4821,6 +5205,12 @@
      "kind": "signal",
      "label": "JST PH 4-pin: GND (black), 3.3 V (red), SDA (white), SCL (blue); I2C 0x52, 3.3 V max"
     }
+   ],
+   "body_view": [
+    -4,
+    -7,
+    73.5,
+    27
    ]
   },
   {
@@ -4850,6 +5240,12 @@
      "kind": "signal",
      "label": "JST PH 4-pin: GND, 3.3 V (3.3-5 V), n+1, n; digital, active low, normally open"
     }
+   ],
+   "body_view": [
+    -31,
+    -14,
+    62,
+    28.5
    ]
   },
   {
@@ -4879,6 +5275,12 @@
      "kind": "signal",
      "label": "JST PH 6-pin: +V, ABS (duty cycle), A, B, I, GND; 3.3-5 V (A/S switch at A)"
     }
+   ],
+   "body_view": [
+    -31,
+    -25,
+    62,
+    69.5
    ]
   },
   {
@@ -4908,6 +5310,12 @@
      "kind": "signal",
      "label": "JST PH 6-pin: +V, ABS (duty cycle), A, B, I, GND; 3.3-5 V (A/S switch at A)"
     }
+   ],
+   "body_view": [
+    -31,
+    -25,
+    62,
+    69.5
    ]
   },
   {
@@ -5084,6 +5492,12 @@
      "kind": "signal",
      "label": "MXP I2C breakout (0.1 in right-angle header): SDA, SCL, +, GND"
     }
+   ],
+   "body_view": [
+    -5,
+    -6,
+    88,
+    67.64
    ]
   },
   {
@@ -5108,25 +5522,31 @@
    "anchors": [
     {
      "port": "gnd",
-     "x": 30.0,
-     "y": 8.0,
+     "x": 30,
+     "y": 8,
      "kind": "signal",
      "label": "JST PH 4-pin: GND"
     },
     {
      "port": "vcc",
-     "x": 30.0,
+     "x": 30,
      "y": 15.5,
      "kind": "power",
      "label": "JST PH 4-pin: VCC (3.3-5 V)"
     },
     {
      "port": "digital",
-     "x": 30.0,
-     "y": 23.0,
+     "x": 30,
+     "y": 23,
      "kind": "signal",
      "label": "JST PH 4-pin: Digital output, active low (LED on near a magnet)"
     }
+   ],
+   "body_view": [
+    -14,
+    -5,
+    76,
+    56.5
    ]
   },
   {
@@ -5156,6 +5576,12 @@
      "kind": "signal",
      "label": "3-pin 0.1 in header S / 5V / GND; 36 in PWM-style cable (white / red / black) to roboRIO ANALOG IN"
     }
+   ],
+   "body_view": [
+    -27,
+    -18,
+    54,
+    37.5
    ]
   },
   {
@@ -5180,25 +5606,31 @@
    "anchors": [
     {
      "port": "pwr",
-     "x": 19.0,
+     "x": 19,
      "y": 73.76,
      "kind": "power",
      "label": "Molex SL: red V+ / black GND (5-32 V; 12 V nominal), harness end"
     },
     {
      "port": "can_a",
-     "x": -19.0,
+     "x": -19,
      "y": 73.76,
      "kind": "can",
      "label": "Molex SL CAN connector A: yellow H / green L, harness end (CAN 1 Mbps or CAN FD)"
     },
     {
      "port": "can_b",
-     "x": -7.0,
+     "x": -7,
      "y": 73.76,
      "kind": "can",
      "label": "Molex SL CAN connector B: yellow H / green L, harness end (CAN 1 Mbps or CAN FD)"
     }
+   ],
+   "body_view": [
+    -31,
+    -36,
+    62,
+    124.26
    ]
   },
   {
@@ -5242,6 +5674,12 @@
      "kind": "can",
      "label": "CAN pair B: yellow H (pin 5) / green L (pin 6), 0.1 in housing"
     }
+   ],
+   "body_view": [
+    -30,
+    -18,
+    60,
+    104.53
    ]
   },
   {
@@ -5271,6 +5709,12 @@
      "kind": "usb",
      "label": "USB 2.0 Type-A plug (5 V, 200 mA max)"
     }
+   ],
+   "body_view": [
+    -12,
+    -6,
+    62,
+    76.5
    ]
   },
   {
@@ -5300,6 +5744,12 @@
      "kind": "usb",
      "label": "USB 2.0 Type-A plug (5 V, 200 mA max)"
     }
+   ],
+   "body_view": [
+    -12,
+    -6,
+    62,
+    76.5
    ]
   },
   {
@@ -5329,6 +5779,12 @@
      "kind": "usb",
      "label": "USB 2.0 Type-A plug (5 V, 200 mA max)"
     }
+   ],
+   "body_view": [
+    -12,
+    -6,
+    62,
+    76.5
    ]
   },
   {
@@ -5354,14 +5810,14 @@
     {
      "port": "strobe",
      "x": 19.82,
-     "y": 3.0,
+     "y": 3,
      "kind": "signal",
      "label": "STROBE 2-pin header on the lens side (optional strobe output, opto 50 mA)"
     },
     {
      "port": "fsin",
      "x": 12.4,
-     "y": 3.0,
+     "y": 3,
      "kind": "signal",
      "label": "FSIN 2-pin header on the lens side (optional trigger input 3.3-5 V)"
     },
@@ -5372,6 +5828,12 @@
      "kind": "usb",
      "label": "USB 2.0 Type-A plug (5 V, 86 mA)"
     }
+   ],
+   "body_view": [
+    -16,
+    -6,
+    64,
+    71.5
    ]
   },
   {
@@ -5422,6 +5884,12 @@
      "kind": "power",
      "label": "− (black): 2-pin Weidmuller push-in terminal, 18-20 AWG"
     }
+   ],
+   "body_view": [
+    -6,
+    -7,
+    110,
+    61.61
    ]
   },
   {
@@ -5453,7 +5921,7 @@
     },
     {
      "port": "ethernet",
-     "x": 62.0,
+     "x": 62,
      "y": 49.91,
      "kind": "ethernet",
      "label": "Gigabit Ethernet RJ45 (to the robot radio)"
@@ -5472,6 +5940,12 @@
      "kind": "power",
      "label": "− (black): 2-pin Weidmuller push-in terminal, 18-20 AWG"
     }
+   ],
+   "body_view": [
+    -6,
+    -7,
+    110,
+    61.61
    ]
   },
   {
@@ -5496,7 +5970,7 @@
    "anchors": [
     {
      "port": "ethernet",
-     "x": 74.0,
+     "x": 74,
      "y": 16.5,
      "kind": "ethernet",
      "label": "Gigabit Ethernet RJ45 (passive PoE in) to the radio or a switch"
@@ -5517,18 +5991,24 @@
     },
     {
      "port": "usb_c",
-     "x": 52.0,
+     "x": 52,
      "y": -1.6,
      "kind": "usb",
      "label": "USB-C (flashing with rpiboot; not the robot link)"
     },
     {
      "port": "usb3_a",
-     "x": -2.0,
+     "x": -2,
      "y": 16.55,
      "kind": "usb",
      "label": "USB 3 Type-A (extra USB cameras or devices)"
     }
+   ],
+   "body_view": [
+    -14,
+    -8,
+    112,
+    58.2
    ]
   },
   {
@@ -5553,7 +6033,7 @@
    "anchors": [
     {
      "port": "ethernet",
-     "x": 74.0,
+     "x": 74,
      "y": 16.5,
      "kind": "ethernet",
      "label": "Gigabit Ethernet RJ45 (802.3at PoE in (option)) to the radio or a switch"
@@ -5574,18 +6054,24 @@
     },
     {
      "port": "usb_c",
-     "x": 52.0,
+     "x": 52,
      "y": -1.6,
      "kind": "usb",
      "label": "USB-C (flashing with rpiboot; not the robot link)"
     },
     {
      "port": "usb3_a",
-     "x": -2.0,
+     "x": -2,
      "y": 16.55,
      "kind": "usb",
      "label": "USB 3 Type-A (extra USB cameras or devices)"
     }
+   ],
+   "body_view": [
+    -14,
+    -8,
+    112,
+    58.2
    ]
   },
   {
@@ -5624,7 +6110,7 @@
     },
     {
      "port": "usb_c",
-     "x": 55.0,
+     "x": 55,
      "y": 63.4,
      "kind": "usb",
      "label": "USB-C (USB 3.1 + DisplayPort 1.4, data only)"
@@ -5657,6 +6143,12 @@
      "kind": "usb",
      "label": "USB 2.0 Type-A (side entry; shares the USB 2.0 lines with the USB-C)"
     }
+   ],
+   "body_view": [
+    -8,
+    -8,
+    124,
+    78.5
    ]
   },
   {
@@ -5728,6 +6220,12 @@
      "kind": "power",
      "label": "40-pin header pins 2/4 = 5 V (alternate power input)"
     }
+   ],
+   "body_view": [
+    -10,
+    -8,
+    106,
+    70.5
    ]
   },
   {
@@ -5766,39 +6264,45 @@
     },
     {
      "port": "usb2_upper",
-     "x": 88.0,
+     "x": 88,
      "y": 5.8,
      "kind": "usb",
      "label": "USB 2.0 Type-A (upper port of the stack)"
     },
     {
      "port": "usb2_lower",
-     "x": 88.0,
+     "x": 88,
      "y": 12.2,
      "kind": "usb",
      "label": "USB 2.0 Type-A (lower port of the stack)"
     },
     {
      "port": "usb3_upper",
-     "x": 88.0,
+     "x": 88,
      "y": 23.8,
      "kind": "usb",
      "label": "USB 3.0 Type-A (upper port of the stack)"
     },
     {
      "port": "usb3_lower",
-     "x": 88.0,
+     "x": 88,
      "y": 30.2,
      "kind": "usb",
      "label": "USB 3.0 Type-A (lower port of the stack)"
     },
     {
      "port": "ethernet",
-     "x": 88.0,
+     "x": 88,
      "y": 45.8,
      "kind": "ethernet",
      "label": "Gigabit Ethernet RJ45 (PoE+ with a PoE+ HAT)"
     }
+   ],
+   "body_view": [
+    -7,
+    -7,
+    102,
+    70.5
    ]
   },
   {
@@ -5828,6 +6332,12 @@
      "kind": "usb",
      "label": "Locking USB-C on the camera to USB-A (USB 2.0 UVC, 5 V from the host)"
     }
+   ],
+   "body_view": [
+    -30,
+    -22,
+    60,
+    96.5
    ]
   },
   {
@@ -5899,6 +6409,12 @@
      "kind": "air",
      "label": "R2 (3): M5 x 0.8 / 10-32 thread, sub-base underside, exhaust"
     }
+   ],
+   "body_view": [
+    -18,
+    -6,
+    130.5,
+    56.5
    ]
   },
   {
@@ -5963,6 +6479,12 @@
      "kind": "air",
      "label": "R2 (3): M5 x 0.8 / 10-32 thread, sub-base underside, exhaust"
     }
+   ],
+   "body_view": [
+    -18,
+    -6,
+    98,
+    56.5
    ]
   },
   {
@@ -6030,28 +6552,28 @@
     {
      "port": "sol_0",
      "x": 35.01,
-     "y": 52.0,
+     "y": 52,
      "kind": "signal",
      "label": "Solenoid channel 0: red + / black − (12 or 24 V)"
     },
     {
      "port": "sol_1",
      "x": 42.25,
-     "y": 52.0,
+     "y": 52,
      "kind": "signal",
      "label": "Solenoid channel 1: red + / black − (12 or 24 V)"
     },
     {
      "port": "sol_2",
      "x": 49.49,
-     "y": 52.0,
+     "y": 52,
      "kind": "signal",
      "label": "Solenoid channel 2: red + / black − (12 or 24 V)"
     },
     {
      "port": "sol_3",
      "x": 56.73,
-     "y": 52.0,
+     "y": 52,
      "kind": "signal",
      "label": "Solenoid channel 3: red + / black − (12 or 24 V)"
     },
@@ -6065,17 +6587,23 @@
     {
      "port": "pressure_switch",
      "x": 16.95,
-     "y": 56.0,
+     "y": 56,
      "kind": "signal",
      "label": "PRESSURE SW. input (2 wires, either polarity, to the Nason switch)"
     },
     {
      "port": "compressor",
      "x": 24.5,
-     "y": 56.0,
+     "y": 56,
      "kind": "power",
      "label": "COMPRESSOR OUT: red + / black − (12 V, 17 A max continuous)"
     }
+   ],
+   "body_view": [
+    -7,
+    -6,
+    83.1,
+    67.9
    ]
   },
   {
@@ -6089,7 +6617,7 @@
    "path": "pneumatics/rev/rev-pressure-sensor.svg",
    "size_mm": [
     44,
-    90.0
+    90
    ],
    "view_box": [
     -29.4,
@@ -6101,17 +6629,23 @@
     {
      "port": "air",
      "x": 0,
-     "y": 49.0,
+     "y": 49,
      "kind": "air",
      "label": "Pressure port: 1/8 NPT male (0-200 psi, 348 psi max)"
     },
     {
      "port": "signal",
-     "x": -6.0,
+     "x": -6,
      "y": -30.6,
      "kind": "signal",
      "label": "Sensor cable: 3-pin 0.1 in housing, S (analog out 0.5-4.5 V) / +5 V / GND"
     }
+   ],
+   "body_view": [
+    -22,
+    -36,
+    44,
+    90
    ]
   },
   {
@@ -6164,7 +6698,7 @@
     },
     {
      "port": "sol_8",
-     "x": 1.0,
+     "x": 1,
      "y": 41.95,
      "kind": "signal",
      "label": "Solenoid channel 8: red + / black − (12 or 24 V, 200 mA max, 24-20 AWG)"
@@ -6178,7 +6712,7 @@
     },
     {
      "port": "sol_9",
-     "x": 1.0,
+     "x": 1,
      "y": 46.95,
      "kind": "signal",
      "label": "Solenoid channel 9: red + / black − (12 or 24 V, 200 mA max, 24-20 AWG)"
@@ -6192,7 +6726,7 @@
     },
     {
      "port": "sol_10",
-     "x": 1.0,
+     "x": 1,
      "y": 51.95,
      "kind": "signal",
      "label": "Solenoid channel 10: red + / black − (12 or 24 V, 200 mA max, 24-20 AWG)"
@@ -6206,7 +6740,7 @@
     },
     {
      "port": "sol_11",
-     "x": 1.0,
+     "x": 1,
      "y": 56.95,
      "kind": "signal",
      "label": "Solenoid channel 11: red + / black − (12 or 24 V, 200 mA max, 24-20 AWG)"
@@ -6220,7 +6754,7 @@
     },
     {
      "port": "sol_12",
-     "x": 1.0,
+     "x": 1,
      "y": 61.95,
      "kind": "signal",
      "label": "Solenoid channel 12: red + / black − (12 or 24 V, 200 mA max, 24-20 AWG)"
@@ -6234,7 +6768,7 @@
     },
     {
      "port": "sol_13",
-     "x": 1.0,
+     "x": 1,
      "y": 66.95,
      "kind": "signal",
      "label": "Solenoid channel 13: red + / black − (12 or 24 V, 200 mA max, 24-20 AWG)"
@@ -6248,7 +6782,7 @@
     },
     {
      "port": "sol_14",
-     "x": 1.0,
+     "x": 1,
      "y": 71.95,
      "kind": "signal",
      "label": "Solenoid channel 14: red + / black − (12 or 24 V, 200 mA max, 24-20 AWG)"
@@ -6262,7 +6796,7 @@
     },
     {
      "port": "sol_15",
-     "x": 1.0,
+     "x": 1,
      "y": 76.95,
      "kind": "signal",
      "label": "Solenoid channel 15: red + / black − (12 or 24 V, 200 mA max, 24-20 AWG)"
@@ -6277,7 +6811,7 @@
     {
      "port": "usb",
      "x": 5.85,
-     "y": 93.0,
+     "y": 93,
      "kind": "usb",
      "label": "USB-C (REV Hardware Client; USB-to-CAN bridge)"
     },
@@ -6302,6 +6836,12 @@
      "kind": "power",
      "label": "POWER input + / − (12 V from a PDH channel, 20 A breaker recommended, 26-14 AWG)"
     }
+   ],
+   "body_view": [
+    -7,
+    -5,
+    61.6,
+    121.1
    ]
   },
   {
@@ -6315,7 +6855,7 @@
    "path": "pneumatics/viair/viair-90c.svg",
    "size_mm": [
     186,
-    127.0
+    127
    ],
    "view_box": [
     -6,
@@ -6333,7 +6873,7 @@
     },
     {
      "port": "pwr_pos",
-     "x": 173.0,
+     "x": 173,
      "y": -52.6,
      "kind": "power",
      "label": "+ lead (red), female spade: to PH/PCM COMPRESSOR +"
@@ -6345,6 +6885,12 @@
      "kind": "power",
      "label": "− lead (black), ring terminal: to PH/PCM COMPRESSOR −"
     }
+   ],
+   "body_view": [
+    -6,
+    -122,
+    186,
+    127
    ]
   },
   {
@@ -6416,6 +6962,12 @@
      "kind": "signal",
      "label": "HDMI 2.1: external display (not used for FRC control)"
     }
+   ],
+   "body_view": [
+    -95,
+    -6,
+    511.35,
+    302.5
    ]
   }
  ]
