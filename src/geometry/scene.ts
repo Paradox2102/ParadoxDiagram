@@ -1,5 +1,5 @@
 // Shared drawing facts for the canvas and the exports: wire points, colors, device boxes, tags.
-import { findAnchor, type AnchorKind, type Catalog, type Icon } from '../catalog/catalog';
+import { findAnchor, portPolarity, type AnchorKind, type Catalog, type Icon } from '../catalog/catalog';
 import type { Device, Doc, Point, PortRef, Wire } from '../model/types';
 import { autoRoute, exitPoint, type Box } from './autoroute';
 import { offsetPolyline } from './offset';
@@ -41,12 +41,14 @@ export function boundsOf(catalog: Catalog | null, d: Device) {
   return icon ? deviceBounds(d, icon) : { x: d.x, y: d.y, w: MISSING_W, h: MISSING_H };
 }
 
-export function portPoint(doc: Doc, catalog: Catalog | null, ref: PortRef): { p: Point; dir: Dir; kind: AnchorKind } | null {
+export function portPoint(
+  doc: Doc, catalog: Catalog | null, ref: PortRef,
+): { p: Point; dir: Dir; kind: AnchorKind; polarity: '+' | '-' | null } | null {
   const dev = doc.devices.find((d) => d.id === ref.device);
   const icon = dev && iconOf(catalog, dev);
   const a = icon && findAnchor(icon, ref.port);
   if (!dev || !icon || !a) return null;
-  return { ...portWorld(dev, icon, a), kind: a.kind };
+  return { ...portWorld(dev, icon, a), kind: a.kind, polarity: portPolarity(a) };
 }
 
 /** A device and its tag: the space a wire with no bends routes around. */
@@ -108,10 +110,19 @@ export interface WirePath {
 const f = (v: number) => String(Math.round(v * 100) / 100 + 0);
 export const pathD = (pts: Point[]) => pts.map((p, i) => `${i ? 'L' : 'M'}${f(p.x)} ${f(p.y)}`).join(' ');
 
-/** The lines that draw a wire: a pair for power and CAN, one line for network and air. */
+/**
+ * The lines that draw a wire: a pair for power and CAN, one line for network and air. A power
+ * wire between two one-polarity terminals (battery, breaker, distribution input) is one
+ * conductor: red for +, black for -.
+ */
 export function renderWirePaths(doc: Doc, catalog: Catalog | null, w: Wire): WirePath[] {
   const pts = wirePoints(doc, catalog, w);
   if (!pts) return [];
+  if (w.layer === 'power') {
+    const a = portPoint(doc, catalog, w.from)?.polarity;
+    const b = portPoint(doc, catalog, w.to)?.polarity;
+    if (a && b) return [{ d: pathD(pts), stroke: a === '+' ? COLORS.pos : COLORS.neg, width: 1.2 }];
+  }
   if (w.layer === 'power' || w.layer === 'can') {
     const [left, right] = w.layer === 'power' ? [COLORS.pos, COLORS.neg] : [COLORS.canH, COLORS.canL];
     return [

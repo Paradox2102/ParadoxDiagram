@@ -71,3 +71,18 @@ test('a wire with no bends routes around the devices it joins', () => {
     expect(x0 < motor.x + motor.w && x1 > motor.x && y0 < motor.y + motor.h && y1 > motor.y).toBe(false);
   }
 });
+
+test('battery to breaker to PDH draws one conductor per wire; a channel cable stays a pair', () => {
+  let d = apply(emptyDoc(), { type: 'addDevice', slug: 'frc-battery', name: '', x: 0, y: 300 });
+  d = apply(d, { type: 'addDevice', slug: 'main-breaker-120a', name: '', x: 0, y: 150 });
+  d = apply(d, { type: 'addDevice', slug: 'rev-pdh', name: '', x: 200, y: 0 });
+  d = apply(d, { type: 'addDevice', slug: 'kraken-x60', name: '', x: 400, y: 0 });
+  const wire = (a: string, ap: string, b: string, bp: string) =>
+    (d = apply(d, { type: 'addWire', layer: 'power', from: { device: a, port: ap }, to: { device: b, port: bp } }));
+  wire('d1', 'sb50_pos', 'd2', 'bat');
+  wire('d2', 'aux', 'd3', 'batt_pos');
+  wire('d1', 'sb50_neg', 'd3', 'batt_neg');
+  wire('d3', 'ch4', 'd4', 'vbat_pos');
+  const strokes = d.wires.map((w) => renderWirePaths(d, catalog, w).map((p) => p.stroke));
+  expect(strokes).toEqual([['#cf222e'], ['#cf222e'], ['#0d1117'], ['#cf222e', '#0d1117']]);
+});

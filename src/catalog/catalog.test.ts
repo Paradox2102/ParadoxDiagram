@@ -1,6 +1,6 @@
 import { readFileSync } from 'node:fs';
 import { join } from 'node:path';
-import { findAnchor, iconLayers, layerOfKind, parseCatalog, searchIcons } from './catalog';
+import { canConnect, findAnchor, iconLayers, layerOfKind, parseCatalog, portPolarity, searchIcons } from './catalog';
 
 const raw = JSON.parse(readFileSync(join(import.meta.dirname, '../../public/icons/index.json'), 'utf8'));
 const catalog = parseCatalog(raw);
@@ -42,4 +42,28 @@ test('rejects an index with no icons list', () => {
 test('every icon has a body view, the frame without the caption', () => {
   expect(catalog.icons.every((i) => i.body_view?.length === 4)).toBe(true);
   expect(catalog.bySlug.get('rev-pdh')!.body_view).toEqual([-10, -6, 131, 235.5]);
+});
+
+test('power ports with one polarity are found by name', () => {
+  const pol = (slug: string, port: string) => portPolarity(findAnchor(catalog.bySlug.get(slug)!, port)!);
+  expect(pol('frc-battery', 'sb50_pos')).toBe('+');
+  expect(pol('frc-battery', 'sb50_neg')).toBe('-');
+  expect(pol('main-breaker-120a', 'bat')).toBe('+');
+  expect(pol('main-breaker-120a', 'aux')).toBe('+');
+  expect(pol('rev-pdh', 'batt_pos')).toBe('+');
+  expect(pol('rev-pdh', 'batt_neg')).toBe('-');
+  expect(pol('thrifty-powerhub', 'battery_neg')).toBe('-');
+  expect(pol('redux-zinc-v', 'gnd_1')).toBe('-');
+  expect(pol('redux-zinc-v', 'vin_1')).toBe('+');
+  expect(pol('rev-pdh', 'ch4')).toBeNull();
+  expect(pol('ctre-vrm', 'v12_2a_1')).toBeNull();
+  expect(pol('systemcore', 'can_s0')).toBeNull();
+});
+
+test('a + port never joins a - port', () => {
+  const a = (slug: string, port: string) => findAnchor(catalog.bySlug.get(slug)!, port)!;
+  expect(canConnect(a('frc-battery', 'sb50_pos'), a('rev-pdh', 'batt_neg'))).toBe(false);
+  expect(canConnect(a('frc-battery', 'sb50_pos'), a('main-breaker-120a', 'bat'))).toBe(true);
+  expect(canConnect(a('rev-pdh', 'ch4'), a('kraken-x60', 'vbat_neg'))).toBe(true);
+  expect(canConnect(a('rev-pdh', 'ch4'), a('systemcore', 'can_s0'))).toBe(false);
 });

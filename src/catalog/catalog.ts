@@ -79,3 +79,26 @@ export function searchIcons(icons: Icon[], query: string, showLegacy: boolean): 
     return words.every((w) => hay.includes(w));
   });
 }
+
+const POS_WORDS = new Set(['pos', 'positive', 'vin', 'bat', 'aux', '5v', '12v']);
+const NEG_WORDS = new Set(['neg', 'negative', 'gnd']);
+
+/**
+ * The polarity of a power terminal that carries one conductor (battery leads, breaker studs,
+ * distribution inputs), read from the port name. Null for a + / - pair such as a PDH channel.
+ */
+export function portPolarity(a: Anchor): '+' | '-' | null {
+  if (a.kind !== 'power') return null;
+  const words = a.port.toLowerCase().split('_');
+  if (words.some((w) => NEG_WORDS.has(w))) return '-';
+  if (words.some((w) => POS_WORDS.has(w))) return '+';
+  return null;
+}
+
+/** Two ports can share a wire when they are on one layer and are not + to - (a short). */
+export function canConnect(a: Anchor, b: Anchor): boolean {
+  if (layerOfKind(a.kind) !== layerOfKind(b.kind)) return false;
+  const pa = portPolarity(a);
+  const pb = portPolarity(b);
+  return !(pa && pb && pa !== pb);
+}

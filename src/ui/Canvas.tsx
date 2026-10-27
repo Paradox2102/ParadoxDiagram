@@ -1,7 +1,7 @@
 // The diagram: one <svg> in millimetres. Pointer tools: move, select box, pan, draw wire,
 // drag a wire segment or bend. Wheel zooms about the pointer.
 import { useCallback, useEffect, useImperativeHandle, useMemo, useRef, useState, type RefObject } from 'react';
-import { iconFrame, iconLayers, layerOfKind, type AnchorKind, type Catalog, type Layer } from '../catalog/catalog';
+import { canConnect, iconFrame, iconLayers, layerOfKind, type Anchor, type AnchorKind, type Catalog, type Layer } from '../catalog/catalog';
 import { contentBox } from '../export/svg';
 import { dragSegment, withoutEnds } from '../geometry/route';
 import { boundsOf, iconOf, KIND_COLOR, renderWirePaths, wireEnds, wirePoints } from '../geometry/scene';
@@ -44,6 +44,7 @@ interface Port {
   kind: AnchorKind;
   layer: Layer;
   label: string;
+  anchor: Anchor;
 }
 
 type Mode =
@@ -73,7 +74,8 @@ function magnet(v: number, axis: 'x' | 'y', magnets: Point[]): number {
 
 export function Canvas({ doc, catalog, layer, selection, setSelection, hist, apiRef }: Props) {
   const svgRef = useRef<SVGSVGElement>(null);
-  const [size, setSize] = useState({ w: 800, h: 600 });
+  const wrapRef = useRef<HTMLElement>(null);
+  const [size, setSize] = useState({ w: 800, h: 600, measured: false });
   const [view, setView] = useState<View>({ x: -40, y: -40, s: BASE_PX_PER_MM });
   const [mode, setModeState] = useState<Mode>({ kind: 'none' });
   const modeRef = useRef(mode);
@@ -95,16 +97,21 @@ export function Canvas({ doc, catalog, layer, selection, setSelection, hist, api
       const icon = iconOf(catalog, d);
       if (!icon) continue;
       for (const a of icon.anchors) {
-        out.push({ ref: { device: d.id, port: a.port }, p: portWorld(d, icon, a).p, kind: a.kind, layer: layerOfKind(a.kind), label: a.label });
+        out.push({ ref: { device: d.id, port: a.port }, p: portWorld(d, icon, a).p, kind: a.kind, layer: layerOfKind(a.kind), label: a.label, anchor: a });
       }
     }
     return out;
   }, [doc.devices, catalog]);
 
-  // Size of the drawing area.
+  // Size of the drawing area: measured at once, then on every resize. The observer watches the
+  // HTML wrapper, because Chrome does not always report size changes of an outer <svg>.
   useEffect(() => {
-    const el = svgRef.current!;
-    const ro = new ResizeObserver(() => setSize({ w: el.clientWidth || 800, h: el.clientHeight || 600 }));
+    const el = wrapRef.current!;
+    const measure = () => {
+      if (el.clientWidth && el.clientHeight) setSize({ w: el.clientWidth, h: el.clientHeight, measured: true });
+    };
+    measure();
+    const ro = new ResizeObserver(measure);
     ro.observe(el);
     return () => ro.disconnect();
   }, []);
@@ -135,7 +142,7 @@ export function Canvas({ doc, catalog, layer, selection, setSelection, hist, api
 
   // Fit a loaded layout once, when the icons and the drawing size are known.
   useEffect(() => {
-    if (fitted.current || !catalog || size.w === 800) return;
+    if (fitted.current || !catalog || !size.measured) return;
     fitted.current = true;
     if (doc.devices.length) fit();
   }, [catalog, size, doc.devices.length, fit]);
@@ -305,7 +312,7 @@ export function Canvas({ doc, catalog, layer, selection, setSelection, hist, api
         let target: Port | null = null;
         let best = reach;
         for (const p of ports) {
-          if (p.layer !== m.from.layer || samePort(p.ref, m.from.ref)) continue;
+          if (!canConnect(p.anchor, m.from.anchor) || samePort(p.ref, m.from.ref)) continue;
           const dist = Math.hypot(p.p.x - w.x, p.p.y - w.y);
           if (dist < best) {
             best = dist;
@@ -393,7 +400,7 @@ export function Canvas({ doc, catalog, layer, selection, setSelection, hist, api
   const visibleLayer = (l: Layer) => layer === 'all' || layer === l;
   const wiring = mode.kind === 'wire' ? mode : null;
   const shownPorts = wiring
-    ? ports.filter((p) => p.layer === wiring.from.layer && !samePort(p.ref, wiring.from.ref))
+    ? ports.filter((p) => canConnect(p.anchor, wiring.from.anchor) && !samePort(p.ref, wiring.from.ref))
     : ports.filter((p) => (p.ref.device === hover || selected.has(p.ref.device)) && visibleLayer(p.layer));
   const selDevice = selection.length === 1 && mode.kind === 'none' ? doc.devices.find((d) => d.id === selection[0]) : undefined;
   const rotateAt = selDevice ? boundsOf(catalog, selDevice) : null;
@@ -404,7 +411,7 @@ export function Canvas({ doc, catalog, layer, selection, setSelection, hist, api
   const grid = view.s >= 1.5;
 
   return (
-    <main className="canvas-wrap">
+    <main className="canvas-wrap" ref={wrapRef}>
       <svg
         ref={svgRef} className={mode.kind === 'pan' ? 'canvas panning' : 'canvas'} viewBox={vb}
         style={{ cursor: space ? 'grab' : undefined }} aria-label="Diagram" role="application"
