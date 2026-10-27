@@ -61,3 +61,17 @@ test('a name typed and not yet blurred is kept when the selection changes', asyn
   expect(dispatch).toHaveBeenCalledWith({ type: 'updateDevice', id: 'd2', patch: { name: 'Front Left' } });
   expect(dispatch).toHaveBeenCalledTimes(1);
 });
+
+test('Show label switches one device label off', async () => {
+  const dispatch = vi.fn();
+  render(<Inspector doc={doc()} catalog={catalog} selection={['d2']} dispatch={dispatch} />);
+  await userEvent.click(screen.getByRole('checkbox', { name: 'Show label' }));
+  expect(dispatch).toHaveBeenCalledWith({ type: 'setTagHidden', ids: ['d2'], hidden: true });
+});
+
+test('a multi-selection can hide all its labels', async () => {
+  const dispatch = vi.fn();
+  render(<Inspector doc={doc()} catalog={catalog} selection={['d1', 'd2', 'w1']} dispatch={dispatch} />);
+  await userEvent.click(screen.getByRole('button', { name: 'Hide labels' }));
+  expect(dispatch).toHaveBeenCalledWith({ type: 'setTagHidden', ids: ['d1', 'd2'], hidden: true });
+});

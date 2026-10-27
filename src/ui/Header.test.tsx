@@ -6,7 +6,8 @@ function props(over: Partial<HeaderProps> = {}): HeaderProps {
   return {
     title: 'Robot', onTitle: () => {}, layer: 'all', onLayer: () => {},
     canUndo: false, canRedo: false, onUndo: () => {}, onRedo: () => {},
-    onNew: () => {}, onOpen: () => {}, onExport: () => {}, saved: true, ...over,
+    onNew: () => {}, onOpen: () => {}, onExport: () => {}, saved: true,
+    labels: true, onLabels: () => {}, ...over,
   };
 }
 
@@ -54,4 +55,13 @@ test('About shows the icon license', async () => {
   render(<Header {...props()} />);
   await userEvent.click(screen.getByRole('button', { name: 'About' }));
   expect(screen.getByRole('dialog')).toHaveTextContent('CC0 1.0');
+});
+
+test('the Labels switch shows and hides every label', async () => {
+  const onLabels = vi.fn();
+  render(<Header {...props({ labels: true, onLabels })} />);
+  const sw = screen.getByRole('button', { name: 'Labels' });
+  expect(sw).toHaveAttribute('aria-pressed', 'true');
+  await userEvent.click(sw);
+  expect(onLabels).toHaveBeenCalledWith(false);
 });

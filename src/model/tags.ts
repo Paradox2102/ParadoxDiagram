@@ -4,6 +4,11 @@ import type { Doc } from './types';
 
 const CHANNEL = /^ch(\d+)$/;
 
+/** True when the device's label is drawn. */
+export function tagShown(doc: Doc, deviceId: string): boolean {
+  return !doc.hideTags && !doc.devices.find((d) => d.id === deviceId)?.hideTag;
+}
+
 export function deviceTag(doc: Doc, deviceId: string, catalog: Catalog | null): { name: string; facts: string } {
   const dev = doc.devices.find((d) => d.id === deviceId);
   if (!dev) return { name: '', facts: '' };

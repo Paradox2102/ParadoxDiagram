@@ -90,6 +90,14 @@ function DeviceForm({ doc, catalog, device, dispatch }: { doc: Doc; catalog: Cat
         }}
       />
       <Field label="Notes" value={device.notes} multiline onCommit={(v) => update({ notes: v })} />
+      <label className="check">
+        <input
+          type="checkbox" checked={!device.hideTag}
+          onChange={(e) => dispatch({ type: 'setTagHidden', ids: [device.id], hidden: !e.target.checked })}
+        />
+        Show label
+      </label>
+      {doc.hideTags && <p className="help">All labels are off (Labels in the top bar).</p>}
       <dl>
         <dt>Icon</dt>
         <dd>{device.slug}</dd>
@@ -147,7 +155,7 @@ function Help() {
           Select a wire to drag its segments or bends. Double-click a segment to add a bend, a bend to remove it.
         </p>
         <p>
-          <kbd>R</kbd> rotate · <kbd>Del</kbd> delete · <kbd>Space</kbd>+drag pan · wheel zoom · <kbd>⌘Z</kbd> undo
+          <kbd>R</kbd> rotate · <kbd>Del</kbd> delete · right-drag pan · wheel zoom · <kbd>⌘Z</kbd> undo
         </p>
         <p>The layout is kept in this browser. Export JSON to keep a copy or move it to another computer.</p>
       </div>
@@ -163,9 +171,16 @@ export function Inspector({ doc, catalog, selection, dispatch }: Props) {
   let body;
   if (live.length === 0) body = <Help />;
   else if (live.length > 1) {
+    const devices = live.filter((id) => doc.devices.some((d) => d.id === id));
     body = (
       <>
         <h2>{live.length} selected</h2>
+        {devices.length > 0 && (
+          <div className="row">
+            <button type="button" onClick={() => dispatch({ type: 'setTagHidden', ids: devices, hidden: true })}>Hide labels</button>
+            <button type="button" onClick={() => dispatch({ type: 'setTagHidden', ids: devices, hidden: false })}>Show labels</button>
+          </div>
+        )}
         <div className="row">
           <button type="button" onClick={() => dispatch({ type: 'rotateDevices', ids: live })}>Rotate 90°</button>
           <button type="button" className="danger" onClick={() => dispatch({ type: 'delete', ids: live })}>Delete</button>

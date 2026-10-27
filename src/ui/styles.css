@@ -48,6 +48,12 @@ h2 { font-family: var(--font-display); }
 }
 .layer:hover { color: #fff; }
 .layer[aria-pressed="true"] { background: #e6ebf3; color: var(--ink); }
+.labels-switch {
+  border: 1px solid #3a4766; background: transparent; color: #b7c1d3; border-radius: 6px; padding: 4px 10px; cursor: pointer;
+}
+.labels-switch[aria-pressed="true"] { background: #e6ebf3; color: var(--ink); border-color: #e6ebf3; }
+.inspector .check { display: flex; flex-direction: row; align-items: center; gap: 6px; color: var(--ink); }
+.inspector .check input { width: auto; }
 .swatch { display: inline-flex; gap: 1px; }
 .swatch i { display: block; width: 4px; height: 12px; border-radius: 1px; }
 .actions { margin-left: auto; display: flex; align-items: center; gap: 6px; }

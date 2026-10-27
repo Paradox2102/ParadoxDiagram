@@ -33,6 +33,8 @@ export interface HeaderProps {
   onOpen: (file: File) => void;
   onExport: (kind: ExportKind) => void;
   saved: boolean;
+  labels: boolean;
+  onLabels: (show: boolean) => void;
 }
 
 export function Header(p: HeaderProps) {
@@ -85,6 +87,12 @@ export function Header(p: HeaderProps) {
           </button>
         ))}
       </nav>
+      <button
+        type="button" className="labels-switch" aria-pressed={p.labels} onClick={() => p.onLabels(!p.labels)}
+        title="Show or hide every device label"
+      >
+        Labels
+      </button>
       <div className="actions">
         {!p.saved && <span className="unsaved">Not saved in this browser</span>}
         <button type="button" onClick={p.onUndo} disabled={!p.canUndo} title="Undo (Ctrl/Cmd+Z)">Undo</button>

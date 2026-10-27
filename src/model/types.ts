@@ -16,6 +16,8 @@ export interface Device {
   name: string;
   canId: number | null;
   notes: string;
+  /** Hide this device's label (name, CAN ID, PDH channel). */
+  hideTag?: boolean;
 }
 
 export interface PortRef {
@@ -38,6 +40,8 @@ export interface Doc {
   title: string;
   devices: Device[];
   wires: Wire[];
+  /** Hide every device label. */
+  hideTags?: boolean;
 }
 
 export const GRID_MM = 5;

@@ -7,7 +7,7 @@ interface Props {
   device: Device;
   icon: Icon | undefined;
   body: string | undefined;
-  tag: { name: string; facts: string };
+  tag: { name: string; facts: string } | null;
   dim: boolean;
   selected: boolean;
 }
@@ -44,10 +44,10 @@ export function DeviceView({ device, icon, body, tag, dim, selected }: Props) {
           </text>
         </>
       )}
-      <text x={cx} y={b.y + b.h + TAG_NAME_DY} fontSize={3.6} fontWeight="bold" textAnchor="middle" fill={COLORS.ink} fontFamily="Helvetica, Arial, sans-serif">
+      {tag && <text x={cx} y={b.y + b.h + TAG_NAME_DY} fontSize={3.6} fontWeight="bold" textAnchor="middle" fill={COLORS.ink} fontFamily="Helvetica, Arial, sans-serif">
         {tag.name}
-      </text>
-      {tag.facts && (
+      </text>}
+      {tag?.facts && (
         <text x={cx} y={b.y + b.h + TAG_FACTS_DY} fontSize={3} textAnchor="middle" fill={COLORS.muted} fontFamily="Helvetica, Arial, sans-serif">
           {tag.facts}
         </text>

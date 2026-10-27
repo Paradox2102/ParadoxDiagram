@@ -2,6 +2,7 @@
 import { findAnchor, portPolarity, type AnchorKind, type Catalog, type Icon } from '../catalog/catalog';
 import type { Device, Doc, Point, PortRef, Wire } from '../model/types';
 import { autoRoute, exitPoint, type Box } from './autoroute';
+import { nudgeRoutes } from './nudge';
 import { offsetPolyline } from './offset';
 import { routeWire, stub } from './route';
 import { deviceBounds, portWorld, type Dir } from './transform';
@@ -51,42 +52,53 @@ export function portPoint(
   return { ...portWorld(dev, icon, a), kind: a.kind, polarity: portPolarity(a) };
 }
 
-/** A device and its tag: the space a wire with no bends routes around. */
-export function keepOutBox(catalog: Catalog | null, d: Device): Box {
+/** A device and its label (when shown): the space a wire with no bends routes around. */
+export function keepOutBox(catalog: Catalog | null, d: Device, hideTags = false): Box {
   const b = boundsOf(catalog, d);
-  return { x: b.x, y: b.y, w: b.w, h: b.h + TAG_H };
+  return { x: b.x, y: b.y, w: b.w, h: b.h + (hideTags || d.hideTag ? 0 : TAG_H) };
 }
 
 // Documents never change in place, so routes are cached per document object.
-const routeCache = new WeakMap<Doc, { catalog: Catalog | null; boxes: Map<string, Box>; routes: Map<string, Point[] | null> }>();
+interface RouteCache {
+  catalog: Catalog | null;
+  boxes: Map<string, Box>;
+  routes: Map<string, Point[] | null> | null;
+}
+const routeCache = new WeakMap<Doc, RouteCache>();
 
-function cacheFor(doc: Doc, catalog: Catalog | null) {
+function cacheFor(doc: Doc, catalog: Catalog | null): RouteCache {
   let c = routeCache.get(doc);
   if (!c || c.catalog !== catalog) {
-    c = { catalog, boxes: new Map(doc.devices.map((d) => [d.id, keepOutBox(catalog, d)])), routes: new Map() };
+    c = { catalog, boxes: new Map(doc.devices.map((d) => [d.id, keepOutBox(catalog, d, doc.hideTags)])), routes: null };
     routeCache.set(doc, c);
   }
   return c;
 }
 
+function routeOne(doc: Doc, catalog: Catalog | null, c: RouteCache, w: Wire): Point[] | null {
+  const a = portPoint(doc, catalog, w.from);
+  const b = portPoint(doc, catalog, w.to);
+  if (!a || !b) return null;
+  const boxA = c.boxes.get(w.from.device) ?? null;
+  const boxB = c.boxes.get(w.to.device) ?? null;
+  let pts: Point[] | null = null;
+  if (!w.bends.length) pts = autoRoute(a.p, a.dir, b.p, b.dir, [...c.boxes.values()], boxA, boxB);
+  return pts ?? routeWire(a.p, a.dir, b.p, b.dir, w.bends, exitPoint(a.p, a.dir, boxA), exitPoint(b.p, b.dir, boxB));
+}
+
 /**
  * The wire's route, or null when an end cannot be placed (unknown icon). A wire with no bends
- * goes around every device; a wire with bends follows them.
+ * goes around every device; a wire with bends follows them. Runs that two wires share are then
+ * split into lanes, so all wires of a document are routed together.
  */
 export function wirePoints(doc: Doc, catalog: Catalog | null, w: Wire): Point[] | null {
   const c = cacheFor(doc, catalog);
-  if (c.routes.has(w.id)) return c.routes.get(w.id)!;
-  const a = portPoint(doc, catalog, w.from);
-  const b = portPoint(doc, catalog, w.to);
-  let pts: Point[] | null = null;
-  if (a && b) {
-    const boxA = c.boxes.get(w.from.device) ?? null;
-    const boxB = c.boxes.get(w.to.device) ?? null;
-    if (!w.bends.length) pts = autoRoute(a.p, a.dir, b.p, b.dir, [...c.boxes.values()], boxA, boxB);
-    pts ??= routeWire(a.p, a.dir, b.p, b.dir, w.bends, exitPoint(a.p, a.dir, boxA), exitPoint(b.p, b.dir, boxB));
+  if (!c.routes) {
+    const raw = doc.wires.map((x) => routeOne(doc, catalog, c, x));
+    const lanes = nudgeRoutes(raw);
+    c.routes = new Map(doc.wires.map((x, i) => [x.id, lanes[i]]));
   }
-  c.routes.set(w.id, pts);
-  return pts;
+  return c.routes.get(w.id) ?? null;
 }
 
 /** Where each end's run out of its port stops, plus the plain 6 mm stubs: never saved as bends. */

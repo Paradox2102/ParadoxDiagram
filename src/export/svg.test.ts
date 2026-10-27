@@ -86,3 +86,39 @@ test('battery to breaker to PDH draws one conductor per wire; a channel cable st
   const strokes = d.wires.map((w) => renderWirePaths(d, catalog, w).map((p) => p.stroke));
   expect(strokes).toEqual([['#cf222e'], ['#cf222e'], ['#0d1117'], ['#cf222e', '#0d1117']]);
 });
+
+test('a hidden label is left out of the export, for one device or all', async () => {
+  const one = apply(doc(), { type: 'setTagHidden', ids: ['d2'], hidden: true });
+  const svg1 = await exportSvg(one, catalog, 'all', realIcons);
+  expect(svg1).not.toContain('>Shooter<');
+  expect(svg1).toContain('>PDH<');
+  const all = apply(doc(), { type: 'setHideTags', hidden: true });
+  const svg2 = await exportSvg(all, catalog, 'all', realIcons);
+  expect(svg2).not.toContain('>Shooter<');
+  expect(svg2).not.toContain('>PDH<');
+});
+
+test('a device with a hidden label keeps wires out of its body only', () => {
+  const d = apply(emptyDoc(), { type: 'addDevice', slug: 'kraken-x60', name: '', x: 0, y: 0 });
+  const shown = keepOutBox(catalog, d.devices[0]);
+  const hidden = keepOutBox(catalog, { ...d.devices[0], hideTag: true });
+  expect(shown.h - hidden.h).toBe(12);
+  expect(keepOutBox(catalog, d.devices[0], true).h).toBe(hidden.h);
+});
+
+test('two wires sharing a run are drawn in separate lanes', () => {
+  let d = apply(emptyDoc(), { type: 'addDevice', slug: 'rev-pdh', name: '', x: 0, y: 0 });
+  d = apply(d, { type: 'addDevice', slug: 'kraken-x60', name: '', x: 500, y: 0 });
+  d = apply(d, { type: 'addDevice', slug: 'systemcore', name: '', x: 500, y: 250 });
+  d = apply(d, { type: 'addWire', layer: 'power', from: { device: 'd1', port: 'ch4' }, to: { device: 'd2', port: 'vbat_pos' } });
+  d = apply(d, { type: 'addWire', layer: 'can', from: { device: 'd1', port: 'can_a' }, to: { device: 'd3', port: 'can_s0' } });
+  const shared = [{ x: 300, y: -80 }, { x: 300, y: 400 }];
+  d = apply(d, { type: 'setBends', id: 'w1', bends: shared });
+  d = apply(d, { type: 'setBends', id: 'w2', bends: shared });
+  const vx = (pts: { x: number; y: number }[]) =>
+    pts.slice(1).flatMap((p, i) => (p.x === pts[i].x && Math.abs(p.y - pts[i].y) > 300 ? [p.x] : []));
+  const a = vx(wirePoints(d, catalog, d.wires[0])!);
+  const b = vx(wirePoints(d, catalog, d.wires[1])!);
+  expect(a.length && b.length).toBeTruthy();
+  expect(a.some((x) => b.includes(x))).toBe(false);
+});

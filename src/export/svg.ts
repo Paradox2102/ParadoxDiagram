@@ -1,6 +1,6 @@
 // Standalone SVG export: icons inlined, white background, millimetre size.
 import { iconFrame, iconLayers, type Catalog, type Layer } from '../catalog/catalog';
-import { deviceTag } from '../model/tags';
+import { deviceTag, tagShown } from '../model/tags';
 import type { Doc } from '../model/types';
 import {
   boundsOf, COLORS, iconOf, MISSING_H, MISSING_W, OFF_LAYER_OPACITY, renderWirePaths, TAG_FACTS_DY, TAG_H, TAG_NAME_DY,
@@ -44,7 +44,7 @@ export function contentBox(doc: Doc, catalog: Catalog | null) {
   for (const d of doc.devices) {
     const b = boundsOf(catalog, d);
     add(b.x, b.y);
-    add(b.x + b.w, b.y + b.h + TAG_H);
+    add(b.x + b.w, b.y + b.h + (tagShown(doc, d.id) ? TAG_H : 0));
   }
   for (const w of doc.wires) for (const p of wirePoints(doc, catalog, w) ?? []) add(p.x, p.y);
   if (x0 === Infinity) return { x: 0, y: 0, w: 100, h: 100 };
@@ -99,8 +99,8 @@ export async function exportSvg(
       );
     }
     const cx = f(b.x + b.w / 2);
-    out.push(`<text x="${cx}" y="${f(b.y + b.h + TAG_NAME_DY)}" font-size="3.6" font-weight="bold" text-anchor="middle" fill="${COLORS.ink}">${esc(tag.name)}</text>`);
-    if (tag.facts) {
+    if (tagShown(doc, d.id)) out.push(`<text x="${cx}" y="${f(b.y + b.h + TAG_NAME_DY)}" font-size="3.6" font-weight="bold" text-anchor="middle" fill="${COLORS.ink}">${esc(tag.name)}</text>`);
+    if (tag.facts && tagShown(doc, d.id)) {
       out.push(`<text x="${cx}" y="${f(b.y + b.h + TAG_FACTS_DY)}" font-size="3" text-anchor="middle" fill="${COLORS.muted}">${esc(tag.facts)}</text>`);
     }
     out.push('</g>');

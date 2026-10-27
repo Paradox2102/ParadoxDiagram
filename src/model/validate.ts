@@ -20,7 +20,9 @@ export function validateDoc(raw: unknown, catalog: Catalog | null): { doc: Doc; 
     seen.add(id);
     const rot = [0, 90, 180, 270].includes(d.rot as number) ? (d.rot as Rot) : 0;
     const canId = typeof d.canId === 'number' && Number.isInteger(d.canId) ? d.canId : null;
-    devices.push({ id, slug: str(d.slug), x: num(d.x), y: num(d.y), rot, name: str(d.name), canId, notes: str(d.notes) });
+    const device: Device = { id, slug: str(d.slug), x: num(d.x), y: num(d.y), rot, name: str(d.name), canId, notes: str(d.notes) };
+    if (d.hideTag === true) device.hideTag = true;
+    devices.push(device);
   }
 
   const byId = new Map(devices.map((d) => [d.id, d]));
@@ -61,8 +63,7 @@ export function validateDoc(raw: unknown, catalog: Catalog | null): { doc: Doc; 
     });
   }
 
-  return {
-    doc: { format: 'paradox-diagram', version: 1, title: str(r.title, 'Untitled diagram'), devices, wires },
-    droppedWires,
-  };
+  const doc: Doc = { format: 'paradox-diagram', version: 1, title: str(r.title, 'Untitled diagram'), devices, wires };
+  if (r.hideTags === true) doc.hideTags = true;
+  return { doc, droppedWires };
 }

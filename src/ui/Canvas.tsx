@@ -8,7 +8,7 @@ import { boundsOf, iconOf, KIND_COLOR, renderWirePaths, wireEnds, wirePoints } f
 import { portWorld } from '../geometry/transform';
 import { apply } from '../model/actions';
 import { nextId } from '../model/ids';
-import { deviceTag } from '../model/tags';
+import { deviceTag, tagShown } from '../model/tags';
 import type { Doc, Point, PortRef } from '../model/types';
 import { DeviceView } from './DeviceView';
 import type { LayerView } from './Header';
@@ -209,10 +209,14 @@ export function Canvas({ doc, catalog, layer, selection, setSelection, hist, api
   const onPointerDown = (e: React.PointerEvent<SVGSVGElement>) => {
     // Finish an edit in the side panel first, so it lands before this gesture starts.
     (document.activeElement as HTMLElement | null)?.blur?.();
-    const svg = svgRef.current!;
-    svg.setPointerCapture(e.pointerId);
+    try {
+      svgRef.current!.setPointerCapture(e.pointerId);
+    } catch {
+      // the pointer is already gone (released, or not a live pointer): no capture needed
+    }
     const w = toWorld(e.clientX, e.clientY);
-    if (e.button === 1 || (e.button === 0 && space)) {
+    // Right-drag (or middle-drag, or Space + drag) pans.
+    if (e.button === 2 || e.button === 1 || (e.button === 0 && space)) {
       setMode({ kind: 'pan', cx: e.clientX, cy: e.clientY, view });
       return;
     }
@@ -416,6 +420,7 @@ export function Canvas({ doc, catalog, layer, selection, setSelection, hist, api
         ref={svgRef} className={mode.kind === 'pan' ? 'canvas panning' : 'canvas'} viewBox={vb}
         style={{ cursor: space ? 'grab' : undefined }} aria-label="Diagram" role="application"
         onPointerDown={onPointerDown} onPointerMove={onPointerMove} onPointerUp={onPointerUp} onPointerCancel={onPointerUp}
+        onContextMenu={(e) => e.preventDefault()}
         onPointerLeave={() => modeRef.current.kind === 'none' && setHover(null)}
         onDragOver={(e) => {
           if (e.dataTransfer.types.includes(SLUG_MIME)) {
@@ -441,7 +446,7 @@ export function Canvas({ doc, catalog, layer, selection, setSelection, hist, api
           const icon = iconOf(catalog, d);
           return (
             <DeviceView
-              key={d.id} device={d} icon={icon} body={bodies.get(d.slug)} tag={deviceTag(doc, d.id, catalog)}
+              key={d.id} device={d} icon={icon} body={bodies.get(d.slug)} tag={tagShown(doc, d.id) ? deviceTag(doc, d.id, catalog) : null}
               dim={layer !== 'all' && !(icon && iconLayers(icon).has(layer))} selected={selected.has(d.id)}
             />
           );

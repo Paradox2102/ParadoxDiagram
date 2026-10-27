@@ -12,7 +12,9 @@ export type Action =
   | { type: 'setBends'; id: string; bends: Point[] }
   | { type: 'updateWire'; id: string; patch: { note: string } }
   | { type: 'delete'; ids: string[] }
-  | { type: 'setTitle'; title: string };
+  | { type: 'setTitle'; title: string }
+  | { type: 'setTagHidden'; ids: string[]; hidden: boolean }
+  | { type: 'setHideTags'; hidden: boolean };
 
 export const snap = (v: number) => Math.round(v / GRID_MM) * GRID_MM;
 
@@ -68,5 +70,11 @@ export function apply(doc: Doc, action: Action): Doc {
     }
     case 'setTitle':
       return { ...doc, title: action.title };
+    case 'setTagHidden': {
+      const ids = new Set(action.ids);
+      return { ...doc, devices: doc.devices.map((d) => (ids.has(d.id) ? { ...d, hideTag: action.hidden } : d)) };
+    }
+    case 'setHideTags':
+      return { ...doc, hideTags: action.hidden };
   }
 }

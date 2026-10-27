@@ -34,3 +34,14 @@ test('rejects a file of another format', () => {
   expect(() => validateDoc({ ...base, version: 2 }, catalog)).toThrow('version 2 is not supported');
   expect(() => validateDoc({ ...base, devices: 'no' }, catalog)).toThrow('devices is not a list');
 });
+
+test('label settings survive a file round trip and default to shown', () => {
+  const withFlags = {
+    ...base, hideTags: true,
+    devices: [{ ...base.devices[0], hideTag: true }, base.devices[1]],
+  };
+  const { doc } = validateDoc(withFlags, catalog);
+  expect(doc.hideTags).toBe(true);
+  expect(doc.devices.map((d) => d.hideTag ?? false)).toEqual([true, false]);
+  expect(validateDoc(base, catalog).doc.hideTags ?? false).toBe(false);
+});

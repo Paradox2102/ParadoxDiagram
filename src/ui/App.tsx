@@ -111,6 +111,7 @@ export function App() {
         title={doc.title} onTitle={(title) => hist.change({ type: 'setTitle', title })} layer={layer} onLayer={setLayer}
         canUndo={hist.canUndo} canRedo={hist.canRedo} onUndo={hist.undo} onRedo={hist.redo}
         onNew={onNew} onOpen={onOpen} onExport={onExport} saved={saved}
+        labels={!doc.hideTags} onLabels={(show) => hist.change({ type: 'setHideTags', hidden: !show })}
       />
       <Palette catalog={catalog} error={catalogError} onAdd={addDevice} />
       <Canvas

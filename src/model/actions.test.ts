@@ -58,3 +58,12 @@ test('history keeps at most 100 past documents', () => {
   expect(h.past).toHaveLength(100);
   expect(commit(h, h.present)).toBe(h);
 });
+
+test('labels hide per device and for the whole diagram', () => {
+  let d = apply(withTwo(), { type: 'setTagHidden', ids: ['d1', 'd2'], hidden: true });
+  expect(d.devices.map((x) => x.hideTag)).toEqual([true, true]);
+  d = apply(d, { type: 'setTagHidden', ids: ['d2'], hidden: false });
+  expect(d.devices.map((x) => x.hideTag)).toEqual([true, false]);
+  d = apply(d, { type: 'setHideTags', hidden: true });
+  expect(d.hideTags).toBe(true);
+});
