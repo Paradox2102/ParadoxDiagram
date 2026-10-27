@@ -152,3 +152,16 @@ h2 { font-family: var(--font-display); }
 .about-box h2 { display: flex; align-items: center; gap: 8px; margin: 0 0 8px; font-size: 22px; }
 .about-box p { margin: 0 0 10px; color: var(--muted); }
 .about-box button { border: 1px solid var(--line); background: var(--bg); border-radius: var(--radius); padding: 5px 14px; cursor: pointer; }
+.share-box input {
+  width: 100%; padding: 6px 8px; border: 1px solid var(--line); border-radius: var(--radius);
+  font-family: var(--font-mono); font-size: 12px; background: var(--bg); color: var(--ink);
+}
+.share-box .share-meta { font-size: 12px; margin: 4px 0 10px; }
+.about-box .row { display: flex; gap: 6px; }
+.share-banner {
+  position: fixed; top: 60px; left: 50%; transform: translateX(-50%); z-index: 5; display: flex; align-items: center; gap: 10px;
+  background: var(--ink); color: #e6ebf3; padding: 8px 12px; border-radius: 8px; box-shadow: 0 6px 18px rgb(20 33 61 / 0.25);
+  max-width: calc(100% - 32px);
+}
+.share-banner button { flex: none; white-space: nowrap; border: 1px solid #3a4766; background: #1c2b4d; color: #e6ebf3; border-radius: var(--radius); padding: 4px 10px; cursor: pointer; }
+.share-banner button.primary { background: var(--accent); border-color: var(--accent); color: #fff; font-weight: 600; }

@@ -7,6 +7,7 @@ import { contentBox, EXPORT_MARGIN_MM, exportSvg } from '../export/svg';
 import { nextId } from '../model/ids';
 import { emptyDoc, type Doc } from '../model/types';
 import { validateDoc } from '../model/validate';
+import { buildShareUrl, encodeShare, needsConfirm, readIncoming, withoutShare } from '../share/share';
 import { AUTOSAVE_MS, loadSaved, safeStorage, saveDoc } from '../storage/autosave';
 import { Canvas, type CanvasApi } from './Canvas';
 import { Header, type ExportKind } from './Header';
@@ -32,10 +33,39 @@ export function App() {
   const [selection, setSelection] = useState<string[]>([]);
   const [saved, setSaved] = useState(storage !== null);
   const canvasApi = useRef<CanvasApi | null>(null);
+  const [incoming, setIncoming] = useState<{ doc: Doc; droppedWires: number } | { error: string } | null>(null);
+  const docRef = useRef(doc);
+  docRef.current = doc;
 
   useEffect(() => {
     loadCatalog().then(setCatalog, (e: Error) => setCatalogError(e.message));
   }, []);
+
+  // A share link (#share=...) opens once the icons are known: at once into an empty editor,
+  // otherwise after the user says so. The share code then leaves the address bar.
+  const iconsReady = catalog !== null || catalogError !== null;
+  useEffect(() => {
+    if (!iconsReady) return;
+    const check = async () => {
+      const got = await readIncoming(window.location.hash, catalog);
+      if (!got) return;
+      history.replaceState(null, '', window.location.pathname + window.location.search + withoutShare(window.location.hash));
+      if ('doc' in got && !needsConfirm(docRef.current)) openShared(got);
+      else setIncoming(got);
+    };
+    void check();
+    window.addEventListener('hashchange', check);
+    return () => window.removeEventListener('hashchange', check);
+    // openShared only uses stable setters and refs, so it is not a dependency
+  }, [iconsReady, catalog]);
+
+  function openShared(got: { doc: Doc; droppedWires: number }) {
+    hist.replace(got.doc);
+    setSelection([]);
+    setIncoming(null);
+    requestAnimationFrame(() => canvasApi.current?.fit());
+    if (got.droppedWires) window.alert(`${got.droppedWires} wire(s) in the shared diagram did not match their ports and were left out.`);
+  }
 
   useEffect(() => {
     const t = setTimeout(() => setSaved(saveDoc(storage, doc)), AUTOSAVE_MS);
@@ -112,6 +142,7 @@ export function App() {
         canUndo={hist.canUndo} canRedo={hist.canRedo} onUndo={hist.undo} onRedo={hist.redo}
         onNew={onNew} onOpen={onOpen} onExport={onExport} saved={saved}
         labels={!doc.hideTags} onLabels={(show) => hist.change({ type: 'setHideTags', hidden: !show })}
+        onShare={async () => buildShareUrl(window.location.origin + window.location.pathname, await encodeShare(doc), layer)}
       />
       <Palette catalog={catalog} error={catalogError} onAdd={addDevice} />
       <Canvas
@@ -119,6 +150,25 @@ export function App() {
         hist={hist} apiRef={canvasApi}
       />
       <Inspector doc={doc} catalog={catalog} selection={selection} dispatch={hist.change} />
+      {incoming && (
+        <div className="share-banner" role="status">
+          {'error' in incoming ? (
+            <>
+              <span>Could not open the shared diagram: {incoming.error}</span>
+              <button type="button" onClick={() => setIncoming(null)}>Close</button>
+            </>
+          ) : (
+            <>
+              <span>
+                Shared diagram “{incoming.doc.title}” ({incoming.doc.devices.length} devices). Opening it replaces the
+                diagram kept in this browser.
+              </span>
+              <button type="button" className="primary" onClick={() => openShared(incoming)}>Open it</button>
+              <button type="button" onClick={() => setIncoming(null)}>Keep mine</button>
+            </>
+          )}
+        </div>
+      )}
     </div>
   );
 }

@@ -35,12 +35,32 @@ export interface HeaderProps {
   saved: boolean;
   labels: boolean;
   onLabels: (show: boolean) => void;
+  /** Makes a snapshot share link of the current diagram. */
+  onShare: () => Promise<string>;
 }
+
+type ShareState = { url: string; copied: boolean } | { error: string } | null;
 
 export function Header(p: HeaderProps) {
   const [menu, setMenu] = useState(false);
   const [title, setTitle] = useState(p.title);
   const [about, setAbout] = useState(false);
+  const [share, setShare] = useState<ShareState>(null);
+  const onShare = async () => {
+    try {
+      const url = await p.onShare();
+      let copied = false;
+      try {
+        await navigator.clipboard.writeText(url);
+        copied = true;
+      } catch {
+        // no clipboard access (permission or an insecure page): the link box still shows the link
+      }
+      setShare({ url, copied });
+    } catch (e) {
+      setShare({ error: (e as Error).message });
+    }
+  };
   // a new or opened document brings its own title
   useEffect(() => setTitle(p.title), [p.title]);
   const commitTitle = () => {
@@ -107,6 +127,7 @@ export function Header(p: HeaderProps) {
             e.target.value = '';
           }}
         />
+        <button type="button" onClick={onShare} title="Copy a link that opens this version of the diagram">Share</button>
         <button type="button" onClick={() => setAbout(true)}>About</button>
         <div className="menu" ref={menuRef}>
           <button type="button" className="primary" aria-haspopup="menu" aria-expanded={menu} onClick={() => setMenu(!menu)}>
@@ -129,6 +150,35 @@ export function Header(p: HeaderProps) {
           )}
         </div>
       </div>
+      {share && (
+        <div className="about-backdrop" onPointerDown={() => setShare(null)}>
+          <div role="dialog" aria-modal="true" aria-label="Share link" className="about-box share-box" onPointerDown={(e) => e.stopPropagation()}>
+            <h2>Share this diagram</h2>
+            {'error' in share ? (
+              <p role="alert">Could not make a link: {share.error}</p>
+            ) : (
+              <>
+                <p>
+                  {share.copied ? 'The link is copied. ' : ''}Anyone who opens it sees this version of the diagram and
+                  can keep a copy. Later changes need a new link.
+                </p>
+                <input
+                  aria-label="Share link" readOnly value={share.url} onFocus={(e) => e.currentTarget.select()} autoFocus
+                />
+                <p className="share-meta">{share.url.length.toLocaleString('en-US')} characters</p>
+              </>
+            )}
+            <div className="row">
+              {!('error' in share) && (
+                <button type="button" onClick={() => navigator.clipboard?.writeText(share.url).then(() => setShare({ ...share, copied: true }), () => {})}>
+                  Copy
+                </button>
+              )}
+              <button type="button" onClick={() => setShare(null)}>Close</button>
+            </div>
+          </div>
+        </div>
+      )}
       {about && (
         <div className="about-backdrop" onPointerDown={() => setAbout(false)}>
           <div role="dialog" aria-modal="true" aria-label="About Paradox Diagram" className="about-box" onPointerDown={(e) => e.stopPropagation()}>

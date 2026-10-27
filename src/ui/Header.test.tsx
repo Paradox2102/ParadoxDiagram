@@ -7,7 +7,7 @@ function props(over: Partial<HeaderProps> = {}): HeaderProps {
     title: 'Robot', onTitle: () => {}, layer: 'all', onLayer: () => {},
     canUndo: false, canRedo: false, onUndo: () => {}, onRedo: () => {},
     onNew: () => {}, onOpen: () => {}, onExport: () => {}, saved: true,
-    labels: true, onLabels: () => {}, ...over,
+    labels: true, onLabels: () => {}, onShare: async () => 'https://x.test/#share=abc', ...over,
   };
 }
 
@@ -64,4 +64,20 @@ test('the Labels switch shows and hides every label', async () => {
   expect(sw).toHaveAttribute('aria-pressed', 'true');
   await userEvent.click(sw);
   expect(onLabels).toHaveBeenCalledWith(false);
+});
+
+test('Share makes a link and shows it with its length', async () => {
+  const onShare = vi.fn(async () => 'https://x.test/#share=abc');
+  render(<Header {...props({ onShare })} />);
+  await userEvent.click(screen.getByRole('button', { name: 'Share' }));
+  expect(onShare).toHaveBeenCalled();
+  const box = await screen.findByRole('dialog', { name: 'Share link' });
+  expect(box).toHaveTextContent('25 characters');
+  expect(screen.getByRole('textbox', { name: 'Share link' })).toHaveValue('https://x.test/#share=abc');
+});
+
+test('a failed share shows the error', async () => {
+  render(<Header {...props({ onShare: async () => { throw new Error('no CompressionStream'); } })} />);
+  await userEvent.click(screen.getByRole('button', { name: 'Share' }));
+  expect(await screen.findByRole('alert')).toHaveTextContent('no CompressionStream');
 });
