@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef, useState, type ReactNode } from 'react';
 import type { Layer } from '../catalog/catalog';
 import { Logo } from './Logo';
 import { ThemeButton } from './ThemeButton';
@@ -38,6 +38,8 @@ export interface HeaderProps {
   onLabels: (show: boolean) => void;
   /** Makes a snapshot share link of the current diagram. */
   onShare: () => Promise<string>;
+  /** The live badge, while the diagram is shared live with an AI. */
+  live?: ReactNode;
 }
 
 type ShareState = { url: string; copied: boolean } | { error: string } | null;
@@ -115,6 +117,7 @@ export function Header(p: HeaderProps) {
         Labels
       </button>
       <div className="actions">
+        {p.live}
         {!p.saved && <span className="unsaved">Not saved in this browser</span>}
         <button type="button" onClick={p.onUndo} disabled={!p.canUndo} title="Undo (Ctrl/Cmd+Z)">Undo</button>
         <button type="button" onClick={p.onRedo} disabled={!p.canRedo} title="Redo (Ctrl/Cmd+Shift+Z)">Redo</button>

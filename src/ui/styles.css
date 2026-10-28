@@ -125,6 +125,17 @@ h2 { font-family: var(--font-display); }
 .menu-list button { text-align: left; border: 0; background: none; padding: 6px 10px; border-radius: 4px; cursor: pointer; }
 .menu-list button:hover { background: var(--bg); }
 
+.live-badge > button { display: inline-flex; align-items: center; gap: 6px; }
+.live-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--bar-muted); }
+.live-badge[data-state="connected"] .live-dot { background: #2da44e; box-shadow: 0 0 0 3px rgba(45, 164, 78, 0.25); }
+.live-badge[data-state="connecting"] .live-dot, .live-badge[data-state="reconnecting"] .live-dot { background: #e3b341; }
+.live-badge[data-state="stopped"] .live-dot { background: var(--danger); }
+.live-badge .menu-list { min-width: 160px; }
+.live-message {
+  position: fixed; bottom: 16px; left: 50%; transform: translateX(-50%); z-index: 5; max-width: calc(100% - 32px);
+  background: var(--bar); color: var(--bar-ink); padding: 8px 12px; border-radius: 8px; box-shadow: 0 6px 18px var(--shadow); font-size: 13px;
+}
+
 /* Palette */
 .palette { grid-area: palette; display: flex; flex-direction: column; min-height: 0; background: var(--surface); border-right: 1px solid var(--line); }
 .palette-tools { padding: 10px; border-bottom: 1px solid var(--line); display: grid; gap: 6px; }

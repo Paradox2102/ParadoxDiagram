@@ -7,12 +7,14 @@ import { contentBox, EXPORT_MARGIN_MM, exportSvg } from '../export/svg';
 import { nextId } from '../model/ids';
 import { emptyDoc, type Doc } from '../model/types';
 import { validateDoc } from '../model/validate';
+import { autosaveAllowed, useLive, type LiveSend } from '../live/useLive';
 import { buildShareUrl, encodeShare, needsConfirm, readIncoming, withoutShare } from '../share/share';
 import { AUTOSAVE_MS, loadSaved, safeStorage, saveDoc } from '../storage/autosave';
 import { Canvas, type CanvasApi } from './Canvas';
 import { Header, type ExportKind } from './Header';
 import { iconText } from './iconText';
 import { Inspector } from './Inspector';
+import { LiveBadge } from './LiveBadge';
 import { Palette } from './Palette';
 import { useDocHistory } from './useDocHistory';
 import { useKeys } from './useKeys';
@@ -28,11 +30,15 @@ export function App() {
   const [catalog, setCatalog] = useState<Catalog | null>(null);
   const [catalogError, setCatalogError] = useState<string | null>(null);
   const [layer, setLayer] = useLayerHash();
-  const hist = useDocHistory(initialDoc);
+  // each local edit goes to the AI's server while the diagram is live
+  const liveSend = useRef<LiveSend | null>(null);
+  const hist = useDocHistory(initialDoc, { onLocal: (before, after) => liveSend.current?.(before, after) });
   const { doc } = hist;
   const [selection, setSelection] = useState<string[]>([]);
   const [saved, setSaved] = useState(storage !== null);
   const canvasApi = useRef<CanvasApi | null>(null);
+  const live = useLive(hist, liveSend, { onWelcome: () => requestAnimationFrame(() => canvasApi.current?.fit()) });
+  const liveOn = !autosaveAllowed(live.state);
   const [incoming, setIncoming] = useState<{ doc: Doc; droppedWires: number } | { error: string } | null>(null);
   const docRef = useRef(doc);
   docRef.current = doc;
@@ -67,10 +73,12 @@ export function App() {
     if (got.droppedWires) window.alert(`${got.droppedWires} wire(s) in the shared diagram did not match their ports and were left out.`);
   }
 
+  // while live, the AI's file is the copy that is kept: the browser copy waits
   useEffect(() => {
+    if (liveOn) return;
     const t = setTimeout(() => setSaved(saveDoc(storage, doc)), AUTOSAVE_MS);
     return () => clearTimeout(t);
-  }, [doc]);
+  }, [doc, liveOn]);
 
   const deleteSelection = () => {
     if (selection.length) hist.change({ type: 'delete', ids: selection });
@@ -144,7 +152,8 @@ export function App() {
       <Header
         title={doc.title} onTitle={(title) => hist.change({ type: 'setTitle', title })} layer={layer} onLayer={setLayer}
         canUndo={hist.canUndo} canRedo={hist.canRedo} onUndo={hist.undo} onRedo={hist.redo}
-        onNew={onNew} onOpen={onOpen} onExport={onExport} saved={saved}
+        onNew={onNew} onOpen={onOpen} onExport={onExport} saved={saved || liveOn}
+        live={live.state && <LiveBadge state={live.state} onLeave={live.leave} />}
         labels={!doc.hideTags} onLabels={(show) => hist.change({ type: 'setHideTags', hidden: !show })}
         onShare={async () => buildShareUrl(window.location.origin + window.location.pathname, await encodeShare(doc), layer)}
       />
@@ -154,6 +163,20 @@ export function App() {
         hist={hist} apiRef={canvasApi}
       />
       <Inspector doc={doc} catalog={catalog} selection={selection} dispatch={hist.change} />
+      {live.pending && (
+        <div className="share-banner" role="status">
+          <span>Connect to your AI's diagram? It replaces the diagram kept in this browser.</span>
+          <button type="button" className="primary" onClick={live.accept}>Connect</button>
+          <button type="button" onClick={live.decline}>Keep mine</button>
+        </div>
+      )}
+      {live.fatal && (
+        <div className="share-banner" role="alert">
+          <span>{live.fatal}</span>
+          <button type="button" onClick={live.dismissFatal}>Close</button>
+        </div>
+      )}
+      {live.message && <div className="live-message" role="status">{live.message}</div>}
       {incoming && (
         <div className="share-banner" role="status">
           {'error' in incoming ? (

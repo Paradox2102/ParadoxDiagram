@@ -18,6 +18,7 @@ root=$(curl -sS -D - -o "$tmp/root" "$base/")
 [[ "$(status "$root")" == 200 ]] && pass "/ is 200" || fail "/ is $(status "$root")"
 [[ "$(header "$root" cache-control)" == *no-cache* ]] && pass "/ Cache-Control no-cache" || fail "/ Cache-Control: $(header "$root" cache-control)"
 [[ "$(header "$root" content-security-policy)" == *"frame-ancestors 'none'"* ]] && pass "/ has the Content-Security-Policy" || fail "/ Content-Security-Policy: $(header "$root" content-security-policy)"
+[[ "$(header "$root" content-security-policy)" == *"ws://127.0.0.1:*"* ]] && pass "/ CSP allows the live link (ws://127.0.0.1)" || fail "/ CSP has no ws://127.0.0.1:* in connect-src"
 [[ "$(header "$root" x-content-type-options)" == nosniff ]] && pass "/ X-Content-Type-Options nosniff" || fail "/ X-Content-Type-Options: $(header "$root" x-content-type-options)"
 # Caddy drops its own Server header; a proxy in front (Railway's edge) may add its own.
 [[ "$(header "$root" server)" != *[Cc]addy* ]] && pass "/ does not name Caddy in Server" || fail "/ Server: $(header "$root" server)"

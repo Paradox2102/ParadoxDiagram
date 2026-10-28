@@ -9,11 +9,11 @@
 	encode zstd gzip
 
 	# The app inlines icon SVGs (style attributes), draws PNG exports from blob: and data: images, and Vite inlines the
-	# smallest font files as data: URLs.
+	# smallest font files as data: URLs. ws://127.0.0.1 is the live link to an AI's MCP server on the user's computer.
 	header {
 		X-Content-Type-Options nosniff
 		Referrer-Policy strict-origin-when-cross-origin
-		Content-Security-Policy "default-src 'self'; img-src 'self' data: blob:; style-src 'self' 'unsafe-inline'; script-src 'self'; connect-src 'self' blob: data:; font-src 'self' data:; object-src 'none'; base-uri 'self'; form-action 'none'; frame-ancestors 'none'"
+		Content-Security-Policy "default-src 'self'; img-src 'self' data: blob:; style-src 'self' 'unsafe-inline'; script-src 'self'; connect-src 'self' blob: data: ws://127.0.0.1:*; font-src 'self' data:; object-src 'none'; base-uri 'self'; form-action 'none'; frame-ancestors 'none'"
 		-Server
 	}
 
