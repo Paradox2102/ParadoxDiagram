@@ -54,12 +54,18 @@ export function busOf(doc: Doc, catalog: Catalog | null, deviceId: string): stri
   return typed || foundBus(doc, catalog, deviceId);
 }
 
+// Documents never change in place, so the buses are found once per document (each label needs them).
+const busCache = new WeakMap<Doc, { catalog: Catalog | null; buses: Set<string> }>();
+
 /** Every bus a device of the diagram is on. */
 export function busesInUse(doc: Doc, catalog: Catalog | null): Set<string> {
-  const out = new Set<string>();
+  const hit = busCache.get(doc);
+  if (hit && hit.catalog === catalog) return hit.buses;
+  const buses = new Set<string>();
   for (const d of doc.devices) {
     const bus = busOf(doc, catalog, d.id);
-    if (bus) out.add(bus);
+    if (bus) buses.add(bus);
   }
-  return out;
+  busCache.set(doc, { catalog, buses });
+  return buses;
 }

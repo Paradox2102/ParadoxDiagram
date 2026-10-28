@@ -48,3 +48,11 @@ test('a typed canBus wins', () => {
   expect(busOf(d, catalog, 'a')).toBe('Drive');
   expect(foundBus(d, catalog, 'a')).toBe('S1');
 });
+
+test('the buses are found once per diagram, not once per label', () => {
+  const d = build([['sc', 'systemcore'], ['a', 'neo-vortex-spark-flex']], [['sc.can_s0', 'a.can_a']]);
+  expect(busesInUse(d, catalog)).toBe(busesInUse(d, catalog));
+  const changed = apply(d, { type: 'setTitle', title: 'x' });
+  expect(busesInUse(changed, catalog)).not.toBe(busesInUse(d, catalog));
+});
+
