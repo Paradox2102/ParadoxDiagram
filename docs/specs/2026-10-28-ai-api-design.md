@@ -143,6 +143,11 @@ The first plan task tests a page on an HTTPS origin that is not localhost, with 
 blocks it, the server also serves the built app (bundled in the package) at `http://127.0.0.1:<port>/`. In that
 case `open_in_browser` gives that address for the blocked browsers, and the /api page says which browsers need it.
 
+**Result (2026-10-28):** the Claude desktop app's built-in browser (Chromium) blocks `https://example.com` to
+`ws://127.0.0.1` with no prompt (the request never reaches the server). A page served from `http://127.0.0.1` connects.
+Chrome, Safari and Firefox were not tested yet. So the server always serves the app locally as well, and
+`open_in_browser` gives both links: the public site first, and the local link for a browser that blocks it.
+
 ## 2. MCP tools
 
 All tools are in `mcp/src/tools/`. Each tool has a zod input schema with a description and an example. The
