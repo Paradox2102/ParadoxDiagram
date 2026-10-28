@@ -24,6 +24,14 @@ const REVERSE: Record<Dir, Dir> = { right: 'left', left: 'right', up: 'down', do
 
 const grow = (b: Box, m: number): Box => ({ x: b.x - m, y: b.y - m, w: b.w + 2 * m, h: b.h + 2 * m });
 
+/** Every grid coordinate and box edge is rounded the same way, so "on an edge" is never read as "inside". */
+const r3 = (v: number) => Math.round(v * 1000) / 1000;
+const roundBox = (b: Box): Box => {
+  const x = r3(b.x);
+  const y = r3(b.y);
+  return { x, y, w: r3(b.x + b.w) - x, h: r3(b.y + b.h) - y };
+};
+
 /** The end of the straight run out of a port: past its own device (plus margin), at least STUB_MM long. */
 export function exitPoint(p: Point, dir: Dir, own: Box | null): Point {
   let len = STUB_MM;
@@ -35,6 +43,8 @@ export function exitPoint(p: Point, dir: Dir, own: Box | null): Point {
   const [dx, dy] = STEP[dir];
   return { x: p.x + dx * len, y: p.y + dy * len };
 }
+
+const roundPoint = (p: Point): Point => ({ x: r3(p.x), y: r3(p.y) });
 
 const inside = (p: Point, b: Box) => p.x > b.x && p.x < b.x + b.w && p.y > b.y && p.y < b.y + b.h;
 
@@ -83,12 +93,12 @@ class Heap {
 export function autoRoute(
   start: Point, sDir: Dir, end: Point, eDir: Dir, boxes: Box[], startBox: Box | null, endBox: Box | null,
 ): Point[] | null {
-  const s1 = exitPoint(start, sDir, startBox);
-  const e1 = exitPoint(end, eDir, endBox);
+  const s1 = roundPoint(exitPoint(start, sDir, startBox));
+  const e1 = roundPoint(exitPoint(end, eDir, endBox));
   // A box that holds an exit point (devices that overlap) cannot be routed around: leave it out.
-  const obstacles = boxes.map((b) => grow(b, MARGIN_MM)).filter((b) => !inside(s1, b) && !inside(e1, b));
+  const obstacles = boxes.map((b) => roundBox(grow(b, MARGIN_MM))).filter((b) => !inside(s1, b) && !inside(e1, b));
 
-  const uniq = (v: number[]) => [...new Set(v.map((n) => Math.round(n * 1000) / 1000))].sort((a, b) => a - b);
+  const uniq = (v: number[]) => [...new Set(v.map(r3))].sort((a, b) => a - b);
   const xs = uniq([s1.x, e1.x, ...obstacles.flatMap((b) => [b.x, b.x + b.w])]);
   const ys = uniq([s1.y, e1.y, ...obstacles.flatMap((b) => [b.y, b.y + b.h])]);
   const nx = xs.length;
@@ -111,10 +121,10 @@ export function autoRoute(
     }
   }
 
-  const si = xs.indexOf(Math.round(s1.x * 1000) / 1000);
-  const sj = ys.indexOf(Math.round(s1.y * 1000) / 1000);
-  const ei = xs.indexOf(Math.round(e1.x * 1000) / 1000);
-  const ej = ys.indexOf(Math.round(e1.y * 1000) / 1000);
+  const si = xs.indexOf(s1.x);
+  const sj = ys.indexOf(s1.y);
+  const ei = xs.indexOf(e1.x);
+  const ej = ys.indexOf(e1.y);
   const goal = node(ei, ej);
   if (nodeBlocked[node(si, sj)] || nodeBlocked[goal]) return null;
 

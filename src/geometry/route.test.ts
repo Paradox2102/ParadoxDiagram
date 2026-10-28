@@ -107,3 +107,14 @@ test('corners on a port run are not saved as bends', () => {
   const corners = [{ x: 0, y: 30 }, { x: 0, y: 50 }, { x: 100, y: 50 }, { x: 100, y: 80 }];
   expect(stripPortRuns(corners, { x: 0, y: 0 }, 'down', { x: 100, y: 120 }, 'up')).toEqual([{ x: 0, y: 50 }, { x: 100, y: 50 }]);
 });
+
+test('a pair line folds back on its own side where the route turns back, so it never runs on a slant', () => {
+  const route = [{ x: 0, y: 0 }, { x: 10, y: 0 }, { x: 4, y: 0 }, { x: 4, y: 10 }];
+  for (const d of [0.7, -0.7]) {
+    const out = offsetPolyline(route, d);
+    for (let i = 1; i < out.length; i++) {
+      const a = out[i - 1], b = out[i];
+      expect(Math.abs(a.x - b.x) < 1e-9 || Math.abs(a.y - b.y) < 1e-9).toBe(true);
+    }
+  }
+});

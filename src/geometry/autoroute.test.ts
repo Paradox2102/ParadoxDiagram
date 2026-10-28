@@ -70,3 +70,11 @@ test('an end port shut in by devices on all four sides gives null', () => {
   ];
   expect(autoRoute({ x: 0, y: 0 }, 'down', { x: 0, y: 100 }, 'up', ring, null, null)).toBeNull();
 });
+
+test('an exit point on its own box edge still routes when the numbers carry rounding noise', () => {
+  // SystemCore CAN port 6 mm under its box top, leaving up; target port on the left of a motor
+  const own: Box = { x: 87.78, y: 10.716, w: 147.5, h: 95 };
+  const target: Box = { x: 437.588, y: 2.069, w: 80, h: 114.8 };
+  const path = autoRoute({ x: 155.88, y: 16.716 }, 'up', { x: 457.068, y: 75.689 }, 'left', [own, target], own, target);
+  expect(path).not.toBeNull();
+});
