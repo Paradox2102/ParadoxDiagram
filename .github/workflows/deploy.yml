@@ -1,6 +1,7 @@
 # Deploy when a GitHub release is published. Railway auto-deploys the `release` branch (and only that branch), so
 # this workflow checks the release, then moves `release` to the release's commit; Railway builds and deploys it.
-# The release tag must be v<package.json version>, for example v1.0.0. A push to main never deploys.
+# Then it publishes the MCP server (@paradox2102/diagram-mcp) to npm with trusted publishing (no token).
+# The release tag must be v<version> of both package.json files, for example v1.1.0. A push to main never deploys.
 name: Deploy
 
 on:
@@ -36,11 +37,12 @@ jobs:
         with:
           node-version: 24
           cache: npm
-      - name: Tag matches package.json
+      - name: Tag matches package.json and mcp/package.json
         run: |
           want="v$(node -p "require('./package.json').version")"
-          if [ "$TAG" != "$want" ]; then
-            echo "::error::The tag $TAG does not match package.json ($want). Bump the version before the release."
+          mcp="v$(node -p "require('./mcp/package.json').version")"
+          if [ "$TAG" != "$want" ] || [ "$TAG" != "$mcp" ]; then
+            echo "::error::The tag $TAG must match package.json ($want) and mcp/package.json ($mcp). Bump both before the release."
             exit 1
           fi
       - run: npm ci --no-audit --no-fund
@@ -50,3 +52,37 @@ jobs:
           sha=$(git rev-parse "refs/tags/$TAG^{commit}")
           git push --force origin "$sha:refs/heads/release"
           echo "release -> $TAG ($sha)" >> "$GITHUB_STEP_SUMMARY"
+
+  publish-mcp:
+    needs: deploy
+    runs-on: ubuntu-latest
+    environment:
+      name: npm
+      url: https://www.npmjs.com/package/@paradox2102/diagram-mcp
+    permissions:
+      contents: read
+      id-token: write # npm trusted publishing (OIDC) and provenance
+    env:
+      TAG: ${{ github.event.release.tag_name || inputs.tag }}
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          ref: ${{ env.TAG }}
+      - uses: actions/setup-node@v5
+        with:
+          node-version: 24
+          cache: npm
+          registry-url: https://registry.npmjs.org
+      # trusted publishing needs npm 11.5.1 or later
+      - run: npm install -g npm@11.21.0
+      - run: npm ci --no-audit --no-fund
+      - run: npm run build
+      - name: Publish @paradox2102/diagram-mcp
+        run: |
+          version=$(node -p "require('./mcp/package.json').version")
+          if npm view "@paradox2102/diagram-mcp@$version" version >/dev/null 2>&1; then
+            echo "@paradox2102/diagram-mcp@$version is already on npm; nothing to publish." >> "$GITHUB_STEP_SUMMARY"
+          else
+            npm publish -w @paradox2102/diagram-mcp --provenance --access public
+            echo "published @paradox2102/diagram-mcp@$version" >> "$GITHUB_STEP_SUMMARY"
+          fi
