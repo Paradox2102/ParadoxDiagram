@@ -25,8 +25,9 @@
 	@app not path /assets/* /icons/*
 	header @app Cache-Control "no-cache"
 
-	# The gallery page is /gallery; with a slash its relative links would point inside it.
+	# The gallery page is /gallery and the API docs are /api; with a slash their relative links would point inside them.
 	redir /gallery/ /gallery 308
+	redir /api/ /api 308
 
 	# Build files and icons are served as they are: a missing file is a 404.
 	handle /assets/* {

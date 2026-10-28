@@ -133,6 +133,7 @@ export function Gallery() {
       <nav className="page-nav" aria-label="Pages">
         <a href="./">Diagram</a>
         <a href="gallery" aria-current="page">Icons</a>
+        <a href="api">API</a>
         <ThemeButton className="theme-button page-theme" />
       </nav>
     </header>

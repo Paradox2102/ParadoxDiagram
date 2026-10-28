@@ -1,0 +1,78 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://diagram.team2102.org/api/schema.json",
+  "title": "Paradox Diagram file",
+  "description": "A wiring diagram as Paradox Diagram saves it (Export → JSON, or the MCP server's file). Lengths are in millimetres.",
+  "type": "object",
+  "required": ["format", "version", "title", "devices", "wires"],
+  "properties": {
+    "format": { "const": "paradox-diagram" },
+    "version": { "const": 1 },
+    "title": { "type": "string" },
+    "hideTags": { "type": "boolean", "description": "Hide every device label." },
+    "devices": { "type": "array", "items": { "$ref": "#/$defs/device" } },
+    "wires": { "type": "array", "items": { "$ref": "#/$defs/wire" } }
+  },
+  "$defs": {
+    "device": {
+      "type": "object",
+      "required": ["id", "slug", "x", "y", "rot", "name", "canId", "notes"],
+      "properties": {
+        "id": { "type": "string", "minLength": 1, "description": "Unique among devices and wires." },
+        "slug": { "type": "string", "description": "The device type, from https://diagram.team2102.org/icons/index.json." },
+        "x": { "type": "number", "description": "Where the drawing's frame origin sits, in mm." },
+        "y": { "type": "number" },
+        "rot": { "enum": [0, 90, 180, 270], "description": "Rotation, clockwise." },
+        "name": { "type": "string", "description": "The name in the label; empty uses the device type's name." },
+        "canId": { "type": ["integer", "null"], "minimum": 0 },
+        "notes": { "type": "string" },
+        "hideTag": { "type": "boolean" },
+        "tagSide": { "enum": ["bottom", "top", "left", "right"], "description": "Default bottom." },
+        "ip": {
+          "type": "string",
+          "pattern": "^(((25[0-5]|2[0-4][0-9]|1[0-9][0-9]|[1-9]?[0-9])\\.){3}(25[0-5]|2[0-4][0-9]|1[0-9][0-9]|[1-9]?[0-9])|DHCP)$",
+          "description": "A static IPv4 address, or DHCP."
+        },
+        "canBus": { "type": "string", "minLength": 1, "maxLength": 20, "description": "When empty, the bus is found from the CAN wires." },
+        "fields": {
+          "type": "array",
+          "maxItems": 20,
+          "items": {
+            "type": "object",
+            "required": ["label", "value"],
+            "properties": {
+              "label": { "type": "string", "minLength": 1, "maxLength": 40 },
+              "value": { "type": "string", "maxLength": 200 },
+              "onLabel": { "type": "boolean", "description": "Show \"label value\" in the device label." }
+            },
+            "additionalProperties": false
+          }
+        }
+      }
+    },
+    "port": {
+      "type": "object",
+      "required": ["device", "port"],
+      "properties": { "device": { "type": "string" }, "port": { "type": "string" } }
+    },
+    "wire": {
+      "type": "object",
+      "required": ["id", "layer", "from", "to", "bends", "note"],
+      "properties": {
+        "id": { "type": "string", "minLength": 1 },
+        "layer": { "enum": ["power", "can", "network", "air"] },
+        "from": { "$ref": "#/$defs/port" },
+        "to": { "$ref": "#/$defs/port" },
+        "bends": {
+          "type": "array",
+          "items": { "type": "object", "required": ["x", "y"], "properties": { "x": { "type": "number" }, "y": { "type": "number" } } }
+        },
+        "note": { "type": "string" },
+        "fromSide": { "enum": ["up", "down", "left", "right"] },
+        "toSide": { "enum": ["up", "down", "left", "right"] },
+        "fuseA": { "type": "number", "exclusiveMinimum": 0, "maximum": 200, "description": "Power wires: fuse or breaker size in amps." },
+        "awg": { "type": "integer", "minimum": 4, "maximum": 30, "description": "Power wires: wire gauge." }
+      }
+    }
+  }
+}

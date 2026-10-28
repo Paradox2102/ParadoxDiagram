@@ -30,6 +30,11 @@ else
   fail "an unknown path is $(status "$other") or not the app"
 fi
 
+api=$(curl -sS -D - -o "$tmp/api" "$base/api")
+if [[ "$(status "$api")" == 200 ]] && grep -q '<div id="root">' "$tmp/api"; then pass "/api serves the app"; else fail "/api is $(status "$api") or not the app"; fi
+schema=$(curl -sS -D - -o /dev/null "$base/api/schema.json")
+[[ "$(status "$schema")" == 200 && "$(header "$schema" content-type)" == application/json* ]] && pass "/api/schema.json is JSON" || fail "/api/schema.json is $(status "$schema") $(header "$schema" content-type)"
+
 idx=$(curl -sS -D - -o /dev/null -H 'Accept-Encoding: zstd, gzip' "$base/icons/index.json")
 [[ "$(status "$idx")" == 200 ]] && pass "/icons/index.json is 200" || fail "/icons/index.json is $(status "$idx")"
 [[ "$(header "$idx" cache-control)" == "public, max-age=300" ]] && pass "/icons Cache-Control max-age=300" || fail "/icons Cache-Control: $(header "$idx" cache-control)"

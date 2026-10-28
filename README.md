@@ -37,6 +37,11 @@ diagram that looks like a team wiring poster.
 - **Saved as you go.** The layout is kept in your browser, with undo and redo.
 - **Dark mode.** Follows your system setting, or pick Light or Dark with the button in the top bar. Exports
   always come out on white.
+- **Build it with an AI.** An MCP server lets an AI agent (Claude, Cursor and others) add the devices, connect them,
+  lay them out and fill in CAN IDs, power channels, fuse sizes and IP addresses, while you edit the same diagram live.
+  See [Use it with an AI](#use-it-with-an-ai).
+- **Details on every device and wire.** IP address, CAN bus (found from the CAN chain when you leave it empty), your
+  own label/value fields, and fuse size and wire gauge on power wires. They show in the label when you want them to.
 - **Icon gallery.** Browse every icon at [diagram.team2102.org/gallery](https://diagram.team2102.org/gallery) and
   download one SVG, a whole group (by type or by vendor), the icons a search finds, or the whole collection as a
   ZIP.
@@ -76,6 +81,19 @@ and download one SVG, a group, your search results or all of them as a ZIP.
 The SVG and PNG exports draw the devices, wires and labels on white, ready to print.
 
 ![The exported diagram of the example robot](docs/screenshots/export.png)
+
+## Use it with an AI
+
+Paradox Diagram has an MCP server, [`@paradox2102/diagram-mcp`](mcp/README.md). Add it to your AI app:
+
+```bash
+claude mcp add paradox-diagram -- npx -y @paradox2102/diagram-mcp
+```
+
+Then tell the AI about your robot. It makes the diagram file, opens it in your browser with a live link, and builds
+the diagram while you watch. You can drag, rename and edit at the same time: your changes reach the AI, and its
+changes reach you. Undo in the browser undoes only your own edits. Setup for Claude Desktop and Cursor, the tool
+reference and the file format are at [diagram.team2102.org/api](https://diagram.team2102.org/api).
 
 ## Build a diagram
 
@@ -123,10 +141,10 @@ The app runs at the address Vite prints (for example `http://localhost:5173`). O
 | Command | What it does |
 |---|---|
 | `npm run check` | Type check and run all tests (Vitest) |
-| `npm run build` | Build the static site into `dist/` |
+| `npm run build` | Build the MCP server, the tool reference and the static site |
 | `npm run preview` | Serve the built site |
 
-The app is static files only: no server and no database. The `Dockerfile` builds the site (after the checks
+The hosted app is static files only: no server and no database. The MCP server runs on the user's own computer. The `Dockerfile` builds the site (after the checks
 pass) and serves it with [Caddy](https://caddyserver.com); this is how the hosted app runs.
 `scripts/check-headers.sh <url>` checks a running copy's cache and security headers.
 
@@ -134,12 +152,14 @@ pass) and serves it with [Caddy](https://caddyserver.com); this is how the hoste
 
 A push to `main` runs the checks (GitHub Actions) and does not change the live site. To deploy:
 
-1. Set the new version in `package.json` (`npm version 1.2.0 --no-git-tag-version`), commit and push.
+1. Set the new version in `package.json` and `mcp/package.json` (`npm version 1.2.0 --no-git-tag-version`, at the
+   root and in `mcp/`), commit and push.
 2. Publish a GitHub release with the tag `v1.2.0`.
 
-The **Deploy** workflow checks that the tag matches `package.json` and runs the checks. Then it moves the
-`release` branch to that tag, and Railway, which auto-deploys only the `release` branch, builds and deploys it.
-The About box shows the version that is live.
+The **Deploy** workflow checks that the tag matches both versions and runs the checks. Then it moves the `release`
+branch to that tag, and Railway, which auto-deploys only the `release` branch, builds and deploys it. After that it
+publishes `@paradox2102/diagram-mcp` to npm (trusted publishing, no token). The About box shows the version that is
+live.
 
 ## Project layout
 
@@ -151,8 +171,11 @@ src/
   export/     SVG, PNG and JSON export
   share/      share links
   storage/    browser autosave
+  live/       the live link to the MCP server (tab side)
   ui/         React components
+mcp/          the MCP server (@paradox2102/diagram-mcp): tools, edit operations, layout, render, live server
 public/icons/ the FRC device icon collection (copied in, see below)
+public/api/   the tool reference (made by the build) and the file format's JSON Schema
 examples/     an example diagram
 docs/         design notes and screenshots
 ```
