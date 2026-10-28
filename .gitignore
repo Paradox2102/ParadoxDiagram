@@ -3,3 +3,4 @@ node_modules/
 dist/
 mcp/dist/
 mcp/assets/icons/
+mcp/assets/app/

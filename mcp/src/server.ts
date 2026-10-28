@@ -3,9 +3,11 @@ import { McpServer } from '@modelcontextprotocol/sdk/server/mcp.js';
 import { StdioServerTransport } from '@modelcontextprotocol/sdk/server/stdio.js';
 import { spawn } from 'node:child_process';
 import { existsSync } from 'node:fs';
+import { join } from 'node:path';
 import { z } from 'zod';
 import pkg from '../package.json' with { type: 'json' };
-import { loadNodeCatalog } from './catalog';
+import { serveApp } from './app-server';
+import { ASSETS, loadNodeCatalog } from './catalog';
 import { startLive } from './live';
 import { DiagramStore, resolvePath } from './store';
 import { INSTRUCTIONS, PROMPT, TOOLS, toolsJson, type ToolContext } from './tools';
@@ -86,7 +88,9 @@ export async function main(argv: string[]): Promise<void> {
   }
   let live;
   try {
-    live = await startLive(store, { port: args.port, site: args.site, version: pkg.version });
+    const app = join(ASSETS, 'app');
+    const serve = existsSync(join(app, 'index.html')) ? serveApp(app) : undefined;
+    live = await startLive(store, { port: args.port, site: args.site, version: pkg.version, serve });
   } catch (e) {
     process.stderr.write(`${(e as Error).message}\n`);
     process.exit(1);
