@@ -14,6 +14,8 @@ export interface ChangeEvent {
   doc: Doc;
   by: 'ai' | 'tab';
   seq?: number;
+  /** Another file: the tabs start over (fresh undo) instead of taking it as an edit. */
+  reset?: boolean;
 }
 
 /** A path from the AI or the command line: ~/ is the home folder, a relative path is from the working folder. */
@@ -41,7 +43,7 @@ export class DiagramStore {
     if (title?.trim()) doc.title = title.trim();
     this.file = file;
     this.aiSteps = [];
-    this.set(doc, 'ai');
+    this.set(doc, 'ai', undefined, true, true);
     return file;
   }
 
@@ -57,7 +59,7 @@ export class DiagramStore {
     const { doc, droppedWires } = validateDoc(raw, this.catalog);
     this.file = file;
     this.aiSteps = [];
-    this.set(doc, 'ai', undefined, false);
+    this.set(doc, 'ai', undefined, false, true);
     return { file, droppedWires };
   }
 
@@ -94,7 +96,7 @@ export class DiagramStore {
     return true;
   }
 
-  private set(doc: Doc, by: 'ai' | 'tab', seq?: number, save = true) {
+  private set(doc: Doc, by: 'ai' | 'tab', seq?: number, save = true, reset = false) {
     this.doc = doc;
     this.rev++;
     if (save && this.file) {
@@ -102,6 +104,6 @@ export class DiagramStore {
       writeFileSync(tmp, docToJson(doc));
       renameSync(tmp, this.file);
     }
-    for (const fn of this.listeners) fn({ rev: this.rev, doc, by, ...(seq !== undefined ? { seq } : {}) });
+    for (const fn of this.listeners) fn({ rev: this.rev, doc, by, ...(seq !== undefined ? { seq } : {}), ...(reset ? { reset } : {}) });
   }
 }

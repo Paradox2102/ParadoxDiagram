@@ -187,3 +187,12 @@ test('an action with no patch is rejected, not a crash', async () => {
   b.ws.close();
   a.ws.close();
 });
+
+test('a new or opened file reaches the tabs as welcome, so their undo starts fresh', async () => {
+  const a = await joined();
+  const other = join(mkdtempSync(join(tmpdir(), 'pd-live-')), 'other.paradox.json');
+  store.create(other, 'Other robot');
+  const w = await a.next((m) => m.t === 'welcome');
+  expect(w).toMatchObject({ file: other, doc: { title: 'Other robot' } });
+  a.ws.close();
+});

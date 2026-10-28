@@ -61,7 +61,8 @@ export async function startLive(store: DiagramStore, opts: LiveOptions): Promise
 
   const unsubscribe = store.onChange((e) => {
     for (const ws of clients) {
-      send(ws, { t: 'doc', rev: e.rev, doc: e.doc, by: e.by, ...(ws === sender && e.seq !== undefined ? { seq: e.seq } : {}) });
+      if (e.reset) send(ws, { t: 'welcome', rev: e.rev, doc: e.doc, file: store.file, server: opts.version });
+      else send(ws, { t: 'doc', rev: e.rev, doc: e.doc, by: e.by, ...(ws === sender && e.seq !== undefined ? { seq: e.seq } : {}) });
     }
   });
 
