@@ -1,0 +1,379 @@
+{
+ "format": "paradox-diagram",
+ "version": 1,
+ "title": "Example robot",
+ "devices": [
+  {
+   "id": "d1",
+   "slug": "rev-pdh",
+   "x": 0,
+   "y": 0,
+   "rot": 0,
+   "name": "PDH",
+   "canId": 1,
+   "notes": "",
+   "tagSide": "top"
+  },
+  {
+   "id": "d2",
+   "slug": "frc-battery",
+   "x": -330,
+   "y": 300,
+   "rot": 0,
+   "name": "Battery",
+   "canId": null,
+   "notes": "",
+   "tagSide": "left"
+  },
+  {
+   "id": "d3",
+   "slug": "main-breaker-120a",
+   "x": -90,
+   "y": 300,
+   "rot": 0,
+   "name": "Main breaker",
+   "canId": null,
+   "notes": "",
+   "tagSide": "right"
+  },
+  {
+   "id": "d4",
+   "slug": "systemcore",
+   "x": -10,
+   "y": -190,
+   "rot": 0,
+   "name": "SystemCore",
+   "canId": null,
+   "notes": ""
+  },
+  {
+   "id": "d5",
+   "slug": "vh-109",
+   "x": 240,
+   "y": -180,
+   "rot": 0,
+   "name": "Radio",
+   "canId": null,
+   "notes": ""
+  },
+  {
+   "id": "d6",
+   "slug": "neo-vortex-spark-flex",
+   "x": -230,
+   "y": -20,
+   "rot": 0,
+   "name": "Intake",
+   "canId": 21,
+   "notes": "",
+   "tagSide": "top"
+  },
+  {
+   "id": "d7",
+   "slug": "neo-vortex-spark-flex",
+   "x": -230,
+   "y": 135,
+   "rot": 0,
+   "name": "Indexer",
+   "canId": 22,
+   "notes": "",
+   "tagSide": "top"
+  },
+  {
+   "id": "d8",
+   "slug": "kraken-x60",
+   "x": 250,
+   "y": 10,
+   "rot": 0,
+   "name": "Shooter left",
+   "canId": 11,
+   "notes": "",
+   "tagSide": "right"
+  },
+  {
+   "id": "d9",
+   "slug": "kraken-x60",
+   "x": 250,
+   "y": 150,
+   "rot": 0,
+   "name": "Shooter right",
+   "canId": 12,
+   "notes": "",
+   "tagSide": "right"
+  },
+  {
+   "id": "d10",
+   "slug": "ctre-vrm",
+   "x": -250,
+   "y": -190,
+   "rot": 0,
+   "name": "VRM",
+   "canId": null,
+   "notes": ""
+  },
+  {
+   "id": "d11",
+   "slug": "limelight-4",
+   "x": -420,
+   "y": -190,
+   "rot": 0,
+   "name": "Limelight",
+   "canId": null,
+   "notes": "",
+   "tagSide": "left"
+  }
+ ],
+ "wires": [
+  {
+   "id": "w1",
+   "layer": "power",
+   "from": {
+    "device": "d2",
+    "port": "sb50_pos"
+   },
+   "to": {
+    "device": "d3",
+    "port": "bat"
+   },
+   "bends": [],
+   "note": ""
+  },
+  {
+   "id": "w2",
+   "layer": "power",
+   "from": {
+    "device": "d3",
+    "port": "aux"
+   },
+   "to": {
+    "device": "d1",
+    "port": "batt_pos"
+   },
+   "bends": [],
+   "note": ""
+  },
+  {
+   "id": "w3",
+   "layer": "power",
+   "from": {
+    "device": "d2",
+    "port": "sb50_neg"
+   },
+   "to": {
+    "device": "d1",
+    "port": "batt_neg"
+   },
+   "bends": [],
+   "note": ""
+  },
+  {
+   "id": "w4",
+   "layer": "power",
+   "from": {
+    "device": "d1",
+    "port": "ch12"
+   },
+   "to": {
+    "device": "d6",
+    "port": "vbat_pos"
+   },
+   "bends": [],
+   "note": ""
+  },
+  {
+   "id": "w5",
+   "layer": "power",
+   "from": {
+    "device": "d1",
+    "port": "ch16"
+   },
+   "to": {
+    "device": "d7",
+    "port": "vbat_pos"
+   },
+   "bends": [],
+   "note": ""
+  },
+  {
+   "id": "w6",
+   "layer": "power",
+   "from": {
+    "device": "d1",
+    "port": "ch6"
+   },
+   "to": {
+    "device": "d8",
+    "port": "vbat_pos"
+   },
+   "bends": [],
+   "note": ""
+  },
+  {
+   "id": "w7",
+   "layer": "power",
+   "from": {
+    "device": "d1",
+    "port": "ch2"
+   },
+   "to": {
+    "device": "d9",
+    "port": "vbat_pos"
+   },
+   "bends": [],
+   "note": ""
+  },
+  {
+   "id": "w8",
+   "layer": "power",
+   "from": {
+    "device": "d1",
+    "port": "ch20"
+   },
+   "to": {
+    "device": "d4",
+    "port": "pwr_bridge"
+   },
+   "bends": [],
+   "note": ""
+  },
+  {
+   "id": "w9",
+   "layer": "power",
+   "from": {
+    "device": "d1",
+    "port": "ch9"
+   },
+   "to": {
+    "device": "d5",
+    "port": "pwr_in"
+   },
+   "bends": [],
+   "note": ""
+  },
+  {
+   "id": "w10",
+   "layer": "power",
+   "from": {
+    "device": "d1",
+    "port": "ch10"
+   },
+   "to": {
+    "device": "d10",
+    "port": "vin_pos"
+   },
+   "bends": [],
+   "note": ""
+  },
+  {
+   "id": "w11",
+   "layer": "power",
+   "from": {
+    "device": "d10",
+    "port": "v12_2a_1"
+   },
+   "to": {
+    "device": "d11",
+    "port": "pwr_pos"
+   },
+   "bends": [],
+   "note": ""
+  },
+  {
+   "id": "w12",
+   "layer": "can",
+   "from": {
+    "device": "d4",
+    "port": "can_s0"
+   },
+   "to": {
+    "device": "d6",
+    "port": "can_a"
+   },
+   "bends": [],
+   "note": ""
+  },
+  {
+   "id": "w13",
+   "layer": "can",
+   "from": {
+    "device": "d6",
+    "port": "can_b"
+   },
+   "to": {
+    "device": "d7",
+    "port": "can_a"
+   },
+   "bends": [],
+   "note": ""
+  },
+  {
+   "id": "w14",
+   "layer": "can",
+   "from": {
+    "device": "d7",
+    "port": "can_b"
+   },
+   "to": {
+    "device": "d1",
+    "port": "can_a"
+   },
+   "bends": [],
+   "note": ""
+  },
+  {
+   "id": "w15",
+   "layer": "can",
+   "from": {
+    "device": "d4",
+    "port": "can_s1"
+   },
+   "to": {
+    "device": "d8",
+    "port": "can"
+   },
+   "bends": [],
+   "note": ""
+  },
+  {
+   "id": "w16",
+   "layer": "can",
+   "from": {
+    "device": "d8",
+    "port": "can"
+   },
+   "to": {
+    "device": "d9",
+    "port": "can"
+   },
+   "bends": [],
+   "note": ""
+  },
+  {
+   "id": "w17",
+   "layer": "network",
+   "from": {
+    "device": "d4",
+    "port": "eth0"
+   },
+   "to": {
+    "device": "d5",
+    "port": "eth_rio"
+   },
+   "bends": [],
+   "note": ""
+  },
+  {
+   "id": "w18",
+   "layer": "network",
+   "from": {
+    "device": "d11",
+    "port": "ethernet"
+   },
+   "to": {
+    "device": "d5",
+    "port": "eth_aux2"
+   },
+   "bends": [],
+   "note": ""
+  }
+ ]
+}
