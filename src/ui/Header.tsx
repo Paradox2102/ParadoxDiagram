@@ -2,6 +2,7 @@ import { useEffect, useRef, useState, type ReactNode } from 'react';
 import type { Layer } from '../catalog/catalog';
 import { Logo } from './Logo';
 import { ThemeButton } from './ThemeButton';
+import { track } from '../usage/track';
 
 export type ExportKind = 'svg' | 'png2' | 'png4' | 'json';
 export type LayerView = Layer | 'all';
@@ -52,6 +53,7 @@ export function Header(p: HeaderProps) {
   const onShare = async () => {
     try {
       const url = await p.onShare();
+      track('share');
       let copied = false;
       try {
         await navigator.clipboard.writeText(url);
@@ -148,6 +150,7 @@ export function Header(p: HeaderProps) {
                   onClick={() => {
                     setMenu(false);
                     p.onExport(x.id);
+                    track('export');
                   }}
                 >
                   {x.label}
@@ -198,6 +201,11 @@ export function Header(p: HeaderProps) {
               No credit is needed; please do not present the icons as your own.
             </p>
             <p>Your diagram is kept in this browser only. Export JSON to keep a copy.</p>
+            <p>
+              Usage counts: the site saves no identifying information and uses no cookies. A share, an export or an icon
+              download sends one empty request, with nothing about you or your diagram. From the web host's request log,
+              which the host deletes after a time, I keep only daily totals: visitors, shares, exports and icon downloads.
+            </p>
             <p className="about-request">
               Missing a component? Ask me to add it. Include a link to the product page or the documentation of each part.
               Email <a href="mailto:nickfoote@team2102.org?subject=Paradox%20Diagram%3A%20component%20request">nickfoote@team2102.org</a>,

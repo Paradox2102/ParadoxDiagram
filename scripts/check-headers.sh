@@ -45,6 +45,10 @@ icon=$(curl -sS -D - -o /dev/null "$base/icons/power/rev/rev-pdh.svg")
 noicon=$(curl -sS -D - -o /dev/null "$base/icons/nope.svg")
 [[ "$(status "$noicon")" == 404 ]] && pass "a missing icon is 404 (no app fallback)" || fail "a missing icon is $(status "$noicon")"
 
+# Usage pings (src/usage/track.ts) are an empty POST that Caddy answers 204. /e/check is not one of the counted events.
+ping=$(curl -sS -D - -o /dev/null -X POST "$base/e/check")
+[[ "$(status "$ping")" == 204 ]] && pass "POST /e/check is 204 (usage ping)" || fail "POST /e/check is $(status "$ping")"
+
 asset=$(grep -o 'assets/[^"]*\.js' "$tmp/root" | head -1)
 if [[ -n "$asset" ]]; then
   a=$(curl -sS -D - -o /dev/null "$base/$asset")

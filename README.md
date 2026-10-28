@@ -195,6 +195,22 @@ link to the product page or the documentation of each part. You can:
   [footie](https://www.chiefdelphi.com/new-message?username=footie&title=Paradox%20Diagram%3A%20component%20request).
 - Open a [GitHub issue](https://github.com/Paradox2102/ParadoxDiagram/issues/new).
 
+## Privacy and usage counts
+
+The site saves no identifying information. It has no accounts and no cookies, and your diagram never goes to the
+server: the browser keeps it, and a share link carries it after the `#`, which browsers do not send.
+
+To know if the app is in use, it counts general usage only:
+
+- A share, an export or an icon download (one SVG or a ZIP) sends one empty request to `/e/share`, `/e/export` or
+  `/e/icon`. The request carries nothing about you or your diagram. The local copy that the MCP server runs sends
+  nothing.
+- Railway, the web host, logs each request with its time, path, IP address and browser name, as web hosts do, and
+  deletes the log after a set time.
+- `npm run usage` reads that log and prints daily totals only: visitors, page visits, shares, exports and icon
+  downloads. It uses the IP addresses in memory to count each visitor once, and never prints or saves them. Only the
+  totals are kept.
+
 ## Credits
 
 Made by [FRC Team 2102 Paradox](https://docs.team2102.org).

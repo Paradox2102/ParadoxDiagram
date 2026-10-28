@@ -36,6 +36,11 @@
 	handle /icons/* {
 		file_server
 	}
+	# Usage pings (src/usage/track.ts): the request itself is the count, read from the host's request log by
+	# scripts/usage.mjs. Nothing is stored here.
+	handle /e/* {
+		respond 204
+	}
 	# The app is one page: any other path that is not a file gets index.html.
 	handle {
 		try_files {path} /index.html

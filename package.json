@@ -14,7 +14,8 @@
     "typecheck": "tsc --noEmit",
     "test": "vitest run",
     "check": "npm run typecheck && npm run typecheck -w mcp && npm run test",
-    "sync-icons": "node scripts/sync-icons.mjs"
+    "sync-icons": "node scripts/sync-icons.mjs",
+    "usage": "node scripts/usage.mjs"
   },
   "dependencies": {
     "@fontsource/barlow": "5.3.0",

@@ -1,6 +1,7 @@
 import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import { Header, type HeaderProps } from './Header';
+import * as usage from '../usage/track';
 
 function props(over: Partial<HeaderProps> = {}): HeaderProps {
   return {
@@ -67,6 +68,14 @@ test('About tells how to request a component, with three ways to ask', async () 
   expect(screen.getByRole('link', { name: 'GitHub issue' })).toHaveAttribute('href', 'https://github.com/Paradox2102/ParadoxDiagram/issues/new');
 });
 
+test('About says the site saves no identifying information and keeps only daily totals', async () => {
+  render(<Header {...props()} />);
+  await userEvent.click(screen.getByRole('button', { name: 'About' }));
+  const box = screen.getByRole('dialog');
+  expect(box).toHaveTextContent('saves no identifying information');
+  expect(box).toHaveTextContent('daily totals');
+});
+
 test('the Labels switch shows and hides every label', async () => {
   const onLabels = vi.fn();
   render(<Header {...props({ labels: true, onLabels })} />);
@@ -90,4 +99,20 @@ test('a failed share shows the error', async () => {
   render(<Header {...props({ onShare: async () => { throw new Error('no CompressionStream'); } })} />);
   await userEvent.click(screen.getByRole('button', { name: 'Share' }));
   expect(await screen.findByRole('alert')).toHaveTextContent('no CompressionStream');
+});
+
+test('Share and each Export kind count one use', async () => {
+  const count = vi.spyOn(usage, 'track').mockImplementation(() => {});
+  render(<Header {...props()} />);
+  await userEvent.click(screen.getByRole('button', { name: 'Share' }));
+  await screen.findByRole('dialog', { name: 'Share link' });
+  expect(count.mock.calls).toEqual([['share']]);
+  count.mockClear();
+  const kinds = 4;
+  for (let i = 0; i < kinds; i++) {
+    await userEvent.click(screen.getByRole('button', { name: 'Export' }));
+    await userEvent.click(screen.getAllByRole('menuitem')[i]);
+  }
+  expect(count.mock.calls).toEqual(Array(kinds).fill(['export']));
+  count.mockRestore();
 });

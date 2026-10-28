@@ -4,6 +4,7 @@ import { render, screen, within } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import { Gallery } from './Gallery';
 import * as download from '../export/download';
+import * as usage from '../usage/track';
 
 const index = readFileSync(join(import.meta.dirname, '../../public/icons/index.json'), 'utf8');
 const total = (JSON.parse(index) as { icons: unknown[] }).icons.length;
@@ -25,6 +26,21 @@ test('every icon type has a section, and each icon a Download SVG link', async (
   const pdh = screen.getByRole('link', { name: 'Download SVG of Power Distribution Hub (PDH)' });
   expect(pdh.getAttribute('href')).toBe('icons/power/rev/rev-pdh.svg');
   expect(pdh.getAttribute('download')).toBe('rev-pdh.svg');
+});
+
+test('a Download SVG link counts one icon download, on the card and in the large view', async () => {
+  const count = vi.spyOn(usage, 'track').mockImplementation(() => {});
+  render(<Gallery />);
+  const link = await screen.findByRole('link', { name: 'Download SVG of Power Distribution Hub (PDH)' });
+  link.addEventListener('click', (e) => e.preventDefault());
+  await userEvent.click(link);
+  expect(count).toHaveBeenCalledTimes(1);
+  expect(count).toHaveBeenCalledWith('icon');
+  await userEvent.click(screen.getByRole('button', { name: /Power Distribution Hub \(PDH\)/ }));
+  const big = within(await screen.findByRole('dialog')).getByRole('link', { name: 'Download SVG of Power Distribution Hub (PDH)' });
+  big.addEventListener('click', (e) => e.preventDefault());
+  await userEvent.click(big);
+  expect(count).toHaveBeenCalledTimes(2);
 });
 
 test('a search narrows the list and offers a ZIP of just those icons', async () => {
@@ -52,10 +68,13 @@ test('a group ZIP fetches the license and that group\'s icons, and downloads one
 
 test('Download all names its count and includes index.json', async () => {
   const save = vi.spyOn(download, 'downloadBlob').mockImplementation(() => {});
+  const count = vi.spyOn(usage, 'track').mockImplementation(() => {});
   render(<Gallery />);
   await userEvent.click(await screen.findByRole('button', { name: `Download all (${total} icons, ZIP)` }));
   await vi.waitFor(() => expect(save).toHaveBeenCalledTimes(1));
   expect(save.mock.calls[0][1]).toBe('frc-device-icons.zip');
+  expect(count).toHaveBeenCalledTimes(1);
+  expect(count).toHaveBeenCalledWith('icon');
   const asked = (fetch as unknown as { mock: { calls: string[][] } }).mock.calls.map((c) => c[0]);
   expect(asked.filter((u) => u.endsWith('.svg')).length).toBe(total);
 });

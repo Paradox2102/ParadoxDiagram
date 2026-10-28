@@ -4,6 +4,7 @@ import { useEffect, useRef, useState } from 'react';
 import { loadCatalog, searchIcons, type Catalog, type Icon } from '../catalog/catalog';
 import { groupIcons, iconsZip, zipSlug, type GroupBy } from '../catalog/gallery';
 import { downloadBlob } from '../export/download';
+import { track } from '../usage/track';
 import { Logo } from './Logo';
 import { ThemeButton } from './ThemeButton';
 
@@ -43,7 +44,7 @@ function IconCard({ icon, onEnlarge }: { icon: Icon; onEnlarge: (icon: Icon) => 
         <h3 id={titleId}>{icon.name}</h3>
         <p className="icon-vendor">{icon.vendor_name}</p>
         {icon.status === 'legacy' && <p className="icon-legacy">Legacy: not sold now</p>}
-        <a className="icon-download" href={ICONS + icon.path} download={`${icon.slug}.svg`} aria-label={`Download SVG of ${icon.name}`}>
+        <a className="icon-download" href={ICONS + icon.path} download={`${icon.slug}.svg`} aria-label={`Download SVG of ${icon.name}`} onClick={() => track('icon')}>
           Download SVG
         </a>
       </div>
@@ -87,7 +88,7 @@ function IconViewer({ icon, onClose }: { icon: Icon; onClose: () => void }) {
             </p>
             {icon.description && <p className="icon-description">{icon.description}</p>}
           </div>
-          <a className="icon-download" href={ICONS + icon.path} download={`${icon.slug}.svg`} aria-label={`Download SVG of ${icon.name}`}>
+          <a className="icon-download" href={ICONS + icon.path} download={`${icon.slug}.svg`} aria-label={`Download SVG of ${icon.name}`} onClick={() => track('icon')}>
             Download SVG
           </a>
           <button ref={closeRef} type="button" className="icon-viewer-close" onClick={close}>Close</button>
@@ -166,6 +167,7 @@ export function Gallery() {
     try {
       const zip = await iconsZip(icons, name, fetchText, whole);
       downloadBlob(new Blob([zip as BlobPart], { type: 'application/zip' }), `${name}.zip`);
+      track('icon');
     } catch (e) {
       setZipError(`The ZIP was not made: ${(e as Error).message}`);
     } finally {

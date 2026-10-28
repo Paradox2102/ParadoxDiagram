@@ -47,6 +47,8 @@ jobs:
           fi
       - run: npm ci --no-audit --no-fund
       - run: npm run check
+      - name: Caddyfile is valid
+        run: docker run --rm -e PORT=8080 -v "$PWD/Caddyfile:/etc/caddy/Caddyfile:ro" caddy:2.11-alpine caddy validate --config /etc/caddy/Caddyfile --adapter caddyfile
       - name: Move the release branch to this release (Railway deploys it)
         run: |
           sha=$(git rev-parse "refs/tags/$TAG^{commit}")
