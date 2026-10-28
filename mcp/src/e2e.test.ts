@@ -1,7 +1,7 @@
 // The built server over stdio, driven by the SDK's own client, builds the example robot with the tools only.
 import { Client } from '@modelcontextprotocol/sdk/client/index.js';
 import { StdioClientTransport } from '@modelcontextprotocol/sdk/client/stdio.js';
-import { execFileSync } from 'node:child_process';
+import { execFileSync, spawn } from 'node:child_process';
 import { mkdtempSync, readFileSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
@@ -73,8 +73,25 @@ test('builds the example robot with the tools only', async () => {
   expect(before.devices.some((d) => d.x !== 0 || d.y !== 0)).toBe(true);
 }, 60_000);
 
+test('open_in_browser gives the live links', async () => {
+  const r = await call('open_in_browser');
+  expect(r.error, r.text).toBe(false);
+  expect(r.text).toMatch(/https:\/\/diagram\.team2102\.org\/#live=\d+\.[A-Za-z0-9_-]{22}/);
+  expect(r.text).toMatch(/http:\/\/127\.0\.0\.1:\d+\/#live=/);
+});
+
 test('an error comes back as an error result, not a protocol error', async () => {
   const r = await call('edit', { ops: [{ op: 'connect', from: 'nope.x', to: 'd1.ch4' }] });
   expect(r.error).toBe(true);
   expect(r.text).toMatch(/^op 1 \(connect\): no device "nope"/);
+});
+
+test('the server stops when the AI client closes its stdin', async () => {
+  const child = spawn(process.execPath, [join(root, 'mcp/dist/server.js'), '--port', '0'], { stdio: ['pipe', 'ignore', 'ignore'] });
+  await new Promise((r) => setTimeout(r, 500));
+  const exited = new Promise<number | null>((resolve) => child.on('exit', (code) => resolve(code)));
+  child.stdin.end();
+  const code = await Promise.race([exited, new Promise<string>((r) => setTimeout(() => r('still running'), 3000))]);
+  if (code === 'still running') child.kill();
+  expect(code).toBe(0);
 });

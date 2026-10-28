@@ -6,6 +6,7 @@ import { existsSync } from 'node:fs';
 import { z } from 'zod';
 import pkg from '../package.json' with { type: 'json' };
 import { loadNodeCatalog } from './catalog';
+import { startLive } from './live';
 import { DiagramStore, resolvePath } from './store';
 import { INSTRUCTIONS, PROMPT, TOOLS, toolsJson, type ToolContext } from './tools';
 
@@ -83,7 +84,14 @@ export async function main(argv: string[]): Promise<void> {
     if (existsSync(file)) store.open(file);
     else store.create(file);
   }
-  const ctx: ToolContext = { store, catalog, live: null, openUrl };
+  let live;
+  try {
+    live = await startLive(store, { port: args.port, site: args.site, version: pkg.version });
+  } catch (e) {
+    process.stderr.write(`${(e as Error).message}\n`);
+    process.exit(1);
+  }
+  const ctx: ToolContext = { store, catalog, live, openUrl };
 
   const server = new McpServer({ name: 'paradox-diagram', version: pkg.version }, { instructions: INSTRUCTIONS });
   for (const t of TOOLS) {
@@ -104,8 +112,17 @@ export async function main(argv: string[]): Promise<void> {
     },
     ({ robot }) => ({ messages: [{ role: 'user', content: { type: 'text', text: robot ? `${PROMPT}\n\nWhat I know:\n${robot}` : PROMPT } }] }),
   );
+  // the AI client ends the session by closing stdin: stop the live link too, so the port is free again
+  let stopping = false;
+  const stop = () => {
+    if (stopping) return;
+    stopping = true;
+    void live.close().finally(() => process.exit(0));
+  };
+  process.stdin.on('end', stop);
+  process.stdin.on('close', stop);
   await server.connect(new StdioServerTransport());
-  process.stderr.write(`diagram-mcp ${pkg.version} ready${store.file ? `: ${store.file}` : ''}\n`);
+  process.stderr.write(`diagram-mcp ${pkg.version} ready${store.file ? `: ${store.file}` : ''}; live link on 127.0.0.1:${live.port}\n`);
 }
 
 void main(process.argv.slice(2));
