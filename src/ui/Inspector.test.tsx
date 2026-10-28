@@ -121,7 +121,18 @@ test('a device shows its icon description under the short name', () => {
 test('the label side buttons move the label of the selected devices', async () => {
   const dispatch = vi.fn();
   render(<Inspector doc={doc()} catalog={catalog} selection={['d2']} dispatch={dispatch} />);
-  expect(screen.getByRole('button', { name: 'Bottom' }).getAttribute('aria-pressed')).toBe('true');
-  await userEvent.click(screen.getByRole('button', { name: 'Left' }));
+  expect(screen.getByRole('button', { name: 'Label bottom' }).getAttribute('aria-pressed')).toBe('true');
+  expect(screen.getByRole('button', { name: 'Label left' }).textContent).toBe('←');
+  await userEvent.click(screen.getByRole('button', { name: 'Label left' }));
   expect(dispatch).toHaveBeenCalledWith({ type: 'setTagSide', ids: ['d2'], side: 'left' });
+});
+
+test('the rotate button is an arrow icon named for screen readers', async () => {
+  const dispatch = vi.fn();
+  render(<Inspector doc={doc()} catalog={catalog} selection={['d2']} dispatch={dispatch} />);
+  const rotate = screen.getByRole('button', { name: 'Rotate 90°' });
+  expect(rotate.textContent).toBe('');
+  expect(rotate.querySelector('svg')).not.toBeNull();
+  await userEvent.click(rotate);
+  expect(dispatch).toHaveBeenCalledWith({ type: 'rotateDevices', ids: ['d2'] });
 });

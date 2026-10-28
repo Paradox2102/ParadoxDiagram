@@ -4,6 +4,7 @@ import type { Catalog } from '../catalog/catalog';
 import type { Action } from '../model/actions';
 import { deviceTag } from '../model/tags';
 import { Arrange } from './Arrange';
+import { RotateIcon } from './RotateIcon';
 import type { Device, Doc, PortRef, Side, TagSide, Wire } from '../model/types';
 
 interface Props {
@@ -69,10 +70,10 @@ function Field(props: {
 }
 
 const TAG_BUTTONS: { side: TagSide; text: string }[] = [
-  { side: 'bottom', text: 'Bottom' },
-  { side: 'top', text: 'Top' },
-  { side: 'left', text: 'Left' },
-  { side: 'right', text: 'Right' },
+  { side: 'left', text: '←' },
+  { side: 'right', text: '→' },
+  { side: 'top', text: '↑' },
+  { side: 'bottom', text: '↓' },
 ];
 
 /** Which side of the device(s) the label sits on; none pressed when a selection is mixed. */
@@ -84,13 +85,22 @@ function TagSidePicker({ devices, dispatch }: { devices: Device[]; dispatch: Pro
       <span>Label side</span>
       {TAG_BUTTONS.map((b) => (
         <button
-          key={b.side} type="button" aria-pressed={current === b.side} title={`Put the label ${b.side === 'bottom' || b.side === 'top' ? 'at the ' : 'on the '}${b.side} of the device`}
+          key={b.side} type="button" aria-pressed={current === b.side} aria-label={`Label ${b.side}`}
+          title={`Put the label ${b.side === 'bottom' || b.side === 'top' ? 'at the ' : 'on the '}${b.side} of the device`}
           onClick={() => dispatch({ type: 'setTagSide', ids: devices.map((d) => d.id), side: b.side })}
         >
           {b.text}
         </button>
       ))}
     </div>
+  );
+}
+
+function RotateButton({ onClick }: { onClick: () => void }) {
+  return (
+    <button type="button" className="icon" aria-label="Rotate 90°" title="Rotate 90° clockwise (R)" onClick={onClick}>
+      <RotateIcon />
+    </button>
   );
 }
 
@@ -140,7 +150,7 @@ function DeviceForm({ doc, catalog, device, dispatch }: { doc: Doc; catalog: Cat
         <dd>{device.rot}°</dd>
       </dl>
       <div className="row">
-        <button type="button" onClick={() => dispatch({ type: 'rotateDevices', ids: [device.id] })}>Rotate 90°</button>
+        <RotateButton onClick={() => dispatch({ type: 'rotateDevices', ids: [device.id] })} />
         <button type="button" className="danger" onClick={() => dispatch({ type: 'delete', ids: [device.id] })}>Delete</button>
       </div>
     </>
@@ -250,7 +260,7 @@ export function Inspector({ doc, catalog, selection, dispatch }: Props) {
         )}
         {devices.length > 0 && <TagSidePicker devices={selected} dispatch={dispatch} />}
         <div className="row">
-          <button type="button" onClick={() => dispatch({ type: 'rotateDevices', ids: live })}>Rotate 90°</button>
+          <RotateButton onClick={() => dispatch({ type: 'rotateDevices', ids: live })} />
           <button type="button" className="danger" onClick={() => dispatch({ type: 'delete', ids: live })}>Delete</button>
         </div>
       </>

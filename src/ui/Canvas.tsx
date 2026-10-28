@@ -9,6 +9,7 @@ import { boundsOf, iconOf, KIND_COLOR, renderWirePaths, routeSides, savedBends, 
 import { portWorld } from '../geometry/transform';
 import { apply } from '../model/actions';
 import { nextId } from '../model/ids';
+import { ROTATE_ARC, ROTATE_HEAD } from './RotateIcon';
 import { deviceTag, tagShown } from '../model/tags';
 import { GRID_MM, type Doc, type Point, type PortRef } from '../model/types';
 import { DeviceView } from './DeviceView';
@@ -491,8 +492,8 @@ export function Canvas({ doc, catalog, layer, selection, setSelection, hist, api
           >
             <title>Rotate 90° (R)</title>
             <circle r={10} fill="#ffffff" stroke="#0969da" strokeWidth={1.5} />
-            <path d="M -4.5 -3 A 5.5 5.5 0 1 1 -5 2.5" fill="none" stroke="#0969da" strokeWidth={1.8} strokeLinecap="round" />
-            <path d="M -7.5 -5.5 L -4.5 -3 L -1.5 -6" fill="none" stroke="#0969da" strokeWidth={1.8} strokeLinecap="round" strokeLinejoin="round" />
+            <path d={ROTATE_ARC} fill="none" stroke="#0969da" strokeWidth={1.8} strokeLinecap="round" />
+            <path d={ROTATE_HEAD} fill="none" stroke="#0969da" strokeWidth={1.8} strokeLinecap="round" strokeLinejoin="round" />
           </g>
         )}
         {mode.kind === 'move' &&

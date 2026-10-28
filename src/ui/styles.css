@@ -131,6 +131,7 @@ h2 { font-family: var(--font-display); }
 .inspector .row { display: flex; gap: 6px; flex-wrap: wrap; margin-top: 4px; }
 .inspector .row button { border: 1px solid var(--line); background: var(--bg); border-radius: var(--radius); padding: 4px 10px; cursor: pointer; }
 .inspector .row button.danger { color: #cf222e; }
+.inspector .row button.icon { display: inline-flex; align-items: center; justify-content: center; padding: 4px 8px; color: var(--ink); }
 .inspector dl { display: grid; grid-template-columns: auto 1fr; gap: 3px 10px; font-size: 13px; margin: 0 0 12px; }
 .inspector dt { color: var(--muted); }
 .inspector dd { margin: 0; font-family: var(--font-mono); font-size: 12px; }
