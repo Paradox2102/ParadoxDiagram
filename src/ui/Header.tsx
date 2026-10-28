@@ -198,6 +198,14 @@ export function Header(p: HeaderProps) {
               No credit is needed; please do not present the icons as your own.
             </p>
             <p>Your diagram is kept in this browser only. Export JSON to keep a copy.</p>
+            <p className="about-request">
+              Missing a component? Ask me to add it. Include a link to the product page or the documentation of each part.
+              Email <a href="mailto:nickfoote@team2102.org?subject=Paradox%20Diagram%3A%20component%20request">nickfoote@team2102.org</a>,
+              send a Chief Delphi message to{' '}
+              <a href="https://www.chiefdelphi.com/new-message?username=footie&title=Paradox%20Diagram%3A%20component%20request" target="_blank" rel="noreferrer">footie</a>,
+              or open a{' '}
+              <a href="https://github.com/Paradox2102/ParadoxDiagram/issues/new" target="_blank" rel="noreferrer">GitHub issue</a>.
+            </p>
             <p className="about-version">
               Version {__APP_VERSION__} ·{' '}
               <a href="https://github.com/Paradox2102/ParadoxDiagram" target="_blank" rel="noreferrer">Source on GitHub</a>

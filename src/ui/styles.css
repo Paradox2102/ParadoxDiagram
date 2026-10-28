@@ -326,7 +326,7 @@ h2 { font-family: var(--font-display); }
 .icon-viewer-tile { display: grid; place-items: center; padding: 24px; min-height: 0; overflow: auto; background: var(--paper); }
 .icon-viewer-tile img { display: block; width: 100%; height: 66vh; object-fit: contain; }
 .about-version { color: var(--muted); font-size: 13px; }
-.about-version a { color: var(--select); }
+.about-version a, .about-request a { color: var(--select); }
 
 /* Canvas drawing colors (SVG attributes cannot read CSS variables, so these are classes) */
 .canvas-bg { fill: var(--canvas); }

@@ -57,6 +57,16 @@ test('About shows the icon license', async () => {
   expect(screen.getByRole('dialog')).toHaveTextContent('CC0 1.0');
 });
 
+test('About tells how to request a component, with three ways to ask', async () => {
+  render(<Header {...props()} />);
+  await userEvent.click(screen.getByRole('button', { name: 'About' }));
+  const box = screen.getByRole('dialog');
+  expect(box).toHaveTextContent('link to the product page or the documentation');
+  expect(screen.getByRole('link', { name: 'nickfoote@team2102.org' })).toHaveAttribute('href', expect.stringMatching(/^mailto:nickfoote@team2102\.org\?subject=/));
+  expect(screen.getByRole('link', { name: 'footie' })).toHaveAttribute('href', expect.stringMatching(/^https:\/\/www\.chiefdelphi\.com\/new-message\?username=footie/));
+  expect(screen.getByRole('link', { name: 'GitHub issue' })).toHaveAttribute('href', 'https://github.com/Paradox2102/ParadoxDiagram/issues/new');
+});
+
 test('the Labels switch shows and hides every label', async () => {
   const onLabels = vi.fn();
   render(<Header {...props({ labels: true, onLabels })} />);
