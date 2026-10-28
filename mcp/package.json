@@ -3,7 +3,7 @@
   "version": "1.1.0",
   "description": "MCP server for Paradox Diagram: an AI agent builds and edits an FRC wiring diagram while you edit it live at diagram.team2102.org.",
   "type": "module",
-  "license": "UNLICENSED",
+  "license": "MIT",
   "bin": {
     "diagram-mcp": "dist/server.js"
   },

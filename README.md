@@ -193,3 +193,8 @@ product page.
 ## Credits
 
 Made by [FRC Team 2102 Paradox](https://docs.team2102.org).
+
+## License
+
+The code is under the [MIT License](LICENSE). The device icons are [CC0 1.0](public/icons/LICENSE.md), and the
+Liberation Sans fonts in `mcp/assets/fonts/` are under the [SIL Open Font License 1.1](mcp/assets/fonts/LICENSE).
