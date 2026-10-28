@@ -1,0 +1,40 @@
+# Paradox Diagram static site. Railway sets $PORT; SITE_ROOT is /srv in the image (set it to dist/ for a local run).
+{
+	admin off
+	auto_https off
+}
+
+:{$PORT:8080} {
+	root * {$SITE_ROOT:/srv}
+	encode zstd gzip
+
+	# The app inlines icon SVGs (style attributes), draws PNG exports from blob: and data: images, and Vite inlines the
+	# smallest font files as data: URLs.
+	header {
+		X-Content-Type-Options nosniff
+		Referrer-Policy strict-origin-when-cross-origin
+		Content-Security-Policy "default-src 'self'; img-src 'self' data: blob:; style-src 'self' 'unsafe-inline'; script-src 'self'; connect-src 'self' blob: data:; font-src 'self' data:; object-src 'none'; base-uri 'self'; form-action 'none'; frame-ancestors 'none'"
+		-Server
+	}
+
+	# Hashed build files never change; icons change when the collection is synced; the app shell must always revalidate.
+	@assets path /assets/*
+	header @assets Cache-Control "public, max-age=31536000, immutable"
+	@icons path /icons/*
+	header @icons Cache-Control "public, max-age=300"
+	@app not path /assets/* /icons/*
+	header @app Cache-Control "no-cache"
+
+	# Build files and icons are served as they are: a missing file is a 404.
+	handle /assets/* {
+		file_server
+	}
+	handle /icons/* {
+		file_server
+	}
+	# The app is one page: any other path that is not a file gets index.html.
+	handle {
+		try_files {path} /index.html
+		file_server
+	}
+}

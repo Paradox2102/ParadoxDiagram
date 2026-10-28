@@ -112,7 +112,9 @@ The app runs at the address Vite prints (for example `http://localhost:5173`). O
 | `npm run build` | Build the static site into `dist/` |
 | `npm run preview` | Serve the built site |
 
-The app is static files only: no server and no database.
+The app is static files only: no server and no database. The `Dockerfile` builds the site (after the checks
+pass) and serves it with [Caddy](https://caddyserver.com); this is how the hosted app runs.
+`scripts/check-headers.sh <url>` checks a running copy's cache and security headers.
 
 ## Project layout
 
