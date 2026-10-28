@@ -80,7 +80,7 @@ export function searchIcons(icons: Icon[], query: string, showLegacy: boolean): 
   });
 }
 
-const POS_WORDS = new Set(['pos', 'positive', 'vin', 'bat', 'aux', '5v', '12v']);
+const POS_WORDS = new Set(['pos', 'positive', 'vin', 'bat', 'aux', '5v', 'v5', '12v']);
 const NEG_WORDS = new Set(['neg', 'negative', 'gnd']);
 
 /**
@@ -93,6 +93,29 @@ export function portPolarity(a: Anchor): '+' | '-' | null {
   if (words.some((w) => NEG_WORDS.has(w))) return '-';
   if (words.some((w) => POS_WORDS.has(w))) return '+';
   return null;
+}
+
+/**
+ * The other terminal of a separate + / - pair on the same device: the port with the other
+ * polarity and the same name apart from the polarity word (vbat_pos and vbat_neg), else the
+ * nearest port with the other polarity.
+ */
+export function partnerPort(icon: Icon, a: Anchor): Anchor | undefined {
+  const pol = portPolarity(a);
+  if (!pol) return undefined;
+  const others = icon.anchors.filter((b) => {
+    const p = portPolarity(b);
+    return p !== null && p !== pol;
+  });
+  const stem = (b: Anchor) =>
+    b.port.toLowerCase().split('_').filter((w) => !POS_WORDS.has(w) && !NEG_WORDS.has(w)).join('_');
+  const named = others.find((b) => stem(b) === stem(a));
+  if (named) return named;
+  let best: Anchor | undefined;
+  for (const b of others) {
+    if (!best || Math.hypot(b.x - a.x, b.y - a.y) < Math.hypot(best.x - a.x, best.y - a.y)) best = b;
+  }
+  return best;
 }
 
 /** Two ports can share a wire when they are on one layer and are not + to - (a short). */

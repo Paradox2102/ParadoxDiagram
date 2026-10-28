@@ -1,9 +1,10 @@
 // Shared drawing facts for the canvas and the exports: wire points, colors, device boxes, tags.
-import { findAnchor, portPolarity, type AnchorKind, type Catalog, type Icon } from '../catalog/catalog';
+import { findAnchor, partnerPort, portPolarity, type AnchorKind, type Catalog, type Icon } from '../catalog/catalog';
 import type { Device, Doc, Point, PortRef, Wire } from '../model/types';
 import { autoRouteSides, exitPoint, type Box, type SideChoice } from './autoroute';
 import { nudgeRoutes } from './nudge';
-import { offsetPolyline } from './offset';
+import { offsetPolyline, segmentSides } from './offset';
+import { branchTail, findSplit, type Split } from './split';
 import { routeWire, stripPortRuns, stub } from './route';
 import { deviceBounds, portSidesWorld, portWorld, type Dir } from './transform';
 
@@ -145,14 +146,94 @@ const f = (v: number) => String(Math.round(v * 100) / 100 + 0);
 export const pathD = (pts: Point[]) => pts.map((p, i) => `${i ? 'L' : 'M'}${f(p.x)} ${f(p.y)}`).join(' ');
 
 /**
+ * The free partner of a separate + / - terminal (vbat_neg for vbat_pos): a pair cable to the
+ * terminal splits there, unless a wire of its own already uses the partner.
+ */
+function freePartner(doc: Doc, catalog: Catalog | null, ref: PortRef): { p: Point; dir: Dir; front: number } | null {
+  const dev = doc.devices.find((d) => d.id === ref.device);
+  const icon = dev && iconOf(catalog, dev);
+  const a = icon && findAnchor(icon, ref.port);
+  const b = icon && a && partnerPort(icon, a);
+  if (!dev || !icon || !b) return null;
+  const used = doc.wires.some((w) => [w.from, w.to].some((r) => r.device === dev.id && r.port === b.port));
+  if (used) return null;
+  const { p, dir } = portWorld(dev, icon, b);
+  const e = exitPoint(p, dir, cacheFor(doc, catalog).boxes.get(dev.id) ?? null);
+  return { p, dir, front: Math.hypot(e.x - p.x, e.y - p.y) };
+}
+
+interface EndSplit {
+  split: Split;
+  q: Point;
+  dq: Dir;
+}
+
+function splitAt(path: Point[], partner: { p: Point; dir: Dir; front: number } | null): EndSplit | null {
+  const split = partner && findSplit(path, partner.p, partner.dir, partner.front);
+  return split ? { split, q: partner.p, dq: partner.dir } : null;
+}
+
+/**
+ * A power cable that ends at a separate + or - terminal: the conductor of that polarity runs on
+ * to it, the other leaves the cable near the device for the partner terminal. Null when no end
+ * splits.
+ */
+function splitPair(doc: Doc, catalog: Catalog | null, w: Wire, pts: Point[]): WirePath[] | null {
+  const a = portPoint(doc, catalog, w.from)?.polarity ?? null;
+  const b = portPoint(doc, catalog, w.to)?.polarity ?? null;
+  const pa = a ? freePartner(doc, catalog, w.from) : null;
+  const pb = b ? freePartner(doc, catalog, w.to) : null;
+  // between two one-polarity terminals, a cable only when both ends have their partner free
+  if (a && b && !(pa && pb)) return null;
+  const n = pts.length;
+  const toEnd = splitAt(pts, pb);
+  let fromEnd = splitAt([...pts].reverse(), pa);
+  if (fromEnd) fromEnd = { ...fromEnd, split: { ...fromEnd.split, seg: n - 2 - fromEnd.split.seg } };
+  if (fromEnd && toEnd) {
+    const kf = fromEnd.split.seg;
+    const kt = toEnd.split.seg;
+    const dir = { x: pts[kt + 1].x - pts[kt].x, y: pts[kt + 1].y - pts[kt].y };
+    const order = (toEnd.split.at.x - fromEnd.split.at.x) * dir.x + (toEnd.split.at.y - fromEnd.split.at.y) * dir.y;
+    if (kf > kt || (kf === kt && order < 0)) fromEnd = null;
+  }
+  if (!fromEnd && !toEnd) return null;
+  // the leaving conductor takes the side of the cable its split needs (the end at "to" wins)
+  const sides = segmentSides(pts);
+  const sideOf = (e: EndSplit) => {
+    const s = sides[e.split.seg];
+    return s.x * e.split.side.x + s.y * e.split.side.y >= 0 ? 1 : -1;
+  };
+  const sign = toEnd ? sideOf(toEnd) : sideOf(fromEnd!);
+  const leaving = offsetPolyline(pts, sign * PAIR_OFFSET_MM);
+  let line = leaving;
+  if (toEnd) line = [...line.slice(0, toEnd.split.seg + 1), ...branchTail(toEnd.split, toEnd.q, toEnd.dq, PAIR_OFFSET_MM)];
+  if (fromEnd) {
+    const head = branchTail(fromEnd.split, fromEnd.q, fromEnd.dq, PAIR_OFFSET_MM).reverse();
+    line = [...head, ...line.slice(fromEnd.split.seg + 1)];
+  }
+  const staying = offsetPolyline(pts, -sign * PAIR_OFFSET_MM);
+  // the conductor that stays is the polarity of the split terminal
+  const stays = (toEnd ? b : a) === '+' ? 'pos' : 'neg';
+  const pos = stays === 'pos' ? staying : line;
+  const neg = stays === 'pos' ? line : staying;
+  return [
+    { d: pathD(pos), stroke: COLORS.pos, width: 0.8 },
+    { d: pathD(neg), stroke: COLORS.neg, width: 0.8 },
+  ];
+}
+
+/**
  * The lines that draw a wire: a pair for power and CAN, one line for network and air. A power
  * wire between two one-polarity terminals (battery, breaker, distribution input) is one
- * conductor: red for +, black for -.
+ * conductor: red for +, black for -. A power cable to a device with separate + and - terminals
+ * splits near the device.
  */
 export function renderWirePaths(doc: Doc, catalog: Catalog | null, w: Wire): WirePath[] {
   const pts = wirePoints(doc, catalog, w);
   if (!pts) return [];
   if (w.layer === 'power') {
+    const split = splitPair(doc, catalog, w, pts);
+    if (split) return split;
     const a = portPoint(doc, catalog, w.from)?.polarity;
     const b = portPoint(doc, catalog, w.to)?.polarity;
     if (a && b) return [{ d: pathD(pts), stroke: a === '+' ? COLORS.pos : COLORS.neg, width: 1.2 }];

@@ -1,6 +1,6 @@
 import { readFileSync } from 'node:fs';
 import { join } from 'node:path';
-import { canConnect, findAnchor, iconLayers, layerOfKind, parseCatalog, portPolarity, searchIcons } from './catalog';
+import { canConnect, findAnchor, iconLayers, layerOfKind, parseCatalog, partnerPort, portPolarity, searchIcons } from './catalog';
 
 const raw = JSON.parse(readFileSync(join(import.meta.dirname, '../../public/icons/index.json'), 'utf8'));
 const catalog = parseCatalog(raw);
@@ -58,6 +58,23 @@ test('power ports with one polarity are found by name', () => {
   expect(pol('rev-pdh', 'ch4')).toBeNull();
   expect(pol('ctre-vrm', 'v12_2a_1')).toBeNull();
   expect(pol('systemcore', 'can_s0')).toBeNull();
+});
+
+test('a separate + or - terminal finds its partner on the same device', () => {
+  const partner = (slug: string, port: string) => {
+    const icon = catalog.bySlug.get(slug)!;
+    return partnerPort(icon, findAnchor(icon, port)!)?.port;
+  };
+  expect(partner('neo-vortex-spark-flex', 'vbat_pos')).toBe('vbat_neg');
+  expect(partner('talon-srx', 'vbat_neg')).toBe('vbat_pos');
+  expect(partner('talon-srx', 'motor_pos')).toBe('motor_neg');
+  expect(partner('ctre-vrm', 'vin_pos')).toBe('vin_neg');
+  expect(partner('redux-zinc-v', 'vin_2')).toBe('gnd_2');
+  expect(partner('canandgyro', 'vin')).toBe('gnd');
+  expect(partner('lumyn-led-matrix', 'in_v5')).toBe('in_gnd');
+  expect(partner('candle', 'vout_5v')).toBe('vout_neg');
+  expect(partner('main-breaker-120a', 'bat')).toBeUndefined();
+  expect(partner('rev-pdh', 'ch4')).toBeUndefined();
 });
 
 test('a + port never joins a - port', () => {

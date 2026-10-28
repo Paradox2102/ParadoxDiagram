@@ -4,7 +4,7 @@ import type { Dir } from './transform';
 
 export const STUB_MM = 6;
 
-const UNIT: Record<Dir, Point> = { right: { x: 1, y: 0 }, left: { x: -1, y: 0 }, up: { x: 0, y: -1 }, down: { x: 0, y: 1 } };
+export const UNIT: Record<Dir, Point> = { right: { x: 1, y: 0 }, left: { x: -1, y: 0 }, up: { x: 0, y: -1 }, down: { x: 0, y: 1 } };
 const horizontal = (d: Dir) => d === 'left' || d === 'right';
 
 export function stub(p: Point, dir: Dir): Point {

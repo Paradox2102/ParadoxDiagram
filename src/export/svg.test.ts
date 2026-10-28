@@ -5,6 +5,7 @@ import { apply } from '../model/actions';
 import { emptyDoc, type Doc } from '../model/types';
 import { catalog } from '../test/fixtures';
 import { keepOutBox, routeSides, wirePoints } from '../geometry/scene';
+import { toWorld } from '../geometry/transform';
 
 const wirePointsOf = (d: Doc) => wirePoints(d, catalog, d.wires[0])!;
 
@@ -132,4 +133,51 @@ test('a wire end set to leave upward leaves upward', () => {
   expect(p[1].x).toBe(p[0].x);
   expect(p[1].y).toBeLessThan(p[0].y);
   expect(routeSides(p)).toEqual({ from: 'up', to: 'right' });
+});
+
+const ends = (d: string) => {
+  const nums = [...d.matchAll(/[ML]([-\d.]+) ([-\d.]+)/g)].map((m) => ({ x: Number(m[1]), y: Number(m[2]) }));
+  return { first: nums[0], last: nums[nums.length - 1], all: nums };
+};
+const portAt = (d: Doc, device: string, port: string) => {
+  const dev = d.devices.find((x) => x.id === device)!;
+  const icon = catalog.bySlug.get(dev.slug)!;
+  const p = toWorld(dev, icon, icon.anchors.find((x) => x.port === port)!);
+  return { x: Math.round(p.x * 100) / 100, y: Math.round(p.y * 100) / 100 };
+};
+
+test('a channel cable to separate + and - terminals splits: black leaves the cable for the - terminal', () => {
+  let d = apply(emptyDoc(), { type: 'addDevice', slug: 'rev-pdh', name: '', x: 0, y: 0 });
+  d = apply(d, { type: 'addDevice', slug: 'neo-vortex-spark-flex', name: '', x: 300, y: -100 });
+  d = apply(d, { type: 'addWire', layer: 'power', from: { device: 'd1', port: 'ch4' }, to: { device: 'd2', port: 'vbat_pos' } });
+  const [red, black] = renderWirePaths(d, catalog, d.wires[0]);
+  expect([red.stroke, black.stroke]).toEqual(['#cf222e', '#0d1117']);
+  const neg = portAt(d, 'd2', 'vbat_neg');
+  const pos = portAt(d, 'd2', 'vbat_pos');
+  expect(ends(black.d).last).toEqual(neg);
+  expect(Math.hypot(ends(red.d).last.x - pos.x, ends(red.d).last.y - pos.y)).toBeLessThan(1);
+  // both lines are orthogonal
+  for (const p of [red, black]) {
+    const all = ends(p.d).all;
+    for (let i = 1; i < all.length; i++) expect(all[i].x === all[i - 1].x || all[i].y === all[i - 1].y).toBe(true);
+  }
+});
+
+test('no split when the - terminal already has a wire of its own', () => {
+  let d = apply(emptyDoc(), { type: 'addDevice', slug: 'rev-pdh', name: '', x: 0, y: 0 });
+  d = apply(d, { type: 'addDevice', slug: 'neo-vortex-spark-flex', name: '', x: 300, y: -100 });
+  d = apply(d, { type: 'addWire', layer: 'power', from: { device: 'd1', port: 'ch4' }, to: { device: 'd2', port: 'vbat_pos' } });
+  d = apply(d, { type: 'addWire', layer: 'power', from: { device: 'd1', port: 'ch5' }, to: { device: 'd2', port: 'vbat_neg' } });
+  const neg = portAt(d, 'd2', 'vbat_neg');
+  for (const p of renderWirePaths(d, catalog, d.wires[0])) expect(ends(p.d).last).not.toEqual(neg);
+});
+
+test('a cable between two pairs of separate terminals splits at both ends', () => {
+  let d = apply(emptyDoc(), { type: 'addDevice', slug: 'protooma-5v-10a', name: '', x: 0, y: 0 });
+  d = apply(d, { type: 'addDevice', slug: 'limelight-4', name: '', x: 250, y: 0 });
+  d = apply(d, { type: 'addWire', layer: 'power', from: { device: 'd1', port: 'out_pos' }, to: { device: 'd2', port: 'pwr_pos' } });
+  const [red, black] = renderWirePaths(d, catalog, d.wires[0]);
+  expect([red.stroke, black.stroke]).toEqual(['#cf222e', '#0d1117']);
+  expect(ends(black.d).first).toEqual(portAt(d, 'd1', 'out_neg'));
+  expect(ends(black.d).last).toEqual(portAt(d, 'd2', 'pwr_neg'));
 });
