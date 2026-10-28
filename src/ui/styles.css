@@ -37,7 +37,6 @@
   /* on screen only: a black conductor and a gray signal wire would vanish on a dark canvas */
   --wire-neg: #0d1117;
   --wire-signal: #57606a;
-  --device-edge: none;
   color-scheme: light;
 }
 
@@ -51,7 +50,6 @@
     --shadow: rgb(0 0 0 / 0.5); --backdrop: rgb(0 0 0 / 0.6);
     --canvas: #1a2130; --grid-dot: #364256; --grid-dot-major: #4c5a72; --handle-fill: #1a2130;
     --tag-ink: #e6ebf3; --tag-muted: #9aa6b8; --wire-neg: #c9d1d9; --wire-signal: #9aa6b8;
-    --device-edge: drop-shadow(0 0 0.35px rgb(230 235 243 / 0.75));
     color-scheme: dark;
   }
 }
@@ -63,7 +61,6 @@
   --shadow: rgb(0 0 0 / 0.5); --backdrop: rgb(0 0 0 / 0.6);
   --canvas: #1a2130; --grid-dot: #364256; --grid-dot-major: #4c5a72; --handle-fill: #1a2130;
   --tag-ink: #e6ebf3; --tag-muted: #9aa6b8; --wire-neg: #c9d1d9; --wire-signal: #9aa6b8;
-  --device-edge: drop-shadow(0 0 0.35px rgb(230 235 243 / 0.75));
   color-scheme: dark;
 }
 
@@ -321,7 +318,11 @@ h2 { font-family: var(--font-display); }
 .tag-facts { fill: var(--tag-muted); }
 .wire-neg { stroke: var(--wire-neg); }
 .wire-signal { stroke: var(--wire-signal); }
-.device-body { filter: var(--device-edge); }
+/* dark theme: each device's outer outline is drawn light, so a dark device stands out on the dark canvas */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .device-body .device-outline { stroke: #c9d1d9; }
+}
+:root[data-theme="dark"] .device-body .device-outline { stroke: #c9d1d9; }
 
 /* Theme switch */
 .actions > .theme-button { display: inline-flex; align-items: center; justify-content: center; width: 34px; padding: 4px 0; }

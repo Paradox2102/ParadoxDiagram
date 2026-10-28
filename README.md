@@ -35,6 +35,8 @@ diagram that looks like a team wiring poster.
 - **Export and share.** SVG and PNG (2× or 4×) for posters and slides, JSON to keep a copy, and a share link
   that opens the same diagram for anyone, with no account.
 - **Saved as you go.** The layout is kept in your browser, with undo and redo.
+- **Dark mode.** Follows your system setting, or pick Light or Dark with the button in the top bar. Exports
+  always come out on white.
 - **Icon gallery.** Browse every icon at [diagram.team2102.org/gallery](https://diagram.team2102.org/gallery) and
   download one SVG, a whole group (by type or by vendor), the icons a search finds, or the whole collection as a
   ZIP.
