@@ -9,6 +9,8 @@
   No account, no install. Your diagram stays in your browser until you export or share it.
 </p>
 
+<p align="center"><strong><a href="https://diagram.team2102.org">Open Paradox Diagram → diagram.team2102.org</a></strong></p>
+
 ![Paradox Diagram with an example robot: PDH, battery, main breaker, SystemCore, radio, two SPARK Flex and two Kraken X60 motors](docs/screenshots/hero.png)
 
 Paradox Diagram is a web app made by [FRC Team 2102 Paradox](https://docs.team2102.org) for any FRC team.
