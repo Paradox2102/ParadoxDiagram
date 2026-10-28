@@ -82,3 +82,10 @@ test('a wire end side is set, kept with bends, and cleared by a route reset', ()
   d = apply(d, { type: 'resetRoute', id: 'w1' });
   expect([d.wires[0].bends, d.wires[0].fromSide, d.wires[0].toSide]).toEqual([[], undefined, undefined]);
 });
+
+test('a label side is set per device; bottom (the default) is not stored', () => {
+  let d = apply(withTwo(), { type: 'setTagSide', ids: ['d1', 'd2'], side: 'right' });
+  expect(d.devices.map((x) => x.tagSide)).toEqual(['right', 'right']);
+  d = apply(d, { type: 'setTagSide', ids: ['d2'], side: 'bottom' });
+  expect('tagSide' in d.devices[1]).toBe(false);
+});

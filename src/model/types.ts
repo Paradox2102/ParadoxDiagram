@@ -22,7 +22,12 @@ export interface Device {
   notes: string;
   /** Hide this device's label (name, CAN ID, PDH channel). */
   hideTag?: boolean;
+  /** Where the label sits beside the device (default: bottom). */
+  tagSide?: TagSide;
 }
+
+export type TagSide = 'bottom' | 'top' | 'left' | 'right';
+export const TAG_SIDES: TagSide[] = ['bottom', 'top', 'left', 'right'];
 
 export interface PortRef {
   device: string;

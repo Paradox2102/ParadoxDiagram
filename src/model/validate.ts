@@ -1,6 +1,6 @@
 // Checks a document read from a file or from browser storage.
 import { findAnchor, layerOfKind, LAYERS, type Catalog, type Layer } from '../catalog/catalog';
-import { SIDES, type Device, type Doc, type Point, type PortRef, type Rot, type Side, type Wire } from './types';
+import { SIDES, TAG_SIDES, type Device, type Doc, type Point, type PortRef, type Rot, type Side, type TagSide, type Wire } from './types';
 
 const str = (v: unknown, dflt = '') => (typeof v === 'string' ? v : dflt);
 const num = (v: unknown) => (typeof v === 'number' && Number.isFinite(v) ? v : 0);
@@ -22,6 +22,7 @@ export function validateDoc(raw: unknown, catalog: Catalog | null): { doc: Doc; 
     const canId = typeof d.canId === 'number' && Number.isInteger(d.canId) ? d.canId : null;
     const device: Device = { id, slug: str(d.slug), x: num(d.x), y: num(d.y), rot, name: str(d.name), canId, notes: str(d.notes) };
     if (d.hideTag === true) device.hideTag = true;
+    if (TAG_SIDES.includes(d.tagSide as TagSide) && d.tagSide !== 'bottom') device.tagSide = d.tagSide as TagSide;
     devices.push(device);
   }
 

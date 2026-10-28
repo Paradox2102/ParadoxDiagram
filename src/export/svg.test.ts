@@ -181,3 +181,19 @@ test('a cable between two pairs of separate terminals splits at both ends', () =
   expect(ends(black.d).first).toEqual(portAt(d, 'd1', 'out_neg'));
   expect(ends(black.d).last).toEqual(portAt(d, 'd2', 'pwr_neg'));
 });
+
+test('a label can sit at the top, left or right; wires keep out of it there', async () => {
+  let d = apply(emptyDoc(), { type: 'addDevice', slug: 'kraken-x60', name: 'Shooter', x: 0, y: 0 });
+  const body = keepOutBox(catalog, { ...d.devices[0], hideTag: true });
+  for (const side of ['top', 'left', 'right'] as const) {
+    d = apply(d, { type: 'setTagSide', ids: ['d1'], side });
+    const box = keepOutBox(catalog, d.devices[0]);
+    if (side === 'top') expect(box.y).toBeLessThan(body.y);
+    if (side === 'left') expect(box.x).toBeLessThan(body.x);
+    if (side === 'right') expect(box.x + box.w).toBeGreaterThan(body.x + body.w);
+    expect(box.y + box.h).toBe(body.y + body.h);
+    const svg = await exportSvg(d, catalog, 'all', realIcons);
+    const anchor = { top: 'middle', left: 'end', right: 'start' }[side];
+    expect(svg).toMatch(new RegExp(`text-anchor="${anchor}" fill="#1f2328">Shooter<`));
+  }
+});

@@ -51,3 +51,9 @@ test('wire end sides survive a file round trip; a bad side is dropped', () => {
   const w = validateDoc(ok, catalog).doc.wires[0];
   expect([w.fromSide, w.toSide]).toEqual(['up', undefined]);
 });
+
+test('a label side survives a file round trip; bottom and bad sides are left out', () => {
+  const sides = { ...base, devices: [{ ...base.devices[0], tagSide: 'left' }, { ...base.devices[1], tagSide: 'under' }] };
+  const { doc } = validateDoc(sides, catalog);
+  expect(doc.devices.map((d) => d.tagSide)).toEqual(['left', undefined]);
+});

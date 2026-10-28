@@ -1,6 +1,7 @@
 // Shared drawing facts for the canvas and the exports: wire points, colors, device boxes, tags.
 import { findAnchor, partnerPort, portPolarity, type AnchorKind, type Catalog, type Icon } from '../catalog/catalog';
-import type { Device, Doc, Point, PortRef, Wire } from '../model/types';
+import { deviceTag } from '../model/tags';
+import type { Device, Doc, Point, PortRef, TagSide, Wire } from '../model/types';
 import { autoRouteSides, exitPoint, type Box, type SideChoice } from './autoroute';
 import { nudgeRoutes } from './nudge';
 import { offsetPolyline, segmentSides } from './offset';
@@ -53,10 +54,56 @@ export function portPoint(
   return { ...portWorld(dev, icon, a), sides: portSidesWorld(dev, icon, a), kind: a.kind, polarity: portPolarity(a) };
 }
 
+/** The space between a device and a label beside it (left or right). */
+export const TAG_GAP_MM = 2;
+const NAME_PT = 3.6;
+const FACTS_PT = 3;
+/** About how wide a line of label text is (Helvetica; no font measuring in tests or exports). */
+const textWidth = (s: string, size: number, bold: boolean) => s.length * size * (bold ? 0.6 : 0.55);
+
+export interface TagLayout {
+  /** The space the label takes. */
+  box: Box;
+  x: number;
+  anchor: 'start' | 'middle' | 'end';
+  nameY: number;
+  factsY: number;
+}
+
+/** Where a device's label goes: under it (the default), over it, or beside it. */
+export function tagLayout(b: Box, side: TagSide = 'bottom', tag: { name: string; facts: string }): TagLayout {
+  const w = Math.max(textWidth(tag.name, NAME_PT, true), textWidth(tag.facts, FACTS_PT, false));
+  const cx = b.x + b.w / 2;
+  const cy = b.y + b.h / 2;
+  if (side === 'bottom' || side === 'top') {
+    const y = side === 'bottom' ? b.y + b.h : b.y - TAG_H;
+    const box = { x: cx - w / 2, y, w, h: TAG_H };
+    if (side === 'bottom') return { box, x: cx, anchor: 'middle', nameY: y + TAG_NAME_DY, factsY: y + TAG_FACTS_DY };
+    // over the device, the last line sits as close to it as the first line does under it
+    const last = b.y - 2.5;
+    return { box, x: cx, anchor: 'middle', nameY: tag.facts ? last - 4.5 : last, factsY: last };
+  }
+  const box = { x: side === 'left' ? b.x - TAG_GAP_MM - w : b.x + b.w, y: cy - TAG_H / 2, w: w + TAG_GAP_MM, h: TAG_H };
+  const x = side === 'left' ? b.x - TAG_GAP_MM : b.x + b.w + TAG_GAP_MM;
+  return { box, x, anchor: side === 'left' ? 'end' : 'start', nameY: tag.facts ? cy - 1 : cy + 1.3, factsY: cy + 3.5 };
+}
+
+function union(a: Box, b: Box): Box {
+  const x = Math.min(a.x, b.x);
+  const y = Math.min(a.y, b.y);
+  return { x, y, w: Math.max(a.x + a.w, b.x + b.w) - x, h: Math.max(a.y + a.h, b.y + b.h) - y };
+}
+
 /** A device and its label (when shown): the space a wire with no bends routes around. */
-export function keepOutBox(catalog: Catalog | null, d: Device, hideTags = false): Box {
+export function keepOutBox(
+  catalog: Catalog | null, d: Device, hideTags = false,
+  tag = { name: d.name.trim() || iconOf(catalog, d)?.name || d.slug, facts: '' },
+): Box {
   const b = boundsOf(catalog, d);
-  return { x: b.x, y: b.y, w: b.w, h: b.h + (hideTags || d.hideTag ? 0 : TAG_H) };
+  if (hideTags || d.hideTag) return b;
+  // a label under the device keeps out the device's full width, as it always has
+  const base = d.tagSide && d.tagSide !== 'bottom' ? b : { x: b.x, y: b.y, w: b.w, h: b.h + TAG_H };
+  return union(base, tagLayout(b, d.tagSide, tag).box);
 }
 
 // Documents never change in place, so routes are cached per document object.
@@ -70,7 +117,8 @@ const routeCache = new WeakMap<Doc, RouteCache>();
 function cacheFor(doc: Doc, catalog: Catalog | null): RouteCache {
   let c = routeCache.get(doc);
   if (!c || c.catalog !== catalog) {
-    c = { catalog, boxes: new Map(doc.devices.map((d) => [d.id, keepOutBox(catalog, d, doc.hideTags)])), routes: null };
+    const boxes = new Map(doc.devices.map((d) => [d.id, keepOutBox(catalog, d, doc.hideTags, deviceTag(doc, d.id, catalog))]));
+    c = { catalog, boxes, routes: null };
     routeCache.set(doc, c);
   }
   return c;

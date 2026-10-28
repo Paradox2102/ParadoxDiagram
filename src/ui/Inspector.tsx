@@ -4,7 +4,7 @@ import type { Catalog } from '../catalog/catalog';
 import type { Action } from '../model/actions';
 import { deviceTag } from '../model/tags';
 import { Arrange } from './Arrange';
-import type { Device, Doc, PortRef, Side, Wire } from '../model/types';
+import type { Device, Doc, PortRef, Side, TagSide, Wire } from '../model/types';
 
 interface Props {
   doc: Doc;
@@ -68,6 +68,32 @@ function Field(props: {
   );
 }
 
+const TAG_BUTTONS: { side: TagSide; text: string }[] = [
+  { side: 'bottom', text: 'Bottom' },
+  { side: 'top', text: 'Top' },
+  { side: 'left', text: 'Left' },
+  { side: 'right', text: 'Right' },
+];
+
+/** Which side of the device(s) the label sits on; none pressed when a selection is mixed. */
+function TagSidePicker({ devices, dispatch }: { devices: Device[]; dispatch: Props['dispatch'] }) {
+  const sides = new Set(devices.map((d) => d.tagSide ?? 'bottom'));
+  const current = sides.size === 1 ? [...sides][0] : null;
+  return (
+    <div className="side-row" role="group" aria-label="Label side">
+      <span>Label side</span>
+      {TAG_BUTTONS.map((b) => (
+        <button
+          key={b.side} type="button" aria-pressed={current === b.side} title={`Put the label ${b.side === 'bottom' || b.side === 'top' ? 'at the ' : 'on the '}${b.side} of the device`}
+          onClick={() => dispatch({ type: 'setTagSide', ids: devices.map((d) => d.id), side: b.side })}
+        >
+          {b.text}
+        </button>
+      ))}
+    </div>
+  );
+}
+
 function DeviceForm({ doc, catalog, device, dispatch }: { doc: Doc; catalog: Catalog | null; device: Device; dispatch: Props['dispatch'] }) {
   const icon = catalog?.bySlug.get(device.slug);
   const tag = deviceTag(doc, device.id, catalog);
@@ -99,6 +125,7 @@ function DeviceForm({ doc, catalog, device, dispatch }: { doc: Doc; catalog: Cat
         />
         Show label
       </label>
+      <TagSidePicker devices={[device]} dispatch={dispatch} />
       {doc.hideTags && <p className="help">All labels are off (Labels in the top bar).</p>}
       <dl>
         <dt>Icon</dt>
@@ -210,6 +237,7 @@ export function Inspector({ doc, catalog, selection, dispatch }: Props) {
   if (live.length === 0) body = <Help />;
   else if (live.length > 1) {
     const devices = live.filter((id) => doc.devices.some((d) => d.id === id));
+    const selected = doc.devices.filter((d) => devices.includes(d.id));
     body = (
       <>
         <h2>{live.length} selected</h2>
@@ -220,6 +248,7 @@ export function Inspector({ doc, catalog, selection, dispatch }: Props) {
             <button type="button" onClick={() => dispatch({ type: 'setTagHidden', ids: devices, hidden: false })}>Show labels</button>
           </div>
         )}
+        {devices.length > 0 && <TagSidePicker devices={selected} dispatch={dispatch} />}
         <div className="row">
           <button type="button" onClick={() => dispatch({ type: 'rotateDevices', ids: live })}>Rotate 90°</button>
           <button type="button" className="danger" onClick={() => dispatch({ type: 'delete', ids: live })}>Delete</button>

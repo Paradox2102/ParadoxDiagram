@@ -3,7 +3,7 @@ import { iconFrame, iconLayers, type Catalog, type Layer } from '../catalog/cata
 import { deviceTag, tagShown } from '../model/tags';
 import type { Doc } from '../model/types';
 import {
-  boundsOf, COLORS, iconOf, MISSING_H, MISSING_W, OFF_LAYER_OPACITY, renderWirePaths, TAG_FACTS_DY, TAG_H, TAG_NAME_DY,
+  boundsOf, COLORS, iconOf, MISSING_H, MISSING_W, OFF_LAYER_OPACITY, renderWirePaths, tagLayout,
   wirePoints,
 } from '../geometry/scene';
 import { deviceTransform } from '../geometry/transform';
@@ -44,7 +44,12 @@ export function contentBox(doc: Doc, catalog: Catalog | null) {
   for (const d of doc.devices) {
     const b = boundsOf(catalog, d);
     add(b.x, b.y);
-    add(b.x + b.w, b.y + b.h + (tagShown(doc, d.id) ? TAG_H : 0));
+    add(b.x + b.w, b.y + b.h);
+    if (tagShown(doc, d.id)) {
+      const t = tagLayout(b, d.tagSide, deviceTag(doc, d.id, catalog)).box;
+      add(t.x, t.y);
+      add(t.x + t.w, t.y + t.h);
+    }
   }
   for (const w of doc.wires) for (const p of wirePoints(doc, catalog, w) ?? []) add(p.x, p.y);
   if (x0 === Infinity) return { x: 0, y: 0, w: 100, h: 100 };
@@ -98,10 +103,12 @@ export async function exportSvg(
         `<text x="${f(b.x + bw / 2)}" y="${f(b.y + bh / 2)}" font-size="3" text-anchor="middle" fill="${COLORS.muted}">${esc(d.slug)}</text>`,
       );
     }
-    const cx = f(b.x + b.w / 2);
-    if (tagShown(doc, d.id)) out.push(`<text x="${cx}" y="${f(b.y + b.h + TAG_NAME_DY)}" font-size="3.6" font-weight="bold" text-anchor="middle" fill="${COLORS.ink}">${esc(tag.name)}</text>`);
-    if (tag.facts && tagShown(doc, d.id)) {
-      out.push(`<text x="${cx}" y="${f(b.y + b.h + TAG_FACTS_DY)}" font-size="3" text-anchor="middle" fill="${COLORS.muted}">${esc(tag.facts)}</text>`);
+    if (tagShown(doc, d.id)) {
+      const t = tagLayout(b, d.tagSide, tag);
+      out.push(`<text x="${f(t.x)}" y="${f(t.nameY)}" font-size="3.6" font-weight="bold" text-anchor="${t.anchor}" fill="${COLORS.ink}">${esc(tag.name)}</text>`);
+      if (tag.facts) {
+        out.push(`<text x="${f(t.x)}" y="${f(t.factsY)}" font-size="3" text-anchor="${t.anchor}" fill="${COLORS.muted}">${esc(tag.facts)}</text>`);
+      }
     }
     out.push('</g>');
   }

@@ -1,7 +1,7 @@
 // Every edit to a document goes through apply(). Documents are never changed in place.
 import type { Layer } from '../catalog/catalog';
 import { nextId } from './ids';
-import { GRID_MM, type Device, type Doc, type Point, type PortRef, type Rot, type Side, type Wire } from './types';
+import { GRID_MM, type Device, type Doc, type Point, type PortRef, type Rot, type Side, type TagSide, type Wire } from './types';
 
 export type Action =
   | { type: 'addDevice'; slug: string; name: string; x: number; y: number }
@@ -16,6 +16,7 @@ export type Action =
   | { type: 'delete'; ids: string[] }
   | { type: 'setTitle'; title: string }
   | { type: 'setTagHidden'; ids: string[]; hidden: boolean }
+  | { type: 'setTagSide'; ids: string[]; side: TagSide }
   | { type: 'setHideTags'; hidden: boolean }
   | { type: 'moveEach'; moves: { id: string; dx: number; dy: number }[] };
 
@@ -108,6 +109,17 @@ export function apply(doc: Doc, action: Action): Doc {
     case 'setTagHidden': {
       const ids = new Set(action.ids);
       return { ...doc, devices: doc.devices.map((d) => (ids.has(d.id) ? { ...d, hideTag: action.hidden } : d)) };
+    }
+    case 'setTagSide': {
+      const ids = new Set(action.ids);
+      return {
+        ...doc,
+        devices: doc.devices.map((d) => {
+          if (!ids.has(d.id)) return d;
+          const { tagSide: _, ...rest } = d;
+          return action.side === 'bottom' ? rest : { ...rest, tagSide: action.side };
+        }),
+      };
     }
     case 'setHideTags':
       return { ...doc, hideTags: action.hidden };

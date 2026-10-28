@@ -117,3 +117,11 @@ test('a device shows its icon description under the short name', () => {
   expect(screen.getByRole('heading', { name: 'Battery (6AWG - SB50)' })).toBeTruthy();
   expect(screen.getByText(/12 V 18 Ah sealed lead-acid/)).toBeTruthy();
 });
+
+test('the label side buttons move the label of the selected devices', async () => {
+  const dispatch = vi.fn();
+  render(<Inspector doc={doc()} catalog={catalog} selection={['d2']} dispatch={dispatch} />);
+  expect(screen.getByRole('button', { name: 'Bottom' }).getAttribute('aria-pressed')).toBe('true');
+  await userEvent.click(screen.getByRole('button', { name: 'Left' }));
+  expect(dispatch).toHaveBeenCalledWith({ type: 'setTagSide', ids: ['d2'], side: 'left' });
+});
