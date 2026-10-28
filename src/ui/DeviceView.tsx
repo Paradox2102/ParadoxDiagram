@@ -18,7 +18,7 @@ export function DeviceView({ device, icon, body, tag, dim, selected }: Props) {
   return (
     <g className={dim ? 'device dim' : 'device'} data-device={device.id}>
       {icon ? (
-        <g transform={deviceTransform(device, icon)}>
+        <g className="device-body" transform={deviceTransform(device, icon)}>
           {(() => {
             const [vx, vy, vw, vh] = iconFrame(icon);
             return (
@@ -47,7 +47,7 @@ export function DeviceView({ device, icon, body, tag, dim, selected }: Props) {
       {tag && t && (
         <text
           x={t.name.x} y={t.name.y} transform={t.turned ? `rotate(90 ${t.name.x} ${t.name.y})` : undefined}
-          fontSize={3.6} fontWeight="bold" textAnchor="middle" fill={COLORS.ink} fontFamily="Helvetica, Arial, sans-serif"
+          className="tag-name" fontSize={3.6} fontWeight="bold" textAnchor="middle" fill={COLORS.ink} fontFamily="Helvetica, Arial, sans-serif"
         >
           {tag.name}
         </text>
@@ -55,7 +55,7 @@ export function DeviceView({ device, icon, body, tag, dim, selected }: Props) {
       {tag?.facts && t && (
         <text
           x={t.facts.x} y={t.facts.y} transform={t.turned ? `rotate(90 ${t.facts.x} ${t.facts.y})` : undefined}
-          fontSize={3} textAnchor="middle" fill={COLORS.muted} fontFamily="Helvetica, Arial, sans-serif"
+          className="tag-facts" fontSize={3} textAnchor="middle" fill={COLORS.muted} fontFamily="Helvetica, Arial, sans-serif"
         >
           {tag.facts}
         </text>

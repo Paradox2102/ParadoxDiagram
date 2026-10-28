@@ -5,6 +5,7 @@ import { loadCatalog, searchIcons, type Catalog, type Icon } from '../catalog/ca
 import { groupIcons, iconsZip, zipSlug, type GroupBy } from '../catalog/gallery';
 import { downloadBlob } from '../export/download';
 import { Logo } from './Logo';
+import { ThemeButton } from './ThemeButton';
 
 const ICONS = 'icons/';
 const ZIP_NAME = 'frc-device-icons';
@@ -132,6 +133,7 @@ export function Gallery() {
       <nav className="page-nav" aria-label="Pages">
         <a href="./">Diagram</a>
         <a href="gallery" aria-current="page">Icons</a>
+        <ThemeButton className="theme-button page-theme" />
       </nav>
     </header>
   );

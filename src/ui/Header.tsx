@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
 import type { Layer } from '../catalog/catalog';
 import { Logo } from './Logo';
+import { ThemeButton } from './ThemeButton';
 
 export type ExportKind = 'svg' | 'png2' | 'png4' | 'json';
 export type LayerView = Layer | 'all';
@@ -128,6 +129,7 @@ export function Header(p: HeaderProps) {
           }}
         />
         <button type="button" onClick={onShare} title="Copy a link that opens this version of the diagram">Share</button>
+        <ThemeButton className="theme-button" />
         <a className="nav-button" href="gallery" title="Browse and download the device icons">Icons</a>
         <button type="button" onClick={() => setAbout(true)}>About</button>
         <div className="menu" ref={menuRef}>

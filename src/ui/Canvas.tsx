@@ -447,13 +447,13 @@ export function Canvas({ doc, catalog, layer, selection, setSelection, hist, api
       >
         <defs>
           <pattern id="grid-minor" width={5} height={5} patternUnits="userSpaceOnUse">
-            <circle cx={0} cy={0} r={0.22} fill="#c4ccd6" />
+            <circle className="grid-dot" cx={0} cy={0} r={0.22} fill="#c4ccd6" />
           </pattern>
           <pattern id="grid-major" width={25} height={25} patternUnits="userSpaceOnUse">
-            <circle cx={0} cy={0} r={0.45} fill="#a8b2c0" />
+            <circle className="grid-dot-major" cx={0} cy={0} r={0.45} fill="#a8b2c0" />
           </pattern>
         </defs>
-        <rect x={view.x} y={view.y} width={size.w / view.s} height={size.h / view.s} fill="#ffffff" />
+        <rect className="canvas-bg" x={view.x} y={view.y} width={size.w / view.s} height={size.h / view.s} fill="#ffffff" />
         {grid && <rect x={view.x} y={view.y} width={size.w / view.s} height={size.h / view.s} fill="url(#grid-minor)" pointerEvents="none" />}
         <rect x={view.x} y={view.y} width={size.w / view.s} height={size.h / view.s} fill="url(#grid-major)" pointerEvents="none" />
 
@@ -491,7 +491,7 @@ export function Canvas({ doc, catalog, layer, selection, setSelection, hist, api
             transform={`translate(${rotateAt.x + rotateAt.w + 2 + handleR} ${rotateAt.y - 2 - handleR}) scale(${handleR / 10})`}
           >
             <title>Rotate 90° (R)</title>
-            <circle r={10} fill="#ffffff" stroke="#0969da" strokeWidth={1.5} />
+            <circle className="handle-fill" r={10} fill="#ffffff" stroke="#0969da" strokeWidth={1.5} />
             <path d={ROTATE_ARC} fill="none" stroke="#0969da" strokeWidth={1.8} strokeLinecap="round" />
             <path d={ROTATE_HEAD} fill="none" stroke="#0969da" strokeWidth={1.8} strokeLinecap="round" strokeLinejoin="round" />
           </g>

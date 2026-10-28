@@ -8,6 +8,10 @@ import '@fontsource/jetbrains-mono/400.css';
 import './ui/styles.css';
 import { App } from './ui/App';
 import { Gallery } from './ui/Gallery';
+import { applyTheme, readTheme } from './ui/theme';
+
+// the saved theme before the first paint, so a dark page never flashes white
+applyTheme(readTheme());
 
 // Two pages: the editor, and the icon gallery at /gallery.
 const gallery = /\/gallery$/.test(window.location.pathname);

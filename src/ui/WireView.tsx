@@ -1,5 +1,9 @@
-import { pathD, type WirePath } from '../geometry/scene';
+import { COLORS, pathD, type WirePath } from '../geometry/scene';
 import type { Point, Wire } from '../model/types';
+
+// On screen, the black conductor and the gray signal line follow the theme (a dark canvas would hide them).
+// Exports draw the same paths with their fixed colors.
+const SCREEN_STROKE: Record<string, string> = { [COLORS.neg]: 'wire-neg', [COLORS.signal]: 'wire-signal' };
 
 interface Props {
   wire: Wire;
@@ -18,7 +22,7 @@ export function WireView({ wire, paths, points, selected }: Props) {
       )}
       {paths.map((p, i) => (
         <path
-          key={i} d={p.d} fill="none" stroke={p.stroke} strokeWidth={p.width} strokeDasharray={p.dash}
+          key={i} d={p.d} fill="none" stroke={p.stroke} strokeWidth={p.width} strokeDasharray={p.dash} className={SCREEN_STROKE[p.stroke]}
           strokeLinejoin="round" pointerEvents="none"
         />
       ))}
@@ -46,7 +50,7 @@ export function WireHandles({ wire, points }: { wire: Wire; points: Point[] }) {
       {segs}
       {wire.bends.map((p, i) => (
         <rect
-          key={`b${i}`} x={p.x - 1.4} y={p.y - 1.4} width={2.8} height={2.8} fill="#ffffff" stroke="#0969da"
+          key={`b${i}`} x={p.x - 1.4} y={p.y - 1.4} width={2.8} height={2.8} className="handle-fill" fill="#ffffff" stroke="#0969da"
           strokeWidth={1.5} vectorEffect="non-scaling-stroke" data-bend={`${wire.id}:${i}`} style={{ cursor: 'move' }}
         >
           <title>Drag to move the bend; double-click to remove it</title>
