@@ -193,7 +193,12 @@ test('a label can sit at the top, left or right; wires keep out of it there', as
     if (side === 'right') expect(box.x + box.w).toBeGreaterThan(body.x + body.w);
     expect(box.y + box.h).toBe(body.y + body.h);
     const svg = await exportSvg(d, catalog, 'all', realIcons);
-    const anchor = { top: 'middle', left: 'end', right: 'start' }[side];
-    expect(svg).toMatch(new RegExp(`text-anchor="${anchor}" fill="#1f2328">Shooter<`));
+    const name = new RegExp(`<text [^>]*>Shooter<`).exec(svg)![0];
+    expect(name).toContain('text-anchor="middle"');
+    // beside the device the label turns to read top to bottom, like a book spine
+    if (side === 'top') expect(name).not.toContain('rotate(');
+    else expect(name).toMatch(/transform="rotate\(90 /);
+    // a turned label takes only about two lines of width beside the device
+    if (side !== 'top') expect(box.w - body.w).toBeLessThanOrEqual(12);
   }
 });

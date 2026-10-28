@@ -64,28 +64,56 @@ const textWidth = (s: string, size: number, bold: boolean) => s.length * size * 
 export interface TagLayout {
   /** The space the label takes. */
   box: Box;
-  x: number;
-  anchor: 'start' | 'middle' | 'end';
-  nameY: number;
-  factsY: number;
+  /** Where each line's text is centred, on its baseline. */
+  name: Point;
+  facts: Point;
+  /** Beside the device, the lines turn 90 degrees and read top to bottom, like a book spine. */
+  turned: boolean;
 }
 
-/** Where a device's label goes: under it (the default), over it, or beside it. */
+/** How far a line's letters rise above and fall below its baseline. */
+const NAME_RISE = 2.6;
+const DESCENT = 1;
+/** From one line's baseline to the next. */
+const LINE_MM = TAG_FACTS_DY - TAG_NAME_DY;
+
+/** Where a device's label goes: under it (the default), over it, or turned beside it. */
 export function tagLayout(b: Box, side: TagSide = 'bottom', tag: { name: string; facts: string }): TagLayout {
-  const w = Math.max(textWidth(tag.name, NAME_PT, true), textWidth(tag.facts, FACTS_PT, false));
+  const len = Math.max(textWidth(tag.name, NAME_PT, true), textWidth(tag.facts, FACTS_PT, false));
   const cx = b.x + b.w / 2;
   const cy = b.y + b.h / 2;
   if (side === 'bottom' || side === 'top') {
     const y = side === 'bottom' ? b.y + b.h : b.y - TAG_H;
-    const box = { x: cx - w / 2, y, w, h: TAG_H };
-    if (side === 'bottom') return { box, x: cx, anchor: 'middle', nameY: y + TAG_NAME_DY, factsY: y + TAG_FACTS_DY };
+    const box = { x: cx - len / 2, y, w: len, h: TAG_H };
+    if (side === 'bottom') return { box, name: { x: cx, y: y + TAG_NAME_DY }, facts: { x: cx, y: y + TAG_FACTS_DY }, turned: false };
     // over the device, the last line sits as close to it as the first line does under it
     const last = b.y - 2.5;
-    return { box, x: cx, anchor: 'middle', nameY: tag.facts ? last - 4.5 : last, factsY: last };
+    return { box, name: { x: cx, y: tag.facts ? last - LINE_MM : last }, facts: { x: cx, y: last }, turned: false };
   }
-  const box = { x: side === 'left' ? b.x - TAG_GAP_MM - w : b.x + b.w, y: cy - TAG_H / 2, w: w + TAG_GAP_MM, h: TAG_H };
-  const x = side === 'left' ? b.x - TAG_GAP_MM : b.x + b.w + TAG_GAP_MM;
-  return { box, x, anchor: side === 'left' ? 'end' : 'start', nameY: tag.facts ? cy - 1 : cy + 1.3, factsY: cy + 3.5 };
+  // Turned 90 degrees clockwise, the tops of the letters face right and each next line is to
+  // the left of the one before.
+  let nameX: number;
+  let factsX: number;
+  let x0: number;
+  let x1: number;
+  if (side === 'right') {
+    const first = b.x + b.w + TAG_GAP_MM + DESCENT;
+    factsX = first;
+    nameX = tag.facts ? first + LINE_MM : first;
+    x0 = b.x + b.w;
+    x1 = nameX + NAME_RISE;
+  } else {
+    nameX = b.x - TAG_GAP_MM - NAME_RISE;
+    factsX = nameX - LINE_MM;
+    x0 = (tag.facts ? factsX : nameX) - DESCENT;
+    x1 = b.x;
+  }
+  return {
+    box: { x: x0, y: cy - len / 2, w: x1 - x0, h: len },
+    name: { x: nameX, y: cy },
+    facts: { x: factsX, y: cy },
+    turned: true,
+  };
 }
 
 function union(a: Box, b: Box): Box {

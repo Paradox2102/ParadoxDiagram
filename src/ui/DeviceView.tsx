@@ -45,12 +45,18 @@ export function DeviceView({ device, icon, body, tag, dim, selected }: Props) {
         </>
       )}
       {tag && t && (
-        <text x={t.x} y={t.nameY} fontSize={3.6} fontWeight="bold" textAnchor={t.anchor} fill={COLORS.ink} fontFamily="Helvetica, Arial, sans-serif">
+        <text
+          x={t.name.x} y={t.name.y} transform={t.turned ? `rotate(90 ${t.name.x} ${t.name.y})` : undefined}
+          fontSize={3.6} fontWeight="bold" textAnchor="middle" fill={COLORS.ink} fontFamily="Helvetica, Arial, sans-serif"
+        >
           {tag.name}
         </text>
       )}
       {tag?.facts && t && (
-        <text x={t.x} y={t.factsY} fontSize={3} textAnchor={t.anchor} fill={COLORS.muted} fontFamily="Helvetica, Arial, sans-serif">
+        <text
+          x={t.facts.x} y={t.facts.y} transform={t.turned ? `rotate(90 ${t.facts.x} ${t.facts.y})` : undefined}
+          fontSize={3} textAnchor="middle" fill={COLORS.muted} fontFamily="Helvetica, Arial, sans-serif"
+        >
           {tag.facts}
         </text>
       )}

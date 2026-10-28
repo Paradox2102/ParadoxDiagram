@@ -105,9 +105,11 @@ export async function exportSvg(
     }
     if (tagShown(doc, d.id)) {
       const t = tagLayout(b, d.tagSide, tag);
-      out.push(`<text x="${f(t.x)}" y="${f(t.nameY)}" font-size="3.6" font-weight="bold" text-anchor="${t.anchor}" fill="${COLORS.ink}">${esc(tag.name)}</text>`);
+      const at = (p: { x: number; y: number }) =>
+        `x="${f(p.x)}" y="${f(p.y)}"${t.turned ? ` transform="rotate(90 ${f(p.x)} ${f(p.y)})"` : ''}`;
+      out.push(`<text ${at(t.name)} font-size="3.6" font-weight="bold" text-anchor="middle" fill="${COLORS.ink}">${esc(tag.name)}</text>`);
       if (tag.facts) {
-        out.push(`<text x="${f(t.x)}" y="${f(t.factsY)}" font-size="3" text-anchor="${t.anchor}" fill="${COLORS.muted}">${esc(tag.facts)}</text>`);
+        out.push(`<text ${at(t.facts)} font-size="3" text-anchor="middle" fill="${COLORS.muted}">${esc(tag.facts)}</text>`);
       }
     }
     out.push('</g>');
