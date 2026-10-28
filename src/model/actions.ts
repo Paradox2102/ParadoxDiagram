@@ -1,6 +1,7 @@
 // Every edit to a document goes through apply(). Documents are never changed in place.
 import type { Layer } from '../catalog/catalog';
 import { nextId } from './ids';
+import { applyPatch, type DocPatch } from './patch';
 import { GRID_MM, type CustomField, type Device, type Doc, type Point, type PortRef, type Rot, type Side, type TagSide, type Wire } from './types';
 
 /** A change to a device; null removes an optional field. */
@@ -35,7 +36,9 @@ export type Action =
   | { type: 'setTagHidden'; ids: string[]; hidden: boolean }
   | { type: 'setTagSide'; ids: string[]; side: TagSide }
   | { type: 'setHideTags'; hidden: boolean }
-  | { type: 'moveEach'; moves: { id: string; dx: number; dy: number }[] };
+  | { type: 'moveEach'; moves: { id: string; dx: number; dy: number }[] }
+  /** Puts back the devices and wires of a patch (live edits, and undo in live mode). */
+  | { type: 'restore'; patch: DocPatch };
 
 export const snap = (v: number) => Math.round(v / GRID_MM) * GRID_MM;
 
@@ -151,6 +154,8 @@ export function apply(doc: Doc, action: Action): Doc {
     }
     case 'setHideTags':
       return { ...doc, hideTags: action.hidden };
+    case 'restore':
+      return applyPatch(doc, action.patch).doc;
     case 'moveEach': {
       // exact amounts, no grid: alignment and spacing must not be undone by rounding
       const by = new Map(action.moves.map((m) => [m.id, m]));
