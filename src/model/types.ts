@@ -24,7 +24,22 @@ export interface Device {
   hideTag?: boolean;
   /** Where the label sits beside the device (default: bottom). */
   tagSide?: TagSide;
+  /** A static IPv4 address, or DHCP. */
+  ip?: string;
+  /** The CAN bus, when the user names it (else found from the CAN chain). */
+  canBus?: string;
+  /** Extra label/value pairs; the ones marked onLabel show in the label. */
+  fields?: CustomField[];
 }
+
+export interface CustomField {
+  label: string;
+  value: string;
+  onLabel?: boolean;
+}
+
+/** An id that a person or an AI chooses for a device or a wire. */
+export const ID_PATTERN = /^[A-Za-z][A-Za-z0-9_-]{0,39}$/;
 
 export type TagSide = 'bottom' | 'top' | 'left' | 'right';
 export const TAG_SIDES: TagSide[] = ['bottom', 'top', 'left', 'right'];
@@ -44,6 +59,10 @@ export interface Wire {
   /** The side each end leaves its port by, when the user chose it (else automatic). */
   fromSide?: Side;
   toSide?: Side;
+  /** Power wires: the fuse or breaker size at the channel, in amps. */
+  fuseA?: number;
+  /** Power wires: the wire gauge (AWG). */
+  awg?: number;
 }
 
 export interface Doc {

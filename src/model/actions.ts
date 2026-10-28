@@ -1,18 +1,35 @@
 // Every edit to a document goes through apply(). Documents are never changed in place.
 import type { Layer } from '../catalog/catalog';
 import { nextId } from './ids';
-import { GRID_MM, type Device, type Doc, type Point, type PortRef, type Rot, type Side, type TagSide, type Wire } from './types';
+import { GRID_MM, type CustomField, type Device, type Doc, type Point, type PortRef, type Rot, type Side, type TagSide, type Wire } from './types';
+
+/** A change to a device; null removes an optional field. */
+export interface DevicePatch {
+  name?: string;
+  canId?: number | null;
+  notes?: string;
+  ip?: string | null;
+  canBus?: string | null;
+  fields?: CustomField[] | null;
+}
+
+/** A change to a wire; null removes an optional field. */
+export interface WirePatch {
+  note?: string;
+  fuseA?: number | null;
+  awg?: number | null;
+}
 
 export type Action =
-  | { type: 'addDevice'; slug: string; name: string; x: number; y: number }
+  | { type: 'addDevice'; slug: string; name: string; x: number; y: number; id?: string }
   | { type: 'moveDevices'; ids: string[]; dx: number; dy: number; snap?: boolean }
   | { type: 'rotateDevices'; ids: string[] }
-  | { type: 'updateDevice'; id: string; patch: Partial<Pick<Device, 'name' | 'canId' | 'notes'>> }
-  | { type: 'addWire'; layer: Layer; from: PortRef; to: PortRef }
+  | { type: 'updateDevice'; id: string; patch: DevicePatch }
+  | { type: 'addWire'; layer: Layer; from: PortRef; to: PortRef; id?: string }
   | { type: 'setBends'; id: string; bends: Point[]; sides?: { from?: Side; to?: Side } }
   | { type: 'setWireSide'; id: string; end: 'from' | 'to'; side: Side | null }
   | { type: 'resetRoute'; id: string }
-  | { type: 'updateWire'; id: string; patch: { note: string } }
+  | { type: 'updateWire'; id: string; patch: WirePatch }
   | { type: 'delete'; ids: string[] }
   | { type: 'setTitle'; title: string }
   | { type: 'setTagHidden'; ids: string[]; hidden: boolean }
@@ -24,11 +41,22 @@ export const snap = (v: number) => Math.round(v / GRID_MM) * GRID_MM;
 
 const samePort = (a: PortRef, b: PortRef) => a.device === b.device && a.port === b.port;
 
+/** The item with the patch applied: a null value removes that key (canId keeps null, its "none"). */
+function patched<T extends object>(item: T, patch: object, keepNull: string[] = []): T {
+  const next = { ...item } as Record<string, unknown>;
+  for (const [k, v] of Object.entries(patch)) {
+    if (v === undefined) continue;
+    if (v === null && !keepNull.includes(k)) delete next[k];
+    else next[k] = v;
+  }
+  return next as T;
+}
+
 export function apply(doc: Doc, action: Action): Doc {
   switch (action.type) {
     case 'addDevice': {
       const device: Device = {
-        id: nextId('d', doc.devices), slug: action.slug, x: snap(action.x), y: snap(action.y),
+        id: action.id ?? nextId('d', doc.devices), slug: action.slug, x: snap(action.x), y: snap(action.y),
         rot: 0, name: action.name, canId: null, notes: '',
       };
       return { ...doc, devices: [...doc.devices, device] };
@@ -49,7 +77,7 @@ export function apply(doc: Doc, action: Action): Doc {
       };
     }
     case 'updateDevice':
-      return { ...doc, devices: doc.devices.map((d) => (d.id === action.id ? { ...d, ...action.patch } : d)) };
+      return { ...doc, devices: doc.devices.map((d) => (d.id === action.id ? patched(d, action.patch, ['canId']) : d)) };
     case 'addWire': {
       const { from, to } = action;
       if (samePort(from, to)) return doc;
@@ -57,7 +85,7 @@ export function apply(doc: Doc, action: Action): Doc {
         (w) => (samePort(w.from, from) && samePort(w.to, to)) || (samePort(w.from, to) && samePort(w.to, from)),
       );
       if (dup) return doc;
-      const wire: Wire = { id: nextId('w', doc.wires), layer: action.layer, from, to, bends: [], note: '' };
+      const wire: Wire = { id: action.id ?? nextId('w', doc.wires), layer: action.layer, from, to, bends: [], note: '' };
       return { ...doc, wires: [...doc.wires, wire] };
     }
     case 'setBends': {
@@ -95,7 +123,7 @@ export function apply(doc: Doc, action: Action): Doc {
         }),
       };
     case 'updateWire':
-      return { ...doc, wires: doc.wires.map((w) => (w.id === action.id ? { ...w, ...action.patch } : w)) };
+      return { ...doc, wires: doc.wires.map((w) => (w.id === action.id ? patched(w, action.patch) : w)) };
     case 'delete': {
       const ids = new Set(action.ids);
       return {

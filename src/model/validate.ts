@@ -1,8 +1,25 @@
 // Checks a document read from a file or from browser storage.
 import { findAnchor, layerOfKind, LAYERS, type Catalog, type Layer } from '../catalog/catalog';
-import { SIDES, TAG_SIDES, type Device, type Doc, type Point, type PortRef, type Rot, type Side, type TagSide, type Wire } from './types';
+import { SIDES, TAG_SIDES, type CustomField, type Device, type Doc, type Point, type PortRef, type Rot, type Side, type TagSide, type Wire } from './types';
 
 const str = (v: unknown, dflt = '') => (typeof v === 'string' ? v : dflt);
+
+const OCTET = '(25[0-5]|2[0-4]\\d|1\\d\\d|[1-9]?\\d)';
+const IPV4 = new RegExp(`^${OCTET}(\\.${OCTET}){3}$`);
+
+/** An IPv4 dotted quad or DHCP (any case). */
+export const validIp = (v: unknown): v is string => typeof v === 'string' && (IPV4.test(v) || v.toUpperCase() === 'DHCP');
+/** The stored form of a valid IP: DHCP in capitals. */
+export const normalIp = (v: string) => (v.toUpperCase() === 'DHCP' ? 'DHCP' : v);
+export const validCanBus = (v: unknown): v is string => typeof v === 'string' && v.trim().length >= 1 && v.trim().length <= 20;
+export const MAX_FIELDS = 20;
+export const validFields = (v: unknown): v is CustomField[] =>
+  Array.isArray(v) && v.length <= MAX_FIELDS &&
+  v.every((f) =>
+    f && typeof f.label === 'string' && f.label.trim().length >= 1 && f.label.length <= 40 &&
+    typeof f.value === 'string' && f.value.length <= 200 && (f.onLabel === undefined || typeof f.onLabel === 'boolean'));
+export const validFuse = (v: unknown): v is number => typeof v === 'number' && Number.isFinite(v) && v > 0 && v <= 200;
+export const validAwg = (v: unknown): v is number => typeof v === 'number' && Number.isInteger(v) && v >= 4 && v <= 30;
 const num = (v: unknown) => (typeof v === 'number' && Number.isFinite(v) ? v : 0);
 
 export function validateDoc(raw: unknown, catalog: Catalog | null): { doc: Doc; droppedWires: number } {
@@ -23,6 +40,11 @@ export function validateDoc(raw: unknown, catalog: Catalog | null): { doc: Doc; 
     const device: Device = { id, slug: str(d.slug), x: num(d.x), y: num(d.y), rot, name: str(d.name), canId, notes: str(d.notes) };
     if (d.hideTag === true) device.hideTag = true;
     if (TAG_SIDES.includes(d.tagSide as TagSide) && d.tagSide !== 'bottom') device.tagSide = d.tagSide as TagSide;
+    if (validIp(d.ip)) device.ip = normalIp(d.ip);
+    if (validCanBus(d.canBus)) device.canBus = d.canBus.trim();
+    if (validFields(d.fields)) {
+      device.fields = d.fields.map((f) => ({ label: f.label.trim(), value: f.value, ...(f.onLabel ? { onLabel: true } : {}) }));
+    }
     devices.push(device);
   }
 
@@ -64,6 +86,8 @@ export function validateDoc(raw: unknown, catalog: Catalog | null): { doc: Doc; 
     };
     if (SIDES.includes(w.fromSide as Side)) wire.fromSide = w.fromSide as Side;
     if (SIDES.includes(w.toSide as Side)) wire.toSide = w.toSide as Side;
+    if (layer === 'power' && validFuse(w.fuseA)) wire.fuseA = w.fuseA;
+    if (layer === 'power' && validAwg(w.awg)) wire.awg = w.awg;
     wires.push(wire);
   }
 

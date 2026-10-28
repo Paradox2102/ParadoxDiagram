@@ -89,3 +89,38 @@ test('a label side is set per device; bottom (the default) is not stored', () =>
   d = apply(d, { type: 'setTagSide', ids: ['d2'], side: 'bottom' });
   expect('tagSide' in d.devices[1]).toBe(false);
 });
+
+describe('new fields', () => {
+  test('updateDevice sets fields and null deletes the key', () => {
+    let d = apply(withTwo(), { type: 'updateDevice', id: 'd1', patch: { ip: '10.21.2.2', canBus: 'S0', fields: [{ label: 'A', value: 'b' }] } });
+    expect(d.devices[0]).toMatchObject({ ip: '10.21.2.2', canBus: 'S0', fields: [{ label: 'A', value: 'b' }] });
+    d = apply(d, { type: 'updateDevice', id: 'd1', patch: { ip: null, canBus: null, fields: null } });
+    expect(d.devices[0]).not.toHaveProperty('ip');
+    expect(d.devices[0]).not.toHaveProperty('canBus');
+    expect(d.devices[0]).not.toHaveProperty('fields');
+  });
+
+  test('updateWire sets and clears fuse and gauge', () => {
+    let d = apply(withTwo(), { type: 'addWire', layer: 'power', from: { device: 'd1', port: 'ch4' }, to: { device: 'd2', port: 'power' } });
+    d = apply(d, { type: 'updateWire', id: 'w1', patch: { fuseA: 40, awg: 12 } });
+    expect(d.wires[0]).toMatchObject({ fuseA: 40, awg: 12 });
+    d = apply(d, { type: 'updateWire', id: 'w1', patch: { fuseA: null, awg: null } });
+    expect(d.wires[0]).not.toHaveProperty('fuseA');
+    expect(d.wires[0]).not.toHaveProperty('awg');
+  });
+
+  test('addDevice and addWire use a given id', () => {
+    let d = apply(emptyDoc(), { type: 'addDevice', id: 'pdh', slug: 'rev-pdh', name: '', x: 0, y: 0 });
+    d = apply(d, { type: 'addDevice', id: 'intake', slug: 'kraken-x60-powerpole', name: '', x: 0, y: 0 });
+    d = apply(d, { type: 'addWire', id: 'intake_power', layer: 'power', from: { device: 'pdh', port: 'ch4' }, to: { device: 'intake', port: 'power' } });
+    expect(d.devices.map((x) => x.id)).toEqual(['pdh', 'intake']);
+    expect(d.wires[0].id).toBe('intake_power');
+  });
+
+  test('nextId still skips custom ids', () => {
+    let d = apply(emptyDoc(), { type: 'addDevice', id: 'intake', slug: 'rev-pdh', name: '', x: 0, y: 0 });
+    d = apply(d, { type: 'addDevice', id: 'd3', slug: 'rev-pdh', name: '', x: 0, y: 0 });
+    d = apply(d, { type: 'addDevice', slug: 'rev-pdh', name: '', x: 0, y: 0 });
+    expect(d.devices.map((x) => x.id)).toEqual(['intake', 'd3', 'd4']);
+  });
+});
