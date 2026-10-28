@@ -34,9 +34,9 @@
   --handle-fill: #ffffff;
   --tag-ink: #1f2328;
   --tag-muted: #57606a;
-  /* on screen only: a black conductor and a gray signal wire would vanish on a dark canvas */
-  --wire-neg: #0d1117;
+  /* on screen only: a gray signal wire, and the casing that shows a black conductor on a dark canvas */
   --wire-signal: #57606a;
+  --wire-casing: none;
   color-scheme: light;
 }
 
@@ -49,7 +49,7 @@
     --on-ink: #10151f; --accent-soft: #33290d; --danger: #ff7b72;
     --shadow: rgb(0 0 0 / 0.5); --backdrop: rgb(0 0 0 / 0.6);
     --canvas: #1a2130; --grid-dot: #364256; --grid-dot-major: #4c5a72; --handle-fill: #1a2130;
-    --tag-ink: #e6ebf3; --tag-muted: #9aa6b8; --wire-neg: #c9d1d9; --wire-signal: #9aa6b8;
+    --tag-ink: #e6ebf3; --tag-muted: #9aa6b8; --wire-casing: #c9d1d9; --wire-signal: #9aa6b8;
     color-scheme: dark;
   }
 }
@@ -60,7 +60,7 @@
   --on-ink: #10151f; --accent-soft: #33290d; --danger: #ff7b72;
   --shadow: rgb(0 0 0 / 0.5); --backdrop: rgb(0 0 0 / 0.6);
   --canvas: #1a2130; --grid-dot: #364256; --grid-dot-major: #4c5a72; --handle-fill: #1a2130;
-  --tag-ink: #e6ebf3; --tag-muted: #9aa6b8; --wire-neg: #c9d1d9; --wire-signal: #9aa6b8;
+  --tag-ink: #e6ebf3; --tag-muted: #9aa6b8; --wire-casing: #c9d1d9; --wire-signal: #9aa6b8;
   color-scheme: dark;
 }
 
@@ -316,7 +316,7 @@ h2 { font-family: var(--font-display); }
 .handle-fill { fill: var(--handle-fill); }
 .tag-name { fill: var(--tag-ink); }
 .tag-facts { fill: var(--tag-muted); }
-.wire-neg { stroke: var(--wire-neg); }
+.wire-casing { stroke: var(--wire-casing); }
 .wire-signal { stroke: var(--wire-signal); }
 /* dark theme: each device's outer outline is drawn light, so a dark device stands out on the dark canvas */
 @media (prefers-color-scheme: dark) {

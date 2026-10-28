@@ -1,9 +1,12 @@
 import { COLORS, pathD, type WirePath } from '../geometry/scene';
 import type { Point, Wire } from '../model/types';
 
-// On screen, the black conductor and the gray signal line follow the theme (a dark canvas would hide them).
-// Exports draw the same paths with their fixed colors.
-const SCREEN_STROKE: Record<string, string> = { [COLORS.neg]: 'wire-neg', [COLORS.signal]: 'wire-signal' };
+// On screen, the gray signal line follows the theme. The black (−) conductor stays black, since black means
+// negative; in the dark theme it gets a thin light casing so it shows on the dark canvas. Exports draw the
+// same paths with their fixed colors and no casing.
+const SCREEN_STROKE: Record<string, string> = { [COLORS.signal]: 'wire-signal' };
+/** How far the casing shows on each side of a black conductor, in mm. */
+const CASING_MM = 0.15;
 
 interface Props {
   wire: Wire;
@@ -19,6 +22,14 @@ export function WireView({ wire, paths, points, selected }: Props) {
     <g data-wire={wire.id}>
       {selected && (
         <path d={d} fill="none" stroke="#0969da" strokeOpacity={0.22} strokeWidth={4} strokeLinejoin="round" pointerEvents="none" />
+      )}
+      {paths.map((p, i) =>
+        p.stroke === COLORS.neg ? (
+          <path
+            key={`c${i}`} d={p.d} fill="none" className="wire-casing" stroke="none" strokeWidth={p.width + 2 * CASING_MM}
+            strokeDasharray={p.dash} strokeLinejoin="round" pointerEvents="none"
+          />
+        ) : null,
       )}
       {paths.map((p, i) => (
         <path
