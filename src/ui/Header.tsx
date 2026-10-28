@@ -128,6 +128,7 @@ export function Header(p: HeaderProps) {
           }}
         />
         <button type="button" onClick={onShare} title="Copy a link that opens this version of the diagram">Share</button>
+        <a className="nav-button" href="gallery" title="Browse and download the device icons">Icons</a>
         <button type="button" onClick={() => setAbout(true)}>About</button>
         <div className="menu" ref={menuRef}>
           <button type="button" className="primary" aria-haspopup="menu" aria-expanded={menu} onClick={() => setMenu(!menu)}>

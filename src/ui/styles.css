@@ -57,11 +57,12 @@ h2 { font-family: var(--font-display); }
 .swatch { display: inline-flex; gap: 1px; }
 .swatch i { display: block; width: 4px; height: 12px; border-radius: 1px; }
 .actions { margin-left: auto; display: flex; flex-wrap: wrap; justify-content: flex-end; align-items: center; gap: 6px; }
-.actions > button, .menu > button {
+.actions > button, .menu > button, .actions > .nav-button {
   border: 1px solid #3a4766; background: #1c2b4d; color: #e6ebf3; border-radius: var(--radius);
   padding: 4px 11px; cursor: pointer;
 }
-.actions > button:hover:not(:disabled), .menu > button:hover { background: #26375e; }
+.actions > button:hover:not(:disabled), .menu > button:hover, .actions > .nav-button:hover { background: #26375e; }
+.actions > .nav-button { text-decoration: none; }
 .actions > button:disabled { opacity: 0.4; cursor: default; }
 .actions .primary { background: var(--accent); border-color: var(--accent); color: #fff; font-weight: 600; }
 .actions .primary:hover { background: #8f6b00; }
@@ -189,3 +190,69 @@ h2 { font-family: var(--font-display); }
   color: var(--ink); font-size: 13px; padding: 0 5px;
 }
 .side-row button[aria-pressed="true"] { background: var(--ink); border-color: var(--ink); color: #fff; }
+
+/* Icon gallery (/gallery) */
+.gallery-page { height: 100%; overflow-y: auto; }
+.gallery-page .bar { position: sticky; top: 0; z-index: 5; }
+.gallery-page .brand { color: inherit; text-decoration: none; }
+.page-nav { display: flex; gap: 4px; margin-left: auto; }
+.page-nav a { color: #b7c1d3; text-decoration: none; padding: 4px 11px; border-radius: var(--radius); }
+.page-nav a:hover { color: #fff; }
+.page-nav a[aria-current="page"] { background: #e6ebf3; color: var(--ink); }
+.gallery { max-width: 1180px; margin: 0 auto; padding: 20px 16px 48px; }
+.gallery-intro h1 { font: 600 32px/1.1 var(--font-display); margin: 6px 0 10px; }
+.gallery-intro p { max-width: 72ch; color: var(--muted); margin: 0 0 10px; }
+.gallery-intro a { color: var(--select); }
+.gallery-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 14px; margin: 16px 0 12px; }
+.segmented { display: inline-flex; align-items: center; gap: 2px; background: var(--surface); border: 1px solid var(--line); border-radius: 8px; padding: 3px; }
+.segmented span { color: var(--muted); font-size: 13px; padding: 0 8px 0 6px; }
+.segmented button { border: 0; background: transparent; padding: 4px 12px; border-radius: 5px; cursor: pointer; color: var(--ink); }
+.segmented button[aria-pressed="true"] { background: var(--ink); color: #fff; }
+.zip-button {
+  border: 1px solid var(--accent); background: var(--accent); color: #fff; font-weight: 600; border-radius: var(--radius);
+  padding: 5px 12px; cursor: pointer;
+}
+.zip-button:hover:not(:disabled) { background: #8f6b00; }
+.zip-button:disabled { opacity: 0.55; cursor: progress; }
+.gallery-section-head .zip-button { background: transparent; color: var(--accent-ink); font-weight: 500; }
+.gallery-section-head .zip-button:hover:not(:disabled) { background: #fbf3dc; }
+.gallery-search { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 16px; margin: 0 0 12px; }
+.gallery-search input[type="search"] {
+  flex: 1 1 280px; max-width: 420px; padding: 7px 10px; border: 1px solid var(--line); border-radius: var(--radius); background: var(--surface);
+}
+.gallery-search .check { display: inline-flex; align-items: center; gap: 6px; }
+.gallery-count, .gallery-status { color: var(--muted); margin: 0; }
+.gallery-status { margin: 24px 0; }
+.gallery-error { color: #cf222e; margin: 0 0 12px; }
+.count { color: var(--muted); font-size: 12px; font-family: var(--font-mono); }
+.link-button { border: 0; background: none; padding: 0; color: var(--select); cursor: pointer; text-decoration: underline; font: inherit; }
+.gallery-contents { display: flex; flex-wrap: wrap; gap: 6px; list-style: none; padding: 0; margin: 4px 0 8px; }
+.gallery-contents a {
+  display: inline-block; padding: 3px 10px; border: 1px solid var(--line); border-radius: 999px; background: var(--surface);
+  color: var(--ink); text-decoration: none; font-size: 14px;
+}
+.gallery-contents a:hover { border-color: var(--ink); }
+.gallery-section { margin-top: 28px; scroll-margin-top: 64px; }
+.gallery-section-head { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 8px; border-bottom: 1px solid var(--line); margin-bottom: 14px; padding-bottom: 6px; }
+.gallery-section-head h2 { font-size: 22px; margin: 0; }
+.icon-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(190px, 1fr)); gap: 14px; }
+.icon-card { background: var(--surface); border: 1px solid var(--line); border-radius: 8px; overflow: hidden; display: flex; flex-direction: column; }
+.icon-tile { display: block; height: 150px; padding: 12px; border: 0; border-bottom: 1px solid var(--line); background: #ffffff; cursor: zoom-in; overflow: hidden; }
+.icon-tile img { display: block; width: 100%; height: 100%; object-fit: contain; }
+.icon-meta { padding: 10px 12px 12px; display: flex; flex-direction: column; gap: 2px; flex: 1; }
+.icon-meta h3 { font-size: 16px; line-height: 1.2; margin: 0; }
+.icon-vendor { color: var(--muted); font-size: 13px; margin: 0; }
+.icon-legacy { color: var(--accent-ink); font-size: 12px; margin: 2px 0 0; }
+.icon-download { margin-top: auto; padding-top: 8px; color: var(--select); font-size: 14px; font-weight: 500; text-decoration: none; }
+.icon-download:hover { text-decoration: underline; }
+.icon-viewer { border: 0; padding: 0; border-radius: 10px; width: min(1000px, 94vw); max-height: 92vh; background: var(--surface); color: var(--ink); }
+.icon-viewer::backdrop { background: rgb(20 33 61 / 0.55); }
+.icon-viewer-box { display: flex; flex-direction: column; max-height: 92vh; }
+.icon-viewer-bar { display: flex; align-items: flex-start; gap: 16px; padding: 14px 16px; border-bottom: 1px solid var(--line); }
+.icon-viewer-bar > div { flex: 1; min-width: 0; }
+.icon-viewer-bar h2 { margin: 0; font-size: 22px; }
+.icon-description { margin: 6px 0 0; font-size: 14px; }
+.icon-viewer-bar .icon-download { margin: 4px 0 0; padding: 0; white-space: nowrap; }
+.icon-viewer-close { border: 1px solid var(--line); background: var(--bg); border-radius: var(--radius); padding: 4px 12px; cursor: pointer; }
+.icon-viewer-tile { display: grid; place-items: center; padding: 24px; min-height: 0; overflow: auto; background: #ffffff; }
+.icon-viewer-tile img { display: block; width: 100%; height: 66vh; object-fit: contain; }

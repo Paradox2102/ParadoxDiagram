@@ -35,6 +35,9 @@ diagram that looks like a team wiring poster.
 - **Export and share.** SVG and PNG (2× or 4×) for posters and slides, JSON to keep a copy, and a share link
   that opens the same diagram for anyone, with no account.
 - **Saved as you go.** The layout is kept in your browser, with undo and redo.
+- **Icon gallery.** Browse every icon at [diagram.team2102.org/gallery](https://diagram.team2102.org/gallery) and
+  download one SVG, a whole group (by type or by vendor), the icons a search finds, or the whole collection as a
+  ZIP.
 
 ## Screenshots
 
@@ -58,6 +61,13 @@ Select a wire to see its two ends, choose which side each end leaves its port by
 PDH channel 12 cable runs to the SPARK Flex + terminal and the black conductor splits off to its − terminal.
 
 ![A power wire selected, with the From leaves and To leaves controls](docs/screenshots/wire-details.png)
+
+### Icon gallery
+
+The **Icons** page shows every device drawing. Search it, group it by type or by vendor, open a drawing large,
+and download one SVG, a group, your search results or all of them as a ZIP.
+
+![The icon gallery: search, group by type or vendor, and download buttons for all icons, each group and each icon](docs/screenshots/gallery.png)
 
 ### What you export
 
