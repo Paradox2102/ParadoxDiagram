@@ -20,6 +20,8 @@ export interface Icon {
   vendor: string;
   vendor_name: string;
   part_number: string | null;
+  /** The full description, when the short name leaves out details (specs, model numbers). */
+  description?: string | null;
   status: 'current' | 'legacy';
   path: string;
   size_mm: [number, number];
@@ -75,7 +77,7 @@ export function searchIcons(icons: Icon[], query: string, showLegacy: boolean): 
   const words = query.toLowerCase().split(/\s+/).filter(Boolean);
   return icons.filter((i) => {
     if (!showLegacy && i.status === 'legacy') return false;
-    const hay = `${i.name} ${i.vendor_name} ${i.part_number ?? ''} ${i.slug}`.toLowerCase();
+    const hay = `${i.name} ${i.description ?? ''} ${i.vendor_name} ${i.part_number ?? ''} ${i.slug}`.toLowerCase();
     return words.every((w) => hay.includes(w));
   });
 }

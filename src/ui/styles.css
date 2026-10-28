@@ -122,6 +122,7 @@ h2 { font-family: var(--font-display); }
 .inspector { grid-area: inspector; background: var(--surface); border-left: 1px solid var(--line); padding: 12px 14px; overflow-y: auto; }
 .inspector h2 { font-size: 17px; margin: 0 0 2px; }
 .inspector .sub { color: var(--muted); font-size: 13px; margin: 0 0 12px; }
+.inspector .desc { font-size: 13px; line-height: 1.4; margin: -4px 0 12px; }
 .inspector label { display: grid; gap: 3px; font-size: 13px; color: var(--muted); margin-bottom: 10px; }
 .inspector input, .inspector textarea {
   width: 100%; padding: 5px 8px; border: 1px solid var(--line); border-radius: var(--radius); color: var(--ink); background: var(--bg);

@@ -43,7 +43,7 @@ export function Palette({ catalog, error, onAdd }: Props) {
               {icons.map((i) => (
                 <li key={i.slug}>
                   <button
-                    type="button" draggable title={`${i.name}: click to add, or drag onto the diagram`}
+                    type="button" draggable title={`${i.description ?? i.name}: click to add, or drag onto the diagram`}
                     onClick={() => onAdd(i.slug)}
                     onDragStart={(e) => {
                       e.dataTransfer.setData(SLUG_MIME, i.slug);

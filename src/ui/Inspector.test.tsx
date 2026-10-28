@@ -110,3 +110,10 @@ test('each wire end can be set to leave by a side, or back to Auto', async () =>
   expect(dispatch).toHaveBeenCalledWith({ type: 'setWireSide', id: 'w1', end: 'from', side: 'down' });
   expect(screen.getByRole('button', { name: 'To end leaves automatically' })).toHaveAttribute('aria-pressed', 'true');
 });
+
+test('a device shows its icon description under the short name', () => {
+  const d = apply(emptyDoc(), { type: 'addDevice', slug: 'frc-battery', name: '', x: 0, y: 0 });
+  render(<Inspector doc={d} catalog={catalog} selection={['d1']} dispatch={() => {}} />);
+  expect(screen.getByRole('heading', { name: 'Battery (6AWG - SB50)' })).toBeTruthy();
+  expect(screen.getByText(/12 V 18 Ah sealed lead-acid/)).toBeTruthy();
+});

@@ -24,7 +24,7 @@ test('search needs every word to match', () => {
   const hits = searchIcons(catalog.icons, 'kraken x60', false);
   expect(hits.map((i) => i.slug)).toContain('kraken-x60-powerpole');
   for (const i of hits) {
-    const hay = `${i.name} ${i.vendor_name} ${i.part_number ?? ''} ${i.slug}`.toLowerCase();
+    const hay = `${i.name} ${i.description ?? ''} ${i.vendor_name} ${i.part_number ?? ''} ${i.slug}`.toLowerCase();
     expect(hay).toContain('kraken');
     expect(hay).toContain('x60');
   }
@@ -58,6 +58,13 @@ test('power ports with one polarity are found by name', () => {
   expect(pol('rev-pdh', 'ch4')).toBeNull();
   expect(pol('ctre-vrm', 'v12_2a_1')).toBeNull();
   expect(pol('systemcore', 'can_s0')).toBeNull();
+});
+
+test('short names keep their details in the description, which search also reads', () => {
+  const battery = catalog.bySlug.get('frc-battery')!;
+  expect(battery.name).toBe('Battery (6AWG - SB50)');
+  expect(battery.description).toContain('18 Ah');
+  expect(searchIcons(catalog.icons, 'lead-acid', false).map((i) => i.slug)).toContain('frc-battery');
 });
 
 test('a separate + or - terminal finds its partner on the same device', () => {

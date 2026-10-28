@@ -36,10 +36,10 @@
 </g>
 <g class="caption">
 <text x="90.5" y="180" font-size="4" fill="#1f2328" text-anchor="middle" font-weight="bold">FRC Robot Battery (12 V SLA), SB120</text>
-<text x="90.5" y="184.2" font-size="2.3" fill="#57606a" text-anchor="middle">181 × 76 mm · top view · 6 AWG leads to a blue SB120, drawn short</text>
+<text x="90.5" y="184.2" font-size="2.3" fill="#57606a" text-anchor="middle">181 × 76 mm · top view · 4 AWG leads to a blue SB120, drawn short</text>
 </g>
 <g id="anchors">
-<circle class="anchor" id="anchor-sb120_neg" data-kind="power" cx="78.7" cy="162.5" r="1" fill="none"><title>SB120 − (black 6 AWG lead from the battery −)</title></circle>
-<circle class="anchor" id="anchor-sb120_pos" data-kind="power" cx="102.3" cy="162.5" r="1" fill="none"><title>SB120 + (red 6 AWG lead from the battery +)</title></circle>
+<circle class="anchor" id="anchor-sb120_neg" data-kind="power" cx="78.7" cy="162.5" r="1" fill="none"><title>SB120 − (black 4 AWG lead from the battery −)</title></circle>
+<circle class="anchor" id="anchor-sb120_pos" data-kind="power" cx="102.3" cy="162.5" r="1" fill="none"><title>SB120 + (red 4 AWG lead from the battery +)</title></circle>
 </g>
 </svg>

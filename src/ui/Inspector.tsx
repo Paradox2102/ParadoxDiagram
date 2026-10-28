@@ -79,6 +79,7 @@ function DeviceForm({ doc, catalog, device, dispatch }: { doc: Doc; catalog: Cat
       <p className="sub">
         {icon ? `${icon.name} · ${icon.vendor_name}` : `Unknown icon ${device.slug}`}
       </p>
+      {icon?.description && <p className="desc">{icon.description}</p>}
       {tag.facts && <p className="sub mono">{tag.facts}</p>}
       <Field label="Name" value={device.name} placeholder={icon?.name} onCommit={(v) => update({ name: v })} />
       <Field
