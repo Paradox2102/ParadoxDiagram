@@ -93,6 +93,17 @@ describe('live mode', () => {
     expect(onLocal.mock.calls[0][1].devices[0].x).toBe(50);
   });
 
+  test('a remote edit to the dragged device survives the drag', () => {
+    const { result } = renderHook(() => useDocHistory(start()));
+    act(() => result.current.setLive(true));
+    let base = start();
+    act(() => { base = result.current.begin(); });
+    act(() => result.current.preview(apply(base, { type: 'moveDevices', ids: ['a'], dx: 50, dy: 0 })));
+    act(() => result.current.remote(apply(base, { type: 'updateDevice', id: 'a', patch: { name: 'Intake', canId: 21 } })));
+    act(() => result.current.end(base));
+    expect(result.current.doc.devices[0]).toMatchObject({ x: 50, name: 'Intake', canId: 21 });
+  });
+
   test('live undo reverses only the local step', () => {
     const onLocal = vi.fn();
     const { result } = renderHook(() => useDocHistory(start(), { onLocal }));

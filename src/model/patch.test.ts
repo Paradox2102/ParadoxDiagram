@@ -82,3 +82,21 @@ test('the restore action applies a patch', () => {
   const a = apply(b, { type: 'setTitle', title: 'New' });
   expect(apply(b, { type: 'restore', patch: diffDocs(b, a) })).toEqual(a);
 });
+
+test('a patch changes only the fields it changed: a move and a rename of the same device both stay', () => {
+  const b = base();
+  const movedByTab = apply(b, { type: 'moveDevices', ids: ['intake'], dx: 50, dy: 0 });
+  const renamedByAi = apply(b, { type: 'updateDevice', id: 'intake', patch: { name: 'Intake roller', canId: 21 } });
+  const { doc, error } = applyPatch(renamedByAi, diffDocs(b, movedByTab));
+  expect(error).toBeNull();
+  expect(doc.devices.find((d) => d.id === 'intake')).toMatchObject({ x: 250, name: 'Intake roller', canId: 21 });
+});
+
+test('a patch that removes a field removes only that field', () => {
+  const b = apply(base(), { type: 'updateDevice', id: 'pdh', patch: { ip: '10.21.2.5', notes: 'old' } });
+  const cleared = apply(b, { type: 'updateDevice', id: 'pdh', patch: { ip: null } });
+  const otherSide = apply(b, { type: 'updateDevice', id: 'pdh', patch: { notes: 'new' } });
+  const pdh = applyPatch(otherSide, diffDocs(b, cleared)).doc.devices.find((d) => d.id === 'pdh')!;
+  expect(pdh).not.toHaveProperty('ip');
+  expect(pdh.notes).toBe('new');
+});
