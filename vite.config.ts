@@ -8,9 +8,27 @@ export default defineConfig({
   define: { __APP_VERSION__: JSON.stringify(pkg.version) },
   base: './',
   test: {
-    environment: 'jsdom',
-    globals: true,
-    setupFiles: ['src/test/setup.ts'],
-    css: true,
+    projects: [
+      {
+        extends: true,
+        test: {
+          name: 'app',
+          include: ['src/**/*.test.{ts,tsx}'],
+          environment: 'jsdom',
+          globals: true,
+          setupFiles: ['src/test/setup.ts'],
+          css: true,
+        },
+      },
+      {
+        test: {
+          name: 'mcp',
+          include: ['mcp/src/**/*.test.ts'],
+          environment: 'node',
+          globals: true,
+          globalSetup: ['mcp/test/global-setup.ts'],
+        },
+      },
+    ],
   },
 });

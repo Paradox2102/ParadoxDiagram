@@ -1,8 +1,9 @@
 node_modules
 dist
+mcp/dist
+mcp/assets/icons
 .git
 .claude
 .superpowers
 docs
-examples
 *.log

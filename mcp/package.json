@@ -1,0 +1,40 @@
+{
+  "name": "@paradox2102/diagram-mcp",
+  "version": "1.0.2",
+  "description": "MCP server for Paradox Diagram: an AI agent builds and edits an FRC wiring diagram while you edit it live at diagram.team2102.org.",
+  "type": "module",
+  "license": "UNLICENSED",
+  "bin": {
+    "diagram-mcp": "dist/server.js"
+  },
+  "files": [
+    "dist",
+    "assets",
+    "README.md"
+  ],
+  "engines": {
+    "node": ">=24"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Paradox2102/ParadoxDiagram.git",
+    "directory": "mcp"
+  },
+  "homepage": "https://diagram.team2102.org/api",
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "build": "node scripts/copy-assets.mjs && vite build",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@types/ws": "8.18.1"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "1.32.1",
+    "@resvg/resvg-js": "2.6.2",
+    "ws": "8.22.0",
+    "zod": "4.6.7"
+  }
+}
