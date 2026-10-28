@@ -5,7 +5,7 @@ import { randomBytes, timingSafeEqual } from 'node:crypto';
 import { createServer, type IncomingMessage, type ServerResponse } from 'node:http';
 import type { Duplex } from 'node:stream';
 import { WebSocketServer, type WebSocket } from 'ws';
-import { applyPatch } from '../../src/model/patch';
+import { applyPatch, type DocPatch } from '../../src/model/patch';
 import {
   CLOSE_BAD_TOKEN, CLOSE_PROTOCOL, LIVE_PATH, LIVE_PROTOCOL, type ServerMessage, type TabMessage,
 } from '../../src/live/protocol';
@@ -32,6 +32,12 @@ const LOCAL_ORIGIN = /^http:\/\/(localhost|127\.0\.0\.1)(:\d+)?$/;
 const MAX_FRAME = 4 * 1024 * 1024;
 /** A socket that has not said hello by then is closed. */
 const HELLO_MS = 10_000;
+
+/** A patch as the tab sends it: the four lists must be there (the rest is checked when it is applied). */
+const isPatch = (p: unknown): p is DocPatch => {
+  const x = p as Record<string, unknown> | null;
+  return !!x && typeof x === 'object' && ['devices', 'wires', 'remove', 'added'].every((k) => Array.isArray(x[k]));
+};
 
 const sameToken = (a: string, b: string) => {
   const x = Buffer.from(a);
@@ -75,44 +81,58 @@ export async function startLive(store: DiagramStore, opts: LiveOptions): Promise
       sockets.add(ws);
       const hello = setTimeout(() => ws.close(CLOSE_BAD_TOKEN, 'no hello'), HELLO_MS);
       ws.on('message', (raw) => {
-        let m: TabMessage;
+        // nothing a socket sends may stop the server: a bad frame closes that socket or is rejected
         try {
-          m = JSON.parse(String(raw));
-        } catch {
-          ws.close(1003, 'not JSON');
-          return;
-        }
-        if (!joined) {
-          if (m.t !== 'hello' || typeof m.token !== 'string' || !sameToken(m.token, token)) {
-            ws.close(CLOSE_BAD_TOKEN, 'bad token');
+          let m: TabMessage;
+          try {
+            m = JSON.parse(String(raw));
+          } catch {
+            ws.close(1003, 'not JSON');
             return;
           }
-          if (m.protocol !== LIVE_PROTOCOL) {
-            send(ws, {
-              t: 'error', code: CLOSE_PROTOCOL,
-              message: `This AI server is version ${opts.version} and the site is version ${m.app}. Update it with npx @paradox2102/diagram-mcp@latest.`,
-            });
-            ws.close(CLOSE_PROTOCOL, 'protocol');
+          if (!m || typeof m !== 'object') {
+            ws.close(joined ? 1003 : CLOSE_BAD_TOKEN, 'bad frame');
             return;
           }
-          joined = true;
-          clearTimeout(hello);
-          clients.add(ws);
-          send(ws, { t: 'welcome', rev: store.rev, doc: store.doc, file: store.file, server: opts.version });
-          return;
-        }
-        if (m.t !== 'action' || m.action?.type !== 'restore') return;
-        const { doc, error } = applyPatch(store.doc, m.action.patch);
-        if (error) {
-          send(ws, { t: 'reject', seq: m.seq, error });
-          send(ws, { t: 'doc', rev: store.rev, doc: store.doc, by: 'ai' });
-          return;
-        }
-        sender = ws;
-        try {
-          store.commit(doc, 'tab', m.seq);
-        } finally {
-          sender = null;
+          if (!joined) {
+            if (m.t !== 'hello' || typeof m.token !== 'string' || !sameToken(m.token, token)) {
+              ws.close(CLOSE_BAD_TOKEN, 'bad token');
+              return;
+            }
+            if (m.protocol !== LIVE_PROTOCOL) {
+              send(ws, {
+                t: 'error', code: CLOSE_PROTOCOL,
+                message: `This AI server is version ${opts.version} and the site is version ${m.app}. Update it with npx @paradox2102/diagram-mcp@latest.`,
+              });
+              ws.close(CLOSE_PROTOCOL, 'protocol');
+              return;
+            }
+            joined = true;
+            clearTimeout(hello);
+            clients.add(ws);
+            send(ws, { t: 'welcome', rev: store.rev, doc: store.doc, file: store.file, server: opts.version });
+            return;
+          }
+          if (m.t !== 'action') return;
+          const seq = typeof m.seq === 'number' ? m.seq : -1;
+          const reject = (error: string) => {
+            send(ws, { t: 'reject', seq, error });
+            send(ws, { t: 'doc', rev: store.rev, doc: store.doc, by: 'ai' });
+          };
+          if (m.action?.type !== 'restore' || !isPatch(m.action.patch)) return reject('not a restore action with a patch');
+          const { doc, error } = applyPatch(store.doc, m.action.patch);
+          if (error) return reject(error);
+          sender = ws;
+          try {
+            store.commit(doc, 'tab', seq);
+          } catch (e) {
+            reject(`the change was not saved: ${(e as Error).message}`);
+          } finally {
+            sender = null;
+          }
+        } catch (e) {
+          process.stderr.write(`live link: ${(e as Error).message}\n`);
+          ws.close(1011, 'server error');
         }
       });
       ws.on('close', () => {

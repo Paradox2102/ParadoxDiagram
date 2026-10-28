@@ -167,3 +167,23 @@ test('links carry the port and token', () => {
   expect(live.localLink()).toBe(`http://127.0.0.1:${live.port}/#live=${live.port}.${live.token}`);
   expect(live.token).toMatch(/^[A-Za-z0-9_-]{22}$/);
 });
+
+test('a malformed frame before hello closes that socket and the server keeps running', async () => {
+  const bad = client('http://localhost:5180');
+  await bad.open;
+  bad.ws.send('null');
+  await bad.closed;
+  const good = await joined();
+  expect(live.clients()).toBe(1);
+  good.ws.close();
+});
+
+test('an action with no patch is rejected, not a crash', async () => {
+  const a = await joined();
+  a.send({ t: 'action', seq: 9, action: { type: 'restore' } });
+  expect(await a.next((m) => m.t === 'reject')).toMatchObject({ seq: 9 });
+  a.send(42);
+  const b = await joined();
+  b.ws.close();
+  a.ws.close();
+});
