@@ -59,3 +59,43 @@ test('a device fed from two kinds of device lists both', () => {
   d = apply(d, { type: 'addWire', layer: 'power', from: { device: 'd2', port: 'ch3' }, to: { device: 'd3', port: 'vbat_neg' } });
   expect(deviceTag(d, 'd3', catalog).facts).toBe('PDH 12  ·  MPM 3');
 });
+
+describe('new facts', () => {
+  function rig(): Doc {
+    let d = emptyDoc();
+    for (const [id, slug] of [['sc', 'systemcore'], ['pdh', 'rev-pdh'], ['a', 'neo-vortex-spark-flex'], ['b', 'neo-vortex-spark-flex']]) {
+      d = apply(d, { type: 'addDevice', id, slug, name: id.toUpperCase(), x: 0, y: 0 });
+    }
+    d = apply(d, { type: 'updateDevice', id: 'a', patch: { canId: 12 } });
+    d = apply(d, { type: 'updateDevice', id: 'b', patch: { canId: 12 } });
+    return apply(d, { type: 'addWire', layer: 'can', from: { device: 'sc', port: 'can_s1' }, to: { device: 'a', port: 'can_a' } });
+  }
+
+  test('facts show the bus only with two or more buses', () => {
+    const one = rig();
+    expect(deviceTag(one, 'a', catalog).facts).toBe('CAN 12');
+    const two = apply(one, { type: 'addWire', layer: 'can', from: { device: 'sc', port: 'can_s0' }, to: { device: 'b', port: 'can_a' } });
+    expect(deviceTag(two, 'a', catalog).facts).toBe('CAN S1·12');
+    expect(deviceTag(two, 'b', catalog).facts).toBe('CAN S0·12');
+  });
+
+  test('facts show fuse and gauge', () => {
+    let d = apply(rig(), { type: 'addWire', id: 'p4', layer: 'power', from: { device: 'pdh', port: 'ch4' }, to: { device: 'a', port: 'vbat_pos' } });
+    d = apply(d, { type: 'updateWire', id: 'p4', patch: { fuseA: 40, awg: 12 } });
+    expect(deviceTag(d, 'a', catalog).facts).toBe('CAN 12  ·  PDH 4 (40 A, 12 AWG)');
+    d = apply(d, { type: 'updateWire', id: 'p4', patch: { awg: null } });
+    expect(deviceTag(d, 'a', catalog).facts).toBe('CAN 12  ·  PDH 4 (40 A)');
+    d = apply(d, { type: 'addWire', id: 'p5', layer: 'power', from: { device: 'pdh', port: 'ch5' }, to: { device: 'a', port: 'vbat_neg' } });
+    d = apply(d, { type: 'updateWire', id: 'p5', patch: { fuseA: 40 } });
+    expect(deviceTag(d, 'a', catalog).facts).toBe('CAN 12  ·  PDH 4 (40 A)/5 (40 A)');
+  });
+
+  test('facts show the IP and the fields marked on label, in order CAN, power, IP, fields', () => {
+    let d = apply(rig(), { type: 'addWire', layer: 'power', from: { device: 'pdh', port: 'ch4' }, to: { device: 'a', port: 'vbat_pos' } });
+    d = apply(d, {
+      type: 'updateDevice', id: 'a',
+      patch: { canId: 21, ip: '10.21.2.11', fields: [{ label: 'Firmware', value: '25.1', onLabel: true }, { label: 'Hidden', value: 'x' }] },
+    });
+    expect(deviceTag(d, 'a', catalog).facts).toBe('CAN 21  ·  PDH 4  ·  10.21.2.11  ·  Firmware 25.1');
+  });
+});
