@@ -136,3 +136,78 @@ test('the rotate button is an arrow icon named for screen readers', async () => 
   await userEvent.click(rotate);
   expect(dispatch).toHaveBeenCalledWith({ type: 'rotateDevices', ids: ['d2'] });
 });
+
+describe('new fields', () => {
+  function rig(): Doc {
+    let d = emptyDoc();
+    for (const [id, slug] of [['sc', 'systemcore'], ['radio', 'vh-109'], ['m', 'kraken-x60-powerpole'], ['pdh', 'rev-pdh']]) {
+      d = apply(d, { type: 'addDevice', id, slug, name: '', x: 0, y: 0 });
+    }
+    d = apply(d, { type: 'addWire', id: 'can1', layer: 'can', from: { device: 'sc', port: 'can_s1' }, to: { device: 'm', port: 'can_a' } });
+    return apply(d, { type: 'addWire', id: 'p1', layer: 'power', from: { device: 'pdh', port: 'ch4' }, to: { device: 'm', port: 'power' } });
+  }
+
+  test('IP shows for a radio and not for a motor', () => {
+    const { unmount } = render(<Inspector doc={rig()} catalog={catalog} selection={['radio']} dispatch={() => {}} />);
+    expect(screen.getByLabelText('IP address')).toBeInTheDocument();
+    unmount();
+    render(<Inspector doc={rig()} catalog={catalog} selection={['m']} dispatch={() => {}} />);
+    expect(screen.queryByLabelText('IP address')).toBeNull();
+  });
+
+  test('a good IP commits and a bad IP is not saved and shows the hint', async () => {
+    const dispatch = vi.fn();
+    render(<Inspector doc={rig()} catalog={catalog} selection={['radio']} dispatch={dispatch} />);
+    const ip = screen.getByLabelText('IP address');
+    await userEvent.type(ip, '10.21.2');
+    await userEvent.tab();
+    expect(dispatch).not.toHaveBeenCalled();
+    expect(ip).toHaveAttribute('aria-invalid', 'true');
+    expect(screen.getByText('Use 10.TE.AM.x or DHCP')).toBeInTheDocument();
+    await userEvent.type(ip, '.1');
+    await userEvent.tab();
+    expect(dispatch).toHaveBeenCalledWith({ type: 'updateDevice', id: 'radio', patch: { ip: '10.21.2.1' } });
+  });
+
+  test('the CAN bus placeholder shows the found bus', () => {
+    render(<Inspector doc={rig()} catalog={catalog} selection={['m']} dispatch={() => {}} />);
+    expect(screen.getByLabelText('CAN bus')).toHaveAttribute('placeholder', 'S1');
+  });
+
+  test('add, edit and remove a custom field', async () => {
+    const dispatch = vi.fn();
+    const { rerender } = render(<Inspector doc={rig()} catalog={catalog} selection={['m']} dispatch={dispatch} />);
+    await userEvent.click(screen.getByRole('button', { name: 'Add field' }));
+    expect(dispatch).toHaveBeenLastCalledWith({ type: 'updateDevice', id: 'm', patch: { fields: [{ label: 'Field', value: '' }] } });
+    const d = apply(rig(), dispatch.mock.lastCall![0]);
+    rerender(<Inspector doc={d} catalog={catalog} selection={['m']} dispatch={dispatch} />);
+    await userEvent.type(screen.getByLabelText('Value of field 1'), '25.1');
+    await userEvent.tab();
+    expect(dispatch).toHaveBeenLastCalledWith({ type: 'updateDevice', id: 'm', patch: { fields: [{ label: 'Field', value: '25.1' }] } });
+    await userEvent.click(screen.getByRole('button', { name: 'Remove field Field' }));
+    expect(dispatch).toHaveBeenLastCalledWith({ type: 'updateDevice', id: 'm', patch: { fields: null } });
+  });
+
+  test('On label sets onLabel', async () => {
+    const dispatch = vi.fn();
+    const d = apply(rig(), { type: 'updateDevice', id: 'm', patch: { fields: [{ label: 'Gear', value: '9:1' }] } });
+    render(<Inspector doc={d} catalog={catalog} selection={['m']} dispatch={dispatch} />);
+    await userEvent.click(screen.getByRole('checkbox', { name: 'Show Gear on the label' }));
+    expect(dispatch).toHaveBeenLastCalledWith({ type: 'updateDevice', id: 'm', patch: { fields: [{ label: 'Gear', value: '9:1', onLabel: true }] } });
+  });
+
+  test('fuse and gauge show only for a power wire, and commit numbers', async () => {
+    const dispatch = vi.fn();
+    const { unmount } = render(<Inspector doc={rig()} catalog={catalog} selection={['can1']} dispatch={dispatch} />);
+    expect(screen.queryByLabelText('Fuse / breaker (A)')).toBeNull();
+    unmount();
+    render(<Inspector doc={rig()} catalog={catalog} selection={['p1']} dispatch={dispatch} />);
+    await userEvent.type(screen.getByLabelText('Fuse / breaker (A)'), '40');
+    await userEvent.tab();
+    expect(dispatch).toHaveBeenLastCalledWith({ type: 'updateWire', id: 'p1', patch: { fuseA: 40 } });
+    await userEvent.type(screen.getByLabelText('Gauge (AWG)'), '12.5');
+    await userEvent.tab();
+    expect(screen.getByText('A whole number from 4 to 30')).toBeInTheDocument();
+    expect(dispatch).toHaveBeenCalledTimes(1);
+  });
+});

@@ -1,9 +1,12 @@
 // The right panel: properties of the selected device or wire.
 import { useEffect, useRef, useState } from 'react';
 import type { Catalog } from '../catalog/catalog';
-import type { Action } from '../model/actions';
+import type { Action, DevicePatch } from '../model/actions';
+import { foundBus } from '../model/canbus';
 import { deviceTag } from '../model/tags';
+import { normalIp, validAwg, validCanBus, validFuse, validIp } from '../model/validate';
 import { Arrange } from './Arrange';
+import { FieldsEditor } from './FieldsEditor';
 import { RotateIcon } from './RotateIcon';
 import type { Device, Doc, PortRef, Side, TagSide, Wire } from '../model/types';
 
@@ -25,14 +28,21 @@ function Field(props: {
   value: string;
   placeholder?: string;
   multiline?: boolean;
-  inputMode?: 'numeric';
+  inputMode?: 'numeric' | 'decimal';
+  /** The hint to show when the text is not valid; null when it is. Invalid text is never committed. */
+  check?: (v: string) => string | null;
   onCommit: (v: string) => void;
 }) {
   const [text, setText] = useState(props.value);
-  const latest = useRef({ text, saved: props.value, onCommit: props.onCommit });
+  const [hint, setHint] = useState<string | null>(null);
+  const latest = useRef({ text, saved: props.value, onCommit: props.onCommit, check: props.check });
   latest.current.text = text;
   latest.current.onCommit = props.onCommit;
+  latest.current.check = props.check;
   const commit = () => {
+    const bad = props.check?.(text) ?? null;
+    setHint(bad);
+    if (bad) return;
     if (text !== latest.current.saved) {
       latest.current.saved = text;
       props.onCommit(text);
@@ -41,7 +51,7 @@ function Field(props: {
   useEffect(
     () => () => {
       const l = latest.current;
-      if (l.text !== l.saved) l.onCommit(l.text);
+      if (l.text !== l.saved && !l.check?.(l.text)) l.onCommit(l.text);
     },
     [],
   );
@@ -51,23 +61,36 @@ function Field(props: {
     onChange: (e: { target: { value: string } }) => setText(e.target.value),
     onBlur: commit,
   };
+  const hintId = `hint-${props.label.replace(/\W+/g, '-').toLowerCase()}`;
   return (
-    <label>
-      {props.label}
-      {props.multiline ? (
-        <textarea {...common} />
-      ) : (
-        <input
-          {...common} inputMode={props.inputMode}
-          onKeyDown={(e) => {
-            if (e.key === 'Enter') commit();
-            if (e.key === 'Escape') setText(latest.current.saved);
-          }}
-        />
-      )}
-    </label>
+    <>
+      <label>
+        {props.label}
+        {props.multiline ? (
+          <textarea {...common} />
+        ) : (
+          <input
+            {...common} inputMode={props.inputMode} aria-invalid={hint ? true : undefined}
+            aria-describedby={hint ? hintId : undefined}
+            onKeyDown={(e) => {
+              if (e.key === 'Enter') commit();
+              if (e.key === 'Escape') {
+                setText(latest.current.saved);
+                setHint(null);
+              }
+            }}
+          />
+        )}
+      </label>
+      {hint && <p className="field-hint" id={hintId}>{hint}</p>}
+    </>
   );
 }
+
+const ipCheck = (v: string) => (!v.trim() || validIp(v.trim()) ? null : 'Use 10.TE.AM.x or DHCP');
+const busCheck = (v: string) => (!v.trim() || validCanBus(v) ? null : '1 to 20 characters');
+const fuseCheck = (v: string) => (!v.trim() || validFuse(Number(v)) ? null : 'More than 0, at most 200');
+const awgCheck = (v: string) => (!v.trim() || validAwg(Number(v)) ? null : 'A whole number from 4 to 30');
 
 const TAG_BUTTONS: { side: TagSide; text: string }[] = [
   { side: 'left', text: '←' },
@@ -107,8 +130,8 @@ function RotateButton({ onClick }: { onClick: () => void }) {
 function DeviceForm({ doc, catalog, device, dispatch }: { doc: Doc; catalog: Catalog | null; device: Device; dispatch: Props['dispatch'] }) {
   const icon = catalog?.bySlug.get(device.slug);
   const tag = deviceTag(doc, device.id, catalog);
-  const update = (patch: Partial<Pick<Device, 'name' | 'canId' | 'notes'>>) =>
-    dispatch({ type: 'updateDevice', id: device.id, patch });
+  const update = (patch: DevicePatch) => dispatch({ type: 'updateDevice', id: device.id, patch });
+  const kinds = new Set(icon?.anchors.map((a) => a.kind));
   return (
     <>
       <h2>{tag.name}</h2>
@@ -127,7 +150,20 @@ function DeviceForm({ doc, catalog, device, dispatch }: { doc: Doc; catalog: Cat
           if (Number.isInteger(n) && n >= 0) update({ canId: n });
         }}
       />
+      {kinds.has('can') && (
+        <Field
+          label="CAN bus" value={device.canBus ?? ''} placeholder={foundBus(doc, catalog, device.id) ?? 'none found'}
+          check={busCheck} onCommit={(v) => update({ canBus: v.trim() || null })}
+        />
+      )}
+      {kinds.has('ethernet') && (
+        <Field
+          label="IP address" value={device.ip ?? ''} placeholder="10.TE.AM.x or DHCP" check={ipCheck}
+          onCommit={(v) => update({ ip: v.trim() ? normalIp(v.trim()) : null })}
+        />
+      )}
       <Field label="Notes" value={device.notes} multiline onCommit={(v) => update({ notes: v })} />
+      <FieldsEditor fields={device.fields ?? []} onChange={(fields) => update({ fields })} />
       <label className="check">
         <input
           type="checkbox" checked={!device.hideTag}
@@ -205,6 +241,19 @@ function WireForm({ doc, catalog, wire, dispatch }: { doc: Doc; catalog: Catalog
       </dl>
       <SidePicker wire={wire} end="from" dispatch={dispatch} />
       <SidePicker wire={wire} end="to" dispatch={dispatch} />
+      {wire.layer === 'power' && (
+        <>
+          <Field
+            label="Fuse / breaker (A)" value={wire.fuseA === undefined ? '' : String(wire.fuseA)} inputMode="decimal"
+            check={fuseCheck}
+            onCommit={(v) => dispatch({ type: 'updateWire', id: wire.id, patch: { fuseA: v.trim() ? Number(v) : null } })}
+          />
+          <Field
+            label="Gauge (AWG)" value={wire.awg === undefined ? '' : String(wire.awg)} inputMode="numeric" check={awgCheck}
+            onCommit={(v) => dispatch({ type: 'updateWire', id: wire.id, patch: { awg: v.trim() ? Number(v) : null } })}
+          />
+        </>
+      )}
       <Field label="Note" value={wire.note} multiline onCommit={(v) => dispatch({ type: 'updateWire', id: wire.id, patch: { note: v } })} />
       <div className="row">
         <button type="button" onClick={() => dispatch({ type: 'resetRoute', id: wire.id })} title="Remove the bends and set both ends to Auto">
@@ -269,8 +318,8 @@ export function Inspector({ doc, catalog, selection, dispatch }: Props) {
     const device = doc.devices.find((d) => d.id === live[0]);
     const wire = doc.wires.find((w) => w.id === live[0]);
     // key: a new selection, or an undo that changes the values, starts the fields fresh
-    if (device) body = <DeviceForm key={`${device.id}:${device.name}:${device.canId}:${device.notes}`} doc={doc} catalog={catalog} device={device} dispatch={dispatch} />;
-    else if (wire) body = <WireForm key={`${wire.id}:${wire.note}`} doc={doc} catalog={catalog} wire={wire} dispatch={dispatch} />;
+    if (device) body = <DeviceForm key={`${device.id}:${device.name}:${device.canId}:${device.notes}:${device.ip}:${device.canBus}:${JSON.stringify(device.fields ?? [])}`} doc={doc} catalog={catalog} device={device} dispatch={dispatch} />;
+    else if (wire) body = <WireForm key={`${wire.id}:${wire.note}:${wire.fuseA}:${wire.awg}`} doc={doc} catalog={catalog} wire={wire} dispatch={dispatch} />;
   }
   return (
     <aside className="inspector" aria-label="Properties">
