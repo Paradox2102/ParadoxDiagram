@@ -1,4 +1,4 @@
-import { dragSegment, routeWire } from './route';
+import { dragSegment, routeWire, stripPortRuns } from './route';
 import { offsetPolyline } from './offset';
 import type { Point } from '../model/types';
 
@@ -75,8 +75,35 @@ test('a dragged segment does not save the end stubs as bends', () => {
 });
 
 test('a route with bends uses the given exit points in place of the 6 mm stubs', () => {
+  // a single bend never moves the runs, so the given exit points are used
   const path = routeWire({ x: 0, y: 0 }, 'down', { x: 100, y: 0 }, 'down', [{ x: 50, y: 80 }], { x: 0, y: 30 }, { x: 100, y: 30 });
   expect(path[1]).toEqual({ x: 0, y: 30 });
   expect(path.at(-2)!.x).toBe(100);
   expect(path.at(-2)!.y).toBeGreaterThanOrEqual(30);
+});
+
+const shortRuns = (p: Point[]) => p.slice(1).filter((q, k) => Math.hypot(q.x - p[k].x, q.y - p[k].y) < 4).length;
+
+test('a port moved sideways stretches its run to the first bend with no jog', () => {
+  // the bends were made with the port at x 0; the device then moved 2 mm right
+  const path = routeWire({ x: 2, y: 0 }, 'down', { x: 150, y: 100 }, 'left', [{ x: 0, y: 50 }, { x: 100, y: 50 }]);
+  expect(shortRuns(path)).toBe(0);
+  expect(path.slice(0, 2)).toEqual([{ x: 2, y: 0 }, { x: 2, y: 50 }]);
+});
+
+test('a port run shortens to meet the last bend instead of running past it and back', () => {
+  const end = { x: 275, y: 313.2 };
+  const path = routeWire({ x: 0, y: 106 }, 'right', end, 'down', [{ x: 221, y: 106 }, { x: 221, y: 333.9 }], undefined, { x: 275, y: 335.7 });
+  expect(shortRuns(path)).toBe(0);
+  expect(path.slice(-2)).toEqual([{ x: 275, y: 333.9 }, end]);
+});
+
+test('a bend behind the port, or nearer than the 6 mm stub, keeps the normal exit', () => {
+  const path = routeWire({ x: 0, y: 0 }, 'down', { x: 100, y: 100 }, 'up', [{ x: 50, y: 3 }]);
+  expect(path[1]).toEqual({ x: 0, y: 6 });
+});
+
+test('corners on a port run are not saved as bends', () => {
+  const corners = [{ x: 0, y: 30 }, { x: 0, y: 50 }, { x: 100, y: 50 }, { x: 100, y: 80 }];
+  expect(stripPortRuns(corners, { x: 0, y: 0 }, 'down', { x: 100, y: 120 }, 'up')).toEqual([{ x: 0, y: 50 }, { x: 100, y: 50 }]);
 });

@@ -34,6 +34,19 @@ export function simplify(path: Point[]): Point[] {
 export function routeWire(
   start: Point, sDir: Dir, end: Point, eDir: Dir, bends: Point[], s1 = stub(start, sDir), e1 = stub(end, eDir),
 ): Point[] {
+  if (bends.length) {
+    // The run out of each port stretches or shortens to meet its nearest bend, so a bend does
+    // not leave a small step when its device moves a little.
+    const a = slideToBend(start, sDir, bends);
+    const b = slideToBend(end, eDir, [...bends].reverse());
+    const from = a?.drop ? 1 : 0;
+    const to = b?.drop ? bends.length - 1 : bends.length;
+    if (to - from >= 1) {
+      if (a) s1 = a.exit;
+      if (b) e1 = b.exit;
+      bends = bends.slice(from, to);
+    }
+  }
   const pts: Point[] = [start, s1];
   if (!bends.length) {
     if (horizontal(sDir) && horizontal(eDir)) {
@@ -81,6 +94,56 @@ export function dragSegment(path: Point[], index: number, delta: number, ends: P
     i === index || i === index + 1 ? (isH ? { x: p.x, y: p.y + delta } : { x: p.x + delta, y: p.y }) : p,
   );
   return withoutEnds(moved.slice(1, -1), ends);
+}
+
+/** How far `p` lies along the ray from `port` in `dir`, and how far off the ray. */
+function onRay(port: Point, dir: Dir, p: Point) {
+  const u = UNIT[dir];
+  return { along: (p.x - port.x) * u.x + (p.y - port.y) * u.y, off: Math.abs((p.x - port.x) * u.y - (p.y - port.y) * u.x) };
+}
+
+/**
+ * Where the run out of a port meets the first bend of a saved route, so the run follows its
+ * port. Two cases, both at least STUB_MM out along the run:
+ * - the next bend is level with the first (the first only marks the old turn off the run):
+ *   drop the first bend and stop the run level with the second;
+ * - the first bend is a corner whose next leg runs parallel to the run: stop the run level with it.
+ * Null in any other case (one bend, or a bend behind the port): the normal exit is used.
+ */
+function slideToBend(port: Point, dir: Dir, bends: Point[]): { exit: Point; drop: boolean } | null {
+  if (bends.length < 2) return null;
+  const u = UNIT[dir];
+  const at = (b: Point) => {
+    const t = onRay(port, dir, b).along;
+    return t >= STUB_MM ? { x: port.x + u.x * t, y: port.y + u.y * t } : null;
+  };
+  const [b0, b1] = bends;
+  const across = horizontal(dir) ? b0.x === b1.x : b0.y === b1.y; // b0 to b1 crosses the run
+  const along = horizontal(dir) ? b0.y === b1.y : b0.x === b1.x; // b0 to b1 runs beside it
+  if (across) {
+    const exit = at(b1);
+    return exit ? { exit, drop: true } : null;
+  }
+  if (along) {
+    const exit = at(b0);
+    return exit ? { exit, drop: false } : null;
+  }
+  return null;
+}
+
+/**
+ * Corners to save as bends after a drag: points on a port's run are left out (the run follows
+ * its port), except the corner where the wire turns off the run.
+ */
+export function stripPortRuns(corners: Point[], start: Point, sDir: Dir, end: Point, eDir: Dir): Point[] {
+  const ray = (port: Point, dir: Dir, p: Point) => {
+    const r = onRay(port, dir, p);
+    return r.off < 1e-6 && r.along > 0;
+  };
+  const out = [...corners];
+  while (out.length >= 2 && ray(start, sDir, out[0]) && ray(start, sDir, out[1])) out.shift();
+  while (out.length >= 2 && ray(end, eDir, out[out.length - 1]) && ray(end, eDir, out[out.length - 2])) out.pop();
+  return out;
 }
 
 export function withoutEnds(corners: Point[], ends: Point[]): Point[] {

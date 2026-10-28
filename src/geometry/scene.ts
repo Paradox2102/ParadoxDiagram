@@ -4,7 +4,7 @@ import type { Device, Doc, Point, PortRef, Wire } from '../model/types';
 import { autoRoute, exitPoint, type Box } from './autoroute';
 import { nudgeRoutes } from './nudge';
 import { offsetPolyline } from './offset';
-import { routeWire, stub } from './route';
+import { routeWire, stripPortRuns, stub } from './route';
 import { deviceBounds, portWorld, type Dir } from './transform';
 
 export const COLORS = {
@@ -99,6 +99,13 @@ export function wirePoints(doc: Doc, catalog: Catalog | null, w: Wire): Point[] 
     c.routes = new Map(doc.wires.map((x, i) => [x.id, lanes[i]]));
   }
   return c.routes.get(w.id) ?? null;
+}
+
+/** The corners of a dragged route that are worth saving as the wire's bends. */
+export function savedBends(doc: Doc, catalog: Catalog | null, w: Wire, corners: Point[]): Point[] {
+  const a = portPoint(doc, catalog, w.from);
+  const b = portPoint(doc, catalog, w.to);
+  return a && b ? stripPortRuns(corners, a.p, a.dir, b.p, b.dir) : corners;
 }
 
 /** Where each end's run out of its port stops, plus the plain 6 mm stubs: never saved as bends. */
