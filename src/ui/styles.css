@@ -31,7 +31,7 @@ h2 { font-family: var(--font-display); }
 
 /* Top bar */
 .bar {
-  grid-area: bar; display: flex; align-items: center; gap: 16px; padding: 8px 14px;
+  grid-area: bar; display: flex; flex-wrap: wrap; align-items: center; gap: 8px 16px; padding: 8px 14px;
   background: var(--ink); color: #e6ebf3; min-width: 0;
 }
 .brand { display: flex; align-items: center; gap: 9px; flex: none; }
@@ -56,7 +56,7 @@ h2 { font-family: var(--font-display); }
 .inspector .check input { width: auto; }
 .swatch { display: inline-flex; gap: 1px; }
 .swatch i { display: block; width: 4px; height: 12px; border-radius: 1px; }
-.actions { margin-left: auto; display: flex; align-items: center; gap: 6px; }
+.actions { margin-left: auto; display: flex; flex-wrap: wrap; justify-content: flex-end; align-items: center; gap: 6px; }
 .actions > button, .menu > button {
   border: 1px solid #3a4766; background: #1c2b4d; color: #e6ebf3; border-radius: var(--radius);
   padding: 4px 11px; cursor: pointer;
