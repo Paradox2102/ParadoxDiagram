@@ -192,6 +192,10 @@ export function Header(p: HeaderProps) {
               No credit is needed; please do not present the icons as your own.
             </p>
             <p>Your diagram is kept in this browser only. Export JSON to keep a copy.</p>
+            <p className="about-version">
+              Version {__APP_VERSION__} ·{' '}
+              <a href="https://github.com/Paradox2102/ParadoxDiagram" target="_blank" rel="noreferrer">Source on GitHub</a>
+            </p>
             <button type="button" onClick={() => setAbout(false)} autoFocus>Close</button>
           </div>
         </div>

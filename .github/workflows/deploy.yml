@@ -1,0 +1,52 @@
+# Deploy to Railway when a GitHub release is published. The release tag must be v<package.json version>, for
+# example v1.0.0. Railway has no deploy trigger on this service, so a push to main never deploys.
+#
+# Needs the GitHub environment "production" with the secret RAILWAY_TOKEN: a Railway project token for the
+# production environment (Railway project settings, Tokens).
+name: Deploy
+
+on:
+  release:
+    types: [published]
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: Release tag to deploy again (for example v1.0.0)
+        required: true
+
+permissions:
+  contents: read
+
+concurrency:
+  group: deploy-production
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: production
+      url: https://diagram.team2102.org
+    env:
+      TAG: ${{ github.event.release.tag_name || inputs.tag }}
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          ref: ${{ env.TAG }}
+      - uses: actions/setup-node@v5
+        with:
+          node-version: 24
+          cache: npm
+      - name: Tag matches package.json
+        run: |
+          want="v$(node -p "require('./package.json').version")"
+          if [ "$TAG" != "$want" ]; then
+            echo "::error::The tag $TAG does not match package.json ($want). Bump the version before the release."
+            exit 1
+          fi
+      - run: npm ci --no-audit --no-fund
+      - run: npm run check
+      - name: Deploy to Railway
+        env:
+          RAILWAY_TOKEN: ${{ secrets.RAILWAY_TOKEN }}
+        run: npx --yes @railway/cli@5.71.0 up --ci --service ParadoxDiagram --environment production
