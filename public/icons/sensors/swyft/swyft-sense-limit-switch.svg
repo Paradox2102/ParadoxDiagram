@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="-14 -5 76 70" width="76mm" height="70mm" font-family="Helvetica, Arial, sans-serif">
-<title>SWYFT Sense Magnetic Limit Switch</title>
+<title>SWYFT Sense Limit Switch</title>
 <desc>Drawn by FRC Team 2102 Paradox. Public domain: CC0 1.0 (https://creativecommons.org/publicdomain/zero/1.0/). https://docs.team2102.org/icons/</desc>
 <rect x="0" y="0" width="12" height="31" rx="0.8" fill="#e9ecef" stroke="#6e7781" stroke-width="0.4"/>
 <circle cx="6" cy="3.5" r="1.6" fill="#ffffff" stroke="#6e7781" stroke-width="0.3"/>
@@ -24,7 +24,7 @@
 <text x="24" y="43.2" font-size="1.9" fill="#57606a" text-anchor="middle">4th pin not documented</text>
 </g>
 <g class="caption">
-<text x="24" y="56" font-size="4" fill="#1f2328" text-anchor="middle" font-weight="bold">SWYFT Sense Magnetic Limit Switch</text>
+<text x="24" y="56" font-size="4" fill="#1f2328" text-anchor="middle" font-weight="bold">SWYFT Sense Limit Switch</text>
 <text x="24" y="60.2" font-size="2.3" fill="#57606a" text-anchor="middle">12 × 31 mm · connector face · JST PH 4-pin, leads drawn short</text>
 </g>
 <g id="anchors">

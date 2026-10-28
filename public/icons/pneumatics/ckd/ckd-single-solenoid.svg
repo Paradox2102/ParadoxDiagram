@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="-18 -6 98 68" width="98mm" height="68mm" font-family="Helvetica, Arial, sans-serif">
-<title>CKD 4GA110 Single Solenoid</title>
+<title>CKD Single Solenoid Valve</title>
 <desc>Drawn by FRC Team 2102 Paradox. Public domain: CC0 1.0 (https://creativecommons.org/publicdomain/zero/1.0/). https://docs.team2102.org/icons/</desc>
 <path d="M 19.1 5.3 L 61.3 5.3 L 72.0 11.9 L 72.6 11.9 L 72.6 29.7 L 19.1 29.7 Z" fill="#cdd2d7" stroke="#1f2328" stroke-width="0.35" stroke-linejoin="round" stroke-linecap="round"/>
 <rect x="1.3" y="0.5" width="17.8" height="29.2" rx="1.2" fill="#a9b3bb" stroke="#1f2328" stroke-width="0.35"/>
@@ -36,7 +36,7 @@
 <text x="-14.7" y="10.9" font-size="2.2" fill="#1f2328" text-anchor="start" font-weight="bold">SOL + / −</text>
 </g>
 <g class="caption">
-<text x="31" y="55" font-size="4" fill="#1f2328" text-anchor="middle" font-weight="bold">CKD 4GA110 Single Solenoid</text>
+<text x="31" y="55" font-size="4" fill="#1f2328" text-anchor="middle" font-weight="bold">CKD Single Solenoid Valve</text>
 <text x="31" y="59.2" font-size="2.3" fill="#57606a" text-anchor="middle">73.4 × 40.4 mm · side view · 12 in leads drawn short</text>
 </g>
 <g id="anchors">

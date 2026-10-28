@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="-18 -6 130.5 68" width="130.5mm" height="68mm" font-family="Helvetica, Arial, sans-serif">
-<title>CKD 4GA120 Double Solenoid</title>
+<title>CKD Double Solenoid Valve</title>
 <desc>Drawn by FRC Team 2102 Paradox. Public domain: CC0 1.0 (https://creativecommons.org/publicdomain/zero/1.0/). https://docs.team2102.org/icons/</desc>
 <rect x="19.1" y="3.5" width="56.288" height="26.2" rx="0" fill="#cdd2d7" stroke="#1f2328" stroke-width="0.35"/>
 <rect x="32" y="5.3" width="30.488" height="24.4" rx="0" fill="#cdd2d7" stroke="#1f2328" stroke-width="0.35"/>
@@ -52,7 +52,7 @@
 <text x="109.188" y="10.9" font-size="2.2" fill="#1f2328" text-anchor="end" font-weight="bold">SOL b</text>
 </g>
 <g class="caption">
-<text x="47.25" y="55" font-size="4" fill="#1f2328" text-anchor="middle" font-weight="bold">CKD 4GA120 Double Solenoid</text>
+<text x="47.25" y="55" font-size="4" fill="#1f2328" text-anchor="middle" font-weight="bold">CKD Double Solenoid Valve</text>
 <text x="47.25" y="59.2" font-size="2.3" fill="#57606a" text-anchor="middle">94.5 × 40.4 mm · side view · two 12 in leads drawn short</text>
 </g>
 <g id="anchors">

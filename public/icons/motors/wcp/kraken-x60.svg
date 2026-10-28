@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="-38.05 -36.05 76.1 105.45" width="76.1mm" height="105.45mm" font-family="Helvetica, Arial, sans-serif">
-<title>Kraken X60</title>
+<title>Kraken X60 (Talon FX)</title>
 <desc>Drawn by FRC Team 2102 Paradox. Public domain: CC0 1.0 (https://creativecommons.org/publicdomain/zero/1.0/). https://docs.team2102.org/icons/</desc>
 <path d="M -19.6 22.7 A 30.05 30.05 0 1 1 19.6 22.7 L 7.5 33.4 L -7.5 33.4 Z" fill="#3a3f47" stroke="#1f2328" stroke-width="0.5" stroke-linejoin="round" stroke-linecap="round"/>
 <path d="M -14.1995 -24.641 L 14.1995 -24.641" fill="none" stroke="#4a515b" stroke-width="0.9" stroke-linejoin="round" stroke-linecap="round"/>
@@ -34,7 +34,7 @@
 <text x="6.5" y="49" font-size="2.6" fill="#1f2328" text-anchor="middle" font-weight="bold">L</text>
 </g>
 <g class="caption">
-<text x="0" y="56.4" font-size="4" fill="#1f2328" text-anchor="middle" font-weight="bold">Kraken X60</text>
+<text x="0" y="56.4" font-size="4" fill="#1f2328" text-anchor="middle" font-weight="bold">Kraken X60 (Talon FX)</text>
 <text x="0" y="60.6" font-size="2.3" fill="#57606a" text-anchor="middle">60.1 × 63.5 mm · back view (Talon FX face) · leads drawn short</text>
 </g>
 <g id="anchors">

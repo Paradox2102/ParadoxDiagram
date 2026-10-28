@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="-8 -7 82 111" width="82mm" height="111mm" font-family="Helvetica, Arial, sans-serif">
-<title>Protooma 5 V 10 A Converter</title>
+<title>LED Brick (5V Step-Down)</title>
 <desc>Drawn by FRC Team 2102 Paradox. Public domain: CC0 1.0 (https://creativecommons.org/publicdomain/zero/1.0/). https://docs.team2102.org/icons/</desc>
 <path d="M 9.7 0 L 56.3 0 L 66 8.9 L 66 49.1 L 56.3 58 L 9.7 58 L 0 49.1 L 0 8.9 Z" fill="#c3cad2" stroke="#1f2328" stroke-width="0.5" stroke-linejoin="round" stroke-linecap="round"/>
 <path d="M 1 9.2 L 65 9.2" fill="none" stroke="#8c959f" stroke-width="0.5" stroke-linejoin="round" stroke-linecap="round"/>
@@ -42,7 +42,7 @@
 <text x="39.6" y="85.4" font-size="1.8" fill="#57606a" text-anchor="middle">12/24 V IN</text>
 </g>
 <g class="caption">
-<text x="33" y="96" font-size="4" fill="#1f2328" text-anchor="middle" font-weight="bold">Protooma 5 V 10 A Converter</text>
+<text x="33" y="96" font-size="4" fill="#1f2328" text-anchor="middle" font-weight="bold">LED Brick (5V Step-Down)</text>
 <text x="33" y="100.2" font-size="2.3" fill="#57606a" text-anchor="middle">66 × 58 mm · top view (fins) · leads drawn short</text>
 </g>
 <g id="anchors">

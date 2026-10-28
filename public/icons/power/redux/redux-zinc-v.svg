@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="-8 -7 82 45" width="82mm" height="45mm" font-family="Helvetica, Arial, sans-serif">
-<title>Redux Zinc-V+</title>
+<title>Zinc-V Buck Converter</title>
 <desc>Drawn by FRC Team 2102 Paradox. Public domain: CC0 1.0 (https://creativecommons.org/publicdomain/zero/1.0/). https://docs.team2102.org/icons/</desc>
 <rect x="0" y="0" width="65.5" height="22.6" rx="1.5" fill="#3a3f47" stroke="#1f2328" stroke-width="0.5"/>
 <circle cx="18.8" cy="11.3" r="2.55" fill="#ffffff" stroke="#1f2328" stroke-width="0.3"/>
@@ -18,7 +18,7 @@
 <rect x="63.4" y="8.4" width="1.2" height="5.8" rx="0.6" fill="#59636e"/>
 <text x="64" y="-1.8" font-size="1.9" fill="#1f2328" text-anchor="end">OUTPUT USB-C</text>
 <g class="caption">
-<text x="32.75" y="31.1" font-size="4" fill="#1f2328" text-anchor="middle" font-weight="bold">Redux Zinc-V+</text>
+<text x="32.75" y="31.1" font-size="4" fill="#1f2328" text-anchor="middle" font-weight="bold">Zinc-V Buck Converter</text>
 <text x="32.75" y="35.3" font-size="2.3" fill="#57606a" text-anchor="middle">65.5 × 22.6 mm · top view</text>
 </g>
 <g id="anchors">

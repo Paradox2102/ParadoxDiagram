@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="-33.81 -28 67.62 89.4" width="67.62mm" height="89.4mm" font-family="Helvetica, Arial, sans-serif">
-<title>Kraken X44</title>
+<title>Kraken X44 (Talon FX)</title>
 <desc>Drawn by FRC Team 2102 Paradox. Public domain: CC0 1.0 (https://creativecommons.org/publicdomain/zero/1.0/). https://docs.team2102.org/icons/</desc>
 <path d="M -15.6 15.6 A 22 22 0 1 1 15.6 15.6 L 5.5 25.4 L -5.5 25.4 Z" fill="#3a3f47" stroke="#1f2328" stroke-width="0.5" stroke-linejoin="round" stroke-linecap="round"/>
 <path d="M -9.592 -18.04 L 9.592 -18.04" fill="none" stroke="#4a515b" stroke-width="0.9" stroke-linejoin="round" stroke-linecap="round"/>
@@ -34,7 +34,7 @@
 <text x="6.4" y="41" font-size="2.6" fill="#1f2328" text-anchor="middle" font-weight="bold">L</text>
 </g>
 <g class="caption">
-<text x="0" y="48.4" font-size="4" fill="#1f2328" text-anchor="middle" font-weight="bold">Kraken X44</text>
+<text x="0" y="48.4" font-size="4" fill="#1f2328" text-anchor="middle" font-weight="bold">Kraken X44 (Talon FX)</text>
 <text x="0" y="52.6" font-size="2.3" fill="#57606a" text-anchor="middle">44.0 × 47.4 mm · back view (Talon FX face) · leads drawn short</text>
 </g>
 <g id="anchors">

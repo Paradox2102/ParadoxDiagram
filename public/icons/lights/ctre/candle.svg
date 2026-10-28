@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="-14 -6 98 86" width="98mm" height="86mm" font-family="Helvetica, Arial, sans-serif">
-<title>CTRE CANdle</title>
+<title>CANdle LED Controller</title>
 <desc>Drawn by FRC Team 2102 Paradox. Public domain: CC0 1.0 (https://creativecommons.org/publicdomain/zero/1.0/). https://docs.team2102.org/icons/</desc>
 <path d="M 2 0 L 66.58 0 Q 68.58 0 68.58 2 L 68.58 10.16 L 66.04 10.16 A 2.54 2.54 0 0 0 66.04 15.24 L 68.58 15.24 L 68.58 23.4 Q 68.58 25.4 66.58 25.4 L 2 25.4 Q 0 25.4 0 23.4 L 0 15.24 L 2.54 15.24 A 2.54 2.54 0 0 0 2.54 10.16 L 0 10.16 L 0 2 Q 0 0 2 0 Z" fill="#22272e" stroke="#1f2328" stroke-width="0.5" stroke-linejoin="round" stroke-linecap="round"/>
 <rect x="7.11" y="0.3" width="54.36" height="24.8" rx="2.2" fill="#c9d1d9" stroke="#1f2328" stroke-width="0.3"/>
@@ -67,7 +67,7 @@
 <text x="2.5" y="58.6" font-size="1.9" fill="#1f2328" text-anchor="middle">OUTPUTS (to LED strip)</text>
 </g>
 <g class="caption">
-<text x="36.29" y="70.4" font-size="4" fill="#1f2328" text-anchor="middle" font-weight="bold">CTRE CANdle</text>
+<text x="36.29" y="70.4" font-size="4" fill="#1f2328" text-anchor="middle" font-weight="bold">CANdle LED Controller</text>
 <text x="36.29" y="74.6" font-size="2.3" fill="#57606a" text-anchor="middle">68.6 × 25.4 mm · top view (LED face) · leads exit the back</text>
 </g>
 <g id="anchors">

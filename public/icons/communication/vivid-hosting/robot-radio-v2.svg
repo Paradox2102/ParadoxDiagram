@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="-8 -6 135.1 73.3" width="135.1mm" height="73.3mm" font-family="Helvetica, Arial, sans-serif">
-<title>Vivid Robot Radio V2</title>
+<title>Vivid-Hosting Robot Radio V2</title>
 <desc>Drawn by FRC Team 2102 Paradox. Public domain: CC0 1.0 (https://creativecommons.org/publicdomain/zero/1.0/). https://docs.team2102.org/icons/</desc>
 <rect x="0" y="0" width="119.1" height="52.1" rx="3" fill="#3a3f47" stroke="#1f2328" stroke-width="0.5"/>
 <rect x="16.5" y="0" width="7" height="2.5" rx="0.4" fill="#1f2328"/>
@@ -44,7 +44,7 @@
 <text x="110.1" y="37.9" font-size="2.6" fill="#f0f3f6" text-anchor="end" font-weight="bold">AUX2</text>
 <text x="110.1" y="41.1" font-size="1.7" fill="#aab2bd" text-anchor="end">1 Gb · 802.3at out</text>
 <g class="caption">
-<text x="59.55" y="61.1" font-size="4" fill="#1f2328" text-anchor="middle" font-weight="bold">Vivid Robot Radio V2</text>
+<text x="59.55" y="61.1" font-size="4" fill="#1f2328" text-anchor="middle" font-weight="bold">Vivid-Hosting Robot Radio V2</text>
 <text x="59.55" y="65.3" font-size="2.3" fill="#57606a" text-anchor="middle">119.1 × 52.1 mm · top view · Ethernet on both ends · positions from photos</text>
 </g>
 <g id="anchors">

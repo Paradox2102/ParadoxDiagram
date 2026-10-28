@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="-26 -6 124 53.7" width="124mm" height="53.7mm" font-family="Helvetica, Arial, sans-serif">
-<title>AndyMark Koors40 (CAN)</title>
+<title>Koors40 Controller (CAN)</title>
 <desc>Drawn by FRC Team 2102 Paradox. Public domain: CC0 1.0 (https://creativecommons.org/publicdomain/zero/1.0/). https://docs.team2102.org/icons/</desc>
 <rect x="57" y="16.8" width="11" height="5.4" rx="2.7" fill="#24272c" stroke="#1f2328" stroke-width="0.4"/>
 <circle cx="65.2" cy="19.5" r="1.4" fill="#ffffff" stroke="#1f2328" stroke-width="0.2"/>
@@ -40,7 +40,7 @@
 <text x="77.2" y="25.3" font-size="2.2" fill="#1f2328" text-anchor="start" font-weight="bold">V+</text>
 </g>
 <g class="caption">
-<text x="34" y="42" font-size="4" fill="#1f2328" text-anchor="middle" font-weight="bold">AndyMark Koors40 (CAN)</text>
+<text x="34" y="42" font-size="4" fill="#1f2328" text-anchor="middle" font-weight="bold">Koors40 Controller (CAN)</text>
 <text x="34" y="46.2" font-size="2.3" fill="#57606a" text-anchor="middle">≈60 × 30 mm (est.) · top view · leads drawn short (bare ends)</text>
 </g>
 <g id="anchors">

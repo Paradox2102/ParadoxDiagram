@@ -1,5 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="-46 -35 79.51 81.2" width="79.51mm" height="81.2mm" font-family="Helvetica, Arial, sans-serif">
-<title>goBILDA 6V Servo Power Injector</title>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-46 -35 76.81 81.2" width="76.81mm" height="81.2mm" font-family="Helvetica, Arial, sans-serif">
+<title>Servo Power Injector</title>
 <desc>Drawn by FRC Team 2102 Paradox. Public domain: CC0 1.0 (https://creativecommons.org/publicdomain/zero/1.0/). https://docs.team2102.org/icons/</desc>
 <path d="M -17.4 -20 L 17.4 -20 L 20 -17.4 L 20 17.4 L 17.4 20 L -17.4 20 L -20 17.4 L -20 -17.4 Z" fill="#2b3036" stroke="#1f2328" stroke-width="0.4" stroke-linejoin="round" stroke-linecap="round"/>
 <rect x="-14" y="-21.3" width="28" height="42.6" rx="3" fill="#3a3f47" stroke="#1f2328" stroke-width="0.4"/>
@@ -128,7 +128,7 @@
 <text x="-12.5" y="32.9" font-size="2" fill="#57606a" text-anchor="end">PWM in</text>
 </g>
 <g class="caption">
-<text x="0" y="40.5" font-size="4" fill="#1f2328" text-anchor="middle" font-weight="bold">goBILDA 6V Servo Power Injector</text>
+<text x="0" y="40.5" font-size="4" fill="#1f2328" text-anchor="middle" font-weight="bold">Servo Power Injector</text>
 <text x="0" y="44.7" font-size="2.3" fill="#57606a" text-anchor="middle">40 × 42.5 mm · top view · 32 mm hole pattern, 6 channels</text>
 </g>
 <g id="anchors">

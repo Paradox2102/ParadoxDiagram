@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="-5 -4 74 62" width="74mm" height="62mm" font-family="Helvetica, Arial, sans-serif">
-<title>Redux Canandcolor</title>
+<title>Canandcolor Color Sensor</title>
 <desc>Drawn by FRC Team 2102 Paradox. Public domain: CC0 1.0 (https://creativecommons.org/publicdomain/zero/1.0/). https://docs.team2102.org/icons/</desc>
 <rect x="0" y="0" width="26" height="38" rx="2.2" fill="#f4f6f8" stroke="#1f2328" stroke-width="0.5"/>
 <rect x="0" y="3.8" width="2.1" height="5" rx="0.3" fill="#dde2e7"/>
@@ -80,7 +80,7 @@
 <text x="49.6" y="35.75" font-size="2" fill="#1f2328" text-anchor="start" font-weight="bold">PWR 4.5–18 V</text>
 </g>
 <g class="caption">
-<text x="32" y="46.5" font-size="4" fill="#1f2328" text-anchor="middle" font-weight="bold">Redux Canandcolor</text>
+<text x="32" y="46.5" font-size="4" fill="#1f2328" text-anchor="middle" font-weight="bold">Canandcolor Color Sensor</text>
 <text x="32" y="50.7" font-size="2.3" fill="#57606a" text-anchor="middle">26.0 × 38.0 mm · top view (sensor face) · cable drawn short</text>
 </g>
 <g id="anchors">

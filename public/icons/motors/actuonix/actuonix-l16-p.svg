@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="-12 -30 254 61" width="254mm" height="61mm" font-family="Helvetica, Arial, sans-serif">
-<title>Actuonix L16-P</title>
+<title>Actuonix L16-P Linear Actuator</title>
 <desc>Drawn by FRC Team 2102 Paradox. Public domain: CC0 1.0 (https://creativecommons.org/publicdomain/zero/1.0/). https://docs.team2102.org/icons/</desc>
 <rect x="5.1" y="-6" width="105.3" height="12" rx="0.8" fill="#d0d7de" stroke="#1f2328" stroke-width="0.5"/>
 <rect x="5.1" y="-6" width="2.4" height="12" rx="0.8" fill="#8c959f" stroke="#1f2328" stroke-width="0.3"/>
@@ -46,7 +46,7 @@
 <text x="212.6" y="-10.12" font-size="1.9" fill="#1f2328" text-anchor="start" font-weight="bold">5 yellow: pot +</text>
 </g>
 <g class="caption">
-<text x="110" y="24" font-size="4" fill="#1f2328" text-anchor="middle" font-weight="bold">Actuonix L16-P</text>
+<text x="110" y="24" font-size="4" fill="#1f2328" text-anchor="middle" font-weight="bold">Actuonix L16-P Linear Actuator</text>
 <text x="110" y="28.2" font-size="2.3" fill="#57606a" text-anchor="middle">20 × 177 mm · side view · 100 mm stroke, 63:1, 12 V · lead drawn short</text>
 </g>
 <g id="anchors">
