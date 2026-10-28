@@ -183,9 +183,9 @@ h2 { font-family: var(--font-display); }
 
 /* Wire end sides */
 .side-row { display: flex; align-items: center; gap: 3px; margin: 0 0 6px; font-size: 13px; color: var(--muted); }
-.side-row span { width: 82px; white-space: nowrap; }
+.side-row span { flex: 1 1 auto; min-width: 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 .side-row button {
-  min-width: 30px; height: 26px; border: 1px solid var(--line); background: var(--bg); border-radius: 5px; cursor: pointer; color: var(--ink);
-  font-size: 13px; padding: 0 6px;
+  flex: none; min-width: 26px; height: 26px; border: 1px solid var(--line); background: var(--bg); border-radius: 5px; cursor: pointer;
+  color: var(--ink); font-size: 13px; padding: 0 5px;
 }
 .side-row button[aria-pressed="true"] { background: var(--ink); border-color: var(--ink); color: #fff; }
