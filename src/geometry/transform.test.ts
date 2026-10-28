@@ -1,5 +1,5 @@
 import { catalog } from '../test/fixtures';
-import { deviceBounds, portWorld } from './transform';
+import { deviceBounds, portSides, portWorld, SIDE_PENALTY_MM } from './transform';
 import type { Device } from '../model/types';
 
 const pdh = catalog.bySlug.get('rev-pdh')!;
@@ -28,4 +28,11 @@ test('bounds swap width and height at 90 degrees about the centre', () => {
   expect(b.h).toBeCloseTo(131);
   expect(b.x + b.w / 2).toBeCloseTo(65.5);
   expect(b.y + b.h / 2).toBeCloseTo(117.75);
+});
+
+test('a port may leave from each side in the near half of the drawing; the nearest side is free', () => {
+  const tb = catalog.bySlug.get('wcp-throughbore')!;
+  const pwr = tb.anchors.find((a) => a.port === 'pwr')!;
+  expect(portSides(tb, pwr)).toEqual([{ dir: 'left', penalty: 0 }, { dir: 'down', penalty: SIDE_PENALTY_MM }]);
+  expect(portSides(pdh, ch9)).toEqual([{ dir: 'right', penalty: 0 }]);
 });

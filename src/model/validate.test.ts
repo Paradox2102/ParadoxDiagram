@@ -45,3 +45,9 @@ test('label settings survive a file round trip and default to shown', () => {
   expect(doc.devices.map((d) => d.hideTag ?? false)).toEqual([true, false]);
   expect(validateDoc(base, catalog).doc.hideTags ?? false).toBe(false);
 });
+
+test('wire end sides survive a file round trip; a bad side is dropped', () => {
+  const ok = { ...base, wires: [{ ...base.wires[0], to: { device: 'd1', port: 'ch5' }, fromSide: 'up', toSide: 'sideways' }] };
+  const w = validateDoc(ok, catalog).doc.wires[0];
+  expect([w.fromSide, w.toSide]).toEqual(['up', undefined]);
+});

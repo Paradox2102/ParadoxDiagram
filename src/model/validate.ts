@@ -1,6 +1,6 @@
 // Checks a document read from a file or from browser storage.
 import { findAnchor, layerOfKind, LAYERS, type Catalog, type Layer } from '../catalog/catalog';
-import type { Device, Doc, Point, PortRef, Rot, Wire } from './types';
+import { SIDES, type Device, type Doc, type Point, type PortRef, type Rot, type Side, type Wire } from './types';
 
 const str = (v: unknown, dflt = '') => (typeof v === 'string' ? v : dflt);
 const num = (v: unknown) => (typeof v === 'number' && Number.isFinite(v) ? v : 0);
@@ -57,10 +57,13 @@ export function validateDoc(raw: unknown, catalog: Catalog | null): { doc: Doc; 
     const bends = Array.isArray(w.bends)
       ? (w.bends as Point[]).map((p) => ({ x: num(p?.x), y: num(p?.y) }))
       : [];
-    wires.push({
+    const wire: Wire = {
       id, layer, from: { device: from.device, port: str(from.port) }, to: { device: to.device, port: str(to.port) },
       bends, note: str(w.note),
-    });
+    };
+    if (SIDES.includes(w.fromSide as Side)) wire.fromSide = w.fromSide as Side;
+    if (SIDES.includes(w.toSide as Side)) wire.toSide = w.toSide as Side;
+    wires.push(wire);
   }
 
   const doc: Doc = { format: 'paradox-diagram', version: 1, title: str(r.title, 'Untitled diagram'), devices, wires };

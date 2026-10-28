@@ -41,7 +41,7 @@ test('Reset route clears the bends of the selected wire', async () => {
   render(<Inspector doc={doc()} catalog={catalog} selection={['w1']} dispatch={dispatch} />);
   expect(screen.getByRole('heading', { name: 'Power wire' })).toBeInTheDocument();
   await userEvent.click(screen.getByRole('button', { name: 'Reset route' }));
-  expect(dispatch).toHaveBeenCalledWith({ type: 'setBends', id: 'w1', bends: [] });
+  expect(dispatch).toHaveBeenCalledWith({ type: 'resetRoute', id: 'w1' });
 });
 
 test('Delete removes the whole selection', async () => {
@@ -101,4 +101,12 @@ describe('several devices selected', () => {
     render(<Inspector doc={doc()} catalog={catalog} selection={['d1', 'd2']} dispatch={() => {}} />);
     expect(screen.getByRole('button', { name: 'Space evenly across' })).toBeDisabled();
   });
+});
+
+test('each wire end can be set to leave by a side, or back to Auto', async () => {
+  const dispatch = vi.fn();
+  render(<Inspector doc={doc()} catalog={catalog} selection={['w1']} dispatch={dispatch} />);
+  await userEvent.click(screen.getByRole('button', { name: 'From end leaves down' }));
+  expect(dispatch).toHaveBeenCalledWith({ type: 'setWireSide', id: 'w1', end: 'from', side: 'down' });
+  expect(screen.getByRole('button', { name: 'To end leaves automatically' })).toHaveAttribute('aria-pressed', 'true');
 });

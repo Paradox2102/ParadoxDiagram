@@ -5,7 +5,7 @@ import { canConnect, iconFrame, iconLayers, layerOfKind, type Anchor, type Ancho
 import { contentBox } from '../export/svg';
 import { snapMove, unionBox, type Box, type Guide } from '../geometry/align';
 import { dragSegment } from '../geometry/route';
-import { boundsOf, iconOf, KIND_COLOR, renderWirePaths, savedBends, wirePoints } from '../geometry/scene';
+import { boundsOf, iconOf, KIND_COLOR, renderWirePaths, routeSides, savedBends, wirePoints } from '../geometry/scene';
 import { portWorld } from '../geometry/transform';
 import { apply } from '../model/actions';
 import { nextId } from '../model/ids';
@@ -270,7 +270,7 @@ export function Canvas({ doc, catalog, layer, selection, setSelection, hist, api
         const at = a.y === b.y ? { x: Math.round(w.x), y: a.y } : { x: a.x, y: Math.round(w.y) };
         const corners = path.slice(1, -1);
         corners.splice(index, 0, at);
-        hist.change({ type: 'setBends', id: wireId, bends: savedBends(doc, catalog, wire, corners) });
+        hist.change({ type: 'setBends', id: wireId, bends: savedBends(doc, catalog, wire, corners, path), sides: routeSides(path) });
         return;
       }
       setMode({ kind: 'segment', base: hist.begin(), wireId, index, path, start: w, magnets: wireMagnets(wireId) });
@@ -345,8 +345,9 @@ export function Canvas({ doc, catalog, layer, selection, setSelection, hist, api
         const c0 = a[axis];
         const c1 = magnet(c0 + (w[axis] - m.start[axis]), axis, m.magnets);
         const wire = m.base.wires.find((x) => x.id === m.wireId)!;
-        const bends = savedBends(m.base, catalog, wire, dragSegment(m.path, m.index, c1 - c0));
-        hist.preview(apply(m.base, { type: 'setBends', id: m.wireId, bends }));
+        // the sides the route used are kept, so the wire does not jump to another side
+        const bends = savedBends(m.base, catalog, wire, dragSegment(m.path, m.index, c1 - c0), m.path);
+        hist.preview(apply(m.base, { type: 'setBends', id: m.wireId, bends, sides: routeSides(m.path) }));
         return;
       }
       case 'bend': {

@@ -4,7 +4,7 @@ import type { Catalog } from '../catalog/catalog';
 import type { Action } from '../model/actions';
 import { deviceTag } from '../model/tags';
 import { Arrange } from './Arrange';
-import type { Device, Doc, PortRef, Wire } from '../model/types';
+import type { Device, Doc, PortRef, Side, Wire } from '../model/types';
 
 interface Props {
   doc: Doc;
@@ -125,6 +125,34 @@ function endName(doc: Doc, catalog: Catalog | null, ref: PortRef): string {
   return `${deviceTag(doc, d.id, catalog).name} · ${ref.port}`;
 }
 
+const SIDE_BUTTONS: { side: Side | null; label: string; text: string }[] = [
+  { side: null, label: 'automatically', text: 'Auto' },
+  { side: 'left', label: 'left', text: '←' },
+  { side: 'right', label: 'right', text: '→' },
+  { side: 'up', label: 'up', text: '↑' },
+  { side: 'down', label: 'down', text: '↓' },
+];
+
+/** Which side one end of a wire leaves its port by: automatic, or a side the user picks. */
+function SidePicker({ wire, end, dispatch }: { wire: Wire; end: 'from' | 'to'; dispatch: Props['dispatch'] }) {
+  const current = (end === 'from' ? wire.fromSide : wire.toSide) ?? null;
+  const name = end === 'from' ? 'From' : 'To';
+  return (
+    <div className="side-row" role="group" aria-label={`${name} end leaves`}>
+      <span>{name} leaves</span>
+      {SIDE_BUTTONS.map((b) => (
+        <button
+          key={b.text} type="button" aria-pressed={current === b.side} aria-label={`${name} end leaves ${b.label}`}
+          title={b.side ? `Leave the port going ${b.label}` : 'Pick the side that gives the best route'}
+          onClick={() => dispatch({ type: 'setWireSide', id: wire.id, end, side: b.side })}
+        >
+          {b.text}
+        </button>
+      ))}
+    </div>
+  );
+}
+
 function WireForm({ doc, catalog, wire, dispatch }: { doc: Doc; catalog: Catalog | null; wire: Wire; dispatch: Props['dispatch'] }) {
   return (
     <>
@@ -137,9 +165,13 @@ function WireForm({ doc, catalog, wire, dispatch }: { doc: Doc; catalog: Catalog
         <dt>Bends</dt>
         <dd>{wire.bends.length}</dd>
       </dl>
+      <SidePicker wire={wire} end="from" dispatch={dispatch} />
+      <SidePicker wire={wire} end="to" dispatch={dispatch} />
       <Field label="Note" value={wire.note} multiline onCommit={(v) => dispatch({ type: 'updateWire', id: wire.id, patch: { note: v } })} />
       <div className="row">
-        <button type="button" onClick={() => dispatch({ type: 'setBends', id: wire.id, bends: [] })}>Reset route</button>
+        <button type="button" onClick={() => dispatch({ type: 'resetRoute', id: wire.id })} title="Remove the bends and set both ends to Auto">
+          Reset route
+        </button>
         <button type="button" className="danger" onClick={() => dispatch({ type: 'delete', ids: [wire.id] })}>Delete</button>
       </div>
     </>

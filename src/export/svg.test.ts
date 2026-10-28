@@ -4,7 +4,7 @@ import { exportSvg, renderWirePaths, stripAnchors } from './svg';
 import { apply } from '../model/actions';
 import { emptyDoc, type Doc } from '../model/types';
 import { catalog } from '../test/fixtures';
-import { keepOutBox, wirePoints } from '../geometry/scene';
+import { keepOutBox, routeSides, wirePoints } from '../geometry/scene';
 
 const wirePointsOf = (d: Doc) => wirePoints(d, catalog, d.wires[0])!;
 
@@ -121,4 +121,15 @@ test('two wires sharing a run are drawn in separate lanes', () => {
   const b = vx(wirePoints(d, catalog, d.wires[1])!);
   expect(a.length && b.length).toBeTruthy();
   expect(a.some((x) => b.includes(x))).toBe(false);
+});
+
+test('a wire end set to leave upward leaves upward', () => {
+  let d = apply(emptyDoc(), { type: 'addDevice', slug: 'rev-pdh', name: '', x: 0, y: 0 });
+  d = apply(d, { type: 'addDevice', slug: 'kraken-x60', name: '', x: 300, y: 300 });
+  d = apply(d, { type: 'addWire', layer: 'power', from: { device: 'd2', port: 'vbat_pos' }, to: { device: 'd1', port: 'ch4' } });
+  d = apply(d, { type: 'setWireSide', id: 'w1', end: 'from', side: 'up' });
+  const p = wirePoints(d, catalog, d.wires[0])!;
+  expect(p[1].x).toBe(p[0].x);
+  expect(p[1].y).toBeLessThan(p[0].y);
+  expect(routeSides(p)).toEqual({ from: 'up', to: 'right' });
 });

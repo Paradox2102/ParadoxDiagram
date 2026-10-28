@@ -34,10 +34,38 @@ export function localDir(icon: Icon, a: Anchor): Dir {
   return gaps.reduce((best, g) => (g[1] < best[1] ? g : best))[0];
 }
 
+/** Extra cost (mm) for leaving a port by a side other than the nearest one. */
+export const SIDE_PENALTY_MM = 15;
+
+/**
+ * The sides a port may leave by, in the icon's own frame: the nearest side (free), and any side
+ * at most twice as far, or 10 mm further, at SIDE_PENALTY_MM. Farther sides would cross the body.
+ */
+export function portSides(icon: Icon, a: Anchor): { dir: Dir; penalty: number }[] {
+  const [vx, vy, w, h] = iconFrame(icon);
+  const gaps: [Dir, number][] = [
+    ['left', a.x - vx], ['right', vx + w - a.x], ['up', a.y - vy], ['down', vy + h - a.y],
+  ];
+  gaps.sort((p, q) => p[1] - q[1]);
+  const near = gaps[0][1];
+  return gaps
+    .filter(([, g], i) => i === 0 || g <= Math.max(2 * near, near + 10))
+    .map(([dir], i) => ({ dir, penalty: i === 0 ? 0 : SIDE_PENALTY_MM }));
+}
+
+/** A port's sides after the device's rotation. */
+export function portSidesWorld(d: Device, icon: Icon, a: Anchor): { dir: Dir; penalty: number }[] {
+  return portSides(icon, a).map((s) => ({ ...s, dir: turn(s.dir, d.rot) }));
+}
+
+const turn = (dir: Dir, rot: number): Dir => {
+  let out = dir;
+  for (let r = 0; r < rot; r += 90) out = TURN[out];
+  return out;
+};
+
 export function portWorld(d: Device, icon: Icon, a: Anchor): { p: Point; dir: Dir } {
-  let dir = localDir(icon, a);
-  for (let r = 0; r < d.rot; r += 90) dir = TURN[dir];
-  return { p: toWorld(d, icon, a), dir };
+  return { p: toWorld(d, icon, a), dir: turn(localDir(icon, a), d.rot) };
 }
 
 export function deviceBounds(d: Device, icon: Icon): { x: number; y: number; w: number; h: number } {

@@ -72,3 +72,13 @@ test('moveEach moves each device by its own exact amount in one step', () => {
   const d = apply(withTwo(), { type: 'moveEach', moves: [{ id: 'd1', dx: 1.25, dy: 0 }, { id: 'd2', dx: 0, dy: -3.5 }] });
   expect(d.devices.map((x) => [x.x, x.y])).toEqual([[1.25, 0], [200, -3.5]]);
 });
+
+test('a wire end side is set, kept with bends, and cleared by a route reset', () => {
+  let d = apply(withTwo(), { type: 'addWire', layer: 'power', from: { device: 'd1', port: 'ch4' }, to: { device: 'd2', port: 'power' } });
+  d = apply(d, { type: 'setWireSide', id: 'w1', end: 'to', side: 'down' });
+  expect(d.wires[0].toSide).toBe('down');
+  d = apply(d, { type: 'setBends', id: 'w1', bends: [{ x: 1, y: 2 }], sides: { from: 'right', to: 'left' } });
+  expect([d.wires[0].fromSide, d.wires[0].toSide]).toEqual(['right', 'left']);
+  d = apply(d, { type: 'resetRoute', id: 'w1' });
+  expect([d.wires[0].bends, d.wires[0].fromSide, d.wires[0].toSide]).toEqual([[], undefined, undefined]);
+});

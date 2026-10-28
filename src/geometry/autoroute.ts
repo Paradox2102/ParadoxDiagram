@@ -86,6 +86,12 @@ class Heap {
   }
 }
 
+export interface SideChoice {
+  dir: Dir;
+  /** Extra cost (mm) for leaving by this side. */
+  penalty: number;
+}
+
 /**
  * Route from a port to a port around the boxes. `startBox` and `endBox` are the devices the
  * ports belong to (they are also in `boxes`). Returns null when no path exists.
@@ -93,14 +99,29 @@ class Heap {
 export function autoRoute(
   start: Point, sDir: Dir, end: Point, eDir: Dir, boxes: Box[], startBox: Box | null, endBox: Box | null,
 ): Point[] | null {
-  const s1 = roundPoint(exitPoint(start, sDir, startBox));
-  const e1 = roundPoint(exitPoint(end, eDir, endBox));
+  return autoRouteSides(start, [{ dir: sDir, penalty: 0 }], end, [{ dir: eDir, penalty: 0 }], boxes, startBox, endBox);
+}
+
+/** As autoRoute, with a choice of sides at each end: the cheapest route wins. */
+export function autoRouteSides(
+  start: Point, sSides: SideChoice[], end: Point, eSides: SideChoice[], boxes: Box[], startBox: Box | null, endBox: Box | null,
+): Point[] | null {
+  const run = (port: Point, p: Point) => Math.abs(p.x - port.x) + Math.abs(p.y - port.y);
+  const starts = sSides.map((c) => {
+    const p = roundPoint(exitPoint(start, c.dir, startBox));
+    return { ...c, p, cost: run(start, p) + c.penalty };
+  });
+  const ends = eSides.map((c) => {
+    const p = roundPoint(exitPoint(end, c.dir, endBox));
+    return { ...c, p, cost: run(end, p) + c.penalty };
+  });
+  const exits = [...starts, ...ends].map((c) => c.p);
   // A box that holds an exit point (devices that overlap) cannot be routed around: leave it out.
-  const obstacles = boxes.map((b) => roundBox(grow(b, MARGIN_MM))).filter((b) => !inside(s1, b) && !inside(e1, b));
+  const obstacles = boxes.map((b) => roundBox(grow(b, MARGIN_MM))).filter((b) => !exits.some((e) => inside(e, b)));
 
   const uniq = (v: number[]) => [...new Set(v.map(r3))].sort((a, b) => a - b);
-  const xs = uniq([s1.x, e1.x, ...obstacles.flatMap((b) => [b.x, b.x + b.w])]);
-  const ys = uniq([s1.y, e1.y, ...obstacles.flatMap((b) => [b.y, b.y + b.h])]);
+  const xs = uniq([...exits.map((e) => e.x), ...obstacles.flatMap((b) => [b.x, b.x + b.w])]);
+  const ys = uniq([...exits.map((e) => e.y), ...obstacles.flatMap((b) => [b.y, b.y + b.h])]);
   const nx = xs.length;
   const ny = ys.length;
   const node = (i: number, j: number) => j * nx + i;
@@ -120,38 +141,48 @@ export function autoRoute(
       }
     }
   }
+  const nodeOf = (p: Point) => node(xs.indexOf(p.x), ys.indexOf(p.y));
 
-  const si = xs.indexOf(s1.x);
-  const sj = ys.indexOf(s1.y);
-  const ei = xs.indexOf(e1.x);
-  const ej = ys.indexOf(e1.y);
-  const goal = node(ei, ej);
-  if (nodeBlocked[node(si, sj)] || nodeBlocked[goal]) return null;
-
-  // Search states are (node, direction of travel into the node).
+  // Search states are (node, direction of travel into the node), from every start side at once.
   const best = new Float64Array(nx * ny * 4).fill(Infinity);
   const prev = new Int32Array(nx * ny * 4).fill(-1);
   const heap = new Heap();
-  const h = (n: number) => Math.abs(xs[n % nx] - e1.x) + Math.abs(ys[Math.floor(n / nx)] - e1.y);
-  const startState = node(si, sj) * 4 + DIRS.indexOf(sDir);
-  best[startState] = 0;
-  heap.push(h(node(si, sj)), startState);
-  const finalDir = DIRS.indexOf(REVERSE[eDir]);
-  let found = -1;
+  const goals = new Map<number, typeof ends>();
+  for (const e of ends) {
+    const n = nodeOf(e.p);
+    if (!nodeBlocked[n]) goals.set(n, [...(goals.get(n) ?? []), e]);
+  }
+  if (!goals.size) return null;
+  const h = (n: number) => {
+    let m = Infinity;
+    for (const e of ends) m = Math.min(m, Math.abs(xs[n % nx] - e.p.x) + Math.abs(ys[Math.floor(n / nx)] - e.p.y));
+    return m;
+  };
+  for (const c of starts) {
+    const n = nodeOf(c.p);
+    if (nodeBlocked[n]) continue;
+    const st = n * 4 + DIRS.indexOf(c.dir);
+    if (c.cost < best[st]) {
+      best[st] = c.cost;
+      heap.push(c.cost + h(n), st);
+    }
+  }
 
+  let found = -1;
+  let foundCost = Infinity;
   while (heap.size) {
-    const [, state] = heap.pop();
+    const [f, state] = heap.pop();
+    if (f >= foundCost) break; // nothing left can beat the route found
     const n = state >> 2;
     const d = state & 3;
     const cost = best[state];
-    if (n === goal) {
+    for (const e of goals.get(n) ?? []) {
       // the last run goes into the end port; arriving another way costs one more turn
-      const total = cost + (d === finalDir ? 0 : d === DIRS.indexOf(eDir) ? Infinity : TURN_COST);
-      if (total < Infinity) {
+      const extra = d === DIRS.indexOf(REVERSE[e.dir]) ? 0 : d === DIRS.indexOf(e.dir) ? Infinity : TURN_COST;
+      if (cost + extra + e.cost < foundCost) {
+        foundCost = cost + extra + e.cost;
         found = state;
-        break;
       }
-      continue;
     }
     const i = n % nx;
     const j = Math.floor(n / nx);

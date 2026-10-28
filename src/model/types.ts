@@ -2,6 +2,10 @@ import type { Layer } from '../catalog/catalog';
 
 export type Rot = 0 | 90 | 180 | 270;
 
+/** A direction on the page: the side a wire leaves its port by. */
+export type Side = 'up' | 'down' | 'left' | 'right';
+export const SIDES: Side[] = ['left', 'right', 'up', 'down'];
+
 export interface Point {
   x: number;
   y: number;
@@ -32,6 +36,9 @@ export interface Wire {
   to: PortRef;
   bends: Point[];
   note: string;
+  /** The side each end leaves its port by, when the user chose it (else automatic). */
+  fromSide?: Side;
+  toSide?: Side;
 }
 
 export interface Doc {

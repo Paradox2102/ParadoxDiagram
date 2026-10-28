@@ -1,4 +1,4 @@
-import { autoRoute, type Box } from './autoroute';
+import { autoRoute, autoRouteSides, type Box } from './autoroute';
 import type { Point } from '../model/types';
 
 const MARGIN = 4;
@@ -77,4 +77,21 @@ test('an exit point on its own box edge still routes when the numbers carry roun
   const target: Box = { x: 437.588, y: 2.069, w: 80, h: 114.8 };
   const path = autoRoute({ x: 155.88, y: 16.716 }, 'up', { x: 457.068, y: 75.689 }, 'left', [own, target], own, target);
   expect(path).not.toBeNull();
+});
+
+test('with a choice of sides, a port leaves by the side that makes the shorter route', () => {
+  const dev: Box = { x: 0, y: 0, w: 60, h: 100 };
+  // port near the bottom-left corner: left is the guess, down costs 15 mm more
+  const path = autoRouteSides({ x: 11, y: 88 }, [{ dir: 'left', penalty: 0 }, { dir: 'down', penalty: 15 }],
+    { x: 11, y: 300 }, [{ dir: 'up', penalty: 0 }], [dev], dev, null)!;
+  expect(path[1].x).toBe(11); // runs straight down
+  expect(path).toHaveLength(2);
+});
+
+test('the guessed side wins when the other side saves less than its extra cost', () => {
+  const dev: Box = { x: 0, y: 0, w: 60, h: 100 };
+  const path = autoRouteSides({ x: 11, y: 88 }, [{ dir: 'left', penalty: 0 }, { dir: 'down', penalty: 15 }],
+    { x: -200, y: 88 }, [{ dir: 'right', penalty: 0 }], [dev], dev, null)!;
+  expect(path[1].y).toBe(88);
+  expect(path[1].x).toBeLessThan(11);
 });

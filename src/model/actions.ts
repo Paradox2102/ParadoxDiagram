@@ -1,7 +1,7 @@
 // Every edit to a document goes through apply(). Documents are never changed in place.
 import type { Layer } from '../catalog/catalog';
 import { nextId } from './ids';
-import { GRID_MM, type Device, type Doc, type Point, type PortRef, type Rot, type Wire } from './types';
+import { GRID_MM, type Device, type Doc, type Point, type PortRef, type Rot, type Side, type Wire } from './types';
 
 export type Action =
   | { type: 'addDevice'; slug: string; name: string; x: number; y: number }
@@ -9,7 +9,9 @@ export type Action =
   | { type: 'rotateDevices'; ids: string[] }
   | { type: 'updateDevice'; id: string; patch: Partial<Pick<Device, 'name' | 'canId' | 'notes'>> }
   | { type: 'addWire'; layer: Layer; from: PortRef; to: PortRef }
-  | { type: 'setBends'; id: string; bends: Point[] }
+  | { type: 'setBends'; id: string; bends: Point[]; sides?: { from?: Side; to?: Side } }
+  | { type: 'setWireSide'; id: string; end: 'from' | 'to'; side: Side | null }
+  | { type: 'resetRoute'; id: string }
   | { type: 'updateWire'; id: string; patch: { note: string } }
   | { type: 'delete'; ids: string[] }
   | { type: 'setTitle'; title: string }
@@ -57,8 +59,40 @@ export function apply(doc: Doc, action: Action): Doc {
       const wire: Wire = { id: nextId('w', doc.wires), layer: action.layer, from, to, bends: [], note: '' };
       return { ...doc, wires: [...doc.wires, wire] };
     }
-    case 'setBends':
-      return { ...doc, wires: doc.wires.map((w) => (w.id === action.id ? { ...w, bends: action.bends } : w)) };
+    case 'setBends': {
+      const { sides } = action;
+      return {
+        ...doc,
+        wires: doc.wires.map((w) => {
+          if (w.id !== action.id) return w;
+          const next: Wire = { ...w, bends: action.bends };
+          if (sides?.from) next.fromSide = sides.from;
+          if (sides?.to) next.toSide = sides.to;
+          return next;
+        }),
+      };
+    }
+    case 'setWireSide':
+      return {
+        ...doc,
+        wires: doc.wires.map((w) => {
+          if (w.id !== action.id) return w;
+          const next: Wire = { ...w };
+          const key = action.end === 'from' ? 'fromSide' : 'toSide';
+          if (action.side) next[key] = action.side;
+          else delete next[key];
+          return next;
+        }),
+      };
+    case 'resetRoute':
+      return {
+        ...doc,
+        wires: doc.wires.map((w) => {
+          if (w.id !== action.id) return w;
+          const { fromSide: _f, toSide: _t, ...rest } = w;
+          return { ...rest, bends: [] };
+        }),
+      };
     case 'updateWire':
       return { ...doc, wires: doc.wires.map((w) => (w.id === action.id ? { ...w, ...action.patch } : w)) };
     case 'delete': {

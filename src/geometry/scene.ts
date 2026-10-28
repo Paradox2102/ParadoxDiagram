@@ -1,11 +1,11 @@
 // Shared drawing facts for the canvas and the exports: wire points, colors, device boxes, tags.
 import { findAnchor, portPolarity, type AnchorKind, type Catalog, type Icon } from '../catalog/catalog';
 import type { Device, Doc, Point, PortRef, Wire } from '../model/types';
-import { autoRoute, exitPoint, type Box } from './autoroute';
+import { autoRouteSides, exitPoint, type Box, type SideChoice } from './autoroute';
 import { nudgeRoutes } from './nudge';
 import { offsetPolyline } from './offset';
 import { routeWire, stripPortRuns, stub } from './route';
-import { deviceBounds, portWorld, type Dir } from './transform';
+import { deviceBounds, portSidesWorld, portWorld, type Dir } from './transform';
 
 export const COLORS = {
   pos: '#cf222e',
@@ -44,12 +44,12 @@ export function boundsOf(catalog: Catalog | null, d: Device) {
 
 export function portPoint(
   doc: Doc, catalog: Catalog | null, ref: PortRef,
-): { p: Point; dir: Dir; kind: AnchorKind; polarity: '+' | '-' | null } | null {
+): { p: Point; dir: Dir; sides: SideChoice[]; kind: AnchorKind; polarity: '+' | '-' | null } | null {
   const dev = doc.devices.find((d) => d.id === ref.device);
   const icon = dev && iconOf(catalog, dev);
   const a = icon && findAnchor(icon, ref.port);
   if (!dev || !icon || !a) return null;
-  return { ...portWorld(dev, icon, a), kind: a.kind, polarity: portPolarity(a) };
+  return { ...portWorld(dev, icon, a), sides: portSidesWorld(dev, icon, a), kind: a.kind, polarity: portPolarity(a) };
 }
 
 /** A device and its label (when shown): the space a wire with no bends routes around. */
@@ -81,9 +81,14 @@ function routeOne(doc: Doc, catalog: Catalog | null, c: RouteCache, w: Wire): Po
   if (!a || !b) return null;
   const boxA = c.boxes.get(w.from.device) ?? null;
   const boxB = c.boxes.get(w.to.device) ?? null;
+  // A side the user chose is the only choice; otherwise each port offers its allowed sides.
+  const sA: SideChoice[] = w.fromSide ? [{ dir: w.fromSide, penalty: 0 }] : a.sides;
+  const sB: SideChoice[] = w.toSide ? [{ dir: w.toSide, penalty: 0 }] : b.sides;
   let pts: Point[] | null = null;
-  if (!w.bends.length) pts = autoRoute(a.p, a.dir, b.p, b.dir, [...c.boxes.values()], boxA, boxB);
-  return pts ?? routeWire(a.p, a.dir, b.p, b.dir, w.bends, exitPoint(a.p, a.dir, boxA), exitPoint(b.p, b.dir, boxB));
+  if (!w.bends.length) pts = autoRouteSides(a.p, sA, b.p, sB, [...c.boxes.values()], boxA, boxB);
+  const dA = w.fromSide ?? a.dir;
+  const dB = w.toSide ?? b.dir;
+  return pts ?? routeWire(a.p, dA, b.p, dB, w.bends, exitPoint(a.p, dA, boxA), exitPoint(b.p, dB, boxB));
 }
 
 /**
@@ -101,11 +106,21 @@ export function wirePoints(doc: Doc, catalog: Catalog | null, w: Wire): Point[] 
   return c.routes.get(w.id) ?? null;
 }
 
+const dirOf = (a: Point, b: Point): Dir =>
+  Math.abs(b.x - a.x) >= Math.abs(b.y - a.y) ? (b.x > a.x ? 'right' : 'left') : b.y > a.y ? 'down' : 'up';
+
+/** The sides a drawn route leaves its two ports by. */
+export function routeSides(path: Point[]): { from: Dir; to: Dir } {
+  return { from: dirOf(path[0], path[1]), to: dirOf(path[path.length - 1], path[path.length - 2]) };
+}
+
 /** The corners of a dragged route that are worth saving as the wire's bends. */
-export function savedBends(doc: Doc, catalog: Catalog | null, w: Wire, corners: Point[]): Point[] {
+export function savedBends(doc: Doc, catalog: Catalog | null, w: Wire, corners: Point[], path?: Point[]): Point[] {
   const a = portPoint(doc, catalog, w.from);
   const b = portPoint(doc, catalog, w.to);
-  return a && b ? stripPortRuns(corners, a.p, a.dir, b.p, b.dir) : corners;
+  if (!a || !b) return corners;
+  const sides = path ? routeSides(path) : { from: w.fromSide ?? a.dir, to: w.toSide ?? b.dir };
+  return stripPortRuns(corners, a.p, sides.from, b.p, sides.to);
 }
 
 /** Where each end's run out of its port stops, plus the plain 6 mm stubs: never saved as bends. */
