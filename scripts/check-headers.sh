@@ -19,7 +19,8 @@ root=$(curl -sS -D - -o "$tmp/root" "$base/")
 [[ "$(header "$root" cache-control)" == *no-cache* ]] && pass "/ Cache-Control no-cache" || fail "/ Cache-Control: $(header "$root" cache-control)"
 [[ "$(header "$root" content-security-policy)" == *"frame-ancestors 'none'"* ]] && pass "/ has the Content-Security-Policy" || fail "/ Content-Security-Policy: $(header "$root" content-security-policy)"
 [[ "$(header "$root" x-content-type-options)" == nosniff ]] && pass "/ X-Content-Type-Options nosniff" || fail "/ X-Content-Type-Options: $(header "$root" x-content-type-options)"
-[[ -z "$(header "$root" server)" ]] && pass "/ has no Server header" || fail "/ Server: $(header "$root" server)"
+# Caddy drops its own Server header; a proxy in front (Railway's edge) may add its own.
+[[ "$(header "$root" server)" != *[Cc]addy* ]] && pass "/ does not name Caddy in Server" || fail "/ Server: $(header "$root" server)"
 
 other=$(curl -sS -D - -o "$tmp/other" "$base/some/old/link")
 if [[ "$(status "$other")" == 200 ]] && grep -q '<div id="root">' "$tmp/other"; then
