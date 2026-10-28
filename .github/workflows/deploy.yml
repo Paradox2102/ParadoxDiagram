@@ -1,8 +1,6 @@
-# Deploy to Railway when a GitHub release is published. The release tag must be v<package.json version>, for
-# example v1.0.0. Railway has no deploy trigger on this service, so a push to main never deploys.
-#
-# Needs the GitHub environment "production" with the secret RAILWAY_TOKEN: a Railway project token for the
-# production environment (Railway project settings, Tokens).
+# Deploy when a GitHub release is published. Railway auto-deploys the `release` branch (and only that branch), so
+# this workflow checks the release, then moves `release` to the release's commit; Railway builds and deploys it.
+# The release tag must be v<package.json version>, for example v1.0.0. A push to main never deploys.
 name: Deploy
 
 on:
@@ -11,11 +9,11 @@ on:
   workflow_dispatch:
     inputs:
       tag:
-        description: Release tag to deploy again (for example v1.0.0)
+        description: Release tag to deploy (again), for example v1.0.0
         required: true
 
 permissions:
-  contents: read
+  contents: write # to move the release branch
 
 concurrency:
   group: deploy-production
@@ -33,6 +31,7 @@ jobs:
       - uses: actions/checkout@v5
         with:
           ref: ${{ env.TAG }}
+          fetch-depth: 0
       - uses: actions/setup-node@v5
         with:
           node-version: 24
@@ -46,7 +45,8 @@ jobs:
           fi
       - run: npm ci --no-audit --no-fund
       - run: npm run check
-      - name: Deploy to Railway
-        env:
-          RAILWAY_TOKEN: ${{ secrets.RAILWAY_TOKEN }}
-        run: npx --yes @railway/cli@5.71.0 up --ci --service ParadoxDiagram --environment production
+      - name: Move the release branch to this release (Railway deploys it)
+        run: |
+          sha=$(git rev-parse "refs/tags/$TAG^{commit}")
+          git push --force origin "$sha:refs/heads/release"
+          echo "release -> $TAG ($sha)" >> "$GITHUB_STEP_SUMMARY"

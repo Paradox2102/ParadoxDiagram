@@ -135,8 +135,9 @@ A push to `main` runs the checks (GitHub Actions) and does not change the live s
 1. Set the new version in `package.json` (`npm version 1.2.0 --no-git-tag-version`), commit and push.
 2. Publish a GitHub release with the tag `v1.2.0`.
 
-The **Deploy** workflow checks that the tag matches `package.json`, runs the checks, and deploys that tag to
-Railway. The About box shows the version that is live.
+The **Deploy** workflow checks that the tag matches `package.json` and runs the checks. Then it moves the
+`release` branch to that tag, and Railway, which auto-deploys only the `release` branch, builds and deploys it.
+The About box shows the version that is live.
 
 ## Project layout
 
