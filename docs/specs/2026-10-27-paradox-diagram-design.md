@@ -16,7 +16,7 @@ it again with the layout intact, and export an SVG that looks like the poster st
 ## Scope
 
 In v1: catalog search, place / move / rotate / delete devices, orthogonal wires with
-editable bends, device tags (name, CAN ID, automatic PDH channel), layer views, undo/redo,
+editable bends, device tags (name, CAN ID, automatic power channel), layer views, undo/redo,
 autosave to localStorage, JSON open and export, SVG export, PNG export.
 
 Out of v1: accounts, sharing or collaboration, CAN checks (duplicate ID, terminator),
@@ -108,10 +108,12 @@ The + / H line is on the left of the direction of travel from the `from` end.
 ## Tags
 
 Each device has a tag under its icon (rotation does not turn the tag): line 1 the name
-(default: the icon name), line 2 the facts: `CAN <id>` when canId is set, and `PDH <n>`
-when a Power wire joins this device to a port named `ch<n>` on another device (PDH, PDP,
-MPM, PowerHub). Two such wires give `PDH 4/5`, the form the poster uses. The tag does not
-store the channel; it is computed from the wires each render.
+(default: the icon name), line 2 the facts: `CAN <id>` when canId is set, and
+`<feeder> <channel>` when a Power wire joins this device to a port named `ch<n>` (or a VRM
+output) on another device. The feeder is that device's short name: PDH, PDP, PH (Thrifty
+PowerHub), MPM or VRM; a VRM channel reads like `12V/2A`. Two such wires give `PDH 4/5`, the
+form the poster uses. The tag does not store the channel; it is computed from the wires each
+render.
 
 ## Screen
 

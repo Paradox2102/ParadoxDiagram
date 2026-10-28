@@ -20,7 +20,7 @@ export interface Device {
   name: string;
   canId: number | null;
   notes: string;
-  /** Hide this device's label (name, CAN ID, PDH channel). */
+  /** Hide this device's label (name, CAN ID, power channel). */
   hideTag?: boolean;
   /** Where the label sits beside the device (default: bottom). */
   tagSide?: TagSide;
