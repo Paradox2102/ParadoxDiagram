@@ -154,3 +154,22 @@ test('a new live link while connected switches to it and keeps the new target', 
   expect(sessionStorage.getItem(LIVE_KEY)).toBe(`6000.${TOKEN}`);
   expect(result.current.live.state).not.toBe('stopped');
 });
+
+test('replaceLocally leaves live mode first, so New, Open and a share link never change the AI file', () => {
+  history.replaceState(null, '', `/#live=5199.${TOKEN}`);
+  const { result } = mount(emptyDoc());
+  welcome();
+  const sent = last().sent.length;
+  act(() => result.current.live.replaceLocally(emptyDoc()));
+  expect(last().sent.length).toBe(sent);
+  expect(result.current.live.state).toBeNull();
+  expect(result.current.hist.live).toBe(false);
+  expect(result.current.hist.doc.devices).toHaveLength(0);
+});
+
+test('replaceLocally out of live mode is a plain replace', () => {
+  const { result } = mount(aiDoc());
+  act(() => result.current.live.replaceLocally(emptyDoc()));
+  expect(result.current.hist.doc.devices).toHaveLength(0);
+  expect(result.current.hist.canUndo).toBe(true);
+});

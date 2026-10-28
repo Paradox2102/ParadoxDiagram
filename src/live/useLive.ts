@@ -123,8 +123,15 @@ export function useLive(hist: DocHistory, sendRef: MutableRefObject<LiveSend | n
     saveTarget(storage, null);
   };
 
+  /** Show another diagram in this tab only (New, Open, a share link): leave live mode first, so the AI's file stays. */
+  const replaceLocally = (doc: Doc) => {
+    if (client.current || state !== null) leave();
+    histRef.current.replace(doc);
+  };
+
   return {
     state,
+    replaceLocally,
     pending,
     message,
     fatal,

@@ -66,7 +66,7 @@ export function App() {
   }, [iconsReady, catalog]);
 
   function openShared(got: { doc: Doc; droppedWires: number }) {
-    hist.replace(got.doc);
+    live.replaceLocally(got.doc);
     setSelection([]);
     setIncoming(null);
     requestAnimationFrame(() => canvasApi.current?.fit());
@@ -105,16 +105,20 @@ export function App() {
     hist.change({ type: 'addDevice', slug, name: '', x: c.x - w / 2 + step, y: c.y - h / 2 + step });
   };
 
+  // in live mode these leave live mode first: the AI's file keeps its diagram
+  const LEAVES_LIVE = 'This leaves live mode; the AI keeps its diagram in its file.';
   const onNew = () => {
-    if (doc.devices.length && !window.confirm('Start a new diagram? The current one stays in Undo until you reload.')) return;
-    hist.replace(emptyDoc());
+    const ask = liveOn ? `Start a new diagram in this browser? ${LEAVES_LIVE}` : 'Start a new diagram? The current one stays in Undo until you reload.';
+    if ((liveOn || doc.devices.length) && !window.confirm(ask)) return;
+    live.replaceLocally(emptyDoc());
     setSelection([]);
   };
 
   const onOpen = async (file: File) => {
     try {
       const { doc: opened, droppedWires } = validateDoc(JSON.parse(await file.text()), catalog);
-      hist.replace(opened);
+      if (liveOn && !window.confirm(`Open ${file.name} in this browser? ${LEAVES_LIVE}`)) return;
+      live.replaceLocally(opened);
       setSelection([]);
       requestAnimationFrame(() => canvasApi.current?.fit());
       if (droppedWires) window.alert(`${file.name}: ${droppedWires} wire(s) did not match their ports and were left out.`);
@@ -188,7 +192,7 @@ export function App() {
             <>
               <span>
                 Shared diagram “{incoming.doc.title}” ({incoming.doc.devices.length} devices). Opening it replaces the
-                diagram kept in this browser.
+                diagram kept in this browser{liveOn ? ' and leaves live mode (the AI keeps its file)' : ''}.
               </span>
               <button type="button" className="primary" onClick={() => openShared(incoming)}>Open it</button>
               <button type="button" onClick={() => setIncoming(null)}>Keep mine</button>
