@@ -44,28 +44,42 @@ export function useLive(hist: DocHistory, sendRef: MutableRefObject<LiveSend | n
   optsRef.current = opts;
   const storage = useRef(opts.storage === undefined ? sessionStore() : opts.storage).current;
 
+  /** Close the current client on purpose: its events stop counting (they are not the link stopping). */
+  const drop = () => {
+    const c = client.current;
+    client.current = null;
+    c?.close();
+  };
+
   const connect = useCallback((t: LiveTarget) => {
     saveTarget(storage, t);
     setPending(null);
     setFatal(null);
-    client.current?.close();
-    client.current = connectLive(t, {
+    drop();
+    // events from a client this hook has dropped are ignored
+    let self: ReturnType<typeof connectLive> | null = null;
+    const mine = () => self !== null && client.current === self;
+    self = connectLive(t, {
       onWelcome: (m) => {
+        if (!mine()) return;
         histRef.current.setLive(true);
         histRef.current.remote(m.doc);
         optsRef.current.onWelcome?.();
       },
-      onDoc: (m) => histRef.current.remote(m.doc),
-      onReject: (e) => setMessage(e),
+      onDoc: (m) => mine() && histRef.current.remote(m.doc),
+      onReject: (e) => mine() && setMessage(e),
       onState: (s) => {
+        // the first state comes before connectLive returns: it is ours
+        if (self !== null && !mine()) return;
         setState(s);
         if (s === 'stopped') {
           histRef.current.setLive(false);
           saveTarget(storage, null);
         }
       },
-      onFatal: (m) => setFatal(m),
+      onFatal: (m) => mine() && setFatal(m),
     }, __APP_VERSION__, optsRef.current.WS);
+    client.current = self;
   }, [storage]);
 
   sendRef.current = (before, after) => {
@@ -92,8 +106,7 @@ export function useLive(hist: DocHistory, sendRef: MutableRefObject<LiveSend | n
     window.addEventListener('hashchange', check);
     return () => {
       window.removeEventListener('hashchange', check);
-      client.current?.close();
-      client.current = null;
+      drop();
     };
   }, [connect, storage]);
 
@@ -104,8 +117,7 @@ export function useLive(hist: DocHistory, sendRef: MutableRefObject<LiveSend | n
   }, [message]);
 
   const leave = () => {
-    client.current?.close();
-    client.current = null;
+    drop();
     setState(null);
     histRef.current.setLive(false);
     saveTarget(storage, null);

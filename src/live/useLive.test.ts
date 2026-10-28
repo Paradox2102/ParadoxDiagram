@@ -1,4 +1,5 @@
 import { act, renderHook } from '@testing-library/react';
+import { StrictMode } from 'react';
 import { useRef } from 'react';
 import { apply } from '../model/actions';
 import { emptyDoc, type Doc } from '../model/types';
@@ -24,13 +25,13 @@ const last = () => FakeWS.all[FakeWS.all.length - 1];
 const TOKEN = 'abcdefghijklmnopqrstuv';
 const aiDoc = (): Doc => apply(emptyDoc(), { type: 'addDevice', id: 'pdh', slug: 'rev-pdh', name: 'From AI', x: 0, y: 0 });
 
-function mount(start: Doc) {
+function mount(start: Doc, strict = false) {
   return renderHook(() => {
     const send = useRef<LiveSend | null>(null);
     const hist = useDocHistory(start, { onLocal: (b, a) => send.current?.(b, a) });
     const live = useLive(hist, send, { WS: FakeWS as unknown as typeof WebSocket, storage: sessionStorage });
     return { hist, live };
-  });
+  }, strict ? { wrapper: StrictMode } : undefined);
 }
 
 function welcome() {
@@ -121,4 +122,35 @@ test('a reject shows its message', () => {
   welcome();
   act(() => last().onmessage?.({ data: JSON.stringify({ t: 'reject', seq: 1, error: 'pdh was removed by the other side' }) }));
   expect(result.current.live.message).toBe('pdh was removed by the other side');
+});
+
+test('under StrictMode a live link on an empty diagram connects and keeps its target', () => {
+  history.replaceState(null, '', `/#live=5199.${TOKEN}`);
+  const { result } = mount(emptyDoc(), true);
+  welcome();
+  expect(result.current.live.state).toBe('connected');
+  expect(sessionStorage.getItem(LIVE_KEY)).toBe(`5199.${TOKEN}`);
+});
+
+test('under StrictMode a reload with the stored target connects', () => {
+  sessionStorage.setItem(LIVE_KEY, `5199.${TOKEN}`);
+  const { result } = mount(aiDoc(), true);
+  welcome();
+  expect(result.current.live.state).toBe('connected');
+  expect(sessionStorage.getItem(LIVE_KEY)).toBe(`5199.${TOKEN}`);
+});
+
+test('a new live link while connected switches to it and keeps the new target', () => {
+  history.replaceState(null, '', `/#live=5199.${TOKEN}`);
+  const { result } = mount(emptyDoc());
+  welcome();
+  act(() => {
+    history.replaceState(null, '', `/#live=6000.${TOKEN}`);
+    window.dispatchEvent(new HashChangeEvent('hashchange'));
+  });
+  expect(result.current.live.pending).toEqual({ port: 6000, token: TOKEN });
+  act(() => result.current.live.accept());
+  expect(last().url).toBe('ws://127.0.0.1:6000/live');
+  expect(sessionStorage.getItem(LIVE_KEY)).toBe(`6000.${TOKEN}`);
+  expect(result.current.live.state).not.toBe('stopped');
 });
