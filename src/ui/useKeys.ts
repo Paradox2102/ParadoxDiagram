@@ -5,7 +5,16 @@ interface Keys {
   redo: () => void;
   remove: () => void;
   rotate: () => void;
+  /** Move the selected devices by (dx, dy) mm. */
+  nudge: (dx: number, dy: number) => void;
 }
+
+const ARROWS: Record<string, [number, number]> = {
+  ArrowLeft: [-1, 0], ArrowRight: [1, 0], ArrowUp: [0, -1], ArrowDown: [0, 1],
+};
+/** Arrow keys move 1 mm; with Shift, one 5 mm grid step. */
+const NUDGE_MM = 1;
+const NUDGE_SHIFT_MM = 5;
 
 /** Editor shortcuts. Ignored while typing in a field. */
 export function useKeys(keys: Keys): void {
@@ -29,6 +38,10 @@ export function useKeys(keys: Keys): void {
         k.remove();
       } else if (!mod && !e.altKey && key === 'r') {
         k.rotate();
+      } else if (!mod && ARROWS[e.key]) {
+        e.preventDefault();
+        const step = e.shiftKey ? NUDGE_SHIFT_MM : NUDGE_MM;
+        k.nudge(ARROWS[e.key][0] * step, ARROWS[e.key][1] * step);
       }
     };
     window.addEventListener('keydown', onKey);

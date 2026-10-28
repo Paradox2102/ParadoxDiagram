@@ -14,7 +14,8 @@ export type Action =
   | { type: 'delete'; ids: string[] }
   | { type: 'setTitle'; title: string }
   | { type: 'setTagHidden'; ids: string[]; hidden: boolean }
-  | { type: 'setHideTags'; hidden: boolean };
+  | { type: 'setHideTags'; hidden: boolean }
+  | { type: 'moveEach'; moves: { id: string; dx: number; dy: number }[] };
 
 export const snap = (v: number) => Math.round(v / GRID_MM) * GRID_MM;
 
@@ -76,5 +77,16 @@ export function apply(doc: Doc, action: Action): Doc {
     }
     case 'setHideTags':
       return { ...doc, hideTags: action.hidden };
+    case 'moveEach': {
+      // exact amounts, no grid: alignment and spacing must not be undone by rounding
+      const by = new Map(action.moves.map((m) => [m.id, m]));
+      return {
+        ...doc,
+        devices: doc.devices.map((d) => {
+          const m = by.get(d.id);
+          return m && (m.dx || m.dy) ? { ...d, x: d.x + m.dx, y: d.y + m.dy } : d;
+        }),
+      };
+    }
   }
 }

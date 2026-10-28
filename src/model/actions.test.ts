@@ -67,3 +67,8 @@ test('labels hide per device and for the whole diagram', () => {
   d = apply(d, { type: 'setHideTags', hidden: true });
   expect(d.hideTags).toBe(true);
 });
+
+test('moveEach moves each device by its own exact amount in one step', () => {
+  const d = apply(withTwo(), { type: 'moveEach', moves: [{ id: 'd1', dx: 1.25, dy: 0 }, { id: 'd2', dx: 0, dy: -3.5 }] });
+  expect(d.devices.map((x) => [x.x, x.y])).toEqual([[1.25, 0], [200, -3.5]]);
+});

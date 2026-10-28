@@ -80,7 +80,11 @@ export function App() {
     const ids = selection.filter((id) => doc.devices.some((d) => d.id === id));
     if (ids.length) hist.change({ type: 'rotateDevices', ids });
   };
-  useKeys({ undo: hist.undo, redo: hist.redo, remove: deleteSelection, rotate: rotateSelection });
+  const nudgeSelection = (dx: number, dy: number) => {
+    const ids = selection.filter((id) => doc.devices.some((d) => d.id === id));
+    if (ids.length) hist.change({ type: 'moveDevices', ids, dx, dy, snap: false });
+  };
+  useKeys({ undo: hist.undo, redo: hist.redo, remove: deleteSelection, rotate: rotateSelection, nudge: nudgeSelection });
 
   const addDevice = (slug: string) => {
     const icon = catalog?.bySlug.get(slug);

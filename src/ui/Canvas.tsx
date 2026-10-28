@@ -3,13 +3,14 @@
 import { useCallback, useEffect, useImperativeHandle, useMemo, useRef, useState, type RefObject } from 'react';
 import { canConnect, iconFrame, iconLayers, layerOfKind, type Anchor, type AnchorKind, type Catalog, type Layer } from '../catalog/catalog';
 import { contentBox } from '../export/svg';
+import { snapMove, unionBox, type Box, type Guide } from '../geometry/align';
 import { dragSegment, withoutEnds } from '../geometry/route';
 import { boundsOf, iconOf, KIND_COLOR, renderWirePaths, wireEnds, wirePoints } from '../geometry/scene';
 import { portWorld } from '../geometry/transform';
 import { apply } from '../model/actions';
 import { nextId } from '../model/ids';
 import { deviceTag, tagShown } from '../model/tags';
-import type { Doc, Point, PortRef } from '../model/types';
+import { GRID_MM, type Doc, type Point, type PortRef } from '../model/types';
 import { DeviceView } from './DeviceView';
 import type { LayerView } from './Header';
 import { useIconBodies } from './iconText';
@@ -50,7 +51,10 @@ interface Port {
 type Mode =
   | { kind: 'none' }
   | { kind: 'pan'; cx: number; cy: number; view: View }
-  | { kind: 'move'; base: Doc; ids: string[]; start: Point; moved: boolean; clickId: string; shift: boolean }
+  | {
+      kind: 'move'; base: Doc; ids: string[]; start: Point; moved: boolean; clickId: string; shift: boolean;
+      box: Box; others: Box[]; guides: Guide[];
+    }
   | { kind: 'box'; start: Point; cur: Point; shift: boolean }
   | { kind: 'wire'; from: Port; cur: Point; target: Port | null }
   | { kind: 'segment'; base: Doc; wireId: string; index: number; path: Point[]; ends: Point[]; start: Point; magnets: Point[] }
@@ -63,6 +67,8 @@ const HOVER_PAD_MM = 4;
 const PORT_R = 1.4;
 const SNAP_MM = 1;
 const MAGNET_MM = 2;
+/** How close (on screen) a dragged device must come to another device's edge or centre to snap to it. */
+const SNAP_PX = 8;
 
 const samePort = (a: PortRef, b: PortRef) => a.device === b.device && a.port === b.port;
 
@@ -281,7 +287,12 @@ export function Canvas({ doc, catalog, layer, selection, setSelection, hist, api
       const sel = selected.has(id) ? selection : e.shiftKey ? [...selection, id] : [id];
       setSelection(sel);
       const ids = sel.filter((s) => doc.devices.some((d) => d.id === s));
-      setMode({ kind: 'move', base: hist.begin(), ids, start: w, moved: false, clickId: id, shift: e.shiftKey });
+      const moving = new Set(ids);
+      const box = unionBox(doc.devices.filter((d) => moving.has(d.id)).map((d) => boundsOf(catalog, d)));
+      const others = doc.devices.filter((d) => !moving.has(d.id)).map((d) => boundsOf(catalog, d));
+      setMode({
+        kind: 'move', base: hist.begin(), ids, start: w, moved: false, clickId: id, shift: e.shiftKey, box, others, guides: [],
+      });
       return;
     }
     if (!e.shiftKey) setSelection([]);
@@ -304,8 +315,11 @@ export function Canvas({ doc, catalog, layer, selection, setSelection, hist, api
         const dx = w.x - m.start.x;
         const dy = w.y - m.start.y;
         if (!m.moved && Math.abs(dx) + Math.abs(dy) < 1) return;
-        modeRef.current = { ...m, moved: true };
-        hist.preview(apply(m.base, { type: 'moveDevices', ids: m.ids, dx, dy }));
+        // The whole selection moves by one amount, so devices that are lined up stay lined up.
+        // It snaps to the edges and centres of other devices, else to the grid; Alt moves freely.
+        const snap = e.altKey ? { dx, dy, guides: [] } : snapMove(m.box, m.others, dx, dy, SNAP_PX / view.s, GRID_MM);
+        setMode({ ...m, moved: true, guides: snap.guides });
+        hist.preview(apply(m.base, { type: 'moveDevices', ids: m.ids, dx: snap.dx, dy: snap.dy, snap: false }));
         return;
       }
       case 'box':
@@ -481,6 +495,14 @@ export function Canvas({ doc, catalog, layer, selection, setSelection, hist, api
             <path d="M -7.5 -5.5 L -4.5 -3 L -1.5 -6" fill="none" stroke="#0969da" strokeWidth={1.8} strokeLinecap="round" strokeLinejoin="round" />
           </g>
         )}
+        {mode.kind === 'move' &&
+          mode.guides.map((g, i) => (
+            <line
+              key={i} x1={g.axis === 'x' ? g.at : g.from} x2={g.axis === 'x' ? g.at : g.to}
+              y1={g.axis === 'x' ? g.from : g.at} y2={g.axis === 'x' ? g.to : g.at}
+              stroke="#e0218a" strokeWidth={1} strokeDasharray="4 3" vectorEffect="non-scaling-stroke" pointerEvents="none"
+            />
+          ))}
         {wiring && (
           <line
             x1={wiring.from.p.x} y1={wiring.from.p.y} x2={(wiring.target?.p ?? wiring.cur).x} y2={(wiring.target?.p ?? wiring.cur).y}

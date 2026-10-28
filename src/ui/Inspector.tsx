@@ -3,6 +3,7 @@ import { useEffect, useRef, useState } from 'react';
 import type { Catalog } from '../catalog/catalog';
 import type { Action } from '../model/actions';
 import { deviceTag } from '../model/tags';
+import { Arrange } from './Arrange';
 import type { Device, Doc, PortRef, Wire } from '../model/types';
 
 interface Props {
@@ -155,7 +156,11 @@ function Help() {
           Select a wire to drag its segments or bends. Double-click a segment to add a bend, a bend to remove it.
         </p>
         <p>
-          <kbd>R</kbd> rotate · <kbd>Del</kbd> delete · right-drag pan · wheel zoom · <kbd>⌘Z</kbd> undo
+          <kbd>R</kbd> rotate · arrows nudge · <kbd>Del</kbd> delete · right-drag pan · wheel zoom · <kbd>⌘Z</kbd> undo
+        </p>
+        <p>
+          Dragged devices snap to the edges and centres of other devices (hold <kbd>Alt</kbd> to place freely). Select
+          several devices to align them or set the space between them.
         </p>
         <p>The layout is kept in this browser. Export JSON to keep a copy or move it to another computer.</p>
       </div>
@@ -175,6 +180,7 @@ export function Inspector({ doc, catalog, selection, dispatch }: Props) {
     body = (
       <>
         <h2>{live.length} selected</h2>
+        {devices.length > 1 && <Arrange doc={doc} catalog={catalog} ids={devices} dispatch={dispatch} />}
         {devices.length > 0 && (
           <div className="row">
             <button type="button" onClick={() => dispatch({ type: 'setTagHidden', ids: devices, hidden: true })}>Hide labels</button>

@@ -75,3 +75,30 @@ test('a multi-selection can hide all its labels', async () => {
   await userEvent.click(screen.getByRole('button', { name: 'Hide labels' }));
   expect(dispatch).toHaveBeenCalledWith({ type: 'setTagHidden', ids: ['d1', 'd2'], hidden: true });
 });
+
+describe('several devices selected', () => {
+  const moveOf = (dispatch: ReturnType<typeof vi.fn>, id: string) =>
+    dispatch.mock.calls.map((c) => c[0]).find((a) => a.type === 'moveEach')?.moves.find((m: { id: string }) => m.id === id);
+
+  test('Align left lines the left edges up in one step', async () => {
+    const dispatch = vi.fn();
+    render(<Inspector doc={doc()} catalog={catalog} selection={['d1', 'd2']} dispatch={dispatch} />);
+    await userEvent.click(screen.getByRole('button', { name: 'Align left' }));
+    expect(moveOf(dispatch, 'd2')).toEqual({ id: 'd2', dx: -200, dy: 0 });
+  });
+
+  test('a set gap packs the devices across from the first one', async () => {
+    const dispatch = vi.fn();
+    render(<Inspector doc={doc()} catalog={catalog} selection={['d1', 'd2']} dispatch={dispatch} />);
+    await userEvent.clear(screen.getByLabelText('Gap (mm)'));
+    await userEvent.type(screen.getByLabelText('Gap (mm)'), '10');
+    await userEvent.click(screen.getByRole('button', { name: 'Set gap across' }));
+    // the PDH is 131 mm wide, so the Talon's left edge goes to 141
+    expect(moveOf(dispatch, 'd2')).toEqual({ id: 'd2', dx: -59, dy: 0 });
+  });
+
+  test('even spacing needs three devices', () => {
+    render(<Inspector doc={doc()} catalog={catalog} selection={['d1', 'd2']} dispatch={() => {}} />);
+    expect(screen.getByRole('button', { name: 'Space evenly across' })).toBeDisabled();
+  });
+});
