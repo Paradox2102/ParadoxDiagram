@@ -128,6 +128,16 @@ The app is static files only: no server and no database. The `Dockerfile` builds
 pass) and serves it with [Caddy](https://caddyserver.com); this is how the hosted app runs.
 `scripts/check-headers.sh <url>` checks a running copy's cache and security headers.
 
+## Releases
+
+A push to `main` runs the checks (GitHub Actions) and does not change the live site. To deploy:
+
+1. Set the new version in `package.json` (`npm version 1.2.0 --no-git-tag-version`), commit and push.
+2. Publish a GitHub release with the tag `v1.2.0`.
+
+The **Deploy** workflow checks that the tag matches `package.json`, runs the checks, and deploys that tag to
+Railway. The About box shows the version that is live.
+
 ## Project layout
 
 ```
