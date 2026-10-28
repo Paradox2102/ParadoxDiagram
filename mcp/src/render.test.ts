@@ -4,7 +4,7 @@ import { validateDoc } from '../../src/model/validate';
 import { emptyDoc } from '../../src/model/types';
 import { loadNodeCatalog } from './catalog';
 import { runOps, type Op } from './ops';
-import { renderPng } from './render';
+import { MAX_HEIGHT_PX, renderPng } from './render';
 
 const catalog = loadNodeCatalog();
 const example = () =>
@@ -41,4 +41,16 @@ test('layer can dims devices', async () => {
   const all = await renderPng(example(), catalog, {});
   const can = await renderPng(example(), catalog, { layer: 'can' });
   expect(Buffer.compare(all.png, can.png)).not.toBe(0);
+});
+
+test('a very tall region is capped in height too', async () => {
+  const r = await renderPng(example(), catalog, { region: { x: -200, y: -2000, width: 400, height: 100000 } });
+  expect(r.height).toBeLessThanOrEqual(MAX_HEIGHT_PX);
+  expect(r.width * r.height).toBeLessThanOrEqual(1600 * MAX_HEIGHT_PX);
+});
+
+test('a region too thin for a picture gives an error that says so', async () => {
+  await expect(renderPng(example(), catalog, { region: { x: -100, y: -2000, width: 10, height: 100000 } })).rejects.toThrow(
+    /too long and thin/,
+  );
 });

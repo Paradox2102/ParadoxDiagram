@@ -8,6 +8,8 @@ import type { Doc } from '../../src/model/types';
 import { ASSETS, iconTextNode } from './catalog';
 
 export const MAX_WIDTH_PX = 1600;
+/** A tall picture is capped too, so a region cannot ask for a bitmap of hundreds of MB. */
+export const MAX_HEIGHT_PX = 4800;
 const PX_PER_MM = 96 / 25.4;
 const FONTS = ['LiberationSans-Regular.ttf', 'LiberationSans-Bold.ttf'].map((f) => join(ASSETS, 'fonts', f));
 
@@ -15,7 +17,7 @@ export interface RenderOptions {
   layer?: Layer | 'all';
   /** An area of the diagram in mm. */
   region?: { x: number; y: number; width: number; height: number };
-  /** 1 to 4 (default 2); lowered when the picture would be more than 1600 px wide. */
+  /** 1 to 4 (default 2); lowered when the picture would be more than 1600 px wide or 4800 px tall. */
   scale?: number;
 }
 
@@ -41,9 +43,18 @@ export async function renderPng(doc: Doc, catalog: Catalog, opts: RenderOptions)
   }
   let scale = Math.min(4, Math.max(1, opts.scale ?? 2));
   if (view.w * PX_PER_MM * scale > MAX_WIDTH_PX) scale = MAX_WIDTH_PX / (view.w * PX_PER_MM);
-  const width = Math.max(1, Math.floor(view.w * PX_PER_MM * scale));
+  if (view.h * PX_PER_MM * scale > MAX_HEIGHT_PX) scale = MAX_HEIGHT_PX / (view.h * PX_PER_MM);
+  const w = view.w * PX_PER_MM * scale;
+  const h = view.h * PX_PER_MM * scale;
+  if (w < 8 || h < 8) {
+    throw new Error(`a ${f(view.w)} × ${f(view.h)} mm region is too long and thin for one picture; render a part of it`);
+  }
+  // fit by the side that is nearer its cap, so a thin, tall region cannot pass the height cap
+  const fitTo = h / MAX_HEIGHT_PX > w / MAX_WIDTH_PX
+    ? { mode: 'height' as const, value: Math.max(1, Math.floor(h)) }
+    : { mode: 'width' as const, value: Math.max(1, Math.floor(w)) };
   const resvg = new Resvg(svg, {
-    fitTo: { mode: 'width', value: width },
+    fitTo,
     background: '#ffffff',
     font: { fontFiles: FONTS, loadSystemFonts: false, defaultFontFamily: 'Liberation Sans', sansSerifFamily: 'Liberation Sans' },
   });
