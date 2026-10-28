@@ -187,8 +187,13 @@ The icons come from the FRC device icon collection by Team 2102, published at
 and dedicated to the public domain under [CC0 1.0](public/icons/LICENSE.md). A copy is committed in
 `public/icons/`, so the app builds on its own. Team 2102 maintainers update the copy with `npm run sync-icons`.
 
-Missing a device, or found a port in the wrong place? Open an issue with the device name and a link to its
-product page.
+Missing a component, or found a port in the wrong place? Ask me to add or fix it. Include the device name and a
+link to the product page or the documentation of each part. You can:
+
+- Email [nickfoote@team2102.org](mailto:nickfoote@team2102.org?subject=Paradox%20Diagram%3A%20component%20request).
+- Send a Chief Delphi message to
+  [footie](https://www.chiefdelphi.com/new-message?username=footie&title=Paradox%20Diagram%3A%20component%20request).
+- Open a [GitHub issue](https://github.com/Paradox2102/ParadoxDiagram/issues/new).
 
 ## Credits
 
