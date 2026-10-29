@@ -5,6 +5,7 @@ import { docToJson, fileBase } from '../export/json';
 import { svgToPng } from '../export/png';
 import { contentBox, EXPORT_MARGIN_MM, exportSvg } from '../export/svg';
 import { nextId } from '../model/ids';
+import { copyItems, pasteItems, type Clip } from '../model/paste';
 import { findProblems } from '../model/problems';
 import { deviceTag } from '../model/tags';
 import { emptyDoc, type Doc } from '../model/types';
@@ -23,6 +24,8 @@ import { useKeys } from './useKeys';
 import { useLayerHash } from './useLayerHash';
 
 const storage = safeStorage();
+/** Each paste of one copy lands this much further right and down, so pastes do not stack. */
+const PASTE_STEP_MM = 10;
 
 function initialDoc(): Doc {
   return loadSaved(storage, null).doc ?? emptyDoc();
@@ -99,7 +102,32 @@ export function App() {
     const ids = selection.filter((id) => doc.devices.some((d) => d.id === id));
     if (ids.length) hist.change({ type: 'moveDevices', ids, dx, dy, snap: false });
   };
-  useKeys({ undo: hist.undo, redo: hist.redo, remove: deleteSelection, rotate: rotateSelection, nudge: nudgeSelection });
+  // the copy lives in this tab only; it holds copies of the devices, so it still pastes after they are deleted
+  const clip = useRef<{ items: Clip; pastes: number } | null>(null);
+  const pasteClip = (items: Clip, pastes: number) => {
+    const out = pasteItems(doc, items, PASTE_STEP_MM * pastes);
+    hist.change({ type: 'paste', ...out });
+    setSelection(out.devices.map((d) => d.id));
+  };
+  const copySelection = () => {
+    const items = copyItems(doc, selection);
+    if (items) clip.current = { items, pastes: 0 };
+    return items !== null;
+  };
+  const paste = () => {
+    if (!clip.current) return false;
+    pasteClip(clip.current.items, ++clip.current.pastes);
+    return true;
+  };
+  const duplicate = () => {
+    const items = copyItems(doc, selection);
+    if (items) pasteClip(items, 1);
+    return items !== null;
+  };
+  useKeys({
+    undo: hist.undo, redo: hist.redo, remove: deleteSelection, rotate: rotateSelection, nudge: nudgeSelection,
+    copy: copySelection, paste, duplicate,
+  });
 
   const addDevice = (slug: string) => {
     const icon = catalog?.bySlug.get(slug);

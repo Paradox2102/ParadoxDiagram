@@ -24,3 +24,44 @@ test('arrow keys in a text field move the cursor, not the devices', () => {
   expect(k.nudge).not.toHaveBeenCalled();
   input.remove();
 });
+
+describe('copy, paste and duplicate', () => {
+  function clipKeys(handled: boolean) {
+    const k = {
+      undo: vi.fn(), redo: vi.fn(), remove: vi.fn(), rotate: vi.fn(), nudge: vi.fn(),
+      copy: vi.fn(() => handled), paste: vi.fn(() => handled), duplicate: vi.fn(() => handled),
+    };
+    renderHook(() => useKeys(k));
+    return k;
+  }
+
+  test('Ctrl/Cmd+C, V and D call copy, paste and duplicate and stop the browser action', () => {
+    const k = clipKeys(true);
+    const c = new KeyboardEvent('keydown', { key: 'c', metaKey: true, bubbles: true, cancelable: true });
+    window.dispatchEvent(c);
+    press('v', { ctrlKey: true });
+    const d = new KeyboardEvent('keydown', { key: 'd', metaKey: true, bubbles: true, cancelable: true });
+    window.dispatchEvent(d);
+    expect([k.copy, k.paste, k.duplicate].map((f) => f.mock.calls.length)).toEqual([1, 1, 1]);
+    expect(c.defaultPrevented).toBe(true);
+    expect(d.defaultPrevented).toBe(true);
+  });
+
+  test('when nothing is copied (no device selected), the browser keeps its own copy', () => {
+    clipKeys(false);
+    const c = new KeyboardEvent('keydown', { key: 'c', metaKey: true, bubbles: true, cancelable: true });
+    window.dispatchEvent(c);
+    expect(c.defaultPrevented).toBe(false);
+  });
+
+  test('in a text field the keys copy and paste text', () => {
+    const k = clipKeys(true);
+    const input = document.createElement('input');
+    document.body.append(input);
+    press('c', { metaKey: true }, input);
+    press('v', { metaKey: true }, input);
+    expect(k.copy).not.toHaveBeenCalled();
+    expect(k.paste).not.toHaveBeenCalled();
+    input.remove();
+  });
+});

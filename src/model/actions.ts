@@ -39,6 +39,8 @@ export type Action =
   | { type: 'setTagSide'; ids: string[]; side: TagSide }
   | { type: 'setHideTags'; hidden: boolean }
   | { type: 'moveEach'; moves: { id: string; dx: number; dy: number }[] }
+  /** Adds pasted devices and wires (ids and positions already chosen by pasteItems). */
+  | { type: 'paste'; devices: Device[]; wires: Wire[] }
   /** Puts back the devices and wires of a patch (live edits, and undo in live mode). */
   | { type: 'restore'; patch: DocPatch };
 
@@ -168,6 +170,8 @@ export function apply(doc: Doc, action: Action): Doc {
       return { ...doc, hideTags: action.hidden };
     case 'restore':
       return applyPatch(doc, action.patch).doc;
+    case 'paste':
+      return { ...doc, devices: [...doc.devices, ...action.devices], wires: [...doc.wires, ...action.wires] };
     case 'moveEach': {
       // exact amounts, no grid: alignment and spacing must not be undone by rounding
       const by = new Map(action.moves.map((m) => [m.id, m]));

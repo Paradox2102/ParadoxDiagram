@@ -7,6 +7,10 @@ interface Keys {
   rotate: () => void;
   /** Move the selected devices by (dx, dy) mm. */
   nudge: (dx: number, dy: number) => void;
+  /** Copy, paste and duplicate return false when there was nothing to do, so the browser keeps its own action. */
+  copy?: () => boolean;
+  paste?: () => boolean;
+  duplicate?: () => boolean;
 }
 
 const ARROWS: Record<string, [number, number]> = {
@@ -33,6 +37,11 @@ export function useKeys(keys: Keys): void {
       } else if (mod && key === 'y') {
         e.preventDefault();
         k.redo();
+      } else if (mod && !e.shiftKey && !e.altKey && (key === 'c' || key === 'v' || key === 'd')) {
+        const run = key === 'c' ? k.copy : key === 'v' ? k.paste : k.duplicate;
+        const done = run?.() ?? false;
+        // Cmd/Ctrl+D is also the browser's bookmark key: the editor keeps it even when nothing is selected
+        if (done || (key === 'd' && run)) e.preventDefault();
       } else if (!mod && (e.key === 'Delete' || e.key === 'Backspace')) {
         e.preventDefault();
         k.remove();

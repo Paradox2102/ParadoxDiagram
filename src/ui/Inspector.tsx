@@ -275,7 +275,8 @@ function Help() {
           Select a wire to drag its segments or bends. Double-click a segment to add a bend, a bend to remove it.
         </p>
         <p>
-          <kbd>R</kbd> rotate · arrows nudge · <kbd>Del</kbd> delete · right-drag pan · wheel zoom · <kbd>⌘Z</kbd> undo
+          <kbd>R</kbd> rotate · arrows nudge · <kbd>Del</kbd> delete · right-drag pan · wheel zoom · <kbd>⌘Z</kbd> undo ·{' '}
+          <kbd>⌘C</kbd> <kbd>⌘V</kbd> copy, paste · <kbd>⌘D</kbd> duplicate
         </p>
         <p>
           Dragged devices snap to the edges and centres of other devices (hold <kbd>Alt</kbd> to place freely). Select
