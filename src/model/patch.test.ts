@@ -17,6 +17,7 @@ test.each<[string, (d: Doc) => Doc]>([
   ['a delete of a device with wires', (d) => apply(d, { type: 'delete', ids: ['intake'] })],
   ['a title change', (d) => apply(d, { type: 'setTitle', title: 'Robot' })],
   ['a field change', (d) => apply(d, { type: 'updateWire', id: 'p1', patch: { fuseA: 40 } })],
+  ['team and revision', (d) => apply(d, { type: 'setDetails', team: '2102 Paradox', revision: 'B' })],
   ['hide all labels', (d) => apply(d, { type: 'setHideTags', hidden: true })],
 ])('diff then apply gives the after doc: %s', (_, edit) => {
   const before = base();
@@ -99,4 +100,13 @@ test('a patch that removes a field removes only that field', () => {
   const pdh = applyPatch(otherSide, diffDocs(b, cleared)).doc.devices.find((d) => d.id === 'pdh')!;
   expect(pdh).not.toHaveProperty('ip');
   expect(pdh.notes).toBe('new');
+});
+
+test('a patch removes team and revision when they are cleared', () => {
+  const before = apply(base(), { type: 'setDetails', team: '2102', revision: 'B' });
+  const after = apply(before, { type: 'setDetails', team: '', revision: '' });
+  const p = diffDocs(before, after);
+  expect(p).toMatchObject({ team: null, revision: null });
+  expect(applyPatch(before, p).doc).toEqual(after);
+  expect('team' in after).toBe(false);
 });

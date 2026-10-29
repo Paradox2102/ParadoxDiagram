@@ -114,3 +114,12 @@ describe('new fields', () => {
     expect(w).not.toHaveProperty('awg');
   });
 });
+
+test('team and revision survive a file round trip; empty or too long values are left out', () => {
+  const ok = validateDoc({ ...base, team: ' 2102 Paradox ', revision: 'B' }, catalog).doc;
+  expect(ok).toMatchObject({ team: '2102 Paradox', revision: 'B' });
+  const bad = validateDoc({ ...base, team: '', revision: 'x'.repeat(21) }, catalog).doc;
+  expect('team' in bad).toBe(false);
+  expect('revision' in bad).toBe(false);
+  expect('team' in validateDoc({ ...base, team: 'x'.repeat(41) }, catalog).doc).toBe(false);
+});

@@ -16,6 +16,9 @@ export interface DocPatch {
   keys?: Record<string, string[]>;
   title?: string;
   hideTags?: boolean;
+  /** Title-block fields: a value sets it, null removes it. */
+  team?: string | null;
+  revision?: string | null;
 }
 
 /** JSON with sorted keys, so two equal items compare equal whatever their key order. */
@@ -56,11 +59,13 @@ export function diffDocs(before: Doc, after: Doc): DocPatch {
   p.wires = diffItems(before.wires, after.wires, p);
   if (before.title !== after.title) p.title = after.title;
   if (!!before.hideTags !== !!after.hideTags) p.hideTags = !!after.hideTags;
+  for (const key of ['team', 'revision'] as const) if (before[key] !== after[key]) p[key] = after[key] ?? null;
   return p;
 }
 
 export function isEmptyPatch(p: DocPatch): boolean {
-  return !p.devices.length && !p.wires.length && !p.remove.length && p.title === undefined && p.hideTags === undefined;
+  return !p.devices.length && !p.wires.length && !p.remove.length && p.title === undefined && p.hideTags === undefined &&
+    p.team === undefined && p.revision === undefined;
 }
 
 /** The current item with only `keys` taken from the patch (a key missing from the patch item is removed). */
@@ -102,5 +107,9 @@ export function applyPatch(doc: Doc, p: DocPatch): { doc: Doc; error: string | n
   if (p.title !== undefined) next.title = p.title;
   if (p.hideTags === true) next.hideTags = true;
   if (p.hideTags === false) delete next.hideTags;
+  for (const key of ['team', 'revision'] as const) {
+    if (typeof p[key] === 'string') next[key] = p[key];
+    else if (p[key] === null) delete next[key];
+  }
   return { doc: next, error: null };
 }

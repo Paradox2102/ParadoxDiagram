@@ -149,3 +149,8 @@ test('the example robot can be built with ops only', () => {
   expect(doc.devices).toHaveLength(ex.devices.length);
   expect(doc.wires).toHaveLength(ex.wires.length);
 });
+
+test('set_title can set the team and the revision for the title block', () => {
+  const { doc } = run(rig(), [{ op: 'set_title', title: 'Robot', team: '2102 Paradox', revision: 'B' }]);
+  expect(doc).toMatchObject({ title: 'Robot', team: '2102 Paradox', revision: 'B' });
+});

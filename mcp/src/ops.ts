@@ -94,7 +94,11 @@ export const OpSchema = z.discriminatedUnion('op', [
   z.object({ op: z.literal('rotate'), ids, turns: z.number().int().min(1).max(3).optional().describe('Quarter turns clockwise. Default 1.') }).describe('Rotate devices.'),
   z.object({ op: z.literal('label_side'), ids, side: z.enum(TAG_SIDES) }).describe('Put the labels of devices on one side.'),
   z.object({ op: z.literal('set_label_hidden'), ids, hidden: z.boolean() }).describe('Hide or show the labels of devices.'),
-  z.object({ op: z.literal('set_title'), title: z.string() }).describe('Set the diagram title.'),
+  z.object({
+    op: z.literal('set_title'), title: z.string(),
+    team: z.string().max(40).optional().describe('Team number or name for the export title block. An empty string removes it.'),
+    revision: z.string().max(20).optional().describe('Revision for the export title block, for example "B". An empty string removes it.'),
+  }).describe('Set the diagram title, and optionally the team and revision that the export title block shows.'),
 ]);
 
 export type Op = z.infer<typeof OpSchema>;
@@ -114,7 +118,7 @@ export const OP_EXAMPLES: Record<OpName, Op> = {
   rotate: { op: 'rotate', ids: ['pdh'], turns: 1 },
   label_side: { op: 'label_side', ids: ['intake', 'indexer'], side: 'left' },
   set_label_hidden: { op: 'set_label_hidden', ids: ['bat'], hidden: true },
-  set_title: { op: 'set_title', title: 'Team 2102 robot' },
+  set_title: { op: 'set_title', title: 'Team 2102 robot', team: '2102 Paradox', revision: 'B' },
 };
 
 export class OpError extends Error {
@@ -346,6 +350,7 @@ function runOne(ctx: Ctx, op: Op): string {
       return `labels of ${op.ids.join(', ')} ${op.hidden ? 'hidden' : 'shown'}`;
     case 'set_title':
       ctx.do({ type: 'setTitle', title: op.title });
+      if (op.team !== undefined || op.revision !== undefined) ctx.do({ type: 'setDetails', team: op.team, revision: op.revision });
       return `title "${op.title}"`;
   }
 }

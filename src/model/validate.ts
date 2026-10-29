@@ -20,6 +20,10 @@ export const validFields = (v: unknown): v is CustomField[] =>
     typeof f.value === 'string' && f.value.length <= 200 && (f.onLabel === undefined || typeof f.onLabel === 'boolean'));
 export const validFuse = (v: unknown): v is number => typeof v === 'number' && Number.isFinite(v) && v > 0 && v <= 200;
 export const validAwg = (v: unknown): v is number => typeof v === 'number' && Number.isInteger(v) && v >= 4 && v <= 30;
+export const MAX_TEAM = 40;
+export const MAX_REVISION = 20;
+/** A trimmed title-block value of 1 to max characters, or undefined. */
+const detail = (v: unknown, max: number) => (typeof v === 'string' && v.trim() && v.trim().length <= max ? v.trim() : undefined);
 const num = (v: unknown) => (typeof v === 'number' && Number.isFinite(v) ? v : 0);
 
 export function validateDoc(raw: unknown, catalog: Catalog | null): { doc: Doc; droppedWires: number } {
@@ -93,5 +97,9 @@ export function validateDoc(raw: unknown, catalog: Catalog | null): { doc: Doc; 
 
   const doc: Doc = { format: 'paradox-diagram', version: 1, title: str(r.title, 'Untitled diagram'), devices, wires };
   if (r.hideTags === true) doc.hideTags = true;
+  const team = detail(r.team, MAX_TEAM);
+  if (team) doc.team = team;
+  const revision = detail(r.revision, MAX_REVISION);
+  if (revision) doc.revision = revision;
   return { doc, droppedWires };
 }

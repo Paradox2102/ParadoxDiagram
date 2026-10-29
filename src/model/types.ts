@@ -73,6 +73,10 @@ export interface Doc {
   wires: Wire[];
   /** Hide every device label. */
   hideTags?: boolean;
+  /** Team number or name, for the export title block (1 to 40 characters). */
+  team?: string;
+  /** Revision of the diagram, for the export title block (1 to 20 characters). */
+  revision?: string;
 }
 
 export const GRID_MM = 5;

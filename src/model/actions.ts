@@ -33,6 +33,8 @@ export type Action =
   | { type: 'updateWire'; id: string; patch: WirePatch }
   | { type: 'delete'; ids: string[] }
   | { type: 'setTitle'; title: string }
+  /** Team and revision for the title block; an empty value removes the field, a missing one keeps it. */
+  | { type: 'setDetails'; team?: string; revision?: string }
   | { type: 'setTagHidden'; ids: string[]; hidden: boolean }
   | { type: 'setTagSide'; ids: string[]; side: TagSide }
   | { type: 'setHideTags'; hidden: boolean }
@@ -137,6 +139,16 @@ export function apply(doc: Doc, action: Action): Doc {
     }
     case 'setTitle':
       return { ...doc, title: action.title };
+    case 'setDetails': {
+      const next: Doc = { ...doc };
+      for (const key of ['team', 'revision'] as const) {
+        const v = action[key]?.trim();
+        if (v === undefined) continue;
+        if (v) next[key] = v;
+        else delete next[key];
+      }
+      return next;
+    }
     case 'setTagHidden': {
       const ids = new Set(action.ids);
       return { ...doc, devices: doc.devices.map((d) => (ids.has(d.id) ? { ...d, hideTag: action.hidden } : d)) };

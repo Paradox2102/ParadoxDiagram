@@ -17,3 +17,9 @@ test('the new fields validate, and bad values do not', () => {
   ex.devices[4].ip = '10.21.2';
   expect(validate(ex)).toBe(false);
 });
+
+test('team and revision validate, and a team of 41 characters does not', () => {
+  const ex = read('examples/example-robot.paradox.json');
+  expect(validate({ ...ex, team: '2102 Paradox', revision: 'B' }), JSON.stringify(validate.errors)).toBe(true);
+  expect(validate({ ...ex, team: 'x'.repeat(41) })).toBe(false);
+});

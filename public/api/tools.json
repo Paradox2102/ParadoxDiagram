@@ -776,6 +776,16 @@
                     },
                     "title": {
                       "type": "string"
+                    },
+                    "team": {
+                      "description": "Team number or name for the export title block. An empty string removes it.",
+                      "type": "string",
+                      "maxLength": 40
+                    },
+                    "revision": {
+                      "description": "Revision for the export title block, for example \"B\". An empty string removes it.",
+                      "type": "string",
+                      "maxLength": 20
                     }
                   },
                   "required": [
@@ -783,7 +793,7 @@
                     "title"
                   ],
                   "additionalProperties": false,
-                  "description": "Set the diagram title."
+                  "description": "Set the diagram title, and optionally the team and revision that the export title block shows."
                 }
               ]
             },
@@ -1717,7 +1727,7 @@
     },
     {
       "op": "set_title",
-      "description": "Set the diagram title.",
+      "description": "Set the diagram title, and optionally the team and revision that the export title block shows.",
       "input": {
         "$schema": "https://json-schema.org/draft/2020-12/schema",
         "type": "object",
@@ -1728,6 +1738,16 @@
           },
           "title": {
             "type": "string"
+          },
+          "team": {
+            "description": "Team number or name for the export title block. An empty string removes it.",
+            "type": "string",
+            "maxLength": 40
+          },
+          "revision": {
+            "description": "Revision for the export title block, for example \"B\". An empty string removes it.",
+            "type": "string",
+            "maxLength": 20
           }
         },
         "required": [
@@ -1735,11 +1755,13 @@
           "title"
         ],
         "additionalProperties": false,
-        "description": "Set the diagram title."
+        "description": "Set the diagram title, and optionally the team and revision that the export title block shows."
       },
       "example": {
         "op": "set_title",
-        "title": "Team 2102 robot"
+        "title": "Team 2102 robot",
+        "team": "2102 Paradox",
+        "revision": "B"
       }
     }
   ],

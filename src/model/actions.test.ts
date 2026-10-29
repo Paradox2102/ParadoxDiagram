@@ -124,3 +124,11 @@ describe('new fields', () => {
     expect(d.devices.map((x) => x.id)).toEqual(['intake', 'd3', 'd4']);
   });
 });
+
+test('setDetails sets team and revision, trims them, and an empty value removes the field', () => {
+  let d = apply(emptyDoc(), { type: 'setDetails', team: ' 2102 Paradox ', revision: 'B' });
+  expect(d).toMatchObject({ team: '2102 Paradox', revision: 'B' });
+  d = apply(d, { type: 'setDetails', revision: '  ' });
+  expect(d.team).toBe('2102 Paradox');
+  expect('revision' in d).toBe(false);
+});

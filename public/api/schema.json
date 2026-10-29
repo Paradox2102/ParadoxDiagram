@@ -10,6 +10,8 @@
     "version": { "const": 1 },
     "title": { "type": "string" },
     "hideTags": { "type": "boolean", "description": "Hide every device label." },
+    "team": { "type": "string", "minLength": 1, "maxLength": 40, "description": "Team number or name, shown in the export title block." },
+    "revision": { "type": "string", "minLength": 1, "maxLength": 20, "description": "Revision of the diagram, shown in the export title block." },
     "devices": { "type": "array", "items": { "$ref": "#/$defs/device" } },
     "wires": { "type": "array", "items": { "$ref": "#/$defs/wire" } }
   },
