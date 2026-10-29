@@ -33,14 +33,23 @@ diagram that looks like a team wiring poster.
 - **Tidy layouts.** Devices snap to the grid and to the edges and centres of other devices. Select several
   devices to align them or set the space between them.
 - **Export and share.** SVG and PNG (2× or 4×) for posters and slides, JSON to keep a copy, and a share link
-  that opens the same diagram for anyone, with no account.
+  that opens the same diagram for anyone, with no account. SVG and PNG get a title block (title, team, revision,
+  date and layer) unless you turn it off in the Export menu.
+- **Check for problems.** The **Check** button lists CAN IDs used twice on one bus, CAN devices with no ID, devices
+  with no power, power channels that feed two devices, and devices or labels on top of each other. Click a problem
+  to select its devices.
+- **Device table.** Export → Table (CSV) gives one row per device with its CAN bus, CAN ID, power channel, fuse,
+  wire gauge, IP address and your own fields, for code constants or a sheet inside the robot.
+- **Copy and paste.** Copy, paste and duplicate devices with the wires between them. Each copy gets the next free
+  CAN ID.
 - **Saved as you go.** The layout is kept in your browser, with undo and redo.
 - **Dark mode.** Follows your system setting, or pick Light or Dark with the button in the top bar. Exports
   always come out on white.
 - **Build it with an AI.** An MCP server lets an AI agent (Claude, Cursor and others) add the devices, connect them,
   lay them out and fill in CAN IDs, power channels, fuse sizes and IP addresses, while you edit the same diagram live.
   See [Use it with an AI](#use-it-with-an-ai).
-- **Details on every device and wire.** IP address, CAN bus (found from the CAN chain when you leave it empty), your
+- **Details on every device and wire.** IP address, CAN bus (found from the CAN chain when you leave it empty; with
+  two or more CANivores, their buses are CANivore 1, CANivore 2, ...), your
   own label/value fields, and fuse size and wire gauge on power wires. They show in the label when you want them to.
 - **Icon gallery.** Browse every icon at [diagram.team2102.org/gallery](https://diagram.team2102.org/gallery) and
   download one SVG, a whole group (by type or by vendor), the icons a search finds, or the whole collection as a
@@ -100,9 +109,11 @@ reference and the file format are at [diagram.team2102.org/api](https://diagram.
 1. Find a device in the list on the left. Drag it onto the canvas, or click it to add it at the centre.
 2. Hover a device to see its ports. Drag from a port to a port of the same layer to draw a wire.
 3. Select a device to name it and give it a CAN ID. Select a wire to change its route.
-4. Use **Export** to save an SVG, a PNG or a JSON file, or **Share** to copy a link.
+4. Click **Check** to find problems such as a CAN ID used twice.
+5. With nothing selected, fill in **Team** and **Revision** for the title block.
+6. Use **Export** to save an SVG, a PNG, a JSON file or the device table, or **Share** to copy a link.
 
-To try it with a full robot, use **Open** with
+To try it with a full robot, use **New → Example robot**, or the button in the help panel. The file is
 [`examples/example-robot.paradox.json`](examples/example-robot.paradox.json).
 
 | Action | How |
@@ -113,6 +124,7 @@ To try it with a full robot, use **Open** with
 | Move | Drag a device (hold Alt to place it without snapping); arrow keys nudge 1 mm, Shift + arrow 5 mm |
 | Rotate | R, or the rotate handle on a selected device |
 | Delete | Delete or Backspace |
+| Copy, paste, duplicate | Ctrl/⌘ + C, Ctrl/⌘ + V, Ctrl/⌘ + D |
 | Undo / redo | Ctrl/⌘ + Z, Ctrl/⌘ + Shift + Z |
 | Add or remove a bend | Double-click a wire segment, or a bend |
 
