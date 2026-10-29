@@ -1,6 +1,6 @@
 import { readFileSync } from 'node:fs';
 import { join } from 'node:path';
-import { exportPage, exportSvg, MIN_PAGE_MM, renderWirePaths, stripAnchors, TITLE_BLOCK_MM } from './svg';
+import { exportPage, exportSvg, fitText, MIN_PAGE_MM, renderWirePaths, stripAnchors, TITLE_BLOCK_MM } from './svg';
 import { apply } from '../model/actions';
 import { emptyDoc, type Doc } from '../model/types';
 import { catalog } from '../test/fixtures';
@@ -240,6 +240,29 @@ describe('title block', () => {
     expect(block.h - plain.h).toBeCloseTo(TITLE_BLOCK_MM * (block.w / 300), 5);
     const huge = exportPage(wide(5000), catalog, true);
     expect(huge.h - exportPage(wide(5000), catalog, false).h).toBeCloseTo(TITLE_BLOCK_MM * 3, 5);
+  });
+
+  test('fitText keeps a short text, makes a long one smaller, and cuts a very long one with an ellipsis', () => {
+    expect(fitText('Comp bot', 4.2, 80)).toEqual({ text: 'Comp bot', size: 4.2 });
+    const smaller = fitText('2026 Reefscape Competition Robot Wiring', 4.2, 70);
+    expect(smaller.text).toBe('2026 Reefscape Competition Robot Wiring');
+    expect(smaller.size).toBeLessThan(4.2);
+    expect(smaller.size).toBeGreaterThanOrEqual(4.2 * 0.7);
+    const cut = fitText('x'.repeat(200), 4.2, 70);
+    expect(cut.text.endsWith('…')).toBe(true);
+    expect(cut.text.length * cut.size * 0.56).toBeLessThanOrEqual(70);
+  });
+
+  test('a long title does not run into the date on a small page', async () => {
+    let d = apply(emptyDoc(), { type: 'setDetails', team: '2102 Paradox', revision: 'B' });
+    d = apply(d, { type: 'setTitle', title: '2026 Reefscape Competition Robot Wiring Diagram, Rev for Champs' });
+    const svg = await exportSvg(d, catalog, 'network', realIcons, { titleBlock: { date: '2026-10-29' } });
+    const title = /<text[^>]*font-size="([\d.]+)" font-weight="bold"[^>]*>([^<]*)<\/text>\n<text/.exec(svg.slice(svg.indexOf('data-title-block')))!;
+    const facts = 'Rev B  ·  2026-10-29  ·  Network layer';
+    expect(viewBox(svg)[2]).toBe(MIN_PAGE_MM);
+    const usable = MIN_PAGE_MM - 2 * 10;
+    expect(title[2].endsWith('…')).toBe(true);
+    expect(title[2].length * Number(title[1]) * 0.56 + facts.length * 3.4 * 0.5 + 6).toBeLessThanOrEqual(usable + 0.01);
   });
 
   test('an empty diagram exports with a block and no NaN', async () => {

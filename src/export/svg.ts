@@ -86,6 +86,22 @@ export function exportPage(doc: Doc, catalog: Catalog | null, titleBlock: boolea
   return { x, y: box.y - EXPORT_MARGIN_MM, w, h };
 }
 
+/** Width of a character as a share of the font size, a little over Helvetica's and Liberation Sans' average, so an
+ * estimate errs wide. SVG text does not wrap, so the title block estimates widths to keep its texts apart. */
+const BOLD_CHAR = 0.56;
+const PLAIN_CHAR = 0.5;
+
+/** The text at this size when it fits maxWidth (mm); else smaller, down to 70%; else cut with an ellipsis. */
+export function fitText(text: string, size: number, maxWidth: number): { text: string; size: number } {
+  const width = (n: number, s: number) => n * s * BOLD_CHAR;
+  if (width(text.length, size) <= maxWidth) return { text, size };
+  const smallest = size * 0.7;
+  const fits = maxWidth / width(text.length, 1);
+  if (fits >= smallest) return { text, size: fits };
+  const keep = Math.max(1, Math.floor(maxWidth / width(1, smallest)) - 1);
+  return { text: text.slice(0, keep).trimEnd() + '…', size: smallest };
+}
+
 /** The title block: title and team on the left; revision, date and layer, then the site, on the right. */
 function titleBlockSvg(doc: Doc, layer: Layer | 'all', date: string, page: { x: number; y: number; w: number; h: number }): string[] {
   const k = blockScale(page.w);
@@ -93,10 +109,12 @@ function titleBlockSvg(doc: Doc, layer: Layer | 'all', date: string, page: { x: 
   const left = page.x + EXPORT_MARGIN_MM;
   const right = page.x + page.w - EXPORT_MARGIN_MM;
   const facts = [doc.revision ? `Rev ${doc.revision}` : '', date, layer === 'all' ? '' : LAYER_TEXT[layer]].filter(Boolean);
+  const factsText = facts.join('  ·  ');
+  const title = fitText(doc.title, 4.2 * k, right - left - factsText.length * 3.4 * k * PLAIN_CHAR - 6 * k);
   const out = [
     `<line data-title-block="" x1="${f(left)}" y1="${f(top)}" x2="${f(right)}" y2="${f(top)}" stroke="${COLORS.muted}" stroke-width="${f(0.3 * k)}"/>`,
-    `<text x="${f(left)}" y="${f(top + 6 * k)}" font-size="${f(4.2 * k)}" font-weight="bold" fill="${COLORS.ink}">${esc(doc.title)}</text>`,
-    `<text x="${f(right)}" y="${f(top + 6 * k)}" font-size="${f(3.4 * k)}" text-anchor="end" fill="${COLORS.ink}">${esc(facts.join('  ·  '))}</text>`,
+    `<text x="${f(left)}" y="${f(top + 6 * k)}" font-size="${f(title.size)}" font-weight="bold" fill="${COLORS.ink}">${esc(title.text)}</text>`,
+    `<text x="${f(right)}" y="${f(top + 6 * k)}" font-size="${f(3.4 * k)}" text-anchor="end" fill="${COLORS.ink}">${esc(factsText)}</text>`,
     `<text x="${f(right)}" y="${f(top + 10.5 * k)}" font-size="${f(2.6 * k)}" text-anchor="end" fill="${COLORS.muted}">diagram.team2102.org</text>`,
   ];
   if (doc.team) {
