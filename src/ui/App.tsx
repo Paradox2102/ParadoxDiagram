@@ -3,6 +3,7 @@ import { iconFrame, loadCatalog, type Catalog } from '../catalog/catalog';
 import { downloadBlob } from '../export/download';
 import { docToJson, fileBase } from '../export/json';
 import { svgToPng } from '../export/png';
+import { deviceTableCsv } from '../export/table';
 import { contentBox, EXPORT_MARGIN_MM, exportSvg } from '../export/svg';
 import { nextId } from '../model/ids';
 import { copyItems, pasteItems, type Clip } from '../model/paste';
@@ -166,6 +167,10 @@ export function App() {
     const base = fileBase(doc.title);
     if (kind === 'json') {
       downloadBlob(new Blob([docToJson(doc)], { type: 'application/json' }), `${base}.paradox.json`);
+      return;
+    }
+    if (kind === 'csv') {
+      downloadBlob(new Blob([deviceTableCsv(doc, catalog)], { type: 'text/csv;charset=utf-8' }), `${base}-devices.csv`);
       return;
     }
     if (!catalog) {

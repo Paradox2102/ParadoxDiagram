@@ -24,7 +24,7 @@ function channelOf(port: string): string | null {
 }
 
 /** The fuse and gauge of a power wire as the tag shows them: " (40 A, 12 AWG)", or "". */
-function ratingOf(w: Wire): string {
+function ratingOf(w: { fuseA?: number; awg?: number }): string {
   const parts = [w.fuseA !== undefined ? `${w.fuseA} A` : '', w.awg !== undefined ? `${w.awg} AWG` : ''].filter(Boolean);
   return parts.length ? ` (${parts.join(', ')})` : '';
 }
@@ -34,14 +34,15 @@ export function tagShown(doc: Doc, deviceId: string): boolean {
   return !doc.hideTags && !doc.devices.find((d) => d.id === deviceId)?.hideTag;
 }
 
-export function deviceTag(doc: Doc, deviceId: string, catalog: Catalog | null): { name: string; facts: string } {
-  const dev = doc.devices.find((d) => d.id === deviceId);
-  if (!dev) return { name: '', facts: '' };
-  const icon = catalog?.bySlug.get(dev.slug);
-  const name = dev.name.trim() || icon?.name || dev.slug;
+/** A device that feeds this one, by its short name (PDH), with the channels and each channel's fuse and gauge. */
+export interface PowerFeed {
+  feeder: string;
+  channels: { channel: string; fuseA?: number; awg?: number }[];
+}
 
-  // feeding device short name -> the channels it feeds this device from, each with its fuse and gauge
-  const feeds = new Map<string, Map<string, string>>();
+/** The power channels that feed a device, grouped by feeding device, channels in number order. */
+export function powerFeeds(doc: Doc, catalog: Catalog | null, deviceId: string): PowerFeed[] {
+  const feeds = new Map<string, Map<string, Wire>>();
   for (const w of doc.wires) {
     if (w.layer !== 'power') continue;
     const other = w.from.device === deviceId ? w.to : w.to.device === deviceId ? w.from : null;
@@ -52,8 +53,26 @@ export function deviceTag(doc: Doc, deviceId: string, catalog: Catalog | null): 
     const short = feederName(feeder.slug, catalog?.bySlug.get(feeder.slug));
     if (!feeds.has(short)) feeds.set(short, new Map());
     const channels = feeds.get(short)!;
-    if (!channels.get(channel)) channels.set(channel, ratingOf(w));
+    // a channel drawn twice (a pair): the wire with a fuse or gauge wins
+    const had = channels.get(channel);
+    if (!had || !ratingOf(had)) channels.set(channel, w);
   }
+  return [...feeds].map(([feeder, channels]) => ({
+    feeder,
+    channels: [...channels.keys()]
+      .sort((a, b) => parseFloat(a) - parseFloat(b) || a.localeCompare(b))
+      .map((channel) => {
+        const w = channels.get(channel)!;
+        return { channel, ...(w.fuseA !== undefined ? { fuseA: w.fuseA } : {}), ...(w.awg !== undefined ? { awg: w.awg } : {}) };
+      }),
+  }));
+}
+
+export function deviceTag(doc: Doc, deviceId: string, catalog: Catalog | null): { name: string; facts: string } {
+  const dev = doc.devices.find((d) => d.id === deviceId);
+  if (!dev) return { name: '', facts: '' };
+  const icon = catalog?.bySlug.get(dev.slug);
+  const name = dev.name.trim() || icon?.name || dev.slug;
 
   const facts: string[] = [];
   // with several CANivores, each one's label says which bus it is
@@ -64,9 +83,8 @@ export function deviceTag(doc: Doc, deviceId: string, catalog: Catalog | null): 
     const bus = busOf(doc, catalog, deviceId);
     facts.push(bus && busesInUse(doc, catalog).size > 1 ? `CAN ${bus}·${dev.canId}` : `CAN ${dev.canId}`);
   }
-  for (const [short, channels] of feeds) {
-    const sorted = [...channels.keys()].sort((a, b) => parseFloat(a) - parseFloat(b) || a.localeCompare(b));
-    facts.push(`${short} ${sorted.map((c) => c + channels.get(c)).join('/')}`);
+  for (const f of powerFeeds(doc, catalog, deviceId)) {
+    facts.push(`${f.feeder} ${f.channels.map((c) => c.channel + ratingOf(c)).join('/')}`);
   }
   if (dev.ip) facts.push(dev.ip);
   for (const f of dev.fields ?? []) if (f.onLabel) facts.push(`${f.label} ${f.value}`.trim());

@@ -137,3 +137,11 @@ test('Check with no problems says so', async () => {
   await userEvent.click(screen.getByRole('button', { name: 'Check' }));
   expect(screen.getByRole('menu')).toHaveTextContent('No problems found.');
 });
+
+test('Export offers the device table as CSV', async () => {
+  const onExport = vi.fn();
+  render(<Header {...props({ onExport })} />);
+  await userEvent.click(screen.getByRole('button', { name: 'Export' }));
+  await userEvent.click(screen.getByRole('menuitem', { name: 'Table (CSV)' }));
+  expect(onExport).toHaveBeenCalledWith('csv');
+});

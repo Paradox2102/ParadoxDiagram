@@ -5,7 +5,7 @@ import { Logo } from './Logo';
 import { ThemeButton } from './ThemeButton';
 import { track } from '../usage/track';
 
-export type ExportKind = 'svg' | 'png2' | 'png4' | 'json';
+export type ExportKind = 'svg' | 'png2' | 'png4' | 'json' | 'csv';
 export type LayerView = Layer | 'all';
 
 export const LAYER_VIEWS: { id: LayerView; label: string; swatch: string[] }[] = [
@@ -21,6 +21,7 @@ const EXPORTS: { id: ExportKind; label: string }[] = [
   { id: 'png2', label: 'PNG 2x' },
   { id: 'png4', label: 'PNG 4x' },
   { id: 'json', label: 'JSON' },
+  { id: 'csv', label: 'Table (CSV)' },
 ];
 
 export interface HeaderProps {
