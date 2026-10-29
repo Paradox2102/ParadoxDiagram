@@ -1,10 +1,12 @@
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useMemo, useRef, useState } from 'react';
 import { iconFrame, loadCatalog, type Catalog } from '../catalog/catalog';
 import { downloadBlob } from '../export/download';
 import { docToJson, fileBase } from '../export/json';
 import { svgToPng } from '../export/png';
 import { contentBox, EXPORT_MARGIN_MM, exportSvg } from '../export/svg';
 import { nextId } from '../model/ids';
+import { findProblems } from '../model/problems';
+import { deviceTag } from '../model/tags';
 import { emptyDoc, type Doc } from '../model/types';
 import { validateDoc } from '../model/validate';
 import { autosaveAllowed, useLive, type LiveSend } from '../live/useLive';
@@ -79,6 +81,11 @@ export function App() {
     const t = setTimeout(() => setSaved(saveDoc(storage, doc)), AUTOSAVE_MS);
     return () => clearTimeout(t);
   }, [doc, liveOn]);
+
+  const problems = useMemo(
+    () => (catalog ? findProblems(doc, catalog, (id) => deviceTag(doc, id, catalog).name) : []),
+    [doc, catalog],
+  );
 
   const deleteSelection = () => {
     if (selection.length) hist.change({ type: 'delete', ids: selection });
@@ -159,6 +166,7 @@ export function App() {
         onNew={onNew} onOpen={onOpen} onExport={onExport} saved={saved || liveOn}
         live={live.state && <LiveBadge state={live.state} onLeave={live.leave} />}
         labels={!doc.hideTags} onLabels={(show) => hist.change({ type: 'setHideTags', hidden: !show })}
+        problems={problems} onPick={setSelection}
         onShare={async () => buildShareUrl(window.location.origin + window.location.pathname, await encodeShare(doc), layer)}
       />
       <Palette catalog={catalog} error={catalogError} onAdd={addDevice} />

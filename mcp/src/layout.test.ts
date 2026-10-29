@@ -6,7 +6,7 @@ import { loadNodeCatalog } from './catalog';
 import { autoLayout } from './layout';
 import { runOps } from './ops';
 import { spaceBox } from './place';
-import { findProblems } from './problems';
+import { findProblems } from '../../src/model/problems';
 
 const catalog = loadNodeCatalog();
 const example = () =>

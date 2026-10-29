@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState, type ReactNode } from 'react';
 import type { Layer } from '../catalog/catalog';
+import type { Problem } from '../model/problems';
 import { Logo } from './Logo';
 import { ThemeButton } from './ThemeButton';
 import { track } from '../usage/track';
@@ -41,12 +42,37 @@ export interface HeaderProps {
   onShare: () => Promise<string>;
   /** The live badge, while the diagram is shared live with an AI. */
   live?: ReactNode;
+  /** The problems of the current diagram, for the Check list. */
+  problems: Problem[];
+  /** Selects the devices of a problem picked from the Check list. */
+  onPick: (ids: string[]) => void;
+}
+
+/** A button with a list under it. The list closes on a pick (the children get close) or a click outside it. */
+function Menu(p: { label: string; className?: string; title?: string; listClassName?: string; children: (close: () => void) => ReactNode }) {
+  const [open, setOpen] = useState(false);
+  const ref = useRef<HTMLDivElement>(null);
+  useEffect(() => {
+    if (!open) return;
+    const close = (e: PointerEvent) => {
+      if (!ref.current?.contains(e.target as Node)) setOpen(false);
+    };
+    window.addEventListener('pointerdown', close);
+    return () => window.removeEventListener('pointerdown', close);
+  }, [open]);
+  return (
+    <div className="menu" ref={ref}>
+      <button type="button" className={p.className} title={p.title} aria-haspopup="menu" aria-expanded={open} onClick={() => setOpen(!open)}>
+        {p.label}
+      </button>
+      {open && <div role="menu" className={['menu-list', p.listClassName].filter(Boolean).join(' ')}>{p.children(() => setOpen(false))}</div>}
+    </div>
+  );
 }
 
 type ShareState = { url: string; copied: boolean } | { error: string } | null;
 
 export function Header(p: HeaderProps) {
-  const [menu, setMenu] = useState(false);
   const [title, setTitle] = useState(p.title);
   const [about, setAbout] = useState(false);
   const [share, setShare] = useState<ShareState>(null);
@@ -72,16 +98,6 @@ export function Header(p: HeaderProps) {
     if (title !== p.title) p.onTitle(title);
   };
   const fileRef = useRef<HTMLInputElement>(null);
-  const menuRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    if (!menu) return;
-    const close = (e: PointerEvent) => {
-      if (!menuRef.current?.contains(e.target as Node)) setMenu(false);
-    };
-    window.addEventListener('pointerdown', close);
-    return () => window.removeEventListener('pointerdown', close);
-  }, [menu]);
 
   return (
     <header className="bar">
@@ -133,32 +149,36 @@ export function Header(p: HeaderProps) {
             e.target.value = '';
           }}
         />
+        <Menu
+          label={p.problems.length ? `Check (${p.problems.length})` : 'Check'}
+          className={p.problems.length ? 'has-problems' : undefined}
+          title="Problems: CAN IDs, power, overlaps" listClassName="problem-list"
+        >
+          {(close) => p.problems.length
+            ? p.problems.map((x, i) => (
+              <button key={i} type="button" role="menuitem" onClick={() => { close(); p.onPick(x.ids); }}>{x.message}</button>
+            ))
+            : <p className="problem-none">No problems found.</p>}
+        </Menu>
         <button type="button" onClick={onShare} title="Copy a link that opens this version of the diagram">Share</button>
         <ThemeButton className="theme-button" />
         <a className="nav-button" href="gallery" title="Browse and download the device icons">Icons</a>
         <a className="nav-button" href="api" title="Build the diagram with an AI agent (MCP server)">API</a>
         <button type="button" onClick={() => setAbout(true)}>About</button>
-        <div className="menu" ref={menuRef}>
-          <button type="button" className="primary" aria-haspopup="menu" aria-expanded={menu} onClick={() => setMenu(!menu)}>
-            Export
-          </button>
-          {menu && (
-            <div role="menu" className="menu-list">
-              {EXPORTS.map((x) => (
-                <button
-                  key={x.id} type="button" role="menuitem"
-                  onClick={() => {
-                    setMenu(false);
-                    p.onExport(x.id);
-                    track('export');
-                  }}
-                >
-                  {x.label}
-                </button>
-              ))}
-            </div>
-          )}
-        </div>
+        <Menu label="Export" className="primary">
+          {(close) => EXPORTS.map((x) => (
+            <button
+              key={x.id} type="button" role="menuitem"
+              onClick={() => {
+                close();
+                p.onExport(x.id);
+                track('export');
+              }}
+            >
+              {x.label}
+            </button>
+          ))}
+        </Menu>
       </div>
       {share && (
         <div className="about-backdrop" onPointerDown={() => setShare(null)}>

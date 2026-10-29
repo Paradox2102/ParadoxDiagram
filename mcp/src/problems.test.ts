@@ -5,7 +5,7 @@ import { validateDoc } from '../../src/model/validate';
 import { emptyDoc, type Doc } from '../../src/model/types';
 import { loadNodeCatalog } from './catalog';
 import { runOps, type Op } from './ops';
-import { findProblems } from './problems';
+import { findProblems } from '../../src/model/problems';
 
 const catalog = loadNodeCatalog();
 const build = (ops: Op[]) => runOps(emptyDoc(), catalog, ops).doc;

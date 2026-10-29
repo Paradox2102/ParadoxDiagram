@@ -8,7 +8,7 @@ function props(over: Partial<HeaderProps> = {}): HeaderProps {
     title: 'Robot', onTitle: () => {}, layer: 'all', onLayer: () => {},
     canUndo: false, canRedo: false, onUndo: () => {}, onRedo: () => {},
     onNew: () => {}, onOpen: () => {}, onExport: () => {}, saved: true,
-    labels: true, onLabels: () => {}, onShare: async () => 'https://x.test/#share=abc', ...over,
+    labels: true, onLabels: () => {}, onShare: async () => 'https://x.test/#share=abc', problems: [], onPick: () => {}, ...over,
   };
 }
 
@@ -115,4 +115,25 @@ test('Share and each Export kind count one use', async () => {
   }
   expect(count.mock.calls).toEqual(Array(kinds).fill(['export']));
   count.mockRestore();
+});
+
+test('Check shows the count, lists the problems, and a click picks the devices and closes the list', async () => {
+  const onPick = vi.fn();
+  const problems = [
+    { code: 'can-duplicate' as const, message: 'CAN ID 3 is used twice on bus S1: Front left, Front right', ids: ['d1', 'd2'] },
+    { code: 'no-power' as const, message: 'Intake has a power port and no power wire', ids: ['d5'] },
+  ];
+  render(<Header {...props({ problems, onPick })} />);
+  await userEvent.click(screen.getByRole('button', { name: 'Check (2)' }));
+  const items = screen.getAllByRole('menuitem');
+  expect(items.map((i) => i.textContent)).toEqual(problems.map((p) => p.message));
+  await userEvent.click(items[0]);
+  expect(onPick).toHaveBeenCalledWith(['d1', 'd2']);
+  expect(screen.queryByRole('menuitem')).toBeNull();
+});
+
+test('Check with no problems says so', async () => {
+  render(<Header {...props()} />);
+  await userEvent.click(screen.getByRole('button', { name: 'Check' }));
+  expect(screen.getByRole('menu')).toHaveTextContent('No problems found.');
 });

@@ -124,6 +124,10 @@ h2 { font-family: var(--font-display); }
 }
 .menu-list button { text-align: left; border: 0; background: none; padding: 6px 10px; border-radius: 4px; cursor: pointer; }
 .menu-list button:hover { background: var(--bg); }
+.menu > button.has-problems { border-color: #e3b341; color: #ffcf66; }
+.problem-list { width: min(380px, calc(100vw - 32px)); max-height: 60vh; overflow: auto; }
+.problem-list button { white-space: normal; line-height: 1.35; }
+.problem-none { margin: 6px 10px; color: var(--muted); }
 
 .live-badge > button { display: inline-flex; align-items: center; gap: 6px; }
 .live-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--bar-muted); }

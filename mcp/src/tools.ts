@@ -8,7 +8,7 @@ import { busOf } from '../../src/model/canbus';
 import type { Doc } from '../../src/model/types';
 import { autoLayout } from './layout';
 import { OP_EXAMPLES, OpSchema, runOps } from './ops';
-import { findProblems } from './problems';
+import { findProblems } from '../../src/model/problems';
 import { renderPng } from './render';
 import type { DiagramStore } from './store';
 
