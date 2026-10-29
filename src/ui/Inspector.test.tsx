@@ -218,3 +218,13 @@ test('with nothing selected, the help panel opens the example robot', async () =
   await userEvent.click(screen.getByRole('button', { name: 'Open the example robot' }));
   expect(onExample).toHaveBeenCalled();
 });
+
+test('with nothing selected, Team and Revision set the title block details', async () => {
+  const dispatch = vi.fn();
+  render(<Inspector doc={doc()} catalog={catalog} selection={[]} dispatch={dispatch} />);
+  await userEvent.type(screen.getByLabelText('Team'), '2102 Paradox');
+  await userEvent.tab();
+  await userEvent.type(screen.getByLabelText('Revision'), 'B');
+  await userEvent.tab();
+  expect(dispatch.mock.calls).toEqual([[{ type: 'setDetails', team: '2102 Paradox' }], [{ type: 'setDetails', revision: 'B' }]]);
+});

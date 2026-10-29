@@ -8,7 +8,7 @@ function props(over: Partial<HeaderProps> = {}): HeaderProps {
     title: 'Robot', onTitle: () => {}, layer: 'all', onLayer: () => {},
     canUndo: false, canRedo: false, onUndo: () => {}, onRedo: () => {},
     onNew: () => {}, onOpen: () => {}, onExport: () => {}, saved: true,
-    labels: true, onLabels: () => {}, onShare: async () => 'https://x.test/#share=abc', problems: [], onPick: () => {}, ...over,
+    labels: true, onLabels: () => {}, onShare: async () => 'https://x.test/#share=abc', problems: [], onPick: () => {}, titleBlock: true, onTitleBlock: () => {}, ...over,
   };
 }
 
@@ -154,4 +154,15 @@ test('New offers an empty diagram or the example robot', async () => {
   await userEvent.click(screen.getByRole('button', { name: 'New' }));
   await userEvent.click(screen.getByRole('menuitem', { name: 'Empty diagram' }));
   expect(onNew.mock.calls).toEqual([['example'], ['empty']]);
+});
+
+test('the Title block item shows its state and switches it without closing the menu', async () => {
+  const onTitleBlock = vi.fn();
+  render(<Header {...props({ onTitleBlock })} />);
+  await userEvent.click(screen.getByRole('button', { name: 'Export' }));
+  const item = screen.getByRole('menuitemcheckbox', { name: 'Title block' });
+  expect(item).toHaveAttribute('aria-checked', 'true');
+  await userEvent.click(item);
+  expect(onTitleBlock).toHaveBeenCalledWith(false);
+  expect(screen.getByRole('menu')).toBeInTheDocument();
 });

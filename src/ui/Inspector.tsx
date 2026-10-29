@@ -4,7 +4,7 @@ import type { Catalog } from '../catalog/catalog';
 import type { Action, DevicePatch } from '../model/actions';
 import { foundBus } from '../model/canbus';
 import { deviceTag } from '../model/tags';
-import { normalIp, validAwg, validCanBus, validFuse, validIp } from '../model/validate';
+import { MAX_REVISION, MAX_TEAM, normalIp, validAwg, validCanBus, validFuse, validIp } from '../model/validate';
 import { Arrange } from './Arrange';
 import { FieldsEditor } from './FieldsEditor';
 import { RotateIcon } from './RotateIcon';
@@ -267,6 +267,27 @@ function WireForm({ doc, catalog, wire, dispatch }: { doc: Doc; catalog: Catalog
   );
 }
 
+const longest = (max: number) => (v: string) => (v.trim().length <= max ? null : `${max} characters at most`);
+
+/** Team and revision, for the title block under SVG and PNG exports. */
+function DiagramDetails({ doc, dispatch }: { doc: Doc; dispatch: (a: Action) => void }) {
+  return (
+    <>
+      <h2>Diagram</h2>
+      {/* the key resets a box when the value changes from outside (undo, New, Open) */}
+      <Field
+        key={`team:${doc.team ?? ''}`} label="Team" value={doc.team ?? ''} placeholder="Number or name"
+        check={longest(MAX_TEAM)} onCommit={(team) => dispatch({ type: 'setDetails', team })}
+      />
+      <Field
+        key={`rev:${doc.revision ?? ''}`} label="Revision" value={doc.revision ?? ''} placeholder="For example B"
+        check={longest(MAX_REVISION)} onCommit={(revision) => dispatch({ type: 'setDetails', revision })}
+      />
+      <p className="field-note">Shown in the title block of SVG and PNG exports.</p>
+    </>
+  );
+}
+
 function Help({ onExample }: { onExample?: () => void }) {
   return (
     <>
@@ -302,7 +323,14 @@ function Help({ onExample }: { onExample?: () => void }) {
 export function Inspector({ doc, catalog, selection, dispatch, onExample }: Props) {
   const live = selection.filter((id) => doc.devices.some((d) => d.id === id) || doc.wires.some((w) => w.id === id));
   let body;
-  if (live.length === 0) body = <Help onExample={onExample} />;
+  if (live.length === 0) {
+    body = (
+      <>
+        <DiagramDetails doc={doc} dispatch={dispatch} />
+        <Help onExample={onExample} />
+      </>
+    );
+  }
   else if (live.length > 1) {
     const devices = live.filter((id) => doc.devices.some((d) => d.id === id));
     const selected = doc.devices.filter((d) => devices.includes(d.id));

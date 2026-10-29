@@ -11,6 +11,15 @@ import { deviceTransform } from '../geometry/transform';
 export { renderWirePaths };
 
 export const EXPORT_MARGIN_MM = 10;
+/** The title block: a strip this high under the diagram, on a page at least MIN_PAGE_MM wide. */
+export const TITLE_BLOCK_MM = 14;
+export const MIN_PAGE_MM = 160;
+const LAYER_TEXT = { power: 'Power layer', can: 'CAN layer', network: 'Network layer', air: 'Air layer' } as const;
+
+export interface ExportOptions {
+  /** Draw the title block, with this export date (YYYY-MM-DD). */
+  titleBlock?: { date: string };
+}
 
 const esc = (s: string) => s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
 const f = (v: number) => String(Math.round(v * 100) / 100 + 0);
@@ -56,17 +65,47 @@ export function contentBox(doc: Doc, catalog: Catalog | null) {
   return { x: x0, y: y0, w: x1 - x0, h: y1 - y0 };
 }
 
+/** The exported page in diagram mm: the content and its margin, and the title block under it when asked. */
+export function exportPage(doc: Doc, catalog: Catalog | null, titleBlock: boolean) {
+  const box = contentBox(doc, catalog);
+  let x = box.x - EXPORT_MARGIN_MM;
+  let w = box.w + 2 * EXPORT_MARGIN_MM;
+  let h = box.h + 2 * EXPORT_MARGIN_MM;
+  if (titleBlock) {
+    if (w < MIN_PAGE_MM) {
+      x -= (MIN_PAGE_MM - w) / 2;
+      w = MIN_PAGE_MM;
+    }
+    h += TITLE_BLOCK_MM;
+  }
+  return { x, y: box.y - EXPORT_MARGIN_MM, w, h };
+}
+
+/** The title block: title and team on the left; revision, date and layer, then the site, on the right. */
+function titleBlockSvg(doc: Doc, layer: Layer | 'all', date: string, page: { x: number; y: number; w: number; h: number }): string[] {
+  const top = page.y + page.h - TITLE_BLOCK_MM;
+  const left = page.x + EXPORT_MARGIN_MM;
+  const right = page.x + page.w - EXPORT_MARGIN_MM;
+  const facts = [doc.revision ? `Rev ${doc.revision}` : '', date, layer === 'all' ? '' : LAYER_TEXT[layer]].filter(Boolean);
+  const out = [
+    `<line data-title-block="" x1="${f(left)}" y1="${f(top)}" x2="${f(right)}" y2="${f(top)}" stroke="${COLORS.muted}" stroke-width="0.3"/>`,
+    `<text x="${f(left)}" y="${f(top + 6)}" font-size="4.2" font-weight="bold" fill="${COLORS.ink}">${esc(doc.title)}</text>`,
+    `<text x="${f(right)}" y="${f(top + 6)}" font-size="3.4" text-anchor="end" fill="${COLORS.ink}">${esc(facts.join('  ·  '))}</text>`,
+    `<text x="${f(right)}" y="${f(top + 10.5)}" font-size="2.6" text-anchor="end" fill="${COLORS.muted}">diagram.team2102.org</text>`,
+  ];
+  if (doc.team) out.push(`<text x="${f(left)}" y="${f(top + 10.5)}" font-size="3.2" fill="${COLORS.muted}">${esc(doc.team)}</text>`);
+  return out;
+}
+
 export async function exportSvg(
   doc: Doc,
   catalog: Catalog,
   layer: Layer | 'all',
   iconText: (path: string) => Promise<string | null>,
+  opts: ExportOptions = {},
 ): Promise<string> {
-  const box = contentBox(doc, catalog);
-  const x = box.x - EXPORT_MARGIN_MM;
-  const y = box.y - EXPORT_MARGIN_MM;
-  const w = box.w + 2 * EXPORT_MARGIN_MM;
-  const h = box.h + 2 * EXPORT_MARGIN_MM;
+  const page = exportPage(doc, catalog, !!opts.titleBlock);
+  const { x, y, w, h } = page;
 
   const texts = new Map<string, string | null>();
   for (const d of doc.devices) {
@@ -124,6 +163,8 @@ export async function exportSvg(
     }
   }
 
-  out.push('</g>', '</svg>');
+  out.push('</g>');
+  if (opts.titleBlock) out.push(...titleBlockSvg(doc, layer, opts.titleBlock.date, page));
+  out.push('</svg>');
   return out.join('\n') + '\n';
 }

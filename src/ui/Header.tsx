@@ -48,6 +48,9 @@ export interface HeaderProps {
   problems: Problem[];
   /** Selects the devices of a problem picked from the Check list. */
   onPick: (ids: string[]) => void;
+  /** SVG and PNG exports get a title block (the viewer's choice, kept in this browser). */
+  titleBlock: boolean;
+  onTitleBlock: (on: boolean) => void;
 }
 
 /** A button with a list under it. The list closes on a pick (the children get close) or a click outside it. */
@@ -175,18 +178,28 @@ export function Header(p: HeaderProps) {
         <a className="nav-button" href="api" title="Build the diagram with an AI agent (MCP server)">API</a>
         <button type="button" onClick={() => setAbout(true)}>About</button>
         <Menu label="Export" className="primary">
-          {(close) => EXPORTS.map((x) => (
-            <button
-              key={x.id} type="button" role="menuitem"
-              onClick={() => {
-                close();
-                p.onExport(x.id);
-                track('export');
-              }}
-            >
-              {x.label}
-            </button>
-          ))}
+          {(close) => (
+            <>
+              {EXPORTS.map((x) => (
+                <button
+                  key={x.id} type="button" role="menuitem"
+                  onClick={() => {
+                    close();
+                    p.onExport(x.id);
+                    track('export');
+                  }}
+                >
+                  {x.label}
+                </button>
+              ))}
+              <button
+                type="button" role="menuitemcheckbox" aria-checked={p.titleBlock} className="menu-check"
+                title="Title, team, revision and date under SVG and PNG exports" onClick={() => p.onTitleBlock(!p.titleBlock)}
+              >
+                Title block
+              </button>
+            </>
+          )}
         </Menu>
       </div>
       {share && (

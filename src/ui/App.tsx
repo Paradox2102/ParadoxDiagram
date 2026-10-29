@@ -4,7 +4,7 @@ import { downloadBlob } from '../export/download';
 import { docToJson, fileBase } from '../export/json';
 import { svgToPng } from '../export/png';
 import { deviceTableCsv } from '../export/table';
-import { contentBox, EXPORT_MARGIN_MM, exportSvg } from '../export/svg';
+import { exportPage, exportSvg } from '../export/svg';
 import { nextId } from '../model/ids';
 import { copyItems, pasteItems, type Clip } from '../model/paste';
 import { findProblems } from '../model/problems';
@@ -28,6 +28,17 @@ import { useLayerHash } from './useLayerHash';
 const storage = safeStorage();
 /** Each paste of one copy lands this much further right and down, so pastes do not stack. */
 const PASTE_STEP_MM = 10;
+/** The viewer's Title block choice for exports (on unless turned off); storage can be missing or blocked. */
+const TITLE_BLOCK_KEY = 'paradox-diagram.titleBlock';
+function readTitleBlock(): boolean {
+  try {
+    return localStorage.getItem(TITLE_BLOCK_KEY) !== 'off';
+  } catch {
+    return true;
+  }
+}
+/** Today in the viewer's time zone, YYYY-MM-DD. */
+const today = () => new Date().toLocaleDateString('en-CA');
 
 function initialDoc(): Doc {
   return loadSaved(storage, null).doc ?? emptyDoc();
@@ -46,6 +57,15 @@ export function App() {
   const canvasApi = useRef<CanvasApi | null>(null);
   const live = useLive(hist, liveSend, { onWelcome: () => requestAnimationFrame(() => canvasApi.current?.fit()) });
   const liveOn = !autosaveAllowed(live.state);
+  const [titleBlock, setTitleBlock] = useState(readTitleBlock);
+  const onTitleBlock = (on: boolean) => {
+    setTitleBlock(on);
+    try {
+      localStorage.setItem(TITLE_BLOCK_KEY, on ? 'on' : 'off');
+    } catch {
+      // the choice then lasts until the page is reloaded
+    }
+  };
   const [incoming, setIncoming] = useState<{ doc: Doc; droppedWires: number } | { error: string } | null>(null);
   const docRef = useRef(doc);
   docRef.current = doc;
@@ -180,14 +200,14 @@ export function App() {
       window.alert('The device icons are not loaded yet.');
       return;
     }
-    const svg = await exportSvg(doc, catalog, layer, iconText);
+    const svg = await exportSvg(doc, catalog, layer, iconText, titleBlock ? { titleBlock: { date: today() } } : {});
     if (kind === 'svg') {
       downloadBlob(new Blob([svg], { type: 'image/svg+xml' }), `${base}.svg`);
       return;
     }
-    const box = contentBox(doc, catalog);
+    const page = exportPage(doc, catalog, titleBlock);
     try {
-      const png = await svgToPng(svg, box.w + 2 * EXPORT_MARGIN_MM, box.h + 2 * EXPORT_MARGIN_MM, kind === 'png4' ? 4 : 2);
+      const png = await svgToPng(svg, page.w, page.h, kind === 'png4' ? 4 : 2);
       downloadBlob(png, `${base}.png`);
     } catch (e) {
       window.alert(`PNG export failed: ${(e as Error).message}`);
@@ -202,7 +222,7 @@ export function App() {
         onNew={onNew} onOpen={onOpen} onExport={onExport} saved={saved || liveOn}
         live={live.state && <LiveBadge state={live.state} onLeave={live.leave} />}
         labels={!doc.hideTags} onLabels={(show) => hist.change({ type: 'setHideTags', hidden: !show })}
-        problems={problems} onPick={setSelection}
+        problems={problems} onPick={setSelection} titleBlock={titleBlock} onTitleBlock={onTitleBlock}
         onShare={async () => buildShareUrl(window.location.origin + window.location.pathname, await encodeShare(doc), layer)}
       />
       <Palette catalog={catalog} error={catalogError} onAdd={addDevice} />

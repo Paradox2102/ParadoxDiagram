@@ -1,6 +1,6 @@
 import { readFileSync } from 'node:fs';
 import { join } from 'node:path';
-import { exportSvg, renderWirePaths, stripAnchors } from './svg';
+import { exportPage, exportSvg, MIN_PAGE_MM, renderWirePaths, stripAnchors, TITLE_BLOCK_MM } from './svg';
 import { apply } from '../model/actions';
 import { emptyDoc, type Doc } from '../model/types';
 import { catalog } from '../test/fixtures';
@@ -201,4 +201,46 @@ test('a label can sit at the top, left or right; wires keep out of it there', as
     // a turned label takes only about two lines of width beside the device
     if (side !== 'top') expect(box.w - body.w).toBeLessThanOrEqual(12);
   }
+});
+
+describe('title block', () => {
+  const viewBox = (svg: string) => /viewBox="([^"]+)"/.exec(svg)![1].split(' ').map(Number);
+  const detailed = () => apply(doc(), { type: 'setDetails', team: '2102 Paradox', revision: 'B' });
+
+  test('it shows the title, team, revision, date, layer and site, under the diagram', async () => {
+    const d = apply(detailed(), { type: 'setTitle', title: 'Comp bot' });
+    const svg = await exportSvg(d, catalog, 'power', realIcons, { titleBlock: { date: '2026-10-29' } });
+    for (const text of ['Comp bot', '2102 Paradox', 'Rev B', '2026-10-29', 'Power layer', 'diagram.team2102.org']) {
+      expect(svg).toContain(text);
+    }
+    const [, y, , h] = viewBox(svg);
+    const top = Number(/<line[^>]*data-title-block[^>]*y1="([^"]+)"/.exec(svg)![1]);
+    expect(top).toBeCloseTo(y + h - TITLE_BLOCK_MM, 5);
+  });
+
+  test('all layers and no revision leave those parts out', async () => {
+    const svg = await exportSvg(doc(), catalog, 'all', realIcons, { titleBlock: { date: '2026-10-29' } });
+    expect(svg).not.toContain('Rev ');
+    expect(svg).not.toContain(' layer');
+  });
+
+  test('the page grows by the block and is at least 160 mm wide', () => {
+    const plain = exportPage(doc(), catalog, false);
+    const block = exportPage(doc(), catalog, true);
+    expect(block.h).toBeCloseTo(plain.h + TITLE_BLOCK_MM, 5);
+    expect(block.w).toBe(Math.max(plain.w, MIN_PAGE_MM));
+    expect(block.y).toBe(plain.y);
+  });
+
+  test('an empty diagram exports with a block and no NaN', async () => {
+    const svg = await exportSvg(emptyDoc(), catalog, 'all', realIcons, { titleBlock: { date: '2026-10-29' } });
+    expect(svg).not.toContain('NaN');
+    expect(viewBox(svg)[2]).toBe(MIN_PAGE_MM);
+  });
+
+  test('without the option the export has no block', async () => {
+    const svg = await exportSvg(detailed(), catalog, 'all', realIcons);
+    expect(svg).not.toContain('data-title-block');
+    expect(svg).not.toContain('>2102 Paradox</text>');
+  });
 });
