@@ -211,3 +211,10 @@ describe('new fields', () => {
     expect(dispatch).toHaveBeenCalledTimes(1);
   });
 });
+
+test('with nothing selected, the help panel opens the example robot', async () => {
+  const onExample = vi.fn();
+  render(<Inspector doc={doc()} catalog={catalog} selection={[]} dispatch={vi.fn()} onExample={onExample} />);
+  await userEvent.click(screen.getByRole('button', { name: 'Open the example robot' }));
+  expect(onExample).toHaveBeenCalled();
+});

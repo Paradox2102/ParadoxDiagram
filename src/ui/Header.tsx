@@ -33,7 +33,8 @@ export interface HeaderProps {
   canRedo: boolean;
   onUndo: () => void;
   onRedo: () => void;
-  onNew: () => void;
+  /** Start a new diagram: empty, or a copy of the example robot. */
+  onNew: (kind: 'empty' | 'example') => void;
   onOpen: (file: File) => void;
   onExport: (kind: ExportKind) => void;
   saved: boolean;
@@ -140,7 +141,14 @@ export function Header(p: HeaderProps) {
         {!p.saved && <span className="unsaved">Not saved in this browser</span>}
         <button type="button" onClick={p.onUndo} disabled={!p.canUndo} title="Undo (Ctrl/Cmd+Z)">Undo</button>
         <button type="button" onClick={p.onRedo} disabled={!p.canRedo} title="Redo (Ctrl/Cmd+Shift+Z)">Redo</button>
-        <button type="button" onClick={p.onNew}>New</button>
+        <Menu label="New">
+          {(close) => (
+            <>
+              <button type="button" role="menuitem" onClick={() => { close(); p.onNew('empty'); }}>Empty diagram</button>
+              <button type="button" role="menuitem" onClick={() => { close(); p.onNew('example'); }}>Example robot</button>
+            </>
+          )}
+        </Menu>
         <button type="button" onClick={() => fileRef.current?.click()}>Open</button>
         <input
           ref={fileRef} type="file" accept=".json,application/json" hidden

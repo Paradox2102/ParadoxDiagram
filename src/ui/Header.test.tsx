@@ -145,3 +145,13 @@ test('Export offers the device table as CSV', async () => {
   await userEvent.click(screen.getByRole('menuitem', { name: 'Table (CSV)' }));
   expect(onExport).toHaveBeenCalledWith('csv');
 });
+
+test('New offers an empty diagram or the example robot', async () => {
+  const onNew = vi.fn();
+  render(<Header {...props({ onNew })} />);
+  await userEvent.click(screen.getByRole('button', { name: 'New' }));
+  await userEvent.click(screen.getByRole('menuitem', { name: 'Example robot' }));
+  await userEvent.click(screen.getByRole('button', { name: 'New' }));
+  await userEvent.click(screen.getByRole('menuitem', { name: 'Empty diagram' }));
+  expect(onNew.mock.calls).toEqual([['example'], ['empty']]);
+});

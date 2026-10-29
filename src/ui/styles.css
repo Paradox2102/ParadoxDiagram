@@ -128,6 +128,7 @@ h2 { font-family: var(--font-display); }
 .problem-list { width: min(380px, calc(100vw - 32px)); max-height: 60vh; overflow: auto; }
 .problem-list button { white-space: normal; line-height: 1.35; }
 .problem-none { margin: 6px 10px; color: var(--muted); }
+.link-button { border: 0; background: none; padding: 0; color: var(--select); text-decoration: underline; cursor: pointer; font: inherit; }
 
 .live-badge > button { display: inline-flex; align-items: center; gap: 6px; }
 .live-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--bar-muted); }

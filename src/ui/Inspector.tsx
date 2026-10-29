@@ -15,6 +15,8 @@ interface Props {
   catalog: Catalog | null;
   selection: string[];
   dispatch: (a: Action) => void;
+  /** Replaces the diagram with the example robot (the help panel's button). */
+  onExample?: () => void;
 }
 
 const LAYER_NAME = { power: 'Power', can: 'CAN', network: 'Network', air: 'Air' } as const;
@@ -265,11 +267,17 @@ function WireForm({ doc, catalog, wire, dispatch }: { doc: Doc; catalog: Catalog
   );
 }
 
-function Help() {
+function Help({ onExample }: { onExample?: () => void }) {
   return (
     <>
       <h2>Build a diagram</h2>
       <div className="help">
+        {onExample && (
+          <p>
+            New here? <button type="button" className="link-button" onClick={onExample}>Open the example robot</button> to
+            see a finished diagram.
+          </p>
+        )}
         <p>Drag a device from the list, or click it. Hover a device to see its ports, then drag from a port to a port of the same layer to draw a wire.</p>
         <p>
           Select a wire to drag its segments or bends. Double-click a segment to add a bend, a bend to remove it.
@@ -291,10 +299,10 @@ function Help() {
   );
 }
 
-export function Inspector({ doc, catalog, selection, dispatch }: Props) {
+export function Inspector({ doc, catalog, selection, dispatch, onExample }: Props) {
   const live = selection.filter((id) => doc.devices.some((d) => d.id === id) || doc.wires.some((w) => w.id === id));
   let body;
-  if (live.length === 0) body = <Help />;
+  if (live.length === 0) body = <Help onExample={onExample} />;
   else if (live.length > 1) {
     const devices = live.filter((id) => doc.devices.some((d) => d.id === id));
     const selected = doc.devices.filter((d) => devices.includes(d.id));

@@ -9,6 +9,7 @@ import { nextId } from '../model/ids';
 import { copyItems, pasteItems, type Clip } from '../model/paste';
 import { findProblems } from '../model/problems';
 import { deviceTag } from '../model/tags';
+import { exampleDoc } from '../model/example';
 import { emptyDoc, type Doc } from '../model/types';
 import { validateDoc } from '../model/validate';
 import { autosaveAllowed, useLive, type LiveSend } from '../live/useLive';
@@ -143,11 +144,13 @@ export function App() {
 
   // in live mode these leave live mode first: the AI's file keeps its diagram
   const LEAVES_LIVE = 'This leaves live mode; the AI keeps its diagram in its file.';
-  const onNew = () => {
-    const ask = liveOn ? `Start a new diagram in this browser? ${LEAVES_LIVE}` : 'Start a new diagram? The current one stays in Undo until you reload.';
+  const onNew = (kind: 'empty' | 'example') => {
+    const what = kind === 'example' ? 'Open the example robot' : 'Start a new diagram';
+    const ask = liveOn ? `${what} in this browser? ${LEAVES_LIVE}` : `${what}? The current one stays in Undo until you reload.`;
     if ((liveOn || doc.devices.length) && !window.confirm(ask)) return;
-    live.replaceLocally(emptyDoc());
+    live.replaceLocally(kind === 'example' ? exampleDoc(catalog) : emptyDoc());
     setSelection([]);
+    if (kind === 'example') requestAnimationFrame(() => canvasApi.current?.fit());
   };
 
   const onOpen = async (file: File) => {
@@ -207,7 +210,7 @@ export function App() {
         doc={doc} catalog={catalog} layer={layer} selection={selection} setSelection={setSelection}
         hist={hist} apiRef={canvasApi}
       />
-      <Inspector doc={doc} catalog={catalog} selection={selection} dispatch={hist.change} />
+      <Inspector doc={doc} catalog={catalog} selection={selection} dispatch={hist.change} onExample={() => onNew('example')} />
       {live.pending && (
         <div className="share-banner" role="status">
           <span>Connect to your AI's diagram? It replaces the diagram kept in this browser.</span>
