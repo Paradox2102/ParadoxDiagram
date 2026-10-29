@@ -7,8 +7,15 @@ import type { Doc } from '../model/types';
 
 const HEADER = ['Name', 'Device', 'Vendor', 'CAN bus', 'CAN ID', 'Power from', 'Fuse (A)', 'Wire (AWG)', 'IP', 'Notes'];
 
+/** A text that a spreadsheet would run as a formula (= + - @, or a tab or CR first) gets a quote mark in front: a
+ * diagram from a share link is someone else's text. No cell of the table is a negative number. */
+const safe = (v: string) => (/^[=+\-@\t\r]/.test(v) ? `'${v}` : v);
+
 /** One CSV cell: quoted when it holds a comma, a quote or a line break (RFC 4180). */
-const cell = (v: string) => (/[",\r\n]/.test(v) ? `"${v.replace(/"/g, '""')}"` : v);
+const cell = (raw: string) => {
+  const v = safe(raw);
+  return /[",\r\n]/.test(v) ? `"${v.replace(/"/g, '""')}"` : v;
+};
 
 export function deviceTableCsv(doc: Doc, catalog: Catalog | null): string {
   const fieldLabels = [...new Set(doc.devices.flatMap((d) => (d.fields ?? []).map((f) => f.label)))];

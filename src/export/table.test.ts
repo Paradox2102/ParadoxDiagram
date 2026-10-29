@@ -57,3 +57,14 @@ test('a comma, a quote and a line break are quoted', () => {
   expect(csv).toContain('"Front right, ""A"""');
   expect(csv).toContain('"two\nlines"');
 });
+
+test('a cell that a spreadsheet would read as a formula starts with a quote mark', () => {
+  let d = rig();
+  d = apply(d, { type: 'updateDevice', id: 'fl', patch: { name: '=HYPERLINK("http://x.test","click")' } });
+  d = apply(d, { type: 'updateDevice', id: 'fr', patch: { notes: '@SUM(A1)', name: '+1 motor' } });
+  const rows = parse(deviceTableCsv(d, catalog).slice(1));
+  expect(rows.find((r) => r[4] === '11')![0]).toBe('\'=HYPERLINK("http://x.test","click")');
+  const fr = rows.find((r) => r[4] === '12')!;
+  expect(fr[0]).toBe("'+1 motor");
+  expect(fr[9]).toBe("'@SUM(A1)");
+});
