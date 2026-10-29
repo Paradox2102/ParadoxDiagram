@@ -85,7 +85,8 @@ page. Each feature uses code or data that already exists.
 ## 6. Numbered CANivores (added 2026-10-29 at the user's request)
 
 - SystemCore has CAN buses S0 to S4, and some teams add one or more CANivores. With one CANivore, its bus stays
-  `CANivore`. With two or more, the buses are `CANivore 1`, `CANivore 2`, and so on, in the order the devices were added.
+  `CANivore`. With two or more, the buses are `CANivore 1`, `CANivore 2`, and so on, in device id order (`d3` before
+  `d12`, the order they were added). The id keeps a number stable when an undo puts a deleted CANivore back.
 - Each numbered CANivore's label shows `Bus CANivore 2`, so a person can see which bus is which.
 - The duplicate CAN ID check then keeps the CANivore buses apart (the same ID on two CANivores is correct).
 

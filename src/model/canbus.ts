@@ -1,6 +1,7 @@
 // The CAN bus a device is on: the name the user gave it, or the bus found by following the CAN wires
 // back to a robot controller port (SystemCore can_s1 is S1, a roboRIO is RIO) or a CANivore. With two or more
-// CANivores, their buses are CANivore 1, CANivore 2, ... in the order the devices were added.
+// CANivores, their buses are CANivore 1, CANivore 2, ... in id order (d3 before d12: the order they were added). The
+// id, not the place in the device list, keeps a number stable when an undo puts a deleted CANivore back at the end.
 import type { Catalog, Icon } from '../catalog/catalog';
 import type { Doc } from './types';
 
@@ -14,10 +15,12 @@ function isRootDevice(icon: Icon | undefined): boolean {
   return !!icon && (icon.type === 'controllers' || icon.slug === 'canivore');
 }
 
-/** The bus name of a CANivore: CANivore when it is the only one, else CANivore and its number in device order. */
+/** The bus name of a CANivore: CANivore when it is the only one, else CANivore and its number in id order. */
 export function canivoreBus(doc: Doc, deviceId: string): string {
-  const all = doc.devices.filter((d) => d.slug === 'canivore');
-  return all.length > 1 ? `CANivore ${all.findIndex((d) => d.id === deviceId) + 1}` : 'CANivore';
+  const ids = doc.devices.filter((d) => d.slug === 'canivore').map((d) => d.id);
+  if (ids.length < 2) return 'CANivore';
+  ids.sort((a, b) => a.localeCompare(b, 'en', { numeric: true }));
+  return `CANivore ${ids.indexOf(deviceId) + 1}`;
 }
 
 function rootName(doc: Doc, icon: Icon, deviceId: string, port: string): string {

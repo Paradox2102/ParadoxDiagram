@@ -66,3 +66,14 @@ test('two CANivores are numbered in the order they were added', () => {
   expect(foundBus(d, catalog, 'b')).toBe('CANivore 2');
   expect([...busesInUse(d, catalog)].sort()).toEqual(['CANivore 1', 'CANivore 2']);
 });
+
+test('CANivore numbers stay the same when a deleted CANivore comes back at the end of the list (undo in live mode)', () => {
+  const d = build(
+    [['cv1', 'canivore'], ['cv2', 'canivore'], ['a', 'kraken-x60-powerpole'], ['b', 'kraken-x60-powerpole']],
+    [['cv1.can', 'a.can_a'], ['cv2.can', 'b.can_a']],
+  );
+  const [cv1, ...rest] = d.devices;
+  const reordered = { ...d, devices: [...rest, cv1] };
+  expect(foundBus(reordered, catalog, 'a')).toBe('CANivore 1');
+  expect(foundBus(reordered, catalog, 'b')).toBe('CANivore 2');
+});
