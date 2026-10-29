@@ -55,7 +55,12 @@ export function App() {
   const [selection, setSelection] = useState<string[]>([]);
   const [saved, setSaved] = useState(storage !== null);
   const canvasApi = useRef<CanvasApi | null>(null);
-  const live = useLive(hist, liveSend, { onWelcome: () => requestAnimationFrame(() => canvasApi.current?.fit()) });
+  // A fit asked for with a new diagram runs after that diagram has rendered: the canvas fits what it draws.
+  const fitPending = useRef(false);
+  const fitAfterRender = () => {
+    fitPending.current = true;
+  };
+  const live = useLive(hist, liveSend, { onWelcome: fitAfterRender });
   const liveOn = !autosaveAllowed(live.state);
   const [titleBlock, setTitleBlock] = useState(readTitleBlock);
   const onTitleBlock = (on: boolean) => {
@@ -96,9 +101,15 @@ export function App() {
     live.replaceLocally(got.doc);
     setSelection([]);
     setIncoming(null);
-    requestAnimationFrame(() => canvasApi.current?.fit());
+    fitAfterRender();
     if (got.droppedWires) window.alert(`${got.droppedWires} wire(s) in the shared diagram did not match their ports and were left out.`);
   }
+
+  useEffect(() => {
+    if (!fitPending.current) return;
+    fitPending.current = false;
+    canvasApi.current?.fit();
+  }, [doc]);
 
   // while live, the AI's file is the copy that is kept: the browser copy waits
   useEffect(() => {
@@ -170,7 +181,7 @@ export function App() {
     if ((liveOn || doc.devices.length) && !window.confirm(ask)) return;
     live.replaceLocally(kind === 'example' ? exampleDoc(catalog) : emptyDoc());
     setSelection([]);
-    if (kind === 'example') requestAnimationFrame(() => canvasApi.current?.fit());
+    if (kind === 'example') fitAfterRender();
   };
 
   const onOpen = async (file: File) => {
@@ -179,7 +190,7 @@ export function App() {
       if (liveOn && !window.confirm(`Open ${file.name} in this browser? ${LEAVES_LIVE}`)) return;
       live.replaceLocally(opened);
       setSelection([]);
-      requestAnimationFrame(() => canvasApi.current?.fit());
+      fitAfterRender();
       if (droppedWires) window.alert(`${file.name}: ${droppedWires} wire(s) did not match their ports and were left out.`);
     } catch (e) {
       window.alert(`Could not open ${file.name}: ${(e as Error).message}`);
