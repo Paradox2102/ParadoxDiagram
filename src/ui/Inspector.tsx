@@ -2,7 +2,7 @@
 import { useEffect, useRef, useState } from 'react';
 import type { Catalog } from '../catalog/catalog';
 import type { Action, DevicePatch } from '../model/actions';
-import { foundBus } from '../model/canbus';
+import { foundBus, hasNoCanId } from '../model/canbus';
 import { deviceTag } from '../model/tags';
 import { MAX_REVISION, MAX_TEAM, normalIp, validAwg, validCanBus, validFuse, validIp } from '../model/validate';
 import { Arrange } from './Arrange';
@@ -143,15 +143,17 @@ function DeviceForm({ doc, catalog, device, dispatch }: { doc: Doc; catalog: Cat
       {icon?.description && <p className="desc">{icon.description}</p>}
       {tag.facts && <p className="sub mono">{tag.facts}</p>}
       <Field label="Name" value={device.name} placeholder={icon?.name} onCommit={(v) => update({ name: v })} />
-      <Field
-        label="CAN ID" value={device.canId === null ? '' : String(device.canId)} inputMode="numeric"
-        onCommit={(v) => {
-          const t = v.trim();
-          if (!t) return update({ canId: null });
-          const n = Number(t);
-          if (Number.isInteger(n) && n >= 0) update({ canId: n });
-        }}
-      />
+      {(device.canId !== null || !hasNoCanId(device.slug)) && (
+        <Field
+          label="CAN ID" value={device.canId === null ? '' : String(device.canId)} inputMode="numeric"
+          onCommit={(v) => {
+            const t = v.trim();
+            if (!t) return update({ canId: null });
+            const n = Number(t);
+            if (Number.isInteger(n) && n >= 0) update({ canId: n });
+          }}
+        />
+      )}
       {kinds.has('can') && (
         <Field
           label="CAN bus" value={device.canBus ?? ''} placeholder={foundBus(doc, catalog, device.id) ?? 'none found'}

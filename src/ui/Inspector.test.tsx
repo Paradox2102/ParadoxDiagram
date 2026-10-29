@@ -228,3 +228,17 @@ test('with nothing selected, Team and Revision set the title block details', asy
   await userEvent.tab();
   expect(dispatch.mock.calls).toEqual([[{ type: 'setDetails', team: '2102 Paradox' }], [{ type: 'setDetails', revision: 'B' }]]);
 });
+
+test.each(['swyft-canender-wago', 'swyft-inject-v2', 'swyft-direct-v2'])('%s has no CAN ID field', (slug) => {
+  const d = apply(emptyDoc(), { type: 'addDevice', slug, name: '', x: 0, y: 0 });
+  render(<Inspector doc={d} catalog={catalog} selection={['d1']} dispatch={vi.fn()} />);
+  expect(screen.queryByLabelText('CAN ID')).toBeNull();
+  expect(screen.getByLabelText('CAN bus')).toBeTruthy();
+});
+
+test('a terminator that has a CAN ID from an old file keeps the field, so the ID can be cleared', () => {
+  let d = apply(emptyDoc(), { type: 'addDevice', slug: 'can-terminator', name: '', x: 0, y: 0 });
+  d = apply(d, { type: 'updateDevice', id: 'd1', patch: { canId: 7 } });
+  render(<Inspector doc={d} catalog={catalog} selection={['d1']} dispatch={vi.fn()} />);
+  expect(screen.getByLabelText('CAN ID')).toBeTruthy();
+});

@@ -5,6 +5,13 @@
 import type { Catalog, Icon } from '../catalog/catalog';
 import type { Doc } from './types';
 
+/** The 120 Ω CAN terminators. */
+export const TERMINATORS = new Set(['can-terminator', 'swyft-canender-wago', 'swyft-canender-molex']);
+const NO_CAN_ID = new Set([...TERMINATORS, 'swyft-inject-v2', 'swyft-direct-v2']);
+
+/** CAN devices with no CAN ID: the terminators and the SWYFT CANnect modules, which only carry the bus. */
+export const hasNoCanId = (slug: string) => NO_CAN_ID.has(slug);
+
 /** A CAN port that starts a bus: any CAN port of a robot controller, or a CANivore's. */
 function isRoot(icon: Icon | undefined, port: string): boolean {
   if (!icon || (icon.type !== 'controllers' && icon.slug !== 'canivore')) return false;

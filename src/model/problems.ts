@@ -4,7 +4,7 @@
 import type { Catalog } from '../catalog/catalog';
 import type { Box } from '../geometry/align';
 import { boundsOf, tagLayout } from '../geometry/scene';
-import { busEnds, busOf } from './canbus';
+import { busEnds, busOf, hasNoCanId, TERMINATORS } from './canbus';
 import { deviceTag, tagShown } from './tags';
 import type { Doc } from './types';
 
@@ -24,9 +24,6 @@ function overlap(a: Box, b: Box): { w: number; h: number } | null {
 const CHANNEL = /^ch\d+$/;
 const times = (n: number) => (n === 2 ? 'twice' : `${n} times`);
 const isBusRoot = (type: string | undefined, slug: string) => type === 'controllers' || slug === 'canivore';
-// CAN devices with no CAN ID: the 120 Ω terminators and the SWYFT CANnect modules, which only carry the bus.
-const TERMINATORS = new Set(['can-terminator', 'swyft-canender-wago', 'swyft-canender-molex']);
-const NO_CAN_ID = new Set([...TERMINATORS, 'swyft-inject-v2', 'swyft-direct-v2']);
 // A bus can end at a terminator, or at a device with a terminator built in (the PDH and the SWYFT Direct with their
 // TERM switch on, the PDP with its jumper on). The diagram does not record a switch, so these count as terminated.
 const BUS_END_OK = new Set([...TERMINATORS, 'rev-pdh', 'ctre-pdp', 'swyft-direct-v2']);
@@ -61,7 +58,7 @@ export function findProblems(doc: Doc, catalog: Catalog, nameOf: (id: string) =>
   const byBusAndId = new Map<string, string[]>();
   for (const d of known) {
     const icon = catalog.bySlug.get(d.slug)!;
-    if (!icon.anchors.some((a) => a.kind === 'can') || isBusRoot(icon.type, icon.slug) || NO_CAN_ID.has(icon.slug)) continue;
+    if (!icon.anchors.some((a) => a.kind === 'can') || isBusRoot(icon.type, icon.slug) || hasNoCanId(icon.slug)) continue;
     if (d.canId === null) {
       out.push({ code: 'can-missing', message: `${nameOf(d.id)} has CAN ports and no CAN ID`, ids: [d.id] });
       continue;
