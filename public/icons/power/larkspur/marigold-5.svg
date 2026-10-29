@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-4 -10 86 46.8" width="86mm" height="46.8mm" font-family="Helvetica, Arial, sans-serif">
+<title>Marigold-5 Buck Converter</title>
+<desc>Drawn by FRC Team 2102 Paradox. Public domain: CC0 1.0 (https://creativecommons.org/publicdomain/zero/1.0/). https://docs.team2102.org/icons/</desc>
+<path d="M 0 4.4 L -1.8 6.2 L -1.8 15.9 L 0 17.7 Z" fill="#16191d" stroke="#1f2328" stroke-width="0.4" stroke-linejoin="round" stroke-linecap="round"/>
+<rect x="0" y="0" width="64.8" height="22.1" rx="3" fill="#3a3f47" stroke="#1f2328" stroke-width="0.5"/>
+<rect x="8" y="0" width="5.8" height="2.3" rx="0" fill="#16191d"/>
+<rect x="8" y="19.8" width="5.8" height="2.3" rx="0" fill="#16191d"/>
+<rect x="51.2" y="0" width="5.8" height="2.3" rx="0" fill="#16191d"/>
+<rect x="51.2" y="19.8" width="5.8" height="2.3" rx="0" fill="#16191d"/>
+<circle cx="16.5" cy="11.05" r="1.9" fill="#ffffff" stroke="#1f2328" stroke-width="0.5"/>
+<circle cx="48.3" cy="11.05" r="1.9" fill="#ffffff" stroke="#1f2328" stroke-width="0.5"/>
+<text x="32.4" y="17.4" font-size="2.7" fill="#f0f3f6" text-anchor="middle" font-weight="bold">Marigold-5 V1.0</text>
+<text x="32.4" y="20.2" font-size="1.6" fill="#aab2bd" text-anchor="middle">5.1 V · 5–6 A</text>
+<text x="28.2" y="2.6" font-size="1.5" fill="#aab2bd" text-anchor="start">AUX OUT</text>
+<circle cx="27.7" cy="8.8" r="0.95" fill="#f0883e" stroke="#1f2328" stroke-width="0.2"/>
+<text x="29.4" y="8.7" font-size="1.5" fill="#aab2bd" text-anchor="start">STATUS</text>
+<text x="29.4" y="10.4" font-size="1.1" fill="#aab2bd" text-anchor="start">ON = GOOD</text>
+<rect x="-1.8" y="6.5" width="5.5" height="9.1" rx="1.6" fill="#16191d"/>
+<rect x="-0.2" y="8.1" width="1.2" height="5.9" rx="0.6" fill="#59636e"/>
+<rect x="15.8" y="2.8" width="6.3" height="4.1" rx="0.5" fill="#16191d" stroke="#8c959f" stroke-width="0.2"/>
+<rect x="17" y="4.1" width="1.6" height="1.6" rx="0.2" fill="#8c959f" stroke="#8c959f" stroke-width="0.15"/>
+<rect x="19.6" y="4.1" width="1.6" height="1.6" rx="0.2" fill="#8c959f" stroke="#8c959f" stroke-width="0.15"/>
+<path d="M 17.8 4.9 L 17.8 -5" fill="none" stroke="#8c959f" stroke-width="1.2" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 17.8 4.9 L 17.8 -5" fill="none" stroke="#0d1117" stroke-width="0.9" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 20.4 4.9 L 20.4 -5" fill="none" stroke="#8c959f" stroke-width="1.2" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 20.4 4.9 L 20.4 -5" fill="none" stroke="#cf222e" stroke-width="0.9" stroke-linejoin="round" stroke-linecap="round"/>
+<g class="lead-labels">
+<text x="19.1" y="-7.8" font-size="1.9" fill="#1f2328" text-anchor="middle">AUX OUT 5.1 V</text>
+<text x="16.4" y="-3.6" font-size="1.5" fill="#1f2328" text-anchor="end">GND</text>
+<text x="21.8" y="-3.6" font-size="1.5" fill="#1f2328" text-anchor="start">5V</text>
+</g>
+<rect x="62.4" y="3.2" width="4" height="15.7" rx="0.5" fill="#16191d" stroke="#8c959f" stroke-width="0.2"/>
+<rect x="63.3" y="4.8" width="1.6" height="2" rx="0.3" fill="#d0d7de"/>
+<rect x="63.3" y="8.3" width="1.6" height="2" rx="0.3" fill="#d0d7de"/>
+<rect x="63.3" y="11.8" width="1.6" height="2" rx="0.3" fill="#d0d7de"/>
+<rect x="63.3" y="15.3" width="1.6" height="2" rx="0.3" fill="#d0d7de"/>
+<g class="lead-labels">
+<path d="M 66.4 5.8 L 72.4 5.8" fill="none" stroke="#8c959f" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 66.4 5.8 L 72.4 5.8" fill="none" stroke="#0d1117" stroke-width="1.2" stroke-linejoin="round" stroke-linecap="round"/>
+<text x="74.2" y="6.35" font-size="1.5" fill="#1f2328" text-anchor="start">GND</text>
+<path d="M 66.4 9.3 L 72.4 9.3" fill="none" stroke="#8c959f" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 66.4 9.3 L 72.4 9.3" fill="none" stroke="#0d1117" stroke-width="1.2" stroke-linejoin="round" stroke-linecap="round"/>
+<text x="74.2" y="9.85" font-size="1.5" fill="#1f2328" text-anchor="start">GND</text>
+<path d="M 66.4 12.8 L 72.4 12.8" fill="none" stroke="#8c959f" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 66.4 12.8 L 72.4 12.8" fill="none" stroke="#cf222e" stroke-width="1.2" stroke-linejoin="round" stroke-linecap="round"/>
+<text x="74.2" y="13.35" font-size="1.5" fill="#1f2328" text-anchor="start">BATT+</text>
+<path d="M 66.4 16.3 L 72.4 16.3" fill="none" stroke="#8c959f" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 66.4 16.3 L 72.4 16.3" fill="none" stroke="#cf222e" stroke-width="1.2" stroke-linejoin="round" stroke-linecap="round"/>
+<text x="74.2" y="16.85" font-size="1.5" fill="#1f2328" text-anchor="start">BATT+</text>
+</g>
+<text x="0" y="25" font-size="1.9" fill="#1f2328" text-anchor="start">USB-C OUT 5.1 V</text>
+<text x="64.8" y="25" font-size="1.9" fill="#1f2328" text-anchor="end">INPUT 6–18 V</text>
+<g class="caption">
+<text x="32.4" y="31.1" font-size="4" fill="#1f2328" text-anchor="middle" font-weight="bold">Marigold-5 Buck Converter</text>
+<text x="32.4" y="35.3" font-size="2.3" fill="#57606a" text-anchor="middle">64.8 × 22.1 mm · top view</text>
+</g>
+<g id="anchors">
+<circle class="anchor" id="anchor-usb_c_out" data-kind="power" cx="-1.8" cy="11.05" r="1" fill="none"><title>USB-C output 5.1 V, 5-6 A (source, 3 A advertised, no USB PD)</title></circle>
+<circle class="anchor" id="anchor-aux_gnd" data-kind="power" cx="17.8" cy="-5" r="1" fill="none"><title>AUX header GND (2.54 mm pin, shares the 5-6 A output)</title></circle>
+<circle class="anchor" id="anchor-aux_5v" data-kind="power" cx="20.4" cy="-5" r="1" fill="none"><title>AUX header + 5.1 V (2.54 mm pin, shares the 5-6 A output)</title></circle>
+<circle class="anchor" id="anchor-gnd_2" data-kind="power" cx="72.4" cy="5.8" r="1" fill="none"><title>GND (spare pair, daisy-chain out, joined to the other GND)</title></circle>
+<circle class="anchor" id="anchor-gnd_1" data-kind="power" cx="72.4" cy="9.3" r="1" fill="none"><title>GND input (16-18 AWG recommended, block takes 16-24 AWG)</title></circle>
+<circle class="anchor" id="anchor-vin_1" data-kind="power" cx="72.4" cy="12.8" r="1" fill="none"><title>BATT+ input 6-18 V (from a 15-20 A PDH channel)</title></circle>
+<circle class="anchor" id="anchor-vin_2" data-kind="power" cx="72.4" cy="16.3" r="1" fill="none"><title>BATT+ (spare pair, daisy-chain out, joined to the other BATT+)</title></circle>
+</g>
+</svg>

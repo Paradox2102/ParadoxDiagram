@@ -10,7 +10,7 @@
   {
    "id": "power",
    "name": "Power",
-   "count": 14
+   "count": 15
   },
   {
    "id": "motor-controllers",
@@ -982,6 +982,84 @@
     -35,
     70,
     71
+   ]
+  },
+  {
+   "slug": "marigold-5",
+   "name": "Marigold-5 Buck Converter",
+   "description": "Marigold-5 USB-C power module (5.1 V buck converter for coprocessors)",
+   "type": "power",
+   "vendor": "larkspur",
+   "vendor_name": "Larkspur Industries",
+   "part_number": null,
+   "status": "current",
+   "path": "power/larkspur/marigold-5.svg",
+   "size_mm": [
+    86,
+    36.6
+   ],
+   "view_box": [
+    -4,
+    -10,
+    86,
+    46.8
+   ],
+   "anchors": [
+    {
+     "port": "usb_c_out",
+     "x": -1.8,
+     "y": 11.05,
+     "kind": "power",
+     "label": "USB-C output 5.1 V, 5-6 A (source, 3 A advertised, no USB PD)"
+    },
+    {
+     "port": "aux_gnd",
+     "x": 17.8,
+     "y": -5,
+     "kind": "power",
+     "label": "AUX header GND (2.54 mm pin, shares the 5-6 A output)"
+    },
+    {
+     "port": "aux_5v",
+     "x": 20.4,
+     "y": -5,
+     "kind": "power",
+     "label": "AUX header + 5.1 V (2.54 mm pin, shares the 5-6 A output)"
+    },
+    {
+     "port": "gnd_2",
+     "x": 72.4,
+     "y": 5.8,
+     "kind": "power",
+     "label": "GND (spare pair, daisy-chain out, joined to the other GND)"
+    },
+    {
+     "port": "gnd_1",
+     "x": 72.4,
+     "y": 9.3,
+     "kind": "power",
+     "label": "GND input (16-18 AWG recommended, block takes 16-24 AWG)"
+    },
+    {
+     "port": "vin_1",
+     "x": 72.4,
+     "y": 12.8,
+     "kind": "power",
+     "label": "BATT+ input 6-18 V (from a 15-20 A PDH channel)"
+    },
+    {
+     "port": "vin_2",
+     "x": 72.4,
+     "y": 16.3,
+     "kind": "power",
+     "label": "BATT+ (spare pair, daisy-chain out, joined to the other BATT+)"
+    }
+   ],
+   "body_view": [
+    -4,
+    -10,
+    86,
+    36.6
    ]
   },
   {

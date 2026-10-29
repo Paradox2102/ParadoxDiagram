@@ -19,7 +19,7 @@ diagram that looks like a team wiring poster.
 
 ## Features
 
-- **Real device icons.** 93 FRC devices (controllers, PDH / PDP / PowerHub, motor controllers, motors, sensors,
+- **Real device icons.** 94 FRC devices (controllers, PDH / PDP / PowerHub, motor controllers, motors, sensors,
   radios, vision, pneumatics) with every port where it is on the real device. Search by name, vendor or part
   number.
 - **Four layers.** Power, CAN, Network (Ethernet, USB, signal) and Air. Show all of them, or one at a time.
