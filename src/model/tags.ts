@@ -1,7 +1,7 @@
 // The tag under a device: its name, then CAN ID (with the bus when there are several), the channels its power
 // comes from (PDH 4/5, PDP 2, PH 7, MPM 1, VRM 12V/2A, with fuse and gauge), the IP, and the fields marked for it.
 import type { Catalog, Icon } from '../catalog/catalog';
-import { busesInUse, busOf } from './canbus';
+import { busesInUse, busOf, canivoreBus } from './canbus';
 import type { Doc, Wire } from './types';
 
 const CHANNEL = /^ch(\d+)$/;
@@ -56,6 +56,10 @@ export function deviceTag(doc: Doc, deviceId: string, catalog: Catalog | null): 
   }
 
   const facts: string[] = [];
+  // with several CANivores, each one's label says which bus it is
+  if (dev.slug === 'canivore' && doc.devices.filter((d) => d.slug === 'canivore').length > 1) {
+    facts.push(`Bus ${canivoreBus(doc, dev.id)}`);
+  }
   if (dev.canId !== null) {
     const bus = busOf(doc, catalog, deviceId);
     facts.push(bus && busesInUse(doc, catalog).size > 1 ? `CAN ${bus}·${dev.canId}` : `CAN ${dev.canId}`);

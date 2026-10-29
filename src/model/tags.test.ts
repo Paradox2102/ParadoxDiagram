@@ -99,3 +99,12 @@ describe('new facts', () => {
     expect(deviceTag(d, 'a', catalog).facts).toBe('CAN 21  ·  PDH 4  ·  10.21.2.11  ·  Firmware 25.1');
   });
 });
+
+test('a numbered CANivore shows its bus in its label; a single one does not', () => {
+  let d = emptyDoc();
+  d = apply(d, { type: 'addDevice', id: 'cv1', slug: 'canivore', name: '', x: 0, y: 0 });
+  expect(deviceTag(d, 'cv1', catalog).facts).not.toContain('Bus');
+  d = apply(d, { type: 'addDevice', id: 'cv2', slug: 'canivore', name: 'Swerve CANivore', x: 100, y: 0 });
+  expect(deviceTag(d, 'cv1', catalog).facts).toContain('Bus CANivore 1');
+  expect(deviceTag(d, 'cv2', catalog)).toMatchObject({ name: 'Swerve CANivore', facts: 'Bus CANivore 2' });
+});

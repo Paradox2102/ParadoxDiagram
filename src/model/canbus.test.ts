@@ -56,3 +56,13 @@ test('the buses are found once per diagram, not once per label', () => {
   expect(busesInUse(changed, catalog)).not.toBe(busesInUse(d, catalog));
 });
 
+
+test('two CANivores are numbered in the order they were added', () => {
+  const d = build(
+    [['cv1', 'canivore'], ['cv2', 'canivore'], ['a', 'kraken-x60-powerpole'], ['b', 'kraken-x60-powerpole']],
+    [['cv1.can', 'a.can_a'], ['cv2.can', 'b.can_a']],
+  );
+  expect(foundBus(d, catalog, 'a')).toBe('CANivore 1');
+  expect(foundBus(d, catalog, 'b')).toBe('CANivore 2');
+  expect([...busesInUse(d, catalog)].sort()).toEqual(['CANivore 1', 'CANivore 2']);
+});

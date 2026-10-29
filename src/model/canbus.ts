@@ -1,5 +1,6 @@
 // The CAN bus a device is on: the name the user gave it, or the bus found by following the CAN wires
-// back to a robot controller port (SystemCore can_s1 is S1, a roboRIO is RIO) or a CANivore.
+// back to a robot controller port (SystemCore can_s1 is S1, a roboRIO is RIO) or a CANivore. With two or more
+// CANivores, their buses are CANivore 1, CANivore 2, ... in the order the devices were added.
 import type { Catalog, Icon } from '../catalog/catalog';
 import type { Doc } from './types';
 
@@ -13,11 +14,17 @@ function isRootDevice(icon: Icon | undefined): boolean {
   return !!icon && (icon.type === 'controllers' || icon.slug === 'canivore');
 }
 
-function rootName(icon: Icon, port: string): string {
+/** The bus name of a CANivore: CANivore when it is the only one, else CANivore and its number in device order. */
+export function canivoreBus(doc: Doc, deviceId: string): string {
+  const all = doc.devices.filter((d) => d.slug === 'canivore');
+  return all.length > 1 ? `CANivore ${all.findIndex((d) => d.id === deviceId) + 1}` : 'CANivore';
+}
+
+function rootName(doc: Doc, icon: Icon, deviceId: string, port: string): string {
   const s = /^can_s(\d+)$/.exec(port);
   if (s) return `S${s[1]}`;
   if (icon.slug.startsWith('roborio')) return 'RIO';
-  if (icon.slug === 'canivore') return 'CANivore';
+  if (icon.slug === 'canivore') return canivoreBus(doc, deviceId);
   return port.toUpperCase();
 }
 
@@ -38,7 +45,7 @@ export function foundBus(doc: Doc, catalog: Catalog | null, deviceId: string): s
         const other = w.from.device === id ? w.to : w.to.device === id ? w.from : null;
         if (!other || seen.has(other.device)) continue;
         const icon = iconOf(other.device);
-        if (icon && isRoot(icon, other.port)) return rootName(icon, other.port);
+        if (icon && isRoot(icon, other.port)) return rootName(doc, icon, other.device, other.port);
         seen.add(other.device);
         if (!isRootDevice(icon)) next.push(other.device);
       }

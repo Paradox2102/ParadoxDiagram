@@ -26,3 +26,12 @@ test('messages use nameOf when the app gives it, and the ids stay for selection'
   expect(dup.ids).toEqual(['d1', 'd2']);
   expect(ps.map((p) => p.message)).toContain('Front left has a power port and no power wire');
 });
+
+test('the same CAN ID on two CANivore buses is not a duplicate', () => {
+  let d = twoMotors();
+  d = apply(d, { type: 'addDevice', id: 'cv1', slug: 'canivore', name: '', x: 0, y: 200 });
+  d = apply(d, { type: 'addDevice', id: 'cv2', slug: 'canivore', name: '', x: 300, y: 200 });
+  d = apply(d, { type: 'addWire', layer: 'can', from: { device: 'cv1', port: 'can' }, to: { device: 'd1', port: 'can_a' } });
+  d = apply(d, { type: 'addWire', layer: 'can', from: { device: 'cv2', port: 'can' }, to: { device: 'd2', port: 'can_a' } });
+  expect(findProblems(d, catalog).filter((p) => p.code === 'can-duplicate')).toEqual([]);
+});

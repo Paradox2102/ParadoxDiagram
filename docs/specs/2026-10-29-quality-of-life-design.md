@@ -79,6 +79,13 @@ page. Each feature uses code or data that already exists.
 - The MCP server's `render` tool does not draw the title block (it is for the AI to look at the layout). The
   `set_title` operation gets optional `team` and `revision`, so an AI can fill them in.
 
+## 6. Numbered CANivores (added 2026-10-29 at the user's request)
+
+- SystemCore has CAN buses S0 to S4, and some teams add one or more CANivores. With one CANivore, its bus stays
+  `CANivore`. With two or more, the buses are `CANivore 1`, `CANivore 2`, and so on, in the order the devices were added.
+- Each numbered CANivore's label shows `Bus CANivore 2`, so a person can see which bus is which.
+- The duplicate CAN ID check then keeps the CANivore buses apart (the same ID on two CANivores is correct).
+
 ## Out of scope
 
 - A system-clipboard paste between tabs or browsers.
