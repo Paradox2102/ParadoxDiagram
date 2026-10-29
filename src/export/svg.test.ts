@@ -232,6 +232,16 @@ describe('title block', () => {
     expect(block.y).toBe(plain.y);
   });
 
+  test('on a wide page the block grows with the width, up to three times', () => {
+    const wide = (x: number) => apply(doc(), { type: 'addDevice', slug: 'rev-pdh', name: 'Far', x, y: 0 });
+    const plain = exportPage(wide(500), catalog, false);
+    const block = exportPage(wide(500), catalog, true);
+    expect(block.w).toBeGreaterThan(300);
+    expect(block.h - plain.h).toBeCloseTo(TITLE_BLOCK_MM * (block.w / 300), 5);
+    const huge = exportPage(wide(5000), catalog, true);
+    expect(huge.h - exportPage(wide(5000), catalog, false).h).toBeCloseTo(TITLE_BLOCK_MM * 3, 5);
+  });
+
   test('an empty diagram exports with a block and no NaN', async () => {
     const svg = await exportSvg(emptyDoc(), catalog, 'all', realIcons, { titleBlock: { date: '2026-10-29' } });
     expect(svg).not.toContain('NaN');

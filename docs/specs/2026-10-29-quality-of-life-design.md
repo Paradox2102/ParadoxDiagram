@@ -74,6 +74,9 @@ page. Each feature uses code or data that already exists.
   - Right: `Rev <revision>` (when set), the export date (`YYYY-MM-DD`), and the layer when one layer is shown
     (`Power layer`); under it, in small grey text, `diagram.team2102.org`.
   - The page is at least 160 mm wide, so the block has room on a small diagram.
+  - On a page wider than 300 mm, the block and its text grow with the page width (at most 3 times), as drawing title
+    blocks do on a larger sheet. A whole robot is often 800 mm wide, and a 4 mm title is too small when the PNG is
+    shown on a slide. (Decided during the browser check.)
 - The Export menu gets a check item **Title block**, on by default. The choice is kept in this browser
   (`localStorage`, in try/catch), because it is a viewer's preference and not part of the diagram.
 - The MCP server's `render` tool does not draw the title block (it is for the AI to look at the layout). The

@@ -11,9 +11,14 @@ import { deviceTransform } from '../geometry/transform';
 export { renderWirePaths };
 
 export const EXPORT_MARGIN_MM = 10;
-/** The title block: a strip this high under the diagram, on a page at least MIN_PAGE_MM wide. */
+/** The title block: a strip this high under the diagram, on a page at least MIN_PAGE_MM wide. On a page wider than
+ * BLOCK_BASE_MM the block and its text grow with the width (at most BLOCK_MAX_SCALE times), as drawing title blocks do
+ * on a larger sheet, so it stays readable when a big diagram is shown small. */
 export const TITLE_BLOCK_MM = 14;
 export const MIN_PAGE_MM = 160;
+const BLOCK_BASE_MM = 300;
+const BLOCK_MAX_SCALE = 3;
+const blockScale = (pageW: number) => Math.min(BLOCK_MAX_SCALE, Math.max(1, pageW / BLOCK_BASE_MM));
 const LAYER_TEXT = { power: 'Power layer', can: 'CAN layer', network: 'Network layer', air: 'Air layer' } as const;
 
 export interface ExportOptions {
@@ -76,24 +81,27 @@ export function exportPage(doc: Doc, catalog: Catalog | null, titleBlock: boolea
       x -= (MIN_PAGE_MM - w) / 2;
       w = MIN_PAGE_MM;
     }
-    h += TITLE_BLOCK_MM;
+    h += TITLE_BLOCK_MM * blockScale(w);
   }
   return { x, y: box.y - EXPORT_MARGIN_MM, w, h };
 }
 
 /** The title block: title and team on the left; revision, date and layer, then the site, on the right. */
 function titleBlockSvg(doc: Doc, layer: Layer | 'all', date: string, page: { x: number; y: number; w: number; h: number }): string[] {
-  const top = page.y + page.h - TITLE_BLOCK_MM;
+  const k = blockScale(page.w);
+  const top = page.y + page.h - TITLE_BLOCK_MM * k;
   const left = page.x + EXPORT_MARGIN_MM;
   const right = page.x + page.w - EXPORT_MARGIN_MM;
   const facts = [doc.revision ? `Rev ${doc.revision}` : '', date, layer === 'all' ? '' : LAYER_TEXT[layer]].filter(Boolean);
   const out = [
-    `<line data-title-block="" x1="${f(left)}" y1="${f(top)}" x2="${f(right)}" y2="${f(top)}" stroke="${COLORS.muted}" stroke-width="0.3"/>`,
-    `<text x="${f(left)}" y="${f(top + 6)}" font-size="4.2" font-weight="bold" fill="${COLORS.ink}">${esc(doc.title)}</text>`,
-    `<text x="${f(right)}" y="${f(top + 6)}" font-size="3.4" text-anchor="end" fill="${COLORS.ink}">${esc(facts.join('  ·  '))}</text>`,
-    `<text x="${f(right)}" y="${f(top + 10.5)}" font-size="2.6" text-anchor="end" fill="${COLORS.muted}">diagram.team2102.org</text>`,
+    `<line data-title-block="" x1="${f(left)}" y1="${f(top)}" x2="${f(right)}" y2="${f(top)}" stroke="${COLORS.muted}" stroke-width="${f(0.3 * k)}"/>`,
+    `<text x="${f(left)}" y="${f(top + 6 * k)}" font-size="${f(4.2 * k)}" font-weight="bold" fill="${COLORS.ink}">${esc(doc.title)}</text>`,
+    `<text x="${f(right)}" y="${f(top + 6 * k)}" font-size="${f(3.4 * k)}" text-anchor="end" fill="${COLORS.ink}">${esc(facts.join('  ·  '))}</text>`,
+    `<text x="${f(right)}" y="${f(top + 10.5 * k)}" font-size="${f(2.6 * k)}" text-anchor="end" fill="${COLORS.muted}">diagram.team2102.org</text>`,
   ];
-  if (doc.team) out.push(`<text x="${f(left)}" y="${f(top + 10.5)}" font-size="3.2" fill="${COLORS.muted}">${esc(doc.team)}</text>`);
+  if (doc.team) {
+    out.push(`<text x="${f(left)}" y="${f(top + 10.5 * k)}" font-size="${f(3.2 * k)}" fill="${COLORS.muted}">${esc(doc.team)}</text>`);
+  }
   return out;
 }
 
