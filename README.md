@@ -19,7 +19,7 @@ diagram that looks like a team wiring poster.
 
 ## Features
 
-- **Real device icons.** 92 FRC devices (controllers, PDH / PDP / PowerHub, motor controllers, motors, sensors,
+- **Real device icons.** 93 FRC devices (controllers, PDH / PDP / PowerHub, motor controllers, motors, sensors,
   radios, vision, pneumatics) with every port where it is on the real device. Search by name, vendor or part
   number.
 - **Four layers.** Power, CAN, Network (Ethernet, USB, signal) and Air. Show all of them, or one at a time.
@@ -35,9 +35,12 @@ diagram that looks like a team wiring poster.
 - **Export and share.** SVG and PNG (2× or 4×) for posters and slides, JSON to keep a copy, and a share link
   that opens the same diagram for anyone, with no account. SVG and PNG get a title block (title, team, revision,
   date and layer) unless you turn it off in the Export menu.
-- **Check for problems.** The **Check** button lists CAN IDs used twice on one bus, CAN devices with no ID, devices
-  with no power, power channels that feed two devices, and devices or labels on top of each other. Click a problem
-  to select its devices.
+- **Check for problems.** The **Check** button lists CAN IDs used twice on one bus, CAN devices with no ID, a CAN bus
+  whose far end has no 120 Ω terminator, devices with no power, power channels that feed two devices, and devices or
+  labels on top of each other. Click a problem to select its devices.
+- **CAN terminators.** A CAN bus needs 120 Ω at each end. SystemCore, the roboRIO and a CANivore have one built in,
+  so they are one end. End the bus at a **CAN Terminator (120 Ω)** (any 120 Ω resistor, such as AndyMark am-4111),
+  a SWYFT CANender, or a PDH or SWYFT Direct with its TERM switch on.
 - **Device table.** Export → Table (CSV) gives one row per device with its CAN bus, CAN ID, power channel, fuse,
   wire gauge, IP address and your own fields, for code constants or a sheet inside the robot.
 - **Copy and paste.** Copy, paste and duplicate devices with the wires between them. Each copy gets the next free

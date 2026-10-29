@@ -275,7 +275,7 @@ export const TOOLS: ToolDef[] = [
     title: 'Check the diagram',
     description:
       'List the problems: devices that overlap, labels that cover devices, a CAN ID missing or used twice on one bus, ' +
-      'devices with no power wire, a power channel that feeds two devices, unknown device types.',
+      'a CAN bus whose far end has no 120 Ω terminator, devices with no power wire, a power channel that feeds two devices, unknown device types.',
     input: z.object({}),
     example: {},
     async run(ctx) {

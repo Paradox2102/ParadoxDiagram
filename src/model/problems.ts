@@ -1,15 +1,15 @@
 // Problems a diagram can have, for the Check list in the app and the MCP server's check (and the counts after edit and
-// render): devices or labels on top of each other, CAN IDs missing or used twice on one bus, devices with no power,
-// power channels that feed two devices.
+// render): devices or labels on top of each other, CAN IDs missing or used twice on one bus, a CAN bus end with no
+// terminator, devices with no power, power channels that feed two devices.
 import type { Catalog } from '../catalog/catalog';
 import type { Box } from '../geometry/align';
 import { boundsOf, tagLayout } from '../geometry/scene';
-import { busOf } from './canbus';
+import { busEnds, busOf } from './canbus';
 import { deviceTag, tagShown } from './tags';
 import type { Doc } from './types';
 
 export interface Problem {
-  code: 'overlap' | 'label-covers' | 'can-duplicate' | 'can-missing' | 'no-power' | 'channel-shared' | 'unknown-device';
+  code: 'overlap' | 'label-covers' | 'can-duplicate' | 'can-missing' | 'can-unterminated' | 'no-power' | 'channel-shared' | 'unknown-device';
   message: string;
   ids: string[];
 }
@@ -24,6 +24,12 @@ function overlap(a: Box, b: Box): { w: number; h: number } | null {
 const CHANNEL = /^ch\d+$/;
 const times = (n: number) => (n === 2 ? 'twice' : `${n} times`);
 const isBusRoot = (type: string | undefined, slug: string) => type === 'controllers' || slug === 'canivore';
+// CAN devices with no CAN ID: the 120 Ω terminators and the SWYFT CANnect modules, which only carry the bus.
+const TERMINATORS = new Set(['can-terminator', 'swyft-canender-wago', 'swyft-canender-molex']);
+const NO_CAN_ID = new Set([...TERMINATORS, 'swyft-inject-v2', 'swyft-direct-v2']);
+// A bus can end at a terminator, or at a device with a terminator built in (the PDH and the SWYFT Direct with their
+// TERM switch on, the PDP with its jumper on). The diagram does not record a switch, so these count as terminated.
+const BUS_END_OK = new Set([...TERMINATORS, 'rev-pdh', 'ctre-pdp', 'swyft-direct-v2']);
 
 /** nameOf gives the text a message uses for a device: the id (the MCP server), or its label name (the app). */
 export function findProblems(doc: Doc, catalog: Catalog, nameOf: (id: string) => string = (id) => id): Problem[] {
@@ -55,7 +61,7 @@ export function findProblems(doc: Doc, catalog: Catalog, nameOf: (id: string) =>
   const byBusAndId = new Map<string, string[]>();
   for (const d of known) {
     const icon = catalog.bySlug.get(d.slug)!;
-    if (!icon.anchors.some((a) => a.kind === 'can') || isBusRoot(icon.type, icon.slug)) continue;
+    if (!icon.anchors.some((a) => a.kind === 'can') || isBusRoot(icon.type, icon.slug) || NO_CAN_ID.has(icon.slug)) continue;
     if (d.canId === null) {
       out.push({ code: 'can-missing', message: `${nameOf(d.id)} has CAN ports and no CAN ID`, ids: [d.id] });
       continue;
@@ -68,6 +74,12 @@ export function findProblems(doc: Doc, catalog: Catalog, nameOf: (id: string) =>
     const [bus, canId] = key.split('\u0000');
     const where = bus ? `on bus ${bus}` : 'on devices with no bus found';
     out.push({ code: 'can-duplicate', message: `CAN ID ${canId} is used ${times(list.length)} ${where}: ${list.map(nameOf).join(', ')}`, ids: list });
+  }
+  for (const { bus, device } of busEnds(doc, catalog)) {
+    const slug = doc.devices.find((d) => d.id === device)!.slug;
+    if (!BUS_END_OK.has(slug)) {
+      out.push({ code: 'can-unterminated', message: `CAN bus ${bus} ends at ${nameOf(device)} with no 120 Ω terminator`, ids: [device] });
+    }
   }
 
   const powered = new Set(doc.wires.filter((w) => w.layer === 'power').flatMap((w) => [w.from.device, w.to.device]));

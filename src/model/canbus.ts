@@ -58,6 +58,48 @@ export function foundBus(doc: Doc, catalog: Catalog | null, deviceId: string): s
   return null;
 }
 
+/**
+ * The far ends of each bus that starts at a bus root port: the devices on that chain with only one CAN wire. The root
+ * is the other end (SystemCore, a roboRIO and a CANivore have a 120 Ω terminator built in).
+ */
+export function busEnds(doc: Doc, catalog: Catalog): { bus: string; device: string }[] {
+  const iconOf = (id: string) => {
+    const d = doc.devices.find((x) => x.id === id);
+    return d ? catalog.bySlug.get(d.slug) : undefined;
+  };
+  const can = doc.wires.filter((w) => w.layer === 'can');
+  const degree = new Map<string, number>();
+  for (const w of can) for (const id of [w.from.device, w.to.device]) degree.set(id, (degree.get(id) ?? 0) + 1);
+  const out: { bus: string; device: string }[] = [];
+  for (const root of doc.devices) {
+    const icon = iconOf(root.id);
+    if (!icon || !isRootDevice(icon)) continue;
+    for (const a of icon.anchors) {
+      if (a.kind !== 'can') continue;
+      const seen = new Set<string>();
+      let level = can
+        .map((w) => (w.from.device === root.id && w.from.port === a.port ? w.to.device : w.to.device === root.id && w.to.port === a.port ? w.from.device : null))
+        .filter((id): id is string => id !== null && !isRootDevice(iconOf(id)));
+      level.forEach((id) => seen.add(id));
+      while (level.length) {
+        const next: string[] = [];
+        for (const id of level) {
+          for (const w of can) {
+            const other = w.from.device === id ? w.to.device : w.to.device === id ? w.from.device : null;
+            if (!other || seen.has(other) || isRootDevice(iconOf(other))) continue;
+            seen.add(other);
+            next.push(other);
+          }
+        }
+        level = next;
+      }
+      const bus = rootName(doc, icon, root.id, a.port);
+      for (const id of seen) if (degree.get(id) === 1) out.push({ bus, device: id });
+    }
+  }
+  return out;
+}
+
 /** The bus the user named, else the one found from the chain. */
 export function busOf(doc: Doc, catalog: Catalog | null, deviceId: string): string | null {
   const typed = doc.devices.find((d) => d.id === deviceId)?.canBus?.trim();

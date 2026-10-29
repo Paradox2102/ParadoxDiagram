@@ -120,6 +120,17 @@
    "canId": null,
    "notes": "",
    "tagSide": "left"
+  },
+  {
+   "id": "d19",
+   "slug": "can-terminator",
+   "x": 250,
+   "y": 270,
+   "rot": 0,
+   "name": "CAN end",
+   "canId": null,
+   "notes": "120 Ω across CAN H and CAN L at the end of bus S1.",
+   "tagSide": "right"
   }
  ],
  "wires": [
@@ -371,6 +382,20 @@
    "to": {
     "device": "d5",
     "port": "eth_aux2"
+   },
+   "bends": [],
+   "note": ""
+  },
+  {
+   "id": "w20",
+   "layer": "can",
+   "from": {
+    "device": "d9",
+    "port": "can"
+   },
+   "to": {
+    "device": "d19",
+    "port": "can"
    },
    "bends": [],
    "note": ""
