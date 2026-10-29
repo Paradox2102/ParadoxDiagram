@@ -54,6 +54,38 @@ describe('copy, paste and duplicate', () => {
     expect(c.defaultPrevented).toBe(false);
   });
 
+  test('with page text selected (the email in About), Cmd+C copies the text, not the devices', () => {
+    const k = clipKeys(true);
+    const p = document.createElement('p');
+    p.textContent = 'nickfoote@team2102.org';
+    document.body.append(p);
+    const range = document.createRange();
+    range.selectNodeContents(p);
+    window.getSelection()!.removeAllRanges();
+    window.getSelection()!.addRange(range);
+    const c = new KeyboardEvent('keydown', { key: 'c', metaKey: true, bubbles: true, cancelable: true });
+    window.dispatchEvent(c);
+    expect(k.copy).not.toHaveBeenCalled();
+    expect(c.defaultPrevented).toBe(false);
+    window.getSelection()!.removeAllRanges();
+    p.remove();
+  });
+
+  test('while a dialog is open (About, Share), the editor keys do nothing', () => {
+    const k = clipKeys(true);
+    const dialog = document.createElement('div');
+    dialog.setAttribute('role', 'dialog');
+    dialog.setAttribute('aria-modal', 'true');
+    document.body.append(dialog);
+    press('d', { metaKey: true });
+    press('v', { metaKey: true });
+    press('Delete');
+    expect(k.duplicate).not.toHaveBeenCalled();
+    expect(k.paste).not.toHaveBeenCalled();
+    expect(k.remove).not.toHaveBeenCalled();
+    dialog.remove();
+  });
+
   test('in a text field the keys copy and paste text', () => {
     const k = clipKeys(true);
     const input = document.createElement('input');

@@ -20,13 +20,14 @@ const ARROWS: Record<string, [number, number]> = {
 const NUDGE_MM = 1;
 const NUDGE_SHIFT_MM = 5;
 
-/** Editor shortcuts. Ignored while typing in a field. */
+/** Editor shortcuts. Ignored while typing in a field and while a dialog (About, Share) is open. */
 export function useKeys(keys: Keys): void {
   const ref = useRef(keys);
   ref.current = keys;
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => {
       if ((e.target as HTMLElement).closest?.('input, textarea, [contenteditable]')) return;
+      if (document.querySelector('[aria-modal="true"]')) return;
       const k = ref.current;
       const mod = e.metaKey || e.ctrlKey;
       const key = e.key.toLowerCase();
@@ -38,6 +39,8 @@ export function useKeys(keys: Keys): void {
         e.preventDefault();
         k.redo();
       } else if (mod && !e.shiftKey && !e.altKey && (key === 'c' || key === 'v' || key === 'd')) {
+        // selected page text (an address in a panel) is the browser's to copy
+        if (key === 'c' && window.getSelection()?.toString()) return;
         const run = key === 'c' ? k.copy : key === 'v' ? k.paste : k.duplicate;
         const done = run?.() ?? false;
         // Cmd/Ctrl+D is also the browser's bookmark key: the editor keeps it even when nothing is selected

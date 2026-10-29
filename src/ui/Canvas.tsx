@@ -216,6 +216,8 @@ export function Canvas({ doc, catalog, layer, selection, setSelection, hist, api
   const onPointerDown = (e: React.PointerEvent<SVGSVGElement>) => {
     // Finish an edit in the side panel first, so it lands before this gesture starts.
     (document.activeElement as HTMLElement | null)?.blur?.();
+    // A text selection in a panel ends here, so Ctrl/Cmd+C copies devices again (useKeys leaves selected text alone).
+    window.getSelection()?.removeAllRanges();
     try {
       svgRef.current!.setPointerCapture(e.pointerId);
     } catch {
