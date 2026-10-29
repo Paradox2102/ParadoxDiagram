@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="-7 -6 83.1 81" width="83.1mm" height="81mm" font-family="Helvetica, Arial, sans-serif">
-<title>CTRE Pneumatics Control Module</title>
+<title>Pneumatics Control Module (PCM)</title>
 <desc>Drawn by FRC Team 2102 Paradox. Public domain: CC0 1.0 (https://creativecommons.org/publicdomain/zero/1.0/). https://docs.team2102.org/icons/</desc>
 <rect x="0" y="0" width="69.1" height="56.9" rx="3" fill="#3a3f47" stroke="#1f2328" stroke-width="0.5"/>
 <path d="M 7.8 0.6 L 7.8 9.6 L 0.6 9.6 M 61.0 1.2 L 61.0 7.6 L 68.5 7.6 M 0.6 47.2 L 8.6 47.2 L 8.6 56.3 M 68.5 48.0 L 60.6 48.0 L 60.6 56.3" fill="none" stroke="#1f2328" stroke-width="0.5" stroke-linejoin="round" stroke-linecap="round"/>
@@ -156,7 +156,7 @@
 <text x="64" y="27.8" font-size="2.4" fill="#9ccc4a" text-anchor="middle" font-weight="bold" transform="rotate(-90 64 27.8)">Pneumatics Control Module</text>
 <text x="66.6" y="27.8" font-size="1.2" fill="#9ccc4a" text-anchor="middle" transform="rotate(-90 66.6 27.8)">WWW.CROSSTHEROADELECTRONICS.COM</text>
 <g class="caption">
-<text x="34.55" y="66.4" font-size="4" fill="#1f2328" text-anchor="middle" font-weight="bold">CTRE Pneumatics Control Module</text>
+<text x="34.55" y="66.4" font-size="4" fill="#1f2328" text-anchor="middle" font-weight="bold">Pneumatics Control Module (PCM)</text>
 <text x="34.55" y="70.6" font-size="2.3" fill="#57606a" text-anchor="middle">69.1 × 56.9 mm · top view · legacy, wires enter from the edges</text>
 </g>
 <g id="anchors">

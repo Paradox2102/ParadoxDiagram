@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="-6 -5 82 80.2" width="82mm" height="80.2mm" font-family="Helvetica, Arial, sans-serif">
-<title>Studica Servo Power Block</title>
+<title>Servo Power Block</title>
 <desc>Drawn by FRC Team 2102 Paradox. Public domain: CC0 1.0 (https://creativecommons.org/publicdomain/zero/1.0/). https://docs.team2102.org/icons/</desc>
 <rect x="0" y="0" width="70" height="45" rx="4" fill="#0b4a8f" stroke="#1f2328" stroke-width="0.5"/>
 <rect x="0.9" y="0.9" width="68.2" height="43.2" rx="3.2" fill="none" stroke="#e6edf3" stroke-width="0.2"/>
@@ -141,7 +141,7 @@
 <text x="35" y="64" font-size="2.2" fill="#1f2328" text-anchor="middle" font-weight="bold">12 V in</text>
 </g>
 <g class="caption">
-<text x="35" y="69.5" font-size="4" fill="#1f2328" text-anchor="middle" font-weight="bold">Studica Servo Power Block</text>
+<text x="35" y="69.5" font-size="4" fill="#1f2328" text-anchor="middle" font-weight="bold">Servo Power Block</text>
 <text x="35" y="73.7" font-size="2.3" fill="#57606a" text-anchor="middle">70 × 45 × 16 mm · top view · 12 V lead drawn short</text>
 </g>
 <g id="anchors">

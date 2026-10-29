@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="-32 -12 64 53.7" width="64mm" height="53.7mm" font-family="Helvetica, Arial, sans-serif">
-<title>SWYFT CANender Wago</title>
+<title>SWYFT CANender (Wago)</title>
 <desc>Drawn by FRC Team 2102 Paradox. Public domain: CC0 1.0 (https://creativecommons.org/publicdomain/zero/1.0/). https://docs.team2102.org/icons/</desc>
 <path d="M -14.876 3.127 A 3.81 3.81 0 0 1 -14.876 -3.127 L -7.199 -8.470 Q -6.050 -9.270 -4.900 -9.270 L 4.900 -9.270 Q 6.050 -9.270 7.199 -8.470 L 14.876 -3.127 A 3.81 3.81 0 0 1 14.876 3.127 L 7.199 8.470 Q 6.050 9.270 4.900 9.270 L -4.900 9.270 Q -6.050 9.270 -7.199 8.470 Z" fill="#ece8dc" stroke="#1f2328" stroke-width="0.4" stroke-linejoin="round" stroke-linecap="round"/>
 <circle cx="-12.7" cy="0" r="2.54" fill="#ffffff" stroke="#1f2328" stroke-width="0.3"/>
@@ -29,7 +29,7 @@
 <text x="0" y="26.2" font-size="2.2" fill="#1f2328" text-anchor="middle" font-weight="bold">CAN H + CAN L</text>
 </g>
 <g class="caption">
-<text x="0" y="36" font-size="4" fill="#1f2328" text-anchor="middle" font-weight="bold">SWYFT CANender Wago</text>
+<text x="0" y="36" font-size="4" fill="#1f2328" text-anchor="middle" font-weight="bold">SWYFT CANender (Wago)</text>
 <text x="0" y="40.2" font-size="2.3" fill="#57606a" text-anchor="middle">33.0 × 18.5 mm · top view · Wago lever, 120 Ω</text>
 </g>
 <g id="anchors">

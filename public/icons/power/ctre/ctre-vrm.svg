@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="-8 -7 72.4 82" width="72.4mm" height="82mm" font-family="Helvetica, Arial, sans-serif">
-<title>CTRE Voltage Regulator Module</title>
+<title>Voltage Regulator Module (VRM)</title>
 <desc>Drawn by FRC Team 2102 Paradox. Public domain: CC0 1.0 (https://creativecommons.org/publicdomain/zero/1.0/). https://docs.team2102.org/icons/</desc>
 <rect x="0" y="0" width="56.4" height="51.6" rx="3.5" fill="#3a3f47" stroke="#1f2328" stroke-width="0.5"/>
 <circle cx="3.2" cy="3.6" r="1.7" fill="#ffffff" stroke="#1f2328" stroke-width="0.3"/>
@@ -113,7 +113,7 @@
 <text x="34.1" y="38.9" font-size="2.1" fill="#1f2328" text-anchor="middle" font-weight="bold">5V</text>
 <circle cx="34.1" cy="44.2" r="2.6" fill="#16191d" stroke="#aab2bd" stroke-width="0.3"/>
 <g class="caption">
-<text x="28.2" y="61" font-size="4" fill="#1f2328" text-anchor="middle" font-weight="bold">CTRE Voltage Regulator Module</text>
+<text x="28.2" y="61" font-size="4" fill="#1f2328" text-anchor="middle" font-weight="bold">Voltage Regulator Module (VRM)</text>
 <text x="28.2" y="65.2" font-size="2.3" fill="#57606a" text-anchor="middle">56.4 × 51.6 mm · top view · power input at the top</text>
 </g>
 <g id="anchors">

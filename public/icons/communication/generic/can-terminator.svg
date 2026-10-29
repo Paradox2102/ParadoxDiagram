@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-30 -6 60 41.7" width="60mm" height="41.7mm" font-family="Helvetica, Arial, sans-serif">
+<title>CAN Terminator (120 Ω)</title>
+<desc>Drawn by FRC Team 2102 Paradox. Public domain: CC0 1.0 (https://creativecommons.org/publicdomain/zero/1.0/). https://docs.team2102.org/icons/</desc>
+<path d="M -3.15 0 L -6 0 L -6 5.6" fill="none" stroke="#1f2328" stroke-width="0.8" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M -3.15 0 L -6 0 L -6 5.6" fill="none" stroke="#a9afb6" stroke-width="0.55" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 3.15 0 L 6 0 L 6 5.6" fill="none" stroke="#1f2328" stroke-width="0.8" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 3.15 0 L 6 0 L 6 5.6" fill="none" stroke="#a9afb6" stroke-width="0.55" stroke-linejoin="round" stroke-linecap="round"/>
+<rect x="-3.15" y="-1.2" width="6.3" height="2.4" rx="0.9" fill="#d9c49a" stroke="#1f2328" stroke-width="0.2"/>
+<rect x="-2.55" y="-1.1" width="0.5" height="2.2" rx="0" fill="#7b4a1e"/>
+<rect x="-1.65" y="-1.1" width="0.5" height="2.2" rx="0" fill="#d02020"/>
+<rect x="-0.75" y="-1.1" width="0.5" height="2.2" rx="0" fill="#7b4a1e"/>
+<rect x="1.95" y="-1.1" width="0.5" height="2.2" rx="0" fill="#d4af37"/>
+<rect x="-6.9" y="4.8" width="1.8" height="3.6" rx="0.4" fill="#2d333b" stroke="#1f2328" stroke-width="0.15"/>
+<rect x="5.1" y="4.8" width="1.8" height="3.6" rx="0.4" fill="#2d333b" stroke="#1f2328" stroke-width="0.15"/>
+<path d="M -6 8 L -6 10 L -0.9 14.5 L -0.9 19" fill="none" stroke="#8c959f" stroke-width="1.2" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M -6 8 L -6 10 L -0.9 14.5 L -0.9 19" fill="none" stroke="#e3b341" stroke-width="0.9" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 6 8 L 6 10 L 0.9 14.5 L 0.9 19" fill="none" stroke="#8c959f" stroke-width="1.2" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 6 8 L 6 10 L 0.9 14.5 L 0.9 19" fill="none" stroke="#2da44e" stroke-width="0.9" stroke-linejoin="round" stroke-linecap="round"/>
+<g class="lead-labels">
+<text x="0" y="-3.2" font-size="2.4" fill="#1f2328" text-anchor="middle" font-weight="bold">120 Ω</text>
+<text x="-8.2" y="10.4" font-size="2" fill="#1f2328" text-anchor="end">CAN H</text>
+<text x="8.2" y="10.4" font-size="2" fill="#1f2328" text-anchor="start">CAN L</text>
+<text x="0" y="23.2" font-size="2.2" fill="#1f2328" text-anchor="middle" font-weight="bold">CAN H + CAN L (no polarity)</text>
+</g>
+<g class="caption">
+<text x="0" y="30" font-size="4" fill="#1f2328" text-anchor="middle" font-weight="bold">CAN Terminator (120 Ω)</text>
+<text x="0" y="34.2" font-size="2.3" fill="#57606a" text-anchor="middle">6.3 × 2.4 mm body · top view · across CAN H and L</text>
+</g>
+<g id="anchors">
+<circle class="anchor" id="anchor-can" data-kind="can" cx="0" cy="19" r="1" fill="none"><title>CAN H and CAN L wire pair to the two leads of the 120 Ω resistor (no polarity, either way round)</title></circle>
+</g>
+</svg>

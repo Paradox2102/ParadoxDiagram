@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="-10 -6 131 248" width="131mm" height="248mm" font-family="Helvetica, Arial, sans-serif">
-<title>REV Power Distribution Hub</title>
+<title>Power Distribution Hub (PDH)</title>
 <desc>Drawn by FRC Team 2102 Paradox. Public domain: CC0 1.0 (https://creativecommons.org/publicdomain/zero/1.0/). https://docs.team2102.org/icons/</desc>
 <rect x="0" y="0" width="111.1" height="225.4" rx="5" fill="#3a3f47" stroke="#1f2328" stroke-width="0.5"/>
 <circle cx="4.8" cy="4.8" r="2.5" fill="#ffffff" stroke="#1f2328" stroke-width="0.3"/>
@@ -184,7 +184,7 @@
 <rect x="54.8" y="213" width="4.2" height="8" rx="0.4" fill="#d0d7de"/>
 <text x="54.5" y="223.6" font-size="1.5" fill="#aab2bd" text-anchor="middle">RS485</text>
 <g class="caption">
-<text x="55.55" y="234" font-size="4" fill="#1f2328" text-anchor="middle" font-weight="bold">REV Power Distribution Hub</text>
+<text x="55.55" y="234" font-size="4" fill="#1f2328" text-anchor="middle" font-weight="bold">Power Distribution Hub (PDH)</text>
 <text x="55.55" y="238.2" font-size="2.3" fill="#57606a" text-anchor="middle">111.1 × 225.4 mm · top view · battery end at the bottom</text>
 </g>
 <g id="anchors">

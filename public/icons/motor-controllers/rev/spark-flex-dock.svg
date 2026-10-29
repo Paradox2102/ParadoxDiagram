@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="-8 -16 100 84" width="100mm" height="84mm" font-family="Helvetica, Arial, sans-serif">
-<title>REV SPARK Flex + Flex Dock</title>
+<title>SPARK Flex + Flex Dock</title>
 <desc>Drawn by FRC Team 2102 Paradox. Public domain: CC0 1.0 (https://creativecommons.org/publicdomain/zero/1.0/). https://docs.team2102.org/icons/</desc>
 <rect x="0" y="0" width="50.8" height="28.2" rx="1.5" fill="#3a3f47" stroke="#1f2328" stroke-width="0.5"/>
 <rect x="0" y="0" width="50.8" height="2.2" rx="1" fill="#2b3036"/>
@@ -90,7 +90,7 @@
 <text x="54" y="3.2" font-size="1.6" fill="#1f2328" text-anchor="start" font-weight="bold">ENCODER</text>
 </g>
 <g class="caption">
-<text x="37.4" y="61" font-size="4" fill="#1f2328" text-anchor="middle" font-weight="bold">REV SPARK Flex + Flex Dock</text>
+<text x="37.4" y="61" font-size="4" fill="#1f2328" text-anchor="middle" font-weight="bold">SPARK Flex + Flex Dock</text>
 <text x="37.4" y="65.2" font-size="2.3" fill="#57606a" text-anchor="middle">50.8 × 35 mm · wire-side view · leads drawn short, for NEO, NEO 550 or brushed</text>
 </g>
 <g id="anchors">

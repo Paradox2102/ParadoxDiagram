@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="-11 -6 61 98" width="61mm" height="98mm" font-family="Helvetica, Arial, sans-serif">
-<title>CTRE CANivore</title>
+<title>CANivore (USB to CAN FD)</title>
 <desc>Drawn by FRC Team 2102 Paradox. Public domain: CC0 1.0 (https://creativecommons.org/publicdomain/zero/1.0/). https://docs.team2102.org/icons/</desc>
 <rect x="0" y="0" width="39.37" height="55.12" rx="6.5" fill="#c9d1d9" stroke="#1f2328" stroke-width="0.5"/>
 <rect x="3" y="3" width="33.37" height="49.12" rx="3" fill="#16191d"/>
@@ -47,7 +47,7 @@
 <text x="23" y="78" font-size="2.2" fill="#1f2328" text-anchor="middle" font-weight="bold">PWR</text>
 </g>
 <g class="caption">
-<text x="19.685" y="86" font-size="4" fill="#1f2328" text-anchor="middle" font-weight="bold">CTRE CANivore</text>
+<text x="19.685" y="86" font-size="4" fill="#1f2328" text-anchor="middle" font-weight="bold">CANivore (USB to CAN FD)</text>
 <text x="19.685" y="90.2" font-size="2.3" fill="#57606a" text-anchor="middle">39.4 × 55.1 mm · top view · leads drawn short</text>
 </g>
 <g id="anchors">

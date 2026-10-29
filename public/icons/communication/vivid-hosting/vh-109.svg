@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="-8 -6 131 75" width="131mm" height="75mm" font-family="Helvetica, Arial, sans-serif">
-<title>VH-109 Radio</title>
+<title>Vivid-Hosting VH-109 FRC Robot Radio</title>
 <desc>Drawn by FRC Team 2102 Paradox. Public domain: CC0 1.0 (https://creativecommons.org/publicdomain/zero/1.0/). https://docs.team2102.org/icons/</desc>
 <rect x="0" y="0" width="114.9" height="54" rx="3" fill="#3a3f47" stroke="#1f2328" stroke-width="0.5"/>
 <text x="57.45" y="27" font-size="7" fill="#f0f3f6" text-anchor="middle" font-weight="bold">VH-109</text>
@@ -41,7 +41,7 @@
 <text x="105.9" y="40.4" font-size="2.6" fill="#f0f3f6" text-anchor="end" font-weight="bold">AUX2</text>
 <text x="105.9" y="43.6" font-size="1.7" fill="#aab2bd" text-anchor="end">PoE out (DIP 2)</text>
 <g class="caption">
-<text x="57.45" y="63" font-size="4" fill="#1f2328" text-anchor="middle" font-weight="bold">VH-109 Radio</text>
+<text x="57.45" y="63" font-size="4" fill="#1f2328" text-anchor="middle" font-weight="bold">Vivid-Hosting VH-109 FRC Robot Radio</text>
 <text x="57.45" y="67.2" font-size="2.3" fill="#57606a" text-anchor="middle">114.9 × 54 mm · top view · Ethernet on both ends</text>
 </g>
 <g id="anchors">

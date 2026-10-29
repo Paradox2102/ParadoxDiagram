@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="-5 -7 72 41" width="72mm" height="41mm" font-family="Helvetica, Arial, sans-serif">
-<title>REV 2m Distance Sensor</title>
+<title>2m Distance Sensor</title>
 <desc>Drawn by FRC Team 2102 Paradox. Public domain: CC0 1.0 (https://creativecommons.org/publicdomain/zero/1.0/). https://docs.team2102.org/icons/</desc>
 <path d="M 2.06 0 L 37.34 0 L 39.4 2.06 L 39.4 12.94 L 37.34 15 L 2.06 15 L 0 12.94 L 0 2.06 Z" fill="#2b2f35" stroke="#1f2328" stroke-width="0.4" stroke-linejoin="round" stroke-linecap="round"/>
 <circle cx="3.68" cy="7.5" r="1.72" fill="#ffffff" stroke="#1f2328" stroke-width="0.25"/>
@@ -37,7 +37,7 @@
 <text x="44.5" y="14.9" font-size="1.4" fill="#1f2328" text-anchor="middle">SCL</text>
 </g>
 <g class="caption">
-<text x="31" y="24.5" font-size="4" fill="#1f2328" text-anchor="middle" font-weight="bold">REV 2m Distance Sensor</text>
+<text x="31" y="24.5" font-size="4" fill="#1f2328" text-anchor="middle" font-weight="bold">2m Distance Sensor</text>
 <text x="31" y="28.7" font-size="2.3" fill="#57606a" text-anchor="middle">39.4 × 15 mm · top view (sensor face) · 30 cm cable drawn short</text>
 </g>
 <g id="anchors">

@@ -1,5 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="-28 -14 56 84" width="56mm" height="84mm" font-family="Helvetica, Arial, sans-serif">
-<title>CTRE CANcoder</title>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-45.29 -14 90.57 84" width="90.57mm" height="84mm" font-family="Helvetica, Arial, sans-serif">
+<title>CANcoder (magnetic absolute rotary encoder)</title>
 <desc>Drawn by FRC Team 2102 Paradox. Public domain: CC0 1.0 (https://creativecommons.org/publicdomain/zero/1.0/). https://docs.team2102.org/icons/</desc>
 <circle cx="0" cy="0" r="10.2" fill="#1f2328" stroke="#1f2328" stroke-width="1"/>
 <circle cx="6.45" cy="-3.72" r="4.42" fill="#1f2328" stroke="#1f2328" stroke-width="1"/>
@@ -41,7 +41,7 @@
 <text x="17" y="53.4" font-size="2.2" fill="#1f2328" text-anchor="middle" font-weight="bold">CAN (female)</text>
 </g>
 <g class="caption">
-<text x="0" y="63" font-size="4" fill="#1f2328" text-anchor="middle" font-weight="bold">CTRE CANcoder</text>
+<text x="0" y="63" font-size="4" fill="#1f2328" text-anchor="middle" font-weight="bold">CANcoder (magnetic absolute rotary encoder)</text>
 <text x="0" y="67.2" font-size="2.3" fill="#57606a" text-anchor="middle">21.7 × 26.9 mm · top view · 12 in leads, drawn short</text>
 </g>
 <g id="anchors">

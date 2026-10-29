@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="-46 -46 92 103" width="92mm" height="103mm" font-family="Helvetica, Arial, sans-serif">
-<title>Lumyn ConnectorX Animate</title>
+<title>ConnectorX Animate</title>
 <desc>Drawn by FRC Team 2102 Paradox. Public domain: CC0 1.0 (https://creativecommons.org/publicdomain/zero/1.0/). https://docs.team2102.org/icons/</desc>
 <rect x="-41.5" y="-24" width="83" height="48" rx="4" fill="#1d4ea8" stroke="#1f2328" stroke-width="0.5"/>
 <circle cx="-37.5" cy="-20" r="4" fill="#b8bec6"/>
@@ -168,7 +168,7 @@
 <text x="-26.3" y="5" font-size="3.4" fill="#f0f3f6" text-anchor="middle">ConnectorX</text>
 <text x="-27" y="8.3" font-size="2.6" fill="#f0f3f6" text-anchor="middle">Animate</text>
 <g class="caption">
-<text x="0" y="51" font-size="4" fill="#1f2328" text-anchor="middle" font-weight="bold">Lumyn ConnectorX Animate</text>
+<text x="0" y="51" font-size="4" fill="#1f2328" text-anchor="middle" font-weight="bold">ConnectorX Animate</text>
 <text x="0" y="55.2" font-size="2.3" fill="#57606a" text-anchor="middle">83 × 48 mm · top view · 4 LED channels · leads drawn short</text>
 </g>
 <g id="anchors">

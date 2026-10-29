@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="-8 -6 63.6 129" width="63.6mm" height="129mm" font-family="Helvetica, Arial, sans-serif">
-<title>REV Servo Hub</title>
+<title>Servo Hub</title>
 <desc>Drawn by FRC Team 2102 Paradox. Public domain: CC0 1.0 (https://creativecommons.org/publicdomain/zero/1.0/). https://docs.team2102.org/icons/</desc>
 <rect x="0" y="0" width="47.6" height="85.7" rx="3" fill="#3a3f47" stroke="#1f2328" stroke-width="0.5"/>
 <circle cx="4.75" cy="4.75" r="3.4" fill="#2b3036"/>
@@ -113,7 +113,7 @@
 <text x="32.2" y="108.7" font-size="2.4" fill="#1f2328" text-anchor="middle" font-weight="bold">−</text>
 </g>
 <g class="caption">
-<text x="23.8" y="115.7" font-size="4" fill="#1f2328" text-anchor="middle" font-weight="bold">REV Servo Hub</text>
+<text x="23.8" y="115.7" font-size="4" fill="#1f2328" text-anchor="middle" font-weight="bold">Servo Hub</text>
 <text x="23.8" y="119.9" font-size="2.3" fill="#57606a" text-anchor="middle">47.6 × 85.7 mm · top view · leads drawn short</text>
 </g>
 <g id="anchors">

@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="-30 -6 128 76" width="128mm" height="76mm" font-family="Helvetica, Arial, sans-serif">
-<title>REV SPARK MAX</title>
+<title>SPARK MAX Motor Controller</title>
 <desc>Drawn by FRC Team 2102 Paradox. Public domain: CC0 1.0 (https://creativecommons.org/publicdomain/zero/1.0/). https://docs.team2102.org/icons/</desc>
 <path d="M 0 12.3 L -3 12.3 L -6 6 L -18 6" fill="none" stroke="#8c959f" stroke-width="2.3" stroke-linejoin="round" stroke-linecap="round"/>
 <path d="M 0 12.3 L -3 12.3 L -6 6 L -18 6" fill="none" stroke="#cf222e" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
@@ -82,7 +82,7 @@
 <text x="-6" y="55" font-size="2.2" fill="#1f2328" text-anchor="middle" font-weight="bold">CAN (female)</text>
 </g>
 <g class="caption">
-<text x="34.65" y="63" font-size="4" fill="#1f2328" text-anchor="middle" font-weight="bold">REV SPARK MAX</text>
+<text x="34.65" y="63" font-size="4" fill="#1f2328" text-anchor="middle" font-weight="bold">SPARK MAX Motor Controller</text>
 <text x="34.65" y="67.2" font-size="2.3" fill="#57606a" text-anchor="middle">69.3 × 34.5 mm · top view · end-face ports at the edges · leads drawn short</text>
 </g>
 <g id="anchors">

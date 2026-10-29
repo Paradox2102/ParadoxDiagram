@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="-5 -5 66 58" width="66mm" height="58mm" font-family="Helvetica, Arial, sans-serif">
-<title>Redux Canandgyro</title>
+<title>Boron Canandgyro (6-axis IMU)</title>
 <desc>Drawn by FRC Team 2102 Paradox. Public domain: CC0 1.0 (https://creativecommons.org/publicdomain/zero/1.0/). https://docs.team2102.org/icons/</desc>
 <rect x="0" y="0" width="36" height="36" rx="3" fill="#dde2e7" stroke="#1f2328" stroke-width="0.6"/>
 <path d="M 3 0 L 28.62 0 A 5.7 5.7 0 1 0 36 7.38 L 36 33 A 3 3 0 0 1 33 36 L 7.38 36 A 5.7 5.7 0 1 0 0 28.62 L 0 3 A 3 3 0 0 1 3 0 Z" fill="#f4f6f8" stroke="#c4cad1" stroke-width="0.3" stroke-linejoin="round" stroke-linecap="round"/>
@@ -49,7 +49,7 @@
 <text x="52.6" y="26.7" font-size="2" fill="#1f2328" text-anchor="start" font-weight="bold">CAN L</text>
 </g>
 <g class="caption">
-<text x="28" y="44" font-size="4" fill="#1f2328" text-anchor="middle" font-weight="bold">Redux Canandgyro</text>
+<text x="28" y="44" font-size="4" fill="#1f2328" text-anchor="middle" font-weight="bold">Boron Canandgyro (6-axis IMU)</text>
 <text x="28" y="48.2" font-size="2.3" fill="#57606a" text-anchor="middle">36 × 36 mm (est.) · top view · leads drawn short</text>
 </g>
 <g id="anchors">

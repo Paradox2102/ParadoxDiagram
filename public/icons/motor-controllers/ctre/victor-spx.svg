@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="-22 -6 114 72" width="114mm" height="72mm" font-family="Helvetica, Arial, sans-serif">
-<title>CTRE Victor SPX</title>
+<title>Victor SPX</title>
 <desc>Drawn by FRC Team 2102 Paradox. Public domain: CC0 1.0 (https://creativecommons.org/publicdomain/zero/1.0/). https://docs.team2102.org/icons/</desc>
 <path d="M 0 7 L -14 7" fill="none" stroke="#8c959f" stroke-width="2.3" stroke-linejoin="round" stroke-linecap="round"/>
 <path d="M 0 7 L -14 7" fill="none" stroke="#2da44e" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
@@ -61,7 +61,7 @@
 <text x="75.5" y="50.8" font-size="2.2" fill="#1f2328" text-anchor="middle" font-weight="bold">CAN (male)</text>
 </g>
 <g class="caption">
-<text x="31.75" y="60" font-size="4" fill="#1f2328" text-anchor="middle" font-weight="bold">CTRE Victor SPX</text>
+<text x="31.75" y="60" font-size="4" fill="#1f2328" text-anchor="middle" font-weight="bold">Victor SPX</text>
 <text x="31.75" y="64.2" font-size="2.3" fill="#57606a" text-anchor="middle">63.5 × 29.5 mm · top view · leads drawn short</text>
 </g>
 <g id="anchors">

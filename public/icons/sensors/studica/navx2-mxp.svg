@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="-5 -6 88 81" width="88mm" height="81mm" font-family="Helvetica, Arial, sans-serif">
-<title>Studica navX2-MXP</title>
+<title>navX2-MXP Robotics Navigation Sensor</title>
 <desc>Drawn by FRC Team 2102 Paradox. Public domain: CC0 1.0 (https://creativecommons.org/publicdomain/zero/1.0/). https://docs.team2102.org/icons/</desc>
 <rect x="0" y="0" width="77.47" height="56.64" rx="1.2" fill="#7a2f86" stroke="#1f2328" stroke-width="0.4"/>
 <circle cx="3.43" cy="53.13" r="2.2" fill="#c9a227"/>
@@ -198,7 +198,7 @@
 <path d="M 51.433 55.426 L 51.433 58.84" fill="none" stroke="#d4a72c" stroke-width="0.6" stroke-linejoin="round" stroke-linecap="round"/>
 <path d="M 48.893 55.426 L 48.893 58.84" fill="none" stroke="#d4a72c" stroke-width="0.6" stroke-linejoin="round" stroke-linecap="round"/>
 <g class="caption">
-<text x="38.735" y="66.14" font-size="4" fill="#1f2328" text-anchor="middle" font-weight="bold">Studica navX2-MXP</text>
+<text x="38.735" y="66.14" font-size="4" fill="#1f2328" text-anchor="middle" font-weight="bold">navX2-MXP Robotics Navigation Sensor</text>
 <text x="38.735" y="70.34" font-size="2.3" fill="#57606a" text-anchor="middle">77.5 × 56.6 mm · top view · plugs onto the roboRIO MXP port</text>
 </g>
 <g id="anchors">

@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="-9 -6 81 51.6" width="81mm" height="51.6mm" font-family="Helvetica, Arial, sans-serif">
-<title>REV Blinkin LED Driver</title>
+<title>Blinkin LED Driver</title>
 <desc>Drawn by FRC Team 2102 Paradox. Public domain: CC0 1.0 (https://creativecommons.org/publicdomain/zero/1.0/). https://docs.team2102.org/icons/</desc>
 <path d="M 2.2 0 L 60.7 0 L 62.9 2.2 L 62.9 28.7 L 60.7 30.9 L 2.2 30.9 L 0 28.7 L 0 2.2 Z" fill="#eef1f4" stroke="#1f2328" stroke-width="0.5" stroke-linejoin="round" stroke-linecap="round"/>
 <rect x="2.6" y="2.6" width="57.7" height="25.7" rx="1.2" fill="#3a3f47"/>
@@ -58,7 +58,7 @@
 <rect x="61.85" y="21" width="0.8" height="0.8" rx="0" fill="#d4a72c"/>
 <text x="63.5" y="7.2" font-size="1.4" fill="#aab2bd" text-anchor="middle">LED</text>
 <g class="caption">
-<text x="31.45" y="39.9" font-size="4" fill="#1f2328" text-anchor="middle" font-weight="bold">REV Blinkin LED Driver</text>
+<text x="31.45" y="39.9" font-size="4" fill="#1f2328" text-anchor="middle" font-weight="bold">Blinkin LED Driver</text>
 <text x="31.45" y="44.1" font-size="2.3" fill="#57606a" text-anchor="middle">62.9 × 30.9 mm · top view · XT30 and PWM in, JST PH out</text>
 </g>
 <g id="anchors">

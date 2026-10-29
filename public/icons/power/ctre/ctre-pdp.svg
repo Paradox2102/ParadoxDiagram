@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="-8 -8 136.6 222" width="136.6mm" height="222mm" font-family="Helvetica, Arial, sans-serif">
-<title>CTRE Power Distribution Panel</title>
+<title>Power Distribution Panel (PDP)</title>
 <desc>Drawn by FRC Team 2102 Paradox. Public domain: CC0 1.0 (https://creativecommons.org/publicdomain/zero/1.0/). https://docs.team2102.org/icons/</desc>
 <rect x="0" y="0" width="120.6" height="192.7" rx="4" fill="#3a3f47" stroke="#1f2328" stroke-width="0.5"/>
 <circle cx="4.6" cy="5" r="2.4" fill="#ffffff" stroke="#1f2328" stroke-width="0.3"/>
@@ -192,7 +192,7 @@
 <text x="105.4" y="180.92" font-size="2" fill="#e3b341" text-anchor="start" font-weight="bold">H</text>
 <text x="105.4" y="184.73" font-size="2" fill="#2da44e" text-anchor="start" font-weight="bold">L</text>
 <g class="caption">
-<text x="60.3" y="203" font-size="4" fill="#1f2328" text-anchor="middle" font-weight="bold">CTRE Power Distribution Panel</text>
+<text x="60.3" y="203" font-size="4" fill="#1f2328" text-anchor="middle" font-weight="bold">Power Distribution Panel (PDP)</text>
 <text x="60.3" y="207.2" font-size="2.3" fill="#57606a" text-anchor="middle">120.6 × 192.7 mm · top view · battery end at the bottom</text>
 </g>
 <g id="anchors">

@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="-8 -56 67 124" width="67mm" height="124mm" font-family="Helvetica, Arial, sans-serif">
-<title>REV NEO Vortex + SPARK Flex</title>
+<title>NEO Vortex + SPARK Flex</title>
 <desc>Drawn by FRC Team 2102 Paradox. Public domain: CC0 1.0 (https://creativecommons.org/publicdomain/zero/1.0/). https://docs.team2102.org/icons/</desc>
 <rect x="0.4" y="-51.5" width="50" height="51.5" rx="1.2" fill="#2a3037" stroke="#1f2328" stroke-width="0.5"/>
 <path d="M 0.4 -48.5 L 50.4 -48.5" fill="none" stroke="#4a515b" stroke-width="0.4" stroke-linejoin="round" stroke-linecap="round"/>
@@ -73,7 +73,7 @@
 <text x="33" y="53.4" font-size="2.2" fill="#1f2328" text-anchor="middle" font-weight="bold">CAN (female)</text>
 </g>
 <g class="caption">
-<text x="25.4" y="61" font-size="4" fill="#1f2328" text-anchor="middle" font-weight="bold">REV NEO Vortex + SPARK Flex</text>
+<text x="25.4" y="61" font-size="4" fill="#1f2328" text-anchor="middle" font-weight="bold">NEO Vortex + SPARK Flex</text>
 <text x="25.4" y="65.2" font-size="2.3" fill="#57606a" text-anchor="middle">50.8 × 79.7 mm · wire-side view · Flex docked on the Vortex</text>
 </g>
 <g id="anchors">

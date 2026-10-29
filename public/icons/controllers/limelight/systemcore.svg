@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="-6 -6 147.5 97" width="147.5mm" height="97mm" font-family="Helvetica, Arial, sans-serif">
-<title>SystemCore (Beta)</title>
+<title>Limelight Systemcore (Beta hardware)</title>
 <desc>Drawn by FRC Team 2102 Paradox. Public domain: CC0 1.0 (https://creativecommons.org/publicdomain/zero/1.0/). https://docs.team2102.org/icons/</desc>
 <rect x="0" y="0" width="135.5" height="71.5" rx="4" fill="#3a3f47" stroke="#1f2328" stroke-width="0.5"/>
 <circle cx="3.75" cy="3.75" r="2.25" fill="#ffffff" stroke="#1f2328" stroke-width="0.3"/>
@@ -118,7 +118,7 @@
 <text x="126.7" y="64.6" font-size="2" fill="#f0f3f6" text-anchor="middle">1</text>
 <text x="123.9" y="45.6" font-size="2" fill="#f0f3f6" text-anchor="middle">I2C</text>
 <g class="caption">
-<text x="67.75" y="81.5" font-size="4" fill="#1f2328" text-anchor="middle" font-weight="bold">SystemCore (Beta)</text>
+<text x="67.75" y="81.5" font-size="4" fill="#1f2328" text-anchor="middle" font-weight="bold">Limelight Systemcore (Beta hardware)</text>
 <text x="67.75" y="85.7" font-size="2.3" fill="#57606a" text-anchor="middle">135.5 × 71.5 mm · top view · Alpha drawing positions, Beta connectors</text>
 </g>
 <g id="anchors">

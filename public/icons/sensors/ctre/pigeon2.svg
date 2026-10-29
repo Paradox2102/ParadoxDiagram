@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="-32 -28 64 102" width="64mm" height="102mm" font-family="Helvetica, Arial, sans-serif">
-<title>CTRE Pigeon 2.0</title>
+<title>Pigeon 2.0 IMU</title>
 <desc>Drawn by FRC Team 2102 Paradox. Public domain: CC0 1.0 (https://creativecommons.org/publicdomain/zero/1.0/). https://docs.team2102.org/icons/</desc>
 <rect x="-22.48" y="-22.48" width="44.96" height="44.96" rx="4.5" fill="#3a3f47" stroke="#1f2328" stroke-width="0.5"/>
 <circle cx="-14.48" cy="-14.48" r="2.42" fill="#59636e"/>
@@ -44,7 +44,7 @@
 <text x="20" y="59.4" font-size="2.2" fill="#1f2328" text-anchor="middle" font-weight="bold">CAN (female)</text>
 </g>
 <g class="caption">
-<text x="0" y="68" font-size="4" fill="#1f2328" text-anchor="middle" font-weight="bold">CTRE Pigeon 2.0</text>
+<text x="0" y="68" font-size="4" fill="#1f2328" text-anchor="middle" font-weight="bold">Pigeon 2.0 IMU</text>
 <text x="0" y="72.2" font-size="2.3" fill="#57606a" text-anchor="middle">45 × 45 mm · top view · leads drawn short</text>
 </g>
 <g id="anchors">

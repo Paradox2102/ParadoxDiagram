@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="-4 -7 73.5 41" width="73.5mm" height="41mm" font-family="Helvetica, Arial, sans-serif">
-<title>REV Color Sensor V3</title>
+<title>Color Sensor V3</title>
 <desc>Drawn by FRC Team 2102 Paradox. Public domain: CC0 1.0 (https://creativecommons.org/publicdomain/zero/1.0/). https://docs.team2102.org/icons/</desc>
 <path d="M 3 0 L 38.5 0 L 41.5 3 L 41.5 12 L 38.5 15 L 3 15 L 0 12 L 0 3 Z" fill="#2b2f35" stroke="#1f2328" stroke-width="0.4" stroke-linejoin="round" stroke-linecap="round"/>
 <circle cx="4.75" cy="7.5" r="1.8" fill="#ffffff" stroke="#1f2328" stroke-width="0.25"/>
@@ -41,7 +41,7 @@
 <text x="46.5" y="14.9" font-size="1.4" fill="#1f2328" text-anchor="middle">SCL</text>
 </g>
 <g class="caption">
-<text x="31" y="24.5" font-size="4" fill="#1f2328" text-anchor="middle" font-weight="bold">REV Color Sensor V3</text>
+<text x="31" y="24.5" font-size="4" fill="#1f2328" text-anchor="middle" font-weight="bold">Color Sensor V3</text>
 <text x="31" y="28.7" font-size="2.3" fill="#57606a" text-anchor="middle">41.5 × 15 mm · top view (sensor face) · 30 cm cable drawn short</text>
 </g>
 <g id="anchors">

@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="-36 -50 72 112" width="72mm" height="112mm" font-family="Helvetica, Arial, sans-serif">
-<title>TTB Thrifty Nova</title>
+<title>Thrifty Nova</title>
 <desc>Drawn by FRC Team 2102 Paradox. Public domain: CC0 1.0 (https://creativecommons.org/publicdomain/zero/1.0/). https://docs.team2102.org/icons/</desc>
 <path d="M -3 -22 L -3 -27 L -12 -32 L -12 -38" fill="none" stroke="#8c959f" stroke-width="2.3" stroke-linejoin="round" stroke-linecap="round"/>
 <path d="M -3 -22 L -3 -27 L -12 -32 L -12 -38" fill="none" stroke="#cf222e" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
@@ -76,7 +76,7 @@
 <text x="11" y="44" font-size="2.2" fill="#1f2328" text-anchor="middle" font-weight="bold">A</text>
 </g>
 <g class="caption">
-<text x="0" y="53" font-size="4" fill="#1f2328" text-anchor="middle" font-weight="bold">TTB Thrifty Nova</text>
+<text x="0" y="53" font-size="4" fill="#1f2328" text-anchor="middle" font-weight="bold">Thrifty Nova</text>
 <text x="0" y="57.2" font-size="2.3" fill="#57606a" text-anchor="middle">Ø48.0 mm · top view · leads drawn short</text>
 </g>
 <g id="anchors">

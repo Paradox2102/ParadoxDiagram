@@ -1,5 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="-27 -18 54 52" width="54mm" height="52mm" font-family="Helvetica, Arial, sans-serif">
-<title>Thrifty Absolute Encoder</title>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-34.62 -18 69.23 52" width="69.23mm" height="52mm" font-family="Helvetica, Arial, sans-serif">
+<title>Thrifty Absolute Magnetic Encoder</title>
 <desc>Drawn by FRC Team 2102 Paradox. Public domain: CC0 1.0 (https://creativecommons.org/publicdomain/zero/1.0/). https://docs.team2102.org/icons/</desc>
 <rect x="-6" y="-13.12" width="12" height="24.64" rx="1.6" fill="#1f2328" stroke="#0d1117" stroke-width="0.8"/>
 <circle cx="7.44" cy="0" r="3.3" fill="#1f2328" stroke="#0d1117" stroke-width="0.8"/>
@@ -28,7 +28,7 @@
 <text x="0" y="15" font-size="1.9" fill="#1f2328" text-anchor="middle" font-weight="bold">3-pin 0.1 in: S · 5V · GND</text>
 </g>
 <g class="caption">
-<text x="0" y="24" font-size="4" fill="#1f2328" text-anchor="middle" font-weight="bold">Thrifty Absolute Encoder</text>
+<text x="0" y="24" font-size="4" fill="#1f2328" text-anchor="middle" font-weight="bold">Thrifty Absolute Magnetic Encoder</text>
 <text x="0" y="28.2" font-size="2.3" fill="#57606a" text-anchor="middle">21.9 × 24.6 mm · top view · CTRE (SDS) case</text>
 </g>
 <g id="anchors">

@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="-6 -122 186 145" width="186mm" height="145mm" font-family="Helvetica, Arial, sans-serif">
-<title>VIAIR 90C Compressor</title>
+<title>90C Compressor</title>
 <desc>Drawn by FRC Team 2102 Paradox. Public domain: CC0 1.0 (https://creativecommons.org/publicdomain/zero/1.0/). https://docs.team2102.org/icons/</desc>
 <rect x="0" y="-10" width="14.2" height="10" rx="2" fill="#16191d" stroke="#1f2328" stroke-width="0.3"/>
 <rect x="136.4" y="-10" width="14.2" height="10" rx="2" fill="#16191d" stroke="#1f2328" stroke-width="0.3"/>
@@ -45,7 +45,7 @@
 <text x="166" y="-32.6" font-size="2.2" fill="#1f2328" text-anchor="start" font-weight="bold">− black, ring</text>
 </g>
 <g class="caption">
-<text x="87" y="9.5" font-size="4" fill="#1f2328" text-anchor="middle" font-weight="bold">VIAIR 90C Compressor</text>
+<text x="87" y="9.5" font-size="4" fill="#1f2328" text-anchor="middle" font-weight="bold">90C Compressor</text>
 <text x="87" y="13.7" font-size="2.3" fill="#57606a" text-anchor="middle">151 × 115 mm · side view · 330 mm leads drawn short</text>
 </g>
 <g id="anchors">

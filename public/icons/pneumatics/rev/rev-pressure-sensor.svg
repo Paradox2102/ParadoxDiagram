@@ -1,5 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="-29.4 -36 58.8 103" width="58.8mm" height="103mm" font-family="Helvetica, Arial, sans-serif">
-<title>REV Analog Pressure Sensor</title>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-28.06 -36 56.11 103" width="56.11mm" height="103mm" font-family="Helvetica, Arial, sans-serif">
+<title>Analog Pressure Sensor</title>
 <desc>Drawn by FRC Team 2102 Paradox. Public domain: CC0 1.0 (https://creativecommons.org/publicdomain/zero/1.0/). https://docs.team2102.org/icons/</desc>
 <rect x="-8" y="0" width="16" height="10" rx="0.8" fill="#16191d" stroke="#1f2328" stroke-width="0.4"/>
 <rect x="-6.55" y="10" width="13.1" height="11" rx="0" fill="#d8dee4" stroke="#1f2328" stroke-width="0.3"/>
@@ -33,7 +33,7 @@
 <text x="-1.2" y="-23.6" font-size="2" fill="#1f2328" text-anchor="start" font-weight="bold">or roboRIO AI</text>
 </g>
 <g class="caption">
-<text x="0" y="58.5" font-size="4" fill="#1f2328" text-anchor="middle" font-weight="bold">REV Analog Pressure Sensor</text>
+<text x="0" y="58.5" font-size="4" fill="#1f2328" text-anchor="middle" font-weight="bold">Analog Pressure Sensor</text>
 <text x="0" y="62.7" font-size="2.3" fill="#57606a" text-anchor="middle">27.1 × 49 mm · side view · sensor cable drawn short</text>
 </g>
 <g id="anchors">

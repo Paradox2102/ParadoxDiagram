@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="-46 -39 92 96" width="92mm" height="96mm" font-family="Helvetica, Arial, sans-serif">
-<title>Lumyn ConnectorX</title>
+<title>ConnectorX</title>
 <desc>Drawn by FRC Team 2102 Paradox. Public domain: CC0 1.0 (https://creativecommons.org/publicdomain/zero/1.0/). https://docs.team2102.org/icons/</desc>
 <rect x="-41.5" y="-24" width="83" height="48" rx="4" fill="#15181c" stroke="#1f2328" stroke-width="0.5"/>
 <circle cx="-37.5" cy="-20" r="4" fill="#b8bec6"/>
@@ -170,7 +170,7 @@
 <text x="-21.6" y="22" font-size="1" fill="#f0f3f6" text-anchor="middle">I2C</text>
 <text x="-32.7" y="2.6" font-size="3.2" fill="#f0f3f6" text-anchor="middle" transform="rotate(90 -32.7 2.6)">ConnectorX</text>
 <g class="caption">
-<text x="0" y="51" font-size="4" fill="#1f2328" text-anchor="middle" font-weight="bold">Lumyn ConnectorX</text>
+<text x="0" y="51" font-size="4" fill="#1f2328" text-anchor="middle" font-weight="bold">ConnectorX</text>
 <text x="0" y="55.2" font-size="2.3" fill="#57606a" text-anchor="middle">83 × 48 mm · top view · with headers · leads drawn short</text>
 </g>
 <g id="anchors">

@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="-13.65 -5 74.91 133" width="74.91mm" height="133mm" font-family="Helvetica, Arial, sans-serif">
-<title>REV Pneumatic Hub</title>
+<title>Pneumatic Hub (PH)</title>
 <desc>Drawn by FRC Team 2102 Paradox. Public domain: CC0 1.0 (https://creativecommons.org/publicdomain/zero/1.0/). https://docs.team2102.org/icons/</desc>
 <path d="M 2.2 0 L 45.4 0 L 47.6 2.2 L 47.6 108.89999999999999 L 45.4 111.1 L 2.2 111.1 L 0 108.89999999999999 L 0 2.2 Z" fill="#3a3f47" stroke="#1f2328" stroke-width="0.5" stroke-linejoin="round" stroke-linecap="round"/>
 <path d="M 0 9.8 L 4.5 9.8 Q 9.8 9.8 9.8 4.5 L 9.8 0.6" fill="none" stroke="#1f2328" stroke-width="0.5" stroke-linejoin="round" stroke-linecap="round"/>
@@ -201,7 +201,7 @@
 <text x="10.6" y="98.8" font-size="1.7" fill="#f0f3f6" text-anchor="end" font-weight="bold">CAN</text>
 <text x="37" y="98.8" font-size="1.7" fill="#f0f3f6" text-anchor="start" font-weight="bold">POWER</text>
 <g class="caption">
-<text x="23.8" y="120.6" font-size="4" fill="#1f2328" text-anchor="middle" font-weight="bold">REV Pneumatic Hub</text>
+<text x="23.8" y="120.6" font-size="4" fill="#1f2328" text-anchor="middle" font-weight="bold">Pneumatic Hub (PH)</text>
 <text x="23.8" y="124.8" font-size="2.3" fill="#57606a" text-anchor="middle">47.6 × 111.1 mm · top view · wires enter from the sides and the bottom</text>
 </g>
 <g id="anchors">

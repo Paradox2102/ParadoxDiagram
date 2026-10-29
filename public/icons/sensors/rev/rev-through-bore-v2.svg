@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="-31 -25 62 85" width="62mm" height="85mm" font-family="Helvetica, Arial, sans-serif">
-<title>REV Through Bore Encoder V2</title>
+<title>Through Bore Encoder V2</title>
 <desc>Drawn by FRC Team 2102 Paradox. Public domain: CC0 1.0 (https://creativecommons.org/publicdomain/zero/1.0/). https://docs.team2102.org/icons/</desc>
 <path d="M -19.85 15.85 L 19.85 -15.85" fill="none" stroke="#1f2328" stroke-width="10.9" stroke-linejoin="round" stroke-linecap="round"/>
 <path d="M -19.85 15.85 L 19.85 -15.85" fill="none" stroke="#62676f" stroke-width="10.3" stroke-linejoin="round" stroke-linecap="round"/>
@@ -41,7 +41,7 @@
 <text x="0" y="41.8" font-size="1.9" fill="#1f2328" text-anchor="middle" font-weight="bold">JST PH 6-pin</text>
 </g>
 <g class="caption">
-<text x="0" y="49" font-size="4" fill="#1f2328" text-anchor="middle" font-weight="bold">REV Through Bore Encoder V2</text>
+<text x="0" y="49" font-size="4" fill="#1f2328" text-anchor="middle" font-weight="bold">Through Bore Encoder V2</text>
 <text x="0" y="53.2" font-size="2.3" fill="#57606a" text-anchor="middle">50.0 × 57.5 mm · top view · JST PH 6-pin in the tail end</text>
 </g>
 <g id="anchors">

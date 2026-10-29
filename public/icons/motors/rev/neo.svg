@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="-38 -36 76 116" width="76mm" height="116mm" font-family="Helvetica, Arial, sans-serif">
-<title>REV NEO V1.1</title>
+<title>NEO Brushless Motor V1.1</title>
 <desc>Drawn by FRC Team 2102 Paradox. Public domain: CC0 1.0 (https://creativecommons.org/publicdomain/zero/1.0/). https://docs.team2102.org/icons/</desc>
 <rect x="-7.3" y="24" width="14.6" height="11" rx="1.2" fill="#16191d" stroke="#1f2328" stroke-width="0.3"/>
 <circle cx="0" cy="0" r="30" fill="#3a3f47" stroke="#1f2328" stroke-width="0.5"/>
@@ -35,7 +35,7 @@
 <text x="9" y="59" font-size="2.2" fill="#1f2328" text-anchor="middle" font-weight="bold">C</text>
 </g>
 <g class="caption">
-<text x="0" y="67" font-size="4" fill="#1f2328" text-anchor="middle" font-weight="bold">REV NEO V1.1</text>
+<text x="0" y="67" font-size="4" fill="#1f2328" text-anchor="middle" font-weight="bold">NEO Brushless Motor V1.1</text>
 <text x="0" y="71.2" font-size="2.3" fill="#57606a" text-anchor="middle">60 × 65 mm · back view · leads drawn short, cable exit turned down</text>
 </g>
 <g id="anchors">
