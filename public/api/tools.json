@@ -55,7 +55,7 @@
     {
       "name": "get_diagram",
       "title": "Get the diagram",
-      "description": "The current diagram, with the changes the person made in the browser: devices (id, type, name, position, box in mm, CAN ID and bus, IP, notes, fields, label side) and wires (layer, ends, fuse, gauge, note). Call it before you edit after the person has had the diagram open.",
+      "description": "The current diagram, with the changes the person made in the browser: devices (id, type, name, position, box in mm, CAN ID and bus, IP, notes, fields, label side), wires (layer, ends, fuse, gauge, note) and the title block (team, revision). Call it before you edit after the person has had the diagram open.",
       "input": {
         "$schema": "https://json-schema.org/draft/2020-12/schema",
         "type": "object",

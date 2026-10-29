@@ -4,7 +4,7 @@ import type { CallToolResult } from '@modelcontextprotocol/sdk/types.js';
 import { z } from 'zod';
 import { layerOfKind, LAYERS, portPolarity, searchIcons, type Catalog, type Icon } from '../../src/catalog/catalog';
 import { boundsOf } from '../../src/geometry/scene';
-import { busOf } from '../../src/model/canbus';
+import { busOf, canivoreBus } from '../../src/model/canbus';
 import type { Doc } from '../../src/model/types';
 import { autoLayout } from './layout';
 import { OP_EXAMPLES, OpSchema, runOps } from './ops';
@@ -69,14 +69,17 @@ function problemCount(doc: Doc, catalog: Catalog): string {
   return n ? `${n} problem(s); call check to list them.` : 'No problems found.';
 }
 
-function diagramSummary(ctx: ToolContext) {
+/** The diagram as get_diagram gives it. `revision` is the store's edit count; the title block's is in title_block. */
+export function diagramSummary(ctx: ToolContext) {
   const { store, catalog } = ctx;
   const doc = store.doc;
   return {
     title: doc.title, revision: store.rev, file: store.file,
+    ...(doc.team || doc.revision ? { title_block: { ...(doc.team ? { team: doc.team } : {}), ...(doc.revision ? { revision: doc.revision } : {}) } } : {}),
     devices: doc.devices.map((d) => {
       const b = boundsOf(catalog, d);
-      const bus = busOf(doc, catalog, d.id);
+      // a CANivore starts its own bus: give its name, so CANivore 1 and 2 can be told apart
+      const bus = d.slug === 'canivore' ? canivoreBus(doc, d.id) : busOf(doc, catalog, d.id);
       return {
         id: d.id, slug: d.slug, name: d.name, x: d.x, y: d.y, rot: d.rot,
         box: { x: Math.round(b.x * 10) / 10, y: Math.round(b.y * 10) / 10, width: Math.round(b.w * 10) / 10, height: Math.round(b.h * 10) / 10 },
@@ -157,7 +160,8 @@ export const TOOLS: ToolDef[] = [
     title: 'Get the diagram',
     description:
       'The current diagram, with the changes the person made in the browser: devices (id, type, name, position, box in mm, ' +
-      'CAN ID and bus, IP, notes, fields, label side) and wires (layer, ends, fuse, gauge, note). Call it before you edit ' +
+      'CAN ID and bus, IP, notes, fields, label side), wires (layer, ends, fuse, gauge, note) and the title block (team, ' +
+      'revision). Call it before you edit ' +
       'after the person has had the diagram open.',
     input: z.object({}),
     example: {},
