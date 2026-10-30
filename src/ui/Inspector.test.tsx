@@ -242,3 +242,16 @@ test('a terminator that has a CAN ID from an old file keeps the field, so the ID
   render(<Inspector doc={d} catalog={catalog} selection={['d1']} dispatch={vi.fn()} />);
   expect(screen.getByLabelText('CAN ID')).toBeTruthy();
 });
+
+test.each(['frc-battery', 'redux-zinc-v', 'marigold-5'])('%s has no CAN port, so no CAN ID field', (slug) => {
+  const d = apply(emptyDoc(), { type: 'addDevice', slug, name: '', x: 0, y: 0 });
+  render(<Inspector doc={d} catalog={catalog} selection={['d1']} dispatch={vi.fn()} />);
+  expect(screen.queryByLabelText('CAN ID')).toBeNull();
+});
+
+test('a device with no CAN port that has a CAN ID from an old file keeps the field', () => {
+  let d = apply(emptyDoc(), { type: 'addDevice', slug: 'frc-battery', name: '', x: 0, y: 0 });
+  d = apply(d, { type: 'updateDevice', id: 'd1', patch: { canId: 4 } });
+  render(<Inspector doc={d} catalog={catalog} selection={['d1']} dispatch={vi.fn()} />);
+  expect(screen.getByLabelText('CAN ID')).toBeTruthy();
+});

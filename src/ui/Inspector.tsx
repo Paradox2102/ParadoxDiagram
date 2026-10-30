@@ -143,7 +143,7 @@ function DeviceForm({ doc, catalog, device, dispatch }: { doc: Doc; catalog: Cat
       {icon?.description && <p className="desc">{icon.description}</p>}
       {tag.facts && <p className="sub mono">{tag.facts}</p>}
       <Field label="Name" value={device.name} placeholder={icon?.name} onCommit={(v) => update({ name: v })} />
-      {(device.canId !== null || !hasNoCanId(device.slug)) && (
+      {(device.canId !== null || !icon || (kinds.has('can') && !hasNoCanId(device.slug))) && (
         <Field
           label="CAN ID" value={device.canId === null ? '' : String(device.canId)} inputMode="numeric"
           onCommit={(v) => {
