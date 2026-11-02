@@ -10,7 +10,7 @@
   {
    "id": "power",
    "name": "Power",
-   "count": 15
+   "count": 16
   },
   {
    "id": "motor-controllers",
@@ -2155,6 +2155,63 @@
     -14,
     266.1,
     148.6
+   ]
+  },
+  {
+   "slug": "thriftiest-voltage-regulator",
+   "name": "Thriftiest Voltage Regulator",
+   "description": "Thriftiest Voltage Regulator, 6-18 V to 5 V 6 A buck converter with WAGO lever terminals",
+   "type": "power",
+   "vendor": "thrifty-bot",
+   "vendor_name": "The Thrifty Bot",
+   "part_number": "TTB-0440",
+   "status": "current",
+   "path": "power/thrifty-bot/thriftiest-voltage-regulator.svg",
+   "size_mm": [
+    108.8,
+    54.3
+   ],
+   "view_box": [
+    -24,
+    -9,
+    108.8,
+    64.5
+   ],
+   "anchors": [
+    {
+     "port": "aux_gnd",
+     "x": 4.4,
+     "y": 15.3,
+     "kind": "power",
+     "label": "5V OUT terminal, GND pole (WAGO lever, 16-26 AWG)"
+    },
+    {
+     "port": "aux_5v",
+     "x": 4.4,
+     "y": 19.9,
+     "kind": "power",
+     "label": "5V OUT terminal, + pole (WAGO lever, 16-26 AWG, 6 A cont., 8 A peak)"
+    },
+    {
+     "port": "vin_1",
+     "x": 56.4,
+     "y": 15.3,
+     "kind": "power",
+     "label": "12V IN terminal, + pole (WAGO lever, 16-26 AWG, 6-18 V, 10 A breaker)"
+    },
+    {
+     "port": "gnd_1",
+     "x": 56.4,
+     "y": 19.9,
+     "kind": "power",
+     "label": "12V IN terminal, GND pole (WAGO lever, 16-26 AWG, same ground as 5V OUT)"
+    }
+   ],
+   "body_view": [
+    -24,
+    -9,
+    108.8,
+    54.3
    ]
   },
   {
