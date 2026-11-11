@@ -10,7 +10,7 @@
   {
    "id": "power",
    "name": "Power",
-   "count": 16
+   "count": 17
   },
   {
    "id": "motor-controllers",
@@ -530,6 +530,217 @@
     -6,
     160.15,
     153.68
+   ]
+  },
+  {
+   "slug": "ctre-pdp-2",
+   "name": "Power Distribution Panel (PDP 2.0)",
+   "description": "CTRE PDP 2.0, 24-channel ATO breaker power distribution panel with lever WAGO outputs, no CAN",
+   "type": "power",
+   "vendor": "ctre",
+   "vendor_name": "CTR Electronics",
+   "part_number": "24-806880 (CTRE); also sold as WCP-1690 (West Coast Products)",
+   "status": "current",
+   "path": "power/ctre/ctre-pdp-2.svg",
+   "size_mm": [
+    270,
+    122.5
+   ],
+   "view_box": [
+    -8,
+    -8,
+    270,
+    140
+   ],
+   "anchors": [
+    {
+     "port": "ch11",
+     "x": 27.4,
+     "y": 0,
+     "kind": "power",
+     "label": "Channel 11 (ATO breaker or fuse), WAGO red + and black - (4-10 AWG range)"
+    },
+    {
+     "port": "ch12",
+     "x": 27.4,
+     "y": 104.5,
+     "kind": "power",
+     "label": "Channel 12 (ATO breaker or fuse), WAGO black - and red + (4-10 AWG range)"
+    },
+    {
+     "port": "ch10",
+     "x": 42.2,
+     "y": 0,
+     "kind": "power",
+     "label": "Channel 10 (ATO breaker or fuse), WAGO red + and black - (4-10 AWG range)"
+    },
+    {
+     "port": "ch13",
+     "x": 42.2,
+     "y": 104.5,
+     "kind": "power",
+     "label": "Channel 13 (ATO breaker or fuse), WAGO black - and red + (4-10 AWG range)"
+    },
+    {
+     "port": "ch9",
+     "x": 57,
+     "y": 0,
+     "kind": "power",
+     "label": "Channel 9 (ATO breaker or fuse), WAGO red + and black - (4-10 AWG range)"
+    },
+    {
+     "port": "ch14",
+     "x": 57,
+     "y": 104.5,
+     "kind": "power",
+     "label": "Channel 14 (ATO breaker or fuse), WAGO black - and red + (4-10 AWG range)"
+    },
+    {
+     "port": "ch8",
+     "x": 71.8,
+     "y": 0,
+     "kind": "power",
+     "label": "Channel 8 (ATO breaker or fuse), WAGO red + and black - (4-10 AWG range)"
+    },
+    {
+     "port": "ch15",
+     "x": 71.8,
+     "y": 104.5,
+     "kind": "power",
+     "label": "Channel 15 (ATO breaker or fuse), WAGO black - and red + (4-10 AWG range)"
+    },
+    {
+     "port": "ch7",
+     "x": 86.6,
+     "y": 0,
+     "kind": "power",
+     "label": "Channel 7 (ATO breaker or fuse), WAGO red + and black - (4-10 AWG range)"
+    },
+    {
+     "port": "ch16",
+     "x": 86.6,
+     "y": 104.5,
+     "kind": "power",
+     "label": "Channel 16 (ATO breaker or fuse), WAGO black - and red + (4-10 AWG range)"
+    },
+    {
+     "port": "ch6",
+     "x": 101.4,
+     "y": 0,
+     "kind": "power",
+     "label": "Channel 6 (ATO breaker or fuse), WAGO red + and black - (4-10 AWG range)"
+    },
+    {
+     "port": "ch17",
+     "x": 101.4,
+     "y": 104.5,
+     "kind": "power",
+     "label": "Channel 17 (ATO breaker or fuse), WAGO black - and red + (4-10 AWG range)"
+    },
+    {
+     "port": "ch5",
+     "x": 118.7,
+     "y": 0,
+     "kind": "power",
+     "label": "Channel 5 (ATO breaker or fuse), WAGO red + and black - (4-10 AWG range)"
+    },
+    {
+     "port": "ch18",
+     "x": 118.7,
+     "y": 104.5,
+     "kind": "power",
+     "label": "Channel 18 (ATO breaker or fuse), WAGO black - and red + (4-10 AWG range)"
+    },
+    {
+     "port": "ch4",
+     "x": 133.5,
+     "y": 0,
+     "kind": "power",
+     "label": "Channel 4 (ATO breaker or fuse), WAGO red + and black - (4-10 AWG range)"
+    },
+    {
+     "port": "ch19",
+     "x": 133.5,
+     "y": 104.5,
+     "kind": "power",
+     "label": "Channel 19 (ATO breaker or fuse), WAGO black - and red + (4-10 AWG range)"
+    },
+    {
+     "port": "ch3",
+     "x": 148.3,
+     "y": 0,
+     "kind": "power",
+     "label": "Channel 3 (ATO breaker or fuse), WAGO red + and black - (4-10 AWG range)"
+    },
+    {
+     "port": "ch20",
+     "x": 148.3,
+     "y": 104.5,
+     "kind": "power",
+     "label": "Channel 20 (ATO breaker or fuse), WAGO black - and red + (4-10 AWG range)"
+    },
+    {
+     "port": "ch2",
+     "x": 163.1,
+     "y": 0,
+     "kind": "power",
+     "label": "Channel 2 (ATO breaker or fuse), WAGO red + and black - (4-10 AWG range)"
+    },
+    {
+     "port": "ch21",
+     "x": 163.1,
+     "y": 104.5,
+     "kind": "power",
+     "label": "Channel 21 (ATO breaker or fuse), WAGO black - and red + (4-10 AWG range)"
+    },
+    {
+     "port": "ch1",
+     "x": 177.9,
+     "y": 0,
+     "kind": "power",
+     "label": "Channel 1 (ATO breaker or fuse), WAGO red + and black - (4-10 AWG range)"
+    },
+    {
+     "port": "ch22",
+     "x": 177.9,
+     "y": 104.5,
+     "kind": "power",
+     "label": "Channel 22 (ATO breaker or fuse), WAGO black - and red + (4-10 AWG range)"
+    },
+    {
+     "port": "ch0",
+     "x": 192.7,
+     "y": 0,
+     "kind": "power",
+     "label": "Channel 0 (ATO breaker or fuse), WAGO red + and black - (4-10 AWG range)"
+    },
+    {
+     "port": "ch23",
+     "x": 192.7,
+     "y": 104.5,
+     "kind": "power",
+     "label": "Channel 23 (ATO breaker or fuse), WAGO black - and red + (4-10 AWG range)"
+    },
+    {
+     "port": "batt_pos",
+     "x": 252,
+     "y": 25.2,
+     "kind": "power",
+     "label": "Battery + (M6 x 1 stud, up to 4 AWG, from the 120 A main breaker)"
+    },
+    {
+     "port": "batt_neg",
+     "x": 252,
+     "y": 91,
+     "kind": "power",
+     "label": "Battery - (M6 x 1 stud, up to 4 AWG, to the battery -)"
+    }
+   ],
+   "body_view": [
+    -8,
+    -8,
+    270,
+    122.5
    ]
   },
   {
