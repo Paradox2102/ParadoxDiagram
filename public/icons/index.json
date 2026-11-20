@@ -35,7 +35,7 @@
   {
    "id": "sensors",
    "name": "Sensors and encoders",
-   "count": 18
+   "count": 19
   },
   {
    "id": "vision",
@@ -5356,6 +5356,56 @@
    "part_number": "21-737785",
    "status": "current",
    "path": "sensors/ctre/pigeon2.svg",
+   "size_mm": [
+    64,
+    91.5
+   ],
+   "view_box": [
+    -32,
+    -28,
+    64,
+    102
+   ],
+   "anchors": [
+    {
+     "port": "pwr",
+     "x": -16,
+     "y": 52,
+     "kind": "power",
+     "label": "Power leads: red +Vin / black GND, 22 AWG (6–28 V)"
+    },
+    {
+     "port": "can_a",
+     "x": 2,
+     "y": 56.4,
+     "kind": "can",
+     "label": "CAN pair A: yellow H / green L, male 0.1 in housing"
+    },
+    {
+     "port": "can_b",
+     "x": 20,
+     "y": 54.4,
+     "kind": "can",
+     "label": "CAN pair B: yellow H / green L, female 0.1 in housing"
+    }
+   ],
+   "body_view": [
+    -32,
+    -28,
+    64,
+    91.5
+   ]
+  },
+  {
+   "slug": "pigeon3",
+   "name": "Pigeon 3.0 IMU",
+   "description": null,
+   "type": "sensors",
+   "vendor": "ctre",
+   "vendor_name": "CTR Electronics",
+   "part_number": "26-737785",
+   "status": "current",
+   "path": "sensors/ctre/pigeon3.svg",
    "size_mm": [
     64,
     91.5

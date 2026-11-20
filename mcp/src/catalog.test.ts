@@ -1,8 +1,8 @@
 import { iconTextNode, loadNodeCatalog } from './catalog';
 
-test('loadNodeCatalog has 96 icons and rev-pdh', () => {
+test('loadNodeCatalog has 97 icons and rev-pdh', () => {
   const c = loadNodeCatalog();
-  expect(c.icons).toHaveLength(96);
+  expect(c.icons).toHaveLength(97);
   expect(c.bySlug.get('rev-pdh')?.name).toMatch(/PDH/);
 });
 

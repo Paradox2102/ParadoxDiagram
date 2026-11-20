@@ -5,8 +5,8 @@ import { canConnect, findAnchor, iconLayers, layerOfKind, parseCatalog, partnerP
 const raw = JSON.parse(readFileSync(join(import.meta.dirname, '../../public/icons/index.json'), 'utf8'));
 const catalog = parseCatalog(raw);
 
-test('parses the 96-icon index with anchors', () => {
-  expect(catalog.icons).toHaveLength(96);
+test('parses the 97-icon index with anchors', () => {
+  expect(catalog.icons).toHaveLength(97);
   const pdh = catalog.bySlug.get('rev-pdh')!;
   expect(findAnchor(pdh, 'ch4')?.kind).toBe('power');
 });
@@ -32,7 +32,7 @@ test('search needs every word to match', () => {
 
 test('legacy icons stay hidden until asked for', () => {
   expect(searchIcons(catalog.icons, '', false).some((i) => i.status === 'legacy')).toBe(false);
-  expect(searchIcons(catalog.icons, '', true)).toHaveLength(96);
+  expect(searchIcons(catalog.icons, '', true)).toHaveLength(97);
 });
 
 test('rejects an index with no icons list', () => {
